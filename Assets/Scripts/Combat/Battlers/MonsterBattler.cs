@@ -56,6 +56,8 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
     
     public Skill Skill;
 
+    public bool Fainted => CurrentHp == 0;
+
     //[FoldoutGroup("Passives"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public List<BattlePassive> Passives { get; set; } = new List<BattlePassive>();
 
     #endregion
@@ -135,8 +137,21 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
 
             if (effectResult is DamageEffect.DamageEffectResult damageEffectResult)
             {
-                //await DamageFlash();
-                await BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt);
+                if (!Fainted)
+                {
+                    Task flash = DamageFlash();
+                    Task damage = BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt);
+
+                    await Task.WhenAll(flash, damage);
+                }
+                else
+                {
+                    Task fade = Fade();
+                    Task damage = BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt);
+
+                    await Task.WhenAll(fade, damage);
+                }
+                
             }
         }
         return result;
@@ -151,15 +166,35 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
     
     private async Task DamageFlash()
     {
-        /*
-        image.color = Color.red;
-        await Task.Delay(100);
-        image.color = Color.white;
-        await Task.Delay(100);
-        image.color = Color.red;
-        await Task.Delay(100);
-        image.color = Color.white;
-        */
+        await GameController.Instance.PlayCoroutine(DamageBlinkCoroutine());
+    }
+
+    private IEnumerator DamageBlinkCoroutine()
+    {
+        var normalColor = image.color;
+        var blinkingColor = new Color(image.color.r, image.color.g, image.color.grayscale, 0.3f);
+
+        for (int i = 0; i < 5; i++)
+        {
+            image.color = blinkingColor;
+            yield return new WaitForSeconds(0.05f);
+            image.color = normalColor;
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
+    private async Task Fade()
+    {
+        await GameController.Instance.PlayCoroutine(FadeCoroutine());
+    }
+    
+    private IEnumerator FadeCoroutine(float speed = 0.5f)
+    {
+        while (image.color.a > 0)
+        {
+            image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - speed);
+            yield return new WaitForFixedUpdate();
+        }
     }
     
     public RectTransform RectTransform => transform as RectTransform;

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Sirenix.OdinInspector;
+using SkredUtils;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -69,6 +70,22 @@ public class GameController : SerializedMonoBehaviour
         }
     }
 
+    public async Task PlayCoroutine(IEnumerator coroutine)
+    {
+        var completion = new Ref<bool>(false);
+
+        QueuedActions.Enqueue(() => StartCoroutine(AwaitCoroutineCompletion(coroutine, completion)));
+
+        while (completion.Instance == false)
+            await Task.Delay(5);
+    }
+
+    private IEnumerator AwaitCoroutineCompletion(IEnumerator coroutine, Ref<bool> completed)
+    {
+        yield return coroutine;
+        completed.Instance = true;
+    }
+    
     public void QueueAction(Action action)
     {
         QueuedActions.Enqueue(action);

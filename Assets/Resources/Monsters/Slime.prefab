@@ -97,7 +97,7 @@ MonoBehaviour:
     SerializationNodes: []
   Name: Slime
   stats:
-    MaxHp: 150
+    MaxHp: 40
     InitialEp: 15
     EpGain: 5
     PhysAtk: 15

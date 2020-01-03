@@ -1,5 +1,7 @@
+Arrumar Fade em MonsterBattler
 Separar CharacterActionMenu em varias classes (CharacterActionMenu fica só pro menu. Fazer uma no momento pra Skill e outra pra targetting).
 Mudar executeeffect pra executeskill
+Criar um receiveeffect (em adição ao receive skill, pra não ter que botar o mesmo código x vezes tipo desaparecer quando morrer)
 Separar Skill de player e de monstro.
 Terminar batalha simples (vs. 3 Slimes). (Lembrar de fazer skills custarem EP, fazer IA simples pra slime.)
 Limpar código, adicionando regiões e tal.

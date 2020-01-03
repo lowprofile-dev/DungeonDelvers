@@ -114,6 +114,7 @@
           </e>
           <e p="Control" t="Include">
             <e p="GameController.cs" t="Include" />
+            <e p="GameDatabase.cs" t="Include" />
             <e p="GameSaveController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="SerializableAsset.cs" t="Include" />
@@ -181,15 +182,18 @@
             <e p="Effects" t="Include">
               <e p="DamageEffect.cs" t="Include" />
             </e>
-            <e p="Passive.cs" t="Include" />
             <e p="Skill.cs" t="Include" />
             <e p="SkillDatabase.cs" t="Include" />
-            <e p="StatPassives" t="Include">
-              <e p="StatPassive.cs" t="Include" />
-            </e>
           </e>
           <e p="UI" t="Include">
-            <e p="BattleCanvas.cs" t="Include" />
+            <e p="Battle" t="Include">
+              <e p="BattleCanvas.cs" t="Include" />
+              <e p="CharacterActionMenu.cs" t="Include" />
+              <e p="DamageText.cs" t="Include" />
+              <e p="SkillButton.cs" t="Include" />
+              <e p="SkillInfo.cs" t="Include" />
+              <e p="SkillUsePanel.cs" t="Include" />
+            </e>
             <e p="Main Menu" t="Include">
               <e p="CharacterInspector.cs" t="Include" />
               <e p="CharacterPanel.cs" t="Include" />

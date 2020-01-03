@@ -237,6 +237,16 @@ public class CharacterActionMenu : SerializedMonoBehaviour
                 }
             }
             
+            //Handle Click
+            {
+                if (Input.GetMouseButtonDown(1))
+                {
+                    var clickPosition = Input.mousePosition;
+                    
+                    
+                }
+            }
+            
             if (Input.GetButtonDown("Submit"))
             {
                 ChooseTargets(Groups[currentIndex]);
