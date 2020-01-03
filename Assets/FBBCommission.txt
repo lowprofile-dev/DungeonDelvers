@@ -1,12 +1,12 @@
 7 Characters, Style similar to the Time Fantasy Side-View Battlers
 Characters will represent classes:
-	Warrior (Sword, Axe)
-	Assassin (Knife, Bow)
-	Priest (Staff, Tome)
-	Fighter (Axe, Spear)
-	Arcanist (Tome, Sword)
-	Paladin (Spear, Staff)
-	Hunter (Bow, Knife)
+	Warrior
+	Rogue
+	Priest
+	Fighter
+	Magician
+	Paladin
+	Hunter
 	
 Each character:
 Overworld sprite animations (Walk and Idle, same as the "80+ RPG Characters" pack)
@@ -16,10 +16,10 @@ Idle
 "Cast" -> Generic animation (eg. raising hands) for skills/items
 Each class has the attack animations for:
     Warrior -> Sword, Axe
-    Assassin -> Knife, Bow
+    Rogue -> Knife, Bow
     Priest -> Staff, Tome
     Fighter -> Axe, Spear
-    Arcanist -> Tome, Sword
+    Magician -> Tome, Sword
     Paladin -> Spear, Staff
     Hunter -> Bow, Knife
 	*Tome and Staff attack animations are not physical, but "Cast" animations
@@ -27,6 +27,7 @@ Take Damage
 Fainted
 Victory -> Faces towards the camera, motion at your discretion. Just needs to face the camera.
 
+---
 
 X Tilesets, Themes:
     -

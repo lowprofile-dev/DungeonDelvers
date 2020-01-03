@@ -176,13 +176,15 @@ public class CharacterActionMenu : SerializedMonoBehaviour
             case Skill.TargetType.OneEnemy:
                 foreach (var enemy in BattleController.Instance.Enemies)
                 {
-                    targetGroups.Add(new []{enemy});
+                    if (!enemy.Fainted)
+                        targetGroups.Add(new []{enemy});
                 }
                 break;
             case Skill.TargetType.Any:
                 foreach (var battler in BattleController.Instance.Battlers)
                 {
-                    targetGroups.Add(new []{battler});
+                    if (!battler.Fainted)
+                        targetGroups.Add(new []{battler});
                 }
                 break;
         }
@@ -212,6 +214,23 @@ public class CharacterActionMenu : SerializedMonoBehaviour
         {
             BattleCanvas.BindTargetArrow(battler.RectTransform);
         }
+
+        Action DisplayTargets = () =>
+        {
+            BattleCanvas.CleanTargetArrows();
+            var names = new List<string>();
+
+            foreach (var battler in Groups[currentIndex])
+            {
+                BattleCanvas.BindTargetArrow(battler.RectTransform);
+                names.Add(battler.Name);
+            }
+
+            var targetName = string.Join(", ", names);
+            BattleCanvas.battleInfoPanel.ShowInfo(targetName);
+        };
+
+        DisplayTargets();
         
         while (!TargetChosen)
         {
@@ -227,26 +246,11 @@ public class CharacterActionMenu : SerializedMonoBehaviour
                         currentIndex = Groups.Count - 1;
                     if (currentIndex == Groups.Count)
                         currentIndex = 0;
+                    
+                    DisplayTargets();
+                }
+            }
 
-                    BattleCanvas.CleanTargetArrows();
-                    
-                    foreach (var battler in Groups[currentIndex])
-                    {
-                        BattleCanvas.BindTargetArrow(battler.RectTransform);
-                    }
-                }
-            }
-            
-            //Handle Click
-            {
-                if (Input.GetMouseButtonDown(1))
-                {
-                    var clickPosition = Input.mousePosition;
-                    
-                    
-                }
-            }
-            
             if (Input.GetButtonDown("Submit"))
             {
                 ChooseTargets(Groups[currentIndex]);
@@ -256,6 +260,7 @@ public class CharacterActionMenu : SerializedMonoBehaviour
         }
         
         //Cleanup
+        BattleCanvas.battleInfoPanel.HideInfo();
     }
 
     private void ChooseTargets(IEnumerable<IBattler> targets)

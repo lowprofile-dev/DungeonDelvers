@@ -1,4 +1,6 @@
-Arrumar Fade em MonsterBattler
+Mudar partyMember.CommitChanges() pra um metodo que faz pra party toda e processa o que ganhou do encontro.
+Terminar interface batalha, mostrar nome do inimigo, ver o que mais mostrar (Barra de HP?)
+Arrumar MonsterBattler -> Stats e tal viram readonly, tem um campo de Monster, quando seta o Monster no editor arruma tudo.
 Separar CharacterActionMenu em varias classes (CharacterActionMenu fica só pro menu. Fazer uma no momento pra Skill e outra pra targetting).
 Mudar executeeffect pra executeskill
 Criar um receiveeffect (em adição ao receive skill, pra não ter que botar o mesmo código x vezes tipo desaparecer quando morrer)

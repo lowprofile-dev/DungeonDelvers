@@ -81,9 +81,10 @@ public class BattleController : SerializedMonoBehaviour
             //Pega a ordem do turno.
             var turnOrder = Battlers.OrderByDescending(battler => battler.Stats.Speed);
             var orderEnumerator = turnOrder.GetEnumerator();
+            var battleResult = IsBattleOver();
 
             //Enquanto a batalha não acabou (um dos lados não está morto).
-            while (IsBattleOver() == 0)
+            while (battleResult == 0)
             {
                 //Se não tem mais ninguem pra ir no turno atual
                 if (orderEnumerator.MoveNext() == false)
@@ -99,19 +100,32 @@ public class BattleController : SerializedMonoBehaviour
                 //Pega o Battler atual e espera o turno dele.
                 CurrentBattler = orderEnumerator.Current;
                 await BattlerTurn(CurrentBattler);
+                battleResult = IsBattleOver();
             }
 
             //Se ganhou, se perder ver como fazer
-            foreach (var partyMember in Party)
+//            foreach (var partyMember in Party)
+//            {
+//                partyMember.CommitChanges();
+//            }
+            if (battleResult == 1)
             {
-                partyMember.CommitChanges();
+                Debug.Log("Ganhou");
+            } else if (battleResult == -1)
+            {
+                Debug.Log("Perdeu");
             }
 
-            OnBattleEnd.Invoke();
-            PlayerController.Instance.UnpauseGame();
-            orderEnumerator.Dispose();
+            GameController.Instance.QueueAction(() =>
+            {
+                Party.ForEach(partyMember => partyMember.CommitChanges());
+                OnBattleEnd.Invoke();
+                PlayerController.Instance.UnpauseGame();
+                Destroy(battleCanvas.gameObject);
+                orderEnumerator.Dispose();
 
-            Debug.Log("Acabou");
+                Debug.Log("Acabou");
+            });
         }
         catch (Exception e)
         {
@@ -160,7 +174,7 @@ public class BattleController : SerializedMonoBehaviour
         if (!Party.Exists((partyMember) => !partyMember.Fainted))
             return -1;
 
-        if (Enemies.Count == 0)
+        if (!Enemies.Exists(enemy => !enemy.Fainted))
             return 1;
 
         return 0;

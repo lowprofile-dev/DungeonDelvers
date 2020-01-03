@@ -95,9 +95,9 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  Name: Slime
+  MonsterName: Slime
   stats:
-    MaxHp: 40
+    MaxHp: 5
     InitialEp: 15
     EpGain: 5
     PhysAtk: 15

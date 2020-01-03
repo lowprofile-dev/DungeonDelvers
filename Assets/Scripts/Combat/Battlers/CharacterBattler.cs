@@ -32,6 +32,7 @@ public class CharacterBattler : SerializedMonoBehaviour, IBattler
 
     #region Stats
 
+    public string Name => Character.Base.CharacterName;
     [FoldoutGroup("Stats")] public Stats Stats { get; private set; }
     [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] private int currentEp;
     public int CurrentEp

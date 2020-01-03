@@ -14,7 +14,7 @@ using Random = System.Random;
 
 public class MonsterBattler : SerializedMonoBehaviour, IBattler
 {
-    public string Name;
+    public string MonsterName;
     private Image image;
 
     private void Awake()
@@ -30,6 +30,7 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
 
     #region Stats
 
+    public string Name => MonsterName;
     [FoldoutGroup("Stats"), SerializeField, PropertyOrder(999)] private Stats stats;
     public Stats Stats => stats;
     
@@ -77,13 +78,16 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
     
     public async Task<Turn> GetTurn(BattleController battle)
     {
+        if (Fainted)
+            return new Turn();
+        
         Debug.Log($"Começou a pegar o turno de {Name}");
 
         IBattler target = null;
 
         await GameController.Instance.QueueActionAndAwait(() =>
         {
-            var possibleTargets = battle.Party;
+            var possibleTargets = battle.Party.Where(partyMember => !Fainted).ToList();
             var possibleTarget = UnityEngine.Random.Range(0, possibleTargets.Count);
             target = possibleTargets[possibleTarget];
         });
@@ -108,7 +112,7 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
                 }
             });
             
-            await BattleController.Instance.battleCanvas.SkillUsePanel.ShowSkillInfoDuration(Skill);
+            await BattleController.Instance.battleCanvas.battleInfoPanel.DisplayInfo(Skill.SkillName);
             
             GameController.Instance.QueueAction(() =>
             {
@@ -188,7 +192,7 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
         await GameController.Instance.PlayCoroutine(FadeCoroutine());
     }
     
-    private IEnumerator FadeCoroutine(float speed = 0.5f)
+    private IEnumerator FadeCoroutine(float speed = 0.05f)
     {
         while (image.color.a > 0)
         {

@@ -2,19 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d8eb85f-203a-42cc-a492-a61dc70ead53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Assassin/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Mage/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Monsters/Encounters/Encounter.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Monsters/Encounters/Encounter.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FBBCommission.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FBBCommission.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Monsters/Slime.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Monsters/Slime.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/MenuEffects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/StatusEffects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleCanvas.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/CharacterActionMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/CharacterActionMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillUsePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleInfoPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillUsePanel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleInfoPanel.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TODO.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Battle/BattleCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Battle/BattleCanvas.prefab" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,10 +48,13 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/ToggleComponentActiveInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/MessageBoxInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Debug/test1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleInfoPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/AccessoryBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/HandBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/BodyBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/HeadBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/FeetBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/CharacterActionMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -62,6 +68,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/SkillDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/CustomDrawerExample.cs" root0="FORCE_HIGHLIGHTING" />
@@ -105,9 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Debug/test1.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterSave.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/test.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/GameSaveController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/FollowTarget.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/DisableComponentInteraction.cs" />
@@ -147,15 +151,18 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/DealDamageEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/FlatDamageEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passive.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Effect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/DamageEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/CharacterActionMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/TODO.txt" />
+        <option value="$PROJECT_DIR$/Assets/FBBCommission.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleInfoPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/CharacterActionMenu.cs" />
       </list>
     </option>
   </component>
@@ -225,6 +232,7 @@
       <workItem from="1576955573154" duration="17031000" />
       <workItem from="1577716452157" duration="3617000" />
       <workItem from="1578054084258" duration="1847000" />
+      <workItem from="1578056844268" duration="4810000" />
     </task>
     <servers />
   </component>

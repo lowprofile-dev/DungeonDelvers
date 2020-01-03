@@ -6,8 +6,10 @@ using UnityEngine;
 
 public interface IBattler
 {
+    string Name { get; }
     int CurrentHp { get; set; }
     int CurrentEp { get; set; }
+    bool Fainted { get; }
     
     //Botar aqui coisas tipo passivas e tal, tipos elementais, etc. etc.
     //Remover o BattleController dos métodos. Quando a batlha inicia, parte do setup é botar uma referencia ao controller em todos os IBattlers.

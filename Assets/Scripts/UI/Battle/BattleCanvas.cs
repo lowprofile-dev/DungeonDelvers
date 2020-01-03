@@ -21,7 +21,7 @@ public class BattleCanvas : SerializedMonoBehaviour
     private GameObject actionArrow;
     public GameObject TargetArrowPrefab;
     private List<GameObject> targetArrows = new List<GameObject>();
-    public SkillUsePanel SkillUsePanel;
+    public BattleInfoPanel battleInfoPanel;
     
     [ReadOnly] public CharacterBattler currentCharacter;
     private readonly EventWaitHandle WaitHandle = new AutoResetEvent(false);

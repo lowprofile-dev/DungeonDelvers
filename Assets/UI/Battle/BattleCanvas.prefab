@@ -3029,7 +3029,7 @@ MonoBehaviour:
     type: 3}
   TargetArrowPrefab: {fileID: 2076441495467115191, guid: 3c913a4e07d590341b20f2ebe47a559a,
     type: 3}
-  SkillUsePanel: {fileID: 5472723356800490137}
+  battleInfoPanel: {fileID: 5472723356800490137}
   currentCharacter: {fileID: 0}
 --- !u!1 &5223606965080871121
 GameObject:
@@ -3853,7 +3853,7 @@ GameObject:
   - component: {fileID: 2880465718194924842}
   - component: {fileID: 5472723356800490137}
   m_Layer: 5
-  m_Name: Skill Use Panel
+  m_Name: Battle Info Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
