@@ -186,11 +186,13 @@
           <e p="UI" t="Include">
             <e p="Battle" t="Include">
               <e p="BattleCanvas.cs" t="Include" />
+              <e p="BattleInfoPanel.cs" t="Include" />
               <e p="CharacterActionMenu.cs" t="Include" />
               <e p="DamageText.cs" t="Include" />
+              <e p="SkillActionMenu.cs" t="Include" />
               <e p="SkillButton.cs" t="Include" />
               <e p="SkillInfo.cs" t="Include" />
-              <e p="SkillUsePanel.cs" t="Include" />
+              <e p="SkillTargeter.cs" t="Include" />
             </e>
             <e p="Main Menu" t="Include">
               <e p="CharacterInspector.cs" t="Include" />

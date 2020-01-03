@@ -1,13 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SkillButton : SerializedMonoBehaviour, ISelectHandler
+public class SkillButton : SerializedMonoBehaviour, ISelectHandler, IPointerEnterHandler
 {
-    [ReadOnly] public CharacterActionMenu CharacterActionMenu;
+    [ReadOnly] public SkillActionMenu SkillActionMenu;
     [ShowInInspector, ReadOnly] public Skill Skill { get; private set; }
     public Image SelectedIndicatior;
     public Image SkillIcon;
@@ -17,16 +18,17 @@ public class SkillButton : SerializedMonoBehaviour, ISelectHandler
 
     private bool canBeUsed;
     
-    public void BuildSkillButton(Skill skill, CharacterActionMenu characterActionMenu)
+    [Obsolete]
+    public void BuildSkillButton(Skill skill, SkillActionMenu skillActionMenu)
     {
         SkillIcon.sprite = skill.SkillIcon;
         SkillName.text = skill.SkillName;
         SkillCost.text = $"{skill.EpCost} EP";
         Skill = skill;
-        CharacterActionMenu = characterActionMenu;
+        SkillActionMenu = skillActionMenu;
         gameObject.SetActive(true);
         
-        if (characterActionMenu.Battler.CurrentEp < skill.EpCost)
+        if (skillActionMenu.CharacterActionMenu.Battler.CurrentEp < skill.EpCost)
         {
             canBeUsed = false;
             {
@@ -56,11 +58,16 @@ public class SkillButton : SerializedMonoBehaviour, ISelectHandler
         if (!canBeUsed)
             return;
         
-        CharacterActionMenu.ChooseSkill(Skill);
+        SkillActionMenu.ChooseSkill(Skill);
     }
 
     public void OnSelect(BaseEventData eventData)
     {
-        CharacterActionMenu.SelectSkill(this);
+        SkillActionMenu.SelectSkill(this);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        EventSystem.current.SetSelectedGameObject(gameObject);
     }
 }
