@@ -1,0 +1,46 @@
+7 Characters, Style similar to the Time Fantasy Side-View Battlers
+Characters will represent classes:
+	Warrior (Sword, Axe)
+	Assassin (Knife, Bow)
+	Priest (Staff, Tome)
+	Fighter (Axe, Spear)
+	Arcanist (Tome, Sword)
+	Paladin (Spear, Staff)
+	Hunter (Bow, Knife)
+	
+Each character:
+Overworld sprite animations (Walk and Idle, same as the "80+ RPG Characters" pack)
+
+Side-View Battler animations:
+Idle
+"Cast" -> Generic animation (eg. raising hands) for skills/items
+Each class has the attack animations for:
+    Warrior -> Sword, Axe
+    Assassin -> Knife, Bow
+    Priest -> Staff, Tome
+    Fighter -> Axe, Spear
+    Arcanist -> Tome, Sword
+    Paladin -> Spear, Staff
+    Hunter -> Bow, Knife
+	*Tome and Staff attack animations are not physical, but "Cast" animations
+Take Damage
+Fainted
+Victory -> Faces towards the camera, motion at your discretion. Just needs to face the camera.
+
+
+X Tilesets, Themes:
+    -
+    -
+    -
+    
+Tilesets need:
+    The necessary ground + all-direction wall textures (no need for diagonal)
+    Chest (Closed, Open)
+    Doorway (w/ Door and w/o Door)
+    
+
+Tileset Specific:
+    
+    
+Could you please break down how much it would cost for each character/tileset? I'm a college student doing this as mostly a hobby so I might not be able to afford everything at once, so I might order it in parts.
+

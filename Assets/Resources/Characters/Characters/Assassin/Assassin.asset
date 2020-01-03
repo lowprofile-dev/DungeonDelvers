@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63668046cc5843debea45eaed0277ee1, type: 3}
+  m_Name: Assassin
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  uniqueIdentifier: Characters/Characters/Assassin/Assassin
+  CharacterName: Assassin
+  CharacterFace: {fileID: 0}
+  CharacterPrefab: {fileID: 8521580809372860284, guid: 1736b34fe64ca480bb1a5a1e1dc5f947,
+    type: 3}
+  BattlerPrefab: {fileID: 7439843032942050208, guid: a997fc6069c0fba48add91a50ad6c4ae,
+    type: 3}
+  BaseMaxHp: 52
+  MaxHpGrowth: 6
+  BaseInitialEp: 25
+  BaseEpGain: 15
+  BasePhysAtk: 19
+  PhysAtkGrowth: 5
+  BaseMagAtk: 13
+  MagAtkGrowth: 4
+  BasePhysDef: 11
+  PhysDefGrowth: 4
+  BaseMagDef: 8
+  MagDefGrowth: 5
+  BaseSpeed: 21
+  SpeedGrowth: 6
+  BaseAccuracy: 0.85
+  BaseEvasion: 0.1
+  BaseCritChance: 0.12
+  BaseCritAvoid: 0.12
+  Weapon: {fileID: 11400000, guid: f0ca1d086742b68698d5f98d7810133b, type: 2}
+  Head: {fileID: 0}
+  Body: {fileID: 0}
+  Hand: {fileID: 0}
+  Feet: {fileID: 0}
+  Accessory1: {fileID: 0}
+  Accessory2: {fileID: 0}
+  Accessory3: {fileID: 0}
+  Level: 50

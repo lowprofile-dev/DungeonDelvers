@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63668046cc5843debea45eaed0277ee1, type: 3}
+  m_Name: Fighter
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  uniqueIdentifier: Characters/Characters/Fighter/Fighter
+  CharacterName: Fighter
+  CharacterFace: {fileID: 0}
+  CharacterPrefab: {fileID: 4926351740937089460, guid: 6b1c03872d39085498683e1163d118fa,
+    type: 3}
+  BattlerPrefab: {fileID: 7439843032942050208, guid: 4738f22a4a418c541a2166d1569d93b2,
+    type: 3}
+  BaseMaxHp: 68
+  MaxHpGrowth: 8
+  BaseInitialEp: 25
+  BaseEpGain: 15
+  BasePhysAtk: 22
+  PhysAtkGrowth: 6
+  BaseMagAtk: 8
+  MagAtkGrowth: 2
+  BasePhysDef: 13
+  PhysDefGrowth: 5
+  BaseMagDef: 6
+  MagDefGrowth: 3
+  BaseSpeed: 14
+  SpeedGrowth: 4
+  BaseAccuracy: 0.85
+  BaseEvasion: 0.05
+  BaseCritChance: 0.08
+  BaseCritAvoid: 0.08
+  Weapon: {fileID: 11400000, guid: f0ca1d086742b68698d5f98d7810133b, type: 2}
+  Head: {fileID: 0}
+  Body: {fileID: 0}
+  Hand: {fileID: 0}
+  Feet: {fileID: 0}
+  Accessory1: {fileID: 0}
+  Accessory2: {fileID: 0}
+  Accessory3: {fileID: 0}
+  Level: 1

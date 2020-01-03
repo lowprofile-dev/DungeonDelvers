@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_JRPGRoguelike.654113031.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="AssetIcons-Editor.csproj" t="IncludeRecursive" />
+      <e p="AssetIcons.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="AssetIcons" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Demo Resources" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Item.cs" t="Include" />
+                <e p="Prop.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Demos" t="Include">
+              <e p="Docs Demo" t="Include">
+                <e p="demo.txt.txt" t="Include" />
+                <e p="text.txt.txt" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="AssetIconAttribute.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="AssetIconAttributeDrawer.cs" t="Include" />
+              <e p="AssetIconDrawer.cs" t="Include" />
+              <e p="AssetIconTools.cs" t="Include" />
+              <e p="Modules" t="Include">
+                <e p="AssetIconModule.cs" t="Include" />
+                <e p="AssetTarget.cs" t="Include" />
+                <e p="ExtensionTypeModule.cs" t="Include" />
+                <e p="ModuleManifest.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="FBBCommission.txt" t="Include" />
+        <e p="JsonDotNet" t="Include">
+          <e p="link.xml" t="Include" />
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Sirenix" t="Include">
+            <e p="Assemblies" t="Include">
+              <e p="Sirenix.OdinInspector.Attributes.xml" t="Include" />
+              <e p="Sirenix.OdinInspector.Editor.xml" t="Include" />
+              <e p="Sirenix.Serialization.Config.xml" t="Include" />
+              <e p="Sirenix.Utilities.Editor.xml" t="Include" />
+              <e p="Sirenix.Utilities.xml" t="Include" />
+              <e p="link.xml" t="Include" />
+            </e>
+            <e p="Demos" t="Include">
+              <e p="Custom Drawers" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="CustomDrawerExample.cs" t="Include" />
+                  <e p="CustomGroupExample.cs" t="Include" />
+                  <e p="GenericDrawerExample.cs" t="Include" />
+                  <e p="GenericMenuExample.cs" t="Include" />
+                  <e p="HealthBarExample.cs" t="Include" />
+                  <e p="InstancedDrawerExample.cs" t="Include" />
+                  <e p="MinesweeperExample.cs" t="Include" />
+                  <e p="PriorityExamples.cs" t="Include" />
+                  <e p="ReflectionExample.cs" t="Include" />
+                  <e p="StringMemberHelperExample.cs" t="Include" />
+                  <e p="ValidationExample.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Odin Inspector" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="AssemblyImportSettingsAutomation.cs" t="Include" />
+                  <e p="BuildAOTAutomation.cs" t="Include" />
+                  <e p="EnsureOdinInspectorDefine.cs" t="Include" />
+                  <e p="FixBrokenUnityObjectWrapperDrawer.cs" t="Include" />
+                  <e p="SyncListDrawer.cs" t="Include" />
+                  <e p="SyncVarAttributeDrawer.cs" t="Include" />
+                  <e p="Vector2IntMinMaxAttributeDrawer.cs" t="Include" />
+                  <e p="VectorIntDrawers.cs" t="Include" />
+                  <e p="VectorIntPropertyResolvers.cs" t="Include" />
+                </e>
+                <e p="SerializedNetworkBehaviour.cs" t="Include" />
+                <e p="VectorIntFormatters.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Readme.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Camera" t="Include">
+            <e p="TrackTransform.cs" t="Include" />
+          </e>
+          <e p="Character" t="Include">
+            <e p="Character.cs" t="Include" />
+            <e p="CharacterBase.cs" t="Include" />
+            <e p="CharacterBattlerController.cs" t="Include" />
+            <e p="CharacterDatabase.cs" t="Include" />
+            <e p="CharacterSave.cs" t="Include" />
+            <e p="Stats.cs" t="Include" />
+          </e>
+          <e p="Combat" t="Include">
+            <e p="BattleController.cs" t="Include" />
+            <e p="Battlers" t="Include">
+              <e p="CharacterBattler.cs" t="Include" />
+              <e p="MonsterBattler.cs" t="Include" />
+            </e>
+            <e p="Encounter.cs" t="Include" />
+            <e p="IBattler.cs" t="Include" />
+            <e p="Monster.cs" t="Include" />
+          </e>
+          <e p="Control" t="Include">
+            <e p="GameController.cs" t="Include" />
+            <e p="GameSaveController.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+            <e p="SerializableAsset.cs" t="Include" />
+          </e>
+          <e p="Debug" t="Include">
+            <e p="test1.cs" t="Include" />
+          </e>
+          <e p="Extensions" t="Include">
+            <e p="SkredUtils.cs" t="Include" />
+          </e>
+          <e p="Interaction" t="Include">
+            <e p="Conditions" t="Include">
+              <e p="ValueCondition.cs" t="Include" />
+            </e>
+            <e p="ICondition.cs" t="Include" />
+            <e p="Interactable.cs" t="Include" />
+            <e p="Interaction.cs" t="Include" />
+            <e p="Interactions" t="Include">
+              <e p="AddItemInteraction.cs" t="Include" />
+              <e p="AddStackableInteraction.cs" t="Include" />
+              <e p="BranchInteraction.cs" t="Include" />
+              <e p="CallInteractableInteraction.cs" t="Include" />
+              <e p="DestroyObjectInteraction.cs" t="Include" />
+              <e p="MessageBoxInteraction.cs" t="Include" />
+              <e p="SetKeyInteraction.cs" t="Include" />
+              <e p="StartBattleInteraction.cs" t="Include" />
+              <e p="ToggleComponentActiveInteraction.cs" t="Include" />
+              <e p="WaitForKeyPressInteraction.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Inventory" t="Include">
+            <e p="Items" t="Include">
+              <e p="ConsumableBase.cs" t="Include" />
+              <e p="Equipment" t="Include">
+                <e p="AccessoryBase.cs" t="Include" />
+                <e p="BodyBase.cs" t="Include" />
+                <e p="FeetBase.cs" t="Include" />
+                <e p="HandBase.cs" t="Include" />
+                <e p="HeadBase.cs" t="Include" />
+                <e p="WeaponBase.cs" t="Include" />
+              </e>
+              <e p="EquippableBase.cs" t="Include" />
+              <e p="Instancing" t="Include">
+                <e p="Consumable.cs" t="Include" />
+                <e p="ConsumableSave.cs" t="Include" />
+                <e p="Equippable.cs" t="Include" />
+                <e p="EquippableSave.cs" t="Include" />
+                <e p="Item.cs" t="Include" />
+                <e p="ItemInstanceBuilder.cs" t="Include" />
+                <e p="ItemSave.cs" t="Include" />
+                <e p="ItemTypeMismatchException.cs" t="Include" />
+                <e p="MiscItem.cs" t="Include" />
+                <e p="MiscItemSave.cs" t="Include" />
+              </e>
+              <e p="ItemBase.cs" t="Include" />
+              <e p="ItemDatabase.cs" t="Include" />
+              <e p="MiscItemBase.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Security" t="Include">
+            <e p="StringCipher.cs" t="Include" />
+          </e>
+          <e p="Skills" t="Include">
+            <e p="Effect.cs" t="Include" />
+            <e p="Effects" t="Include">
+              <e p="DamageEffect.cs" t="Include" />
+            </e>
+            <e p="Passive.cs" t="Include" />
+            <e p="Skill.cs" t="Include" />
+            <e p="SkillDatabase.cs" t="Include" />
+            <e p="StatPassives" t="Include">
+              <e p="StatPassive.cs" t="Include" />
+            </e>
+          </e>
+          <e p="UI" t="Include">
+            <e p="BattleCanvas.cs" t="Include" />
+            <e p="Main Menu" t="Include">
+              <e p="CharacterInspector.cs" t="Include" />
+              <e p="CharacterPanel.cs" t="Include" />
+              <e p="InventoryItemButton.cs" t="Include" />
+              <e p="InventoryItemInspector.cs" t="Include" />
+              <e p="InventoryMenu.cs" t="Include" />
+              <e p="MainMenu.cs" t="Include" />
+            </e>
+            <e p="MessageBox.cs" t="Include" />
+          </e>
+        </e>
+        <e p="TODO.txt" t="Include" />
+        <e p="test_sandbox" t="Include">
+          <e p="test.cs" t="Include" />
+          <e p="testgetrectransform.cs" t="Include" />
+          <e p="testloadsceneadditive.cs" t="Include" />
+        </e>
+      </e>
+      <e p="JRPGRoguelike.sln" t="IncludeFlat" />
+      <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" t="IncludeRecursive" />
+      <e p="Sirenix.OdinInspector.CompatibilityLayer.csproj" t="IncludeRecursive" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

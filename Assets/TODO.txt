@@ -1,0 +1,47 @@
+Separar CharacterActionMenu em varias classes (CharacterActionMenu fica só pro menu. Fazer uma no momento pra Skill e outra pra targetting).
+Mudar executeeffect pra executeskill
+Separar Skill de player e de monstro.
+Terminar batalha simples (vs. 3 Slimes). (Lembrar de fazer skills custarem EP, fazer IA simples pra slime.)
+Limpar código, adicionando regiões e tal.
+Ver como vai ficar os Monstros. Vão ter um MonsterBase também? Vai ter bestiário?
+Unificar os Databases. Ver logo o que vai precisar ser serializado e o que não, e ver como serializar o que precisa.
+    ^Refazer os IDs para ser só um numero. A função de buildar IDs é no builddatabase do database principal, ele lê tudo, compara com o que já tinha, ai adiciona tudo de novo e dá IDs crescentes.
+Dar uma olhada no funcionamento do CharacterBattler, se tá tudo correto.
+Fazer Passivas+Status Effects (talvez mesma coisa).
+Fazer uma base super simples de aprender skill/passiva quando upa pra testar a serialização disso.
+Fazer uma base super simples de modificações de equip e como guardar na instancia.
+
+Começar serialização. Só é necessário um save.
+Terminar esse fluxo:
+    Começa jogo
+    Personagem abre um baú, pega um 4 equipamentos que däo 2 Skills e uma poção que upa a Party
+    Usa poção, upa, toda a party usa o nivel pra aprender uma skill e uma passiva simples.
+    Abre outro baú, poção que dá +5 dano para um equipamento. Usa.
+    Batalha contra NPC (aparece no mundo). Ganha, ganha XP, Itens, adiciona global que foi derrotado o NPC.
+    Salva.
+    Loada, tudo tá guardado e NPC não está mais lá (com a global)
+
+
+Dar uma olhada no DunGen
+
+
+Tipos de Skills/Passivas pra Fazer: (testar basicamente tudo)
+
+Passiva:
++50 HP
++20% HP
+10% Lifesteal
+Prevem 50% de dano fisico
+Não pode ser acertado por dano mágico
+
+Skill:
+105%formula de Dano
+50% da vida de dano
+
+Status Effects:
+Poison
+Stun
+Berserk
+Blind
+Silence *Ver como funciona -> Só pode usar skills da arma
+Seal *Remover passivas fora de stats-> Ver o quão prático é pra fazer

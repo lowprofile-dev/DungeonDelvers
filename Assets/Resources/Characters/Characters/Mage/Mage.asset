@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63668046cc5843debea45eaed0277ee1, type: 3}
+  m_Name: Mage
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  uniqueIdentifier: Characters/Characters/Mage/Mage
+  CharacterName: Mage
+  CharacterFace: {fileID: 0}
+  CharacterPrefab: {fileID: 8521580809372860284, guid: 1736b34fe64ca480bb1a5a1e1dc5f947,
+    type: 3}
+  BattlerPrefab: {fileID: 6494535058643958303, guid: dba77baa08951014b8b945b6c8690f93,
+    type: 3}
+  BaseMaxHp: 51
+  MaxHpGrowth: 4
+  BaseInitialEp: 25
+  BaseEpGain: 15
+  BasePhysAtk: 14
+  PhysAtkGrowth: 3
+  BaseMagAtk: 22
+  MagAtkGrowth: 8
+  BasePhysDef: 11
+  PhysDefGrowth: 3
+  BaseMagDef: 17
+  MagDefGrowth: 6
+  BaseSpeed: 17
+  SpeedGrowth: 4
+  BaseAccuracy: 0.85
+  BaseEvasion: 0.05
+  BaseCritChance: 0.08
+  BaseCritAvoid: 0.08
+  Weapon: {fileID: 11400000, guid: f0ca1d086742b68698d5f98d7810133b, type: 2}
+  Head: {fileID: 0}
+  Body: {fileID: 0}
+  Hand: {fileID: 0}
+  Feet: {fileID: 0}
+  Accessory1: {fileID: 0}
+  Accessory2: {fileID: 0}
+  Accessory3: {fileID: 0}
+  Level: 1

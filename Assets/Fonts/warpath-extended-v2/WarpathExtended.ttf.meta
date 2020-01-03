@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 2713af356db488b46a08c2043787d0cc
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: WarpathExtended
+  fontNames:
+  - WarpathExtended
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 606b7877b7988fc4e8b20f1ed8c77071, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
