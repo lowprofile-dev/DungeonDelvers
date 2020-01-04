@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class SetKeyInteraction : Interaction
 {
-    public ValueCondition.ValueScope Scope;
+    public ValueInteractableCondition.ValueScope Scope;
     public Operation operation;
     public string Key = "";
     public int Value = 0;
     public override void Run(Interactable source)
     {
-        if (Scope == ValueCondition.ValueScope.Global)
+        if (Scope == ValueInteractableCondition.ValueScope.Global)
         {
             switch (operation)
             {

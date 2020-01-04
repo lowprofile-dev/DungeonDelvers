@@ -18,15 +18,14 @@ public class PlayerController : SerializedMonoBehaviour
 
     public int PartyLevel = 1;
     public int CurrentExp = 0;
+    public int CurrentGold = 0;
     [ShowInInspector] public int ExpToNextLevel => (int)(5 + 10*PartyLevel + 4*Mathf.Pow(PartyLevel-1,2));
     
     [HideInEditorMode] public List<Character> Party = new List<Character>();
     [HideInEditorMode] public List<Item> Inventory = new List<Item>();
-
-//#if UNITY_EDITOR
+    
     [HideInPlayMode] public List<CharacterBase> PartyBases = new List<CharacterBase>();
     [HideInPlayMode] public List<ItemBase> InventoryBase = new List<ItemBase>();
-//#endif
 
     public float movementSpeed;
     public GameObject OverworldCharacter;

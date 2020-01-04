@@ -14,24 +14,45 @@ using Random = System.Random;
 
 public class MonsterBattler : SerializedMonoBehaviour, IBattler
 {
-    public string MonsterName;
-    private Image image;
+    [ReadOnly] public Encounter Encounter;
+    [OnValueChanged("LoadBase")] public Monster MonsterBase;
+    [SerializeField, ReadOnly] private GameObject monsterBattler;
+    [SerializeField, ReadOnly] private Image image;
+
+
+    #region Control
 
     private void Awake()
     {
+        LoadBase();
+    }
+
+    public void LoadBase()
+    {
+        if (MonsterBase == null)
+            return;
+        
+        stats = MonsterBase.Stats;
+        Skills = MonsterBase.Skills;
+        MonsterAi = MonsterBase.MonsterAi;
+
+        if (monsterBattler == null)
+            monsterBattler = Instantiate(MonsterBase.MonsterBattler, RectTransform);
+        if (image == null)
+            image = monsterBattler.GetComponent<Image>();
+
         CurrentHp = Stats.MaxHp;
         CurrentEp = Stats.InitialEp;
     }
 
-    private void Start()
-    {
-        image = GetComponent<Image>();
-    }
+    private bool NoMonster => MonsterBase == null;
 
+    #endregion
+    
     #region Stats
 
-    public string Name => MonsterName;
-    [FoldoutGroup("Stats"), SerializeField, PropertyOrder(999)] private Stats stats;
+    public string Name => MonsterBase.MonsterName;
+    [FoldoutGroup("Stats"), ShowInInspector, PropertyOrder(999)] private Stats stats;
     public Stats Stats => stats;
     
     [FoldoutGroup("Stats"), SerializeField] private int currentHp;
@@ -55,7 +76,8 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
         }
     }
     
-    public Skill Skill;
+    public List<MonsterSkill> Skills;
+    public MonsterAI MonsterAi;
 
     public bool Fainted => CurrentHp == 0;
 
@@ -83,25 +105,25 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
         
         Debug.Log($"Começou a pegar o turno de {Name}");
 
-        IBattler target = null;
+        Turn turn = new Turn();
 
         await GameController.Instance.QueueActionAndAwait(() =>
         {
+            var skill = MonsterAi.ChooseSkill(this);
+            turn.Skill = skill;
+            
+            //Debug, pega só um inimigo aleatório
             var possibleTargets = battle.Party.Where(partyMember => !Fainted).ToList();
             var possibleTarget = UnityEngine.Random.Range(0, possibleTargets.Count);
-            target = possibleTargets[possibleTarget];
+            turn.Targets = new [] {possibleTargets[possibleTarget]};
         });
         
-        return new Turn()
-        {
-            Skill = Skill,
-            Targets = new IBattler[]{target}
-        };
+        return turn;
     }
 
     public async Task ExecuteTurn(BattleController battle, IBattler source, Skill skill, IEnumerable<IBattler> targets)
     {
-        if (Skill != null)
+        if (Skills != null)
         {
             GameController.Instance.QueueAction(() =>
             {
@@ -112,7 +134,7 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
                 }
             });
             
-            await BattleController.Instance.battleCanvas.battleInfoPanel.DisplayInfo(Skill.SkillName);
+            await BattleController.Instance.battleCanvas.battleInfoPanel.DisplayInfo(skill.SkillName);
             
             GameController.Instance.QueueAction(() =>
             {

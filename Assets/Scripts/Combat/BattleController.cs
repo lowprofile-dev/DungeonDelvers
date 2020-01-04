@@ -17,6 +17,7 @@ public class BattleController : SerializedMonoBehaviour
 {
     public static BattleController Instance { get; private set; }
 
+    [ReadOnly, ShowInInspector] private Encounter _encounter;
     public List<CharacterBattler> Party;
     public List<MonsterBattler> Enemies;
 
@@ -46,6 +47,9 @@ public class BattleController : SerializedMonoBehaviour
 
     public void BeginBattle(GameObject encounterPrefab, Sprite backgroundSprite = null)
     {
+        //Pega uma referencia ao Encounter
+        _encounter = encounterPrefab.GetComponent<Encounter>();
+        
         //Pausa o Jogo
         PlayerController.Instance.PauseGame();
 
@@ -102,12 +106,7 @@ public class BattleController : SerializedMonoBehaviour
                 await BattlerTurn(CurrentBattler);
                 battleResult = IsBattleOver();
             }
-
-            //Se ganhou, se perder ver como fazer
-//            foreach (var partyMember in Party)
-//            {
-//                partyMember.CommitChanges();
-//            }
+            
             if (battleResult == 1)
             {
                 Debug.Log("Ganhou");
@@ -134,6 +133,14 @@ public class BattleController : SerializedMonoBehaviour
         }
     }
 
+    private void CommitChanges()
+    {
+        var playerController = PlayerController.Instance;
+        Party.ForEach(partyMember => partyMember.CommitChanges());
+        playerController.GainEXP(_encounter.ExpReward);
+        playerController.CurrentGold += _encounter.GoldReward;
+    }
+    
     async Task BattlerTurn(IBattler battler)
     {
         await battler.TurnStart(this);

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Unity\Projects\RL" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="AssetIcons-Editor.csproj" t="IncludeRecursive" />
@@ -109,6 +110,12 @@
             <e p="Encounter.cs" t="Include" />
             <e p="IBattler.cs" t="Include" />
             <e p="Monster.cs" t="Include" />
+            <e p="MonsterAI" t="Include">
+              <e p="AIs" t="Include">
+                <e p="RandomAI.cs" t="Include" />
+              </e>
+              <e p="MonsterAI.cs" t="Include" />
+            </e>
           </e>
           <e p="Control" t="Include">
             <e p="GameController.cs" t="Include" />
@@ -125,9 +132,9 @@
           </e>
           <e p="Interaction" t="Include">
             <e p="Conditions" t="Include">
-              <e p="ValueCondition.cs" t="Include" />
+              <e p="ValueInteractableCondition.cs" t="Include" />
             </e>
-            <e p="ICondition.cs" t="Include" />
+            <e p="IInteractableCondition.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
             <e p="Interaction.cs" t="Include" />
             <e p="Interactions" t="Include">
@@ -180,7 +187,14 @@
             <e p="Effects" t="Include">
               <e p="DamageEffect.cs" t="Include" />
             </e>
+            <e p="MonsterSkill.cs" t="Include" />
             <e p="Skill.cs" t="Include" />
+            <e p="SkillCondition" t="Include">
+              <e p="Conditions" t="Include">
+                <e p="AlwaysUseSkillCondition.cs" t="Include" />
+              </e>
+              <e p="ISkillCondition.cs" t="Include" />
+            </e>
             <e p="SkillDatabase.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
@@ -203,6 +217,79 @@
               <e p="MainMenu.cs" t="Include" />
             </e>
             <e p="MessageBox.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Tayx" t="Include">
+          <e p="Graphy - Ultimate Stats Monitor" t="Include">
+            <e p="Changelog.txt" t="Include" />
+            <e p="Font" t="Include">
+              <e p="Northwest-Bold" t="Include">
+                <e p="ERIC-TIRADO-NORTHWEST-LICENSE.txt" t="Include" />
+              </e>
+              <e p="Roboto" t="Include">
+                <e p="LICENSE.txt" t="Include" />
+              </e>
+            </e>
+            <e p="Scene" t="Include">
+              <e p="Color Picker" t="Include">
+                <e p="G_CUIColorPicker.cs" t="Include" />
+              </e>
+              <e p="Customization Scripts" t="Include">
+                <e p="CustomizeGraphy.cs" t="Include" />
+                <e p="ForceSliderToMultipleOf3.cs" t="Include" />
+                <e p="ForceSliderToPowerOf2.cs" t="Include" />
+                <e p="UpdateTextWithSliderValue.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Advanced" t="Include">
+                <e p="G_AdvancedData.cs" t="Include" />
+              </e>
+              <e p="Audio" t="Include">
+                <e p="G_AudioGraph.cs" t="Include" />
+                <e p="G_AudioManager.cs" t="Include" />
+                <e p="G_AudioMonitor.cs" t="Include" />
+                <e p="G_AudioText.cs" t="Include" />
+              </e>
+              <e p="Editor" t="Include">
+                <e p="GraphyDebuggerEditor.cs" t="Include" />
+                <e p="GraphyManagerEditor.cs" t="Include" />
+              </e>
+              <e p="Fps" t="Include">
+                <e p="G_FpsGraph.cs" t="Include" />
+                <e p="G_FpsManager.cs" t="Include" />
+                <e p="G_FpsMonitor.cs" t="Include" />
+                <e p="G_FpsText.cs" t="Include" />
+              </e>
+              <e p="Graph" t="Include">
+                <e p="G_Graph.cs" t="Include" />
+              </e>
+              <e p="GraphyDebugger.cs" t="Include" />
+              <e p="GraphyManager.cs" t="Include" />
+              <e p="Ram" t="Include">
+                <e p="G_RamGraph.cs" t="Include" />
+                <e p="G_RamManager.cs" t="Include" />
+                <e p="G_RamMonitor.cs" t="Include" />
+                <e p="G_RamText.cs" t="Include" />
+              </e>
+              <e p="Shader" t="Include">
+                <e p="G_GraphShader.cs" t="Include" />
+              </e>
+              <e p="UI" t="Include">
+                <e p="IModifiableState.cs" t="Include" />
+                <e p="IMovable.cs" t="Include" />
+              </e>
+              <e p="Util" t="Include">
+                <e p="G_ExtensionMethods.cs" t="Include" />
+                <e p="G_FloatString.cs" t="Include" />
+                <e p="G_Intstring.cs" t="Include" />
+                <e p="G_Singleton.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="GraphMobile.shader" t="Include" />
+              <e p="GraphStandard.shader" t="Include" />
+            </e>
           </e>
         </e>
         <e p="test_sandbox" t="Include">

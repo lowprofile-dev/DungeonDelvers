@@ -94,21 +94,16 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  MonsterName: Slime
-  stats:
-    MaxHp: 5
-    InitialEp: 15
-    EpGain: 5
-    PhysAtk: 15
-    MagAtk: 15
-    PhysDef: 15
-    MagDef: 15
-    Speed: 0
-    Accuracy: 15
-    Evasion: 15
-    CritChance: 15
-    CritAvoid: 15
+    SerializationNodes:
+    - Name: MonsterAi
+      Entry: 7
+      Data: 0|RandomAI, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+  Encounter: {fileID: 0}
+  MonsterBase: {fileID: 11400000, guid: f9f9289286f67e94daf87a2905a5530c, type: 2}
   currentHp: 0
   currentEp: 0
-  Skill: {fileID: 11400000, guid: 49b227031f2f8b946a474b091b43415c, type: 2}
+  Skills:
+  - {fileID: 11400000, guid: 66006c83b7492c845b3abe6274d06cf3, type: 2}

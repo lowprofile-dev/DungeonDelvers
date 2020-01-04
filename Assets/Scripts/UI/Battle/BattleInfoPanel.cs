@@ -20,8 +20,9 @@ public class BattleInfoPanel : SerializedMonoBehaviour
 
     public void ShowInfo(string info)
     {
-        Text.text = info;
         Panel.SetActive(true);
+        Text.text = info;
+        LayoutRebuilder.ForceRebuildLayoutImmediate(Panel.transform as RectTransform);
     }
 
     public void HideInfo()

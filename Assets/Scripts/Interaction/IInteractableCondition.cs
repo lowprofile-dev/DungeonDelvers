@@ -1,4 +1,4 @@
-public interface ICondition
+public interface IInteractableCondition
 {
     bool ConditionReached(Interactable source);
 }

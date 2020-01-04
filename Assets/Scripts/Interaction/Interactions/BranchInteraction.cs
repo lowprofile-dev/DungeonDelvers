@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BranchInteraction : Interaction
+public class  BranchInteraction : Interaction
 {
     public List<Branch> Branches = new List<Branch>();
     public Interactable Default = null;
@@ -13,7 +13,7 @@ public class BranchInteraction : Interaction
         chosenInteractable = Default;
         foreach (var branch in Branches)
         {
-            if (branch.Condition.ConditionReached(source))
+            if (branch.interactableCondition.ConditionReached(source))
             {
                 chosenInteractable = branch.Interactable;
                 break;
@@ -29,7 +29,7 @@ public class BranchInteraction : Interaction
     [Serializable]
     public struct Branch
     {
-        public ICondition Condition;
+        public IInteractableCondition interactableCondition;
         public Interactable Interactable;
     }
 }

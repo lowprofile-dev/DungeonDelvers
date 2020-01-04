@@ -1,19 +1,14 @@
-Mudar partyMember.CommitChanges() pra um metodo que faz pra party toda e processa o que ganhou do encontro.
-Terminar interface batalha, mostrar nome do inimigo, ver o que mais mostrar (Barra de HP?)
-Arrumar MonsterBattler -> Stats e tal viram readonly, tem um campo de Monster, quando seta o Monster no editor arruma tudo.
-Separar CharacterActionMenu em varias classes (CharacterActionMenu fica só pro menu. Fazer uma no momento pra Skill e outra pra targetting).
+Dar uma arrumada depois em encounters e monstera pra ficar mais intuitivo. Fazer um encounter base e ficar duplicando ele pra fazer mais, por enquanto.
+Fazer Passivas+Status Effects+Buffs (talvez mesma coisa).
 Mudar executeeffect pra executeskill
 Criar um receiveeffect (em adição ao receive skill, pra não ter que botar o mesmo código x vezes tipo desaparecer quando morrer)
-Separar Skill de player e de monstro.
 Terminar batalha simples (vs. 3 Slimes). (Lembrar de fazer skills custarem EP, fazer IA simples pra slime.)
-Limpar código, adicionando regiões e tal.
-Ver como vai ficar os Monstros. Vão ter um MonsterBase também? Vai ter bestiário?
 Unificar os Databases. Ver logo o que vai precisar ser serializado e o que não, e ver como serializar o que precisa.
     ^Refazer os IDs para ser só um numero. A função de buildar IDs é no builddatabase do database principal, ele lê tudo, compara com o que já tinha, ai adiciona tudo de novo e dá IDs crescentes.
 Dar uma olhada no funcionamento do CharacterBattler, se tá tudo correto.
-Fazer Passivas+Status Effects (talvez mesma coisa).
+
 Fazer uma base super simples de aprender skill/passiva quando upa pra testar a serialização disso.
-Fazer uma base super simples de modificações de equip e como guardar na instancia.
+Fazer uma base super simples de modificações de equip e como guardar na instancia. -> Equips com variações de stats.
 
 Começar serialização. Só é necessário um save.
 Terminar esse fluxo:
@@ -23,8 +18,9 @@ Terminar esse fluxo:
     Abre outro baú, poção que dá +5 dano para um equipamento. Usa.
     Batalha contra NPC (aparece no mundo). Ganha, ganha XP, Itens, adiciona global que foi derrotado o NPC.
     Salva.
-    Loada, tudo tá guardado e NPC não está mais lá (com a global)
+    Load, tudo tá guardado e NPC não está mais lá (com a global)
 
+Ao terminar esse fluxo, limpar o código e pedir a comissão ao FBB.
 
 Dar uma olhada no DunGen
 

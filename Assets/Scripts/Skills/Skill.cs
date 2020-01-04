@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(menuName = "Skill")]
+[CreateAssetMenu(menuName = "Skill/Skill")]
 public class Skill : SerializableAsset
 {
     public string SkillName = "";

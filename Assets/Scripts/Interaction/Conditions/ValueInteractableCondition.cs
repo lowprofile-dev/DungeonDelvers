@@ -1,10 +1,10 @@
-public class ValueCondition : ICondition
+public class ValueInteractableCondition : IInteractableCondition
 {
     public ValueScope Scope = ValueScope.Global;
     public string Key = "";
     public Comparison Expected = Comparison.EqualTo;
     public int Value = 0;
-    
+
     public bool ConditionReached(Interactable source)
     {
         int value;
