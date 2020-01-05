@@ -26,6 +26,8 @@ Terminar esse fluxo:
 
 Ao terminar esse fluxo, limpar o código e pedir a comissão ao FBB.
 
+Futuro:
+Concertar quando uma skill tem varios alvos, para executar tudo de uma vez. Problema maior em ShowDamage, DamageFlash e Fade parecem não dar problema.
 Dar uma olhada no DunGen
 
 

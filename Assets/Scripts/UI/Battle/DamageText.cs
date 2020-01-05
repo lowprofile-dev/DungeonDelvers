@@ -12,6 +12,6 @@ public class DamageText : MonoBehaviour
         Text.text = text;
         Text.color = color;
     }
-    
+
     //Fazer resto depois
 }

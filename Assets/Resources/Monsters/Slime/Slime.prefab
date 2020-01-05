@@ -103,6 +103,8 @@ MonoBehaviour:
       Data: 
   Encounter: {fileID: 0}
   MonsterBase: {fileID: 11400000, guid: f9f9289286f67e94daf87a2905a5530c, type: 2}
+  monsterBattler: {fileID: 0}
+  image: {fileID: 0}
   currentHp: 0
   currentEp: 0
   Skills:

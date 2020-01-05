@@ -54,16 +54,16 @@ public class GameController : SerializedMonoBehaviour
 
         Instance.Globals[key] = value;
     }
-    
+
     private Queue<Action> QueuedActions = new Queue<Action>();
 
     public async Task QueueActionAndAwait(Action action)
     {
         var completed = false;
         var fullAction = (action += () => completed = true);
-        
-        QueuedActions.Enqueue(fullAction);
-        
+
+        QueueAction(fullAction);
+
         //refazer depois, primeiro fazer funcionar
         while (!completed)
         {
@@ -71,11 +71,17 @@ public class GameController : SerializedMonoBehaviour
         }
     }
 
-    public async Task PlayCoroutine(IEnumerator coroutine)
+    public async Task PlayCoroutine(IEnumerator coroutine, MonoBehaviour target = null)
     {
         var completion = new Ref<bool>(false);
+        Action action = () =>
+        {
+            if (target == null)
+                target = this;
+            target.StartCoroutine(AwaitCoroutineCompletion(coroutine, completion));
+        };
 
-        QueuedActions.Enqueue(() => StartCoroutine(AwaitCoroutineCompletion(coroutine, completion)));
+        QueueAction(action);
 
         while (completion.Instance == false)
             await Task.Delay(5);
@@ -86,13 +92,9 @@ public class GameController : SerializedMonoBehaviour
         yield return coroutine;
         completed.Instance = true;
     }
-    
+
     public void QueueAction(Action action)
     {
-        if (action == null)
-        {
-            Debug.LogException(new NullReferenceException());
-        }
         QueuedActions.Enqueue(action);
     }
 

@@ -43,7 +43,25 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: SkillAnimation
-      Entry: 6
+      Entry: 7
+      Data: 2|FromSourceToTargetSkillAnimation, Assembly-CSharp
+    - Name: AnimationName
+      Entry: 1
+      Data: Fireball1
+    - Name: AnimationSize
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 200
+    - Name: 
+      Entry: 4
+      Data: 200
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   uniqueIdentifier: Skills/Attack 2
   databaseIgnore: 0

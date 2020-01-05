@@ -107,23 +107,39 @@ public class BattleCanvas : SerializedMonoBehaviour
 
     public async Task ShowDamage(IBattler battler, string info, Color textColor)
     {
-        GameObject damageObject = null;
-        await GameController.Instance.QueueActionAndAwait(() =>
-        {
-            //Animação pro dano?
-            damageObject = Instantiate(DamagePrefab, transform);
-            damageObject.transform.position = battler.RectTransform.position + new Vector3(0, 100, 0);
 
-            var damageText = damageObject.GetComponent<DamageText>();
-            damageText.SetupDamageText(info,textColor);
-        });
+        // GameObject damageObject = null;
+        // await GameController.Instance.QueueActionAndAwait(() =>
+        // {
+        //     //Animação pro dano?
+        //     damageObject = Instantiate(DamagePrefab, transform);
+        //     damageObject.transform.position = battler.RectTransform.position + new Vector3(0, 100, 0);
+        //
+        //     var damageText = damageObject.GetComponent<DamageText>();
+        //     damageText.SetupDamageText(info,textColor);
+        // });
+        //
+        // await Task.Delay(1400);
+        //
+        // await GameController.Instance.QueueActionAndAwait(() =>
+        // {
+        //     Destroy(damageObject);
+        // });
 
-        await Task.Delay(1400);
+        await GameController.Instance.PlayCoroutine(ShowDamageCoroutine(battler, info, textColor));
+    }
 
-        await GameController.Instance.QueueActionAndAwait(() =>
-        {
-            Destroy(damageObject);
-        });
+    private IEnumerator ShowDamageCoroutine(IBattler battler, string info, Color textColor)
+    {
+        var damageObject = Instantiate(DamagePrefab, transform);
+        damageObject.transform.position = battler.RectTransform.position + new Vector3(0, 100, 0);
+
+        var damageText = damageObject.GetComponent<DamageText>();
+        damageText.SetupDamageText(info,textColor);
+        
+        yield return new WaitForSeconds(1.4f);
+        
+        GameController.Instance.QueueAction(() => Destroy(damageObject));
     }
 
     public void BindActionArrow(RectTransform rectTransform)

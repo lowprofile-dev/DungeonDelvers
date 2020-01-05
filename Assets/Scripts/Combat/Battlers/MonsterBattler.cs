@@ -106,7 +106,7 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
     
     public async Task<Turn> GetTurn()
     {
-        if (Fainted)
+        if (Fainted || MonsterAi == null)
             return new Turn();
         
         Debug.Log($"Começou a pegar o turno de {Name}");
@@ -180,17 +180,20 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
         {
             case DamageEffect.DamageEffectResult damageEffectResult when !Fainted:
             {
-                Task flash = DamageFlash();
-                Task damage = BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt.ToString(), Color.white);
+                // Task damage = ShowDamage(damageEffectResult.DamageDealt);
+                // Task flash = DamageFlash();
+                //
+                // await Task.WhenAll(flash, damage);
 
-                await Task.WhenAll(flash, damage);
+                await ShowDamageAndFlash(damageEffectResult.DamageDealt);
+                
                 break;
             }
             case DamageEffect.DamageEffectResult damageEffectResult:
             {
+                Task damage = ShowDamage(damageEffectResult.DamageDealt);
                 Task fade = Fade();
-                Task damage = BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt.ToString(), Color.white);
-
+                
                 await Task.WhenAll(fade, damage);
                 break;
             }
@@ -211,6 +214,60 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
     }
 
     #endregion
+
+    #region Animations
+
+    private async Task ShowDamageAndFlash(int damageAmount)
+    {
+        await GameController.Instance.PlayCoroutine(ShowDamageAndFlashCoroutine(damageAmount));
+    }
+
+    private IEnumerator ShowDamageAndFlashCoroutine(int damageAmount)
+    {
+        var damageInstance = Instantiate(BattleController.Instance.battleCanvas.DamagePrefab, BattleController.Instance.battleCanvas.transform);
+        damageInstance.transform.position = transform.position + new Vector3(0, 100, 0);
+
+        var damageComponent = damageInstance.GetComponent<DamageText>();
+        damageComponent.SetupDamageText(damageAmount.ToString(), Color.white);
+        
+        var normalColor = image.color;
+        var blinkingColor = new Color(image.color.r, image.color.g, image.color.b, 0.3f);
+        
+        for (int i = 0; i < 5; i++)
+        {
+            image.color = blinkingColor;
+            yield return new WaitForSeconds(0.05f);
+            image.color = normalColor;
+            yield return new WaitForSeconds(0.05f);
+        }
+        
+        yield return new WaitForSeconds(1);
+        
+        Destroy(damageInstance);
+    }
+    
+    private async Task ShowDamage(int damageAmount)
+    {
+        await GameController.Instance.PlayCoroutine(ShowDamageCoroutine(damageAmount), this);
+    }
+
+    private IEnumerator ShowDamageCoroutine(int damageAmount)
+    {
+        var damageInstance = Instantiate(BattleController.Instance.battleCanvas.DamagePrefab, BattleController.Instance.battleCanvas.transform);
+        damageInstance.transform.position = transform.position + new Vector3(0, 100, 0);
+
+        var damageComponent = damageInstance.GetComponent<DamageText>();
+        damageComponent.SetupDamageText(damageAmount.ToString(), Color.white);
+        
+        yield return new WaitForSeconds(1.4f);
+        
+        Destroy(damageInstance);
+    }
+
+    private async Task ShowHeal()
+    {
+        
+    }
     
     private async Task DamageFlash()
     {
@@ -220,7 +277,7 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
     private IEnumerator DamageBlinkCoroutine()
     {
         var normalColor = image.color;
-        var blinkingColor = new Color(image.color.r, image.color.g, image.color.grayscale, 0.3f);
+        var blinkingColor = new Color(image.color.r, image.color.g, image.color.b, 0.3f);
 
         for (int i = 0; i < 5; i++)
         {
@@ -244,6 +301,9 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
             yield return new WaitForFixedUpdate();
         }
     }
+
+    #endregion
+   
     
     public RectTransform RectTransform => transform as RectTransform;
 }
