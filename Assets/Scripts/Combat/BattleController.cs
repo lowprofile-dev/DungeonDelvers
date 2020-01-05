@@ -103,6 +103,9 @@ public class BattleController : SerializedMonoBehaviour
 
                 //Pega o Battler atual e espera o turno dele.
                 CurrentBattler = orderEnumerator.Current;
+                if (CurrentBattler.Fainted)
+                    continue;
+                
                 await BattlerTurn(CurrentBattler);
                 battleResult = IsBattleOver();
             }
@@ -143,9 +146,9 @@ public class BattleController : SerializedMonoBehaviour
     
     async Task BattlerTurn(IBattler battler)
     {
-        await battler.TurnStart(this);
+        await battler.TurnStart();
 
-        var turn = await battler.GetTurn(this);
+        var turn = await battler.GetTurn();
 
         var usedSkill = turn.Skill;
         var targets = turn.Targets;
@@ -154,20 +157,20 @@ public class BattleController : SerializedMonoBehaviour
         {
             GameController.Instance.QueueAction(() => Debug.Log($"Skill: {usedSkill.SkillName}, Target: {targets.First()}"));
             
-            await battler.ExecuteTurn(this, battler, usedSkill,
+            await battler.ExecuteTurn(battler, usedSkill,
                 targets); //Usa a skill, toca a animação de usar a skill. Talvez botar pra ser dentro do GetTurn mesmo. Ver.
 
             //Roda a skill em todos os alvos em parelelo, espera todos eles retornarem os efeitos.
             var effectResults =
-                await Task.WhenAll(targets.EachDo((target) => target.ReceiveSkill(this, battler, usedSkill)));
+                await Task.WhenAll(targets.EachDo((target) => target.ReceiveSkill(battler, usedSkill)));
 
             var concatResults = effectResults.SelectMany(x => x);
             
-            await battler.AfterSkill(this,
+            await battler.AfterSkill(
                 concatResults); //Ex. caso tenha alguma interação com o que aconteceu. Ex. curar 2% do dano dado, que é afetado pela rolagem de dano, crits, erros, etc.
         }
 
-        await battler.TurnEnd(this); //Cleanup ou outros efeitos
+        await battler.TurnEnd(); //Cleanup ou outros efeitos
     }
 
     /// <summary>

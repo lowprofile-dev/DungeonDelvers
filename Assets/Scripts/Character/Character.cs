@@ -9,6 +9,10 @@ using Debug = UnityEngine.Debug;
 
 public class Character
 {
+    public CharacterBase Base { get; set; }
+    
+    #region Instancing
+
     public CharacterSave Serialize()
     {
         var save = new CharacterSave()
@@ -20,8 +24,6 @@ public class Character
 
         return save;
     }
-
-    public CharacterBase Base { get; set; }
 
     public Character(CharacterBase characterBase)
     {
@@ -45,7 +47,13 @@ public class Character
         //MaxHP = save.MaxHP;
         //CurrentHP = save.CurrentHP;
     }
+    
+    #endregion
 
+    #region Stats
+
+    private int CurrentLevel => PlayerController.Instance.PartyLevel;
+    
     [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly]private int currentHp;
 
     public int CurrentHp
@@ -58,6 +66,8 @@ public class Character
         }
     }
 
+    public bool Fainted => CurrentHp == 0;
+    
     [FoldoutGroup("Stats"), Sirenix.OdinInspector.ReadOnly] public Stats BaseStats;
     [FoldoutGroup("Stats"), Sirenix.OdinInspector.ReadOnly] public Stats BonusStats;
     [FoldoutGroup("Stats"), Sirenix.OdinInspector.ReadOnly] public Stats Stats;
@@ -82,6 +92,10 @@ public class Character
             return new Equippable[] {Weapon, Head, Body, Hand, Feet, Accessory1, Accessory2, Accessory3}.Where(equippable => equippable != null);
         }
     }
+
+    #endregion
+
+    #region Updating
 
     public void Regenerate()
     {
@@ -134,8 +148,6 @@ public class Character
         }
     }
     
-    private int CurrentLevel => PlayerController.Instance.PartyLevel;
-
     public void Equip(Equippable equippable, int accessorySlot = 0)
     {
         if (equippable == null || equippable.EquippableBase == null)
@@ -205,6 +217,10 @@ public class Character
         Regenerate();
     }
 
+    #endregion
+
+    #region Events
+
     private void OnEquip(Equippable equip)
     {
         
@@ -215,7 +231,8 @@ public class Character
         
     }
 
-    
+    #endregion
+
 #if UNITY_EDITOR
     [FoldoutGroup("Equips"), PropertyOrder(-1), ShowInInspector, OnValueChanged("_EquipBase")]
     private EquippableBase _ToEquip;

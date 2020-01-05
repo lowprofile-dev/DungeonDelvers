@@ -33,21 +33,28 @@ public class CharacterActionMenu : SerializedMonoBehaviour
             statusText.Name.text = battler.Character.Base.CharacterName;
 
             if (battler == Battler)
+            {
                 statusText.Name.text = ">" + statusText.Name.text;
+                statusText.Panel.enabled = true;
+            }
+            else
+            {
+                statusText.Panel.enabled = false;
+            }
+                
 
-            statusText.Life.text = $"{battler.CurrentHp}/{battler.Stats.MaxHp} - {battler.CurrentEp}";
+            statusText.Life.text = $"{battler.CurrentHp}/{battler.Stats.MaxHp} - {battler.CurrentEp} EP";
             statusText.Life.color = LifeToColor(battler.CurrentHp, battler.Stats.MaxHp);
         }
         
         ShowActionMenu();
-        
-        EventSystem.current.SetSelectedGameObject(InitialButton);
     }
 
     public void ShowActionMenu()
     {
         Panel.SetActive(true);
         BattleCanvas.BindActionArrow(Battler.RectTransform);
+        EventSystem.current.SetSelectedGameObject(InitialButton);
     }
     
     public void FinishTurn(Turn turn)
@@ -74,6 +81,7 @@ public class CharacterActionMenu : SerializedMonoBehaviour
     {
         public Text Name;
         public Text Life;
+        public Image Panel;
     }
 
     struct LifeColor

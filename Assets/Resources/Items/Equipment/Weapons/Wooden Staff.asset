@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf7e5dcd198672d4ab3572da034b41ed, type: 3}
-  m_Name: SlimeMonsterBase
+  m_Script: {fileID: 11500000, guid: 0cf48c1b54f14787bcbf7e72666c3fdd, type: 3}
+  m_Name: Wooden Staff
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -20,30 +20,27 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: MonsterAi
-      Entry: 7
-      Data: 0|RandomAI, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
   uniqueIdentifier: 
   databaseIgnore: 0
-  MonsterName: Slime
-  MonsterBattler: {fileID: 3515542978881643201, guid: 8c74195d025782e40aa8c326ba0292cc,
-    type: 3}
+  itemIcon: {fileID: 0}
+  itemName: 
+  goldValue: 0
+  itemWeight: 0
+  itemText: 
   Stats:
-    MaxHp: 30
-    InitialEp: 15
-    EpGain: 15
-    PhysAtk: 5
-    MagAtk: 5
-    PhysDef: 5
-    MagDef: 5
-    Speed: 5
-    Accuracy: 100
+    MaxHp: 0
+    InitialEp: 0
+    EpGain: 0
+    PhysAtk: 0
+    MagAtk: 0
+    PhysDef: 0
+    MagDef: 0
+    Speed: 0
+    Accuracy: 0
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
   Skills:
-  - {fileID: 11400000, guid: 66006c83b7492c845b3abe6274d06cf3, type: 2}
+  - {fileID: 0}
+  weaponType: 2

@@ -105,7 +105,7 @@ public class BattleCanvas : SerializedMonoBehaviour
         Turn = turn;
     }
 
-    public async Task ShowDamage(IBattler battler, int damage)
+    public async Task ShowDamage(IBattler battler, string info, Color textColor)
     {
         GameObject damageObject = null;
         await GameController.Instance.QueueActionAndAwait(() =>
@@ -115,7 +115,7 @@ public class BattleCanvas : SerializedMonoBehaviour
             damageObject.transform.position = battler.RectTransform.position + new Vector3(0, 100, 0);
 
             var damageText = damageObject.GetComponent<DamageText>();
-            damageText.Text.text = damage.ToString();
+            damageText.SetupDamageText(info,textColor);
         });
 
         await Task.Delay(1400);
@@ -125,7 +125,7 @@ public class BattleCanvas : SerializedMonoBehaviour
             Destroy(damageObject);
         });
     }
-    
+
     public void BindActionArrow(RectTransform rectTransform)
     {
         actionArrow.SetActive(true);

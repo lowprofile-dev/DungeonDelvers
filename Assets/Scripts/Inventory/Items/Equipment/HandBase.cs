@@ -3,14 +3,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Items/Equippable/HandBase")]
 public class HandBase : EquippableBase
 {
-    public enum HandType
-    {
-        Light,
-        Medium,
-        Heavy
-    }
-
-    public HandType handType;
-
+    public ArmorType ArmorType;
     public override EquippableSlot Slot => EquippableSlot.Hand;
 }

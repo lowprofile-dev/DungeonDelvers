@@ -12,6 +12,8 @@ public class Skill : SerializableAsset
     [TextArea] public string SkillDescription;
     public TargetType Target;
     public List<Effect> Effects = new List<Effect>();
+    public CharacterBattler.CharacterBattlerAnimation AnimationType;
+    public SkillAnimation SkillAnimation = null;
     
     //Ver se necessario mais depois, eg. Raise-equivalent -> one dead ally
     public enum TargetType
@@ -21,25 +23,7 @@ public class Skill : SerializableAsset
         OneAlly,
         AllEnemies,
         AllAllies,
-        All
+        All,
+        Self
     }
-//
-
-//    
-//    public enum DamageType
-//    {
-//        Physical,
-//        Magical,
-//        True //outro nome dps
-//    }
-//
-//    //Fazer depois
-//    public enum Element
-//    {
-//        None,
-//        Fire,
-//        Ice,
-//        Light,
-//        Darkness
-//    }
 }

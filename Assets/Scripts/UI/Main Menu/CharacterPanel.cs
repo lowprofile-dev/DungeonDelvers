@@ -20,7 +20,14 @@ public class CharacterPanel : MonoBehaviour
             var battlerRect = CharacterBattler.transform as RectTransform;
             battlerRect.sizeDelta = new Vector2(160, 160);
             var battler = CharacterBattler.GetComponent<CharacterBattler>();
-            battler.UpdateAnimator(weaponOverride: false, faintedOverride: character.CurrentHp == 0);
+            var hasWeapon = character.Weapon != null;
+            
+            if (character.Fainted)
+                battler.Play(global::CharacterBattler.CharacterBattlerAnimation.Fainted, true);
+            else if (hasWeapon)
+                battler.Play(global::CharacterBattler.CharacterBattlerAnimation.Idle, true);
+            else
+                battler.Play(global::CharacterBattler.CharacterBattlerAnimation.IdleNoWeapon, true);
         }
         CharacterName.text = character.Base.CharacterName;
         CharacterHealth.text = $"{character.CurrentHp}/{character.Stats.MaxHp}";

@@ -6,10 +6,14 @@ public class WeaponBase : EquippableBase
 {
     public enum WeaponType
     {
-        Sword,
+        Sword1H,
+        Sword2H,
+        Axe,
         Knife,
         Staff,
-        Axe,
+        Tome,
+        Spear,
+        Bow
     }
 
     public WeaponType weaponType;

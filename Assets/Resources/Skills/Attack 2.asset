@@ -33,12 +33,6 @@ MonoBehaviour:
     - Name: DamageFactor
       Entry: 4
       Data: 2
-    - Name: damageCalculation
-      Entry: 7
-      Data: DamageEffect+DamageCalculation, Assembly-CSharp
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -48,12 +42,17 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: SkillAnimation
+      Entry: 6
+      Data: 
   uniqueIdentifier: Skills/Attack 2
+  databaseIgnore: 0
   SkillName: Attack 2
   SkillIcon: {fileID: -6624334261024933756, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 80
+  EpCost: 0
   SkillDescription: 'Electric Boogaloo
 
 '
-  Target: 0
+  Target: 3
+  AnimationType: 2

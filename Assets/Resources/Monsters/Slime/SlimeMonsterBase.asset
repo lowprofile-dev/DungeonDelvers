@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7e5dcd198672d4ab3572da034b41ed, type: 3}
+  m_Name: SlimeMonsterBase
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MonsterAi
+      Entry: 7
+      Data: 0|RandomAI, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+  uniqueIdentifier: 
+  databaseIgnore: 0
+  MonsterName: Slime
+  MonsterBattler: {fileID: 3515542978881643201, guid: 8c74195d025782e40aa8c326ba0292cc,
+    type: 3}
+  Stats:
+    MaxHp: 30
+    InitialEp: 15
+    EpGain: 15
+    PhysAtk: 20
+    MagAtk: 5
+    PhysDef: 5
+    MagDef: 5
+    Speed: 5
+    Accuracy: 100
+    Evasion: 0
+    CritChance: 0
+    CritAvoid: 0
+  Skills:
+  - {fileID: 11400000, guid: 66006c83b7492c845b3abe6274d06cf3, type: 2}

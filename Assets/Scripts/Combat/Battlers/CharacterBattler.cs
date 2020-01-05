@@ -9,13 +9,23 @@ using SkredUtils;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
+
 // ReSharper disable RedundantAssignment
 
 public class CharacterBattler : SerializedMonoBehaviour, IBattler
 {
     public Animator animator;
     public Character Character;
-    
+    private BattleController BattleController; 
+    private Image image;
+
+    private void Start()
+    {
+        image = GetComponent<Image>();
+        BattleController = BattleController.Instance;
+    }
+
     public void Create(Character character)
     {
         Character = character;
@@ -52,11 +62,7 @@ public class CharacterBattler : SerializedMonoBehaviour, IBattler
         {
             currentHp = value;
             currentHp = Mathf.Clamp(currentHp, 0, Stats.MaxHp);
-
-            if (currentHp == 0)
-            {
-                UpdateAnimator();
-            }
+            UpdateAnimator();
         }
     }
     public bool Fainted => CurrentHp == 0;
@@ -79,7 +85,7 @@ public class CharacterBattler : SerializedMonoBehaviour, IBattler
     {
         await GameController.Instance.QueueActionAndAwait(() =>
         {
-            animator.Play(animation.ToString());
+            Play(animation);
         });
         
         await Task.Delay(5);
@@ -99,46 +105,54 @@ public class CharacterBattler : SerializedMonoBehaviour, IBattler
         }
     }
 
-    public void Play(CharacterBattlerAnimation animation)
+    public void Play(CharacterBattlerAnimation animation, bool lockTransition = false)
     {
+        if (lockTransition)
+        {
+            animator.SetBool("CanTransition",false);
+        }
         animator.Play(animation.ToString());
     }
 
-    public void UpdateAnimator(bool? weaponOverride = null, bool? faintedOverride = null)
+    public void UpdateAnimator()
     {
-        var weapon = weaponOverride.HasValue ? weaponOverride.Value : Character.Weapon != null;
-        var fainted = faintedOverride.HasValue ? faintedOverride.Value : Fainted;
-        
-        animator.SetBool("HasWeapon", weapon);
-        animator.SetBool("Fainted", fainted);
+        animator.SetBool("HasWeapon", Character.Weapon != null);
+        animator.SetBool("Fainted", Fainted);
     }
-    
+
+    public bool CanTransition
+    {
+        get => animator.GetBool("CanTransition");
+        set => animator.SetBool("CanTransition", value);
+    }
+
     public enum CharacterBattlerAnimation
     {
         Idle,
         IdleNoWeapon,
         Attack,
         Damage,
+        Cast,
         Fainted
     } 
 
     #endregion
     
     #region TurnEvents
-    public async Task TurnStart(BattleController battle)
+    public async Task TurnStart()
     {
         //Fazer efeitos do que precisar aqui, quando precisar
         currentEp += Stats.EpGain;
         Debug.Log($"Começou turno de {Character.Base.CharacterName}");
     }
 
-    public async Task TurnEnd(BattleController battle)
+    public async Task TurnEnd()
     {
         //Fazer efeitos do que precisar aqui, quando precisar
         Debug.Log($"Acabou o turno de {Character.Base.CharacterName}");
     }
 
-    public async Task<Turn> GetTurn(BattleController battle)
+    public async Task<Turn> GetTurn()
     {
         Debug.Log($"Fazendo o turno de {Character.Base.CharacterName}");
 
@@ -148,56 +162,95 @@ public class CharacterBattler : SerializedMonoBehaviour, IBattler
                 Skill = null
             };
         
-        var turn = await battle.battleCanvas.GetTurn(this);
+        var turn = await BattleController.battleCanvas.GetTurn(this);
 
         return turn;
     }
 
-    public async Task ExecuteTurn(BattleController battle, IBattler source, Skill skill, IEnumerable<IBattler> targets)
+    public async Task ExecuteTurn(IBattler source, Skill skill, IEnumerable<IBattler> targets)
     {
         Debug.Log($"Executando o turno de {Character.Base.CharacterName}");
         
-        foreach (var effect in skill.Effects)
+        // foreach (var effect in skill.Effects)
+        // {
+        //     if (effect is DamageEffect)
+        //     {
+        //         await AsyncPlayAndWait(CharacterBattlerAnimation.Attack);
+        //     }
+        // }
+
+        await AsyncPlayAndWait(skill.AnimationType);
+
+        if (skill.SkillAnimation != null)
         {
-            if (effect is DamageEffect)
-            {
-                await AsyncPlayAndWait(CharacterBattlerAnimation.Attack);
-            }
+            await skill.SkillAnimation.PlaySkillAnimation(source, targets);
         }
     }
 
-    public async Task<IEnumerable<EffectResult>> ReceiveSkill(BattleController battle, IBattler source, Skill skill)
+    public async Task<IEnumerable<EffectResult>> ReceiveSkill(IBattler source, Skill skill)
     {
         Debug.Log($"Recebendo Skill em {Character.Base.CharacterName}");
         
         var results = new List<EffectResult>();
         foreach (var effect in skill.Effects)
         {
-            EffectResult effectResult = null;
-
-            await GameController.Instance.QueueActionAndAwait(() =>
-            {
-                effectResult = effect.ExecuteEffect(battle, skill, source, this);
-            });
-
-            if (effectResult is DamageEffect.DamageEffectResult damageEffectResult)
-            {
-                await AsyncPlayAndWait(CharacterBattlerAnimation.Damage);
-                
-                if (damageEffectResult.DamageDealt > 0)
-                    await BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt);
-            }
-            results.Add(effectResult);
+            results.Add(await ReceiveEffect(source, skill, effect));
         }
-        
         return results;
     }
-    
-    public async Task AfterSkill(BattleController battleController, IEnumerable<EffectResult> result)
+
+    public async Task<EffectResult> ReceiveEffect(IBattler source, Skill skillSource, Effect effect)
+    {
+        EffectResult effectResult = null;
+
+        await GameController.Instance.QueueActionAndAwait(() =>
+        {
+            effectResult = effect.ExecuteEffect(BattleController, skillSource, source, this);
+        });
+
+        switch (effectResult)
+        {
+            case DamageEffect.DamageEffectResult damageEffectResult:
+            {
+                if (damageEffectResult.DamageDealt > 0)
+                {
+                    Task damageAnimation =  AsyncPlayAndWait(CharacterBattlerAnimation.Damage);
+                    Task damageBlink = GameController.Instance.PlayCoroutine(DamageBlinkCoroutine());
+
+                    await Task.WhenAll(damageAnimation, damageBlink);
+                }
+                
+                await BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt.ToString(), Color.white);
+                break;
+            }
+            case HealEffect.HealEffectResult healEffectResult:
+                await BattleController.Instance.battleCanvas.ShowDamage(this, healEffectResult.AmountHealed.ToString(),
+                    Color.green);
+                break;
+        }
+
+        return effectResult;
+    }
+
+    public async Task AfterSkill(IEnumerable<EffectResult> result)
     {
         //Fazer efeitos do que precisar aqui, quando precisar
     }
     #endregion
+    
+    private IEnumerator DamageBlinkCoroutine()
+    {
+        var normalColor = image.color;
+        var blinkingColor = new Color(image.color.r, image.color.g, image.color.grayscale, 0.3f);
+
+        for (int i = 0; i < 5; i++)
+        {
+            image.color = blinkingColor;
+            yield return new WaitForSeconds(0.05f);
+            image.color = normalColor;
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
     
     public RectTransform RectTransform => transform as RectTransform;
     

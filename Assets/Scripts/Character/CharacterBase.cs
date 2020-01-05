@@ -1,4 +1,5 @@
 using System;
+using Boo.Lang;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using UnityEngine;
@@ -29,6 +30,9 @@ public class CharacterBase : SerializableAsset
     [FoldoutGroup("Stats"), PropertyRange(0,1)] public float BaseEvasion;
     [FoldoutGroup("Stats"), PropertyRange(0,1)] public float BaseCritChance;
     [FoldoutGroup("Stats"), PropertyRange(0,1)] public float BaseCritAvoid;
+
+    [FoldoutGroup("Equips")] public List<WeaponBase.WeaponType> WeaponTypes = new List<WeaponBase.WeaponType>();
+    [FoldoutGroup("Equips")] public List<EquippableBase.ArmorType> ArmorTypes = new List<EquippableBase.ArmorType>();
     
     [FoldoutGroup("Equips")] public WeaponBase Weapon;
     [FoldoutGroup("Equips")] public HeadBase Head;

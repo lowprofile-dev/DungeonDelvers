@@ -19,11 +19,12 @@ public interface IBattler
     //List<BattlePassive> Passives { get; }
     RectTransform RectTransform { get; }
     
-    Task TurnStart(BattleController battle);
-    Task TurnEnd(BattleController battle);
+    Task TurnStart();
+    Task TurnEnd();
     
-    Task<Turn> GetTurn(BattleController battle);
-    Task ExecuteTurn(BattleController battle, IBattler source, Skill skill, IEnumerable<IBattler> targets);
-    Task<IEnumerable<EffectResult>> ReceiveSkill(BattleController battle, IBattler source, Skill skill);
-    Task AfterSkill(BattleController battleController, IEnumerable<EffectResult> result);
+    Task<Turn> GetTurn();
+    Task ExecuteTurn(IBattler source, Skill skill, IEnumerable<IBattler> targets);
+    Task<IEnumerable<EffectResult>> ReceiveSkill(IBattler source, Skill skill);
+    Task<EffectResult> ReceiveEffect(IBattler source, Skill skillSource, Effect effect);
+    Task AfterSkill(IEnumerable<EffectResult> result);
 }

@@ -12,6 +12,7 @@ public class GameController : SerializedMonoBehaviour
 {
     public static GameController Instance { get; private set; }
     public TrackTransform TrackTransform;
+    public GameObject AnimationObjectBase;
 
     [HideInInspector] public UnityEvent OnBeginEncounter;
     [HideInInspector] public UnityEvent OnEndEncounter;
@@ -88,6 +89,10 @@ public class GameController : SerializedMonoBehaviour
     
     public void QueueAction(Action action)
     {
+        if (action == null)
+        {
+            Debug.LogException(new NullReferenceException());
+        }
         QueuedActions.Enqueue(action);
     }
 

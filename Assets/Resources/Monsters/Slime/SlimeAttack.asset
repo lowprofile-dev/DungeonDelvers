@@ -57,7 +57,7 @@ MonoBehaviour:
       Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
-  SkillName: Ataque (Slime)
+  SkillName: Attack
   SkillIcon: {fileID: 0}
   EpCost: 15
   SkillDescription: dano

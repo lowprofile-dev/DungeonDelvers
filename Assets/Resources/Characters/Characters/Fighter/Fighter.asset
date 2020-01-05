@@ -20,8 +20,42 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: WeaponTypes
+      Entry: 7
+      Data: 0|Boo.Lang.List`1[[WeaponBase+WeaponType, Assembly-CSharp]], Boo.Lang
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 6
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: ArmorTypes
+      Entry: 7
+      Data: 1|Boo.Lang.List`1[[EquippableBase+ArmorType, Assembly-CSharp]], Boo.Lang
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   uniqueIdentifier: Characters/Characters/Fighter/Fighter
+  databaseIgnore: 0
   CharacterName: Fighter
   CharacterFace: {fileID: 0}
   CharacterPrefab: {fileID: 4926351740937089460, guid: 6b1c03872d39085498683e1163d118fa,

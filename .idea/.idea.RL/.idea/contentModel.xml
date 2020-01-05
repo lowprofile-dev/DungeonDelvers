@@ -38,6 +38,7 @@
             </e>
           </e>
         </e>
+        <e p="Classes.txt" t="Include" />
         <e p="FBBCommission.txt" t="Include" />
         <e p="JsonDotNet" t="Include">
           <e p="link.xml" t="Include" />
@@ -90,6 +91,14 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Animation" t="Include">
+            <e p="AnimationObject.cs" t="Include" />
+            <e p="SkillAnimation.cs" t="Include" />
+            <e p="SkillAnimations" t="Include">
+              <e p="FromSourceToTargetSkillAnimation.cs" t="Include" />
+              <e p="PlayAtTargetSkillAnimation.cs" t="Include" />
+            </e>
+          </e>
           <e p="Camera" t="Include">
             <e p="TrackTransform.cs" t="Include" />
           </e>
@@ -186,6 +195,7 @@
             <e p="Effect.cs" t="Include" />
             <e p="Effects" t="Include">
               <e p="DamageEffect.cs" t="Include" />
+              <e p="HealEffect.cs" t="Include" />
             </e>
             <e p="MonsterSkill.cs" t="Include" />
             <e p="Skill.cs" t="Include" />

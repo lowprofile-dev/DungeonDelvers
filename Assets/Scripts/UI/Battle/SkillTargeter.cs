@@ -34,18 +34,29 @@ public class SkillTargeter : SerializedMonoBehaviour
         switch (Skill.Target)
         {
             case Skill.TargetType.OneEnemy:
-                foreach (var enemy in BattleController.Instance.Enemies)
-                {
-                    if (!enemy.Fainted)
-                        TargetGroups.Add(new []{enemy});
-                }
+                BattleController.Instance.Enemies
+                    .Where(enemy => !enemy.Fainted)
+                    .ForEach(
+                        enemy => TargetGroups.Add(new[] {enemy})
+                        );
                 break;
             case Skill.TargetType.Any:
-                foreach (var battler in BattleController.Instance.Battlers)
-                {
-                    if (!battler.Fainted)
-                        TargetGroups.Add(new []{battler});
-                }
+                BattleController.Instance.Battlers
+                    .Where(battler => !battler.Fainted)
+                    .ForEach(
+                        battler => TargetGroups.Add(new[] {battler})
+                    );
+                break;
+            case Skill.TargetType.Self:
+                TargetGroups.Add(new []{CharacterActionMenu.Battler});
+                break;
+            case Skill.TargetType.OneAlly:
+                BattleController.Instance.Party
+                    .Where(partyMember => !partyMember.Fainted)
+                    .ForEach(partyMember => TargetGroups.Add(new[] {partyMember}));
+                break;
+            case Skill.TargetType.AllEnemies:
+                TargetGroups.Add(BattleController.Instance.Enemies);
                 break;
         }
         

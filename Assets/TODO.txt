@@ -1,4 +1,8 @@
-Dar uma arrumada depois em encounters e monstera pra ficar mais intuitivo. Fazer um encounter base e ficar duplicando ele pra fazer mais, por enquanto.
+Arrumar animação que dá alvo em varios inimigos
+Arrumar character para conferir se tá equipando algo que pode. Avisar no characterbase quando tenta equipar algo que não pode.
+Arrumar animações dos personagens para ter Cast
+Fazer ItemSkill (Skill mas quando executa o player perde um daquele item do inventário)
+Fazer menu de Item
 Fazer Passivas+Status Effects+Buffs (talvez mesma coisa).
 Mudar executeeffect pra executeskill
 Criar um receiveeffect (em adição ao receive skill, pra não ter que botar o mesmo código x vezes tipo desaparecer quando morrer)

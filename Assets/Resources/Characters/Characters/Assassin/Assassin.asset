@@ -20,8 +20,42 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: WeaponTypes
+      Entry: 7
+      Data: 0|Boo.Lang.List`1[[WeaponBase+WeaponType, Assembly-CSharp]], Boo.Lang
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 3
+      Data: 7
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: ArmorTypes
+      Entry: 7
+      Data: 1|Boo.Lang.List`1[[EquippableBase+ArmorType, Assembly-CSharp]], Boo.Lang
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   uniqueIdentifier: Characters/Characters/Assassin/Assassin
+  databaseIgnore: 0
   CharacterName: Assassin
   CharacterFace: {fileID: 0}
   CharacterPrefab: {fileID: 8521580809372860284, guid: 1736b34fe64ca480bb1a5a1e1dc5f947,

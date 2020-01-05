@@ -16,6 +16,12 @@ public abstract class EquippableBase : ItemBase
         Head,
         Weapon
     }
+
+    public enum ArmorType
+    {
+        Light,
+        Heavy
+    }
     
     public abstract EquippableSlot Slot { get; }
 }

@@ -18,6 +18,7 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
     [OnValueChanged("LoadBase")] public Monster MonsterBase;
     [SerializeField, ReadOnly] private GameObject monsterBattler;
     [SerializeField, ReadOnly] private Image image;
+    private BattleController BattleController;
 
 
     #region Control
@@ -25,6 +26,11 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
     private void Awake()
     {
         LoadBase();
+    }
+
+    private void Start()
+    {
+        BattleController = BattleController.Instance;
     }
 
     public void LoadBase()
@@ -87,18 +93,18 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
     
     #region TurnEvents
 
-    public async Task TurnStart(BattleController battle)
+    public async Task TurnStart()
     {
         currentEp += Stats.EpGain;
         Debug.Log($"Começou o turno de {Name}");
     }
 
-    public async Task TurnEnd(BattleController battle)
+    public async Task TurnEnd()
     {
         Debug.Log($"Acabou o turno de {Name}");
     }
     
-    public async Task<Turn> GetTurn(BattleController battle)
+    public async Task<Turn> GetTurn()
     {
         if (Fainted)
             return new Turn();
@@ -112,8 +118,10 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
             var skill = MonsterAi.ChooseSkill(this);
             turn.Skill = skill;
             
+            Debug.Log($"AI Escolheu {skill.SkillName}");
+            
             //Debug, pega só um inimigo aleatório
-            var possibleTargets = battle.Party.Where(partyMember => !Fainted).ToList();
+            var possibleTargets = BattleController.Party.Where(partyMember => !Fainted).ToList();
             var possibleTarget = UnityEngine.Random.Range(0, possibleTargets.Count);
             turn.Targets = new [] {possibleTargets[possibleTarget]};
         });
@@ -121,7 +129,7 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
         return turn;
     }
 
-    public async Task ExecuteTurn(BattleController battle, IBattler source, Skill skill, IEnumerable<IBattler> targets)
+    public async Task ExecuteTurn(IBattler source, Skill skill, IEnumerable<IBattler> targets)
     {
         if (Skills != null)
         {
@@ -146,44 +154,58 @@ public class MonsterBattler : SerializedMonoBehaviour, IBattler
     }
 
     //result = out
-    public async Task<IEnumerable<EffectResult>> ReceiveSkill(BattleController battle, IBattler source, Skill skill)
+    public async Task<IEnumerable<EffectResult>> ReceiveSkill(IBattler source, Skill skill)
     {
         Debug.Log($"Recebendo skill em {Name}");
         var result = new List<EffectResult>();
         foreach (var effect in skill.Effects)
         {
-            EffectResult effectResult = null;
-
-            await GameController.Instance.QueueActionAndAwait(() =>
-            {
-                effectResult = effect.ExecuteEffect(battle, skill, source, this);
-            });
-            
-            result.Add(effectResult);
-
-            if (effectResult is DamageEffect.DamageEffectResult damageEffectResult)
-            {
-                if (!Fainted)
-                {
-                    Task flash = DamageFlash();
-                    Task damage = BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt);
-
-                    await Task.WhenAll(flash, damage);
-                }
-                else
-                {
-                    Task fade = Fade();
-                    Task damage = BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt);
-
-                    await Task.WhenAll(fade, damage);
-                }
-                
-            }
+            result.Add(await ReceiveEffect(source, skill, effect));
         }
         return result;
     }
 
-    public async Task AfterSkill(BattleController battleController, IEnumerable<EffectResult> result)
+    public async Task<EffectResult> ReceiveEffect(IBattler source, Skill skillSource, Effect effect)
+    {
+        EffectResult effectResult = null;
+        
+        await GameController.Instance.QueueActionAndAwait(() =>
+        {
+            effectResult = effect.ExecuteEffect(BattleController, skillSource, source, this);
+        });
+
+        //Ver pra mostrar Miss! quando o golpe errar, mostrar vermelho quando crita
+
+        switch (effectResult)
+        {
+            case DamageEffect.DamageEffectResult damageEffectResult when !Fainted:
+            {
+                Task flash = DamageFlash();
+                Task damage = BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt.ToString(), Color.white);
+
+                await Task.WhenAll(flash, damage);
+                break;
+            }
+            case DamageEffect.DamageEffectResult damageEffectResult:
+            {
+                Task fade = Fade();
+                Task damage = BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt.ToString(), Color.white);
+
+                await Task.WhenAll(fade, damage);
+                break;
+            }
+            case HealEffect.HealEffectResult healEffectResult:
+            {
+                await BattleController.Instance.battleCanvas.ShowDamage(this, healEffectResult.AmountHealed.ToString(),
+                    Color.green);
+                break;
+            } 
+        }
+
+        return effectResult;
+    }
+
+    public async Task AfterSkill(IEnumerable<EffectResult> result)
     {
         //Processar o que aconteceu quando usou a skill
     }

@@ -9,6 +9,6 @@ public class MonsterSkill : Skill
 
     public bool Evaluate(MonsterBattler battler)
     {
-        return Conditions.Any(condition => !condition.Evalute(battler, this));
+        return Conditions.All(condition => condition.Evalute(battler, this));
     }
 }

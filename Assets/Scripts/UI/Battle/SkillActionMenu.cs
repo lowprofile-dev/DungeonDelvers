@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
@@ -23,6 +24,18 @@ public class SkillActionMenu : SerializedMonoBehaviour
         CharacterActionMenu.Panel.SetActive(false);
         SkillPanel.SetActive(true);
         BuildSkills();
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Cancel"))
+            CloseSkillMenu();
+    }
+
+    public void CloseSkillMenu()
+    {
+        SkillPanel.SetActive(false);
+        CharacterActionMenu.ShowActionMenu();
     }
 
     public void ResumeSkillMenu()
