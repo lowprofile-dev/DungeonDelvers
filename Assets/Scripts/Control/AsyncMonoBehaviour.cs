@@ -56,11 +56,14 @@ public class AsyncMonoBehaviour : SerializedMonoBehaviour
     {
         lock (QueuedActions)
         {
-            while (QueuedActions.Any())
+            try
             {
-                var action = QueuedActions.Dequeue();
-                action.Invoke();
-            }
+                while (QueuedActions.Any())
+                {
+                    var action = QueuedActions.Dequeue();
+                    action.Invoke();
+                }
+            } catch (InvalidOperationException ioe){}
         }
     }
 }

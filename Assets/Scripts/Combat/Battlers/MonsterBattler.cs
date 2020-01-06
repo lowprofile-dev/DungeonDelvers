@@ -133,7 +133,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
     {
         if (Skills != null)
         {
-            GameController.Instance.QueueAction(() =>
+            QueueAction(() =>
             {
                 BattleController.Instance.battleCanvas.BindActionArrow(RectTransform);
                 foreach (var target in targets)
@@ -144,7 +144,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
             
             await BattleController.Instance.battleCanvas.battleInfoPanel.DisplayInfo(skill.SkillName);
             
-            GameController.Instance.QueueAction(() =>
+            QueueAction(() =>
             {
                 BattleController.Instance.battleCanvas.UnbindActionArrow();
                 BattleController.Instance.battleCanvas.CleanTargetArrows();
@@ -169,7 +169,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
     {
         EffectResult effectResult = null;
         
-        await GameController.Instance.QueueActionAndAwait(() =>
+        await QueueActionAndAwait(() =>
         {
             effectResult = effect.ExecuteEffect(BattleController, skillSource, source, this);
         });
@@ -219,7 +219,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
 
     private async Task ShowDamageAndFlash(int damageAmount)
     {
-        await GameController.Instance.PlayCoroutine(ShowDamageAndFlashCoroutine(damageAmount));
+        await PlayCoroutine(ShowDamageAndFlashCoroutine(damageAmount));
     }
 
     private IEnumerator ShowDamageAndFlashCoroutine(int damageAmount)
@@ -248,7 +248,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
     
     private async Task ShowDamage(int damageAmount)
     {
-        await GameController.Instance.PlayCoroutine(ShowDamageCoroutine(damageAmount), this);
+        await PlayCoroutine(ShowDamageCoroutine(damageAmount), this);
     }
 
     private IEnumerator ShowDamageCoroutine(int damageAmount)
@@ -271,7 +271,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
     
     private async Task DamageFlash()
     {
-        await GameController.Instance.PlayCoroutine(DamageBlinkCoroutine());
+        await PlayCoroutine(DamageBlinkCoroutine());
     }
 
     private IEnumerator DamageBlinkCoroutine()
@@ -290,7 +290,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
 
     private async Task Fade()
     {
-        await GameController.Instance.PlayCoroutine(FadeCoroutine());
+        await PlayCoroutine(FadeCoroutine());
     }
     
     private IEnumerator FadeCoroutine(float speed = 0.05f)
