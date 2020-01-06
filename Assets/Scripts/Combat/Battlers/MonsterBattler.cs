@@ -115,15 +115,16 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
 
         await GameController.Instance.QueueActionAndAwait(() =>
         {
-            var skill = MonsterAi.ChooseSkill(this);
-            turn.Skill = skill;
-            
-            Debug.Log($"AI Escolheu {skill.SkillName}");
-            
-            //Debug, pega só um inimigo aleatório
-            var possibleTargets = BattleController.Party.Where(partyMember => !Fainted).ToList();
-            var possibleTarget = UnityEngine.Random.Range(0, possibleTargets.Count);
-            turn.Targets = new [] {possibleTargets[possibleTarget]};
+            // var skill = MonsterAi.ChooseSkill(this);
+            // turn.Skill = skill;
+            //
+            // Debug.Log($"AI Escolheu {skill.SkillName}");
+            //
+            // //Debug, pega só um inimigo aleatório
+            // var possibleTargets = BattleController.Party.Where(partyMember => !Fainted).ToList();
+            // var possibleTarget = UnityEngine.Random.Range(0, possibleTargets.Count);
+            // turn.Targets = new [] {possibleTargets[possibleTarget]};
+            turn = MonsterAi.BuildTurn(this);
         });
         
         return turn;

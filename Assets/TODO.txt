@@ -1,4 +1,6 @@
-Arrumar animação que dá alvo em varios inimigos
+Conferir inimigo atacando player morto.
+Fazer PlayerSkill(?)
+Arrumar AsyncMonoBehaviours
 Arrumar character para conferir se tá equipando algo que pode. Avisar no characterbase quando tenta equipar algo que não pode.
 Arrumar animações dos personagens para ter Cast
 Fazer ItemSkill (Skill mas quando executa o player perde um daquele item do inventário)

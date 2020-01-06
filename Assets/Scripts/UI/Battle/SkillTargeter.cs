@@ -56,7 +56,7 @@ public class SkillTargeter : SerializedMonoBehaviour
                     .ForEach(partyMember => TargetGroups.Add(new[] {partyMember}));
                 break;
             case Skill.TargetType.AllEnemies:
-                TargetGroups.Add(BattleController.Instance.Enemies);
+                TargetGroups.Add(BattleController.Instance.Enemies.Where(enemy => !enemy.Fainted));
                 break;
         }
         

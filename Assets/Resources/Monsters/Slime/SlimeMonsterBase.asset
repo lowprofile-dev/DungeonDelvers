@@ -33,7 +33,7 @@ MonoBehaviour:
   MonsterBattler: {fileID: 3515542978881643201, guid: 8c74195d025782e40aa8c326ba0292cc,
     type: 3}
   Stats:
-    MaxHp: 500
+    MaxHp: 50
     InitialEp: 15
     EpGain: 15
     PhysAtk: 20
