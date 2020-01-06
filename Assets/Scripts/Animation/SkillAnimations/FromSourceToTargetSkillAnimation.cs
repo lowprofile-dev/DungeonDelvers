@@ -23,7 +23,7 @@ public class FromSourceToTargetSkillAnimation : SkillAnimation
                 
                 Animations.Add(
                     GameController.Instance.PlayCoroutine(MoveAnimationCoroutine(source.RectTransform.position,
-                        target.RectTransform.position, animationObject.transform, animation.animator, AnimationName)));
+                        target.RectTransform.position, animationObject.transform, animation.animator, AnimationName), animation));
             });
         });
 

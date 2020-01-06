@@ -127,6 +127,7 @@
             </e>
           </e>
           <e p="Control" t="Include">
+            <e p="AsyncMonoBehaviour.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
             <e p="GameDatabase.cs" t="Include" />
             <e p="GameSaveController.cs" t="Include" />

@@ -12,7 +12,7 @@ using UnityEngine.UI;
 using Random = System.Random;
 // ReSharper disable RedundantAssignment
 
-public class MonsterBattler : SerializedMonoBehaviour, IBattler
+public class MonsterBattler : AsyncMonoBehaviour, IBattler
 {
     [ReadOnly] public Encounter Encounter;
     [OnValueChanged("LoadBase")] public Monster MonsterBase;

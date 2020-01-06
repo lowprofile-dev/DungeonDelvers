@@ -165,16 +165,16 @@ public class BattleController : SerializedMonoBehaviour
             //Roda a skill em todos os alvos em parelelo, espera todos eles retornarem os efeitos.
             
             //Dá problema quando usa uma skill que dá dano em vários alvos inimigos. Ver porque. Idealmente é pra usar isso
-            var effectResults =
-                await Task.WhenAll(targets.EachDo((target) => target.ReceiveSkill(battler, usedSkill)));
+            // var effectResults =
+            //     await Task.WhenAll(targets.EachDo((target) => target.ReceiveSkill(battler, usedSkill)));
 
-            // var effectResults = new List<IEnumerable<EffectResult>>();
-            //
-            // foreach (var target in targets)
-            // {
-            //     var effectResult = await target.ReceiveSkill(battler, usedSkill);
-            //     effectResults.Add(effectResult);
-            // }
+            var effectResults = new List<IEnumerable<EffectResult>>();
+            
+            foreach (var target in targets)
+            {
+                var effectResult = await target.ReceiveSkill(battler, usedSkill);
+                effectResults.Add(effectResult);
+            }
             
             var concatResults = effectResults.SelectMany(x => x);
             
