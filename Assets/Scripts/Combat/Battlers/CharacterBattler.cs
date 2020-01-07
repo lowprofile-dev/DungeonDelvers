@@ -13,7 +13,7 @@ using UnityEngine.UI;
 
 // ReSharper disable RedundantAssignment
 
-public class CharacterBattler : SerializedMonoBehaviour, IBattler
+public class CharacterBattler : AsyncMonoBehaviour, IBattler
 {
     public Animator animator;
     public Character Character;
@@ -66,7 +66,7 @@ public class CharacterBattler : SerializedMonoBehaviour, IBattler
         }
     }
     public bool Fainted => CurrentHp == 0;
-    [FoldoutGroup("Skills")] public List<Skill> Skills { get; private set; }
+    [FoldoutGroup("Skills")] public List<PlayerSkill> Skills { get; private set; }
     //[FoldoutGroup("Passives"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public List<BattlePassive> Passives { get; set; } = new List<BattlePassive>();
     
     #endregion
@@ -83,7 +83,7 @@ public class CharacterBattler : SerializedMonoBehaviour, IBattler
 
     public async Task AsyncPlayAndWait(CharacterBattlerAnimation animation)
     {
-        await GameController.Instance.QueueActionAndAwait(() =>
+        await QueueActionAndAwait(() =>
         {
             Play(animation);
         });
@@ -97,11 +97,11 @@ public class CharacterBattler : SerializedMonoBehaviour, IBattler
             condition = animator.GetCurrentAnimatorStateInfo(0).IsName(animation.ToString());
         };
 
-        await GameController.Instance.QueueActionAndAwait(evaluateCondition);
+        await QueueActionAndAwait(evaluateCondition);
         
         while (condition.HasValue && condition.Value == true)
         {
-            await GameController.Instance.QueueActionAndAwait(evaluateCondition);
+            await QueueActionAndAwait(evaluateCondition);
         }
     }
 
@@ -170,16 +170,17 @@ public class CharacterBattler : SerializedMonoBehaviour, IBattler
     public async Task ExecuteTurn(IBattler source, Skill skill, IEnumerable<IBattler> targets)
     {
         Debug.Log($"Executando o turno de {Character.Base.CharacterName}");
-        
-        // foreach (var effect in skill.Effects)
-        // {
-        //     if (effect is DamageEffect)
-        //     {
-        //         await AsyncPlayAndWait(CharacterBattlerAnimation.Attack);
-        //     }
-        // }
 
-        await AsyncPlayAndWait(skill.AnimationType);
+        if (skill.EpCost > CurrentEp)
+        {
+            Debug.LogError($"{Character.Base.CharacterName} tentou usar uma skill com custo maior que o EP Atual");
+            return;
+        }
+
+        CurrentEp -= skill.EpCost;
+        
+        var playerSkill = skill as PlayerSkill;
+        await AsyncPlayAndWait(playerSkill.AnimationType);
 
         if (skill.SkillAnimation != null)
         {
@@ -203,7 +204,7 @@ public class CharacterBattler : SerializedMonoBehaviour, IBattler
     {
         EffectResult effectResult = null;
 
-        await GameController.Instance.QueueActionAndAwait(() =>
+        await QueueActionAndAwait(() =>
         {
             effectResult = effect.ExecuteEffect(BattleController, skillSource, source, this);
         });
@@ -212,15 +213,16 @@ public class CharacterBattler : SerializedMonoBehaviour, IBattler
         {
             case DamageEffect.DamageEffectResult damageEffectResult:
             {
+                var tasks = new List<Task>();
                 if (damageEffectResult.DamageDealt > 0)
                 {
-                    Task damageAnimation =  AsyncPlayAndWait(CharacterBattlerAnimation.Damage);
-                    Task damageBlink = GameController.Instance.PlayCoroutine(DamageBlinkCoroutine());
-
-                    await Task.WhenAll(damageAnimation, damageBlink);
+                    tasks.Add(AsyncPlayAndWait(CharacterBattlerAnimation.Damage));
+                    tasks.Add(PlayCoroutine(DamageBlinkCoroutine()));
                 }
                 
-                await BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt.ToString(), Color.white);
+                tasks.Add(BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt.ToString(), Color.white));
+                
+                await Task.WhenAll(tasks);
                 break;
             }
             case HealEffect.HealEffectResult healEffectResult:

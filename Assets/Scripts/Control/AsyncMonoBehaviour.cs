@@ -52,7 +52,7 @@ public class AsyncMonoBehaviour : SerializedMonoBehaviour
         QueuedActions.Enqueue(action);
     }
 
-    private void LateUpdate()
+    protected virtual void LateUpdate()
     {
         lock (QueuedActions)
         {

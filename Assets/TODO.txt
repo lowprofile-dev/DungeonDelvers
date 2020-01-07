@@ -1,6 +1,4 @@
-Conferir inimigo atacando player morto.
-Fazer PlayerSkill(?)
-Arrumar AsyncMonoBehaviours
+Fazer tela do personagem. Mostra equips, stats, pontos de nivel (ver nome), e um botão que leva pro menu de comprar coisas com ponto de nivel
 Arrumar character para conferir se tá equipando algo que pode. Avisar no characterbase quando tenta equipar algo que não pode.
 Arrumar animações dos personagens para ter Cast
 Fazer ItemSkill (Skill mas quando executa o player perde um daquele item do inventário)
@@ -53,3 +51,28 @@ Berserk
 Blind
 Silence *Ver como funciona -> Só pode usar skills da arma
 Seal *Remover passivas fora de stats-> Ver o quão prático é pra fazer
+
+
+Elements:
+Earth
+Fire
+Holy
+Dark
+Ice
+Lightning
+Water
+Wind 
+
+Red Mage:
+Fire
+Water
+Earth
+
+Assassin:
+Dark
+
+Priest:
+Holy
+
+Paladin:
+Holy

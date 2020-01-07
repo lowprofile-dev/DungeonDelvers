@@ -113,17 +113,8 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
 
         Turn turn = new Turn();
 
-        await GameController.Instance.QueueActionAndAwait(() =>
+        await QueueActionAndAwait(() =>
         {
-            // var skill = MonsterAi.ChooseSkill(this);
-            // turn.Skill = skill;
-            //
-            // Debug.Log($"AI Escolheu {skill.SkillName}");
-            //
-            // //Debug, pega só um inimigo aleatório
-            // var possibleTargets = BattleController.Party.Where(partyMember => !Fainted).ToList();
-            // var possibleTarget = UnityEngine.Random.Range(0, possibleTargets.Count);
-            // turn.Targets = new [] {possibleTargets[possibleTarget]};
             turn = MonsterAi.BuildTurn(this);
         });
         
@@ -132,6 +123,14 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
 
     public async Task ExecuteTurn(IBattler source, Skill skill, IEnumerable<IBattler> targets)
     {
+        if (skill.EpCost > CurrentEp)
+        {
+            Debug.LogError($"{MonsterBase.MonsterName} tentou usar uma skill com custo maior que o EP Atual");
+            return;
+        }
+
+        CurrentEp -= skill.EpCost;
+
         if (Skills != null)
         {
             QueueAction(() =>

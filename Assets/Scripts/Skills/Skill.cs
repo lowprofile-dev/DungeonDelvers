@@ -12,7 +12,6 @@ public class Skill : SerializableAsset
     [TextArea] public string SkillDescription;
     public TargetType Target;
     public List<Effect> Effects = new List<Effect>();
-    public CharacterBattler.CharacterBattlerAnimation AnimationType;
     public SkillAnimation SkillAnimation = null;
     
     //Ver se necessario mais depois, eg. Raise-equivalent -> one dead ally

@@ -199,6 +199,10 @@
               <e p="HealEffect.cs" t="Include" />
             </e>
             <e p="MonsterSkill.cs" t="Include" />
+            <e p="Passives" t="Include">
+              <e p="Passive.cs" t="Include" />
+            </e>
+            <e p="PlayerSkill.cs" t="Include" />
             <e p="Skill.cs" t="Include" />
             <e p="SkillCondition" t="Include">
               <e p="Conditions" t="Include">

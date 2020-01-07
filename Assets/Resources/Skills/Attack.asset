@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d16ac82fda427889aef9c29503dc00, type: 3}
+  m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
   m_Name: Attack
   m_EditorClassIdentifier: 
   serializationData:
@@ -42,12 +42,15 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: Skills/Attack
+    - Name: SkillAnimation
+      Entry: 6
+      Data: 
+  uniqueIdentifier: 
   databaseIgnore: 0
-  SkillName: Atacar
+  SkillName: Attack
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 15
-  SkillDescription: Atacar o Oponente
-  Target: 0
+  EpCost: 0
+  SkillDescription: 
+  Target: 1
   AnimationType: 2

@@ -5,7 +5,8 @@ using Sirenix.OdinInspector;
 public abstract class EquippableBase : ItemBase
 {
     [FoldoutGroup("Stats")] public Stats Stats;
-    public List<Skill> Skills;
+    public List<PlayerSkill> Skills;
+    public List<Passive> Passives;
 
     public enum EquippableSlot
     {

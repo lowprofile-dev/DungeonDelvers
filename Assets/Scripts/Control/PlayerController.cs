@@ -194,11 +194,15 @@ public class PlayerController : SerializedMonoBehaviour
     public UnityEvent OnLevelUpEvent = new UnityEvent();
     private void LevelUp()
     {
-        if (CurrentExp < ExpToNextLevel)
-            return;
-        
         CurrentExp -= ExpToNextLevel;
+        CurrentExp = Mathf.Max(0, CurrentExp);
         PartyLevel++;
+
+        foreach (var partyMember in Party)
+        {
+            partyMember.CurrentLp += (PartyLevel / 5) + 1;
+        }
+        
         OnLevelUpEvent.Invoke();
     }
 

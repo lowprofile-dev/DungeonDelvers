@@ -44,6 +44,5 @@ MonoBehaviour:
     CritAvoid: 0
   Skills:
   - {fileID: 11400000, guid: 49b227031f2f8b946a474b091b43415c, type: 2}
-  - {fileID: 11400000, guid: a4822de803eed1949bd76bc9f09ec720, type: 2}
-  - {fileID: 11400000, guid: f755416aa2836c64ba79739153e50f76, type: 2}
+  Passives: []
   weaponType: 0

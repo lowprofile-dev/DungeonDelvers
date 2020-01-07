@@ -53,6 +53,8 @@ public class Character
     #region Stats
 
     private int CurrentLevel => PlayerController.Instance.PartyLevel;
+
+    public int CurrentLp;
     
     [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly]private int currentHp;
 
@@ -83,7 +85,8 @@ public class Character
 
     //[FoldoutGroup("Passives")] public List<StatPassive> StatPassives;
     
-    [ShowInInspector] public List<Skill> Skills { get; private set; }
+    [ShowInInspector] public List<PlayerSkill> Skills { get; private set; }
+    [ShowInInspector] public List<Passive> Passives { get; private set; }
     
     public IEnumerable<Equippable> Equipment
     {
@@ -104,6 +107,7 @@ public class Character
         RecalculateBases();
         RecalculateBonus();
         LoadSkills();
+        LoadPassives();
         
         Stats = BaseStats + BonusStats;
         
@@ -140,11 +144,21 @@ public class Character
 
     public void LoadSkills()
     {
-        Skills = new List<Skill>();
+        Skills = new List<PlayerSkill>();
         //Skills dos niveis e tal
         foreach (var equippable in Equipment)
         {
             Skills.AddRange(equippable.EquippableBase.Skills);
+        }
+    }
+
+    public void LoadPassives()
+    {
+        Passives = new List<Passive>();
+
+        foreach (var equippable in Equipment)
+        {
+            Passives.AddRange(equippable.EquippableBase.Passives);
         }
     }
     
@@ -246,8 +260,4 @@ public class Character
         _ToEquip = null;
     }
 #endif
-
-    //QUANDO UPAM PERSONAGENS GANHAM PONTOS PRA FAZER UPGRADE
-    //TODOS OS PERSONAGENS TEM UMA LISTA DE UPGRADES, QUE PODEM TER REQUERIMENTOS -> Lista de um objeto, esse objeto de uma lista de requerimentos, que é algo abstrato que pode ser ex. Ter já X upgrade, não ter X upgrade, ser nivel X, etc. 
-    //UPGRADES TEM NIVEIS MAXIMOS, SÓ PODEM SER UPDADOS QUANDO NIVEL ATUAL < MAX E REQUERIMENTOS PASSAM
 }
