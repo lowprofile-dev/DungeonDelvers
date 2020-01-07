@@ -1,8 +1,9 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Items/Equippable/BodyBase")]
-public class FeetBase : EquippableBase
+public class FeetBase : EquippableBase, IArmorTypeEquipment
 {
-    public ArmorType ArmorType;
+    [SerializeField] private ArmorType _armorType;
+    public ArmorType ArmorType => _armorType;
     public override EquippableSlot Slot => EquippableSlot.Feet;
 }

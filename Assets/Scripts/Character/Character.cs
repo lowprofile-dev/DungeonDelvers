@@ -168,6 +168,12 @@ public class Character
             throw new NullReferenceException();
 
         var slot = equippable.EquippableBase.Slot;
+
+        if (!CanBeEquipped(equippable.EquippableBase))
+        {
+            Debug.LogError($"{Base.CharacterName} não pode equipar {equippable.EquippableBase.itemName}");
+            return;
+        }
         
         switch (slot)
         {
@@ -229,6 +235,19 @@ public class Character
         }
         
         Regenerate();
+    }
+
+    private bool CanBeEquipped(EquippableBase equippable)
+    {
+        if (equippable is WeaponBase weaponBase)
+        {
+            return Base.WeaponTypes.Contains(weaponBase.weaponType);
+        } else if (equippable is IArmorTypeEquipment armorBase)
+        {
+            return Base.ArmorTypes.Contains(armorBase.ArmorType);
+        }
+        else
+            return true;
     }
 
     #endregion

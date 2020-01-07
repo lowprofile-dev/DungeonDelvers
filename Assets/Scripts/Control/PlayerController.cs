@@ -241,6 +241,33 @@ public class PlayerController : SerializedMonoBehaviour
         Inventory.Add(itemInstance);
     }
 
+    public void RemoveItemFromInventory(ItemBase itemBase, int amount = 1)
+    {
+        if (itemBase is IStackableBase stackableBase)
+        {
+            RemoveStackableFromInventory(stackableBase, 1);
+            return;
+        }
+
+        var itemOfType = Inventory.FirstOrDefault(item => item.Base == itemBase);
+
+        if (itemOfType != null)
+        {
+            Inventory.Remove(itemOfType);
+        }
+    }
+
+    public void RemoveStackableFromInventory(IStackableBase stackableBase, int amount)
+    {
+        var allStacks = Inventory.FindAll(item => item.Base == (ItemBase) stackableBase);
+
+        var totalCount = 0;
+        
+        allStacks.ForEach( item => totalCount += (item as IStackable).Quantity);
+
+        Restack(stackableBase, totalCount - amount);
+    }
+
     public void AddStackableToInventory(IStackableBase stackableBase, int quantity)
     {
         if (quantity == 0)
@@ -249,6 +276,7 @@ public class PlayerController : SerializedMonoBehaviour
         if (stackableBase.MaxStack == 0)
         {
             Debug.LogError("Max Stack is 0");
+            return;
         }
 
         var instancesOfStackable = Inventory.Where(item => item.Base == stackableBase.ItemBase);
@@ -286,25 +314,38 @@ public class PlayerController : SerializedMonoBehaviour
             
             Debug.Log("Total Quantity = " + totalQuantity);
             
-            //Rebuild
-            while (totalQuantity > 0)
-            {
-                var instance = ItemInstanceBuilder.BuildInstance(stackableBase.ItemBase);
-                var stackable = instance as IStackable;
-                if (totalQuantity > stackableBase.MaxStack)
-                {
-                    stackable.Quantity = stackableBase.MaxStack;
-                    totalQuantity -= stackableBase.MaxStack;
-                }
-                else
-                {
-                    stackable.Quantity = totalQuantity;
-                    totalQuantity = 0;
-                }
-                Inventory.Add(instance);
-            }
+            Restack(stackableBase, totalQuantity);
         }
     }
+    
+    private void Restack(IStackableBase stackableBase, int totalQuantity)
+    {
+        Inventory.RemoveAll(item => item.Base == (ItemBase) stackableBase);
+        
+        if (stackableBase.MaxStack == 0)
+        {
+            Debug.LogError("Max Stack is 0");
+            return;
+        }
+        
+        while (totalQuantity > 0)
+        {
+            var instance = ItemInstanceBuilder.BuildInstance(stackableBase.ItemBase);
+            var stackable = instance as IStackable;
+            if (totalQuantity > stackableBase.MaxStack)
+            {
+                stackable.Quantity = stackableBase.MaxStack;
+                totalQuantity -= stackableBase.MaxStack;
+            }
+            else
+            {
+                stackable.Quantity = totalQuantity;
+                totalQuantity = 0;
+            }
+            Inventory.Add(instance);
+        }
+    }
+    //Criar função de reordanar inventário e de restackar
     
     private void OnCollisionEnter2D(Collision2D other)
     {

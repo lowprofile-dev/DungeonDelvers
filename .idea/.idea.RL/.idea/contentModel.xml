@@ -169,6 +169,7 @@
                 <e p="FeetBase.cs" t="Include" />
                 <e p="HandBase.cs" t="Include" />
                 <e p="HeadBase.cs" t="Include" />
+                <e p="IArmorTypeEquipment.cs" t="Include" />
                 <e p="WeaponBase.cs" t="Include" />
               </e>
               <e p="EquippableBase.cs" t="Include" />
@@ -197,6 +198,7 @@
             <e p="Effects" t="Include">
               <e p="DamageEffect.cs" t="Include" />
               <e p="HealEffect.cs" t="Include" />
+              <e p="RemoveItemEffect.cs" t="Include" />
             </e>
             <e p="MonsterSkill.cs" t="Include" />
             <e p="Passives" t="Include">

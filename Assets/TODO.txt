@@ -1,5 +1,4 @@
 Fazer tela do personagem. Mostra equips, stats, pontos de nivel (ver nome), e um botão que leva pro menu de comprar coisas com ponto de nivel
-Arrumar character para conferir se tá equipando algo que pode. Avisar no characterbase quando tenta equipar algo que não pode.
 Arrumar animações dos personagens para ter Cast
 Fazer ItemSkill (Skill mas quando executa o player perde um daquele item do inventário)
 Fazer menu de Item
@@ -24,7 +23,7 @@ Terminar esse fluxo:
     Salva.
     Load, tudo tá guardado e NPC não está mais lá (com a global)
 
-Ao terminar esse fluxo, limpar o código e pedir a comissão ao FBB.
+Ao terminar esse fluxo, limpar o código, comentar tudo, e descansar.
 
 Futuro:
 Refazer o fluxo de BattleController, ver se concerta o problema com AoE
