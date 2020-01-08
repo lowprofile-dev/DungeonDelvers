@@ -1,13 +1,10 @@
+Fazer ajustes no menu de item (mostra quantos tem)
 Fazer tela do personagem. Mostra equips, stats, pontos de nivel (ver nome), e um botão que leva pro menu de comprar coisas com ponto de nivel
 Arrumar animações dos personagens para ter Cast
-Fazer ItemSkill (Skill mas quando executa o player perde um daquele item do inventário)
-Fazer menu de Item
+Alterar todas as instancias de skill no menu pra PlayerSkill. Adicionar campo de default target na skill
 Fazer Passivas+Status Effects+Buffs (talvez mesma coisa).
-Mudar executeeffect pra executeskill
-Criar um receiveeffect (em adição ao receive skill, pra não ter que botar o mesmo código x vezes tipo desaparecer quando morrer)
-Terminar batalha simples (vs. 3 Slimes). (Lembrar de fazer skills custarem EP, fazer IA simples pra slime.)
-Unificar os Databases. Ver logo o que vai precisar ser serializado e o que não, e ver como serializar o que precisa.
-    ^Refazer os IDs para ser só um numero. A função de buildar IDs é no builddatabase do database principal, ele lê tudo, compara com o que já tinha, ai adiciona tudo de novo e dá IDs crescentes.
+Arrumar database: uniqueIdentifier não é mais propriedade do item, e sim do database (cada item agora é um (int, type))
+    
 Dar uma olhada no funcionamento do CharacterBattler, se tá tudo correto.
 
 Fazer uma base super simples de aprender skill/passiva quando upa pra testar a serialização disso.
@@ -26,8 +23,10 @@ Terminar esse fluxo:
 Ao terminar esse fluxo, limpar o código, comentar tudo, e descansar.
 
 Futuro:
-Refazer o fluxo de BattleController, ver se concerta o problema com AoE
+Ver Unit Testing, fazer modulos pra testar, pelo menos, a serialização.
+Limpar o fluxo do BattleController
 Dar uma olhada no DunGen
+Fazer skill que pode dar alvo em até X inimigos/aliados, fazer no SkillTargeter (pensando, int em playerskill que é quantas vezes deve ser selecionado um alvo, e se o alvo pode ser repetido). 
 
 
 Tipos de Skills/Passivas pra Fazer: (testar basicamente tudo)

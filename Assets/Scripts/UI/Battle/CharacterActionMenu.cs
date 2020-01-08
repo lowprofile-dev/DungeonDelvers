@@ -94,12 +94,17 @@ public class CharacterActionMenu : SerializedMonoBehaviour
 
     public void OpenSkillMenu()
     {
-        SkillActionMenu.OpenSkillMenu();
+        SkillActionMenu.OpenSkillMenu(Battler.Skills);
     }
 
     public void OpenItemMenu()
     {
-        //Fazer
+        var consumableSkills = PlayerController.Instance.Inventory.Where(item => item is Consumable).Cast<Consumable>()
+            .Where(consumable => consumable.ConsumableBase.ItemSkill != null)
+            .Select(consumable => consumable.ConsumableBase.ItemSkill)
+            .Distinct();
+        
+        SkillActionMenu.OpenSkillMenu(consumableSkills);
     }
 
     public void Defend()

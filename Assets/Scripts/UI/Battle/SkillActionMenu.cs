@@ -19,11 +19,11 @@ public class SkillActionMenu : SerializedMonoBehaviour
     [ShowInInspector, ReadOnly] private SkillButton SelectedSkill;
 
     //Passar se é skill normal ou itemskill
-    public void OpenSkillMenu()
+    public void OpenSkillMenu(IEnumerable<Skill> skills)
     {
         CharacterActionMenu.Panel.SetActive(false);
         SkillPanel.SetActive(true);
-        BuildSkills();
+        BuildSkills(skills);
     }
 
     private void Update()
@@ -43,7 +43,7 @@ public class SkillActionMenu : SerializedMonoBehaviour
         SkillPanel.SetActive(true);
     }
     
-    private void BuildSkills()
+    private void BuildSkills(IEnumerable<Skill> Skills)
     {
         //Cleanup
         foreach (Transform child in SkillGridContent)
@@ -53,7 +53,8 @@ public class SkillActionMenu : SerializedMonoBehaviour
 
         SelectedSkill = null;
 
-        var skills = CharacterActionMenu.Battler.Skills.OrderBy(skill => skill.EpCost);
+        //var skills = CharacterActionMenu.Battler.Skills.OrderBy(skill => skill.EpCost);
+        var skills = Skills.OrderBy(skill => skill.EpCost);
 
         foreach (var skill in skills)
         {

@@ -12,10 +12,10 @@ public class ConsumableBase : ItemBase, IStackableBase
     
     //Ver ainda como fazer pra usar fora da batalha
     [ValidateInput("_skillRemovesItem", "Skill de Itens precisa remover o Item.")]
-    public Skill ItemSkill;
+    public PlayerSkill ItemSkill;
     
 #if UNITY_EDITOR
-    private bool _skillRemovesItem(Skill ItemSkill)
+    private bool _skillRemovesItem(PlayerSkill ItemSkill)
     {
         if (ItemSkill == null)
             return true;

@@ -61,7 +61,7 @@ public class BattleController : SerializedMonoBehaviour
         //Monta o BattleCanvas
         battleCanvas = Instantiate(BattleCanvasPrefab).GetComponent<BattleCanvas>();
         battleCanvas.SetupBattleground(backgroundSprite);
-
+        
         //Monta party e inimigos
         Party = battleCanvas.SetupParty(PlayerController.Instance.Party);
         Enemies = battleCanvas.SetupMonsters(encounterPrefab);

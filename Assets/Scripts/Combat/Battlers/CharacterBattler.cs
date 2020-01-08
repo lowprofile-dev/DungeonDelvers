@@ -17,13 +17,11 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
 {
     public Animator animator;
     public Character Character;
-    private BattleController BattleController; 
     private Image image;
 
     private void Start()
     {
         image = GetComponent<Image>();
-        BattleController = BattleController.Instance;
     }
 
     public void Create(Character character)
@@ -161,8 +159,8 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
             {
                 Skill = null
             };
-        
-        var turn = await BattleController.battleCanvas.GetTurn(this);
+
+        var turn = await BattleController.Instance.battleCanvas.GetTurn(this);
 
         return turn;
     }
@@ -206,7 +204,7 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
 
         await QueueActionAndAwait(() =>
         {
-            effectResult = effect.ExecuteEffect(BattleController, skillSource, source, this);
+            effectResult = effect.ExecuteEffect(BattleController.Instance, skillSource, source, this);
         });
 
         switch (effectResult)

@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  uniqueIdentifier: Items/Consumables/PotionSmall
+  uniqueIdentifier: 0
   databaseIgnore: 0
   itemIcon: {fileID: -4231952906909274518, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
@@ -30,4 +30,4 @@ MonoBehaviour:
   itemWeight: 1
   itemText: Small Potion
   maxStack: 9
-  ItemSkill: {fileID: 11400000, guid: a3015c475e6056e4fa1ef63b6e535bdc, type: 2}
+  ItemSkill: {fileID: 11400000, guid: 3aae108ae71cbf1168a17aba33a4c8d7, type: 2}

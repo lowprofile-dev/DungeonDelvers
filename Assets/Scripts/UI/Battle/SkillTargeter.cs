@@ -89,8 +89,9 @@ public class SkillTargeter : SerializedMonoBehaviour
         yield return null;
         
         //Começar no monstro mais a direita -> o mais perto da party
-        var currentIndex = TargetGroups.FindLastIndex(group => group.Any(battler => battler is MonsterBattler));
-        
+//        var currentIndex = TargetGroups.FindLastIndex(group => group.Any(battler => battler is MonsterBattler));
+        var currentIndex = 0;
+
         BattleCanvas.CleanTargetArrows();
                     
         foreach (var battler in TargetGroups[currentIndex])
