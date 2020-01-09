@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Linq;
+using Sirenix.OdinInspector;
 
 public class MasteryGroup
 {
-    public Character Character;
+    [ReadOnly] public Character Character;
 
     public Dictionary<Mastery, MasteryInstance> Masteries;
 

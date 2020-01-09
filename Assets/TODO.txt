@@ -1,15 +1,9 @@
-Teste de integridade do item melhor (skill tem que ter o mesmo nome que o item, mesmo sprite, e o efeito de remover). Botão que concerta isso automaticamente (vê cada erro e arruma)
-Fazer ajustes no menu de item (mostra quantos tem)
-Terminar Mastery
 Fazer tela do personagem. Mostra equips, stats, pontos de nivel (ver nome), e um botão que leva pro menu de comprar coisas com ponto de nivel
+Testar upar, testar masteries
 Arrumar animações dos personagens para ter Cast
 Alterar todas as instancias de skill no menu pra PlayerSkill. Adicionar campo de default target na skill
 Fazer Passivas+Status Effects+Buffs (talvez mesma coisa).
-Arrumar database: uniqueIdentifier não é mais propriedade do item, e sim do database (cada item agora é um (int, type))
-    
 Dar uma olhada no funcionamento do CharacterBattler, se tá tudo correto.
-
-Fazer uma base super simples de aprender skill/passiva quando upa pra testar a serialização disso.
 Fazer uma base super simples de modificações de equip e como guardar na instancia. -> Equips com variações de stats.
 
 Começar serialização. Só é necessário um save.
@@ -25,6 +19,7 @@ Terminar esse fluxo:
 Ao terminar esse fluxo, limpar o código, comentar tudo, e descansar.
 
 Futuro:
+Arrumar database: uniqueIdentifier não é mais propriedade do item, e sim do database (cada item agora é um (int, type))
 Ver Unit Testing, fazer modulos pra testar, pelo menos, a serialização.
 Limpar o fluxo do BattleController
 Dar uma olhada no DunGen

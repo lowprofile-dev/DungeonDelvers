@@ -55,7 +55,7 @@ public class SkillButton : SerializedMonoBehaviour, ISelectHandler, IPointerEnte
     public void BuildSkillButton(ConsumableBase consumable, SkillActionMenu skillActionMenu)
     {
         SkillIcon.sprite = consumable.itemIcon;
-        SkillName.text = consumable.itemName;
+        SkillName.text = $"{consumable.itemName} x{PlayerController.Instance.GetQuantityOfItem(consumable)}";
         SkillCost.text = $"{consumable.ItemSkill.EpCost} EP";
         Skill = consumable.ItemSkill;
         SkillActionMenu = skillActionMenu;

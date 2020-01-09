@@ -21,14 +21,27 @@ public class MasteryInstance
 
     public void LevelUp()
     {
-        if (CurrentLevel < Mastery.MasteryMaxLevel)
+        if (CurrentLevel >= Mastery.MasteryMaxLevel)
         {
-            CurrentLevel++;
-            MasteryGroup.Character.Regenerate();
+            Debug.LogWarning($"{Mastery.MasteryName} não pode subir de nível. Atual: {CurrentLevel}, Máximo: {Mastery.MasteryMaxLevel}");
+        }
+        else if (Mastery.MPCost > MasteryGroup.Character.CurrentMp)
+        {
+            Debug.LogWarning($"{MasteryGroup.Character.Base.CharacterName} não possui MP suficiente para subir de nível.");
         }
         else
         {
-            Debug.LogWarning($"{Mastery.MasteryName} não pode subir de nível. Atual: {CurrentLevel}, Máximo: {Mastery.MasteryMaxLevel}");
+            MasteryGroup.Character.CurrentMp -= Mastery.MPCost;
+            CurrentLevel++;
+            MasteryGroup.Character.Regenerate();
+        }
+    }
+
+    public void ApplyMastery()
+    {
+        foreach (var effect in Mastery.Effects)
+        {
+            effect.ApplyBonuses(CurrentLevel, MasteryGroup.Character);
         }
     }
 }

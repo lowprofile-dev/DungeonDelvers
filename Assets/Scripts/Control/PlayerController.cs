@@ -7,6 +7,7 @@ using EncryptStringSample;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using SkredUtils;
 using UnityEngine;
 using UnityEngine.Events;
@@ -200,7 +201,7 @@ public class PlayerController : SerializedMonoBehaviour
 
         foreach (var partyMember in Party)
         {
-            partyMember.CurrentLp += (PartyLevel / 5) + 1;
+            partyMember.CurrentMp += (PartyLevel / 5) + 1;
         }
         
         OnLevelUpEvent.Invoke();
@@ -346,6 +347,24 @@ public class PlayerController : SerializedMonoBehaviour
         }
     }
     //Criar função de reordanar inventário e de restackar
+
+    public int GetQuantityOfItem(ItemBase itemBase)
+    {
+        if (itemBase is IStackableBase stackableBase)
+        {
+            return GetQuantityOfStackable(stackableBase);
+        }
+
+        return Inventory.Count(item => item.Base == itemBase);
+    }
+
+    private int GetQuantityOfStackable(IStackableBase stackableBase)
+    {
+        var stacks = Inventory.Where(item => item.Base == (ItemBase) stackableBase).Cast<IStackable>().ToArray();
+        int totalCount = 0;
+        stacks.ForEach(stack => { totalCount += stack.Quantity; });
+        return totalCount;
+    }
     
     private void OnCollisionEnter2D(Collision2D other)
     {

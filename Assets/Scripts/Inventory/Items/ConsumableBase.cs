@@ -11,16 +11,53 @@ public class ConsumableBase : ItemBase, IStackableBase
     public int MaxStack => maxStack;
     
     //Ver ainda como fazer pra usar fora da batalha
-    [ValidateInput("_skillRemovesItem", "Skill de Itens precisa remover o Item.")]
+    [ValidateInput("_validateSkill", "Skill de Itens precisa remover o Item, e ter o mesmo sprite")]
     public PlayerSkill ItemSkill;
     
 #if UNITY_EDITOR
-    private bool _skillRemovesItem(PlayerSkill ItemSkill)
+
+    [Button("Fix Skill"), ShowIf("_canFixSkill")]
+    private void _fixSkill()
+    {
+        var hasRemoveEffect = ItemSkill.Effects.Find(effect =>
+                                  effect is RemoveItemEffect removeItemEffect && removeItemEffect.Item == ItemBase) !=
+                              null;
+
+        if (!hasRemoveEffect)
+        {
+            var removeItemEffect = new RemoveItemEffect {Item = ItemBase};
+            ItemSkill.Effects.Add(removeItemEffect);
+        }
+
+        var hasSameName = ItemSkill.SkillName == itemName;
+
+        if (!hasSameName)
+        {
+            ItemSkill.SkillName = itemName;
+        }
+
+        var hasSameSprite = ItemSkill.SkillIcon == itemIcon;
+
+        if (!hasSameSprite)
+        {
+            ItemSkill.SkillIcon = itemIcon;
+        }
+    }
+
+    private bool _canFixSkill()
+    {
+        return !_validateSkill(ItemSkill);
+    }
+    
+    private bool _validateSkill(PlayerSkill ItemSkill)
     {
         if (ItemSkill == null)
             return true;
 
-        return ItemSkill.Effects.Find(effect => effect is RemoveItemEffect removeItemEffect && removeItemEffect.Item == this) != null;
+        return ItemSkill.Effects.Find(effect =>
+                   effect is RemoveItemEffect removeItemEffect && removeItemEffect.Item == this) != null
+               && ItemSkill.SkillIcon == itemIcon
+               && ItemSkill.SkillName == itemName;
     }
 #endif
 }

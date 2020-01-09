@@ -55,7 +55,7 @@ public class Character
 
     private int CurrentLevel => PlayerController.Instance.PartyLevel;
 
-    public int CurrentLp;
+    public int CurrentMp;
     
     [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly]private int currentHp;
 
@@ -168,6 +168,11 @@ public class Character
     private void LoadMasteries()
     {
         var masteries = MasteryGroup.Masteries.Values;
+
+        foreach (var mastery in masteries)
+        {
+            mastery.ApplyMastery();
+        }
     }
 
     public void Equip(Equippable equippable, int accessorySlot = 0)

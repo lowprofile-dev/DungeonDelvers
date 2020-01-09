@@ -18,6 +18,7 @@ public class SkillTargeter : SerializedMonoBehaviour
 
     public void StartTarget(Skill skill,SkillActionMenu previousMenu)
     {
+        gameObject.SetActive(true);
         Skill = skill;
         PreviousMenu = previousMenu;
         TargetChosen = false;
@@ -160,6 +161,7 @@ public class SkillTargeter : SerializedMonoBehaviour
 
     public void CancelTarget()
     {
+        gameObject.SetActive(false);
         StopCoroutine(Targeting);
         PreviousMenu.ResumeSkillMenu();
         BattleCanvas.battleInfoPanel.HideInfo();

@@ -21,17 +21,30 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: WeaponTypes
+    - Name: Masteries
       Entry: 7
-      Data: 0|Boo.Lang.List`1[[WeaponBase+WeaponType, Assembly-CSharp]], Boo.Lang
+      Data: 0|System.Collections.Generic.List`1[[Mastery, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 3
       Data: 1
     - Name: 
+      Entry: 7
+      Data: 1|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: HP Training I
+    - Name: MasteryMaxLevel
       Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 1
+    - Name: Conditions
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
       Data: 0
     - Name: 
       Entry: 13
@@ -39,15 +52,70 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: ArmorTypes
+    - Name: Effects
       Entry: 7
-      Data: 1|Boo.Lang.List`1[[EquippableBase+ArmorType, Assembly-CSharp]], Boo.Lang
+      Data: 3|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
+      Entry: 7
+      Data: 4|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 4
+    - Name: InitialEp
       Entry: 3
       Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -81,6 +149,8 @@ MonoBehaviour:
   BaseEvasion: 0.05
   BaseCritChance: 0.08
   BaseCritAvoid: 0.08
+  WeaponTypes: 
+  ArmorTypes: 
   Weapon: {fileID: 11400000, guid: f0ca1d086742b68698d5f98d7810133b, type: 2}
   Head: {fileID: 0}
   Body: {fileID: 0}

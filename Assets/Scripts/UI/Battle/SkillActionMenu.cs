@@ -102,6 +102,7 @@ public class SkillActionMenu : SerializedMonoBehaviour
             .Where(item => item is Consumable).Cast<Consumable>()
             .Where(consumable => consumable.ConsumableBase.ItemSkill != null)
             .Select(consumable => consumable.ConsumableBase)
+            .Distinct()
             .ToArray();
 
         for (var i = 0; i < consumables.Length; i++)
