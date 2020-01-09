@@ -1,5 +1,8 @@
+using System;
+
+[Obsolete]
 public interface ISerializable<T>
 {
-    string Serialize(T instance);
+    string Serialize();
     T Deserialize(string json);
 }

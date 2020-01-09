@@ -39,6 +39,7 @@ public class Character
         Regenerate();
 
         CurrentHp = Stats.MaxHp;
+        MasteryGroup = new MasteryGroup(this);
     }
 
     public Character(CharacterSave save)
@@ -86,6 +87,9 @@ public class Character
     //[FoldoutGroup("Passives")] public List<StatPassive> StatPassives;
     
     [ShowInInspector] public List<PlayerSkill> Skills { get; private set; }
+
+    [ShowInInspector] public MasteryGroup MasteryGroup { get; private set; }
+
     [ShowInInspector] public List<Passive> Passives { get; private set; }
     
     public IEnumerable<Equippable> Equipment
@@ -116,7 +120,7 @@ public class Character
         Debug.Log($"Recalculated {Base.CharacterName} stats: {stopwatch.ElapsedMilliseconds}ms");
     }
 
-    public void RecalculateBases()
+    private void RecalculateBases()
     {
         BaseStats = new Stats()
         {
@@ -131,7 +135,7 @@ public class Character
         };
     }
 
-    public void RecalculateBonus()
+    private void RecalculateBonus()
     {
         BonusStats = new Stats();
         
@@ -142,17 +146,16 @@ public class Character
         }
     }
 
-    public void LoadSkills()
+    private void LoadSkills()
     {
         Skills = new List<PlayerSkill>();
-        //Skills dos niveis e tal
         foreach (var equippable in Equipment)
         {
             Skills.AddRange(equippable.EquippableBase.Skills);
         }
     }
 
-    public void LoadPassives()
+    private void LoadPassives()
     {
         Passives = new List<Passive>();
 
@@ -161,7 +164,12 @@ public class Character
             Passives.AddRange(equippable.EquippableBase.Passives);
         }
     }
-    
+
+    private void LoadMasteries()
+    {
+        var masteries = MasteryGroup.Masteries.Values;
+    }
+
     public void Equip(Equippable equippable, int accessorySlot = 0)
     {
         if (equippable == null || equippable.EquippableBase == null)

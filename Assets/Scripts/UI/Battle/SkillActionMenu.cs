@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.EventSystems;
 
 public class SkillActionMenu : SerializedMonoBehaviour
@@ -19,11 +20,26 @@ public class SkillActionMenu : SerializedMonoBehaviour
     [ShowInInspector, ReadOnly] private SkillButton SelectedSkill;
 
     //Passar se é skill normal ou itemskill
-    public void OpenSkillMenu(IEnumerable<Skill> skills)
+    public void OpenSkillMenu(SkillMenuMode mode)
     {
         CharacterActionMenu.Panel.SetActive(false);
         SkillPanel.SetActive(true);
-        BuildSkills(skills);
+
+        switch (mode)
+        {
+            case SkillMenuMode.Skills:
+            {
+                BuildSkills();
+                break;
+            }
+            case SkillMenuMode.Items:
+            {
+                BuildItems();
+                break;
+            }
+            default:
+                throw new ArgumentOutOfRangeException(nameof(mode), mode, null);
+        }
     }
 
     private void Update()
@@ -43,7 +59,36 @@ public class SkillActionMenu : SerializedMonoBehaviour
         SkillPanel.SetActive(true);
     }
     
-    private void BuildSkills(IEnumerable<Skill> Skills)
+    private void BuildSkills()
+    {
+        //Cleanup
+        foreach (Transform child in SkillGridContent)
+        {
+            Destroy(child.gameObject);
+        }
+
+        SelectedSkill = null;
+        
+        var skills = CharacterActionMenu.Battler.Skills.OrderBy(skill => skill.EpCost).ToArray();
+
+        for (var i = 0; i < skills.Length; i++)
+        {
+            var skillButtonObject = Instantiate(SkillButtonPrefab, SkillGridContent);
+            var skillButton = skillButtonObject.GetComponent<SkillButton>();
+            skillButton.BuildSkillButton(skills[i], this);
+
+            if (i == 0)
+            {
+                ShowSkillInfo(skills[0]);
+                SelectedSkill = skillButton;
+                EventSystem.current.SetSelectedGameObject(skillButton.Button.gameObject);
+            }
+        }
+        
+        
+    }
+
+    private void BuildItems()
     {
         //Cleanup
         foreach (Transform child in SkillGridContent)
@@ -53,30 +98,33 @@ public class SkillActionMenu : SerializedMonoBehaviour
 
         SelectedSkill = null;
 
-        //var skills = CharacterActionMenu.Battler.Skills.OrderBy(skill => skill.EpCost);
-        var skills = Skills.OrderBy(skill => skill.EpCost);
+        var consumables = PlayerController.Instance.Inventory
+            .Where(item => item is Consumable).Cast<Consumable>()
+            .Where(consumable => consumable.ConsumableBase.ItemSkill != null)
+            .Select(consumable => consumable.ConsumableBase)
+            .ToArray();
 
-        foreach (var skill in skills)
+        for (var i = 0; i < consumables.Length; i++)
         {
             var skillButtonObject = Instantiate(SkillButtonPrefab, SkillGridContent);
             var skillButton = skillButtonObject.GetComponent<SkillButton>();
-            skillButton.BuildSkillButton(skill, this);
-
-            if (skill == skills.First())
+            skillButton.BuildSkillButton(consumables[i], this);
+            
+            if (i == 0)
             {
-                ShowSkillInfo(skill);
+                ShowSkillInfo(consumables[0].ItemSkill);
                 SelectedSkill = skillButton;
                 EventSystem.current.SetSelectedGameObject(skillButton.Button.gameObject);
             }
         }
     }
 
-    private void ShowSkillInfo(Skill skill)
+    private void ShowSkillInfo(PlayerSkill skill)
     {
         SkillInfoPanel.BuildSkillInfo(skill);
     }
     
-    public void ChooseSkill(Skill skill)
+    public void ChooseSkill(PlayerSkill skill)
     {
         SkillPanel.SetActive(false);
         SkillTargeter.StartTarget(skill, this);
@@ -92,5 +140,11 @@ public class SkillActionMenu : SerializedMonoBehaviour
         skillObject.SelectedIndicatior.enabled = true;
         ShowSkillInfo(skillObject.Skill);
         SelectedSkill = skillObject;
+    }
+
+    public enum SkillMenuMode
+    {
+        Skills,
+        Items
     }
 }

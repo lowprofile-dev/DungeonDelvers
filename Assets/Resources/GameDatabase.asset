@@ -20,7 +20,10 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: DatabaseVersion
+      Entry: 3
+      Data: 1
   _databases:
   - DatabaseVersion: 1
     CharacterBases:

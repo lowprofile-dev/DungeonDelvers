@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class SkillButton : SerializedMonoBehaviour, ISelectHandler, IPointerEnterHandler
 {
     [ReadOnly] public SkillActionMenu SkillActionMenu;
-    [ShowInInspector, ReadOnly] public Skill Skill { get; private set; }
+    [ShowInInspector, ReadOnly] public PlayerSkill Skill { get; private set; }
     public Image SelectedIndicatior;
     public Image SkillIcon;
     public Text SkillName;
@@ -18,8 +18,7 @@ public class SkillButton : SerializedMonoBehaviour, ISelectHandler, IPointerEnte
 
     private bool canBeUsed;
     
-    [Obsolete]
-    public void BuildSkillButton(Skill skill, SkillActionMenu skillActionMenu)
+    public void BuildSkillButton(PlayerSkill skill, SkillActionMenu skillActionMenu)
     {
         SkillIcon.sprite = skill.SkillIcon;
         SkillName.text = skill.SkillName;
@@ -51,6 +50,17 @@ public class SkillButton : SerializedMonoBehaviour, ISelectHandler, IPointerEnte
         {
             canBeUsed = true;
         }
+    }
+
+    public void BuildSkillButton(ConsumableBase consumable, SkillActionMenu skillActionMenu)
+    {
+        SkillIcon.sprite = consumable.itemIcon;
+        SkillName.text = consumable.itemName;
+        SkillCost.text = $"{consumable.ItemSkill.EpCost} EP";
+        Skill = consumable.ItemSkill;
+        SkillActionMenu = skillActionMenu;
+        gameObject.SetActive(true);
+        canBeUsed = true;
     }
 
     public void StartTargetSkill()

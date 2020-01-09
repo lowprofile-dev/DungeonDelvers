@@ -7,6 +7,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Character/Character", fileName = "New Character")]
 public class CharacterBase : SerializableAsset
 {
+    #region Data
+
     [PropertyOrder(-100)] public string CharacterName = "";
     [PropertyOrder(-99)] public Sprite CharacterFace = null;
     [PropertyOrder(-98)] public GameObject CharacterPrefab = null;
@@ -26,14 +28,14 @@ public class CharacterBase : SerializableAsset
     [FoldoutGroup("Stats")] public int MagDefGrowth;
     [FoldoutGroup("Stats")] public int BaseSpeed;
     [FoldoutGroup("Stats")] public int SpeedGrowth;
-    [FoldoutGroup("Stats"), PropertyRange(0,1)] public float BaseAccuracy;
-    [FoldoutGroup("Stats"), PropertyRange(0,1)] public float BaseEvasion;
-    [FoldoutGroup("Stats"), PropertyRange(0,1)] public float BaseCritChance;
-    [FoldoutGroup("Stats"), PropertyRange(0,1)] public float BaseCritAvoid;
+    [FoldoutGroup("Stats"), PropertyRange(0, 1)] public float BaseAccuracy;
+    [FoldoutGroup("Stats"), PropertyRange(0, 1)] public float BaseEvasion;
+    [FoldoutGroup("Stats"), PropertyRange(0, 1)] public float BaseCritChance;
+    [FoldoutGroup("Stats"), PropertyRange(0, 1)] public float BaseCritAvoid;
 
     [FoldoutGroup("Equips")] public List<WeaponBase.WeaponType> WeaponTypes = new List<WeaponBase.WeaponType>();
     [FoldoutGroup("Equips")] public List<EquippableBase.ArmorType> ArmorTypes = new List<EquippableBase.ArmorType>();
-    
+
     [FoldoutGroup("Equips")] public WeaponBase Weapon;
     [FoldoutGroup("Equips")] public HeadBase Head;
     [FoldoutGroup("Equips")] public BodyBase Body;
@@ -42,7 +44,12 @@ public class CharacterBase : SerializableAsset
     [FoldoutGroup("Equips")] public AccessoryBase Accessory1;
     [FoldoutGroup("Equips")] public AccessoryBase Accessory2;
     [FoldoutGroup("Equips")] public AccessoryBase Accessory3;
-    
+
+    public List<Mastery> Masteries = new List<Mastery>();
+
+    #endregion
+
+
 #if UNITY_EDITOR
     [InfoBox("$LevelMessage", InfoMessageType.Info), FoldoutGroup("Stats"), PropertyOrder(-1), Range(1,50)] 
     public int Level;

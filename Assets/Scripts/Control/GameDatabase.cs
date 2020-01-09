@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using Sirenix.OdinInspector;
+using Sirenix.Serialization;
 using Sirenix.Utilities;
 using UnityEngine;
 
@@ -27,8 +28,10 @@ public class GameDatabase : SerializedScriptableObject
     }
     
     [SerializeField] private List<Database> _databases;
+    [SerializeField] public int DatabaseVersion { get; private set; }
 
-    public static Database Database => Instance._databases.Last();
+    public static Database Database =>
+        Instance._databases.FirstOrDefault(database => database.DatabaseVersion == Instance.DatabaseVersion);
 
 
 #if UNITY_EDITOR

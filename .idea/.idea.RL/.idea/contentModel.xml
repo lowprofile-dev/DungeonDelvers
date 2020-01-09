@@ -108,6 +108,18 @@
             <e p="CharacterBattlerController.cs" t="Include" />
             <e p="CharacterDatabase.cs" t="Include" />
             <e p="CharacterSave.cs" t="Include" />
+            <e p="Mastery" t="Include">
+              <e p="Mastery.cs" t="Include" />
+              <e p="MasteryCondition" t="Include">
+                <e p="MasteryCondition.cs" t="Include" />
+              </e>
+              <e p="MasteryEffect" t="Include">
+                <e p="AddPassiveMasteryEffect.cs" t="Include" />
+                <e p="BonusStatMasteryEffect.cs" t="Include" />
+              </e>
+              <e p="MasteryGroup.cs" t="Include" />
+              <e p="MasteryInstance.cs" t="Include" />
+            </e>
             <e p="Stats.cs" t="Include" />
           </e>
           <e p="Combat" t="Include">
@@ -192,6 +204,9 @@
           </e>
           <e p="Security" t="Include">
             <e p="StringCipher.cs" t="Include" />
+          </e>
+          <e p="Serialization" t="Include">
+            <e p="ISerializable.cs" t="Include" />
           </e>
           <e p="Skills" t="Include">
             <e p="Effect.cs" t="Include" />

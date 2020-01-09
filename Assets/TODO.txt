@@ -1,4 +1,6 @@
+Teste de integridade do item melhor (skill tem que ter o mesmo nome que o item, mesmo sprite, e o efeito de remover). Botão que concerta isso automaticamente (vê cada erro e arruma)
 Fazer ajustes no menu de item (mostra quantos tem)
+Terminar Mastery
 Fazer tela do personagem. Mostra equips, stats, pontos de nivel (ver nome), e um botão que leva pro menu de comprar coisas com ponto de nivel
 Arrumar animações dos personagens para ter Cast
 Alterar todas as instancias de skill no menu pra PlayerSkill. Adicionar campo de default target na skill
