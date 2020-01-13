@@ -23,10 +23,10 @@ MonoBehaviour:
     SerializationNodes: []
   uniqueIdentifier: 
   databaseIgnore: 0
-  itemIcon: {fileID: 0}
-  itemName: 
+  itemIcon: {fileID: 8020143640844766479, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
+    type: 3}
+  itemName: Big Sword
   goldValue: 0
-  itemWeight: 0
   itemText: 
   Stats:
     MaxHp: 0
@@ -43,4 +43,5 @@ MonoBehaviour:
     CritAvoid: 0
   Skills:
   - {fileID: 0}
-  weaponType: 2
+  Passives: []
+  weaponType: 1

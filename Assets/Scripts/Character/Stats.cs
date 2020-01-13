@@ -1,4 +1,5 @@
 ﻿using System;
+using Sirenix.OdinInspector;
 
 [Serializable]
 public struct Stats
@@ -11,10 +12,10 @@ public struct Stats
     public int PhysDef;
     public int MagDef;
     public int Speed;
-    public float Accuracy;
-    public float Evasion;
-    public float CritChance;
-    public float CritAvoid;
+    [PropertyRange(0, 1)] public float Accuracy;
+    [PropertyRange(0, 1)] public float Evasion;
+    [PropertyRange(0, 1)] public float CritChance;
+    [PropertyRange(0, 1)] public float CritAvoid;
 
     public static Stats operator +(Stats a, Stats b)
     {
@@ -70,6 +71,25 @@ public struct Stats
             Evasion = a.Evasion * b.Evasion,
             CritChance = a.CritChance * b.CritChance,
             CritAvoid = a.CritAvoid * b.CritAvoid
+        };
+    }
+
+    public static Stats operator *(Stats a, int b)
+    {
+        return new Stats()
+        {
+            MaxHp = a.MaxHp * b,
+            InitialEp = a.InitialEp * b,
+            EpGain = a.EpGain * b,
+            PhysAtk = a.PhysAtk * b,
+            MagAtk = a.MagAtk * b,
+            PhysDef = a.PhysDef * b,
+            MagDef = a.MagDef * b,
+            Speed = a.Speed * b,
+            Accuracy = a.Accuracy * b,
+            Evasion = a.Evasion * b,
+            CritChance = a.CritChance * b,
+            CritAvoid = a.CritAvoid * b
         };
     }
 }

@@ -21,32 +21,30 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: WeaponTypes
+    - Name: Masteries
       Entry: 7
-      Data: 0|Boo.Lang.List`1[[WeaponBase+WeaponType, Assembly-CSharp]], Boo.Lang
+      Data: 0|System.Collections.Generic.List`1[[Mastery, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 30
     - Name: 
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 3
-      Data: 7
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: ArmorTypes
       Entry: 7
-      Data: 1|Boo.Lang.List`1[[EquippableBase+ArmorType, Assembly-CSharp]], Boo.Lang
-    - Name: 
-      Entry: 12
+      Data: 1|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Hit Point Training I
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
       Data: 1
+    - Name: Conditions
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
     - Name: 
-      Entry: 3
+      Entry: 12
       Data: 0
     - Name: 
       Entry: 13
@@ -54,7 +52,2946 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: Characters/Characters/Assassin/Assassin
+    - Name: Effects
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 4
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Hit Point Training II
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 2
+    - Name: Conditions
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 7|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 1
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 8|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 9|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 6
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Hit Point Training III
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 3
+    - Name: Conditions
+      Entry: 7
+      Data: 11|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 12|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 5
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 13|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 14|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 8
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 15|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Hit Point Training IV
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 4
+    - Name: Conditions
+      Entry: 7
+      Data: 16|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 17|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 10
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 18|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 19|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 10
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 20|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Hit Point Training V
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 5
+    - Name: Conditions
+      Entry: 7
+      Data: 21|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 22|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 15
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 23|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 24|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 12
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 25|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Physical Attack Training I
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 1
+    - Name: Conditions
+      Entry: 7
+      Data: 26|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 27|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 28|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 2
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 29|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Physical Attack Training II
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 2
+    - Name: Conditions
+      Entry: 7
+      Data: 30|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 31|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 25
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 32|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 33|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 3
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 34|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Physical Attack Training III
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 3
+    - Name: Conditions
+      Entry: 7
+      Data: 35|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 36|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 29
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 37|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 38|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 4
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 39|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Physical Attack Training IV
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 4
+    - Name: Conditions
+      Entry: 7
+      Data: 40|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 41|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 34
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 42|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 43|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 5
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 44|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Physical Attack Training V
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 5
+    - Name: Conditions
+      Entry: 7
+      Data: 45|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 46|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 39
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 47|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 48|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 6
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 49|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Magical Attack Training I
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 1
+    - Name: Conditions
+      Entry: 7
+      Data: 50|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 51|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 52|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 2
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 53|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Magical Attack Training II
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 2
+    - Name: Conditions
+      Entry: 7
+      Data: 54|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 55|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 49
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 56|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 57|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 3
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 58|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Magical Attack Training III
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 3
+    - Name: Conditions
+      Entry: 7
+      Data: 59|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 60|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 53
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 61|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 62|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 4
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 63|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Magical Attack Training IV
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 4
+    - Name: Conditions
+      Entry: 7
+      Data: 64|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 65|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 58
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 66|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 67|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 5
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 68|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Magical Attack Training V
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 5
+    - Name: Conditions
+      Entry: 7
+      Data: 69|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 70|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 63
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 71|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 72|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 6
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 73|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Physical Defense Training I
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 1
+    - Name: Conditions
+      Entry: 7
+      Data: 74|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 75|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 76|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 2
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 77|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Physical Defense Training II
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 2
+    - Name: Conditions
+      Entry: 7
+      Data: 78|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 79|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 73
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 80|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 81|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 3
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 82|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Physical Defense Training III
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 3
+    - Name: Conditions
+      Entry: 7
+      Data: 83|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 84|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 77
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 85|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 86|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 4
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 87|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Physical Defense Training IV
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 4
+    - Name: Conditions
+      Entry: 7
+      Data: 88|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 89|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 82
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 90|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 91|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 5
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 92|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Physical Defense Training V
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 5
+    - Name: Conditions
+      Entry: 7
+      Data: 93|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 94|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 87
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 95|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 96|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 6
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 97|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Magical Defense Training I
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 1
+    - Name: Conditions
+      Entry: 7
+      Data: 98|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 99|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 100|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 2
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 101|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Magical Defense Training II
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 2
+    - Name: Conditions
+      Entry: 7
+      Data: 102|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 103|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 97
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 104|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 105|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 3
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 106|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Magical Defense Training III
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 3
+    - Name: Conditions
+      Entry: 7
+      Data: 107|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 108|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 101
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 109|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 110|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 4
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 111|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Magical Defense Training IV
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 4
+    - Name: Conditions
+      Entry: 7
+      Data: 112|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 113|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 106
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 114|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 115|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 5
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 116|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Magical Defense Training V
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 5
+    - Name: Conditions
+      Entry: 7
+      Data: 117|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 118|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 111
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 119|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 120|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 6
+    - Name: Speed
+      Entry: 3
+      Data: 0
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 121|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Speed Training I
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 1
+    - Name: Conditions
+      Entry: 7
+      Data: 122|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 123|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 124|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 2
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 125|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Speed Training II
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 2
+    - Name: Conditions
+      Entry: 7
+      Data: 126|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 127|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 121
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 128|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 129|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 3
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 130|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Speed Training III
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 3
+    - Name: Conditions
+      Entry: 7
+      Data: 131|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 132|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 125
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 133|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 134|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 4
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 135|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Speed Training IV
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 4
+    - Name: Conditions
+      Entry: 7
+      Data: 136|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 137|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 130
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 138|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 139|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 5
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 140|Mastery, Assembly-CSharp
+    - Name: MasteryName
+      Entry: 1
+      Data: Speed Training V
+    - Name: MasteryMaxLevel
+      Entry: 3
+      Data: 10
+    - Name: MPCost
+      Entry: 3
+      Data: 5
+    - Name: Conditions
+      Entry: 7
+      Data: 141|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 142|HasMasteryMasteryCondition, Assembly-CSharp
+    - Name: Mastery
+      Entry: 9
+      Data: 135
+    - Name: RequiredLevel
+      Entry: 3
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Effects
+      Entry: 7
+      Data: 143|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 144|BaseStatMasteryEffect, Assembly-CSharp
+    - Name: Stats
+      Entry: 7
+      Data: Stats, Assembly-CSharp
+    - Name: MaxHp
+      Entry: 3
+      Data: 0
+    - Name: InitialEp
+      Entry: 3
+      Data: 0
+    - Name: EpGain
+      Entry: 3
+      Data: 0
+    - Name: PhysAtk
+      Entry: 3
+      Data: 0
+    - Name: MagAtk
+      Entry: 3
+      Data: 0
+    - Name: PhysDef
+      Entry: 3
+      Data: 0
+    - Name: MagDef
+      Entry: 3
+      Data: 0
+    - Name: Speed
+      Entry: 3
+      Data: 6
+    - Name: Accuracy
+      Entry: 4
+      Data: 0
+    - Name: Evasion
+      Entry: 4
+      Data: 0
+    - Name: CritChance
+      Entry: 4
+      Data: 0
+    - Name: CritAvoid
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  uniqueIdentifier: 0
   databaseIgnore: 0
   CharacterName: Assassin
   CharacterFace: {fileID: 0}
@@ -62,30 +2999,38 @@ MonoBehaviour:
     type: 3}
   BattlerPrefab: {fileID: 7439843032942050208, guid: a997fc6069c0fba48add91a50ad6c4ae,
     type: 3}
-  BaseMaxHp: 52
-  MaxHpGrowth: 6
-  BaseInitialEp: 25
-  BaseEpGain: 15
-  BasePhysAtk: 19
-  PhysAtkGrowth: 5
-  BaseMagAtk: 13
-  MagAtkGrowth: 4
-  BasePhysDef: 11
-  PhysDefGrowth: 4
-  BaseMagDef: 8
-  MagDefGrowth: 5
-  BaseSpeed: 21
-  SpeedGrowth: 6
-  BaseAccuracy: 0.85
-  BaseEvasion: 0.1
-  BaseCritChance: 0.12
-  BaseCritAvoid: 0.12
-  Weapon: {fileID: 11400000, guid: f0ca1d086742b68698d5f98d7810133b, type: 2}
+  Bases:
+    MaxHp: 52
+    InitialEp: 25
+    EpGain: 15
+    PhysAtk: 19
+    MagAtk: 13
+    PhysDef: 11
+    MagDef: 8
+    Speed: 21
+    Accuracy: 0.95
+    Evasion: 0.15
+    CritChance: 0.12
+    CritAvoid: 0.12
+  Growths:
+    MaxHp: 6
+    InitialEp: 0
+    EpGain: 0
+    PhysAtk: 5
+    MagAtk: 4
+    PhysDef: 4
+    MagDef: 5
+    Speed: 6
+    Accuracy: 0
+    Evasion: 0
+    CritChance: 0
+    CritAvoid: 0
+  WeaponTypes: 
+  ArmorTypes: 
+  Weapon: {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
   Head: {fileID: 0}
   Body: {fileID: 0}
   Hand: {fileID: 0}
   Feet: {fileID: 0}
-  Accessory1: {fileID: 0}
-  Accessory2: {fileID: 0}
-  Accessory3: {fileID: 0}
+  Accessory: {fileID: 0}
   Level: 50

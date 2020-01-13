@@ -26,6 +26,6 @@ public class InventoryItemButton : SerializedMonoBehaviour
 
     public void OpenItemInfo()
     {
-        InventoryMenu.Inspect(item);
+        InventoryMenu.Inspect(this);
     }
 }

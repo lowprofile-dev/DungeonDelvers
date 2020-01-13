@@ -15,21 +15,46 @@ public class MainMenu : MonoBehaviour
     public GameObject MainPanel;
     public InventoryMenu InventoryMenu;
     public CharacterInspector CharacterInspector;
-    
+    public CharacterSelector CharacterSelector;
+
+    private static MainMenu _instance;
+
+    public static MainMenu Instance = _instance;
+
+    private void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else
+        {
+            DestroyImmediate(gameObject);
+        }
+    }
+
     private void Start()
     {
-        var party = PlayerController.Instance.Party;
-        for (int i = 0; i < party.Count; i++)
-        {
-            CharacterPanels[i].SetupCharacterPanel(party[i]);
-        }
-
-        PartyLevelText.text = $"Party Lv. {PlayerController.Instance.PartyLevel}";
+        RebuildCharacters();
     }
 
     public void OpenMainMenu()
     {
         MainPanel.SetActive(true);
+        RebuildCharacters();
+    }
+
+    private void RebuildCharacters()
+    {
+        var party = PlayerController.Instance.Party;
+        for (int i = 0; i < party.Count; i++)
+        {
+            var index = i;
+            CharacterPanels[index].SetupCharacterPanel(party[index]);
+            CharacterPanels[index].SetOnClick(() => OpenCharacterInspector(party[index]));
+        }
+
+        PartyLevelText.text = $"Party Lv. {PlayerController.Instance.PartyLevel}";
     }
 
     private void Update()

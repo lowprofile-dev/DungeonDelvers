@@ -5,12 +5,14 @@ using System.Linq;
 using Sirenix.OdinInspector;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.Assertions;
+using UnityEngine.Events;
 using Debug = UnityEngine.Debug;
 
 public class Character
 {
     public CharacterBase Base { get; set; }
-    
+
     #region Instancing
 
     public CharacterSave Serialize()
@@ -33,13 +35,12 @@ public class Character
         Body = ItemInstanceBuilder.BuildInstance(Base.Body) as Equippable;
         Hand = ItemInstanceBuilder.BuildInstance(Base.Hand) as Equippable;
         Feet = ItemInstanceBuilder.BuildInstance(Base.Feet) as Equippable;
-        Accessory1 = ItemInstanceBuilder.BuildInstance(Base.Accessory1) as Equippable;
-        Accessory2 = ItemInstanceBuilder.BuildInstance(Base.Accessory2) as Equippable;
-        Accessory3 = ItemInstanceBuilder.BuildInstance(Base.Accessory3) as Equippable;
+        Accessory = ItemInstanceBuilder.BuildInstance(Base.Accessory) as Equippable;
+        MasteryGroup = new MasteryGroup(this);
+
         Regenerate();
 
         CurrentHp = Stats.MaxHp;
-        MasteryGroup = new MasteryGroup(this);
     }
 
     public Character(CharacterSave save)
@@ -48,7 +49,7 @@ public class Character
         //MaxHP = save.MaxHP;
         //CurrentHP = save.CurrentHP;
     }
-    
+
     #endregion
 
     #region Stats
@@ -56,47 +57,41 @@ public class Character
     private int CurrentLevel => PlayerController.Instance.PartyLevel;
 
     public int CurrentMp;
-    
-    [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly]private int currentHp;
 
-    public int CurrentHp
-    {
+    [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] private int currentHp;
+
+    public int CurrentHp {
         get => currentHp;
-        set
-        {
+        set {
             currentHp = value;
             currentHp = Mathf.Clamp(currentHp, 0, Stats.MaxHp);
         }
     }
 
     public bool Fainted => CurrentHp == 0;
-    
+
     [FoldoutGroup("Stats"), Sirenix.OdinInspector.ReadOnly] public Stats BaseStats;
     [FoldoutGroup("Stats"), Sirenix.OdinInspector.ReadOnly] public Stats BonusStats;
     [FoldoutGroup("Stats"), Sirenix.OdinInspector.ReadOnly] public Stats Stats;
-    
+
     [FoldoutGroup("Equips")] public Equippable Weapon;
     [FoldoutGroup("Equips")] public Equippable Head;
     [FoldoutGroup("Equips")] public Equippable Body;
     [FoldoutGroup("Equips")] public Equippable Hand;
     [FoldoutGroup("Equips")] public Equippable Feet;
-    [FoldoutGroup("Equips")] public Equippable Accessory1;
-    [FoldoutGroup("Equips")] public Equippable Accessory2;
-    [FoldoutGroup("Equips")] public Equippable Accessory3;
+    [FoldoutGroup("Equips")] public Equippable Accessory;
 
     //[FoldoutGroup("Passives")] public List<StatPassive> StatPassives;
-    
+
     [ShowInInspector] public List<PlayerSkill> Skills { get; private set; }
 
     [ShowInInspector] public MasteryGroup MasteryGroup { get; private set; }
 
     [ShowInInspector] public List<Passive> Passives { get; private set; }
-    
-    public IEnumerable<Equippable> Equipment
-    {
-        get
-        {
-            return new Equippable[] {Weapon, Head, Body, Hand, Feet, Accessory1, Accessory2, Accessory3}.Where(equippable => equippable != null);
+
+    public IEnumerable<Equippable> Equipment {
+        get {
+            return new Equippable[] { Weapon, Head, Body, Hand, Feet, Accessory }.Where(equippable => equippable != null);
         }
     }
 
@@ -104,41 +99,37 @@ public class Character
 
     #region Updating
 
+    public void LevelUp()
+    {
+        CurrentMp += (CurrentLevel / 5) + 1;
+        Regenerate();
+    }
     public void Regenerate()
     {
         var stopwatch = Stopwatch.StartNew();
-        
+
         RecalculateBases();
         RecalculateBonus();
         LoadSkills();
         LoadPassives();
-        
+        LoadMasteries();
+
         Stats = BaseStats + BonusStats;
-        
+
         stopwatch.Stop();
-        
+
         Debug.Log($"Recalculated {Base.CharacterName} stats: {stopwatch.ElapsedMilliseconds}ms");
     }
 
     private void RecalculateBases()
     {
-        BaseStats = new Stats()
-        {
-            MaxHp = Base.BaseMaxHp + Base.MaxHpGrowth * CurrentLevel,
-            InitialEp = Base.BaseInitialEp,
-            EpGain = Base.BaseEpGain,
-            PhysAtk = Base.BasePhysAtk + Base.PhysAtkGrowth * CurrentLevel,
-            MagAtk = Base.BaseMagAtk + Base.MagAtkGrowth * CurrentLevel,
-            PhysDef = Base.BasePhysDef + Base.PhysDefGrowth * CurrentLevel,
-            MagDef = Base.BaseMagDef + Base.MagDefGrowth * CurrentLevel,
-            Speed = Base.BaseSpeed + Base.SpeedGrowth * CurrentLevel
-        };
+        BaseStats = Base.Bases + (Base.Growths * CurrentLevel);
     }
 
     private void RecalculateBonus()
     {
         BonusStats = new Stats();
-        
+
         foreach (var equipInstance in Equipment)
         {
             var equip = equipInstance.EquippableBase;
@@ -175,7 +166,7 @@ public class Character
         }
     }
 
-    public void Equip(Equippable equippable, int accessorySlot = 0)
+    public void Equip(Equippable equippable)
     {
         if (equippable == null || equippable.EquippableBase == null)
             throw new NullReferenceException();
@@ -187,66 +178,67 @@ public class Character
             Debug.LogError($"{Base.CharacterName} não pode equipar {equippable.EquippableBase.itemName}");
             return;
         }
-        
+
         switch (slot)
         {
             case EquippableBase.EquippableSlot.Accessory:
-                if (accessorySlot == 0)
                 {
-                    var oldAccessory = Accessory1;
-                    Accessory1 = equippable;
-                    OnUnequip(oldAccessory);
-                    OnEquip(Accessory1);
-                } else if (accessorySlot == 1)
-                {
-                    var oldAccessory = Accessory2;
-                    Accessory2 = equippable;
-                    OnUnequip(oldAccessory);
-                    OnEquip(Accessory2);
-                } else if (accessorySlot == 2)
-                {
-                    var oldAccessory = Accessory2;
-                    Accessory2 = equippable;
-                    OnUnequip(oldAccessory);
-                    OnEquip(Accessory2);
+                    var old = Accessory;
+                    Accessory = equippable;
+                    OnUnequip.Invoke(old);
+                    OnEquip.Invoke(Accessory);
+                    PlayerController.Instance.Inventory.Add(old);
+                    break;
                 }
-                else
-                {
-                    throw new IndexOutOfRangeException();
-                }
-                break;
             case EquippableBase.EquippableSlot.Body:
-                var old = Body;
-                Body = equippable;
-                OnUnequip(old);
-                OnEquip(Body);
-                break;
+                {
+                    var old = Body;
+                    Body = equippable;
+                    OnUnequip.Invoke(old);
+                    OnEquip.Invoke(Body);
+                    PlayerController.Instance.Inventory.Add(old);
+                    break;
+                }
             case EquippableBase.EquippableSlot.Feet:
-                old = Feet;
-                Feet = equippable;
-                OnUnequip(old);
-                OnEquip(Feet);
-                break;
+                {
+                    var old = Feet;
+                    Feet = equippable;
+                    OnUnequip.Invoke(old);
+                    OnEquip.Invoke(Feet);
+                    PlayerController.Instance.Inventory.Add(old);
+                    break;
+                }
             case EquippableBase.EquippableSlot.Hand:
-                old = Hand;
-                Hand = equippable;
-                OnUnequip(old);
-                OnEquip(Hand);
-                break;
+                {
+                    var old = Hand;
+                    Hand = equippable;
+                    OnUnequip.Invoke(old);
+                    OnEquip.Invoke(Hand);
+                    PlayerController.Instance.Inventory.Add(old);
+                    break;
+                }
             case EquippableBase.EquippableSlot.Head:
-                old = Head;
-                Head = equippable;
-                OnUnequip(old);
-                OnEquip(Head);
-                break;
+                {
+                    var old = Head;
+                    Head = equippable;
+                    OnUnequip.Invoke(old);
+                    OnEquip.Invoke(Head);
+                    PlayerController.Instance.Inventory.Add(old);
+                    break;
+                }
             case EquippableBase.EquippableSlot.Weapon:
-                old = Weapon;
-                Weapon = equippable;
-                OnUnequip(old);
-                OnEquip(Weapon);
-                break;
+                {
+                    var old = Weapon;
+                    Weapon = equippable;
+                    OnUnequip.Invoke(old);
+                    OnEquip.Invoke(Weapon);
+                    PlayerController.Instance.Inventory.Add(old);
+                    break;
+                }
         }
-        
+
+        PlayerController.Instance.Inventory.Remove(equippable);
+
         Regenerate();
     }
 
@@ -255,7 +247,8 @@ public class Character
         if (equippable is WeaponBase weaponBase)
         {
             return Base.WeaponTypes.Contains(weaponBase.weaponType);
-        } else if (equippable is IArmorTypeEquipment armorBase)
+        }
+        else if (equippable is IArmorTypeEquipment armorBase)
         {
             return Base.ArmorTypes.Contains(armorBase.ArmorType);
         }
@@ -267,15 +260,8 @@ public class Character
 
     #region Events
 
-    private void OnEquip(Equippable equip)
-    {
-        
-    }
-
-    private void OnUnequip(Equippable equip)
-    {
-        
-    }
+    public EquipEvent OnEquip = new EquipEvent();
+    public EquipEvent OnUnequip = new EquipEvent();
 
     #endregion
 
@@ -292,4 +278,36 @@ public class Character
         _ToEquip = null;
     }
 #endif
+
+    public Equippable GetSlot(EquippableBase.EquippableSlot slot)
+    {
+        switch (slot)
+        {
+            case EquippableBase.EquippableSlot.Weapon:
+                return Weapon;
+            case EquippableBase.EquippableSlot.Hand:
+                return Hand;
+            case EquippableBase.EquippableSlot.Head:
+                return Head;
+            case EquippableBase.EquippableSlot.Body:
+                return Body;
+            case EquippableBase.EquippableSlot.Feet:
+                return Feet;
+            case EquippableBase.EquippableSlot.Accessory:
+                return Accessory;
+            default:
+                throw new ArgumentException();
+        }
+    }
+}
+
+[Serializable]
+public class EquipEvent : UnityEvent<Equippable>
+{
+    public EquipEvent() { }
+}
+
+[Serializable]
+public class CharacterEvent : UnityEvent<Character>
+{
 }

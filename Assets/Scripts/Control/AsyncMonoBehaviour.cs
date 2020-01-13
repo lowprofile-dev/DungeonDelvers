@@ -18,7 +18,6 @@ public class AsyncMonoBehaviour : SerializedMonoBehaviour
 
         QueueAction(fullAction);
 
-        //refazer depois, primeiro fazer funcionar
         while (!completed)
         {
             await Task.Delay(5);

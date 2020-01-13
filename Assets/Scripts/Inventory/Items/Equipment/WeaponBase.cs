@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Items/Equippable/WeaponBase")]
 public class WeaponBase : EquippableBase
 {
+    [Serializable]
     public enum WeaponType
     {
         Sword1H,

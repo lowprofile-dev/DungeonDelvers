@@ -52,5 +52,5 @@ MonoBehaviour:
     type: 3}
   EpCost: 0
   SkillDescription: 
-  Target: 1
+  Target: 0
   AnimationType: 2

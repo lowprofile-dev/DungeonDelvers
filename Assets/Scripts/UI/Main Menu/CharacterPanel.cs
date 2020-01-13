@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class CharacterPanel : MonoBehaviour
@@ -10,6 +12,7 @@ public class CharacterPanel : MonoBehaviour
     public Character Character;
     public Text CharacterName;
     public Text CharacterHealth;
+    public Button CharacterButton;
 
     public void SetupCharacterPanel(Character character)
     {
@@ -31,5 +34,11 @@ public class CharacterPanel : MonoBehaviour
         }
         CharacterName.text = character.Base.CharacterName;
         CharacterHealth.text = $"{character.CurrentHp}/{character.Stats.MaxHp}";
+    }
+
+    public void SetOnClick(Action action)
+    {
+        CharacterButton.onClick.RemoveAllListeners();
+        CharacterButton.onClick.AddListener(() => action());
     }
 }

@@ -11,6 +11,7 @@ public class MasteryGroup
 
     public MasteryGroup(Character character)
     {
+        Character = character;
         Masteries = new Dictionary<Mastery, MasteryInstance>();
 
         character.Base.Masteries.ForEach(mastery =>

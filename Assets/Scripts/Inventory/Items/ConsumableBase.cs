@@ -9,10 +9,11 @@ public class ConsumableBase : ItemBase, IStackableBase
     [SerializeField] private int maxStack = 9;
     public ItemBase ItemBase => this;
     public int MaxStack => maxStack;
-    
-    //Ver ainda como fazer pra usar fora da batalha
+
     [ValidateInput("_validateSkill", "Skill de Itens precisa remover o Item, e ter o mesmo sprite")]
     public PlayerSkill ItemSkill;
+
+    public List<ConsumableUse> ConsumableUses;
     
 #if UNITY_EDITOR
 
@@ -20,8 +21,8 @@ public class ConsumableBase : ItemBase, IStackableBase
     private void _fixSkill()
     {
         var hasRemoveEffect = ItemSkill.Effects.Find(effect =>
-                                  effect is RemoveItemEffect removeItemEffect && removeItemEffect.Item == ItemBase) !=
-                              null;
+                                    effect is RemoveItemEffect removeItemEffect && removeItemEffect.Item == ItemBase) 
+                                    != null;
 
         if (!hasRemoveEffect)
         {

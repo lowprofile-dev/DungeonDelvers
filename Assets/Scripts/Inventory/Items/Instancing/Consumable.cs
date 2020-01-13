@@ -23,6 +23,8 @@ public class Consumable : Item, IStackable
     
     public override ItemSave Serialize() => throw new NotImplementedException();
     
+    public IStackableBase StackableBase => Base as IStackableBase;
+
     public ConsumableBase ConsumableBase => Base as ConsumableBase;
 
     public Consumable(ConsumableBase consumableBase) : base(consumableBase)

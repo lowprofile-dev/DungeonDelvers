@@ -9,6 +9,6 @@ public class test : SerializedMonoBehaviour
 {
     private void Start()
     {
-        Debug.Log(GameDatabase.Instance == null);
+        //Debug.Log(GameDatabase.Instance == null);
     }
 }

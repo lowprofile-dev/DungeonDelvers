@@ -17,7 +17,6 @@ public abstract class ItemBase : SerializableAsset
     public string itemName = "";
     public int goldValue = 0;
     public bool sellable => goldValue > 0;
-    public float itemWeight = 0f; //Ficar?
     [TextArea] public string itemText = "";
 }
 
@@ -29,6 +28,7 @@ public interface IStackableBase
 
 public interface IStackable
 {
+    IStackableBase StackableBase { get; }
     Item Item { get; }
     int MaxStack { get; }
     int Quantity { get; set; }

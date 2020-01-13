@@ -15,24 +15,8 @@ public class CharacterBase : SerializableAsset
     [PropertyOrder(-98)] public GameObject CharacterPrefab = null;
     [PropertyOrder(-97)] public GameObject BattlerPrefab = null;
 
-    [FoldoutGroup("Stats")] public int BaseMaxHp;
-    [FoldoutGroup("Stats")] public int MaxHpGrowth;
-    [FoldoutGroup("Stats")] public int BaseInitialEp;
-    [FoldoutGroup("Stats")] public int BaseEpGain;
-    [FoldoutGroup("Stats")] public int BasePhysAtk;
-    [FoldoutGroup("Stats")] public int PhysAtkGrowth;
-    [FoldoutGroup("Stats")] public int BaseMagAtk;
-    [FoldoutGroup("Stats")] public int MagAtkGrowth;
-    [FoldoutGroup("Stats")] public int BasePhysDef;
-    [FoldoutGroup("Stats")] public int PhysDefGrowth;
-    [FoldoutGroup("Stats")] public int BaseMagDef;
-    [FoldoutGroup("Stats")] public int MagDefGrowth;
-    [FoldoutGroup("Stats")] public int BaseSpeed;
-    [FoldoutGroup("Stats")] public int SpeedGrowth;
-    [FoldoutGroup("Stats"), PropertyRange(0, 1)] public float BaseAccuracy;
-    [FoldoutGroup("Stats"), PropertyRange(0, 1)] public float BaseEvasion;
-    [FoldoutGroup("Stats"), PropertyRange(0, 1)] public float BaseCritChance;
-    [FoldoutGroup("Stats"), PropertyRange(0, 1)] public float BaseCritAvoid;
+    [FoldoutGroup("Stats")] public Stats Bases;
+    [FoldoutGroup("Stats")] public Stats Growths;
 
     [FoldoutGroup("Equips")] public List<WeaponBase.WeaponType> WeaponTypes = new List<WeaponBase.WeaponType>();
     [FoldoutGroup("Equips")] public List<EquippableBase.ArmorType> ArmorTypes = new List<EquippableBase.ArmorType>();
@@ -42,14 +26,11 @@ public class CharacterBase : SerializableAsset
     [FoldoutGroup("Equips")] public BodyBase Body;
     [FoldoutGroup("Equips")] public HandBase Hand;
     [FoldoutGroup("Equips")] public FeetBase Feet;
-    [FoldoutGroup("Equips")] public AccessoryBase Accessory1;
-    [FoldoutGroup("Equips")] public AccessoryBase Accessory2;
-    [FoldoutGroup("Equips")] public AccessoryBase Accessory3;
+    [FoldoutGroup("Equips")] public AccessoryBase Accessory;
 
     [ListDrawerSettings(ListElementLabelName = "_masteryElementName")]public List<Mastery> Masteries = new List<Mastery>();
 
     #endregion
-
 
 #if UNITY_EDITOR
     [Button("Generate Generic Masteries")]
@@ -246,12 +227,12 @@ public class CharacterBase : SerializableAsset
         get
         {
             var message = $"Level {Level}\n";
-            message += $"Max HP: {BaseMaxHp + MaxHpGrowth * Level}\n";
-            message += $"Phys Atk: {BasePhysAtk + PhysAtkGrowth * Level}\n";
-            message += $"Mag Atk: {BaseMagAtk + MagAtkGrowth * Level}\n";
-            message += $"Phys Def: {BasePhysDef + PhysDefGrowth * Level}\n";
-            message += $"Mag Def: {BaseMagDef + MagDefGrowth * Level}\n";
-            message += $"Speed: {BaseSpeed + SpeedGrowth * Level}\n";
+            message += $"Max HP: {Bases.MaxHp + Growths.MaxHp * Level}\n";
+            message += $"Phys Atk: {Bases.PhysAtk + Growths.PhysAtk * Level}\n";
+            message += $"Mag Atk: {Bases.MagAtk + Growths.MagAtk * Level}\n";
+            message += $"Phys Def: {Bases.PhysDef + Growths.PhysDef * Level}\n";
+            message += $"Mag Def: {Bases.MagDef + Growths.MagDef * Level}\n";
+            message += $"Speed: {Bases.Speed + Growths.Speed * Level}\n";
             return message;
         }
     }

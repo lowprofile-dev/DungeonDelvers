@@ -60,7 +60,7 @@ public class InventoryMenu : MonoBehaviour
     public void FilterConsumable() => FilterItems(item => item is Consumable);
     public void FilterMisc() => FilterItems(item => item is MiscItem);
     
-    public void Inspect(Item item)
+    public void Inspect(InventoryItemButton item)
     {
         InventoryItemInspector.Inspect(item);
     }

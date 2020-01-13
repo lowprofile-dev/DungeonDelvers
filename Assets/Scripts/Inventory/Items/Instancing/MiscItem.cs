@@ -5,6 +5,7 @@ public class MiscItem : Item, IStackable
 {
     public override ItemSave Serialize() => throw new NotImplementedException();
 
+    public IStackableBase StackableBase => Base as IStackableBase;
     public MiscItemBase MiscItemBase => Base as MiscItemBase;
     
     public MiscItem(MiscItemBase miscItemBase) : base(miscItemBase)

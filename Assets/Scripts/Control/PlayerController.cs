@@ -192,19 +192,16 @@ public class PlayerController : SerializedMonoBehaviour
         }
     }
 
-    public UnityEvent OnLevelUpEvent = new UnityEvent();
+    public LevelUpEvent OnLevelUpEvent = new LevelUpEvent();
     private void LevelUp()
     {
         CurrentExp -= ExpToNextLevel;
         CurrentExp = Mathf.Max(0, CurrentExp);
         PartyLevel++;
 
-        foreach (var partyMember in Party)
-        {
-            partyMember.CurrentMp += (PartyLevel / 5) + 1;
-        }
+        Party.ForEach(partyMember => partyMember.LevelUp());
         
-        OnLevelUpEvent.Invoke();
+        OnLevelUpEvent.Invoke(PartyLevel);
     }
 
     private void OpenMainMenu()
@@ -242,19 +239,35 @@ public class PlayerController : SerializedMonoBehaviour
         Inventory.Add(itemInstance);
     }
 
-    public void RemoveItemFromInventory(ItemBase itemBase, int amount = 1)
+    public void RemoveItemFromInventory(Item item)
+    {
+        Inventory.Remove(item);
+    }
+
+    public void RemoveItemFromInventory(ItemBase itemBase, int amount)
     {
         if (itemBase is IStackableBase stackableBase)
         {
-            RemoveStackableFromInventory(stackableBase, 1);
+            RemoveStackableFromInventory(stackableBase, amount);
             return;
         }
 
+        //Fazer loopar pelos itens enquanto tem item e amount
         var itemOfType = Inventory.FirstOrDefault(item => item.Base == itemBase);
 
         if (itemOfType != null)
         {
             Inventory.Remove(itemOfType);
+        }
+    }
+
+    public void RemoveStackableFromInventory(IStackable stackable, int amount)
+    {
+        if (stackable.Quantity <= amount)
+            RemoveItemFromInventory(stackable.Item);
+        else
+        {
+            stackable.Quantity -= amount;
         }
     }
 
@@ -319,7 +332,7 @@ public class PlayerController : SerializedMonoBehaviour
         }
     }
     
-    private void Restack(IStackableBase stackableBase, int totalQuantity)
+    public void Restack(IStackableBase stackableBase, int totalQuantity)
     {
         Inventory.RemoveAll(item => item.Base == (ItemBase) stackableBase);
         
@@ -346,7 +359,29 @@ public class PlayerController : SerializedMonoBehaviour
             Inventory.Add(instance);
         }
     }
-    //Criar função de reordanar inventário e de restackar
+
+    public void ReorderInventory()
+    {
+        Inventory.OrderBy(item => item.InspectorName.ToLower());
+    }
+
+
+    //Limpar o código de mexer em inventário
+    //Fazer um modo de tirar um item especificamente de uma stack
+    public void CleanupInventory()
+    {
+        var stackableBases = Inventory.Where(item => item is IStackable).Cast<IStackable>()
+            .Select(stackable => stackable.StackableBase)
+            .Distinct();
+
+        foreach (var stackableBase in stackableBases)
+        {
+            var quantity = GetQuantityOfItem(stackableBase as ItemBase);
+            Restack(stackableBase, quantity);
+        }
+
+        ReorderInventory();
+    }
 
     public int GetQuantityOfItem(ItemBase itemBase)
     {
@@ -409,5 +444,10 @@ public class PlayerController : SerializedMonoBehaviour
     {
         Active = 0,
         Busy = 1
+    }
+
+    public class LevelUpEvent : UnityEvent<int>
+    {
+        public LevelUpEvent() { }
     }
 }
