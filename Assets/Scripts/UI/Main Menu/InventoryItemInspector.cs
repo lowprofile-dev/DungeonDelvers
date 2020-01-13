@@ -38,12 +38,10 @@ public class InventoryItemInspector : MonoBehaviour
         ItemImage.sprite = item.Base.itemIcon;
         ItemDescription.text = item.InspectorDescription;
 
-        if ((item is Consumable consumable && consumable.ConsumableBase.ConsumableUses.Any()) || item is Equippable)
-            UseButton.interactable = true;
-        else
-            UseButton.interactable = false;
-
-        DropButton.interactable = true;
+        UseButton.interactable = (item is Consumable consumable && consumable.ConsumableBase.ConsumableUses.Any()) ||
+                                 item is Equippable;
+        
+        DropButton.interactable = item.Base.droppable;
     }
 
     public void UseItem()

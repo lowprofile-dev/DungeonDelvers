@@ -180,6 +180,16 @@
           <e p="Inventory" t="Include">
             <e p="Items" t="Include">
               <e p="ConsumableBase.cs" t="Include" />
+              <e p="ConsumableUse" t="Include">
+                <e p="ConsumableUse.cs" t="Include" />
+                <e p="ConsumableUses" t="Include">
+                  <e p="LevelUpConsumableUse.cs" t="Include" />
+                </e>
+                <e p="TargetedConsumableUse.cs" t="Include" />
+                <e p="TargetedConsumableUses" t="Include">
+                  <e p="HealCharacterTargetedConsumableUse.cs" t="Include" />
+                </e>
+              </e>
               <e p="Equipment" t="Include">
                 <e p="AccessoryBase.cs" t="Include" />
                 <e p="BodyBase.cs" t="Include" />
@@ -249,6 +259,9 @@
             <e p="Main Menu" t="Include">
               <e p="CharacterInspector.cs" t="Include" />
               <e p="CharacterPanel.cs" t="Include" />
+              <e p="CharacterSelector.cs" t="Include" />
+              <e p="EquipButton.cs" t="Include" />
+              <e p="EquipMenu.cs" t="Include" />
               <e p="InventoryItemButton.cs" t="Include" />
               <e p="InventoryItemInspector.cs" t="Include" />
               <e p="InventoryMenu.cs" t="Include" />
@@ -329,6 +342,34 @@
               <e p="GraphMobile.shader" t="Include" />
               <e p="GraphStandard.shader" t="Include" />
             </e>
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
         <e p="test_sandbox" t="Include">

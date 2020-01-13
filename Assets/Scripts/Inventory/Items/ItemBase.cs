@@ -17,6 +17,7 @@ public abstract class ItemBase : SerializableAsset
     public string itemName = "";
     public int goldValue = 0;
     public bool sellable => goldValue > 0;
+    public bool droppable = true;
     [TextArea] public string itemText = "";
 }
 

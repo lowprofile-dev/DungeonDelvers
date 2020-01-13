@@ -182,57 +182,45 @@ public class Character
         switch (slot)
         {
             case EquippableBase.EquippableSlot.Accessory:
-                {
-                    var old = Accessory;
-                    Accessory = equippable;
-                    OnUnequip.Invoke(old);
-                    OnEquip.Invoke(Accessory);
-                    PlayerController.Instance.Inventory.Add(old);
+            {
+                var old = Unequip(EquippableBase.EquippableSlot.Accessory);
+                Accessory = equippable;
+                OnEquip.Invoke(Accessory);
                     break;
                 }
             case EquippableBase.EquippableSlot.Body:
                 {
-                    var old = Body;
+                    Unequip(EquippableBase.EquippableSlot.Body);
                     Body = equippable;
-                    OnUnequip.Invoke(old);
                     OnEquip.Invoke(Body);
-                    PlayerController.Instance.Inventory.Add(old);
                     break;
                 }
             case EquippableBase.EquippableSlot.Feet:
                 {
-                    var old = Feet;
+                    Unequip(EquippableBase.EquippableSlot.Feet);
                     Feet = equippable;
-                    OnUnequip.Invoke(old);
                     OnEquip.Invoke(Feet);
-                    PlayerController.Instance.Inventory.Add(old);
                     break;
                 }
             case EquippableBase.EquippableSlot.Hand:
                 {
-                    var old = Hand;
+                    Unequip(EquippableBase.EquippableSlot.Hand);
                     Hand = equippable;
-                    OnUnequip.Invoke(old);
                     OnEquip.Invoke(Hand);
-                    PlayerController.Instance.Inventory.Add(old);
                     break;
                 }
             case EquippableBase.EquippableSlot.Head:
                 {
-                    var old = Head;
+                    Unequip(EquippableBase.EquippableSlot.Head);
                     Head = equippable;
-                    OnUnequip.Invoke(old);
                     OnEquip.Invoke(Head);
-                    PlayerController.Instance.Inventory.Add(old);
                     break;
                 }
             case EquippableBase.EquippableSlot.Weapon:
                 {
-                    var old = Weapon;
+                    Unequip(EquippableBase.EquippableSlot.Weapon);
                     Weapon = equippable;
-                    OnUnequip.Invoke(old);
                     OnEquip.Invoke(Weapon);
-                    PlayerController.Instance.Inventory.Add(old);
                     break;
                 }
         }
@@ -242,6 +230,49 @@ public class Character
         Regenerate();
     }
 
+    public Equippable Unequip(EquippableBase.EquippableSlot slot)
+    {
+        Equippable old;
+
+        switch (slot)
+        {
+            case EquippableBase.EquippableSlot.Weapon:
+                old = Weapon;
+                Weapon = null;
+                break;
+            case EquippableBase.EquippableSlot.Head:
+                old = Head;
+                Head = null;
+                break;
+            case EquippableBase.EquippableSlot.Body:
+                old = Body;
+                Body = null;
+                break;
+            case EquippableBase.EquippableSlot.Hand:
+                old = Hand;
+                Hand = null;
+                break;
+            case EquippableBase.EquippableSlot.Feet:
+                old = Feet;
+                Feet = null;
+                break;
+            case EquippableBase.EquippableSlot.Accessory:
+                old = Accessory;
+                Accessory = null;
+                break;
+            default:
+                throw new ArgumentException();
+        }
+
+        if (old != null)
+        {
+            PlayerController.Instance.Inventory.Add(old);
+            OnUnequip.Invoke(old);
+        }
+        
+        return old;
+    }
+    
     private bool CanBeEquipped(EquippableBase equippable)
     {
         if (equippable is WeaponBase weaponBase)

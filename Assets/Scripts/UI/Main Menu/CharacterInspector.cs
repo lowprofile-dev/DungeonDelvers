@@ -91,7 +91,8 @@ public class CharacterInspector : SerializedMonoBehaviour
 
     public void OpenEquipMenu(string slot)
     {
-        var parsed = EquippableBase.EquippableSlot.TryParse(slot, true, out EquippableBase.EquippableSlot parsedSlot);
+        var parsed =
+            EquippableBase.EquippableSlot.TryParse(slot, true, out EquippableBase.EquippableSlot parsedSlot);
         if (!parsed)
             throw new ArgumentException();
         EquipMenu.BuildEquips(Character, parsedSlot);

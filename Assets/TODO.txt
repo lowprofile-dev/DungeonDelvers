@@ -1,5 +1,3 @@
-Terminar fazer menu de equip.
-Fazer menu de equipar, quando clica no botão cria o panel com referencia ao slot e pega todos os equips do inventário + equipados por outros chars (tipo diferente de botão no código)
 Fazer menu de mastery
 Fazer menu de passivas (só as que tem por enquanto)
 Testar upar, testar masteries
@@ -14,7 +12,7 @@ Terminar esse fluxo:
     Começa jogo
     Personagem abre um baú, pega um 4 equipamentos que däo 2 Skills e uma poção que upa a Party
     Usa poção, upa, toda a party usa o nivel pra aprender uma skill e uma passiva simples.
-    Abre outro baú, poção que dá +5 dano para um equipamento. Usa.
+    Abre um baú que gera um equipamento com stats aleatóriamente
     Batalha contra NPC (aparece no mundo). Ganha, ganha XP, Itens, adiciona global que foi derrotado o NPC.
     Salva.
     Load, tudo tá guardado e NPC não está mais lá (com a global)
@@ -22,17 +20,20 @@ Terminar esse fluxo:
 Ao terminar esse fluxo, limpar o código, comentar tudo, e descansar.
 
 Futuro:
+Calcular melhor equip (ignorar passivas provavelmente, só pra ter algo basico simples, e pra poder usar na hora de desequipar)
 Botar maneira de printar variável na text box.
 Mudar EP -> AP (Action Point)
 Deixar terminologia mais consistente
-Refazer todo menu principal.
+Refazer o menu principal.
 Trocar Text -> TMP
-Arrumar database: uniqueIdentifier não é mais propriedade do item, e sim do database (cada item agora é um (int, type))
+Arrumar database: uniqueIdentifier não é mais propriedade do item, e sim do database (dictionary)
 Ver Unit Testing, fazer modulos pra testar, pelo menos, a serialização.
 Limpar o fluxo do BattleController
 Dar uma olhada no DunGen
 Fazer skill que pode dar alvo em até X inimigos/aliados, fazer no SkillTargeter (pensando, int em playerskill que é quantas vezes deve ser selecionado um alvo, e se o alvo pode ser repetido). 
 
+Bugs:
+Menu principal e character inspector não limpam o que já tinha antes de construir denovo.
 
 Tipos de Skills/Passivas pra Fazer: (testar basicamente tudo)
 

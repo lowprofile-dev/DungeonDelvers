@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EquipButton
+public class EquipButton : MonoBehaviour
 {
     public TMP_Text Text;
     public Image Image;

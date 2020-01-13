@@ -25,7 +25,7 @@ MonoBehaviour:
   databaseIgnore: 0
   itemIcon: {fileID: 8020143640844766479, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
-  itemName: Big Sword
+  itemName: 2h Sword
   goldValue: 0
   itemText: 
   Stats:
