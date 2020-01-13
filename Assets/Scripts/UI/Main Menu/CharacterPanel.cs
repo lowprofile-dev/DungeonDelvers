@@ -17,6 +17,9 @@ public class CharacterPanel : MonoBehaviour
     public void SetupCharacterPanel(Character character)
     {
         Character = character;
+        if (CharacterBattler != null)
+            Destroy(CharacterBattler);
+
         if (character.Base.BattlerPrefab != null)
         {
             CharacterBattler = Instantiate(character.Base.BattlerPrefab, CharacterImageTransform);

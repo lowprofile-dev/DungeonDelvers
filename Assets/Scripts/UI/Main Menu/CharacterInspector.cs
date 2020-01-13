@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -34,6 +36,9 @@ public class CharacterInspector : SerializedMonoBehaviour
     {
         gameObject.SetActive(true);
         Character = character;
+
+        if (CharacterBattler != null)
+            Destroy(CharacterBattler);
 
         if (character.Base.BattlerPrefab != null)
         {
@@ -101,7 +106,14 @@ public class CharacterInspector : SerializedMonoBehaviour
 
     public void OpenMasteryMenu()
     {
+        var availableMasteries = Character.MasteryGroup.Masteries.Keys.Where(key =>
+        {
+            return Character.MasteryGroup.Masteries[key].CanLevelUp();
+        });
 
+        var message = "Available Masteries: ";
+        availableMasteries.ForEach(aM => { message += $" {aM.MasteryName}({Character.MasteryGroup.Masteries[aM].CurrentLevel})"; });
+        Debug.Log(message);
     }
 
     public void OpenPassiveMenu()
