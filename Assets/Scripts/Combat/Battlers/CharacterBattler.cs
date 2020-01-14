@@ -65,7 +65,7 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
     }
     public bool Fainted => CurrentHp == 0;
     [FoldoutGroup("Skills")] public List<PlayerSkill> Skills { get; private set; }
-    //[FoldoutGroup("Passives"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public List<BattlePassive> Passives { get; set; } = new List<BattlePassive>();
+    [FoldoutGroup("Passives"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public List<Passive> Passives { get; set; } = new List<Passive>();
     
     #endregion
 
@@ -142,6 +142,16 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
         //Fazer efeitos do que precisar aqui, quando precisar
         currentEp += Stats.EpGain;
         Debug.Log($"Começou turno de {Character.Base.CharacterName}");
+
+        //Exemplo. É pra ser assim, usar como base para outras
+        var turnStartPassives =
+            Passives.SelectMany(passive => passive.Effects.Where(effect => effect is ITurnStartPassiveEffect))
+                .OrderByDescending(effect => effect.Priority).Cast<ITurnStartPassiveEffect>();
+
+        foreach (var turnStartPassive in turnStartPassives)
+        {
+            await turnStartPassive.OnTurnStart(this);
+        }
     }
 
     public async Task TurnEnd()
@@ -204,7 +214,12 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
 
         await QueueActionAndAwait(() =>
         {
-            effectResult = effect.ExecuteEffect(BattleController.Instance, skillSource, source, this);
+            effectResult = effect.ExecuteEffect(new SkillInfo
+            {
+                Skill = skillSource,
+                Target = this,
+                Source = source
+            });
         });
 
         switch (effectResult)
@@ -253,5 +268,14 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
     }
     
     public RectTransform RectTransform => transform as RectTransform;
-    
 }
+
+#region PassiveInterfaces
+
+public interface ITurnStartPassiveEffect
+{
+    Task OnTurnStart(IBattler battler);
+}
+
+#endregion
+

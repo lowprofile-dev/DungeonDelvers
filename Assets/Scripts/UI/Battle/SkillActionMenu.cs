@@ -13,7 +13,7 @@ public class SkillActionMenu : SerializedMonoBehaviour
     public CharacterActionMenu CharacterActionMenu;
     public RectTransform SkillGridContent;
     public GameObject SkillButtonPrefab;
-    public SkillInfo SkillInfoPanel;
+    public SkillInfoPanel SkillInfoPanel;
 
     public SkillTargeter SkillTargeter;
 

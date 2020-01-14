@@ -3,15 +3,13 @@
     //Ver como vai ser essas formulas
     public int HealAmount;
 
-    public override EffectResult ExecuteEffect(BattleController battle, Skill effectSource, IBattler source, IBattler target)
+    public override EffectResult ExecuteEffect(SkillInfo skillInfo)
     {
-        target.CurrentHp += HealAmount;
+        skillInfo.Target.CurrentHp += HealAmount;
         return new HealEffectResult()
         {
             AmountHealed = HealAmount,
-            Skill = effectSource,
-            Source = source,
-            Target = target
+            skillInfo = skillInfo
         };
     }
 

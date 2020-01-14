@@ -106,6 +106,7 @@ public class Character
     }
     public void Regenerate()
     {
+        //FAZER VALIDAÇÕES QUE TUDO É VALIDO, EG. TUDO EQUIPADO PODE ESTAR EQUIPADO, ETC.
         var stopwatch = Stopwatch.StartNew();
 
         RecalculateBases();

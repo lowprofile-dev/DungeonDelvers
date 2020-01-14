@@ -171,7 +171,12 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
         
         await QueueActionAndAwait(() =>
         {
-            effectResult = effect.ExecuteEffect(BattleController, skillSource, source, this);
+            effectResult = effect.ExecuteEffect(new SkillInfo
+            {
+                Skill = skillSource,
+                Source = source,
+                Target = this
+            });
         });
 
         //Ver pra mostrar Miss! quando o golpe errar, mostrar vermelho quando crita

@@ -241,9 +241,7 @@ public class BattleController : SerializedMonoBehaviour
 
 public abstract class EffectResult
 {
-    public IBattler Source;
-    public IBattler Target;
-    public Skill Skill { get; set; }
+    public SkillInfo skillInfo;
 }
 
 public class Turn

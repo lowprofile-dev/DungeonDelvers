@@ -25,4 +25,18 @@ public class Skill : SerializableAsset
         All,
         Self
     }
+
+}
+
+public struct SkillInfo
+{
+    public IBattler Target;
+    public IBattler Source;
+    public Skill Skill;
+}
+
+public struct EffectInfo
+{
+    public SkillInfo SkillInfo;
+    public Effect Effect;
 }

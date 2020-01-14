@@ -4,16 +4,14 @@ public class RemoveItemEffect : Effect
     public ItemBase Item;
     public int Cost = 1;
     
-    public override EffectResult ExecuteEffect(BattleController battle, Skill effectSource, IBattler source, IBattler target)
+    public override EffectResult ExecuteEffect(SkillInfo skillInfo)
     {
         PlayerController.Instance.RemoveItemFromInventory(Item, Cost);
         return new ItemRemovedEffectResult
         {
             Item = Item,
             Quantity = Cost,
-            Skill = effectSource,
-            Source = source,
-            Target = target //nulo? ou a propria source?
+            skillInfo = skillInfo
         };
     }
 

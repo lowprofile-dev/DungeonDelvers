@@ -11,6 +11,7 @@ public class CharacterInspector : SerializedMonoBehaviour
 {
     public MainMenu MainMenu;
     public EquipMenu EquipMenu;
+    public MasteryMenu MasteryMenu;
 
     public Character Character;
     public RectTransform CharacterRectTransform;
@@ -60,20 +61,8 @@ public class CharacterInspector : SerializedMonoBehaviour
 
         var stats = character.Stats;
 
-        var newText = StatsText.text
-            .Replace("%chp%", character.CurrentHp.ToString())
-            .Replace("%mhp%", stats.MaxHp.ToString())
-            .Replace("%iap%", stats.InitialEp.ToString())
-            .Replace("%apg%", stats.InitialEp.ToString())
-            .Replace("%pa%", stats.PhysAtk.ToString())
-            .Replace("%pd%", stats.PhysDef.ToString())
-            .Replace("%ma%", stats.MagAtk.ToString())
-            .Replace("%md%", stats.MagDef.ToString())
-            .Replace("%spd%", stats.Speed.ToString())
-            .Replace("%acc%", stats.Accuracy.ToString("F"))
-            .Replace("%eva%", stats.Evasion.ToString("F"))
-            .Replace("%cacc%", stats.CritChance.ToString("F"))
-            .Replace("%ceva%", stats.CritAvoid.ToString("F"));
+        var newText =
+            $"HP: {character.CurrentHp}/{stats.MaxHp}\nInitial AP: {stats.InitialEp}\nAP Gain: {stats.EpGain}\nPhysical Attack: {stats.PhysAtk}\nMagical Attack: {stats.MagAtk}\nPhysical Defense: {stats.PhysDef}\nMagical Defense: {stats.MagDef}\nSpeed: {stats.Speed}\nAccuracy: {stats.Accuracy:F}\nEvasion: {stats.Evasion:F}\nCritical Accuracy: {stats.CritChance:F}\nCritical Evasion: {stats.CritAvoid:F}";
 
         StatsText.text = newText;
 
@@ -106,14 +95,8 @@ public class CharacterInspector : SerializedMonoBehaviour
 
     public void OpenMasteryMenu()
     {
-        var availableMasteries = Character.MasteryGroup.Masteries.Keys.Where(key =>
-        {
-            return Character.MasteryGroup.Masteries[key].CanLevelUp();
-        });
-
-        var message = "Available Masteries: ";
-        availableMasteries.ForEach(aM => { message += $" {aM.MasteryName}({Character.MasteryGroup.Masteries[aM].CurrentLevel})"; });
-        Debug.Log(message);
+        gameObject.SetActive(false);
+        MasteryMenu.BuildMasteries(Character);
     }
 
     public void OpenPassiveMenu()
