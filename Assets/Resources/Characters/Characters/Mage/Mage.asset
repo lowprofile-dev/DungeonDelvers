@@ -2991,7 +2991,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: Characters/Characters/Mage/Mage
+  uniqueIdentifier: 2
   databaseIgnore: 0
   CharacterName: Mage
   CharacterFace: {fileID: 0}
@@ -3027,7 +3027,7 @@ MonoBehaviour:
     CritAvoid: 0
   WeaponTypes: 00000000
   ArmorTypes: 
-  Weapon: {fileID: 11400000, guid: f0ca1d086742b68698d5f98d7810133b, type: 2}
+  Weapon: {fileID: 11400000, guid: 373382c6db6fb8ae2b359c1ece2d6613, type: 2}
   Head: {fileID: 0}
   Body: {fileID: 0}
   Hand: {fileID: 0}

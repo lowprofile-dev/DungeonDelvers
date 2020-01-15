@@ -3027,7 +3027,7 @@ MonoBehaviour:
     CritAvoid: 0
   WeaponTypes: 0000000001000000
   ArmorTypes: 
-  Weapon: {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
+  Weapon: {fileID: 11400000, guid: f0ca1d086742b68698d5f98d7810133b, type: 2}
   Head: {fileID: 0}
   Body: {fileID: 0}
   Hand: {fileID: 0}
