@@ -11,7 +11,7 @@ using Debug = UnityEngine.Debug;
 
 public class Character
 {
-    public CharacterBase Base { get; set; }
+    public CharacterBase Base { get; private set; }
 
     #region Instancing
 
@@ -20,8 +20,9 @@ public class Character
         var save = new CharacterSave()
         {
             baseUid = Base.uniqueIdentifier,
-            //MaxHP = MaxHP,
-            //CurrentHP = CurrentHP
+            currentHp = currentHp,
+            masteryLevels = MasteryGroup.Masteries.Values.Select(mI => mI.CurrentLevel).ToArray(),
+            Equipment = EquippableSaves()
         };
 
         return save;
@@ -45,9 +46,36 @@ public class Character
 
     public Character(CharacterSave save)
     {
-        Base = CharacterDatabase.Instance.CharacterBases.Find(x => x.uniqueIdentifier == save.baseUid);
-        //MaxHP = save.MaxHP;
-        //CurrentHP = save.CurrentHP;
+        try
+        {
+            Base = GameDatabase.Database.CharacterBases.Find(x => x.uniqueIdentifier == save.baseUid);
+            MasteryGroup = new MasteryGroup(this);
+            using (var masteryEnumerator = MasteryGroup.Masteries.GetEnumerator())
+            {
+                var levelEnumerator = save.masteryLevels.GetEnumerator();
+
+                while (masteryEnumerator.MoveNext())
+                {
+                    levelEnumerator.MoveNext();
+                    masteryEnumerator.Current.Value.CurrentLevel = (levelEnumerator.Current as int?).Value;
+                }
+            }
+
+            Weapon = ItemInstanceBuilder.BuildInstance(save.Equipment[0]) as Equippable;
+            Head = ItemInstanceBuilder.BuildInstance(save.Equipment[1]) as Equippable;
+            Body = ItemInstanceBuilder.BuildInstance(save.Equipment[2]) as Equippable;
+            Hand = ItemInstanceBuilder.BuildInstance(save.Equipment[3]) as Equippable;
+            Feet = ItemInstanceBuilder.BuildInstance(save.Equipment[4]) as Equippable;
+            Accessory = ItemInstanceBuilder.BuildInstance(save.Equipment[5]) as Equippable;
+            
+            Regenerate();
+
+            currentHp = save.currentHp;
+        }
+        catch (Exception e)
+        {
+            throw new DeserializationFailureException(typeof(Character));
+        }
     }
 
     #endregion
@@ -95,6 +123,20 @@ public class Character
         }
     }
 
+    private EquippableSave[] EquippableSaves()
+    {
+        return new Equippable[] {Weapon, Head, Body, Hand, Feet, Accessory}.Select(equipment =>
+        {
+            if (equipment == null)
+                return new EquippableSave
+                {
+                    baseUid = ""
+                };
+
+            return equipment.Serialize();
+        }).Cast<EquippableSave>().ToArray();
+    }
+    
     #endregion
 
     #region Updating
@@ -118,6 +160,7 @@ public class Character
         Stats = BaseStats + BonusStats;
 
         stopwatch.Stop();
+        Debug.Log($"{Base.CharacterName} regenerado em {stopwatch.ElapsedMilliseconds}ms");
     }
 
     private void RecalculateBases()

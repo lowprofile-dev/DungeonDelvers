@@ -147,7 +147,6 @@
             <e p="AsyncMonoBehaviour.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
             <e p="GameDatabase.cs" t="Include" />
-            <e p="GameSaveController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="SerializableAsset.cs" t="Include" />
           </e>
@@ -222,7 +221,9 @@
           </e>
           <e p="Serialization" t="Include">
             <e p="DeserializationFailureException.cs" t="Include" />
-            <e p="ISerializable.cs" t="Include" />
+            <e p="GameSaveController.cs" t="Include" />
+            <e p="InventoryConverter.cs" t="Include" />
+            <e p="PartyConverter.cs" t="Include" />
           </e>
           <e p="Skills" t="Include">
             <e p="Effect.cs" t="Include" />
@@ -234,6 +235,10 @@
             <e p="MonsterSkill.cs" t="Include" />
             <e p="Passives" t="Include">
               <e p="Passive.cs" t="Include" />
+              <e p="PassiveEffects" t="Include">
+                <e p="PassiveEffect.cs" t="Include" />
+                <e p="RegenPassiveEffect.cs" t="Include" />
+              </e>
             </e>
             <e p="PlayerSkill.cs" t="Include" />
             <e p="Skill.cs" t="Include" />
@@ -253,7 +258,7 @@
               <e p="DamageText.cs" t="Include" />
               <e p="SkillActionMenu.cs" t="Include" />
               <e p="SkillButton.cs" t="Include" />
-              <e p="SkillInfo.cs" t="Include" />
+              <e p="SkillInfoPanel.cs" t="Include" />
               <e p="SkillTargeter.cs" t="Include" />
             </e>
             <e p="Main Menu" t="Include">
@@ -266,6 +271,8 @@
               <e p="InventoryItemInspector.cs" t="Include" />
               <e p="InventoryMenu.cs" t="Include" />
               <e p="MainMenu.cs" t="Include" />
+              <e p="MasteryButton.cs" t="Include" />
+              <e p="MasteryMenu.cs" t="Include" />
             </e>
             <e p="MessageBox.cs" t="Include" />
           </e>

@@ -43,6 +43,9 @@ public static class ItemInstanceBuilder
 
     public static Item BuildInstance(ItemSave itemSave)
     {
+        if (string.IsNullOrEmpty(itemSave.baseUid))
+            return null;
+        
         if (itemSave is EquippableSave equippableSave)
             return new Equippable(equippableSave);
         if (itemSave is ConsumableSave consumableSave)

@@ -2991,7 +2991,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: Characters/Characters/Fighter/Fighter
+  uniqueIdentifier: 1
   databaseIgnore: 0
   CharacterName: Fighter
   CharacterFace: {fileID: 0}

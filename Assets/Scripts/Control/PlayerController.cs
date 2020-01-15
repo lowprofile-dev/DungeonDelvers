@@ -138,24 +138,15 @@ public class PlayerController : SerializedMonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            var json = JsonConvert.SerializeObject(Inventory, Formatting.None, new InventoryConverter());
+            //GameSaveController.Save();
+
+            var json = JsonConvert.SerializeObject(Party, Formatting.Indented, new PartyConverter());
+            
             Debug.Log(json);
 
-            var newInv = JsonConvert.DeserializeObject<List<Item>>(json, new InventoryConverter());
+            var party = JsonConvert.DeserializeObject<List<Character>>(json, new PartyConverter());
 
-            var message = "";
-
-            foreach (var item in newInv)
-            {
-                var str = $"Item: {item.Base.itemName} -- uid:{item.Base.uniqueIdentifier}";
-                if (item is IStackable stackable)
-                    str += $" x{stackable.Quantity}";
-                str += "\n";
-
-                message += str;
-            }
-
-            Debug.Log(message);
+            Party = party;
         }
     }
 

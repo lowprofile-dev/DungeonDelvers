@@ -5959,16 +5959,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
   - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
   - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
-  - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
-  - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
-  - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
-  - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
-  - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
-  - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
-  - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
-  - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
-  - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
-  - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
   movementSpeed: 5
   OverworldCharacter: {fileID: 0}
   Direction: 0

@@ -2,26 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d8eb85f-203a-42cc-a492-a61dc70ead53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/PartyConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/PartyConverter.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Assassin/Assassin.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Assassin/Assassin.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Assassin/CharacterAnimations.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Fighter/Fighter.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Fighter/Fighter.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Mage/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Mage/Mage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Mage/Mage.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Warrior/Warrior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Warrior/Warrior.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Items/Equipment/Weapons/Wooden Staff.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Items/Equipment/Weapons/Wooden Staff.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/GameDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/GameDatabase.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ItemBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ItemBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterSave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/GameSaveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/GameSaveController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/GameSaveController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/GameSaveController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/ItemInstanceBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/ItemInstanceBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/ISerializable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/ISerializable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Serialization/InventoryConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Serialization/InventoryConverter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/MenuEffects.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/StatusEffects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/CharacterInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/CharacterInspector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryItemInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryItemInspector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI/Main Menu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Main Menu.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/test_sandbox/debugserialization.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/test_sandbox/debugserialization.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,9 +56,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/ToggleComponentActiveInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/MessageBoxInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/AddPassiveMasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/InventoryConverter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Debug/test1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/LearnSkillMasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleInfoPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/Mastery.cs" root0="FORCE_HIGHLIGHTING" />
@@ -68,7 +69,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/BodyBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/HeadBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleCanvas.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/ISerializable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/FeetBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/CharacterActionMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -121,7 +121,8 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryItemButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryItemInspector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/GameSaveController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/PartyConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/GameSaveController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/WaitForKeyPressInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/GameDatabase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -134,11 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/Consumable.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/MiscItem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/EquippableBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/AccessoryBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/BodyBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/FeetBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/HandBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/HeadBase.cs" />
@@ -168,7 +164,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/ISerializable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ConsumableBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillActionMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryInstance.cs" />
@@ -183,8 +178,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryItemInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/CharacterInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" />
         <option value="$PROJECT_DIR$/Assets/TODO.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/GameSaveController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterSave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/InventoryConverter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/PartyConverter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/ItemInstanceBuilder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" />
       </list>
     </option>
   </component>
@@ -226,10 +227,10 @@
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="13215">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="20237">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="13215" />
+      <option name="pid" value="20237" />
       <option name="userSelectedPid" value="false" />
       <method v="2" />
     </configuration>
@@ -260,6 +261,7 @@
       <workItem from="1578574085090" duration="7118000" />
       <workItem from="1578581720740" duration="1940000" />
       <workItem from="1578920954108" duration="4015000" />
+      <workItem from="1579092742048" duration="5748000" />
     </task>
     <servers />
   </component>
@@ -291,19 +293,6 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs</url>
-          <line>285</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" initialLine="271">
-            <startOffsets>
-              <option value="7698" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7699" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

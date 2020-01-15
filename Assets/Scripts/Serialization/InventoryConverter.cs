@@ -33,46 +33,38 @@ public class InventoryConverter : JsonConverter
 
         var jtoken =JToken.Load(reader);
         var items = jtoken.ToObject<List<SerializedItem>>();
-        int x = items.Count;
 
-        //while (reader.Read())
-        //{
-        //    var token = reader.Value;
-        //    //var itemSaveObject = (JObject)token;
+        foreach (var item in items)
+        {
+            ItemSave parsedSave;
+            var saveObject = item.ItemSave as JObject;
 
-        //    //var typeToken = itemSaveObject["SaveType"];
-        //    //var type = typeToken.Value<string>();
+            switch (item.SaveType)
+            {
+                case "Equippable":
+                {
+                    parsedSave = saveObject.ToObject<EquippableSave>();
+                    break;
+                }
+                case "Consumable":
+                {
+                    parsedSave = saveObject.ToObject<ConsumableSave>();
+                    break;
+                }
+                case "MiscItem":
+                {
+                    parsedSave = saveObject.ToObject<MiscItemSave>();
+                    break;
+                }
+                default:
+                    throw new DeserializationFailureException(typeof(Item));
+            }
 
-        //    //switch (type)
-        //    //{
-        //    //    case "Equippable":
-        //    //        {
-        //    //            var save = itemSaveObject["ItemSave"].Value<EquippableSave>();
-        //    //            var item = new Equippable(save);
-        //    //            Inventory.Add(item);
-        //    //            break;
-        //    //        }
-        //    //    case "Consumable":
-        //    //        {
-        //    //            var save = itemSaveObject["ItemSave"].Value<ConsumableSave>();
-        //    //            var item = new Consumable(save);
-        //    //            Inventory.Add(item);
-        //    //            break;
-        //    //        }
-        //    //    case "MiscItem":
-        //    //        {
-        //    //            var save = itemSaveObject["ItemSave"].Value<MiscItemSave>();
-        //    //            var item = new MiscItem(save);
-        //    //            Inventory.Add(item);
-        //    //            break;
-        //    //        }
-        //    //    default:
-        //    //        {
-        //    //            Debug.LogError(type);
-        //    //            break;
-        //    //        }
-        //    //}
-        //}
+            var builtItem = ItemInstanceBuilder.BuildInstance(parsedSave);
+            Inventory.Add(builtItem);
+        }
+
+        
         return Inventory;
     }
 
