@@ -20,8 +20,15 @@ public class Consumable : Item, IStackable
 
     //Lembrar de fazer função de quando recebe varios consumiveis de uma vez, funções de stackar, funções de juntar
     //stacks quando uma esvazia.
-    
-    public override ItemSave Serialize() => throw new NotImplementedException();
+
+    public override ItemSave Serialize()
+    {
+        return new ConsumableSave
+        {
+            baseUid = Base.uniqueIdentifier,
+            Quantity = quantity
+        };
+    }
     
     public IStackableBase StackableBase => Base as IStackableBase;
 
@@ -34,7 +41,7 @@ public class Consumable : Item, IStackable
 
     public Consumable(ConsumableSave consumableSave) : base(consumableSave)
     {
-        
+        Quantity = consumableSave.Quantity;
     }
     
 }

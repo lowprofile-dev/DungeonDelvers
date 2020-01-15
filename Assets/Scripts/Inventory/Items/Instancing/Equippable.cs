@@ -3,7 +3,13 @@ using Sirenix.OdinInspector;
 
 public class Equippable : Item
 {
-    public override ItemSave Serialize() => throw new NotImplementedException();
+    public override ItemSave Serialize()
+    {
+        return new EquippableSave
+        {
+            baseUid = Base.uniqueIdentifier
+        };
+    }
     
     public EquippableBase EquippableBase => Base as EquippableBase;
     [ShowInInspector] public EquippableBase.EquippableSlot Slot => EquippableBase.Slot;

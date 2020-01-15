@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using UnityEngine;
 
 [Serializable]
 public abstract class EquippableBase : ItemBase
 {
-    [FoldoutGroup("Stats")] public Stats Stats;
+    [FoldoutGroup("Stats")] public Stats BaseStats;
     public List<PlayerSkill> Skills;
     public List<Passive> Passives;
 
@@ -29,4 +30,9 @@ public abstract class EquippableBase : ItemBase
     }
     
     public abstract EquippableSlot Slot { get; }
+}
+
+public class EquipmentQuality
+{
+    public string QualityName = "";
 }

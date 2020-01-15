@@ -3,7 +3,14 @@ using UnityEngine;
 
 public class MiscItem : Item, IStackable
 {
-    public override ItemSave Serialize() => throw new NotImplementedException();
+    public override ItemSave Serialize()
+    {
+        return new MiscItemSave
+        {
+            baseUid = Base.uniqueIdentifier,
+            Quantity = quantity
+        };
+    }
 
     public IStackableBase StackableBase => Base as IStackableBase;
     public MiscItemBase MiscItemBase => Base as MiscItemBase;
@@ -15,7 +22,7 @@ public class MiscItem : Item, IStackable
 
     public MiscItem(MiscItemSave miscItemSave) : base(miscItemSave)
     {
-        
+        Quantity = miscItemSave.Quantity;
     }
 
     public int MaxStack => MiscItemBase.MaxStack;

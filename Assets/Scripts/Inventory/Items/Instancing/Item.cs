@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿using System;
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,7 +17,16 @@ public abstract class Item
 
     public Item(ItemSave itemSave)
     {
-        Base = ItemDatabase.Instance.Items.Find(x => x.uniqueIdentifier == itemSave.baseUid);
+        //Base = ItemDatabase.Instance.Items.Find(x => x.uniqueIdentifier == itemSave.baseUid);
+        try
+        {
+            Base = GameDatabase.Database.Items.Find(x => x.uniqueIdentifier == itemSave.baseUid);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Falha em deserializar id {itemSave.baseUid}");
+            throw new DeserializationFailureException(typeof(ItemSave));
+        }
     }
 
     public virtual string InspectorName => Base.itemName;

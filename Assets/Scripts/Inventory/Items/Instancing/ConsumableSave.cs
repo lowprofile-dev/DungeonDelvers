@@ -3,5 +3,5 @@ using System;
 [Serializable]
 public class ConsumableSave : ItemSave
 {
-    //Quantidade + idk?
+    public int Quantity = 0;
 }

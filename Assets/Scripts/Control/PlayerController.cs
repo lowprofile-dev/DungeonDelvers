@@ -135,6 +135,28 @@ public class PlayerController : SerializedMonoBehaviour
             case PlayerState.Busy:
                 break;
         }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            var json = JsonConvert.SerializeObject(Inventory, Formatting.None, new InventoryConverter());
+            Debug.Log(json);
+
+            var newInv = JsonConvert.DeserializeObject<List<Item>>(json, new InventoryConverter());
+
+            var message = "";
+
+            foreach (var item in newInv)
+            {
+                var str = $"Item: {item.Base.itemName} -- uid:{item.Base.uniqueIdentifier}";
+                if (item is IStackable stackable)
+                    str += $" x{stackable.Quantity}";
+                str += "\n";
+
+                message += str;
+            }
+
+            Debug.Log(message);
+        }
     }
 
     private void FixedUpdate()

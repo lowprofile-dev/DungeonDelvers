@@ -118,8 +118,6 @@ public class Character
         Stats = BaseStats + BonusStats;
 
         stopwatch.Stop();
-
-        Debug.Log($"Recalculated {Base.CharacterName} stats: {stopwatch.ElapsedMilliseconds}ms");
     }
 
     private void RecalculateBases()
@@ -134,7 +132,7 @@ public class Character
         foreach (var equipInstance in Equipment)
         {
             var equip = equipInstance.EquippableBase;
-            BonusStats += equip.Stats;
+            BonusStats += equip.BaseStats;
         }
     }
 
