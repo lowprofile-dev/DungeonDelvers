@@ -46,7 +46,7 @@ public class GameSaveController
         Debug.Log($"Save gerado em {stopwatch.ElapsedMilliseconds}ms");
     }
 
-    public void Load(string saveName)
+    public void Load()
     {
 //        var player = PlayerController.Instance;
 //        if (player == null)
@@ -72,10 +72,8 @@ public class GameSaveController
 public class Save
 {
     public string SaveVersion { get; set; }
-    [JsonConverter(typeof(PartyConverter))]
-    public List<Character> Characters { get; set; }
-    [JsonConverter(typeof(InventoryConverter))]
-    public List<Item> Items { get; set; }
+    [JsonConverter(typeof(PartyConverter))] public List<Character> Characters { get; set; }
+    [JsonConverter(typeof(InventoryConverter))] public List<Item> Items { get; set; }
     public Dictionary<string,int> Globals { get; set; }
     public int CurrentGold { get; set; }
     public int CurrentExp { get; set; }

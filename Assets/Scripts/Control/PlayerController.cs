@@ -12,48 +12,12 @@ using SkredUtils;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerController : SerializedMonoBehaviour
+public class PlayerController : AsyncMonoBehaviour
 {
+    #region SingletonImpl
     private static PlayerController _instance = null;
     public static PlayerController Instance => _instance;
 
-    public int PartyLevel = 1;
-    public int CurrentExp = 0;
-    public int CurrentGold = 0;
-    [ShowInInspector] public int ExpToNextLevel => (int)(5 + 10*PartyLevel + 4*Mathf.Pow(PartyLevel-1,2));
-    
-    [HideInEditorMode] public List<Character> Party = new List<Character>();
-    [HideInEditorMode] public List<Item> Inventory = new List<Item>();
-    
-    [HideInPlayMode] public List<CharacterBase> PartyBases = new List<CharacterBase>();
-    [HideInPlayMode] public List<ItemBase> InventoryBase = new List<ItemBase>();
-
-    public float movementSpeed;
-    public GameObject OverworldCharacter;
-    [ReadOnly] public PlayerDirection Direction;
-    [ReadOnly] public PlayerState State;
-    private Vector2 Front
-    {
-        get
-        {
-            switch (Direction)
-            {
-                case PlayerDirection.Up:
-                    return new Vector2(0, 1);
-                case PlayerDirection.Right:
-                    return new Vector2(1,0);
-                case PlayerDirection.Down:
-                    return new Vector2(0,-1);
-                case PlayerDirection.Left:
-                    return new Vector2(-1,0);
-                default:
-                    return new Vector2(0, 0);
-            }
-        }
-    }
-    private Animator OverworldCharacterAnimator;
-    public GameObject MainMenuPrefab;
-    
     private void Awake()
     {
         if (_instance != null)
@@ -65,65 +29,67 @@ public class PlayerController : SerializedMonoBehaviour
         _instance = this;
         DontDestroyOnLoad(this);
     }
+    #endregion
 
+    #region Params
+    [HideInPlayMode] public List<CharacterBase> PartyBases = new List<CharacterBase>();
+    [HideInPlayMode] public List<ItemBase> InventoryBase = new List<ItemBase>();
+
+    public float MovementSpeed;
+    public GameObject MainMenuPrefab;
+
+    #endregion
+
+    #region Vars
+    [HideInEditorMode, ReadOnly] public int PartyLevel = 1;
+    [HideInEditorMode, ReadOnly] public int CurrentExp = 0;
+    [HideInEditorMode] public int CurrentGold = 0;
+    [ShowInInspector] public int ExpToNextLevel => (int)(5 + 10 * PartyLevel + 4 * Mathf.Pow(PartyLevel - 1, 2));
+    [HideInEditorMode] public List<Character> Party = new List<Character>();
+    [HideInEditorMode] public List<Item> Inventory = new List<Item>();
+    [ReadOnly] public GameObject OverworldCharacter;
+    [ReadOnly] public PlayerDirection Direction;
+    [ReadOnly] public PlayerState State;
+    private Vector2 Front {
+        get {
+            switch (Direction)
+            {
+                case PlayerDirection.Up:
+                    return new Vector2(0, 1);
+                case PlayerDirection.Right:
+                    return new Vector2(1, 0);
+                case PlayerDirection.Down:
+                    return new Vector2(0, -1);
+                case PlayerDirection.Left:
+                    return new Vector2(-1, 0);
+                default:
+                    return new Vector2(0, 0);
+            }
+        }
+    }
+    private Animator OverworldCharacterAnimator;
+    private int hInput { get; set; }
+    private int vInput { get; set; }
+    public bool CanWalk = true;
+    private bool isWalking => CanWalk && (hInput != 0 || vInput != 0);
+    #endregion
+
+    #region UnityEvents
     private void Start()
     {
-//#if UNITY_EDITOR
+        //#if UNITY_EDITOR
         Party = PartyBases.EachDo(characterBase => new Character(characterBase));
         Inventory = InventoryBase.EachDo(ItemInstanceBuilder.BuildInstance);
-//#endif
+        //#endif
         GameController.Instance.OnBeginEncounter.AddListener(PauseGame);
         GameController.Instance.OnEndEncounter.AddListener(UnpauseGame);
-        SetOverworldCharacter();
-    }
-
-    private void SetOverworldCharacter()
-    {
-        if (Party.Count == 0)
-            return;
-        
-//        if (OverworldCharacter != null && OverworldCharacter.name == Party.First().Base.uniqueIdentifier)
-//            return;
-        
-        if (OverworldCharacter != null)
-            Destroy(OverworldCharacter);
-
-        OverworldCharacter = Instantiate(Party.First().Base.CharacterPrefab,transform);
-        OverworldCharacter.name = Party.First().Base.uniqueIdentifier;
-        OverworldCharacterAnimator = OverworldCharacter.GetComponent<Animator>();
-    }
-
-    private void AnimateOverworldCharacter()
-    {
-        if (OverworldCharacterAnimator == null)
-            return;
-        
-        OverworldCharacterAnimator.SetBool("Walking",isWalking);
-        var absH = Mathf.Abs(hInput);
-        var absV = Mathf.Abs(vInput);
-        
-        if (absH == absV)
-            return;
-
-        int dir;
-
-        if (vInput == 1)
-            dir = 0;
-        else if (hInput == 1)
-            dir = 1;
-        else if (vInput == -1)
-            dir = 2;
-        else
-            dir = 3;
-        
-        OverworldCharacterAnimator.SetInteger("Direction", dir);
-        Direction = (PlayerDirection)dir;
+        BuildOverworldCharacter();
     }
 
     private void Update()
     {
         AnimateOverworldCharacter();
-        
+
         switch (State)
         {
             case PlayerState.Active:
@@ -141,7 +107,7 @@ public class PlayerController : SerializedMonoBehaviour
             //GameSaveController.Save();
 
             var json = JsonConvert.SerializeObject(Party, Formatting.Indented, new PartyConverter());
-            
+
             Debug.Log(json);
 
             var party = JsonConvert.DeserializeObject<List<Character>>(json, new PartyConverter());
@@ -170,12 +136,80 @@ public class PlayerController : SerializedMonoBehaviour
     {
         Gizmos.color = Color.magenta;
         var position = transform.position;
-        Gizmos.DrawLine(position,position + (Vector3)Front);
+        Gizmos.DrawLine(position, position + (Vector3)Front);
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (State == PlayerState.Active && other.gameObject.layer == LayerMask.NameToLayer("Interactable"))
+        {
+            var interactable = other.gameObject.GetComponent<Interactable>();
+
+            if (interactable == null || interactable.interactableType != Interactable.InteractableType.Collision)
+                return;
+
+            interactable.Interact();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (State == PlayerState.Active && other.gameObject.layer == LayerMask.NameToLayer("Interactable"))
+        {
+            var interactable = other.gameObject.GetComponent<Interactable>();
+
+            if (interactable == null || interactable.interactableType != Interactable.InteractableType.Collision)
+                return;
+
+            interactable.Interact();
+        }
+    }
+    #endregion
+
+    #region ControlFunctions
     private void Movement()
     {
-        transform.position += new Vector3(hInput*movementSpeed*Time.fixedDeltaTime, vInput*movementSpeed*Time.fixedDeltaTime);
+        transform.position += new Vector3(hInput * MovementSpeed * Time.fixedDeltaTime, vInput * MovementSpeed * Time.fixedDeltaTime);
+    }
+
+    private void BuildOverworldCharacter()
+    {
+        if (Party.Count == 0)
+            throw new ArgumentNullException();
+
+        if (OverworldCharacter != null)
+            Destroy(OverworldCharacter);
+
+        OverworldCharacter = Instantiate(Party.First().Base.CharacterPrefab, transform);
+        OverworldCharacter.name = Party.First().Base.uniqueIdentifier;
+        OverworldCharacterAnimator = OverworldCharacter.GetComponent<Animator>();
+    }
+
+    private void AnimateOverworldCharacter()
+    {
+        if (OverworldCharacterAnimator == null)
+            return;
+
+        OverworldCharacterAnimator.SetBool("Walking", isWalking);
+        var absH = Mathf.Abs(hInput);
+        var absV = Mathf.Abs(vInput);
+
+        if (absH == absV)
+            return;
+
+        int dir;
+
+        if (vInput == 1)
+            dir = 0;
+        else if (hInput == 1)
+            dir = 1;
+        else if (vInput == -1)
+            dir = 2;
+        else
+            dir = 3;
+
+        OverworldCharacterAnimator.SetInteger("Direction", dir);
+        Direction = (PlayerDirection)dir;
     }
 
     private void TryInteract()
@@ -188,13 +222,37 @@ public class PlayerController : SerializedMonoBehaviour
         {
             var interactableObject = ray.collider.gameObject;
             var interactable = interactableObject.GetComponent<Interactable>();
-            
+
             if (interactable == null || interactable.interactableType != Interactable.InteractableType.Action)
                 return;
-            
+
             interactable.Interact();
         }
     }
+
+    private void OpenMainMenu()
+    {
+        PauseGame();
+        var mainMenuObject = Instantiate(MainMenuPrefab);
+        var mainMenu = mainMenuObject.GetComponent<MainMenu>();
+
+        mainMenu.OnMenuClose.AddListener(UnpauseGame);
+    }
+
+    public void PauseGame()
+    {
+        //Time.timeScale = 0;
+        State = PlayerState.Busy;
+    }
+
+    public void UnpauseGame()
+    {
+        //Time.timeScale = 1;
+        State = PlayerState.Active;
+    }
+    #endregion
+
+    #region StatFunctions
 
     public void GainEXP(int experience)
     {
@@ -205,7 +263,6 @@ public class PlayerController : SerializedMonoBehaviour
         }
     }
 
-    public LevelUpEvent OnLevelUpEvent = new LevelUpEvent();
     private void LevelUp()
     {
         CurrentExp -= ExpToNextLevel;
@@ -213,38 +270,19 @@ public class PlayerController : SerializedMonoBehaviour
         PartyLevel++;
 
         Party.ForEach(partyMember => partyMember.LevelUp());
-        
-        OnLevelUpEvent.Invoke(PartyLevel);
+
+        OnLevelUpEvent.Invoke();
     }
 
-    private void OpenMainMenu()
-    {
-        PauseGame();
-        var mainMenuObject = Instantiate(MainMenuPrefab);
-        var mainMenu = mainMenuObject.GetComponent<MainMenu>();
-        
-        mainMenu.OnMenuClose.AddListener(UnpauseGame);
-    }
+    #endregion
 
-    public void PauseGame()
-    {
-        //Time.timeScale = 0;
-        State = PlayerState.Busy;
-    }
-    
-    public void UnpauseGame()
-    {
-        //Time.timeScale = 1;
-        State = PlayerState.Active;
-    }
+    #region InventoryFunctions
 
-    //Ver depois como fazer se o inventário estiver cheio (se tiver limite de inventário)
-    
     public void AddItemToInventory(ItemBase itemBase)
     {
         if (itemBase is IStackableBase iStackable)
         {
-            AddStackableToInventory(iStackable,1);
+            AddStackableToInventory(iStackable, 1);
             return;
         }
 
@@ -286,11 +324,11 @@ public class PlayerController : SerializedMonoBehaviour
 
     public void RemoveStackableFromInventory(IStackableBase stackableBase, int amount)
     {
-        var allStacks = Inventory.FindAll(item => item.Base == (ItemBase) stackableBase);
+        var allStacks = Inventory.FindAll(item => item.Base == (ItemBase)stackableBase);
 
         var totalCount = 0;
-        
-        allStacks.ForEach( item => totalCount += (item as IStackable).Quantity);
+
+        allStacks.ForEach(item => totalCount += (item as IStackable).Quantity);
 
         Restack(stackableBase, totalCount - amount);
     }
@@ -338,23 +376,23 @@ public class PlayerController : SerializedMonoBehaviour
             }
 
             Inventory.RemoveAll(item => instancesOfStackable.Contains(item));
-            
+
             Debug.Log("Total Quantity = " + totalQuantity);
-            
+
             Restack(stackableBase, totalQuantity);
         }
     }
-    
+
     public void Restack(IStackableBase stackableBase, int totalQuantity)
     {
-        Inventory.RemoveAll(item => item.Base == (ItemBase) stackableBase);
-        
+        Inventory.RemoveAll(item => item.Base == (ItemBase)stackableBase);
+
         if (stackableBase.MaxStack == 0)
         {
             Debug.LogError("Max Stack is 0");
             return;
         }
-        
+
         while (totalQuantity > 0)
         {
             var instance = ItemInstanceBuilder.BuildInstance(stackableBase.ItemBase);
@@ -408,42 +446,21 @@ public class PlayerController : SerializedMonoBehaviour
 
     private int GetQuantityOfStackable(IStackableBase stackableBase)
     {
-        var stacks = Inventory.Where(item => item.Base == (ItemBase) stackableBase).Cast<IStackable>().ToArray();
+        var stacks = Inventory.Where(item => item.Base == (ItemBase)stackableBase).Cast<IStackable>().ToArray();
         int totalCount = 0;
         stacks.ForEach(stack => { totalCount += stack.Quantity; });
         return totalCount;
     }
-    
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (State == PlayerState.Active && other.gameObject.layer == LayerMask.NameToLayer("Interactable"))
-        {
-            var interactable = other.gameObject.GetComponent<Interactable>();
-            
-            if (interactable == null || interactable.interactableType != Interactable.InteractableType.Collision)
-                return;
 
-            interactable.Interact();
-        }
-    }
+    #endregion
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (State == PlayerState.Active && other.gameObject.layer == LayerMask.NameToLayer("Interactable"))
-        {
-            var interactable = other.gameObject.GetComponent<Interactable>();
-            
-            if (interactable == null || interactable.interactableType != Interactable.InteractableType.Collision)
-                return;
-            
-            interactable.Interact();
-        }
-    }
+    #region Events
 
-    private int hInput { get; set; }
-    private int vInput { get; set; }
-    public bool CanWalk = true;
-    private bool isWalking => CanWalk && (hInput != 0 || vInput != 0);
+    public UnityEvent OnLevelUpEvent = new UnityEvent();
+
+    #endregion
+
+    #region Declarations
 
     public enum PlayerDirection
     {
@@ -459,8 +476,5 @@ public class PlayerController : SerializedMonoBehaviour
         Busy = 1
     }
 
-    public class LevelUpEvent : UnityEvent<int>
-    {
-        public LevelUpEvent() { }
-    }
+    #endregion
 }

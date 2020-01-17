@@ -1,16 +1,11 @@
-Fazer uma base super simples de modificações de equip e como guardar na instancia. -> Equips com variações de stats.
+Testar fazer uma dungeon simples mais bonitinha
 
-Começar serialização. Só é necessário um save.
-Terminar esse fluxo:
-    Começa jogo
-    Personagem abre um baú, pega um 4 equipamentos que däo 2 Skills e uma poção que upa a Party
-    Usa poção, upa, toda a party usa o nivel pra aprender uma skill e uma passiva simples.
-    Abre um baú que gera um equipamento com stats aleatóriamente
-    Batalha contra NPC (aparece no mundo). Ganha, ganha XP, Itens, adiciona global que foi derrotado o NPC.
-    Salva.
-    Load, tudo tá guardado e NPC não está mais lá (com a global)
+Fazer o jogo pseudo-funcional:
+	Tela inicial, que procura se tem save.
+	Transição entre cenas.
 
-Ao terminar esse fluxo, limpar o código, comentar tudo, e descansar.
+Inicio de NPC (estáticos por enquanto, ver como fazer movimento depois.)
+Começar a fazer uma town
 
 Futuro:
 Ver como vai ser em relação a stackable/item/slot (prob. usar peso, ter que fazer tela de dropar algo do inventário depois da batalha. dois menus com setas de trocar entre (loot) -> <- (inventario)
@@ -24,7 +19,7 @@ Trocar Text -> TMP
 Arrumar database: uniqueIdentifier não é mais propriedade do item, e sim do database (dictionary)
 Ver Unit Testing, fazer modulos pra testar, pelo menos, a serialização.
 Limpar o fluxo do BattleController
-Dar uma olhada no DunGen
+Ver uma solução pra poder permitir rotacionar os tilemaps.
 Fazer skill que pode dar alvo em até X inimigos/aliados, fazer no SkillTargeter (pensando, int em playerskill que é quantas vezes deve ser selecionado um alvo, e se o alvo pode ser repetido). 
 
 Bugs:
