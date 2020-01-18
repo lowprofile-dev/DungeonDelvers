@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89377a5c2dcb66b40af385ad8492cda9, type: 3}
   m_Name: testdungeonArchetype1
   m_EditorClassIdentifier: 
-  TileSets: []
+  TileSets:
+  - {fileID: 11400000, guid: 01c7da70afee27a449dc34c8bd7883d6, type: 2}
   BranchCapTileSets: []
   BranchCapType: 1
   BranchingDepth:

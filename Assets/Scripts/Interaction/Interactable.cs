@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interactable : SerializedMonoBehaviour
 {
@@ -13,9 +15,52 @@ public class Interactable : SerializedMonoBehaviour
     
     public Dictionary<string, int> Locals = new Dictionary<string, int>();
 
+    private void Awake()
+    {
+        var originalName = name;
+        var appendedName = $"{SceneManager.GetActiveScene().buildIndex}_{originalName}";
+
+        if (GameObject.Find(appendedName) == null)
+        {
+            name = appendedName;
+        }
+        else
+        {
+            for (int i = 0; i < 9999; i++)
+            {
+                var attempt = $"{appendedName}_{i}";
+                if (GameObject.Find(attempt) == null)
+                {
+                    name = attempt;
+                    break;
+                }
+
+            }
+        }
+    }
+
     private void Start()
     {
-        StartCoroutine(_Interact(StartupInteractions));
+        ReloadLocals();
+        StartCoroutine(_Interact(StartupInteractions, null));
+    }
+
+    private void ReloadLocals()
+    {
+        var key = $"LOCAL{name}_";
+        var keyLength = key.Length;
+
+        var locals = GameController.Instance.Globals.Keys.Where(globalKey => globalKey.StartsWith(key));
+
+        foreach (var local in locals)
+        {
+            var value = GameController.GetGlobal(local);
+            var localName = local.Remove(0, keyLength);
+
+            Locals[localName] = value;
+
+            Debug.Log($"Reloading local {localName} ({local})");
+        }
     }
 
     public int GetLocal(string key)
@@ -27,39 +72,44 @@ public class Interactable : SerializedMonoBehaviour
 
     public void SetLocal(string key, int value) => Locals[key] = value;
 
-    public void Interact(bool isNested = false)
+    public void Interact(bool isNested = false, Interactable parent = null)
     {
         if (isNested)
         {
-            StartCoroutine(_NestedInteraction(Interactions));
+            StartCoroutine(_NestedInteraction(Interactions, parent));
         }
         else if (!IsInteracting)
         {
-            StartCoroutine(_Interact(Interactions));
+            StartCoroutine(_Interact(Interactions, parent));
         }
     }
 
-    IEnumerator _NestedInteraction(IEnumerable<Interaction> interactions)
+    IEnumerator _NestedInteraction(IEnumerable<Interaction> interactions, Interactable parent)
     {
+        IsInteracting = true;
+        var source = parent != null ? parent : this;
         foreach (var interaction in interactions)
         {
             //yield return null;
-            interaction.Run(this);
+            interaction.Run(source);
             var completion = interaction.Completion;
             if (completion != null)
                 yield return completion;
             interaction.Cleanup();
         }
+
+        IsInteracting = false;
     }
     
-    IEnumerator _Interact(IEnumerable<Interaction> interactions)
+    IEnumerator _Interact(IEnumerable<Interaction> interactions, Interactable parent)
     {
         StartInteraction();
 
+        var source = parent != null ? parent : this;
         foreach (var interaction in interactions)
         {
             //yield return null;
-            interaction.Run(this);
+            interaction.Run(source);
             var completion = interaction.Completion;
             if (completion != null)
                 yield return completion;
@@ -73,6 +123,13 @@ public class Interactable : SerializedMonoBehaviour
     {
         if (IsInteracting)
             EndInteraction();
+
+        foreach (var local in Locals)
+        {
+            var globalName = $"LOCAL{name}_{local.Key}";
+            GameController.SetGlobal(globalName, local.Value);
+            Debug.Log($"Saving local {local} ({globalName})");
+        }
     }
 
     private void StartInteraction()

@@ -23,6 +23,8 @@ public class TilemapManager : SerializedMonoBehaviour
         stopwatch.Stop();
 
         Debug.Log($"Generated dungeon in {stopwatch.ElapsedMilliseconds}ms");
+
+        Try();
     }
 
     private void MergeTilemaps()

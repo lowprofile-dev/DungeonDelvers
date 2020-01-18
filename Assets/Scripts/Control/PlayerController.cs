@@ -11,6 +11,7 @@ using Sirenix.Utilities;
 using SkredUtils;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : AsyncMonoBehaviour
 {
@@ -37,6 +38,7 @@ public class PlayerController : AsyncMonoBehaviour
 
     public float MovementSpeed;
     public GameObject MainMenuPrefab;
+    public GameObject MainCameraPrefab;
 
     #endregion
 

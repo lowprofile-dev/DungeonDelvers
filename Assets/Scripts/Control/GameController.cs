@@ -11,7 +11,6 @@ using UnityEngine.Events;
 public class GameController : AsyncMonoBehaviour
 {
     public static GameController Instance { get; private set; }
-    public TrackTransform TrackTransform;
     public GameObject AnimationObjectBase;
 
     [HideInInspector] public UnityEvent OnBeginEncounter;
@@ -29,12 +28,6 @@ public class GameController : AsyncMonoBehaviour
         DontDestroyOnLoad(this);
     }
 
-    private void Start()
-    {
-        TrackTransform = GetComponent<TrackTransform>();
-        TrackTransform.Target = PlayerController.Instance.gameObject.transform;
-    }
-
     public Dictionary<string, int> Globals = new Dictionary<string, int>();
 
     public static int GetGlobal(string key)
@@ -50,7 +43,7 @@ public class GameController : AsyncMonoBehaviour
     public static void SetGlobal(string key, int value)
     {
         if (Instance == null)
-            throw new NullReferenceException();
+            return;
 
         Instance.Globals[key] = value;
     }

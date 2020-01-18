@@ -21,7 +21,7 @@ public class  BranchInteraction : Interaction
         }
 
         if (chosenInteractable != null)
-            chosenInteractable.Interact();
+            chosenInteractable.Interact(true, source);
     }
 
     public override IEnumerator Completion => new WaitUntil(() => chosenInteractable == null || !chosenInteractable.IsInteracting);

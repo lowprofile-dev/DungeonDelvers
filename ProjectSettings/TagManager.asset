@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PG_Floor
   - PG_Wall
+  - PG_Ceiling
   layers:
   - Default
   - TransparentFX

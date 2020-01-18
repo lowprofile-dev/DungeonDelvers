@@ -30,15 +30,28 @@ public class SetKeyInteraction : Interaction
             switch (operation)
             {
                 case Operation.Set:
-                    source.SetLocal(Key,Value);
+                    source.SetLocal(Key, Value);
                     break;
                 case Operation.Increase:
-                    source.SetLocal(Key,source.GetLocal(Key)+Value);
-                    break;    
+                    source.SetLocal(Key, source.GetLocal(Key) + Value);
+                    break;
                 case Operation.Decrease:
-                    source.SetLocal(Key,source.GetLocal(Key)-Value);
+                    source.SetLocal(Key, source.GetLocal(Key) - Value);
                     break;
             }
+            //var localKey = $"{source.name}_{Key}";
+            //switch (operation)
+            //{
+            //    case Operation.Set:
+            //        GameController.SetGlobal(localKey, Value);
+            //        break;
+            //    case Operation.Increase:
+            //        GameController.SetGlobal(localKey, GameController.GetGlobal(localKey) + Value);
+            //        break;
+            //    case Operation.Decrease:
+            //        source.SetLocal(localKey, GameController.GetGlobal(localKey) - Value);
+            //        break;
+            //}
         }
     }
 

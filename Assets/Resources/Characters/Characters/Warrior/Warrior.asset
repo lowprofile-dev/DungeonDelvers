@@ -2996,7 +2996,7 @@ MonoBehaviour:
   CharacterName: Knight
   CharacterFace: {fileID: 5155163167032735316, guid: 8a6f7f45dd486893f8e486adc22732d6,
     type: 3}
-  CharacterPrefab: {fileID: 8521580809372860284, guid: 1736b34fe64ca480bb1a5a1e1dc5f947,
+  CharacterPrefab: {fileID: 8521580809372860284, guid: b85aa7e9225067e4f93b96eccb5cca71,
     type: 3}
   BattlerPrefab: {fileID: 2506904389010253803, guid: 052da0be1f224b441a3d221b4392000e,
     type: 3}
