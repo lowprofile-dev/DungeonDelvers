@@ -33,6 +33,9 @@ MonoBehaviour:
     - Name: DamageFactor
       Entry: 4
       Data: 1
+    - Name: DamageType
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -50,7 +53,7 @@ MonoBehaviour:
   SkillName: Attack
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 0
+  EpCost: 15
   SkillDescription: 
   Target: 0
   AnimationType: 2

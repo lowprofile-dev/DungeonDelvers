@@ -1,21 +1,30 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Sirenix.Utilities;
 using UnityEngine;
 
 public class DamageEffect : Effect
 {
-    //Ver como vai ficar, dano fixo (ex. sempre 50), dano escalavel (o normal), % vida, set vida a 1, o que mais for.
     public float DamageFactor = 1.0f;
+    public DamageType DamageType = DamageType.Physical;
 
     public override EffectResult ExecuteEffect(SkillInfo skillInfo)
     {
-        //Ainda mais coisa a arrumar conforme for necessario.
-        //Dá pra ver se a fonte de um efeito é uma skill ou não vendo se effectSource é nulo ou não. Assim pode evitar loops infinitos
-        //eg. reflete dano, só reflete se a fonte é uma skill, manda o efeito com skill sendo nulo
+        //override de tipo
 
         var damage = (int)Mathf.Max(0,BattleController.Instance.DamageCalculation(skillInfo.Source, skillInfo.Target, this));
 
+        Debug.Log($"Calculado {damage}");
+        
+        var targetPassives = skillInfo.Target.Passives
+            .SelectMany(passive => passive.Effects.Where(passiveEffect => passiveEffect is IReceiveDamagePassiveEffect))
+            .OrderByDescending(effect => effect.Priority)
+            .Cast<IReceiveDamagePassiveEffect>()
+            .ToArray();
+
+        targetPassives.ForEach(targetPassive => targetPassive.BeforeReceive(skillInfo, ref damage));
+        
         Debug.Log($"Levando {damage} de dano");
 
         skillInfo.Target.CurrentHp -= damage;
@@ -26,24 +35,25 @@ public class DamageEffect : Effect
         };
     }
 
-    //Vai criar uma instancia disso aqui, a isso passa por todas as passivas em ordem de prioridade
-    //e vai modificando. o battle.DamageCalculation recebe um disso.
-    public struct DamageCalculation
-    {
-        private IBattler source;
-        private IBattler target;
-        
-        //Tudo o que precisar
-        
-        private float DamageMultiplier;
-        public List<Effect> ExtraEffects; //Ver como parar infinite loop. Criar um execute effect separado pra quando é um efeito adicional?
-    }
-
     public class DamageEffectResult : EffectResult
     {
-        //tipo de dano
         public int DamageDealt;
     }
+    
+    public interface IDealDamagePassiveEffect
+    {
+        void BeforeDeal(SkillInfo skillInfo, ref int finalDamage);
+    }
+    
+    public interface IReceiveDamagePassiveEffect
+    {
+        void BeforeReceive(SkillInfo skillInfo, ref int finalDamage);
+    }
+}
 
-    //interface de override de dano aqui
+public enum DamageType
+{
+    Physical,
+    Magical,
+    Pure
 }

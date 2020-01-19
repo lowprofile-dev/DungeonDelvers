@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Sirenix.OdinInspector;
+using UnityEngine;
 
 public class RegenPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
 {
@@ -16,7 +17,7 @@ public class RegenPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
     {
         int healAmount;
 
-        if (IsPercentageValue)
+        if (!IsPercentageValue)
         {
             healAmount = FlatValue;
         }
@@ -30,7 +31,20 @@ public class RegenPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
             HealAmount = healAmount
         };
 
+        battler.QueueAction(() =>
+        {
+            BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(PassiveSource.PassiveName);
+            //BattleController.Instance.battleCanvas.BindActionArrow(battler.RectTransform);
+        });
+        
+        Debug.Log($"Curando {healAmount} em {battler.Name}");
         await battler.ReceiveEffect(battler, null, effect);
+        
+        battler.QueueAction(() =>
+        {
+            BattleController.Instance.battleCanvas.battleInfoPanel.HideInfo();
+            //BattleController.Instance.battleCanvas.UnbindActionArrow();
+        });
     }
 }
 

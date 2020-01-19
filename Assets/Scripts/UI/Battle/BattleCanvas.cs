@@ -9,7 +9,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
-public class BattleCanvas : SerializedMonoBehaviour
+public class BattleCanvas : AsyncMonoBehaviour
 {
     public RectTransform[] PartyBattlerHolders;
     public RectTransform MonsterPanel;
@@ -37,6 +37,11 @@ public class BattleCanvas : SerializedMonoBehaviour
     private void Update()
     {
         KeepSelect();
+    }
+
+    private async Task BackgroundAnimation()
+    {
+
     }
 
     private void KeepSelect()

@@ -191,7 +191,8 @@ public class Character
     private void LoadPassives()
     {
         Passives = new List<Passive>();
-
+        Passives.AddRange(Base.BasePassives);
+        
         foreach (var equippable in Equipment)
         {
             Passives.AddRange(equippable.EquippableBase.Passives);

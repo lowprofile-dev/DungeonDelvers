@@ -42,6 +42,16 @@ namespace SkredUtils
             return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
         }
 
+        public static float Min(this float value, float min)
+        {
+            return value < min ? min : value;
+        }
+
+        public static float Max(this float value, float max)
+        {
+            return value > max ? max : value;
+        }
+
         public static Ref<T> CreateRef<T>(this T @ref) => new Ref<T>(@ref);
     }
 

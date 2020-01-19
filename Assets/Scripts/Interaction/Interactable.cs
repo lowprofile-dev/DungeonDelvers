@@ -123,7 +123,7 @@ public class Interactable : SerializedMonoBehaviour
     {
         if (IsInteracting)
             EndInteraction();
-
+        
         foreach (var local in Locals)
         {
             var globalName = $"LOCAL{name}_{local.Key}";

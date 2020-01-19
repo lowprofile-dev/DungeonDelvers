@@ -29,6 +29,7 @@ public class CharacterBase : SerializableAsset
     [FoldoutGroup("Equips")] public AccessoryBase Accessory;
 
     [ListDrawerSettings(ListElementLabelName = "_masteryElementName")]public List<Mastery> Masteries = new List<Mastery>();
+    public List<Passive> BasePassives = new List<Passive>();
 
     #endregion
 

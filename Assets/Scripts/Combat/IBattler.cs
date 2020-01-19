@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -6,7 +7,9 @@ using UnityEngine;
 
 public interface IBattler
 {
+    Dictionary<string,object> BattleDictionary { get; }
     string Name { get; }
+    int Level { get; }
     int CurrentHp { get; set; }
     int CurrentEp { get; set; }
     bool Fainted { get; }
@@ -16,7 +19,7 @@ public interface IBattler
     //Pois todos os métodos vão precisar do battlecontroller mesmo.
     
     Stats Stats { get; }
-    //List<BattlePassive> Passives { get; }
+    List<Passive> Passives { get; }
     RectTransform RectTransform { get; }
     
     Task TurnStart();
@@ -27,4 +30,8 @@ public interface IBattler
     Task<IEnumerable<EffectResult>> ReceiveSkill(IBattler source, Skill skill);
     Task<EffectResult> ReceiveEffect(IBattler source, Skill skillSource, Effect effect);
     Task AfterSkill(IEnumerable<EffectResult> result);
+
+    Task QueueActionAndAwait(Action action);
+    Task PlayCoroutine(IEnumerator coroutine, MonoBehaviour target = null);
+    void QueueAction(Action action);
 }

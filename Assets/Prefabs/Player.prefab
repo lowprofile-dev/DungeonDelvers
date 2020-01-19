@@ -1,0 +1,208 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3993753518470717486
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3993753518470717487}
+  - component: {fileID: 3993753518470717484}
+  - component: {fileID: 3993753518470717485}
+  - component: {fileID: 3993753518470717523}
+  - component: {fileID: 3993753518470717522}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3993753518470717487
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993753518470717486}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.65, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3993753518470717484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993753518470717486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ca2da1874a241b8b450018c594fa6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Party
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Character, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Inventory
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Item, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  PartyBases:
+  - {fileID: 11400000, guid: f77e24618f897f945a0248b51cc1267f, type: 2}
+  - {fileID: 11400000, guid: 42485ac7352004c6a8bc01c3505ca003, type: 2}
+  - {fileID: 11400000, guid: f9f6f4482b3fd3e9ebc8cd7b92caaeca, type: 2}
+  - {fileID: 11400000, guid: fb1fbb4bb0c7667e6833f3be9cba04f4, type: 2}
+  InventoryBase:
+  - {fileID: 11400000, guid: f0ca1d086742b68698d5f98d7810133b, type: 2}
+  - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
+  - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
+  - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
+  MovementSpeed: 5
+  MainMenuPrefab: {fileID: 9044932552085264921, guid: bc9cf6ed27b58c5a2856ff9100a8fdde,
+    type: 3}
+  MainCameraPrefab: {fileID: 0}
+  PartyLevel: 1
+  CurrentExp: 0
+  CurrentGold: 0
+  OverworldCharacter: {fileID: 0}
+  Direction: 0
+  State: 0
+  CanWalk: 1
+  OnLevelUpEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!50 &3993753518470717485
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993753518470717486}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &3993753518470717523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993753518470717486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7ffc297f0c46fa8b30ac9eaeb9a7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Globals
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  AnimationObjectBase: {fileID: 2556044651023131637, guid: 52fde5e2d15ca134a9920643bfcbe459,
+    type: 3}
+  OnBeginEncounter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEndEncounter:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3993753518470717522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993753518470717486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aab8993781216946b1ed5a7c4d31c9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: CurrentBattler
+      Entry: 6
+      Data: 
+  Party: []
+  Enemies: []
+  OnBattleEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  BattleCanvasPrefab: {fileID: 5121108812641505727, guid: 50c4370a60aec0f498a02f466e5c16c1,
+    type: 3}
+  battleCanvas: {fileID: 0}
+  CurrentTurn: 0

@@ -33,16 +33,18 @@ public class FromSourceToTargetSkillAnimation : SkillAnimation
     private IEnumerator MoveAnimationCoroutine(Vector2 source, Vector2 target, Transform animation, Animator animator, string animationName)
     {
         //Funcionando por enquanto. Arrumar a rotação depois (opcional)
+        animator.SetFloat("SpeedMultiplier",SpeedMultiplier);
         animator.Play(animationName);
         yield return new WaitForEndOfFrame();
 
         var info = animator.GetCurrentAnimatorStateInfo(0);
         var elapsedTime = 0f;
+        var finishTime = info.length / SpeedMultiplier;
 
-        while (elapsedTime < info.length)
+        while (elapsedTime < finishTime)
         {
             elapsedTime += Time.deltaTime;
-            animation.position = Vector2.Lerp(source, target, elapsedTime / info.length);
+            animation.position = Vector2.Lerp(source, target, elapsedTime / finishTime);
             yield return null;
         }
         GameObject.Destroy(animation.gameObject);

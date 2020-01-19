@@ -3003,7 +3003,7 @@ MonoBehaviour:
     MaxHp: 50
     InitialEp: 25
     EpGain: 15
-    PhysAtk: 10
+    PhysAtk: 30
     MagAtk: 10
     PhysDef: 10
     MagDef: 10
@@ -3014,8 +3014,8 @@ MonoBehaviour:
     CritAvoid: 0
   Growths:
     MaxHp: 1
-    InitialEp: 1
-    EpGain: 1
+    InitialEp: 0
+    EpGain: 0
     PhysAtk: 1
     MagAtk: 1
     PhysDef: 1
@@ -3033,4 +3033,6 @@ MonoBehaviour:
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}
+  BasePassives:
+  - {fileID: 11400000, guid: 8a26a5680e5ca86439fb5271297e9113, type: 2}
   Level: 1

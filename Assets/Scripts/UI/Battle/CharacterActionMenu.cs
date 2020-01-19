@@ -65,7 +65,7 @@ public class CharacterActionMenu : SerializedMonoBehaviour
 
     private Color LifeToColor(int current, int max)
     {
-        var percentage = current / max;
+        var percentage = (float)current / max;
         
         if (current == 0)
             return LifeColors.FaintedHealth;
@@ -105,6 +105,8 @@ public class CharacterActionMenu : SerializedMonoBehaviour
     public void Defend()
     {
         //Por enquanto pula o turno. Botar pra dar um buff de redução de dano.
+        Battler.BattleDictionary["Defending"] = true;
+        Debug.Log($"{Battler.Name} -> [Defending]=true");
         FinishTurn(new Turn
         {
             Skill = null,
@@ -114,6 +116,6 @@ public class CharacterActionMenu : SerializedMonoBehaviour
 
     public void Run()
     {
-        //Fazer
+        BattleController.Instance.ForceEnd();
     }
 }

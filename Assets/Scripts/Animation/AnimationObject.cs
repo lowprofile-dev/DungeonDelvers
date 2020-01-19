@@ -8,10 +8,11 @@ public class AnimationObject : MonoBehaviour
 {
     public Animator animator;
     
-    public async Task PlayAndAwait(string animation)
+    public async Task PlayAndAwait(string animation, float speedMultiplier = 1f)
     {
         await GameController.Instance.QueueActionAndAwait(() =>
         {
+            animator.SetFloat("SpeedMultiplier",speedMultiplier);
             animator.Play(animation);
         });
         

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -8,16 +9,19 @@ using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine.Tilemaps;
 using Debug = UnityEngine.Debug;
+using Random = UnityEngine.Random;
 
 public class TilemapManager : SerializedMonoBehaviour
 {
     public RuntimeDungeon Dungeon;
+    public int Seed;
 
     public List<Tilemap> MainTilemaps;
     public void Start()
     {
         var stopwatch = Stopwatch.StartNew();
 
+        Dungeon.Generator.Seed = Seed;
         Dungeon.Generate();
 
         stopwatch.Stop();
@@ -106,5 +110,12 @@ public class TilemapManager : SerializedMonoBehaviour
         stopwatch.Stop();
 
         Debug.Log($"Merged tilemaps in {stopwatch.ElapsedMilliseconds}ms");
+    }
+
+    [Button("New Seed")]
+    public void GetNewSeed()
+    {
+        //Seed = Random.Range(Int32.MinValue, Int32.MaxValue);
+        Dungeon.Generator.RandomizeSeed();
     }
 }

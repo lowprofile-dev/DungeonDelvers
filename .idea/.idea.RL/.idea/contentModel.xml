@@ -39,6 +39,155 @@
           </e>
         </e>
         <e p="Classes.txt" t="Include" />
+        <e p="Credits.txt" t="Include" />
+        <e p="DunGen" t="Include">
+          <e p="Code" t="Include">
+            <e p="AcceptGameObjectTypesAttribute.cs" t="Include" />
+            <e p="Adapters" t="Include">
+              <e p="BaseAdapter.cs" t="Include" />
+              <e p="NavMeshAdapter.cs" t="Include" />
+              <e p="PortalCullingAdapter.cs" t="Include" />
+            </e>
+            <e p="AdjacentRoomCulling.cs" t="Include" />
+            <e p="Analysis" t="Include">
+              <e p="GenerationAnalysis.cs" t="Include" />
+              <e p="NumberSetData.cs" t="Include" />
+              <e p="RuntimeAnalyzer.cs" t="Include" />
+            </e>
+            <e p="BasicRoomCullingCamera.cs" t="Include" />
+            <e p="BranchCountMode.cs" t="Include" />
+            <e p="Constants.cs" t="Include" />
+            <e p="CoroutineHelper.cs" t="Include" />
+            <e p="Door.cs" t="Include" />
+            <e p="Doorway.cs" t="Include" />
+            <e p="DoorwayConnection.cs" t="Include" />
+            <e p="DoorwayPairFinder.cs" t="Include" />
+            <e p="DoorwaySocket.cs" t="Include" />
+            <e p="DungenCharacter.cs" t="Include" />
+            <e p="DunGenSettings.cs" t="Include" />
+            <e p="Dungeon.cs" t="Include" />
+            <e p="DungeonArchetype.cs" t="Include" />
+            <e p="DungeonFlowGraph" t="Include">
+              <e p="DungeonFlow.cs" t="Include" />
+              <e p="DungeonFlowBuilder.cs" t="Include" />
+              <e p="GraphLine.cs" t="Include" />
+              <e p="GraphNode.cs" t="Include" />
+              <e p="References.cs" t="Include" />
+            </e>
+            <e p="DungeonGenerator.cs" t="Include" />
+            <e p="DungeonGeneratorPostProcessStep.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="Drawers" t="Include">
+                <e p="GameObjectChanceDrawer.cs" t="Include" />
+                <e p="GameObjectChanceTableDrawer.cs" t="Include" />
+                <e p="GlobalPropSettingsDrawer.cs" t="Include" />
+                <e p="IntRangeDrawer.cs" t="Include" />
+              </e>
+              <e p="GameObjectSelectionTypes.cs" t="Include" />
+              <e p="GraphObjectObserver.cs" t="Include" />
+              <e p="Inspectors" t="Include">
+                <e p="DoorwayInspector.cs" t="Include" />
+                <e p="DoorwaySocketInspector.cs" t="Include" />
+                <e p="DunGenSettingsInspector.cs" t="Include" />
+                <e p="DungeonArchetypeInspector.cs" t="Include" />
+                <e p="DungeonFlowInspector.cs" t="Include" />
+                <e p="GlobalPropInspector.cs" t="Include" />
+                <e p="GraphObjectInspector.cs" t="Include" />
+                <e p="KeyManagerInspector.cs" t="Include" />
+                <e p="LocalPropSetInspector.cs" t="Include" />
+                <e p="RandomPrefabInspector.cs" t="Include" />
+                <e p="RuntimeDungeonInspector.cs" t="Include" />
+                <e p="TileInspector.cs" t="Include" />
+                <e p="TileSetInspector.cs" t="Include" />
+              </e>
+              <e p="MenuMethods.cs" t="Include" />
+              <e p="Utility" t="Include">
+                <e p="EditorUtil.cs" t="Include" />
+                <e p="InspectorConstants.cs" t="Include" />
+                <e p="TypeUtil.cs" t="Include" />
+              </e>
+              <e p="Validation" t="Include">
+                <e p="DungeonValidator.cs" t="Include" />
+                <e p="IValidationRule.cs" t="Include" />
+                <e p="Rules" t="Include">
+                  <e p="DoorwayRule.cs" t="Include" />
+                  <e p="DungeonFlowIntegrityRule.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Windows" t="Include">
+                <e p="DungeonAnalysisWindow.cs" t="Include" />
+                <e p="DungeonFlowEditorWindow.cs" t="Include" />
+                <e p="DungeonGeneratorWindow.cs" t="Include" />
+              </e>
+            </e>
+            <e p="EditorConstants.cs" t="Include" />
+            <e p="GameObjectChanceTable.cs" t="Include" />
+            <e p="GenerationStats.cs" t="Include" />
+            <e p="GenerationStatus.cs" t="Include" />
+            <e p="GlobalProp.cs" t="Include" />
+            <e p="Graph" t="Include">
+              <e p="DungeonGraph.cs" t="Include" />
+              <e p="DungeonGraphConnection.cs" t="Include" />
+              <e p="DungeonGraphNode.cs" t="Include" />
+              <e p="DungeonGraphObject.cs" t="Include" />
+            </e>
+            <e p="IKeyLock.cs" t="Include" />
+            <e p="IKeySpawnable.cs" t="Include" />
+            <e p="InjectedTile.cs" t="Include" />
+            <e p="Key.cs" t="Include" />
+            <e p="KeyLockPlacement.cs" t="Include" />
+            <e p="KeyManager.cs" t="Include" />
+            <e p="LocalPropSet.cs" t="Include" />
+            <e p="LockedDoorwayAssociation.cs" t="Include" />
+            <e p="NodeLockPlacement.cs" t="Include" />
+            <e p="PreProcessTileData.cs" t="Include" />
+            <e p="RandomPrefab.cs" t="Include" />
+            <e p="RandomProp.cs" t="Include" />
+            <e p="RuntimeDungeon.cs" t="Include" />
+            <e p="Tile.cs" t="Include" />
+            <e p="TileInjectionRule.cs" t="Include" />
+            <e p="TilePlacementData.cs" t="Include" />
+            <e p="TilePlacementResult.cs" t="Include" />
+            <e p="TileRepeatMode.cs" t="Include" />
+            <e p="TileSet.cs" t="Include" />
+            <e p="Utility" t="Include">
+              <e p="ChanceTable.cs" t="Include" />
+              <e p="DungeonArchetypeValidator.cs" t="Include" />
+              <e p="DungeonUtil.cs" t="Include" />
+              <e p="NumberUtil.cs" t="Include" />
+              <e p="Range.cs" t="Include" />
+              <e p="StringUtil.cs" t="Include" />
+              <e p="UnityUtil.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Samples" t="Include">
+            <e p="Basic" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="AutoDoor.cs" t="Include" />
+                <e p="CameraMovement.cs" t="Include" />
+                <e p="DemoTileInjector.cs" t="Include" />
+                <e p="Generator.cs" t="Include" />
+                <e p="KeyColour.cs" t="Include" />
+                <e p="KeyPickup.cs" t="Include" />
+                <e p="KeySpawnPoint.cs" t="Include" />
+                <e p="LockedDoor.cs" t="Include" />
+                <e p="PickupMotion.cs" t="Include" />
+                <e p="PlayerController.cs" t="Include" />
+                <e p="PlayerInventory.cs" t="Include" />
+                <e p="ScreenText.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Readme.txt" t="Include" />
+            <e p="Simple 2D" t="Include">
+              <e p="Scripts" t="Include">
+                <e p="PlayerController2D.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Dungeons" t="Include">
+          <e p="Dungeons.txt" t="Include" />
+        </e>
         <e p="FBBCommission.txt" t="Include" />
         <e p="JsonDotNet" t="Include">
           <e p="link.xml" t="Include" />
@@ -91,6 +240,11 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="_Debug" t="Include">
+            <e p="GoToScene.cs" t="Include" />
+            <e p="test1.cs" t="Include" />
+            <e p="testtogglepixelperfect.cs" t="Include" />
+          </e>
           <e p="Animation" t="Include">
             <e p="AnimationObject.cs" t="Include" />
             <e p="SkillAnimation.cs" t="Include" />
@@ -100,6 +254,7 @@
             </e>
           </e>
           <e p="Camera" t="Include">
+            <e p="TrackPlayer.cs" t="Include" />
             <e p="TrackTransform.cs" t="Include" />
           </e>
           <e p="Character" t="Include">
@@ -111,11 +266,14 @@
             <e p="Mastery" t="Include">
               <e p="Mastery.cs" t="Include" />
               <e p="MasteryCondition" t="Include">
+                <e p="HasMasteryMasteryCondition.cs" t="Include" />
                 <e p="MasteryCondition.cs" t="Include" />
               </e>
               <e p="MasteryEffect" t="Include">
                 <e p="AddPassiveMasteryEffect.cs" t="Include" />
-                <e p="BonusStatMasteryEffect.cs" t="Include" />
+                <e p="BaseStatMasteryEffect.cs" t="Include" />
+                <e p="LearnSkillMasteryEffect.cs" t="Include" />
+                <e p="MasteryEffect.cs" t="Include" />
               </e>
               <e p="MasteryGroup.cs" t="Include" />
               <e p="MasteryInstance.cs" t="Include" />
@@ -142,15 +300,15 @@
             <e p="AsyncMonoBehaviour.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
             <e p="GameDatabase.cs" t="Include" />
-            <e p="GameSaveController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="SerializableAsset.cs" t="Include" />
-          </e>
-          <e p="Debug" t="Include">
-            <e p="test1.cs" t="Include" />
+            <e p="SetUniqueName.cs" t="Include" />
           </e>
           <e p="Extensions" t="Include">
             <e p="SkredUtils.cs" t="Include" />
+          </e>
+          <e p="Generation" t="Include">
+            <e p="TilemapManager.cs" t="Include" />
           </e>
           <e p="Interaction" t="Include">
             <e p="Conditions" t="Include">
@@ -166,6 +324,9 @@
               <e p="CallInteractableInteraction.cs" t="Include" />
               <e p="DestroyObjectInteraction.cs" t="Include" />
               <e p="MessageBoxInteraction.cs" t="Include" />
+              <e p="MultipleInteraction.cs" t="Include" />
+              <e p="PlayAnimationInteraction.cs" t="Include" />
+              <e p="PlaySoundInteraction.cs" t="Include" />
               <e p="SetKeyInteraction.cs" t="Include" />
               <e p="StartBattleInteraction.cs" t="Include" />
               <e p="ToggleComponentActiveInteraction.cs" t="Include" />
@@ -175,6 +336,16 @@
           <e p="Inventory" t="Include">
             <e p="Items" t="Include">
               <e p="ConsumableBase.cs" t="Include" />
+              <e p="ConsumableUse" t="Include">
+                <e p="ConsumableUse.cs" t="Include" />
+                <e p="ConsumableUses" t="Include">
+                  <e p="LevelUpConsumableUse.cs" t="Include" />
+                </e>
+                <e p="TargetedConsumableUse.cs" t="Include" />
+                <e p="TargetedConsumableUses" t="Include">
+                  <e p="HealCharacterTargetedConsumableUse.cs" t="Include" />
+                </e>
+              </e>
               <e p="Equipment" t="Include">
                 <e p="AccessoryBase.cs" t="Include" />
                 <e p="BodyBase.cs" t="Include" />
@@ -206,7 +377,10 @@
             <e p="StringCipher.cs" t="Include" />
           </e>
           <e p="Serialization" t="Include">
-            <e p="ISerializable.cs" t="Include" />
+            <e p="DeserializationFailureException.cs" t="Include" />
+            <e p="GameSaveController.cs" t="Include" />
+            <e p="InventoryConverter.cs" t="Include" />
+            <e p="PartyConverter.cs" t="Include" />
           </e>
           <e p="Skills" t="Include">
             <e p="Effect.cs" t="Include" />
@@ -218,6 +392,11 @@
             <e p="MonsterSkill.cs" t="Include" />
             <e p="Passives" t="Include">
               <e p="Passive.cs" t="Include" />
+              <e p="PassiveEffects" t="Include">
+                <e p="DefendPassiveEffect.cs" t="Include" />
+                <e p="PassiveEffect.cs" t="Include" />
+                <e p="RegenPassiveEffect.cs" t="Include" />
+              </e>
             </e>
             <e p="PlayerSkill.cs" t="Include" />
             <e p="Skill.cs" t="Include" />
@@ -237,18 +416,24 @@
               <e p="DamageText.cs" t="Include" />
               <e p="SkillActionMenu.cs" t="Include" />
               <e p="SkillButton.cs" t="Include" />
-              <e p="SkillInfo.cs" t="Include" />
+              <e p="SkillInfoPanel.cs" t="Include" />
               <e p="SkillTargeter.cs" t="Include" />
             </e>
             <e p="Main Menu" t="Include">
               <e p="CharacterInspector.cs" t="Include" />
               <e p="CharacterPanel.cs" t="Include" />
+              <e p="CharacterSelector.cs" t="Include" />
+              <e p="EquipButton.cs" t="Include" />
+              <e p="EquipMenu.cs" t="Include" />
               <e p="InventoryItemButton.cs" t="Include" />
               <e p="InventoryItemInspector.cs" t="Include" />
               <e p="InventoryMenu.cs" t="Include" />
               <e p="MainMenu.cs" t="Include" />
+              <e p="MasteryButton.cs" t="Include" />
+              <e p="MasteryMenu.cs" t="Include" />
             </e>
             <e p="MessageBox.cs" t="Include" />
+            <e p="StartMenu.cs" t="Include" />
           </e>
         </e>
         <e p="Tayx" t="Include">
@@ -328,6 +513,34 @@
           <e p="test.cs" t="Include" />
           <e p="testgetrectransform.cs" t="Include" />
           <e p="testloadsceneadditive.cs" t="Include" />
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
         </e>
         <e p="TODO.txt" t="Include" />
       </e>

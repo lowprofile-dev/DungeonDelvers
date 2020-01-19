@@ -33,6 +33,7 @@ public class BattleController : SerializedMonoBehaviour
     [ReadOnly] public int CurrentTurn;
     [ReadOnly] public IBattler CurrentBattler;
 
+    private Task Battle;
     private CancellationTokenSource CancelBattle = new CancellationTokenSource();
     
     private void Awake()
@@ -46,7 +47,7 @@ public class BattleController : SerializedMonoBehaviour
         Instance = this;
     }
 
-    public void BeginBattle(GameObject encounterPrefab, Sprite backgroundSprite = null)
+    public void BeginBattle(GameObject encounterPrefab, Sprite backgroundSprite = null, bool playAnimation = false)
     {
         //Pega uma referencia ao Encounter
         _encounter = encounterPrefab.GetComponent<Encounter>();
@@ -61,14 +62,14 @@ public class BattleController : SerializedMonoBehaviour
         //Monta o BattleCanvas
         battleCanvas = Instantiate(BattleCanvasPrefab).GetComponent<BattleCanvas>();
         battleCanvas.SetupBattleground(backgroundSprite);
-        
+
         //Monta party e inimigos
         Party = battleCanvas.SetupParty(PlayerController.Instance.Party);
         Enemies = battleCanvas.SetupMonsters(encounterPrefab);
         Party.ForEach((partyMember) => { partyMember.UpdateAnimator(); });
 
         //Inicia o combate
-        Task.Run(BattleLoop, CancelBattle.Token);
+        Battle = Task.Run(BattleLoop, CancelBattle.Token);
     }
 
     private void OnDestroy()
@@ -106,29 +107,21 @@ public class BattleController : SerializedMonoBehaviour
                 CurrentBattler = orderEnumerator.Current;
                 if (CurrentBattler.Fainted)
                     continue;
-                
+
                 await BattlerTurn(CurrentBattler);
                 battleResult = IsBattleOver();
             }
-            
+
             if (battleResult == 1)
             {
                 Debug.Log("Ganhou");
-            } else if (battleResult == -1)
+                Win();
+            }
+            else if (battleResult == -1)
             {
                 Debug.Log("Perdeu");
+                Lose();
             }
-
-            GameController.Instance.QueueAction(() =>
-            {
-                Party.ForEach(partyMember => partyMember.CommitChanges());
-                OnBattleEnd.Invoke();
-                PlayerController.Instance.UnpauseGame();
-                Destroy(battleCanvas.gameObject);
-                orderEnumerator.Dispose();
-
-                Debug.Log("Acabou");
-            });
         }
         catch (Exception e)
         {
@@ -136,6 +129,51 @@ public class BattleController : SerializedMonoBehaviour
             Debug.LogException(e);
             //GameController.Instance.QueueAction(() => Debug.LogException(e));
         }
+        finally
+        {
+            
+            Battle = null;
+        }
+    }
+
+    private void Win()
+    {
+        PartyCommit();
+
+        GameController.Instance.QueueAction(() =>
+        {
+            PlayerController.Instance.GainEXP(_encounter.ExpReward);
+            PlayerController.Instance.CurrentGold += _encounter.GoldReward;
+
+            //items dps
+        });
+    }
+
+    private void Lose()
+    {
+        Application.Quit();
+    }
+
+    public void ForceEnd()
+    {
+        if (Battle != null)
+        {
+            PartyCommit();
+            CancelBattle.Cancel();
+        }
+    }
+
+    private void PartyCommit()
+    {
+        GameController.Instance.QueueAction(() =>
+        {
+            Party.ForEach(partyMember => partyMember.CommitChanges());
+            OnBattleEnd.Invoke();
+            PlayerController.Instance.UnpauseGame();
+            Destroy(battleCanvas.gameObject);
+
+            Debug.Log("Acabou");
+        });
     }
 
     private void CommitChanges()
@@ -231,11 +269,83 @@ public class BattleController : SerializedMonoBehaviour
         Debug.Log(partyMember.Character.Base.CharacterName + " terminou");
     }
 
-    //Ver depois, agora só pra testar
-    public float DamageCalculation(IBattler source, IBattler target, DamageEffect effect)
+    public int DamageCalculation(IBattler source, IBattler target, DamageEffect effect, float variance = 0.15f)
     {
-        //Alguma logica aqui (ou antes) que leva em conta as passivas, pegar se é magico ou fisico do effect
-        return source.Stats.PhysAtk - target.Stats.PhysDef;
+        ////Alguma logica aqui (ou antes) que leva em conta as passivas, pegar se é magico ou fisico do effect
+        //return source.Stats.PhysAtk - target.Stats.PhysDef;
+
+        var damageType = effect.DamageType;
+
+        int damage;
+
+        switch (damageType)
+        {
+            case DamageType.Physical:
+            {
+                damage = (int)DamageFormula1(source.Level, source.Stats.PhysAtk, target.Level, target.Stats.PhysDef);
+                break;
+            }
+            case DamageType.Magical:
+            {
+                damage = (int) DamageFormula1(source.Level, source.Stats.MagAtk, target.Level, target.Stats.MagDef);
+                break;
+            }
+            case DamageType.Pure:
+            {
+                //damage = (int) DamageFormula1(source.Level, source.Stats.MagAtk, target.Level, target.Stats.MagDef);
+                throw new NotImplementedException();
+                break;
+            }
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+
+        var finalDamageMultiplier = Random.Range(1 - variance, 1 + variance);
+
+        return (int)(damage*finalDamageMultiplier);
+    }
+
+    private float DamageFormula1(int sourceLevel, int sourceAttack, int targetLevel, int targetDefense)
+    {
+        try
+        {
+            var levelDelta = ((float) sourceLevel - targetLevel);
+            var levelDeltaMultiplier = levelDelta.Remap(-10, 10, 0.5f, 1.5f);
+            levelDeltaMultiplier = Mathf.Clamp(levelDeltaMultiplier, -0.5f, 0.5f);
+
+            var baseDamage = 5 * sourceLevel;
+            var statDelta = 1 + (1 - (float) targetDefense / (sourceAttack + 1)) / 2;
+            var damage = (baseDamage + (sourceAttack) * statDelta) - targetDefense;
+
+            return (damage*levelDeltaMultiplier).Min(0);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"DF1 {sourceLevel} {sourceAttack} {targetLevel} {targetDefense}");
+            return 0;
+        }
+    }
+
+    [Serializable]
+    public struct CombatAttempt
+    {
+        public string Name;
+        public int SourceLevel;
+        public int SourceAttackStat;
+        public int TargetLevel;
+        public int TargetDefenseStat;
+    }
+
+    public List<CombatAttempt> CombatAttempts = new List<CombatAttempt>();
+
+    [Button]
+    public void CheckAttempts()
+    {
+        foreach (var combatAttempt in CombatAttempts)
+        {
+            var damage = DamageFormula1(combatAttempt.SourceLevel,combatAttempt.SourceAttackStat,combatAttempt.TargetLevel,combatAttempt.TargetDefenseStat);
+            Debug.Log($"{combatAttempt.Name} -> {damage}");
+        }
     }
 }
 

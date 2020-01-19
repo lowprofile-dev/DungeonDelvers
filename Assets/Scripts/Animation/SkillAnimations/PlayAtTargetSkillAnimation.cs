@@ -21,7 +21,7 @@ public class PlayAtTargetSkillAnimation : SkillAnimation
                 
                 ScaleAnimation(animation.transform as RectTransform);
                 
-                Animations.Add(animation.PlayAndAwait(AnimationName));
+                Animations.Add(animation.PlayAndAwait(AnimationName,SpeedMultiplier));
             });
         });
 

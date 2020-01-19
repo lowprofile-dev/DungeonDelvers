@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using SkredUtils;
 using Unity.Collections;
 using UnityEngine;
@@ -19,6 +20,9 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
     public Character Character;
     private Image image;
 
+    #region Control
+    public Dictionary<string, object> BattleDictionary { get; private set; }
+    
     private void Start()
     {
         image = GetComponent<Image>();
@@ -31,15 +35,19 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
         CurrentHp = character.CurrentHp;
         CurrentEp = Stats.InitialEp;
         Skills = character.Skills;
+        Passives = character.Passives;
+        BattleDictionary = new Dictionary<string, object>();
     }
     
     public void CommitChanges()
     {
         Character.CurrentHp = currentHp;
     }
+    #endregion
+    
 
     #region Stats
-
+    public int Level => PlayerController.Instance.PartyLevel;
     public string Name => Character.Base.CharacterName;
     [FoldoutGroup("Stats")] public Stats Stats { get; private set; }
     [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] private int currentEp;
@@ -66,7 +74,7 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
     public bool Fainted => CurrentHp == 0;
     [FoldoutGroup("Skills")] public List<PlayerSkill> Skills { get; private set; }
     [FoldoutGroup("Passives"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public List<Passive> Passives { get; set; } = new List<Passive>();
-    
+
     #endregion
 
     #region Animation
@@ -139,11 +147,9 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
     #region TurnEvents
     public async Task TurnStart()
     {
-        //Fazer efeitos do que precisar aqui, quando precisar
         currentEp += Stats.EpGain;
         Debug.Log($"Começou turno de {Character.Base.CharacterName}");
 
-        //Exemplo. É pra ser assim, usar como base para outras
         var turnStartPassives =
             Passives.SelectMany(passive => passive.Effects.Where(effect => effect is ITurnStartPassiveEffect))
                 .OrderByDescending(effect => effect.Priority).Cast<ITurnStartPassiveEffect>();
@@ -187,6 +193,11 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
 
         CurrentEp -= skill.EpCost;
         
+        QueueAction(() =>
+        {
+            BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(skill.SkillName);
+        });
+        
         var playerSkill = skill as PlayerSkill;
         await AsyncPlayAndWait(playerSkill.AnimationType);
 
@@ -194,6 +205,11 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
         {
             await skill.SkillAnimation.PlaySkillAnimation(source, targets);
         }
+        
+        QueueAction(() =>
+        {
+            BattleController.Instance.battleCanvas.battleInfoPanel.HideInfo();
+        });
     }
 
     public async Task<IEnumerable<EffectResult>> ReceiveSkill(IBattler source, Skill skill)

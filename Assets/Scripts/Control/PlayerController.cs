@@ -12,6 +12,7 @@ using SkredUtils;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.U2D;
 
 public class PlayerController : AsyncMonoBehaviour
 {
@@ -104,18 +105,11 @@ public class PlayerController : AsyncMonoBehaviour
                 break;
         }
 
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            //GameSaveController.Save();
-
-            var json = JsonConvert.SerializeObject(Party, Formatting.Indented, new PartyConverter());
-
-            Debug.Log(json);
-
-            var party = JsonConvert.DeserializeObject<List<Character>>(json, new PartyConverter());
-
-            Party = party;
-        }
+        //test
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+            MovementSpeed = 10;
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+            MovementSpeed = 5;
     }
 
     private void FixedUpdate()

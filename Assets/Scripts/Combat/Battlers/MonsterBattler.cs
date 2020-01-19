@@ -22,7 +22,8 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
 
 
     #region Control
-
+    public Dictionary<string, object> BattleDictionary { get; private set; }
+    
     private void Awake()
     {
         LoadBase();
@@ -37,8 +38,13 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
     {
         if (MonsterBase == null)
             return;
-        
-        stats = MonsterBase.Stats;
+
+        var level = UnityEngine.Random.Range(MonsterBase.BaseLevel - MonsterBase.LevelVariance,
+            MonsterBase.BaseLevel + MonsterBase.LevelVariance + 1);
+
+        Level = level;
+        stats = MonsterBase.Stats + MonsterBase.StatLevelVariance*(Level-MonsterBase.BaseLevel);
+
         Skills = MonsterBase.Skills;
         MonsterAi = MonsterBase.MonsterAi;
 
@@ -49,6 +55,11 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
 
         CurrentHp = Stats.MaxHp;
         CurrentEp = Stats.InitialEp;
+        
+        BattleDictionary = new Dictionary<string, object>();
+        Passives = MonsterBase.Passives;
+        
+        Debug.Log($"Inicializado Lv.{level}{Name}");
     }
 
     private bool NoMonster => MonsterBase == null;
@@ -57,6 +68,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
     
     #region Stats
 
+    public int Level { get; private set; }
     public string Name => MonsterBase.MonsterName;
     [FoldoutGroup("Stats"), ShowInInspector, PropertyOrder(999)] private Stats stats;
     public Stats Stats => stats;
@@ -83,6 +95,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
     }
     
     public List<MonsterSkill> Skills;
+    public List<Passive> Passives { get; private set; }
     public MonsterAI MonsterAi;
 
     public bool Fainted => CurrentHp == 0;
@@ -97,6 +110,15 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
     {
         currentEp += Stats.EpGain;
         Debug.Log($"Começou o turno de {Name}");
+        
+        var turnStartPassives =
+            Passives.SelectMany(passive => passive.Effects.Where(effect => effect is ITurnStartPassiveEffect))
+                .OrderByDescending(effect => effect.Priority).Cast<ITurnStartPassiveEffect>();
+        
+        foreach (var turnStartPassive in turnStartPassives)
+        {
+            await turnStartPassive.OnTurnStart(this);
+        }
     }
 
     public async Task TurnEnd()

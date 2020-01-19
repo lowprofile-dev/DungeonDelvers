@@ -588,6 +588,11 @@ PrefabInstance:
       propertyPath: Generator.DisallowOverhangs
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7942455540505996185, guid: fc787cb4efa25474fac516cc603c5116,
+        type: 3}
+      propertyPath: Generator.Seed
+      value: 1908120878
+      objectReference: {fileID: 0}
     - target: {fileID: 7942455540505996187, guid: fc787cb4efa25474fac516cc603c5116,
         type: 3}
       propertyPath: m_Name

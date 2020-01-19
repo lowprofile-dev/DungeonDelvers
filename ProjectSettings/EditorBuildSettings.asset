@@ -6,15 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/DunGenTest/DunGenTest.unity
-    guid: e649185cce5755d41a62ad4061c4c3b6
-  - enabled: 1
     path: Assets/test_sandbox/debuggen.unity
     guid: 317521f3cd46e1c4e98e47f39a9f7a15
-  - enabled: 1
-    path: Assets/test_sandbox/sandbox.unity
-    guid: 97940c113d41c6648a2743ee51fa2015
-  - enabled: 1
-    path: Assets/Scenes/testloadchest.unity
-    guid: 15b134d92418c734fad0f00103474da1
   m_configObjects: {}

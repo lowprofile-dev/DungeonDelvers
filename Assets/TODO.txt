@@ -8,6 +8,10 @@ Inicio de NPC (estáticos por enquanto, ver como fazer movimento depois.)
 Começar a fazer uma town
 
 Futuro:
+Ver como ficar em relação ao dicionário nos players
+Refazer parte de passivas -> criar uma PassiveInstance, que tem uma referencia a passiva base
+Salvar um histórico de cada turno no BattleController
+Refazer o block como statuseffect(?)
 Ver como vai ser em relação a stackable/item/slot (prob. usar peso, ter que fazer tela de dropar algo do inventário depois da batalha. dois menus com setas de trocar entre (loot) -> <- (inventario)
 Alterar todas as instancias de skill no menu pra PlayerSkill. Adicionar campo de default target na skill
 Calcular melhor equip (ignorar passivas provavelmente, só pra ter algo basico simples, e pra poder usar na hora de desequipar)

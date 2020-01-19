@@ -20,7 +20,19 @@ SpriteAtlas:
       readable: 0
       crunchedCompression: 0
       sRGB: 1
-    platformSettings: []
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 4
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
     packingSettings:
       serializedVersion: 2
       padding: 8
@@ -36,11 +48,11 @@ SpriteAtlas:
     - {fileID: 102900000, guid: a364e2119c02a04b08f112fe42484f5d, type: 3}
     - {fileID: 102900000, guid: 25d004b12996d6bae96280dc6434c01a, type: 3}
     - {fileID: 102900000, guid: 141b290aea3a31e43a73c414388a1d46, type: 3}
-    totalSpriteSurfaceArea: 8459350
+    totalSpriteSurfaceArea: 8471638
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
-      Hash: 372a89df3440c1548aaec7904ee32448
+      Hash: 082ae3c8f81eb3bf243a1821226da214
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: -5688778235776760195, guid: a7bfba7004a025ef1b2b599aaf095f6f, type: 3}
@@ -5079,6 +5091,9 @@ SpriteAtlas:
   - {fileID: 1625216065112836408, guid: c074bca8d9dfa2c4583477b7d8429cf4, type: 3}
   - {fileID: -8728395592042206452, guid: c074bca8d9dfa2c4583477b7d8429cf4, type: 3}
   - {fileID: 4969162799273008732, guid: c074bca8d9dfa2c4583477b7d8429cf4, type: 3}
+  - {fileID: -549963974979817573, guid: 079e6c8917daeb14db9e634195da6772, type: 3}
+  - {fileID: 8330546680854303654, guid: 079e6c8917daeb14db9e634195da6772, type: 3}
+  - {fileID: -1825501033178363164, guid: 079e6c8917daeb14db9e634195da6772, type: 3}
   - {fileID: 21300000, guid: aa7ff70b74de881438ff4a79bf974257, type: 3}
   - {fileID: 21300000, guid: 118b411bf2af0a912af495d5e33078c5, type: 3}
   - {fileID: 1215252773325540923, guid: d18a304b2af0324fc97f3569d2eff3ab, type: 3}
@@ -10271,6 +10286,9 @@ SpriteAtlas:
   - ruindungeons_sheet_full_1027
   - ruindungeons_sheet_full_1067
   - ruindungeons_sheet_full_1077
+  - Mage_Idle_Sword_Fire_2
+  - Mage_Idle_Sword_Fire_0
+  - Mage_Idle_Sword_Fire_1
   - 9slicesimple2
   - Slime Earthi
   - chara1_62
