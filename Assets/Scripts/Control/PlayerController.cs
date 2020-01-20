@@ -110,6 +110,10 @@ public class PlayerController : AsyncMonoBehaviour
             MovementSpeed = 10;
         if (Input.GetKeyUp(KeyCode.LeftShift))
             MovementSpeed = 5;
+        if (Input.GetKeyDown(KeyCode.Z))
+            GameSaveController.Save();
+        if (Input.GetKeyDown(KeyCode.X))
+            GameSaveController.Load();
     }
 
     private void FixedUpdate()
@@ -210,6 +214,7 @@ public class PlayerController : AsyncMonoBehaviour
 
     private void TryInteract()
     {
+        Debug.Log("Trying to Interact");
         var mask = LayerMask.GetMask("Interactable");
 
         var ray = Physics2D.Raycast(transform.position, Front, 1f, mask);
@@ -217,12 +222,17 @@ public class PlayerController : AsyncMonoBehaviour
         if (ray.collider != null)
         {
             var interactableObject = ray.collider.gameObject;
+            Debug.Log($"Interacting with {interactableObject.name}");
             var interactable = interactableObject.GetComponent<Interactable>();
 
             if (interactable == null || interactable.interactableType != Interactable.InteractableType.Action)
                 return;
 
             interactable.Interact();
+        }
+        else
+        {
+            Debug.Log("No interactables found");
         }
     }
 

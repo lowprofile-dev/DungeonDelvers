@@ -23,30 +23,9 @@ MonoBehaviour:
     SerializationNodes:
     - Name: DatabaseVersion
       Entry: 3
-      Data: 2
+      Data: 1
   _databases:
   - DatabaseVersion: 1
-    CharacterBases:
-    - {fileID: 11400000, guid: fb1fbb4bb0c7667e6833f3be9cba04f4, type: 2}
-    - {fileID: 11400000, guid: 42485ac7352004c6a8bc01c3505ca003, type: 2}
-    - {fileID: 11400000, guid: f9f6f4482b3fd3e9ebc8cd7b92caaeca, type: 2}
-    - {fileID: 11400000, guid: f77e24618f897f945a0248b51cc1267f, type: 2}
-    Items:
-    - {fileID: 11400000, guid: 59b0a2f636fdc911c9db9e508c90caa7, type: 2}
-    - {fileID: 11400000, guid: 094b5d9b7b2c21647aca654a0c96f9d6, type: 2}
-    - {fileID: 11400000, guid: f0ca1d086742b68698d5f98d7810133b, type: 2}
-    - {fileID: 11400000, guid: 2a3b2a73d678e48499cd599ebdff4dc8, type: 2}
-    - {fileID: 11400000, guid: b0e6cecf1cf6931428076f844271ed3c, type: 2}
-    Passives:
-    - {fileID: 11400000, guid: 8a26a5680e5ca86439fb5271297e9113, type: 2}
-    Skills:
-    - {fileID: 11400000, guid: 66006c83b7492c845b3abe6274d06cf3, type: 2}
-    - {fileID: 11400000, guid: 49b227031f2f8b946a474b091b43415c, type: 2}
-    - {fileID: 11400000, guid: a3015c475e6056e4fa1ef63b6e535bdc, type: 2}
-    - {fileID: 11400000, guid: 3aae108ae71cbf1168a17aba33a4c8d7, type: 2}
-    Monsters:
-    - {fileID: 11400000, guid: f9f9289286f67e94daf87a2905a5530c, type: 2}
-  - DatabaseVersion: 2
     CharacterBases:
     - {fileID: 11400000, guid: fb1fbb4bb0c7667e6833f3be9cba04f4, type: 2}
     - {fileID: 11400000, guid: 42485ac7352004c6a8bc01c3505ca003, type: 2}
@@ -61,10 +40,12 @@ MonoBehaviour:
     - {fileID: 11400000, guid: b0e6cecf1cf6931428076f844271ed3c, type: 2}
     Passives:
     - {fileID: 11400000, guid: 8a26a5680e5ca86439fb5271297e9113, type: 2}
+    - {fileID: 11400000, guid: 79e7ea72cf7c64d4c81bded7dfe5a492, type: 2}
     Skills:
     - {fileID: 11400000, guid: 66006c83b7492c845b3abe6274d06cf3, type: 2}
     - {fileID: 11400000, guid: 49b227031f2f8b946a474b091b43415c, type: 2}
     - {fileID: 11400000, guid: 7c0fad4566e35a76084b955df4440a36, type: 2}
+    - {fileID: 11400000, guid: 7886eed0d57c1c056967d523c2d0571f, type: 2}
     - {fileID: 11400000, guid: a3015c475e6056e4fa1ef63b6e535bdc, type: 2}
     - {fileID: 11400000, guid: 3aae108ae71cbf1168a17aba33a4c8d7, type: 2}
     Monsters:

@@ -3025,7 +3025,7 @@ MonoBehaviour:
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
-  WeaponTypes: 00000000
+  WeaponTypes: 04000000
   ArmorTypes: 
   Weapon: {fileID: 11400000, guid: 373382c6db6fb8ae2b359c1ece2d6613, type: 2}
   Head: {fileID: 0}

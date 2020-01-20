@@ -1,4 +1,4 @@
-
+Arrumar mainmenu/battlecanvas para fazerem parte do maincanvas e terem cleanup em vez de serem instanciados.
 
 Fazer o jogo pseudo-funcional:
 	Tela inicial, que procura se tem save.

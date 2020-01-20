@@ -25,14 +25,13 @@ public class GameDatabase : SerializedScriptableObject
             return _instance;
         }
     }
-    
+
     [SerializeField] private List<Database> _databases;
     [SerializeField] public int DatabaseVersion { get; private set; }
 
     public static Database Database =>
         Instance._databases.FirstOrDefault(database => database.DatabaseVersion == Instance.DatabaseVersion);
-
-
+    
 #if UNITY_EDITOR
     [Button("Build Database", ButtonSizes.Gigantic), PropertyOrder(-999)]
     public void BuildDatabase()
@@ -48,7 +47,7 @@ public class GameDatabase : SerializedScriptableObject
             {
                 database.DatabaseVersion = 1;
             }
-
+            
             var characters = Resources.LoadAll<CharacterBase>("").Where(character => !character.databaseIgnore)
                 .ToArray();
             for (int i = 0; i < characters.Length; i++)
@@ -89,6 +88,7 @@ public class GameDatabase : SerializedScriptableObject
             }
 
             database.Monsters.AddRange(monsters);
+
             _databases.Add(database);
         }
         catch (Exception e)

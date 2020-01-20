@@ -49,6 +49,7 @@ MonoBehaviour:
     type: 3}
   itemName: Potion (S)
   goldValue: 5
+  droppable: 1
   itemText: Small Potion
   maxStack: 9
   ItemSkill: {fileID: 11400000, guid: 3aae108ae71cbf1168a17aba33a4c8d7, type: 2}

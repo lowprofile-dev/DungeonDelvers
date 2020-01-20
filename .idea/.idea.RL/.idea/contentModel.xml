@@ -298,6 +298,7 @@
           </e>
           <e p="Control" t="Include">
             <e p="AsyncMonoBehaviour.cs" t="Include" />
+            <e p="BackgroundColorOverride.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
             <e p="GameDatabase.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
@@ -323,12 +324,14 @@
               <e p="BranchInteraction.cs" t="Include" />
               <e p="CallInteractableInteraction.cs" t="Include" />
               <e p="DestroyObjectInteraction.cs" t="Include" />
+              <e p="FadeInteraction.cs" t="Include" />
               <e p="MessageBoxInteraction.cs" t="Include" />
               <e p="MultipleInteraction.cs" t="Include" />
               <e p="PlayAnimationInteraction.cs" t="Include" />
               <e p="PlaySoundInteraction.cs" t="Include" />
               <e p="SetKeyInteraction.cs" t="Include" />
               <e p="StartBattleInteraction.cs" t="Include" />
+              <e p="TeleportInteraction.cs" t="Include" />
               <e p="ToggleComponentActiveInteraction.cs" t="Include" />
               <e p="WaitForKeyPressInteraction.cs" t="Include" />
             </e>
@@ -432,6 +435,7 @@
               <e p="MasteryButton.cs" t="Include" />
               <e p="MasteryMenu.cs" t="Include" />
             </e>
+            <e p="MainCanvas.cs" t="Include" />
             <e p="MessageBox.cs" t="Include" />
             <e p="StartMenu.cs" t="Include" />
           </e>

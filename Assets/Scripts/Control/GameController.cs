@@ -12,6 +12,8 @@ public class GameController : AsyncMonoBehaviour
 {
     public static GameController Instance { get; private set; }
     public GameObject AnimationObjectBase;
+    public GameObject PlayerPrefab;
+    public GameObject CameraPrefab;
 
     [HideInInspector] public UnityEvent OnBeginEncounter;
     [HideInInspector] public UnityEvent OnEndEncounter;
@@ -26,9 +28,15 @@ public class GameController : AsyncMonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(this);
+        
+        if (PlayerController.Instance == null)
+            Instantiate(PlayerPrefab);
+        if (TrackPlayer.Instance == null)
+            Instantiate(CameraPrefab);
     }
 
     public Dictionary<string, int> Globals = new Dictionary<string, int>();
+    public Dictionary<int,int> Seeds = new Dictionary<int,int>();
 
     public static int GetGlobal(string key)
     {

@@ -139,6 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f233b5b29ff8fe4cafa06ab4f887379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 19635246577722892}
   Track: 1
   Offset: {x: 0, y: 0}
   Player: {fileID: 0}

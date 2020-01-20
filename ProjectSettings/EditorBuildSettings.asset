@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/test_sandbox/sandbox.unity
+    guid: 97940c113d41c6648a2743ee51fa2015
+  - enabled: 1
     path: Assets/test_sandbox/debuggen.unity
     guid: 317521f3cd46e1c4e98e47f39a9f7a15
   m_configObjects: {}

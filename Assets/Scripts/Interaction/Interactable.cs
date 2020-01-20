@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 
 public class Interactable : SerializedMonoBehaviour
@@ -13,7 +14,7 @@ public class Interactable : SerializedMonoBehaviour
     public List<Interaction> Interactions = new List<Interaction>();
     [ReadOnly] public bool IsInteracting = false;
     
-    public Dictionary<string, int> Locals = new Dictionary<string, int>();
+    //public Dictionary<string, int> Locals = new Dictionary<string, int>();
 
     private void Awake()
     {
@@ -41,36 +42,44 @@ public class Interactable : SerializedMonoBehaviour
 
     private void Start()
     {
-        ReloadLocals();
+        //ReloadLocals();
         StartCoroutine(_Interact(StartupInteractions, null));
     }
 
     private void ReloadLocals()
     {
-        var key = $"LOCAL{name}_";
-        var keyLength = key.Length;
-
-        var locals = GameController.Instance.Globals.Keys.Where(globalKey => globalKey.StartsWith(key));
-
-        foreach (var local in locals)
-        {
-            var value = GameController.GetGlobal(local);
-            var localName = local.Remove(0, keyLength);
-
-            Locals[localName] = value;
-
-            Debug.Log($"Reloading local {localName} ({local})");
-        }
+//        var key = $"LOCAL{name}_";
+//        var keyLength = key.Length;
+//
+//        var locals = GameController.Instance.Globals.Keys.Where(globalKey => globalKey.StartsWith(key));
+//
+//        foreach (var local in locals)
+//        {
+//            var value = GameController.GetGlobal(local);
+//            var localName = local.Remove(0, keyLength);
+//
+//            Locals[localName] = value;
+//
+//            Debug.Log($"Reloading local {localName} ({local})");
+//        }
     }
 
+    private string LocalKeyToGlobalKey(string localKey)
+    {
+        return $"LOCAL{name}_{localKey}";
+    }
+    
     public int GetLocal(string key)
     {
-        if (!Locals.ContainsKey(key))
-            Locals[key] = 0;
-        return Locals[key];
+        var globalKey = LocalKeyToGlobalKey(key);
+        return GameController.GetGlobal(globalKey);
     }
 
-    public void SetLocal(string key, int value) => Locals[key] = value;
+    public void SetLocal(string key, int value)
+    {
+        var globalKey = LocalKeyToGlobalKey(key);
+        GameController.SetGlobal(globalKey,value);
+    }
 
     public void Interact(bool isNested = false, Interactable parent = null)
     {
@@ -124,12 +133,17 @@ public class Interactable : SerializedMonoBehaviour
         if (IsInteracting)
             EndInteraction();
         
-        foreach (var local in Locals)
-        {
-            var globalName = $"LOCAL{name}_{local.Key}";
-            GameController.SetGlobal(globalName, local.Value);
-            Debug.Log($"Saving local {local} ({globalName})");
-        }
+        //UploadLocals();
+    }
+
+    public void UploadLocals()
+    {
+//        foreach (var local in Locals)
+//        {
+//            var globalName = $"LOCAL{name}_{local.Key}";
+//            GameController.SetGlobal(globalName, local.Value);
+//            Debug.Log($"Saving local {local} ({globalName})");
+//        }
     }
 
     private void StartInteraction()

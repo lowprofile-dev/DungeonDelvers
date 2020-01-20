@@ -25,7 +25,7 @@ MonoBehaviour:
   databaseIgnore: 0
   itemIcon: {fileID: -1339902739103129484, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
-  itemName: 2h Sword
+  itemName: Staff
   goldValue: 0
   droppable: 1
   itemText: 

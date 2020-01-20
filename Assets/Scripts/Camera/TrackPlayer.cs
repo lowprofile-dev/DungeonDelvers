@@ -5,11 +5,26 @@ using UnityEngine;
 
 public class TrackPlayer : MonoBehaviour
 {
+    public static TrackPlayer Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            DestroyImmediate(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
+
+    public Camera camera;
     public bool Track = true;
     public Vector2 Offset = new Vector2(0, 0);
     public Transform Player;
     private new Rigidbody2D rigidbody2D;
     public float TrackSpeed;
+
     private void Start()
     {
         DontDestroyOnLoad(this);
