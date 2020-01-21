@@ -19,13 +19,11 @@ public class FadeInteraction : Interaction
 
     private IEnumerator FadeInCoroutine()
     {
-        Debug.Log("a");
         var elapsedTime = 0f;
         var fade = MainCanvas.Instance.FadeImage;
 
         while (fade.enabled && fade.color.a > 0)
         {
-            Debug.Log("loopin");
             var frameTime = Time.deltaTime;
             elapsedTime += frameTime;
             var framePercentage = 1 - (elapsedTime / Duration);
@@ -40,13 +38,11 @@ public class FadeInteraction : Interaction
 
     private IEnumerator FadeOutCoroutine()
     {
-        Debug.Log("b");
         var elapsedTime = 0f;
         var fade = MainCanvas.Instance.FadeImage;
 
         while (fade.enabled && fade.color.a < 1)
         {
-            Debug.Log("loopout");
             var frameTime = Time.deltaTime;
             elapsedTime += frameTime;
             var framePercentage = elapsedTime / Duration;

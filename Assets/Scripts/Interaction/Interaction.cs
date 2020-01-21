@@ -6,6 +6,7 @@ using UnityEngine;
 
 public abstract class Interaction
 {
+    public bool SkipWaiting = false;
     public abstract void Run(Interactable source);
     public virtual void Cleanup() { }
     public abstract IEnumerator Completion { get; }

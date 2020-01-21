@@ -99,10 +99,9 @@ public class Interactable : SerializedMonoBehaviour
         var source = parent != null ? parent : this;
         foreach (var interaction in interactions)
         {
-            //yield return null;
             interaction.Run(source);
             var completion = interaction.Completion;
-            if (completion != null)
+            if (completion != null && interaction.SkipWaiting == false)
                 yield return completion;
             interaction.Cleanup();
         }
@@ -120,7 +119,7 @@ public class Interactable : SerializedMonoBehaviour
             //yield return null;
             interaction.Run(source);
             var completion = interaction.Completion;
-            if (completion != null)
+            if (completion != null && interaction.SkipWaiting == false)
                 yield return completion;
             interaction.Cleanup();
         }

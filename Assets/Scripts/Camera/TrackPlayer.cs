@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrackPlayer : MonoBehaviour
+public class TrackPlayer : MonoBehaviour, IMapSettingsListener
 {
     public static TrackPlayer Instance { get; private set; }
 
@@ -42,5 +42,10 @@ public class TrackPlayer : MonoBehaviour
 
         var delta = Player.position - transform.position + (Vector3)Offset;
         rigidbody2D.velocity = delta * TrackSpeed;
+    }
+
+    public void ApplyMapSettings(MapSettings mapSettings)
+    {
+        camera.backgroundColor = mapSettings.OverrideBackgroundColor;
     }
 }
