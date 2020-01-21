@@ -1,4 +1,5 @@
 Arrumar mainmenu/battlecanvas para fazerem parte do maincanvas e terem cleanup em vez de serem instanciados.
+Mudar o backrroundcoloroverride pra um MapSettings, que tem os encounters e tal (pra mudar encounter só fazer um trigger na sala que faz isso).
 
 Fazer o jogo pseudo-funcional:
 	Tela inicial, que procura se tem save.

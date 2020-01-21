@@ -301,6 +301,7 @@
             <e p="BackgroundColorOverride.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
             <e p="GameDatabase.cs" t="Include" />
+            <e p="MapSettings.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="SerializableAsset.cs" t="Include" />
             <e p="SetUniqueName.cs" t="Include" />
