@@ -1,295 +1,295 @@
 fileFormatVersion: 2
-guid: 7bbefac0cc511364bbda879582028d8e
+guid: 23f40a9f859f6954a95e1465cb33b415
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4128261327662975977
-    second: chests_0
+      213: -8337281393119725202
+    second: blacksmith_0
   - first:
-      213: 7098417591714748056
-    second: chests_1
+      213: 4985709116817403318
+    second: blacksmith_1
   - first:
-      213: 4032033871735927925
-    second: chests_2
+      213: 9022655004868857870
+    second: blacksmith_2
   - first:
-      213: 9011289960348594601
-    second: chests_3
+      213: -1351862307091105770
+    second: blacksmith_3
   - first:
-      213: 6983191744819231628
-    second: chests_4
+      213: -4706598241568310797
+    second: blacksmith_4
   - first:
-      213: 3360777976935596823
-    second: chests_5
+      213: 4004983679022233800
+    second: blacksmith_5
   - first:
-      213: 2424983929796287158
-    second: chests_6
+      213: 716566025040699227
+    second: blacksmith_6
   - first:
-      213: -7583737851726763313
-    second: chests_7
+      213: 133815585985376420
+    second: blacksmith_7
   - first:
-      213: -2676174917004600479
-    second: chests_8
+      213: -8656902207366846496
+    second: blacksmith_8
   - first:
-      213: 3423162062024585544
-    second: chests_9
+      213: 7973058562625843597
+    second: blacksmith_9
   - first:
-      213: 4942452377479357786
-    second: chests_10
+      213: 4371555698627998308
+    second: blacksmith_10
   - first:
-      213: -4142809471852165686
-    second: chests_11
+      213: 3139513691669098749
+    second: blacksmith_11
   - first:
-      213: 1628204643719760110
-    second: chests_12
+      213: -8703974355314259059
+    second: blacksmith_12
   - first:
-      213: 3554250946983542004
-    second: chests_13
+      213: -6740119888540139739
+    second: blacksmith_13
   - first:
-      213: -1650437708545890937
-    second: chests_14
+      213: 4363600579097052679
+    second: blacksmith_14
   - first:
-      213: 5743116974164744705
-    second: chests_15
+      213: -8829566253206540945
+    second: blacksmith_15
   - first:
-      213: 7875333978410282761
-    second: chests_16
+      213: -6850584765329524210
+    second: blacksmith_16
   - first:
-      213: 2232977364189424843
-    second: chests_17
+      213: -2369479653941607352
+    second: blacksmith_17
   - first:
-      213: -9203097295571002407
-    second: chests_18
+      213: 493627996351340028
+    second: blacksmith_18
   - first:
-      213: -7619112384665863892
-    second: chests_19
+      213: 4490437517771009586
+    second: blacksmith_19
   - first:
-      213: -153901254206552889
-    second: chests_20
+      213: 4249558374420181322
+    second: blacksmith_20
   - first:
-      213: -3602751982879410286
-    second: chests_21
+      213: 8828309705820469871
+    second: blacksmith_21
   - first:
-      213: -3000146885995259492
-    second: chests_22
+      213: 4322799524636297911
+    second: blacksmith_22
   - first:
-      213: -5581046057798961653
-    second: chests_23
+      213: 6283439510747623232
+    second: blacksmith_23
   - first:
-      213: -6107237155707098978
-    second: chests_24
+      213: -7929411527258841608
+    second: blacksmith_24
   - first:
-      213: -137877382581593868
-    second: chests_25
+      213: -5270115686826754113
+    second: blacksmith_25
   - first:
-      213: 14154301566390615
-    second: chests_26
+      213: 886906396062285190
+    second: blacksmith_26
   - first:
-      213: 3800825119211780031
-    second: chests_27
+      213: -4742179761995332233
+    second: blacksmith_27
   - first:
-      213: -3995019248642528960
-    second: chests_28
+      213: -1165438749424058970
+    second: blacksmith_28
   - first:
-      213: 7101813511695110839
-    second: chests_29
+      213: 3283844277706204101
+    second: blacksmith_29
   - first:
-      213: -1800727503582564119
-    second: chests_30
+      213: -2755655333685729522
+    second: blacksmith_30
   - first:
-      213: -8643919096457619033
-    second: chests_31
+      213: 8698487946154067703
+    second: blacksmith_31
   - first:
-      213: 8751089041912577291
-    second: chests_32
+      213: -7077055899322936889
+    second: blacksmith_32
   - first:
-      213: 6027528426751870023
-    second: chests_33
+      213: 159936998250352796
+    second: blacksmith_33
   - first:
-      213: -6504142471472250594
-    second: chests_34
+      213: -3734745680461286656
+    second: blacksmith_34
   - first:
-      213: -4932857573672029202
-    second: chests_35
+      213: 675008778381456411
+    second: blacksmith_35
   - first:
-      213: -4558590775869890848
-    second: chests_36
+      213: 3532573564731500482
+    second: blacksmith_36
   - first:
-      213: 8700873016093472127
-    second: chests_37
+      213: -5068774475187996812
+    second: blacksmith_37
   - first:
-      213: -3909753356228967588
-    second: chests_38
+      213: -3714149510098038409
+    second: blacksmith_38
   - first:
-      213: -8322171294860262416
-    second: chests_39
+      213: -4560112842585923512
+    second: blacksmith_39
   - first:
-      213: 87626607473185575
-    second: chests_40
+      213: 614784662750811051
+    second: blacksmith_40
   - first:
-      213: -4453573490119954063
-    second: chests_41
+      213: 2262736621136977874
+    second: blacksmith_41
   - first:
-      213: -3941554626913532730
-    second: chests_42
+      213: 4619193415245093574
+    second: blacksmith_42
   - first:
-      213: -6517227965148772702
-    second: chests_43
+      213: 2615403635049338666
+    second: blacksmith_43
   - first:
-      213: -4699048170947264728
-    second: chests_44
+      213: 4790881228210844608
+    second: blacksmith_44
   - first:
-      213: 3713379189718969766
-    second: chests_45
+      213: 3648396678550151212
+    second: blacksmith_45
   - first:
-      213: 2665925064677352820
-    second: chests_46
+      213: 793815839317935259
+    second: blacksmith_46
   - first:
-      213: -3165163529163954975
-    second: chests_47
+      213: -8688300296521985150
+    second: blacksmith_47
   - first:
-      213: -3219887166854772892
-    second: chests_48
+      213: 3103410121325245876
+    second: blacksmith_48
   - first:
-      213: -7304459270621687878
-    second: chests_49
+      213: -3731377458304382591
+    second: blacksmith_49
   - first:
-      213: 4758046487547957990
-    second: chests_50
+      213: 6824573687059830547
+    second: blacksmith_50
   - first:
-      213: 2638421825273908169
-    second: chests_51
+      213: -1043264400606158132
+    second: blacksmith_51
   - first:
-      213: -8466002047748548874
-    second: chests_52
+      213: 284394504919011723
+    second: blacksmith_52
   - first:
-      213: 4545664291822339586
-    second: chests_53
+      213: -5052086495977571091
+    second: blacksmith_53
   - first:
-      213: -471958427270782953
-    second: chests_54
+      213: 7248496489241256104
+    second: blacksmith_54
   - first:
-      213: -8449297893014249751
-    second: chests_55
+      213: 4289165276412699082
+    second: blacksmith_55
   - first:
-      213: 392717655241331434
-    second: chests_56
+      213: 7324639595002872235
+    second: blacksmith_56
   - first:
-      213: 1922118716748013265
-    second: chests_57
+      213: 4837409552094097281
+    second: blacksmith_57
   - first:
-      213: 2886959430455053831
-    second: chests_58
+      213: 481270970321350063
+    second: blacksmith_58
   - first:
-      213: -4932308709109488271
-    second: chests_59
+      213: 3881200114757638861
+    second: blacksmith_59
   - first:
-      213: 4855048617539331729
-    second: chests_60
+      213: -6103387139605184319
+    second: blacksmith_60
   - first:
-      213: -4919175953992972649
-    second: chests_61
+      213: 8750753534195354047
+    second: blacksmith_61
   - first:
-      213: 8355092796722722360
-    second: chests_62
+      213: -8547364920547202687
+    second: blacksmith_62
   - first:
-      213: 2924573051577467738
-    second: chests_63
+      213: -4503409114097560766
+    second: blacksmith_63
   - first:
-      213: -409805222580482824
-    second: chests_64
+      213: 2452635838005615378
+    second: blacksmith_64
   - first:
-      213: 1464655235173485484
-    second: chests_65
+      213: -4523157163613679172
+    second: blacksmith_65
   - first:
-      213: 5614657165836047051
-    second: chests_66
+      213: -3744404996565942921
+    second: blacksmith_66
   - first:
-      213: 400434935861527745
-    second: chests_67
+      213: 7258684162536784790
+    second: blacksmith_67
   - first:
-      213: -3249241303882626538
-    second: chests_68
+      213: -2974265603002122766
+    second: blacksmith_68
   - first:
-      213: -1151249122647457508
-    second: chests_69
+      213: -5588396682589049137
+    second: blacksmith_69
   - first:
-      213: -2412923233218327707
-    second: chests_70
+      213: -7396570006216911291
+    second: blacksmith_70
   - first:
-      213: 1229062902590448978
-    second: chests_71
+      213: -3212160030298330825
+    second: blacksmith_71
   - first:
-      213: -8131900977435385485
-    second: chests_72
+      213: -8277677758204995024
+    second: blacksmith_72
   - first:
-      213: 5705998784210470321
-    second: chests_73
+      213: 8161332607914787180
+    second: blacksmith_73
   - first:
-      213: -5041517402482724655
-    second: chests_74
+      213: -8262379436056106858
+    second: blacksmith_74
   - first:
-      213: -3360687392477481852
-    second: chests_75
+      213: -2748366608773346015
+    second: blacksmith_75
   - first:
-      213: 6826236611909079902
-    second: chests_76
+      213: 2592239282135216895
+    second: blacksmith_76
   - first:
-      213: 1452925346113282514
-    second: chests_77
+      213: -2698531244456956012
+    second: blacksmith_77
   - first:
-      213: -692918935823637250
-    second: chests_78
+      213: 392351335222440747
+    second: blacksmith_78
   - first:
-      213: 6650617160002766750
-    second: chests_79
+      213: -1649505718794840914
+    second: blacksmith_79
   - first:
-      213: 1680298763863726645
-    second: chests_80
+      213: -1234819026214203422
+    second: blacksmith_80
   - first:
-      213: -1705763211376625879
-    second: chests_81
+      213: -6897180675817607497
+    second: blacksmith_81
   - first:
-      213: -1016568043094144161
-    second: chests_82
+      213: -873565879100097172
+    second: blacksmith_82
   - first:
-      213: 8116046001600263887
-    second: chests_83
+      213: 2119777712602543474
+    second: blacksmith_83
   - first:
-      213: -7626433981918539226
-    second: chests_84
+      213: -5458527508321378251
+    second: blacksmith_84
   - first:
-      213: -4988149851136086683
-    second: chests_85
+      213: -3839365435062464954
+    second: blacksmith_85
   - first:
-      213: 6868489072388388064
-    second: chests_86
+      213: -3594147026747777685
+    second: blacksmith_86
   - first:
-      213: -543879640970912055
-    second: chests_87
+      213: 8879454813678618199
+    second: blacksmith_87
   - first:
-      213: -3377875172087331466
-    second: chests_88
+      213: -5395341455411941684
+    second: blacksmith_88
   - first:
-      213: -7770528175587425781
-    second: chests_89
+      213: -5056642732011910212
+    second: blacksmith_89
   - first:
-      213: 9177954562211352016
-    second: chests_90
+      213: 3796260197059463330
+    second: blacksmith_90
   - first:
-      213: 5706241698137286600
-    second: chests_91
+      213: 927710822498681081
+    second: blacksmith_91
   - first:
-      213: 3286886432429058918
-    second: chests_92
+      213: 1093923631615372190
+    second: blacksmith_92
   - first:
-      213: -2681485578704177928
-    second: chests_93
+      213: 2269666686814230755
+    second: blacksmith_93
   - first:
-      213: -5163710070391356243
-    second: chests_94
+      213: 8378432507407753307
+    second: blacksmith_94
   - first:
-      213: -2085017918204145973
-    second: chests_95
+      213: -6039170267799963403
+    second: blacksmith_95
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -333,7 +333,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 21
+  spritePixelsToUnits: 18
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -374,13 +374,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chests_0
+      name: blacksmith_0
       rect:
         serializedVersion: 2
-        x: 13
+        x: 0
         y: 252
-        width: 15
-        height: 12
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -388,20 +388,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b437f8c92fc4ba41a066c44f10e08ae
-      internalID: -4128261327662975977
+      spriteID: a2108c87d408b9b4083a5f68e7c94693
+      internalID: -8337281393119725202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_1
+      name: blacksmith_1
       rect:
         serializedVersion: 2
-        x: 55
+        x: 38
         y: 252
-        width: 15
-        height: 12
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -409,20 +409,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74f1171499442ff41b1775c40eb7619c
-      internalID: 7098417591714748056
+      spriteID: 0989100ef9d93834f8a2ab7a2f6b503e
+      internalID: 4985709116817403318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_2
+      name: blacksmith_2
       rect:
         serializedVersion: 2
-        x: 97
+        x: 76
         y: 252
-        width: 15
-        height: 12
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -430,20 +430,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f063ad2836868954ca34de92b774a306
-      internalID: 4032033871735927925
+      spriteID: 69c9a238240c67049ba710b998cd50db
+      internalID: 9022655004868857870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_3
+      name: blacksmith_3
       rect:
         serializedVersion: 2
-        x: 137
+        x: 114
         y: 252
-        width: 19
-        height: 16
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -451,20 +451,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1901afe8101a1614c929c9a4a9f8a6bb
-      internalID: 9011289960348594601
+      spriteID: 1176588f76b2a234cb0e17205df3fe9a
+      internalID: -1351862307091105770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_4
+      name: blacksmith_4
       rect:
         serializedVersion: 2
-        x: 179
+        x: 152
         y: 252
-        width: 19
-        height: 16
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -472,20 +472,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e74e15fd60945843973071f9967f2c1
-      internalID: 6983191744819231628
+      spriteID: 79367f102182b5848bcfbe5b322c1322
+      internalID: -4706598241568310797
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_5
+      name: blacksmith_5
       rect:
         serializedVersion: 2
-        x: 221
+        x: 190
         y: 252
-        width: 19
-        height: 16
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -493,20 +493,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6cdaceeed5ca3b4bb76b2697e8d8e4a
-      internalID: 3360777976935596823
+      spriteID: ed70704e3513a9a4d9b0e949f18f6b20
+      internalID: 4004983679022233800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_6
+      name: blacksmith_6
       rect:
         serializedVersion: 2
-        x: 263
+        x: 228
         y: 252
-        width: 19
-        height: 18
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -514,20 +514,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d510844de061bc8448b534d9f5488849
-      internalID: 2424983929796287158
+      spriteID: 7126ed812e261374c821174a267e1ed2
+      internalID: 716566025040699227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_7
+      name: blacksmith_7
       rect:
         serializedVersion: 2
-        x: 305
+        x: 266
         y: 252
-        width: 19
-        height: 18
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -535,20 +535,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52b3d3dfe7143294880aaf7ae2a810df
-      internalID: -7583737851726763313
+      spriteID: 2b48a42fd1eac6d408ff99893244447c
+      internalID: 133815585985376420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_8
+      name: blacksmith_8
       rect:
         serializedVersion: 2
-        x: 347
+        x: 304
         y: 252
-        width: 19
-        height: 18
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -556,20 +556,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 436d5703dd19cee4f961f8177f1ab456
-      internalID: -2676174917004600479
+      spriteID: 71021007776f6af458e6966c2179a949
+      internalID: -8656902207366846496
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_9
+      name: blacksmith_9
       rect:
         serializedVersion: 2
-        x: 389
+        x: 342
         y: 252
-        width: 19
-        height: 18
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -577,20 +577,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30f3090d4c15da3459cfbe5b820d31f8
-      internalID: 3423162062024585544
+      spriteID: 096099ef1e42c9c4688861536868d4ef
+      internalID: 7973058562625843597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_10
+      name: blacksmith_10
       rect:
         serializedVersion: 2
-        x: 431
+        x: 380
         y: 252
-        width: 19
-        height: 18
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -598,20 +598,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0d466399d367c446bdd3fd2057add85
-      internalID: 4942452377479357786
+      spriteID: 843e6901af53986429cf4f6e664bc93a
+      internalID: 4371555698627998308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_11
+      name: blacksmith_11
       rect:
         serializedVersion: 2
-        x: 473
+        x: 418
         y: 252
-        width: 19
-        height: 18
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -619,20 +619,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a4b56fd4e7b22b40a67190db86cad2e
-      internalID: -4142809471852165686
+      spriteID: 6518fdd6d9ccc22428d9009dbf63b33d
+      internalID: 3139513691669098749
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_12
+      name: blacksmith_12
       rect:
         serializedVersion: 2
-        x: 13
+        x: 0
         y: 216
-        width: 15
-        height: 12
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -640,20 +640,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b48a42bfaff8f046ac03d0039b2dd4d
-      internalID: 1628204643719760110
+      spriteID: 6feb725c26dceed41865ea1d8b587130
+      internalID: -8703974355314259059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_13
+      name: blacksmith_13
       rect:
         serializedVersion: 2
-        x: 55
+        x: 38
         y: 216
-        width: 15
-        height: 12
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -661,20 +661,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d4a8e630ea21a74ebc0ae256a52f73d
-      internalID: 3554250946983542004
+      spriteID: 54c802b974e7465498d2ba8b7ad8bbe5
+      internalID: -6740119888540139739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_14
+      name: blacksmith_14
       rect:
         serializedVersion: 2
-        x: 97
+        x: 76
         y: 216
-        width: 15
-        height: 12
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -682,20 +682,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be4b46a0b615c6a499de9d4fe470cfa4
-      internalID: -1650437708545890937
+      spriteID: 5bd795dcbc2ab3049bcf40d1d4f66839
+      internalID: 4363600579097052679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_15
+      name: blacksmith_15
       rect:
         serializedVersion: 2
-        x: 137
+        x: 114
         y: 216
-        width: 19
-        height: 16
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -703,20 +703,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf24b562c13f83d47a529eb6b494937c
-      internalID: 5743116974164744705
+      spriteID: ec94194ebb3229e499cee561240f324b
+      internalID: -8829566253206540945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_16
+      name: blacksmith_16
       rect:
         serializedVersion: 2
-        x: 179
+        x: 152
         y: 216
-        width: 19
-        height: 16
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -724,20 +724,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcfb0d68c9e1ee947bbaefd564e3b2bb
-      internalID: 7875333978410282761
+      spriteID: 3503bb5131695b44794b9750897d1201
+      internalID: -6850584765329524210
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_17
+      name: blacksmith_17
       rect:
         serializedVersion: 2
-        x: 221
+        x: 190
         y: 216
-        width: 19
-        height: 16
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -745,20 +745,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d895951eac6bbd24bb2f7632a65af26f
-      internalID: 2232977364189424843
+      spriteID: 8b4ce56f0e746b6489c163d7e51c231d
+      internalID: -2369479653941607352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_18
+      name: blacksmith_18
       rect:
         serializedVersion: 2
-        x: 263
+        x: 228
         y: 216
-        width: 19
-        height: 18
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -766,20 +766,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ff26aeb0d0e05e4295b5bdfc5cac3ca
-      internalID: -9203097295571002407
+      spriteID: 2be56d0212d1ab64eae0fc87ebad1da3
+      internalID: 493627996351340028
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_19
+      name: blacksmith_19
       rect:
         serializedVersion: 2
-        x: 305
+        x: 266
         y: 216
-        width: 19
-        height: 18
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -787,20 +787,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb3dba248e9b0434f80b2387c5588c54
-      internalID: -7619112384665863892
+      spriteID: bf6a904ba8f7e444bbbd5a902cd88ba6
+      internalID: 4490437517771009586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_20
+      name: blacksmith_20
       rect:
         serializedVersion: 2
-        x: 347
+        x: 304
         y: 216
-        width: 19
-        height: 18
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -808,20 +808,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46f775909fee20d40a8d72ddcecaf12f
-      internalID: -153901254206552889
+      spriteID: fb35993cd5799b142bf3ba4dca9f814d
+      internalID: 4249558374420181322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_21
+      name: blacksmith_21
       rect:
         serializedVersion: 2
-        x: 389
+        x: 342
         y: 216
-        width: 19
-        height: 18
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -829,20 +829,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea7be767a17b65d4eaa43166f18cc315
-      internalID: -3602751982879410286
+      spriteID: 82b352375fd834741a1227a488c44102
+      internalID: 8828309705820469871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_22
+      name: blacksmith_22
       rect:
         serializedVersion: 2
-        x: 431
+        x: 380
         y: 216
-        width: 19
-        height: 18
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -850,20 +850,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e26cd588dc602b44bb72e757d4d6b221
-      internalID: -3000146885995259492
+      spriteID: deea3d256d9865b429bec7c16da74b8e
+      internalID: 4322799524636297911
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_23
+      name: blacksmith_23
       rect:
         serializedVersion: 2
-        x: 473
+        x: 418
         y: 216
-        width: 19
-        height: 18
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -871,20 +871,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c05061a2e4e35a24e989fc69162b6240
-      internalID: -5581046057798961653
+      spriteID: fe9cc33d393ac0c44afe783c06abde31
+      internalID: 6283439510747623232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_24
+      name: blacksmith_24
       rect:
         serializedVersion: 2
-        x: 13
+        x: 0
         y: 180
-        width: 15
-        height: 13
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -892,20 +892,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c51a92a14612f54c84c73c6a57e0f3f
-      internalID: -6107237155707098978
+      spriteID: 787dbcbaa64d77e4b86e0d7af57519c9
+      internalID: -7929411527258841608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_25
+      name: blacksmith_25
       rect:
         serializedVersion: 2
-        x: 55
+        x: 38
         y: 180
-        width: 15
-        height: 13
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -913,20 +913,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 835f543c4e195e345892825bdea2587d
-      internalID: -137877382581593868
+      spriteID: 12d4349b03d115044b8e8ef6eb6872e2
+      internalID: -5270115686826754113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_26
+      name: blacksmith_26
       rect:
         serializedVersion: 2
-        x: 97
+        x: 76
         y: 180
-        width: 15
-        height: 13
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -934,20 +934,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7eb0a498d23b8fd43863a12e89b0666b
-      internalID: 14154301566390615
+      spriteID: 9ff35ff621142b24681f883af81a8c33
+      internalID: 886906396062285190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_27
+      name: blacksmith_27
       rect:
         serializedVersion: 2
-        x: 137
+        x: 114
         y: 180
-        width: 19
-        height: 17
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -955,20 +955,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd881c254939f1e4ab56a53227c49260
-      internalID: 3800825119211780031
+      spriteID: 5c813e80c8192a548a9e7412c4c5b5cc
+      internalID: -4742179761995332233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_28
+      name: blacksmith_28
       rect:
         serializedVersion: 2
-        x: 179
+        x: 152
         y: 180
-        width: 19
-        height: 17
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -976,20 +976,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f911681404f6ea4780cf6b6a277fe31
-      internalID: -3995019248642528960
+      spriteID: 9a45b9290416db04a80d0d984f9db58e
+      internalID: -1165438749424058970
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_29
+      name: blacksmith_29
       rect:
         serializedVersion: 2
-        x: 221
+        x: 190
         y: 180
-        width: 19
-        height: 17
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -997,20 +997,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00c33567bde8d3f40b576e5d453b38b7
-      internalID: 7101813511695110839
+      spriteID: 23aaec5db05e1f949b8731265f9ae79c
+      internalID: 3283844277706204101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_30
+      name: blacksmith_30
       rect:
         serializedVersion: 2
-        x: 263
+        x: 228
         y: 180
-        width: 19
-        height: 19
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1018,20 +1018,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48da4d813e3435442b6310789bc372a3
-      internalID: -1800727503582564119
+      spriteID: a5c60b3e2b6121847b569fefea9057e4
+      internalID: -2755655333685729522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_31
+      name: blacksmith_31
       rect:
         serializedVersion: 2
-        x: 305
+        x: 266
         y: 180
-        width: 19
-        height: 19
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1039,20 +1039,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bb6154124226d1499800a0f520c158d
-      internalID: -8643919096457619033
+      spriteID: bb94f94dac550c74484dd550012efaf5
+      internalID: 8698487946154067703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_32
+      name: blacksmith_32
       rect:
         serializedVersion: 2
-        x: 347
+        x: 304
         y: 180
-        width: 19
-        height: 19
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1060,20 +1060,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cda3d8b74c071a4c8198875df96dfce
-      internalID: 8751089041912577291
+      spriteID: 868e13242c33fd544b2594f8bbdbd10a
+      internalID: -7077055899322936889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_33
+      name: blacksmith_33
       rect:
         serializedVersion: 2
-        x: 389
+        x: 342
         y: 180
-        width: 19
-        height: 19
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1081,20 +1081,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86d3eed1e9f6e48408d0af39f6e43208
-      internalID: 6027528426751870023
+      spriteID: 8758d8efd165c154088e0df0dbb30d4f
+      internalID: 159936998250352796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_34
+      name: blacksmith_34
       rect:
         serializedVersion: 2
-        x: 431
+        x: 380
         y: 180
-        width: 19
-        height: 19
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1102,20 +1102,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 86499bd9d3a34c547a8c48dbe61d91e8
-      internalID: -6504142471472250594
+      spriteID: 83f083c2543ee8b4bbb26da268c8bafb
+      internalID: -3734745680461286656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_35
+      name: blacksmith_35
       rect:
         serializedVersion: 2
-        x: 473
+        x: 418
         y: 180
-        width: 19
-        height: 19
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1123,20 +1123,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baf9106070616b349a3197cdcd2a5f0a
-      internalID: -4932857573672029202
+      spriteID: 756b745bb8591c44fa44a591996c328c
+      internalID: 675008778381456411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_36
+      name: blacksmith_36
       rect:
         serializedVersion: 2
-        x: 13
+        x: 0
         y: 144
-        width: 15
-        height: 13
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1144,20 +1144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74ba316beeacec9419b10cdccc46f672
-      internalID: -4558590775869890848
+      spriteID: 53ea1036a746684478618a2000a16039
+      internalID: 3532573564731500482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_37
+      name: blacksmith_37
       rect:
         serializedVersion: 2
-        x: 55
+        x: 38
         y: 144
-        width: 15
-        height: 13
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1165,20 +1165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6da78e090cb80d94994369182c4e6978
-      internalID: 8700873016093472127
+      spriteID: 9ddec7888c533874e9cb2e5d7252f591
+      internalID: -5068774475187996812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_38
+      name: blacksmith_38
       rect:
         serializedVersion: 2
-        x: 97
+        x: 76
         y: 144
-        width: 15
-        height: 13
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1186,20 +1186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7702870acfded748a5e4f7027597e92
-      internalID: -3909753356228967588
+      spriteID: fcfdca44d43daad43913088c8e81e9ad
+      internalID: -3714149510098038409
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_39
+      name: blacksmith_39
       rect:
         serializedVersion: 2
-        x: 137
+        x: 114
         y: 144
-        width: 19
-        height: 17
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1207,20 +1207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ec473473a2f77c45a65e874d594b3f1
-      internalID: -8322171294860262416
+      spriteID: 380a72f2cadbaa244856a01b493c7ae5
+      internalID: -4560112842585923512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_40
+      name: blacksmith_40
       rect:
         serializedVersion: 2
-        x: 179
+        x: 152
         y: 144
-        width: 19
-        height: 17
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1228,20 +1228,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 183e86e926e60f04e89ce769f67ce504
-      internalID: 87626607473185575
+      spriteID: 27b4c9a5965f3b244be404e28e8c6210
+      internalID: 614784662750811051
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_41
+      name: blacksmith_41
       rect:
         serializedVersion: 2
-        x: 221
+        x: 190
         y: 144
-        width: 19
-        height: 17
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1249,20 +1249,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55375c8f41916df4d98f6b1f3b7a07f2
-      internalID: -4453573490119954063
+      spriteID: a919761eb6fceeb44bbe43e6491baafd
+      internalID: 2262736621136977874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_42
+      name: blacksmith_42
       rect:
         serializedVersion: 2
-        x: 263
+        x: 228
         y: 144
-        width: 19
-        height: 19
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1270,20 +1270,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4ba5852254121b4e988b45c97d7a3a9
-      internalID: -3941554626913532730
+      spriteID: ebd618e6589272945a11a6140e6210ac
+      internalID: 4619193415245093574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_43
+      name: blacksmith_43
       rect:
         serializedVersion: 2
-        x: 305
+        x: 266
         y: 144
-        width: 19
-        height: 19
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1291,20 +1291,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1772082e15d65d6468ec5366f840c8e8
-      internalID: -6517227965148772702
+      spriteID: c0d4614a52ab2c9488ab578334f9ba1d
+      internalID: 2615403635049338666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_44
+      name: blacksmith_44
       rect:
         serializedVersion: 2
-        x: 347
+        x: 304
         y: 144
-        width: 19
-        height: 19
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1312,20 +1312,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06006a9c36142bd40845feea484419f1
-      internalID: -4699048170947264728
+      spriteID: 0d2f0c642183e494bb22357c14b1bd42
+      internalID: 4790881228210844608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_45
+      name: blacksmith_45
       rect:
         serializedVersion: 2
-        x: 389
+        x: 342
         y: 144
-        width: 19
-        height: 19
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1333,20 +1333,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ac861345129b2248b649a7bf37910d6
-      internalID: 3713379189718969766
+      spriteID: 2097a69cf19c6344898637249af33836
+      internalID: 3648396678550151212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_46
+      name: blacksmith_46
       rect:
         serializedVersion: 2
-        x: 431
+        x: 380
         y: 144
-        width: 19
-        height: 19
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1354,20 +1354,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b162e7cba319c854da29b0501914de6a
-      internalID: 2665925064677352820
+      spriteID: babcdbc3735ffae4bb8cfaf3610b80c1
+      internalID: 793815839317935259
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_47
+      name: blacksmith_47
       rect:
         serializedVersion: 2
-        x: 473
+        x: 418
         y: 144
-        width: 19
-        height: 19
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1375,20 +1375,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df0e398999e2c9141a9d4a6fe1fe10bf
-      internalID: -3165163529163954975
+      spriteID: 0a93de50aa78aa544b73e0b425fedc9f
+      internalID: -8688300296521985150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_48
+      name: blacksmith_48
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 108
-        width: 21
-        height: 20
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1396,20 +1396,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c4aacd6ad849224ab4103e8add9a2dc
-      internalID: -3219887166854772892
+      spriteID: 956a880ebd46c5e46bb55849d67fedc8
+      internalID: 3103410121325245876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_49
+      name: blacksmith_49
       rect:
         serializedVersion: 2
-        x: 50
+        x: 38
         y: 108
-        width: 21
-        height: 20
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1417,20 +1417,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9863d548e473054fb4d7e355909e72b
-      internalID: -7304459270621687878
+      spriteID: 460b2ed6254a1c341af5331ce03fd91e
+      internalID: -3731377458304382591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_50
+      name: blacksmith_50
       rect:
         serializedVersion: 2
-        x: 92
+        x: 76
         y: 108
-        width: 21
-        height: 20
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1438,20 +1438,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dad2813a8eb605143b6a671bb1ce0b31
-      internalID: 4758046487547957990
+      spriteID: 0f917ad8ce6010b4fb36253c5bb3e5ad
+      internalID: 6824573687059830547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_51
+      name: blacksmith_51
       rect:
         serializedVersion: 2
-        x: 134
+        x: 114
         y: 108
-        width: 25
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1459,20 +1459,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06ad3c91af484e2478158a9b35321187
-      internalID: 2638421825273908169
+      spriteID: 18385f5d9d1b06147b5df91501721e11
+      internalID: -1043264400606158132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_52
+      name: blacksmith_52
       rect:
         serializedVersion: 2
-        x: 176
+        x: 152
         y: 108
-        width: 25
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1480,20 +1480,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bad4ceed3c3cc5479a084c8e23b2739
-      internalID: -8466002047748548874
+      spriteID: e12bbaf51e2a3a64fa5e34b2fa30834f
+      internalID: 284394504919011723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_53
+      name: blacksmith_53
       rect:
         serializedVersion: 2
-        x: 218
+        x: 190
         y: 108
-        width: 25
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1501,20 +1501,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db4e662b8e15f704b8364aef8373009e
-      internalID: 4545664291822339586
+      spriteID: ff106af4fe8d03c45980c3ffb0dd5be9
+      internalID: -5052086495977571091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_54
+      name: blacksmith_54
       rect:
         serializedVersion: 2
-        x: 259
+        x: 228
         y: 108
-        width: 27
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1522,20 +1522,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 267ee2fc1b180494982de9e7a8c099ea
-      internalID: -471958427270782953
+      spriteID: ea9e3d682701d2a4ea2d08515a9c3ad8
+      internalID: 7248496489241256104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_55
+      name: blacksmith_55
       rect:
         serializedVersion: 2
-        x: 301
+        x: 266
         y: 108
-        width: 27
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1543,20 +1543,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d56783566f434b40bc1b1d6d2c12db9
-      internalID: -8449297893014249751
+      spriteID: 465e72a6e00a4f546ae7f8b2e193e4ba
+      internalID: 4289165276412699082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_56
+      name: blacksmith_56
       rect:
         serializedVersion: 2
-        x: 343
+        x: 304
         y: 108
-        width: 27
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1564,20 +1564,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68d3544f750d215459e55e831771cd65
-      internalID: 392717655241331434
+      spriteID: 8d961fc8f8fe0d74f94b24876eec5cac
+      internalID: 7324639595002872235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_57
+      name: blacksmith_57
       rect:
         serializedVersion: 2
-        x: 385
+        x: 342
         y: 108
-        width: 27
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1585,20 +1585,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d03bd717b068c24baa08231a09365a7
-      internalID: 1922118716748013265
+      spriteID: bf34f687ecc24c14880e199646eb88f4
+      internalID: 4837409552094097281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_58
+      name: blacksmith_58
       rect:
         serializedVersion: 2
-        x: 427
+        x: 380
         y: 108
-        width: 27
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1606,20 +1606,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfea01a4acb83404d8e26056fe809e87
-      internalID: 2886959430455053831
+      spriteID: e32db44f984e60041862091f39d313d5
+      internalID: 481270970321350063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_59
+      name: blacksmith_59
       rect:
         serializedVersion: 2
-        x: 469
+        x: 418
         y: 108
-        width: 27
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1627,20 +1627,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3798eb7e63736354fbbea9638c58fefa
-      internalID: -4932308709109488271
+      spriteID: 78812e152e8d14e43a923828756fd350
+      internalID: 3881200114757638861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_60
+      name: blacksmith_60
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 72
-        width: 21
-        height: 20
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1648,20 +1648,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fd58380587b6164fb7ee5a7b815bb07
-      internalID: 4855048617539331729
+      spriteID: 0aee836290a26964daf128440cf83527
+      internalID: -6103387139605184319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_61
+      name: blacksmith_61
       rect:
         serializedVersion: 2
-        x: 50
+        x: 38
         y: 72
-        width: 21
-        height: 20
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1669,20 +1669,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fbd124e2189fb94390111dd7e927b2e
-      internalID: -4919175953992972649
+      spriteID: 5d49b406c4b7f144481966517602a5be
+      internalID: 8750753534195354047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_62
+      name: blacksmith_62
       rect:
         serializedVersion: 2
-        x: 92
+        x: 76
         y: 72
-        width: 21
-        height: 20
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1690,20 +1690,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 405653f45243f494e9a6d6314dd9edab
-      internalID: 8355092796722722360
+      spriteID: 388332b44b65d1f44b1ade48210ad3f6
+      internalID: -8547364920547202687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_63
+      name: blacksmith_63
       rect:
         serializedVersion: 2
-        x: 134
+        x: 114
         y: 72
-        width: 25
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1711,20 +1711,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4450f5133734b149bf701471ab9984b
-      internalID: 2924573051577467738
+      spriteID: ca5886e0dd0aff94a991839c99b5cfdb
+      internalID: -4503409114097560766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_64
+      name: blacksmith_64
       rect:
         serializedVersion: 2
-        x: 176
+        x: 152
         y: 72
-        width: 25
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1732,20 +1732,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5c4d168c6d6efd4581b56ce0d3c5572
-      internalID: -409805222580482824
+      spriteID: b54d62d7700bfe1448f734d7f9db4e04
+      internalID: 2452635838005615378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_65
+      name: blacksmith_65
       rect:
         serializedVersion: 2
-        x: 218
+        x: 190
         y: 72
-        width: 25
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1753,20 +1753,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f17152b06badcc478b8caa8d0c93a4f
-      internalID: 1464655235173485484
+      spriteID: 8912c4275c189a04bb6202c6f1dd6f93
+      internalID: -4523157163613679172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_66
+      name: blacksmith_66
       rect:
         serializedVersion: 2
-        x: 259
+        x: 228
         y: 72
-        width: 27
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1774,20 +1774,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 588e831c39ab79e43892a772ec633c50
-      internalID: 5614657165836047051
+      spriteID: 51bb01511c0149649aebeb516901f7d7
+      internalID: -3744404996565942921
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_67
+      name: blacksmith_67
       rect:
         serializedVersion: 2
-        x: 301
+        x: 266
         y: 72
-        width: 27
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1795,20 +1795,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bf6cb5dd57f86140b78c78208cfa260
-      internalID: 400434935861527745
+      spriteID: 7e2fa55329fbfa74ba229ce034d3b503
+      internalID: 7258684162536784790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_68
+      name: blacksmith_68
       rect:
         serializedVersion: 2
-        x: 343
+        x: 304
         y: 72
-        width: 27
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1816,20 +1816,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 161f75dfac5a5f24eaa2f41ec70c0b56
-      internalID: -3249241303882626538
+      spriteID: 6471a00f4b3cc1d4090d0c10a92dcb10
+      internalID: -2974265603002122766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_69
+      name: blacksmith_69
       rect:
         serializedVersion: 2
-        x: 385
+        x: 342
         y: 72
-        width: 27
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1837,20 +1837,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea795b0c6b2045f45aaad49d06725e8e
-      internalID: -1151249122647457508
+      spriteID: 0a2b1fc27a9862e43964e5d9aa6a6516
+      internalID: -5588396682589049137
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_70
+      name: blacksmith_70
       rect:
         serializedVersion: 2
-        x: 427
+        x: 380
         y: 72
-        width: 27
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1858,20 +1858,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12f5e0ecd33e374478f0c70a2ffe7221
-      internalID: -2412923233218327707
+      spriteID: 69576cb296949d94e856661e2c5078c2
+      internalID: -7396570006216911291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_71
+      name: blacksmith_71
       rect:
         serializedVersion: 2
-        x: 469
+        x: 418
         y: 72
-        width: 27
-        height: 22
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1879,20 +1879,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef276c01a49c2cc4b9ef655a699cc9f1
-      internalID: 1229062902590448978
+      spriteID: 8922471523cfcec47befeb909faa7a73
+      internalID: -3212160030298330825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_72
+      name: blacksmith_72
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 36
-        width: 21
-        height: 21
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1900,20 +1900,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee388fd229ec9644a8abbb8621e7424c
-      internalID: -8131900977435385485
+      spriteID: 795c8bf0e3fd3d54f82e48e7a940ad0d
+      internalID: -8277677758204995024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_73
+      name: blacksmith_73
       rect:
         serializedVersion: 2
-        x: 50
+        x: 38
         y: 36
-        width: 21
-        height: 21
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1921,20 +1921,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa46eb040b0a72f4da4b92e04876db93
-      internalID: 5705998784210470321
+      spriteID: f662efbbe14986c428e74dbb2da03f4e
+      internalID: 8161332607914787180
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_74
+      name: blacksmith_74
       rect:
         serializedVersion: 2
-        x: 92
+        x: 76
         y: 36
-        width: 21
-        height: 21
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1942,20 +1942,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d099972208e33b419af125d7d6d08b0
-      internalID: -5041517402482724655
+      spriteID: 720a4590db42ca244b9a47dd7db5e74b
+      internalID: -8262379436056106858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_75
+      name: blacksmith_75
       rect:
         serializedVersion: 2
-        x: 134
+        x: 114
         y: 36
-        width: 25
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1963,20 +1963,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd6725f95cc65ab4f93b05878346a168
-      internalID: -3360687392477481852
+      spriteID: d6f0988f5ae7f8a4db5a554d46041587
+      internalID: -2748366608773346015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_76
+      name: blacksmith_76
       rect:
         serializedVersion: 2
-        x: 176
+        x: 152
         y: 36
-        width: 25
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1984,20 +1984,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63b2d5cdfb567a8418a8afbfac72d89f
-      internalID: 6826236611909079902
+      spriteID: 532ecf578acab0b4eaa2dc8700c106f3
+      internalID: 2592239282135216895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_77
+      name: blacksmith_77
       rect:
         serializedVersion: 2
-        x: 218
+        x: 190
         y: 36
-        width: 25
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2005,20 +2005,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11863c07da662934fb742f337dc44a70
-      internalID: 1452925346113282514
+      spriteID: 1b450ee28a400af48bd5c52426f1d98f
+      internalID: -2698531244456956012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_78
+      name: blacksmith_78
       rect:
         serializedVersion: 2
-        x: 259
+        x: 228
         y: 36
-        width: 27
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2026,20 +2026,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d609031293a3484d8f04ebba935e18e
-      internalID: -692918935823637250
+      spriteID: 0ccdf7135dffdf144ad37d39eef5161c
+      internalID: 392351335222440747
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_79
+      name: blacksmith_79
       rect:
         serializedVersion: 2
-        x: 301
+        x: 266
         y: 36
-        width: 27
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2047,20 +2047,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 140a9c7fc04942f408dfa78dc802ef14
-      internalID: 6650617160002766750
+      spriteID: 37f977a9369ab634b8d9abe74e9c52d9
+      internalID: -1649505718794840914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_80
+      name: blacksmith_80
       rect:
         serializedVersion: 2
-        x: 343
+        x: 304
         y: 36
-        width: 27
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2068,20 +2068,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05aed471cd7e91f49a3dc2a1c5bc54d9
-      internalID: 1680298763863726645
+      spriteID: 1ccd5972575dbca43aea1f07790949be
+      internalID: -1234819026214203422
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_81
+      name: blacksmith_81
       rect:
         serializedVersion: 2
-        x: 385
+        x: 342
         y: 36
-        width: 27
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2089,20 +2089,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68a9f21e216a7784a9aaca102a378602
-      internalID: -1705763211376625879
+      spriteID: fb8e1ad4c677e554990a7c7f38288cea
+      internalID: -6897180675817607497
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_82
+      name: blacksmith_82
       rect:
         serializedVersion: 2
-        x: 427
+        x: 380
         y: 36
-        width: 27
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2110,20 +2110,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8494118c2ef6b5f4a8267c193a937c8b
-      internalID: -1016568043094144161
+      spriteID: a06a4572e526b0d439546ecd95189cec
+      internalID: -873565879100097172
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_83
+      name: blacksmith_83
       rect:
         serializedVersion: 2
-        x: 469
+        x: 418
         y: 36
-        width: 27
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2131,20 +2131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92fc6e4312e67624c9d36ce083acb239
-      internalID: 8116046001600263887
+      spriteID: 07697721b802fa449b06a6f0dd10c2c9
+      internalID: 2119777712602543474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_84
+      name: blacksmith_84
       rect:
         serializedVersion: 2
-        x: 8
+        x: 0
         y: 0
-        width: 21
-        height: 21
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2152,20 +2152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de8d878524f85d441ba808c49d96dc1b
-      internalID: -7626433981918539226
+      spriteID: daa24dba95b8fc444963dbfb615c3ebf
+      internalID: -5458527508321378251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_85
+      name: blacksmith_85
       rect:
         serializedVersion: 2
-        x: 50
+        x: 38
         y: 0
-        width: 21
-        height: 21
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2173,20 +2173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 732ae2d25d8c88e49bd49f11715e7b27
-      internalID: -4988149851136086683
+      spriteID: 026a96b7692ffe34d820311050bc2617
+      internalID: -3839365435062464954
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_86
+      name: blacksmith_86
       rect:
         serializedVersion: 2
-        x: 92
+        x: 76
         y: 0
-        width: 21
-        height: 21
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2194,20 +2194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be197a44710dee0438497490555ddebd
-      internalID: 6868489072388388064
+      spriteID: ea917a9b6542e9746b7cb7828fe8effb
+      internalID: -3594147026747777685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_87
+      name: blacksmith_87
       rect:
         serializedVersion: 2
-        x: 134
+        x: 114
         y: 0
-        width: 25
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2215,20 +2215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd6aad0cfee41064381b136babd181c5
-      internalID: -543879640970912055
+      spriteID: 7911640fb457b6e45b4dad7fc83f2d97
+      internalID: 8879454813678618199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_88
+      name: blacksmith_88
       rect:
         serializedVersion: 2
-        x: 176
+        x: 152
         y: 0
-        width: 25
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2236,20 +2236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de11b72802d57264f8f2cd574ccdbbd0
-      internalID: -3377875172087331466
+      spriteID: f30876bb989e7594880f77e0cf9c712e
+      internalID: -5395341455411941684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_89
+      name: blacksmith_89
       rect:
         serializedVersion: 2
-        x: 218
+        x: 190
         y: 0
-        width: 25
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2257,20 +2257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2517bdfe181cd0345aaf7550a930758a
-      internalID: -7770528175587425781
+      spriteID: 09c3fbbfde373f247a5a96c1bca1c4a9
+      internalID: -5056642732011910212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_90
+      name: blacksmith_90
       rect:
         serializedVersion: 2
-        x: 259
+        x: 228
         y: 0
-        width: 27
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2278,20 +2278,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cd976b34eed6da49a038b28826a55c6
-      internalID: 9177954562211352016
+      spriteID: e8e0b50ce01fbe24a894d4e02c5f750c
+      internalID: 3796260197059463330
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_91
+      name: blacksmith_91
       rect:
         serializedVersion: 2
-        x: 301
+        x: 266
         y: 0
-        width: 27
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2299,20 +2299,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c66c7d799ebf8d043a9dc706b680aefd
-      internalID: 5706241698137286600
+      spriteID: d9d2904e040b9714b9175a0c613fa746
+      internalID: 927710822498681081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_92
+      name: blacksmith_92
       rect:
         serializedVersion: 2
-        x: 343
+        x: 304
         y: 0
-        width: 27
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2320,20 +2320,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 439faa904a73b3048ac199663ad3d1b9
-      internalID: 3286886432429058918
+      spriteID: 3097aa3b070e1184ea3c7f3c0fda600d
+      internalID: 1093923631615372190
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_93
+      name: blacksmith_93
       rect:
         serializedVersion: 2
-        x: 385
+        x: 342
         y: 0
-        width: 27
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2341,20 +2341,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e810fcb9e8a25d4f811c66bef1d92a6
-      internalID: -2681485578704177928
+      spriteID: acccaaa10e5a48a4f8bddb4b179ca5ae
+      internalID: 2269666686814230755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_94
+      name: blacksmith_94
       rect:
         serializedVersion: 2
-        x: 427
+        x: 380
         y: 0
-        width: 27
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2362,20 +2362,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f7e1b6044fa0dc4985c0c311ef47758
-      internalID: -5163710070391356243
+      spriteID: 22b484d56485c7242b26b82da9448c42
+      internalID: 8378432507407753307
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chests_95
+      name: blacksmith_95
       rect:
         serializedVersion: 2
-        x: 469
+        x: 418
         y: 0
-        width: 27
-        height: 23
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2383,8 +2383,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e2e23deceeb09649af0eb0989536f65
-      internalID: -2085017918204145973
+      spriteID: e69fa849c31c36044bb71d773ecaa4d7
+      internalID: -6039170267799963403
       vertices: []
       indices: 
       edges: []
