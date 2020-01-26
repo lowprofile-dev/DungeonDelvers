@@ -5259,6 +5259,7 @@ GameObject:
   - component: {fileID: 430233334}
   - component: {fileID: 430233333}
   - component: {fileID: 430233332}
+  - component: {fileID: 430233335}
   m_Layer: 8
   m_Name: blacksmith_1
   m_TagString: Untagged
@@ -5281,7 +5282,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 5457389356766954974, guid: 987eb3dfcca3ea48e93d20d121103e54, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -5306,7 +5308,22 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 2|MessageBoxInteraction, Assembly-CSharp
+    - Name: SkipWaiting
+      Entry: 5
+      Data: false
+    - Name: Text
+      Entry: 1
+      Data: Hello
+    - Name: MessageBoxPrefab
+      Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -5380,6 +5397,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &430233335
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430233331}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.92}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.1111112, y: 2}
+    newSize: {x: 2, y: 1.8947369}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.82009125, y: 1.1632257}
+  m_EdgeRadius: 0
 --- !u!1 &513850368
 GameObject:
   m_ObjectHideFlags: 0
