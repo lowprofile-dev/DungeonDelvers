@@ -13,7 +13,18 @@ public class Shop : SerializedMonoBehaviour
 public struct ShopItem
 {
     public ItemBase Item;
-    public bool FixedPrice;
-    [ShowIf("FixedPrice")] public int Price;
-    [HideIf("FixedPrice")] public float PriceMultiplier;
+    public bool IsFixedPrice;
+    [ShowIf("IsFixedPrice")] public int FixedPrice;
+    [HideIf("IsFixedPrice")] public float PriceMultiplier;
+
+    public int Price
+    {
+        get
+        {
+            if (IsFixedPrice)
+                return Price;
+            else
+                return (int) (Item.goldValue * PriceMultiplier);
+        }
+    }
 }

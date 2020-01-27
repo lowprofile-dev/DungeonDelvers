@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class ShopMenu : MonoBehaviour
 {
+    public ShopInspector Inspector;
     public TMP_Text GoldText;
+    public RectTransform ItemLayout;
     public GameObject ItemPrefab;
     
     private void Start()
@@ -13,12 +15,22 @@ public class ShopMenu : MonoBehaviour
         UpdateGoldText();
     }
 
-    private void BuildItems()
+    public void OpenShopMenu(Shop shop)
     {
-        
+        BuildItems(shop.Items);
+    }
+    
+    private void BuildItems(IEnumerable<ShopItem> shopItems)
+    {
+        foreach (var shopItem in shopItems)
+        {
+            var itemObject = Instantiate(ItemPrefab, ItemLayout);
+            var shopButton = itemObject.GetComponent<ShopButton>();
+            shopButton.BuildButton(shopItem,this);
+        }
     }
 
-    private void UpdateGoldText()
+    public void UpdateGoldText()
     {
         GoldText.text = $"{PlayerController.Instance.CurrentGold}g";
     }

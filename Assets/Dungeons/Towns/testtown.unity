@@ -5260,6 +5260,7 @@ GameObject:
   - component: {fileID: 430233333}
   - component: {fileID: 430233332}
   - component: {fileID: 430233335}
+  - component: {fileID: 430233336}
   m_Layer: 8
   m_Name: blacksmith_1
   m_TagString: Untagged
@@ -5284,6 +5285,8 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 5457389356766954974, guid: 987eb3dfcca3ea48e93d20d121103e54, type: 3}
+    - {fileID: 430233336}
+    - {fileID: 7640681385663065397, guid: 2014795010362a74c8334521ee309dfd, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -5308,7 +5311,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 7
       Data: 2|MessageBoxInteraction, Assembly-CSharp
@@ -5318,6 +5321,36 @@ MonoBehaviour:
     - Name: Text
       Entry: 1
       Data: Hello
+    - Name: MessageBoxPrefab
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|OpenShopInteraction, Assembly-CSharp
+    - Name: SkipWaiting
+      Entry: 5
+      Data: false
+    - Name: shop
+      Entry: 10
+      Data: 1
+    - Name: ShopMenu
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|MessageBoxInteraction, Assembly-CSharp
+    - Name: SkipWaiting
+      Entry: 5
+      Data: false
+    - Name: Text
+      Entry: 1
+      Data: Goodbye
     - Name: MessageBoxPrefab
       Entry: 10
       Data: 0
@@ -5423,6 +5456,41 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.82009125, y: 1.1632257}
   m_EdgeRadius: 0
+--- !u!114 &430233336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430233331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5abfe2c85b204aaf9f568b004df8e819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  Items:
+  - Item: {fileID: 11400000, guid: 59b0a2f636fdc911c9db9e508c90caa7, type: 2}
+    IsFixedPrice: 1
+    FixedPrice: 50
+    PriceMultiplier: 0
+  - Item: {fileID: 11400000, guid: 094b5d9b7b2c21647aca654a0c96f9d6, type: 2}
+    IsFixedPrice: 1
+    FixedPrice: 99999
+    PriceMultiplier: 0
+  - Item: {fileID: 11400000, guid: f0ca1d086742b68698d5f98d7810133b, type: 2}
+    IsFixedPrice: 1
+    FixedPrice: 5
+    PriceMultiplier: 0
+  SellModifier: 0
 --- !u!1 &513850368
 GameObject:
   m_ObjectHideFlags: 0

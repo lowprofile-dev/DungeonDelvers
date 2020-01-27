@@ -1,18 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShopButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public ShopMenu ShopMenu;
+    public TMP_Text ItemName;
+    public TMP_Text ItemPrice;
+    public Image ItemImage;
+    public ShopItem ShopItem;
+    
+    public void BuildButton(ShopItem item, ShopMenu shopMenu)
     {
-        
+        ShopMenu = shopMenu;
+        ShopItem = item;
+        ItemName.text = item.Item.itemName;
+        ItemImage.sprite = item.Item.itemIcon;
+        ItemPrice.text = $"{item.Price}g";
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SelectItem()
     {
-        
+        ShopMenu.Inspector.InspectItem(ShopItem);
     }
 }

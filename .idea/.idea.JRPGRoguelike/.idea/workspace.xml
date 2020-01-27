@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d8eb85f-203a-42cc-a492-a61dc70ead53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/OpenShopInteraction.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/OpenShopInteraction.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/AStarPathfindingProjectPro.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/PlayMaker.unitypackage.meta" beforeDir="false" />
@@ -12,30 +13,16 @@
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/Unity NavMesh.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Samples/DungeonCrawler.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Dungeons/Towns/testtown.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dungeons/Towns/testtown.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chest.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chest/Chest.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chest/Chest.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chest/ChestAnimatorController.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chest/ChestAnimatorController.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chest/Closed.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chest/Closed.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chest/Open.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chest/Open.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chest/Opened.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Chest/Opened.anim.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Assassin/CharacterAnimations.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Mage/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Camera/TrackPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Camera/TrackPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/BackgroundColorOverride.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/BackgroundColorOverride.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/MenuEffects.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopInspector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopInspector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tilesets/House/House.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tilesets/House/House.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UI/Shop/Shop Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI/Shop/Shop Canvas.prefab" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +51,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MessageBox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/TrackPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryCondition/MasteryCondition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/BaseStatMasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/MasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
@@ -96,6 +84,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/SkillDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/OpenShopInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/CustomDrawerExample.cs" root0="FORCE_HIGHLIGHTING" />
@@ -128,15 +117,20 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/TrackTransform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryCondition/HasMasteryMasteryCondition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/MultipleInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/DestroyObjectInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/CharacterInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryItemButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryItemInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/PartyConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/GameSaveController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/WaitForKeyPressInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/GameDatabase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -149,11 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/ICondition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/BranchInteraction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/SetKeyInteraction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Conditions/ValueCondition.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/SkillDatabase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/DealDamageEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/FlatDamageEffect.cs" />
@@ -200,6 +189,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interaction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopButton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/OpenShopInteraction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" />
       </list>
     </option>
   </component>
@@ -277,6 +271,7 @@
       <workItem from="1578920954108" duration="4015000" />
       <workItem from="1579092742048" duration="5748000" />
       <workItem from="1579613747465" duration="2669000" />
+      <workItem from="1580129433353" duration="2575000" />
     </task>
     <servers />
   </component>

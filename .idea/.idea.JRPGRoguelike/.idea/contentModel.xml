@@ -324,6 +324,7 @@
               <e p="FadeInteraction.cs" t="Include" />
               <e p="MessageBoxInteraction.cs" t="Include" />
               <e p="MultipleInteraction.cs" t="Include" />
+              <e p="OpenShopInteraction.cs" t="Include" />
               <e p="PlayAnimationInteraction.cs" t="Include" />
               <e p="PlaySoundInteraction.cs" t="Include" />
               <e p="SetKeyInteraction.cs" t="Include" />
@@ -382,6 +383,9 @@
             <e p="InventoryConverter.cs" t="Include" />
             <e p="PartyConverter.cs" t="Include" />
           </e>
+          <e p="Shop" t="Include">
+            <e p="Shop.cs" t="Include" />
+          </e>
           <e p="Skills" t="Include">
             <e p="Effect.cs" t="Include" />
             <e p="Effects" t="Include">
@@ -434,6 +438,11 @@
             </e>
             <e p="MainCanvas.cs" t="Include" />
             <e p="MessageBox.cs" t="Include" />
+            <e p="Shop" t="Include">
+              <e p="ShopButton.cs" t="Include" />
+              <e p="ShopInspector.cs" t="Include" />
+              <e p="ShopMenu.cs" t="Include" />
+            </e>
             <e p="StartMenu.cs" t="Include" />
           </e>
           <e p="_Debug" t="Include">
