@@ -44,23 +44,6 @@ public class TilemapManager : SerializedMonoBehaviour
 
     private void MergeTilemaps()
     {
-        //var tilemaps = GameObject.FindObjectsOfType<Tilemap>();
-
-        //var types = tilemaps.Select(tilemap => tilemap.name).Distinct();
-
-        //var tilemapGroups = types.Select(type => tilemaps.Where(tilemap => tilemap.name == type).ToArray()).ToArray();
-
-        //foreach (var tilemapGroup in tilemapGroups)
-        //{
-        //    var mainTilemap = tilemapGroup[0];
-
-        //    for (int i = 1; i < tilemapGroup.Length; i++)
-        //    {
-        //        RelocateTiles(tilemapGroup[i], mainTilemap);
-        //    }
-
-        //    tilemapGroup.Except(new[] { mainTilemap }).Select(tilemap => tilemap.gameObject).ForEach(gO => Destroy(gO));
-        //}
         var Tilemaps = new Dictionary<string, Tilemap>();
 
         MainTilemaps.ForEach(mainTilemap => { Tilemaps.Add(mainTilemap.tag, mainTilemap); });
@@ -76,6 +59,9 @@ public class TilemapManager : SerializedMonoBehaviour
             tilemapsOfType.ForEach(tilemapOfType => RelocateTiles(tilemapOfType, mainTilemap));
         }
 
+        //Cleanup unused
+        tilemapsInScene.ForEach(tilemap => Destroy(tilemap.gameObject));
+        
         foreach (var tilemaps in Tilemaps.Values)
         {
             if (tilemaps.TryGetComponent<CompositeCollider2D>(out var compositeCollider2D))

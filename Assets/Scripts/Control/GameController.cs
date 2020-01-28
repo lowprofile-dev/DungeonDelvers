@@ -58,4 +58,10 @@ public class GameController : AsyncMonoBehaviour
 
         Instance.Globals[key] = value;
     }
+    
+#if UNITY_EDITOR
+
+    [ShowInInspector] private Sprite _currentFloorSprite => BattleController.Instance.GetPlayerGroundSprite();
+
+#endif
 }

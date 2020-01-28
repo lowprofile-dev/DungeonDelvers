@@ -113,12 +113,17 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
         
         var turnStartPassives =
             Passives.SelectMany(passive => passive.Effects.Where(effect => effect is ITurnStartPassiveEffect))
-                .OrderByDescending(effect => effect.Priority).Cast<ITurnStartPassiveEffect>();
+                .OrderByDescending(effect => effect.Priority).Cast<ITurnStartPassiveEffect>().ToArray();
+        
+        if (turnStartPassives.Any())
+            await QueueActionAndAwait(() => BattleController.Instance.battleCanvas.BindActionArrow(RectTransform));
         
         foreach (var turnStartPassive in turnStartPassives)
         {
             await turnStartPassive.OnTurnStart(this);
         }
+        
+        await QueueActionAndAwait(() => BattleController.Instance.battleCanvas.UnbindActionArrow());
     }
 
     public async Task TurnEnd()

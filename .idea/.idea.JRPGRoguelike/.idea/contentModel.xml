@@ -307,6 +307,7 @@
           </e>
           <e p="Generation" t="Include">
             <e p="TilemapManager.cs" t="Include" />
+            <e p="TransitionPoint.cs" t="Include" />
           </e>
           <e p="Interaction" t="Include">
             <e p="Conditions" t="Include">
@@ -331,6 +332,7 @@
               <e p="StartBattleInteraction.cs" t="Include" />
               <e p="TeleportInteraction.cs" t="Include" />
               <e p="ToggleComponentActiveInteraction.cs" t="Include" />
+              <e p="TransitionInteraction.cs" t="Include" />
               <e p="WaitForKeyPressInteraction.cs" t="Include" />
             </e>
           </e>

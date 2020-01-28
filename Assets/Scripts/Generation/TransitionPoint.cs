@@ -38,7 +38,8 @@ public class TransitionPoint : MonoBehaviour
                 break;
             }
         }
-        TransitionPlayer();
+        if (GameController.Instance != null)
+            TransitionPlayer();
     }
 
     private void TransitionPlayer()

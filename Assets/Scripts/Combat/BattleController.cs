@@ -14,7 +14,7 @@ using UnityEngine.Events;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
-public class BattleController : SerializedMonoBehaviour
+public class BattleController : AsyncMonoBehaviour
 {
     public static BattleController Instance { get; private set; }
 
@@ -160,6 +160,7 @@ public class BattleController : SerializedMonoBehaviour
         {
             PartyCommit();
             CancelBattle.Cancel();
+            Battle = null;
         }
     }
 
@@ -186,41 +187,52 @@ public class BattleController : SerializedMonoBehaviour
     
     async Task BattlerTurn(IBattler battler)
     {
-        await battler.TurnStart();
-
-        var turn = await battler.GetTurn();
-
-        var usedSkill = turn.Skill;
-        var targets = turn.Targets;
-
-        if (usedSkill != null)
+        try
         {
-            GameController.Instance.QueueAction(() => Debug.Log($"Skill: {usedSkill.SkillName}, Target: {targets.First()}"));
-            
-            await battler.ExecuteTurn(battler, usedSkill,
-                targets); //Usa a skill, toca a animação de usar a skill. Talvez botar pra ser dentro do GetTurn mesmo. Ver.
+            await battler.TurnStart();
 
-            //Roda a skill em todos os alvos em parelelo, espera todos eles retornarem os efeitos.
-            
-            //Dá problema quando usa uma skill que dá dano em vários alvos inimigos. Ver porque. Idealmente é pra usar isso
-            var effectResults =
-                await Task.WhenAll(targets.EachDo((target) => target.ReceiveSkill(battler, usedSkill)));
+            var turn = await battler.GetTurn();
 
-            // var effectResults = new List<IEnumerable<EffectResult>>();
-            //
-            // foreach (var target in targets)
-            // {
-            //     var effectResult = await target.ReceiveSkill(battler, usedSkill);
-            //     effectResults.Add(effectResult);
-            // }
-            
-            var concatResults = effectResults.SelectMany(x => x);
-            
-            await battler.AfterSkill(
-                concatResults); //Ex. caso tenha alguma interação com o que aconteceu. Ex. curar 2% do dano dado, que é afetado pela rolagem de dano, crits, erros, etc.
+            await QueueActionAndAwait(() => battleCanvas.UnbindActionArrow());
+
+            var usedSkill = turn.Skill;
+            var targets = turn.Targets;
+
+            if (usedSkill != null)
+            {
+                GameController.Instance.QueueAction(() =>
+                    Debug.Log($"Skill: {usedSkill.SkillName}, Target: {targets.First()}"));
+
+                await battler.ExecuteTurn(battler, usedSkill,
+                    targets); //Usa a skill, toca a animação de usar a skill. Talvez botar pra ser dentro do GetTurn mesmo. Ver.
+
+                //Roda a skill em todos os alvos em parelelo, espera todos eles retornarem os efeitos.
+
+                //Dá problema quando usa uma skill que dá dano em vários alvos inimigos. Ver porque. Idealmente é pra usar isso
+                var effectResults =
+                    await Task.WhenAll(targets.EachDo((target) => target.ReceiveSkill(battler, usedSkill)));
+
+                // var effectResults = new List<IEnumerable<EffectResult>>();
+                //
+                // foreach (var target in targets)
+                // {
+                //     var effectResult = await target.ReceiveSkill(battler, usedSkill);
+                //     effectResults.Add(effectResult);
+                // }
+
+                var concatResults = effectResults.SelectMany(x => x);
+
+                await battler.AfterSkill(
+                    concatResults); //Ex. caso tenha alguma interação com o que aconteceu. Ex. curar 2% do dano dado, que é afetado pela rolagem de dano, crits, erros, etc.
+            }
+
+            await battler.TurnEnd(); //Cleanup ou outros efeitos
         }
-
-        await battler.TurnEnd(); //Cleanup ou outros efeitos
+        catch (Exception e)
+        {
+            Debug.LogException(e);
+        }
+        
     }
 
     /// <summary>
@@ -245,7 +257,7 @@ public class BattleController : SerializedMonoBehaviour
         try
         {
             var tileMaps = GameObject.FindObjectsOfType<Tilemap>();
-            var groundTilemap = tileMaps.First(tilemap => tilemap.name == "Ground");
+            var groundTilemap = tileMaps.First(tilemap => tilemap.CompareTag("PG_Floor"));
             var playerPosition = PlayerController.Instance.transform.position;
             var playerTilemapPosition = groundTilemap.WorldToCell(playerPosition);
             var playerTile = groundTilemap.GetSprite(playerTilemapPosition);
