@@ -29,7 +29,7 @@ MonoBehaviour:
   Nodes:
   - Graph: {fileID: 11400000}
     TileSets:
-    - {fileID: 11400000, guid: 01c7da70afee27a449dc34c8bd7883d6, type: 2}
+    - {fileID: 11400000, guid: 55f594b9fbb0dad41bbbaa724f930303, type: 2}
     NodeType: 1
     Position: 0
     Label: Start
@@ -38,7 +38,7 @@ MonoBehaviour:
     LockPlacement: 0
   - Graph: {fileID: 11400000}
     TileSets:
-    - {fileID: 11400000, guid: 55f594b9fbb0dad41bbbaa724f930303, type: 2}
+    - {fileID: 11400000, guid: 01c7da70afee27a449dc34c8bd7883d6, type: 2}
     NodeType: 2
     Position: 1
     Label: Goal

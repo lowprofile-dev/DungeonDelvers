@@ -46,12 +46,21 @@ public class PlayerController : AsyncMonoBehaviour
     #region Vars
     [HideInEditorMode, ReadOnly] public int PartyLevel = 1;
     [HideInEditorMode, ReadOnly] public int CurrentExp = 0;
-    [HideInEditorMode] public int CurrentGold = 0;
+    public int CurrentGold = 0;
     [ShowInInspector] public int ExpToNextLevel => (int)(5 + 10 * PartyLevel + 4 * Mathf.Pow(PartyLevel - 1, 2));
     [HideInEditorMode] public List<Character> Party = new List<Character>();
     [HideInEditorMode] public List<Item> Inventory = new List<Item>();
     [ReadOnly] public GameObject OverworldCharacter;
-    [ReadOnly] public PlayerDirection Direction;
+    private PlayerDirection _direction;
+    [ShowInInspector] public PlayerDirection Direction
+    {
+        get { return _direction; }
+        set
+        {
+            _direction = value;
+            OverworldCharacterAnimator.SetInteger("Direction", (int)value);
+        }
+    }
     [ReadOnly] public PlayerState State;
     private Vector2 Front {
         get {

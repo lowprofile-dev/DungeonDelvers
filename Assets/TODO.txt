@@ -1,4 +1,6 @@
-Fazer Shop funcionando.
+Resolver:
+    Combate na dungeon não tem tile de chão
+    Combates após o primeiro bugam a interface.
 Completar cidade.
 Começar a fazer os monstros + boss.
 

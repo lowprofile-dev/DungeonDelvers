@@ -10,7 +10,7 @@ public class Shop : SerializedMonoBehaviour
 }
 
 [Serializable]
-public struct ShopItem
+public class ShopItem
 {
     public ItemBase Item;
     public bool IsFixedPrice;
@@ -22,7 +22,7 @@ public struct ShopItem
         get
         {
             if (IsFixedPrice)
-                return Price;
+                return FixedPrice;
             else
                 return (int) (Item.goldValue * PriceMultiplier);
         }

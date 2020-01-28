@@ -222,7 +222,7 @@ MonoBehaviour:
   - {fileID: 3172914235427743814}
   - {fileID: 5301217580938322033}
   socketGroup_obsolete: -1
-  socket: {fileID: -8663333301669936250, guid: f7b0ea6329e51e1488dd8222ebcb7fc7, type: 2}
+  socket: {fileID: -8556351885296041325, guid: f7b0ea6329e51e1488dd8222ebcb7fc7, type: 2}
   doorPrefab: {fileID: 0}
   doorComponent: {fileID: 0}
   tile: {fileID: 0}
@@ -4624,7 +4624,7 @@ MonoBehaviour:
   - {fileID: 4247397462235641952}
   - {fileID: 7739035629669090817}
   socketGroup_obsolete: -1
-  socket: {fileID: -8663333301669936250, guid: f7b0ea6329e51e1488dd8222ebcb7fc7, type: 2}
+  socket: {fileID: -8556351885296041325, guid: f7b0ea6329e51e1488dd8222ebcb7fc7, type: 2}
   doorPrefab: {fileID: 0}
   doorComponent: {fileID: 0}
   tile: {fileID: 0}

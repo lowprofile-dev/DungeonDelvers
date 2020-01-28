@@ -66,7 +66,8 @@ public class CharacterInspector : SerializedMonoBehaviour
 
         StatsText.text = newText;
 
-        MpText.text = MpText.text.Replace("%mp%", character.CurrentMp.ToString());
+        MpText.text = $"Mastery Points: {character.CurrentMp} unspent";
+        //MpText.text = MpText.text.Replace("%mp%", character.CurrentMp.ToString());
     }
 
     public void SetEquip(TMP_Text text, Equippable equippable)

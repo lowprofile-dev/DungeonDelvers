@@ -85,22 +85,6 @@ public class InventoryItemInspector : MonoBehaviour
         consumable.Quantity--;
         if (consumable.Quantity == 0)
         {
-            ////Evitar isso
-            //PlayerController.Instance.Inventory.Remove(consumable);
-            //Destroy(SelectedItem.gameObject);
-
-            //if (PlayerController.Instance.GetQuantityOfItem(consumable.ConsumableBase) != 0)
-            //{
-            //    var otherInstance =
-            //        InventoryMenu.ItemButtons.FindLast(itemButton =>
-            //            itemButton.GetComponent<InventoryItemButton>().item.Base == consumable.ConsumableBase);
-
-            //    Inspect(otherInstance.GetComponent<InventoryItemButton>());
-            //}
-            //else
-            //{
-            //    Inspect(null);
-            //}
             Destroy(SelectedItem.gameObject);
             Inspect(null);
         }
@@ -118,12 +102,15 @@ public class InventoryItemInspector : MonoBehaviour
             if (stackable.Quantity == 0)
             {
                 PlayerController.Instance.Inventory.Remove(SelectedItem.item);
-
-                if (PlayerController.Instance.GetQuantityOfItem(SelectedItem.item.Base) != 0)
+                var itemBase = SelectedItem.item.Base;
+                
+                Destroy(SelectedItem.gameObject);
+                
+                if (PlayerController.Instance.GetQuantityOfItem(itemBase) != 0)
                 {
                     var otherInstance =
                         InventoryMenu.ItemButtons.FindLast(itemButton =>
-                            itemButton.GetComponent<InventoryItemButton>().item.Base == SelectedItem.item.Base);
+                            itemButton.GetComponent<InventoryItemButton>().item.Base == itemBase);
 
                     Inspect(otherInstance.GetComponent<InventoryItemButton>());
                 }
@@ -131,8 +118,6 @@ public class InventoryItemInspector : MonoBehaviour
                 {
                     Inspect(null);
                 }
-
-                Destroy(SelectedItem.gameObject);
             }
             else
             {

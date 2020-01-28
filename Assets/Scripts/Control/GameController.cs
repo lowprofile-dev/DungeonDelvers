@@ -7,6 +7,7 @@ using Sirenix.OdinInspector;
 using SkredUtils;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameController : AsyncMonoBehaviour
 {
@@ -15,6 +16,8 @@ public class GameController : AsyncMonoBehaviour
     public GameObject PlayerPrefab;
     public GameObject CameraPrefab;
 
+    public TransitionPoint.PointType? Transition = null;
+    
     [HideInInspector] public UnityEvent OnBeginEncounter;
     [HideInInspector] public UnityEvent OnEndEncounter;
 
@@ -34,7 +37,7 @@ public class GameController : AsyncMonoBehaviour
         if (TrackPlayer.Instance == null)
             Instantiate(CameraPrefab);
     }
-
+    
     public Dictionary<string, int> Globals = new Dictionary<string, int>();
     public Dictionary<int,int> Seeds = new Dictionary<int,int>();
 

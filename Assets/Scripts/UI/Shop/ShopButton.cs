@@ -10,7 +10,7 @@ public class ShopButton : MonoBehaviour
     public TMP_Text ItemName;
     public TMP_Text ItemPrice;
     public Image ItemImage;
-    public ShopItem ShopItem;
+    public ShopItem ShopItem = null;
     
     public void BuildButton(ShopItem item, ShopMenu shopMenu)
     {
@@ -23,6 +23,6 @@ public class ShopButton : MonoBehaviour
 
     public void SelectItem()
     {
-        ShopMenu.Inspector.InspectItem(ShopItem);
+        ShopMenu.Inspect(ShopItem);
     }
 }

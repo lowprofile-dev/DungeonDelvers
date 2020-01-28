@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class ShopInspector : MonoBehaviour
 {
     public ShopMenu ShopMenu;
-    public ShopItem Item;
+    public ShopItem Item = null;
 
     public TMP_Text ItemName;
     public Image ItemImage;
@@ -15,8 +15,21 @@ public class ShopInspector : MonoBehaviour
     
     public void InspectItem(ShopItem shopItem)
     {
+        if (shopItem == null)
+        {
+            Item = null;
+            ItemName.text = "";
+            ItemDescription.text = "";
+            ItemPrice.text = "";
+            ItemImage.enabled = false;
+            BuyButton.interactable = false;
+            return;
+        }
+        
         var item = shopItem.Item;
         Item = shopItem;
+        ItemImage.enabled = true;
+        ItemImage.sprite = item.itemIcon;
         ItemName.text = item.name;
         ItemDescription.text = item.itemText;
         ItemPrice.text = $"{shopItem.Price}g";
@@ -25,15 +38,22 @@ public class ShopInspector : MonoBehaviour
         {
             BuyButton.interactable = false;
         }
+        else
+            BuyButton.interactable = true;
     }
 
     public void BuyItem()
     {
+        if (Item == null)
+            return;
+
+        var item = Item;
         var player = PlayerController.Instance;
-        if (player.CurrentGold >= Item.Price)
+
+        if (player.CurrentGold >= item.Price)
         {
-            player.CurrentExp -= Item.Price;
-            player.AddItemToInventory(Item.Item);
+            player.CurrentGold -= item.Price;
+            player.AddItemToInventory(item.Item);
             ShopMenu.UpdateGoldText();
         }
         else

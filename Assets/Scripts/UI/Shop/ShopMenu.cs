@@ -18,8 +18,14 @@ public class ShopMenu : MonoBehaviour
     public void OpenShopMenu(Shop shop)
     {
         BuildItems(shop.Items);
+        Inspect(null);
     }
-    
+
+    public void Inspect(ShopItem item)
+    {
+        Inspector.InspectItem(item);
+    }
+
     private void BuildItems(IEnumerable<ShopItem> shopItems)
     {
         foreach (var shopItem in shopItems)
