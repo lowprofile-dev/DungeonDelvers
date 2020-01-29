@@ -1,6 +1,3 @@
-Resolver:
-    Combate na dungeon não tem tile de chão
-    Combates após o primeiro bugam a interface.
 Completar cidade.
 Começar a fazer os monstros + boss.
 
@@ -12,6 +9,7 @@ Inicio de NPC (estáticos por enquanto, ver como fazer movimento depois.)
 Começar a fazer uma town
 
 Futuro:
+Resolver certas UIs mostrando detalhes placeholders antes de mostrar os corretos.
 Arrumar mainmenu/battlecanvas para fazerem parte do maincanvas e terem cleanup em vez de serem instanciados.
 Mudar o backrroundcoloroverride pra um MapSettings, que tem os encounters e tal (pra mudar encounter só fazer um trigger na sala que faz isso).
 Ver como ficar em relação ao dicionário nos players
@@ -25,7 +23,6 @@ Botar maneira de printar variável na text box.
 Mudar EP -> AP (Action Point)
 Deixar terminologia mais consistente
 Refazer o menu principal.
-Trocar Text -> TMP
 Arrumar database: uniqueIdentifier não é mais propriedade do item, e sim do database (dictionary)
 Ver Unit Testing, fazer modulos pra testar, pelo menos, a serialização.
 Limpar o fluxo do BattleController

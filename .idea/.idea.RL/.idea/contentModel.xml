@@ -451,6 +451,7 @@
             <e p="StartMenu.cs" t="Include" />
           </e>
         </e>
+        <e p="seeds.txt" t="Include" />
         <e p="Tayx" t="Include">
           <e p="Graphy - Ultimate Stats Monitor" t="Include">
             <e p="Changelog.txt" t="Include" />

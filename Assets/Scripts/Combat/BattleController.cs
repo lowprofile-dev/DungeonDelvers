@@ -126,6 +126,7 @@ public class BattleController : AsyncMonoBehaviour
         catch (Exception e)
         {
             CancelBattle.Cancel();
+            CancelBattle = new CancellationTokenSource();
             Debug.LogException(e);
             //GameController.Instance.QueueAction(() => Debug.LogException(e));
         }
@@ -160,6 +161,7 @@ public class BattleController : AsyncMonoBehaviour
         {
             PartyCommit();
             CancelBattle.Cancel();
+            CancelBattle = new CancellationTokenSource();
             Battle = null;
         }
     }
