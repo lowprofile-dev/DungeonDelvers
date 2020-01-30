@@ -33,7 +33,7 @@ public class RegenPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
 
         battler.QueueAction(() =>
         {
-            BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(PassiveSource.PassiveName);
+            BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(PassiveSource.GetName);
             //BattleController.Instance.battleCanvas.BindActionArrow(battler.RectTransform);
         });
         

@@ -45,7 +45,6 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
     }
     #endregion
     
-
     #region Stats
     public int Level => PlayerController.Instance.PartyLevel;
     public string Name => Character.Base.CharacterName;
@@ -269,6 +268,7 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
     }
     #endregion
     
+    #region Animations
     private IEnumerator DamageBlinkCoroutine()
     {
         var normalColor = image.color;
@@ -282,6 +282,13 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
             yield return new WaitForSeconds(0.05f);
         }
     }
+    #endregion
+
+    #region Methods
+
+    public PlayerSkill[] AvailableSkills => Skills.Where(skill => skill.HasRequiredWeapon(Character)).ToArray();
+
+    #endregion
     
     public RectTransform RectTransform => transform as RectTransform;
 }

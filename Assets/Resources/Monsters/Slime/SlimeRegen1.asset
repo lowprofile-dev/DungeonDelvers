@@ -9,13 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
-  m_Name: Attack
+  m_Script: {fileID: 11500000, guid: d094aa0b39564153b139b8890360f490, type: 3}
+  m_Name: SlimeRegen1
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -23,19 +24,29 @@ MonoBehaviour:
     SerializationNodes:
     - Name: Effects
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+      Data: 0|System.Collections.Generic.List`1[[PassiveEffect, Assembly-CSharp]],
+        mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|DamageEffect, Assembly-CSharp
-    - Name: DamageFactor
-      Entry: 4
-      Data: 1
-    - Name: DamageType
+      Data: 1|RegenPassiveEffect, Assembly-CSharp
+    - Name: PassiveSource
+      Entry: 10
+      Data: 0
+    - Name: Priority
       Entry: 3
       Data: 0
+    - Name: FlatValue
+      Entry: 3
+      Data: 15
+    - Name: PercentageValue
+      Entry: 4
+      Data: 0
+    - Name: IsPercentageValue
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -45,24 +56,8 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: SkillAnimation
-      Entry: 6
-      Data: 
-    - Name: RequiredWeaponType
-      Entry: 7
-      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
-  SkillName: Attack
-  SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
-    type: 3}
-  EpCost: 15
-  SkillDescription: 
-  Target: 0
-  AnimationType: 2
+  AssetIcon: {fileID: 0}
+  PassiveName: Reform
+  PassiveDescription: 

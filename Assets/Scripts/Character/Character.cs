@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -182,6 +183,8 @@ public class Character
     private void LoadSkills()
     {
         Skills = new List<PlayerSkill>();
+        Skills.AddRange(Base.BaseSkills);
+        
         foreach (var equippable in Equipment)
         {
             Skills.AddRange(equippable.EquippableBase.Skills);

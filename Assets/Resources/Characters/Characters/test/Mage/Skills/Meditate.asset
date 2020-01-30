@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
-  m_Name: Attack
+  m_Name: Meditate
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -29,13 +29,10 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|DamageEffect, Assembly-CSharp
-    - Name: DamageFactor
-      Entry: 4
-      Data: 1
-    - Name: DamageType
+      Data: 1|GainApEffect, Assembly-CSharp
+    - Name: ApAmount
       Entry: 3
-      Data: 0
+      Data: 10
     - Name: 
       Entry: 8
       Data: 
@@ -59,10 +56,10 @@ MonoBehaviour:
       Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
-  SkillName: Attack
-  SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
+  SkillName: Medidate
+  SkillIcon: {fileID: 1460658371370403240, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 15
-  SkillDescription: 
-  Target: 0
-  AnimationType: 2
+  EpCost: 0
+  SkillDescription: Generate AP
+  Target: 6
+  AnimationType: 4

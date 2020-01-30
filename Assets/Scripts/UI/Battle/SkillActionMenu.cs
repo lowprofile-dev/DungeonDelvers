@@ -69,7 +69,10 @@ public class SkillActionMenu : SerializedMonoBehaviour
 
         SelectedSkill = null;
         
-        var skills = CharacterActionMenu.Battler.Skills.OrderBy(skill => skill.EpCost).ToArray();
+        var skills = CharacterActionMenu.Battler
+            .AvailableSkills
+            .OrderBy(skill => skill.EpCost)
+            .ToArray();
 
         for (var i = 0; i < skills.Length; i++)
         {

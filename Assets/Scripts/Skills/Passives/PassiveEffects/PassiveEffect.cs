@@ -9,7 +9,7 @@ using UnityEngine;
 
 public abstract class PassiveEffect
 {
-    [Sirenix.OdinInspector.ReadOnly] public Passive PassiveSource;
+    [Sirenix.OdinInspector.ReadOnly] public IPassiveEffectSource PassiveSource;
     public int Priority = 0;
 }
 

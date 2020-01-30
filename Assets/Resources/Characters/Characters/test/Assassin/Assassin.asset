@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63668046cc5843debea45eaed0277ee1, type: 3}
-  m_Name: Warrior
-  m_EditorClassIdentifier: Assembly-CSharp::CharacterBase
+  m_Name: Assassin
+  m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -2991,19 +2991,18 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: Characters/Characters/Warrior/Warrior
+  uniqueIdentifier: Characters/Characters/Assassin/Assassin
   databaseIgnore: 0
-  CharacterName: Knight
-  CharacterFace: {fileID: 5155163167032735316, guid: 8a6f7f45dd486893f8e486adc22732d6,
+  CharacterName: Assassin
+  CharacterFace: {fileID: 0}
+  CharacterPrefab: {fileID: 8521580809372860284, guid: 1736b34fe64ca480bb1a5a1e1dc5f947,
     type: 3}
-  CharacterPrefab: {fileID: 8521580809372860284, guid: b85aa7e9225067e4f93b96eccb5cca71,
-    type: 3}
-  BattlerPrefab: {fileID: 2506904389010253803, guid: 052da0be1f224b441a3d221b4392000e,
+  BattlerPrefab: {fileID: 7439843032942050208, guid: a997fc6069c0fba48add91a50ad6c4ae,
     type: 3}
   Bases:
     MaxHp: 50
     InitialEp: 25
-    EpGain: 15
+    EpGain: 10
     PhysAtk: 30
     MagAtk: 10
     PhysDef: 10
@@ -3026,7 +3025,7 @@ MonoBehaviour:
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
-  WeaponTypes: 0000000001000000
+  WeaponTypes: 00000000
   ArmorTypes: 
   Weapon: {fileID: 11400000, guid: f0ca1d086742b68698d5f98d7810133b, type: 2}
   Head: {fileID: 0}
@@ -3034,6 +3033,7 @@ MonoBehaviour:
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}
+  BaseSkills: []
   BasePassives:
   - {fileID: 11400000, guid: 8a26a5680e5ca86439fb5271297e9113, type: 2}
   Level: 1

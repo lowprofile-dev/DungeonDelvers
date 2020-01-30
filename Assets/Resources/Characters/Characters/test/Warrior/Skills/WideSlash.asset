@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
-  m_Name: Attack
+  m_Name: WideSlash
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -32,7 +32,7 @@ MonoBehaviour:
       Data: 1|DamageEffect, Assembly-CSharp
     - Name: DamageFactor
       Entry: 4
-      Data: 1
+      Data: 1.3
     - Name: DamageType
       Entry: 3
       Data: 0
@@ -52,17 +52,17 @@ MonoBehaviour:
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 6
-      Data: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
-  SkillName: Attack
+  SkillName: WideSlash
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 15
-  SkillDescription: 
-  Target: 0
+  EpCost: 30
+  SkillDescription: Attack all enemies with one strike.
+  Target: 3
   AnimationType: 2

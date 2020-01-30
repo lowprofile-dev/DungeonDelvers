@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 333aa79271d84757b4283448233eac2b, type: 3}
-  m_Name: SlimeAttack
+  m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
+  m_Name: Slash
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -32,33 +32,37 @@ MonoBehaviour:
       Data: 1|DamageEffect, Assembly-CSharp
     - Name: DamageFactor
       Entry: 4
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Conditions
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[ISkillCondition, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
+      Data: 0.9
+    - Name: DamageType
+      Entry: 3
       Data: 0
     - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SkillAnimation
+      Entry: 6
+      Data: 
+    - Name: RequiredWeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
-  SkillName: Attack
-  SkillIcon: {fileID: 0}
-  EpCost: 15
-  SkillDescription: dano
-  Target: 1
+  SkillName: Slash
+  SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
+    type: 3}
+  EpCost: 8
+  SkillDescription: Attack one target with a sword.
+  Target: 0
+  AnimationType: 2
