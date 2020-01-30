@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
-  m_Name: Fireball
+  m_Name: Stab
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -32,10 +32,10 @@ MonoBehaviour:
       Data: 1|DamageEffect, Assembly-CSharp
     - Name: DamageFactor
       Entry: 4
-      Data: 1.85
+      Data: 0.8
     - Name: DamageType
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -47,10 +47,10 @@ MonoBehaviour:
       Data: 3|StatusEffect, Assembly-CSharp
     - Name: TurnDuration
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: StatusEffectName
       Entry: 1
-      Data: Burn
+      Data: Bleed
     - Name: Effects
       Entry: 7
       Data: 4|System.Collections.Generic.List`1[[PassiveEffect, Assembly-CSharp]],
@@ -66,10 +66,10 @@ MonoBehaviour:
       Data: 6|StatusEffect, Assembly-CSharp
     - Name: TurnDuration
       Entry: 3
-      Data: 2
+      Data: 3
     - Name: StatusEffectName
       Entry: 1
-      Data: Burn
+      Data: Bleed
     - Name: Effects
       Entry: 9
       Data: 4
@@ -84,10 +84,10 @@ MonoBehaviour:
       Data: 7|DamageEffect, Assembly-CSharp
     - Name: DamageFactor
       Entry: 4
-      Data: 1.1
+      Data: 0.5
     - Name: DamageType
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -113,44 +113,23 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: SkillAnimation
-      Entry: 7
-      Data: 8|FromSourceToTargetSkillAnimation, Assembly-CSharp
-    - Name: AnimationName
-      Entry: 1
-      Data: Fireball1
-    - Name: SpeedMultiplier
-      Entry: 4
-      Data: 2
-    - Name: AnimationSize
-      Entry: 7
-      Data: UnityEngine.Vector2, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 200
-    - Name: 
-      Entry: 4
-      Data: 200
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: RequiredWeaponType
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 3
-      Data: 4
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
-  SkillName: Fireball
-  SkillIcon: {fileID: 7790395862663275768, guid: cc992c58d47d97548895862c5e45375c,
+  SkillName: Stab
+  SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
   EpCost: 0
-  SkillDescription: Throw a weak fireball at an enemy.
-  Target: 1
-  AnimationType: 4
+  SkillDescription: Attack one target with a knife, making them bleed.
+  Target: 0
+  AnimationType: 2

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
-  m_Name: Slash 2
+  m_Name: SlashAssassin
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -32,7 +32,7 @@ MonoBehaviour:
       Data: 1|DamageEffect, Assembly-CSharp
     - Name: DamageFactor
       Entry: 4
-      Data: 1.5
+      Data: 0.8
     - Name: DamageType
       Entry: 3
       Data: 0
@@ -53,16 +53,16 @@ MonoBehaviour:
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
-  SkillName: Cut Down
-  SkillIcon: {fileID: -8726097045332059612, guid: cc992c58d47d97548895862c5e45375c,
+  SkillName: Slash
+  SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 8
-  SkillDescription: Execute a strong strike on any target.
+  EpCost: 6
+  SkillDescription: Attack one target with a knife.
   Target: 0
   AnimationType: 2

@@ -391,18 +391,23 @@
           <e p="Skills" t="Include">
             <e p="Effect.cs" t="Include" />
             <e p="Effects" t="Include">
+              <e p="ApplyStatusEffectEffect.cs" t="Include" />
               <e p="DamageEffect.cs" t="Include" />
+              <e p="GainApEffect.cs" t="Include" />
               <e p="HealEffect.cs" t="Include" />
               <e p="RemoveItemEffect.cs" t="Include" />
             </e>
             <e p="MonsterSkill.cs" t="Include" />
             <e p="Passives" t="Include">
+              <e p="IPassiveEffectSource.cs" t="Include" />
               <e p="Passive.cs" t="Include" />
               <e p="PassiveEffects" t="Include">
                 <e p="DefendPassiveEffect.cs" t="Include" />
+                <e p="DoTPassiveEffect.cs" t="Include" />
                 <e p="PassiveEffect.cs" t="Include" />
                 <e p="RegenPassiveEffect.cs" t="Include" />
               </e>
+              <e p="StatusEffect.cs" t="Include" />
             </e>
             <e p="PlayerSkill.cs" t="Include" />
             <e p="Skill.cs" t="Include" />
@@ -555,6 +560,7 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="seeds.txt" t="Include" />
         <e p="test_sandbox" t="Include">
           <e p="test.cs" t="Include" />
           <e p="testgetrectransform.cs" t="Include" />

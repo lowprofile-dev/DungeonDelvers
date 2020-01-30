@@ -7,7 +7,7 @@ using UnityEngine;
 
 public interface IBattler
 {
-    Dictionary<string,object> BattleDictionary { get; }
+    Dictionary<object,object> BattleDictionary { get; }
     string Name { get; }
     int Level { get; }
     int CurrentHp { get; set; }
@@ -20,6 +20,7 @@ public interface IBattler
     
     Stats Stats { get; }
     List<Passive> Passives { get; }
+    List<StatusEffect> StatusEffects { get; }
     RectTransform RectTransform { get; }
     
     Task TurnStart();

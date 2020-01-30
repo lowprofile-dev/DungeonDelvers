@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class FadeInteraction : Interaction
@@ -19,6 +20,9 @@ public class FadeInteraction : Interaction
 
     private IEnumerator FadeInCoroutine()
     {
+        if (MainCanvas.Instance == null)
+            yield break;
+        
         var elapsedTime = 0f;
         var fade = MainCanvas.Instance.FadeImage;
 

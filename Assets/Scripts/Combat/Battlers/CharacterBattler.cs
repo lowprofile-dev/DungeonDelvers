@@ -11,6 +11,7 @@ using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using Object = System.Object;
 
 // ReSharper disable RedundantAssignment
 
@@ -21,7 +22,7 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
     private Image image;
 
     #region Control
-    public Dictionary<string, object> BattleDictionary { get; private set; }
+    public Dictionary<object, object> BattleDictionary { get; private set; }
     
     private void Start()
     {
@@ -36,7 +37,8 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
         CurrentEp = Stats.InitialEp;
         Skills = character.Skills;
         Passives = character.Passives;
-        BattleDictionary = new Dictionary<string, object>();
+        BattleDictionary = new Dictionary<object, object>();
+        StatusEffects = new List<StatusEffect>();
     }
     
     public void CommitChanges()
@@ -73,7 +75,11 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
     public bool Fainted => CurrentHp == 0;
     [FoldoutGroup("Skills")] public List<PlayerSkill> Skills { get; private set; }
     [FoldoutGroup("Passives"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public List<Passive> Passives { get; set; } = new List<Passive>();
-
+    [FoldoutGroup("Status Effects"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public List<StatusEffect> StatusEffects
+    {
+        get;
+        set;
+    }
     #endregion
 
     #region Animation
@@ -149,8 +155,14 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
         currentEp += Stats.EpGain;
         Debug.Log($"Começou turno de {Character.Base.CharacterName}");
 
+        var expiredStatusEffects = StatusEffects.Where(statusEffect => statusEffect.TurnDuration <= BattleController.Instance.CurrentTurn);
+
+        expiredStatusEffects.ForEach(expired => StatusEffects.Remove(expired));
+        
         var turnStartPassives =
             Passives.SelectMany(passive => passive.Effects.Where(effect => effect is ITurnStartPassiveEffect))
+                .Concat(
+                    StatusEffects.SelectMany(statusEffect => statusEffect.Effects.Where(effect => effect is ITurnStartPassiveEffect)))
                 .OrderByDescending(effect => effect.Priority).Cast<ITurnStartPassiveEffect>();
 
         foreach (var turnStartPassive in turnStartPassives)

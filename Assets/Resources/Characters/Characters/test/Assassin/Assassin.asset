@@ -3033,7 +3033,9 @@ MonoBehaviour:
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}
-  BaseSkills: []
+  BaseSkills:
+  - {fileID: 11400000, guid: cc639c2ad8b86454d841e36f8b744fd7, type: 2}
+  - {fileID: 11400000, guid: 8e01f04622ce68d5ab2239095366db63, type: 2}
   BasePassives:
   - {fileID: 11400000, guid: 8a26a5680e5ca86439fb5271297e9113, type: 2}
   Level: 1

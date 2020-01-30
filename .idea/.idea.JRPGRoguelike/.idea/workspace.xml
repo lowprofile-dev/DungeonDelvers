@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d8eb85f-203a-42cc-a492-a61dc70ead53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/seeds.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/ApplyStatusEffectEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/ApplyStatusEffectEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/AStarPathfindingProjectPro.unitypackage.meta" beforeDir="false" />
@@ -11,33 +14,27 @@
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/SECTR_VIS.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/Unity NavMesh.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Samples/DungeonCrawler.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Assassin/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/Mage/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dungeons/testdungeon/testdungeon1_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dungeons/testdungeon/testdungeon1_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Assassin.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Assassin.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/CharacterAnimations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Skills.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Skills.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Fighter.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Fighter.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Skills/Slash 2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Skills/Slash 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/CharacterAnimations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/Mage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/Mage.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/Skills/Fireball.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/Skills/Fireball.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Monsters/Slime/SlimeMonsterBase1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Monsters/Slime/SlimeMonsterBase1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skills/FireballPS.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skills/FireballPS.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/MenuEffects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DoTPassiveEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DoTPassiveEffect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Assembly-CSharp-firstpass.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Assembly-CSharp-firstpass.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/AssetIcons.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/AssetIcons.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Sirenix.OdinInspector.CompatibilityLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Sirenix.OdinInspector.CompatibilityLayer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.TextMeshPro.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.Timeline.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.Timeline.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/UnityEngine.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/UnityEngine.UI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/app.info" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/app.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/boot.config" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/boot.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/globalgamemanagers" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/globalgamemanagers.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/level0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/resources.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/resources.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/sharedassets0.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/sharedassets0.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/sharedassets0.assets.resS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/seeds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/seeds.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,16 +61,59 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MessageBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/MessageBoxInteraction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/InventoryConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/FeetBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/SetKeyInteraction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/SkillDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/OpenShopInteraction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/CustomDrawerExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/CallInteractableInteraction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/ReflectionExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/PriorityExamples.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/SerializableAsset.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/StringMemberHelperExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/MiscItemBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/GenericDrawerExample.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/EquippableBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ConsumableBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Effect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ItemBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AssetIcons/Demo/Demo Resources/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ItemDatabase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/TrackTransform.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryCondition/HasMasteryMasteryCondition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/MultipleInteraction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/DestroyObjectInteraction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/CharacterInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryItemButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryItemInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/GameSaveController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/WaitForKeyPressInteraction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Effects/DamageEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/ItemInstanceBuilder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DoTPassiveEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/TrackPlayer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Passives/Passive.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryCondition/MasteryCondition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/BaseStatMasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/MasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/ToggleComponentActiveInteraction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/MessageBoxInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/AddPassiveMasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/InventoryConverter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/LearnSkillMasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleInfoPanel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -85,88 +125,44 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/BodyBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/HeadBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleCanvas.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/FeetBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/CharacterActionMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/CharacterPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/EquippableSave.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/SetKeyInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/MiscItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/Consumable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/Equippable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/SkillDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/OpenShopInteraction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/CustomDrawerExample.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/CallInteractableInteraction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/RegenPassiveEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/CharacterSave.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/CharacterDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/ReflectionExample.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/PriorityExamples.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/SerializableAsset.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/StringMemberHelperExample.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/test_sandbox/test.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/MiscItemBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/GenericDrawerExample.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/EquippableBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/WeaponBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ConsumableBase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Effect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ItemBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/AssetIcons/Demo/Demo Resources/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ItemDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/AddItemInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/TrackTransform.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryCondition/HasMasteryMasteryCondition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/MultipleInteraction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/DestroyObjectInteraction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/CharacterInspector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryItemButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryItemInspector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/PartyConverter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/GameSaveController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopInspector.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/WaitForKeyPressInteraction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Effects/ApplyStatusEffectEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/GameDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/BranchInteraction.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Effects/DamageEffect.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/ItemInstanceBuilder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Characters/Characters/Assassin/Assassin.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillActionMenu.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passive.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Effect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/DamageEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/FBBCommission.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleInfoPanel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/CharacterActionMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/SerializableAsset.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/GameDatabase.cs" />
@@ -198,7 +194,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/TrackPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interaction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopMenu.cs" />
@@ -208,9 +203,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DoTPassiveEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/ApplyStatusEffectEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/seeds.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" />
       </list>
     </option>
   </component>
@@ -289,6 +290,7 @@
       <workItem from="1579092742048" duration="5748000" />
       <workItem from="1579613747465" duration="2669000" />
       <workItem from="1580129433353" duration="6127000" />
+      <workItem from="1580388768699" duration="4050000" />
     </task>
     <servers />
   </component>

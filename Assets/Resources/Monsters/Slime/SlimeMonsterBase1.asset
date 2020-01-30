@@ -63,4 +63,4 @@ MonoBehaviour:
   Skills:
   - {fileID: 11400000, guid: 66006c83b7492c845b3abe6274d06cf3, type: 2}
   Passives:
-  - {fileID: 11400000, guid: 79e7ea72cf7c64d4c81bded7dfe5a492, type: 2}
+  - {fileID: 11400000, guid: 1f03885d0b6edaa8c94393567ae38857, type: 2}

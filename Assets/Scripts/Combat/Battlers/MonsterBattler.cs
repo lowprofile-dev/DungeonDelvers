@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using SkredUtils;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,7 +23,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
 
 
     #region Control
-    public Dictionary<string, object> BattleDictionary { get; private set; }
+    public Dictionary<object, object> BattleDictionary { get; private set; }
     
     private void Awake()
     {
@@ -56,8 +57,9 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
         CurrentHp = Stats.MaxHp;
         CurrentEp = Stats.InitialEp;
         
-        BattleDictionary = new Dictionary<string, object>();
+        BattleDictionary = new Dictionary<object, object>();
         Passives = MonsterBase.Passives;
+        StatusEffects = new List<StatusEffect>();
         
         Debug.Log($"Inicializado Lv.{level}{Name}");
     }
@@ -96,6 +98,11 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
     
     public List<MonsterSkill> Skills;
     public List<Passive> Passives { get; private set; }
+    [ShowInInspector, ReadOnly] public List<StatusEffect> StatusEffects
+    {
+        get;
+        set;
+    }
     public MonsterAI MonsterAi;
 
     public bool Fainted => CurrentHp == 0;
@@ -111,8 +118,14 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
         currentEp += Stats.EpGain;
         Debug.Log($"Começou o turno de {Name}");
         
+        var expiredStatusEffects = StatusEffects.Where(statusEffect => statusEffect.TurnDuration <= BattleController.Instance.CurrentTurn).ToArray();
+
+        expiredStatusEffects.ForEach(expired => StatusEffects.Remove(expired));
+        
         var turnStartPassives =
             Passives.SelectMany(passive => passive.Effects.Where(effect => effect is ITurnStartPassiveEffect))
+                .Concat(StatusEffects.SelectMany(statusEffect => statusEffect.Effects.Where(effect => effect is ITurnStartPassiveEffect))
+                    )
                 .OrderByDescending(effect => effect.Priority).Cast<ITurnStartPassiveEffect>().ToArray();
         
         if (turnStartPassives.Any())
@@ -121,6 +134,8 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
         foreach (var turnStartPassive in turnStartPassives)
         {
             await turnStartPassive.OnTurnStart(this);
+            if (Fainted)
+                break;
         }
         
         await QueueActionAndAwait(() => BattleController.Instance.battleCanvas.UnbindActionArrow());

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
-  m_Name: FireballPS
+  m_Name: CutDown
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -32,7 +32,7 @@ MonoBehaviour:
       Data: 1|DamageEffect, Assembly-CSharp
     - Name: DamageFactor
       Entry: 4
-      Data: 2
+      Data: 1.5
     - Name: DamageType
       Entry: 3
       Data: 0
@@ -46,44 +46,23 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: SkillAnimation
-      Entry: 7
-      Data: 2|FromSourceToTargetSkillAnimation, Assembly-CSharp
-    - Name: AnimationName
-      Entry: 1
-      Data: Fireball1
-    - Name: SpeedMultiplier
-      Entry: 4
-      Data: 2
-    - Name: AnimationSize
-      Entry: 7
-      Data: UnityEngine.Vector2, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 200
-    - Name: 
-      Entry: 4
-      Data: 200
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: RequiredWeaponType
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 6
-      Data: 
+      Entry: 3
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
-  SkillName: Fireball
-  SkillIcon: {fileID: 2216364312813685993, guid: cc992c58d47d97548895862c5e45375c,
+  SkillName: Cut Down
+  SkillIcon: {fileID: -8726097045332059612, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 0
-  SkillDescription: 
-  Target: 1
-  AnimationType: 4
+  EpCost: 8
+  SkillDescription: Execute a strong strike on any target.
+  Target: 0
+  AnimationType: 2
