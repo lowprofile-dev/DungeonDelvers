@@ -1,7 +1,8 @@
-Fazer status effect (se possivel, ao menos criar uma maneira rapida de dot) (bleed pro assassin, burn pro mage)
-Terminar de fazer skills bases/armas/stats pros personagens.
+Ver battlecomponent: tem algo que eu faria que precisa de algo fora SkillInfo (target,source,skill)?
+Mudar skillinfo pra actioninfo(?)
+passar os statuseffects pra battlecomponents 
+Refazer statuseffects (mudar o statuseffect atual pra outra coisa, status effects são coisas bases tipo paralyze, poison, sleep, silence)
 
-Fazer personagens terem passives que tem referencia ao passivebase
 Fazer um battler abstrato principal do qual o monster e o player herdam em vez de uma interface só.
 Ver como fazer os personagens terem referencia ao maior HP durante a batalha.
 Fazer histórico de batalha

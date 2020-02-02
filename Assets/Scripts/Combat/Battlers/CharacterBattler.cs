@@ -182,10 +182,7 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
         Debug.Log($"Fazendo o turno de {Character.Base.CharacterName}");
 
         if (Fainted)
-            return new Turn()
-            {
-                Skill = null
-            };
+            return null;
 
         var turn = await BattleController.Instance.battleCanvas.GetTurn(this);
 
@@ -269,6 +266,12 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
                 await BattleController.Instance.battleCanvas.ShowDamage(this, healEffectResult.AmountHealed.ToString(),
                     Color.green);
                 break;
+            case GainApEffect.GainApEffectResult gainApEffectResult:
+            {
+                await BattleController.Instance.battleCanvas.ShowDamage(this, gainApEffectResult.ApGained.ToString(),
+                    Color.cyan);
+                break;
+            }
         }
 
         return effectResult;
@@ -304,13 +307,4 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
     
     public RectTransform RectTransform => transform as RectTransform;
 }
-
-#region PassiveInterfaces
-
-public interface ITurnStartPassiveEffect
-{
-    Task OnTurnStart(IBattler battler);
-}
-
-#endregion
 

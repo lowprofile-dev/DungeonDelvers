@@ -29,6 +29,30 @@ public class FromSourceToTargetSkillAnimation : SkillAnimation
 
         await Task.WhenAll(Animations);
     }
+    
+    public override async Task PlaySkillAnimation(Battler source, IEnumerable<Battler> targets)
+    {
+        List<Task> Animations = new List<Task>();
+        await GameController.Instance.QueueActionAndAwait(() =>
+        {
+            targets.ForEach(target =>
+            {
+                var animationObject = GameObject.Instantiate(GameController.Instance.AnimationObjectBase,
+                    BattleController.Instance.battleCanvas.transform);
+
+                var animation = animationObject.GetComponent<AnimationObject>();
+                animation.transform.position = target.RectTransform.position;
+
+                ScaleAnimation(animation.transform as RectTransform);
+                
+                Animations.Add(
+                    GameController.Instance.PlayCoroutine(MoveAnimationCoroutine(source.RectTransform.position,
+                        target.RectTransform.position, animationObject.transform, animation.animator, AnimationName), animation));
+            });
+        });
+
+        await Task.WhenAll(Animations);
+    }
 
     private IEnumerator MoveAnimationCoroutine(Vector2 source, Vector2 target, Transform animation, Animator animator, string animationName)
     {

@@ -455,8 +455,8 @@ MonoBehaviour:
   previousSceneIndex: 0
   nextSceneIndex: -1
   EncounterEnabled: 1
-  MinEncounterDistance: 2
-  MaxEncounterDistance: 3
+  MinEncounterDistance: 10
+  MaxEncounterDistance: 25
   RemainingEncounterDistance: 0
   OverrideBackgroundColor: {r: 0.21176472, g: 0.18039216, b: 0.24705884, a: 0}
 --- !u!1001 &1777927444

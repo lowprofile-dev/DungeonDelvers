@@ -66,7 +66,7 @@ MonoBehaviour:
       Data: 6|StatusEffect, Assembly-CSharp
     - Name: TurnDuration
       Entry: 3
-      Data: 2
+      Data: 4
     - Name: StatusEffectName
       Entry: 1
       Data: Burn
@@ -141,7 +141,7 @@ MonoBehaviour:
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 3
-      Data: 4
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -150,7 +150,7 @@ MonoBehaviour:
   SkillName: Fireball
   SkillIcon: {fileID: 7790395862663275768, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 0
+  EpCost: 65
   SkillDescription: Throw a weak fireball at an enemy.
   Target: 1
   AnimationType: 4

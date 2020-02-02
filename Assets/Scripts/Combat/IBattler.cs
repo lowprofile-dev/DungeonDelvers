@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using SkredUtils;
 using UnityEngine;
 
+[Obsolete]
 public interface IBattler
 {
     Dictionary<object,object> BattleDictionary { get; }

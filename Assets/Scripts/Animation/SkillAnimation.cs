@@ -9,7 +9,8 @@ public abstract class SkillAnimation
     public float SpeedMultiplier = 1f;
     public Vector2 AnimationSize;
     public abstract Task PlaySkillAnimation(IBattler source, IEnumerable<IBattler> targets);
-
+    public abstract Task PlaySkillAnimation(Battler source, IEnumerable<Battler> targets);
+    
     public void ScaleAnimation(RectTransform rect)
     {
         rect.sizeDelta = AnimationSize;

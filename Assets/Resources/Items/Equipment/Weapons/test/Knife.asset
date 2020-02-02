@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf48c1b54f14787bcbf7e72666c3fdd, type: 3}
+  m_Name: Knife
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  uniqueIdentifier: 
+  databaseIgnore: 0
+  itemIcon: {fileID: 7816579671404485219, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
+    type: 3}
+  itemName: Knife
+  goldValue: 0
+  droppable: 1
+  itemText: 
+  BaseStats:
+    MaxHp: 0
+    InitialEp: 0
+    EpGain: 0
+    PhysAtk: 0
+    MagAtk: 0
+    PhysDef: 0
+    MagDef: 0
+    Speed: 0
+    Accuracy: 0
+    Evasion: 0
+    CritChance: 0
+    CritAvoid: 0
+  Skills: []
+  Passives: []
+  weaponType: 3

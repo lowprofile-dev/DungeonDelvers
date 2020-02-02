@@ -296,12 +296,12 @@ public class BattleController : AsyncMonoBehaviour
         {
             case DamageType.Physical:
             {
-                damage = (int)DamageFormula1(source.Level, source.Stats.PhysAtk, target.Level, target.Stats.PhysDef);
+                damage = (int)DamageFormula2(source.Level, source.Stats.PhysAtk, target.Level, target.Stats.PhysDef);
                 break;
             }
             case DamageType.Magical:
             {
-                damage = (int) DamageFormula1(source.Level, source.Stats.MagAtk, target.Level, target.Stats.MagDef);
+                damage = (int) DamageFormula2(source.Level, source.Stats.MagAtk, target.Level, target.Stats.MagDef);
                 break;
             }
             case DamageType.Pure:
@@ -324,8 +324,8 @@ public class BattleController : AsyncMonoBehaviour
         try
         {
             var levelDelta = ((float) sourceLevel - targetLevel);
+            levelDelta = Mathf.Clamp(levelDelta, -10, 10);
             var levelDeltaMultiplier = levelDelta.Remap(-10, 10, 0.5f, 1.5f);
-            levelDeltaMultiplier = Mathf.Clamp(levelDeltaMultiplier, -0.5f, 0.5f);
 
             var baseDamage = 5 * sourceLevel;
             var statDelta = 1 + (1 - (float) targetDefense / (sourceAttack + 1)) / 2;
@@ -336,6 +336,29 @@ public class BattleController : AsyncMonoBehaviour
         catch (Exception e)
         {
             Debug.LogError($"DF1 {sourceLevel} {sourceAttack} {targetLevel} {targetDefense}");
+            return 0;
+        }
+    }
+
+    private float DamageFormula2(int sourceLevel, int sourceAttack, int targetLevel, int targetDefense)
+    {
+        try
+        {
+            var levelDelta = ((float) sourceLevel - targetLevel);
+            levelDelta = Mathf.Clamp(levelDelta, -10, 10);
+            var levelDeltaMultiplier = levelDelta.Remap(-10, 10, 0.5f, 1.5f);
+
+            var baseDamage = 5 * sourceLevel;
+            var statTotal = sourceAttack + targetDefense;
+            var attackRatio = (float)sourceAttack / statTotal;
+
+            var damage = (sourceAttack * attackRatio)+baseDamage;
+
+            return (damage*levelDeltaMultiplier).Min(0);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"DF2 {sourceLevel} {sourceAttack} {targetLevel} {targetDefense}");
             return 0;
         }
     }

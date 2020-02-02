@@ -36,6 +36,9 @@ MonoBehaviour:
     - Name: DamageType
       Entry: 3
       Data: 0
+    - Name: TrueHit
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -88,6 +91,9 @@ MonoBehaviour:
     - Name: DamageType
       Entry: 3
       Data: 0
+    - Name: TrueHit
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -119,8 +125,8 @@ MonoBehaviour:
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 6
-      Data: 
+      Entry: 3
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -129,7 +135,7 @@ MonoBehaviour:
   SkillName: Stab
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 0
+  EpCost: 25
   SkillDescription: Attack one target with a knife, making them bleed.
   Target: 0
   AnimationType: 2

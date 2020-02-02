@@ -3000,41 +3000,41 @@ MonoBehaviour:
   BattlerPrefab: {fileID: 7439843032942050208, guid: a997fc6069c0fba48add91a50ad6c4ae,
     type: 3}
   Bases:
-    MaxHp: 50
-    InitialEp: 25
+    MaxHp: 87
+    InitialEp: 15
     EpGain: 10
-    PhysAtk: 30
-    MagAtk: 10
-    PhysDef: 10
-    MagDef: 10
-    Speed: 10
+    PhysAtk: 37
+    MagAtk: 22
+    PhysDef: 23
+    MagDef: 29
+    Speed: 39
     Accuracy: 1
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
   Growths:
-    MaxHp: 1
+    MaxHp: 6
     InitialEp: 0
     EpGain: 0
-    PhysAtk: 1
-    MagAtk: 1
-    PhysDef: 1
-    MagDef: 1
-    Speed: 1
+    PhysAtk: 7
+    MagAtk: 4
+    PhysDef: 4
+    MagDef: 5
+    Speed: 6
     Accuracy: 0
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
-  WeaponTypes: 00000000
+  WeaponTypes: 03000000
   ArmorTypes: 
-  Weapon: {fileID: 11400000, guid: f0ca1d086742b68698d5f98d7810133b, type: 2}
+  Weapon: {fileID: 11400000, guid: c6a2b27634d9e364b8c3529451c6e3a3, type: 2}
   Head: {fileID: 0}
   Body: {fileID: 0}
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}
   BaseSkills:
-  - {fileID: 11400000, guid: cc639c2ad8b86454d841e36f8b744fd7, type: 2}
+  - {fileID: 11400000, guid: 71a3cb8b20046b7239bbe7d7915e89b0, type: 2}
   - {fileID: 11400000, guid: 8e01f04622ce68d5ab2239095366db63, type: 2}
   BasePassives:
   - {fileID: 11400000, guid: 8a26a5680e5ca86439fb5271297e9113, type: 2}

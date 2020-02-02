@@ -32,10 +32,13 @@ MonoBehaviour:
       Data: 1|DamageEffect, Assembly-CSharp
     - Name: DamageFactor
       Entry: 4
-      Data: 1.4
+      Data: 1.6
     - Name: DamageType
       Entry: 3
       Data: 1
+    - Name: TrueHit
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -52,8 +55,8 @@ MonoBehaviour:
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 6
-      Data: 
+      Entry: 3
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -62,7 +65,7 @@ MonoBehaviour:
   SkillName: Kinetic Strike
   SkillIcon: {fileID: -3973968794099671083, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 45
+  EpCost: 35
   SkillDescription: Attack a target with kinetic energy.
   Target: 0
   AnimationType: 4

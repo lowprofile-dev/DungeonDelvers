@@ -149,7 +149,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
     public async Task<Turn> GetTurn()
     {
         if (Fainted || MonsterAi == null)
-            return new Turn();
+            return null;
         
         Debug.Log($"Começou a pegar o turno de {Name}");
 

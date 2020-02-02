@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using Sirenix.Utilities;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DamageEffect : Effect
 {
     public float DamageFactor = 1.0f;
     public DamageType DamageType = DamageType.Physical;
+    public bool TrueHit = false;
 
     public override EffectResult ExecuteEffect(SkillInfo skillInfo)
     {
         //override de tipo
-
-        var damage = (int)Mathf.Max(0,BattleController.Instance.DamageCalculation(skillInfo.Source, skillInfo.Target, this));
+        var damage = (int)(Mathf.Max(0,BattleController.Instance.DamageCalculation(skillInfo.Source, skillInfo.Target, this)) * DamageFactor);
 
         Debug.Log($"Calculado {damage}");
         
@@ -39,7 +40,7 @@ public class DamageEffect : Effect
     {
         public int DamageDealt;
     }
-    
+
     public interface IDealDamagePassiveEffect
     {
         void BeforeDeal(SkillInfo skillInfo, ref int finalDamage);

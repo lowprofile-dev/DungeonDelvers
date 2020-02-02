@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf7e5dcd198672d4ab3572da034b41ed, type: 3}
-  m_Name: SlimeMonsterBase1
+  m_Name: New Monster
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -22,28 +22,25 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: MonsterAi
-      Entry: 7
-      Data: 0|RandomAI, Assembly-CSharp
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
   uniqueIdentifier: 
-  databaseIgnore: 0
-  MonsterName: Slime
-  MonsterBattler: {fileID: 3515542978881643201, guid: 8c74195d025782e40aa8c326ba0292cc,
+  databaseIgnore: 1
+  MonsterName: Dummy
+  MonsterBattler: {fileID: 1849427471425531011, guid: 1ccae06ba51acc741b5e72e93e9905bc,
     type: 3}
-  BaseLevel: 1
+  BaseLevel: 0
   LevelVariance: 0
   Stats:
-    MaxHp: 55
-    InitialEp: 15
-    EpGain: 15
-    PhysAtk: 30
+    MaxHp: 2147483647
+    InitialEp: 0
+    EpGain: 0
+    PhysAtk: 0
     MagAtk: 0
-    PhysDef: 20
-    MagDef: 30
-    Speed: 15
-    Accuracy: 1
+    PhysDef: 0
+    MagDef: 0
+    Speed: 0
+    Accuracy: 0
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
@@ -60,7 +57,5 @@ MonoBehaviour:
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
-  Skills:
-  - {fileID: 11400000, guid: 66006c83b7492c845b3abe6274d06cf3, type: 2}
-  Passives:
-  - {fileID: 11400000, guid: 1f03885d0b6edaa8c94393567ae38857, type: 2}
+  Skills: []
+  Passives: []
