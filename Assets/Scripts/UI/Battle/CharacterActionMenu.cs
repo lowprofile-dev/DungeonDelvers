@@ -107,11 +107,7 @@ public class CharacterActionMenu : SerializedMonoBehaviour
         //Por enquanto pula o turno. Botar pra dar um buff de redução de dano.
         Battler.BattleDictionary["Defending"] = true;
         Debug.Log($"{Battler.Name} -> [Defending]=true");
-        FinishTurn(new Turn
-        {
-            Skill = null,
-            Targets = null
-        });
+        FinishTurn(new Turn());
     }
 
     public void Run()

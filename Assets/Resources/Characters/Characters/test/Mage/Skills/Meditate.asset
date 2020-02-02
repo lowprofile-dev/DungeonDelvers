@@ -32,7 +32,7 @@ MonoBehaviour:
       Data: 1|GainApEffect, Assembly-CSharp
     - Name: ApAmount
       Entry: 3
-      Data: 30
+      Data: 40
     - Name: 
       Entry: 8
       Data: 

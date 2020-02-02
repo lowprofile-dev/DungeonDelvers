@@ -11,18 +11,40 @@ public class StatusEffect : IPassiveEffectSource
     public List<PassiveEffect> Effects = new List<PassiveEffect>();
     public List<PassiveEffect> GetEffects => Effects;
 
-    public void Apply(IBattler battler)
+    public void Apply(SkillInfo skillInfo)
     {
         var instance = new StatusEffect
         {
             TurnDuration = TurnDuration + BattleController.Instance.CurrentTurn,
             StatusEffectName = StatusEffectName,
-            Effects = Effects
+            Effects = Effects.Select(effect => effect.GetInstance()).ToList()
         };
-
-        //Refazer isso pra copiar cada efeito também (?)
-        instance.Effects.ForEach(effect => effect.PassiveSource = instance);
         
-        battler.StatusEffects.Add(instance);
+        instance.Effects.ForEach(passiveEffect =>
+        {
+            passiveEffect.PassiveSource = this;
+
+            if (passiveEffect is IHasSource ihs)
+            {
+                ihs.Source = skillInfo.Source;
+            }
+
+            if (passiveEffect is IHasTarget iht)
+            {
+                iht.Target = skillInfo.Target;
+            }
+        });
+
+        skillInfo.Target.StatusEffects.Add(instance);
+    }
+
+    private void ApplyEffect(PassiveEffect passiveEffect)
+    {
+        passiveEffect.PassiveSource = this;
+
+        if (passiveEffect is IHasSource ihs)
+        {
+            
+        }
     }
 }

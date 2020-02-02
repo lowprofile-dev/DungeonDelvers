@@ -36,6 +36,9 @@ MonoBehaviour:
     - Name: DamageType
       Entry: 3
       Data: 1
+    - Name: TrueHit
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -47,7 +50,7 @@ MonoBehaviour:
       Data: 3|StatusEffect, Assembly-CSharp
     - Name: TurnDuration
       Entry: 3
-      Data: 1
+      Data: 5
     - Name: StatusEffectName
       Entry: 1
       Data: Burn
@@ -88,6 +91,9 @@ MonoBehaviour:
     - Name: DamageType
       Entry: 3
       Data: 1
+    - Name: TrueHit
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -150,7 +156,7 @@ MonoBehaviour:
   SkillName: Fireball
   SkillIcon: {fileID: 7790395862663275768, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 65
+  EpCost: 70
   SkillDescription: Throw a weak fireball at an enemy.
   Target: 1
   AnimationType: 4

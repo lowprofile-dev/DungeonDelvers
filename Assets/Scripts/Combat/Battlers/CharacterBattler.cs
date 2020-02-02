@@ -31,19 +31,39 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
 
     public void Create(Character character)
     {
+        BattleDictionary = new Dictionary<object, object>();
         Character = character;
         Stats = character.Stats;
         CurrentHp = character.CurrentHp;
         CurrentEp = Stats.InitialEp;
         Skills = character.Skills;
         Passives = character.Passives;
-        BattleDictionary = new Dictionary<object, object>();
         StatusEffects = new List<StatusEffect>();
     }
     
     public void CommitChanges()
     {
         Character.CurrentHp = currentHp;
+    }
+
+    private void SetHighestHp()
+    {
+        var hasPreviousHighestHp = BattleDictionary.TryGetValue("HighestHP", out var highestHpObject);
+
+        if (hasPreviousHighestHp)
+        {
+            var highestHp = (int) highestHpObject;
+            if (CurrentHp > highestHp)
+            {
+                Debug.Log($"{Name} Highest HP: {CurrentHp}");
+                BattleDictionary["HighestHP"] = CurrentHp;
+            }
+        }
+        else
+        {
+            Debug.Log($"{Name} Highest HP: {CurrentHp}");
+            BattleDictionary["HighestHP"] = CurrentHp;
+        }
     }
     #endregion
     
@@ -70,6 +90,7 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
             currentHp = value;
             currentHp = Mathf.Clamp(currentHp, 0, Stats.MaxHp);
             UpdateAnimator();
+            SetHighestHp();
         }
     }
     public bool Fainted => CurrentHp == 0;
@@ -186,7 +207,7 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
 
         var turn = await BattleController.Instance.battleCanvas.GetTurn(this);
 
-        return turn;
+        return turn.Skill == null ? null : turn;
     }
 
     public async Task ExecuteTurn(IBattler source, Skill skill, IEnumerable<IBattler> targets)

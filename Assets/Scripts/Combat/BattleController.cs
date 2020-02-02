@@ -197,13 +197,13 @@ public class BattleController : AsyncMonoBehaviour
 
             await QueueActionAndAwait(() => battleCanvas.UnbindActionArrow());
 
-            var usedSkill = turn.Skill;
-            var targets = turn.Targets;
-
-            if (usedSkill != null)
+            if (turn != null)
             {
+                var usedSkill = turn.Skill;
+                var targets = turn.Targets;
+                
                 GameController.Instance.QueueAction(() =>
-                    Debug.Log($"Skill: {usedSkill.SkillName}, Target: {targets.First()}"));
+                    Debug.Log($"Skill: {usedSkill.SkillName}, Targets: {String.Join(", ", turn.Targets.Select(target => $"{target.Name}"))}"));
 
                 await battler.ExecuteTurn(battler, usedSkill,
                     targets); //Usa a skill, toca a animação de usar a skill. Talvez botar pra ser dentro do GetTurn mesmo. Ver.

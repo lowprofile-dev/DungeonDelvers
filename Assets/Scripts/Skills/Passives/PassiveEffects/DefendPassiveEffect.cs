@@ -21,4 +21,16 @@ public class DefendPassiveEffect : PassiveEffect, DamageEffect.IReceiveDamagePas
         Debug.Log($"{battler.Name} -> [Defending]=false");
         battler.BattleDictionary["Defending"] = false;
     }
+
+    public override PassiveEffect GetInstance()
+    {
+        var instance = new DefendPassiveEffect
+        {
+            Priority = Priority,
+            DamageFactor = DamageFactor,
+            PassiveSource = PassiveSource
+        };
+
+        return instance;
+    }
 }

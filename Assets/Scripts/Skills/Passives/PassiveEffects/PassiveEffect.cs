@@ -11,5 +11,6 @@ public abstract class PassiveEffect
 {
     [Sirenix.OdinInspector.ReadOnly] public IPassiveEffectSource PassiveSource;
     public int Priority = 0;
+    public abstract PassiveEffect GetInstance();
 }
 

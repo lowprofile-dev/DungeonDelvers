@@ -36,6 +36,9 @@ MonoBehaviour:
     - Name: DamageType
       Entry: 3
       Data: 0
+    - Name: TrueHit
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -59,7 +62,7 @@ MonoBehaviour:
       Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
-  SkillName: WideSlash
+  SkillName: Wide Slash
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
   EpCost: 30

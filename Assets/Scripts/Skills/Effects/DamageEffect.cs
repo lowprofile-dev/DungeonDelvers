@@ -26,7 +26,7 @@ public class DamageEffect : Effect
 
         targetPassives.ForEach(targetPassive => targetPassive.BeforeReceive(skillInfo, ref damage));
         
-        Debug.Log($"Levando {damage} de dano");
+        Debug.Log($"{skillInfo.Source} causou {damage} de dano em {skillInfo.Target}.");
 
         skillInfo.Target.CurrentHp -= damage;
         return new DamageEffectResult()

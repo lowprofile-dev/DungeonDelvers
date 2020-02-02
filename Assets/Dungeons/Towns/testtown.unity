@@ -15350,7 +15350,7 @@ MonoBehaviour:
       Data: 
   previousSceneIndex: -1
   nextSceneIndex: 1
-  EncounterEnabled: 1
+  EncounterEnabled: 0
   MinEncounterDistance: 2
   MaxEncounterDistance: 3
   RemainingEncounterDistance: 0

@@ -49,7 +49,8 @@ public class SkillTargeter : SerializedMonoBehaviour
                     );
                 break;
             case Skill.TargetType.Self:
-                TargetGroups.Add(new []{CharacterActionMenu.Battler});
+                //TargetGroups.Add(new []{CharacterActionMenu.Battler});
+                ChooseTargets(new []{CharacterActionMenu.Battler});
                 break;
             case Skill.TargetType.OneAlly:
                 BattleController.Instance.Party

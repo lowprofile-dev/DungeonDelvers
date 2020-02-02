@@ -46,5 +46,19 @@ public class RegenPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
             //BattleController.Instance.battleCanvas.UnbindActionArrow();
         });
     }
+
+    public override PassiveEffect GetInstance()
+    {
+        var instance = new RegenPassiveEffect
+        {
+            Priority = Priority,
+            FlatValue = FlatValue,
+            IsPercentageValue = IsPercentageValue,
+            PassiveSource = PassiveSource,
+            PercentageValue = PercentageValue
+        };
+
+        return instance;
+    }
 }
 
