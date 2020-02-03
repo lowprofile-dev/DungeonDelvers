@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,9 @@ public class Skill : SerializableAsset
     public TargetType Target;
     public List<Effect> Effects = new List<Effect>();
     public SkillAnimation SkillAnimation = null;
+
+    public bool TrueHit = false;
+    [Range(-1,1), HideIf("TrueHit")] public float AccuracyModifier = 0f;
     
     //Ver se necessario mais depois, eg. Raise-equivalent -> one dead ally
     public enum TargetType

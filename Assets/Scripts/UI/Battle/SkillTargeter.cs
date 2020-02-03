@@ -11,7 +11,7 @@ public class SkillTargeter : SerializedMonoBehaviour
     public CharacterActionMenu CharacterActionMenu;
     [ReadOnly] public Skill Skill;
     [ReadOnly] public bool TargetChosen;
-    [ReadOnly] public List<IEnumerable<IBattler>> TargetGroups;
+    [ReadOnly] public List<IBattler[]> TargetGroups;
     [ShowInInspector, ReadOnly] private BattleCanvas BattleCanvas;
     [ReadOnly] public SkillActionMenu PreviousMenu;
     private Coroutine Targeting;
@@ -24,13 +24,14 @@ public class SkillTargeter : SerializedMonoBehaviour
         TargetChosen = false;
         BattleCanvas = BattleController.Instance.battleCanvas;
         SetupTargets();
-        Targeting = StartCoroutine(TargetingCoroutine());
+        if (!TargetChosen)
+            Targeting = StartCoroutine(TargetingCoroutine());
     }
 
     private void SetupTargets()
     {
         //Cleanup
-        TargetGroups = new List<IEnumerable<IBattler>>();
+        TargetGroups = new List<IBattler[]>();
 
         switch (Skill.Target)
         {
@@ -58,7 +59,8 @@ public class SkillTargeter : SerializedMonoBehaviour
                     .ForEach(partyMember => TargetGroups.Add(new[] {partyMember}));
                 break;
             case Skill.TargetType.AllEnemies:
-                TargetGroups.Add(BattleController.Instance.Enemies.Where(enemy => !enemy.Fainted));
+                //TargetGroups.Add(BattleController.Instance.Enemies.Where(enemy => !enemy.Fainted).ToArray());
+                ChooseTargets(BattleController.Instance.Enemies.Where(enemy => !enemy.Fainted).ToArray());
                 break;
         }
         
@@ -140,6 +142,61 @@ public class SkillTargeter : SerializedMonoBehaviour
             if (Input.GetButtonDown("Submit"))
             {
                 ChooseTargets(TargetGroups[currentIndex]);
+            }
+            
+            //Handle click
+            if (Input.GetMouseButtonDown(0) && TargetGroups.Count >= 2)
+            {
+                var mousePosition = Input.mousePosition;
+
+                int index = 0;
+                float indexDistance = float.PositiveInfinity;
+                
+                Func<IBattler[], float> GetDistance = (group) =>
+                {
+                    var groupPositions =
+                        group.Select(target => target.RectTransform.position);
+
+                    var totalPosition = new Vector3(0, 0, 0);
+
+                    foreach (var position in groupPositions)
+                    {
+                        totalPosition += position;
+                    }
+
+                    var averagePosition = totalPosition / group.Length;
+                    var deltaPosition = averagePosition - mousePosition;
+                    var distance = deltaPosition.magnitude;
+
+                    return distance;
+                };
+
+                for (int i = 0; i < TargetGroups.Count; i++)
+                {
+                    var distance = GetDistance(TargetGroups[i]);
+
+                    if (distance < indexDistance)
+                    {
+                        index = i;
+                        indexDistance = distance;
+                    }
+                }
+
+                if (index != currentIndex)
+                {
+                    currentIndex = index;
+                    DisplayTargets();
+                }
+                else
+                {
+                    ChooseTargets(TargetGroups[index]);
+                }
+                
+            }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                CancelTarget();
             }
 
             yield return null;

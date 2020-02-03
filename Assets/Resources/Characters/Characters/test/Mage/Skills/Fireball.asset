@@ -159,4 +159,6 @@ MonoBehaviour:
   EpCost: 70
   SkillDescription: Throw a weak fireball at an enemy.
   Target: 1
+  TrueHit: 0
+  AccuracyModifier: 0
   AnimationType: 4

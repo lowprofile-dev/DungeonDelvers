@@ -3008,7 +3008,7 @@ MonoBehaviour:
     PhysDef: 23
     MagDef: 29
     Speed: 39
-    Accuracy: 1
+    Accuracy: 0.95
     Evasion: 0
     CritChance: 0
     CritAvoid: 0

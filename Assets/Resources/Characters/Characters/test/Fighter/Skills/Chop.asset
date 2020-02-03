@@ -68,4 +68,6 @@ MonoBehaviour:
   EpCost: 9
   SkillDescription: Attack one target with an axe.
   Target: 1
+  TrueHit: 0
+  AccuracyModifier: -0.1
   AnimationType: 2

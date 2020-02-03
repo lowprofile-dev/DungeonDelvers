@@ -278,7 +278,9 @@
             <e p="Stats.cs" t="Include" />
           </e>
           <e p="Combat" t="Include">
+            <e p="ActionInfo.cs" t="Include" />
             <e p="BattleController.cs" t="Include" />
+            <e p="Battler.cs" t="Include" />
             <e p="Battlers" t="Include">
               <e p="CharacterBattler.cs" t="Include" />
               <e p="MonsterBattler.cs" t="Include" />
@@ -389,6 +391,7 @@
             <e p="Shop.cs" t="Include" />
           </e>
           <e p="Skills" t="Include">
+            <e p="BattleComponent.cs" t="Include" />
             <e p="Effect.cs" t="Include" />
             <e p="Effects" t="Include">
               <e p="ApplyStatusEffectEffect.cs" t="Include" />
@@ -560,6 +563,7 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="issues.txt" t="Include" />
         <e p="seeds.txt" t="Include" />
         <e p="test_sandbox" t="Include">
           <e p="test.cs" t="Include" />

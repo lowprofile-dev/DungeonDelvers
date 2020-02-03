@@ -52,6 +52,18 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: Random
+      Entry: 6
+      Data: 
+    - Name: Transition
+      Entry: 7
+      Data: System.Nullable`1[[TransitionPoint+PointType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: Globals
       Entry: 7
       Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Int32,
@@ -97,6 +109,10 @@ MonoBehaviour:
   PlayerPrefab: {fileID: 3993753518470717486, guid: 6fca6d830a7e1c64480b639389a661e8,
     type: 3}
   CameraPrefab: {fileID: 19635246577722888, guid: ed79898cbb9288b498391cd864f43a5a,
+    type: 3}
+  MainCanvasPrefab: {fileID: 1297924371412730462, guid: ef8910094b5fb06419806b1ba039cee6,
+    type: 3}
+  GraphyPrefab: {fileID: 6065829648339744890, guid: 2bdfc096237e37ce6b63b351fe2614fc,
     type: 3}
   OnBeginEncounter:
     m_PersistentCalls:

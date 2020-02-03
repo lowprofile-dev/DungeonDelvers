@@ -8,6 +8,7 @@ using SkredUtils;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using Random = System.Random;
 
 public class GameController : AsyncMonoBehaviour
 {
@@ -15,6 +16,10 @@ public class GameController : AsyncMonoBehaviour
     public GameObject AnimationObjectBase;
     public GameObject PlayerPrefab;
     public GameObject CameraPrefab;
+    public GameObject MainCanvasPrefab;
+    public GameObject GraphyPrefab;
+    
+    public Random Random;
 
     public TransitionPoint.PointType? Transition = null;
     
@@ -36,6 +41,14 @@ public class GameController : AsyncMonoBehaviour
             Instantiate(PlayerPrefab);
         if (TrackPlayer.Instance == null)
             Instantiate(CameraPrefab);
+        if (MainCanvas.Instance == null)
+            Instantiate(MainCanvasPrefab);
+        
+        Random = new Random();
+        
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        Instantiate(GraphyPrefab);
+#endif
     }
     
     public Dictionary<string, int> Globals = new Dictionary<string, int>();
@@ -58,10 +71,4 @@ public class GameController : AsyncMonoBehaviour
 
         Instance.Globals[key] = value;
     }
-    
-#if UNITY_EDITOR
-
-    [ShowInInspector] private Sprite _currentFloorSprite => BattleController.Instance.GetPlayerGroundSprite();
-
-#endif
 }

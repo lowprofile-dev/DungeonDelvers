@@ -199,12 +199,42 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
     public async Task<IEnumerable<EffectResult>> ReceiveSkill(IBattler source, Skill skill)
     {
         Debug.Log($"Recebendo skill em {Name}");
-        var result = new List<EffectResult>();
-        foreach (var effect in skill.Effects)
+        
+        bool hasHit;
+
+        if (skill.TrueHit)
         {
-            result.Add(await ReceiveEffect(source, skill, effect));
+            Debug.Log($"{source.Name} acertou {Name} com {skill.SkillName} por ter True Hit");
+            hasHit = true;
         }
-        return result;
+        else
+        {
+            var accuracy = source.Stats.Accuracy + skill.AccuracyModifier;
+            var evasion = Stats.Evasion;
+
+            var hitChance = accuracy - evasion;
+
+            var rng = GameController.Instance.Random.NextDouble();
+
+            hasHit = rng <= hitChance;
+            
+            Debug.Log($"{source.Name} {(hasHit ? "acertou":"errou")} {Name} com {skill.SkillName} -- Acc: {accuracy:F3}, Eva: {evasion:F3}, Rng: {rng:F3}");
+        }
+        if (hasHit)
+        {
+            var results = new List<EffectResult>();
+            foreach (var effect in skill.Effects)
+            {
+                results.Add(await ReceiveEffect(source, skill, effect));
+            }
+            return results;
+        }
+        else
+        {
+            await BattleController.Instance.battleCanvas.ShowSkillResult(this, "Miss!", Color.white);
+            return new EffectResult[] { };
+            //retonar missresult depois(?)
+        }
     }
 
     public async Task<EffectResult> ReceiveEffect(IBattler source, Skill skillSource, Effect effect)
@@ -246,7 +276,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
             }
             case HealEffect.HealEffectResult healEffectResult:
             {
-                await BattleController.Instance.battleCanvas.ShowDamage(this, healEffectResult.AmountHealed.ToString(),
+                await BattleController.Instance.battleCanvas.ShowSkillResult(this, healEffectResult.AmountHealed.ToString(),
                     Color.green);
                 break;
             } 

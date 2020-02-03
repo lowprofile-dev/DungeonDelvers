@@ -110,31 +110,12 @@ public class BattleCanvas : AsyncMonoBehaviour
         Turn = turn;
     }
 
-    public async Task ShowDamage(IBattler battler, string info, Color textColor)
+    public async Task ShowSkillResult(IBattler battler, string info, Color textColor, float duration = 1.4f)
     {
-
-        // GameObject damageObject = null;
-        // await GameController.Instance.QueueActionAndAwait(() =>
-        // {
-        //     //Animação pro dano?
-        //     damageObject = Instantiate(DamagePrefab, transform);
-        //     damageObject.transform.position = battler.RectTransform.position + new Vector3(0, 100, 0);
-        //
-        //     var damageText = damageObject.GetComponent<DamageText>();
-        //     damageText.SetupDamageText(info,textColor);
-        // });
-        //
-        // await Task.Delay(1400);
-        //
-        // await GameController.Instance.QueueActionAndAwait(() =>
-        // {
-        //     Destroy(damageObject);
-        // });
-
-        await GameController.Instance.PlayCoroutine(ShowDamageCoroutine(battler, info, textColor));
+        await GameController.Instance.PlayCoroutine(ShowDamageCoroutine(battler, info, textColor, duration));
     }
 
-    private IEnumerator ShowDamageCoroutine(IBattler battler, string info, Color textColor)
+    private IEnumerator ShowDamageCoroutine(IBattler battler, string info, Color textColor, float duration)
     {
         var damageObject = Instantiate(DamagePrefab, transform);
         damageObject.transform.position = battler.RectTransform.position + new Vector3(0, 100, 0);
@@ -142,7 +123,7 @@ public class BattleCanvas : AsyncMonoBehaviour
         var damageText = damageObject.GetComponent<DamageText>();
         damageText.SetupDamageText(info,textColor);
         
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(duration);
         
         GameController.Instance.QueueAction(() => Destroy(damageObject));
     }

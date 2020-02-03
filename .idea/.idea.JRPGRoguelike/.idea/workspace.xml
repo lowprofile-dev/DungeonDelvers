@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d8eb85f-203a-42cc-a492-a61dc70ead53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/ApplyStatusEffectEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/ApplyStatusEffectEffect.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/AStarPathfindingProjectPro.unitypackage.meta" beforeDir="false" />
@@ -14,27 +10,30 @@
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/SECTR_VIS.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/Unity NavMesh.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Samples/DungeonCrawler.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dungeons/testdungeon/testdungeon1_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dungeons/testdungeon/testdungeon1_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dungeons/Towns/testtown.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dungeons/Towns/testtown.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game Controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game Controller.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MainCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MainCanvas.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Assassin.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Assassin.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Skills.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Skills.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Fighter.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Fighter.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Skills/Slash 2.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Skills/Slash 2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Skills/Chop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Skills/Chop.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Skills/CutDown.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Skills/CutDown.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/CharacterAnimations.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/Mage.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/Mage.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/Skills/Fireball.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/Skills/Fireball.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Monsters/Slime/SlimeMonsterBase1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Monsters/Slime/SlimeMonsterBase1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Skills/FireballPS.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Skills/FireballPS.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/Skills/KineticStrike.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/Skills/KineticStrike.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Warrior/Warrior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Warrior/Warrior.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/MenuEffects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DoTPassiveEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DoTPassiveEffect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleCanvas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/seeds.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/seeds.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/test_sandbox/debuggen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/test_sandbox/debuggen.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -161,8 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/FBBCommission.txt" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleInfoPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/CharacterActionMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/SerializableAsset.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/GameDatabase.cs" />
@@ -170,7 +167,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ConsumableBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillActionMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryInstance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/LearnSkillMasteryEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryGroup.cs" />
@@ -200,18 +196,21 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/OpenShopInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DoTPassiveEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/ApplyStatusEffectEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" />
-        <option value="$PROJECT_DIR$/Assets/seeds.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" />
+        <option value="$PROJECT_DIR$/Assets/seeds.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" />
       </list>
     </option>
   </component>
@@ -291,6 +290,7 @@
       <workItem from="1579613747465" duration="2669000" />
       <workItem from="1580129433353" duration="6127000" />
       <workItem from="1580388768699" duration="4050000" />
+      <workItem from="1580675817243" duration="3634000" />
     </task>
     <servers />
   </component>

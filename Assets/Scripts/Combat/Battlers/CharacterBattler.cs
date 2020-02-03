@@ -12,6 +12,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using Object = System.Object;
+using Random = System.Random;
 
 // ReSharper disable RedundantAssignment
 
@@ -244,13 +245,42 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
     public async Task<IEnumerable<EffectResult>> ReceiveSkill(IBattler source, Skill skill)
     {
         Debug.Log($"Recebendo Skill em {Character.Base.CharacterName}");
-        
-        var results = new List<EffectResult>();
-        foreach (var effect in skill.Effects)
+
+        bool hasHit;
+
+        if (skill.TrueHit)
         {
-            results.Add(await ReceiveEffect(source, skill, effect));
+            Debug.Log($"{source.Name} acertou {Name} com {skill.SkillName} por ter True Hit");
+            hasHit = true;
         }
-        return results;
+        else
+        {
+            var accuracy = source.Stats.Accuracy + skill.AccuracyModifier;
+            var evasion = Stats.Evasion;
+
+            var hitChance = accuracy - evasion;
+
+            var rng = GameController.Instance.Random.NextDouble();
+
+            hasHit = rng <= hitChance;
+            
+            Debug.Log($"{source.Name} {(hasHit ? "acertou":"errou")} {Name} com {skill.SkillName} -- Acc: {accuracy}, Eva: {evasion}, Rng: {rng}");
+        }
+        if (hasHit)
+        {
+            var results = new List<EffectResult>();
+            foreach (var effect in skill.Effects)
+            {
+                results.Add(await ReceiveEffect(source, skill, effect));
+            }
+            return results;
+        }
+        else
+        {
+            await BattleController.Instance.battleCanvas.ShowSkillResult(this, "Miss!", Color.white);
+            return new EffectResult[] { };
+            //retonar missresult depois(?)
+        }
     }
 
     public async Task<EffectResult> ReceiveEffect(IBattler source, Skill skillSource, Effect effect)
@@ -278,18 +308,18 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
                     tasks.Add(PlayCoroutine(DamageBlinkCoroutine()));
                 }
                 
-                tasks.Add(BattleController.Instance.battleCanvas.ShowDamage(this, damageEffectResult.DamageDealt.ToString(), Color.white));
+                tasks.Add(BattleController.Instance.battleCanvas.ShowSkillResult(this, damageEffectResult.DamageDealt.ToString(), Color.white));
                 
                 await Task.WhenAll(tasks);
                 break;
             }
             case HealEffect.HealEffectResult healEffectResult:
-                await BattleController.Instance.battleCanvas.ShowDamage(this, healEffectResult.AmountHealed.ToString(),
+                await BattleController.Instance.battleCanvas.ShowSkillResult(this, healEffectResult.AmountHealed.ToString(),
                     Color.green);
                 break;
             case GainApEffect.GainApEffectResult gainApEffectResult:
             {
-                await BattleController.Instance.battleCanvas.ShowDamage(this, gainApEffectResult.ApGained.ToString(),
+                await BattleController.Instance.battleCanvas.ShowSkillResult(this, gainApEffectResult.ApGained.ToString(),
                     Color.cyan);
                 break;
             }

@@ -68,4 +68,6 @@ MonoBehaviour:
   EpCost: 35
   SkillDescription: Attack a target with kinetic energy.
   Target: 0
+  TrueHit: 1
+  AccuracyModifier: 0
   AnimationType: 4
