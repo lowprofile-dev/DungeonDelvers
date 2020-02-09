@@ -15,7 +15,7 @@ using Random = UnityEngine.Random;
 public class TilemapManager : SerializedMonoBehaviour
 {
     public RuntimeDungeon Dungeon;
-    public int Seed;
+    public int? ForcedSeed;
 
     public List<Tilemap> MainTilemaps;
     public void Start()
@@ -23,8 +23,12 @@ public class TilemapManager : SerializedMonoBehaviour
         var stopwatch = Stopwatch.StartNew();
         
         var hasBeenGenerated = GameController.Instance.Seeds.TryGetValue(SceneManager.GetActiveScene().buildIndex, out var seed);
-        
-        if (hasBeenGenerated){
+
+        if (ForcedSeed.HasValue)
+        {
+            Dungeon.Generator.Seed = ForcedSeed.Value;
+            Debug.Log($"Map using forced seed {ForcedSeed.Value}.");
+        } else if (hasBeenGenerated){
             Dungeon.Generator.Seed = seed;
             Debug.Log($"Seed for Map {SceneManager.GetActiveScene().buildIndex} found: {seed}.");
         } else {
@@ -112,7 +116,6 @@ public class TilemapManager : SerializedMonoBehaviour
     [Button("New Seed")]
     public void GetNewSeed()
     {
-        //Seed = Random.Range(Int32.MinValue, Int32.MaxValue);
         Dungeon.Generator.RandomizeSeed();
     }
 }

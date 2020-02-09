@@ -32,10 +32,13 @@ MonoBehaviour:
       Data: 1|DamageEffect, Assembly-CSharp
     - Name: DamageFactor
       Entry: 4
-      Data: 0.9
+      Data: 1
     - Name: DamageType
       Entry: 3
       Data: 0
+    - Name: TrueHit
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -65,4 +68,6 @@ MonoBehaviour:
   EpCost: 8
   SkillDescription: Attack one target with a sword.
   Target: 0
+  TrueHit: 0
+  AccuracyModifier: 0
   AnimationType: 2

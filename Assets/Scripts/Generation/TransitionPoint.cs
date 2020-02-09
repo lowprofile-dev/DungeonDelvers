@@ -1,14 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class TransitionPoint : MonoBehaviour
 {
-    public static TransitionPoint StartPoint { get; private set; }
-    public static TransitionPoint EndPoint { get; private set; }
+    [ShowInInspector] public static TransitionPoint StartPoint { get; private set; }
+    [ShowInInspector] public static TransitionPoint EndPoint { get; private set; }
 
     public Transform Point;
     public PlayerController.PlayerDirection EnterDirection;
-    
+
     private void Awake()
     {
         switch (endType)
@@ -18,10 +20,8 @@ public class TransitionPoint : MonoBehaviour
                 if (StartPoint != null)
                 {
                     Debug.LogError("Multiple Start Points.");
-                    Destroy(gameObject);
-                    return;
+                    DestroyImmediate(StartPoint);
                 }
-
                 StartPoint = this;
                 break;
             }
@@ -30,8 +30,7 @@ public class TransitionPoint : MonoBehaviour
                 if (EndPoint != null)
                 {
                     Debug.LogError("Multiple End Points.");
-                    Destroy(gameObject);
-                    return;
+                    DestroyImmediate(EndPoint);
                 }
 
                 EndPoint = this;
