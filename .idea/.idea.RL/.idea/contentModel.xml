@@ -189,6 +189,7 @@
           <e p="Dungeons.txt" t="Include" />
         </e>
         <e p="FBBCommission.txt" t="Include" />
+        <e p="issues.txt" t="Include" />
         <e p="JsonDotNet" t="Include">
           <e p="link.xml" t="Include" />
         </e>
@@ -431,6 +432,7 @@
               <e p="BattleInfoPanel.cs" t="Include" />
               <e p="CharacterActionMenu.cs" t="Include" />
               <e p="DamageText.cs" t="Include" />
+              <e p="RewardPanel.cs" t="Include" />
               <e p="SkillActionMenu.cs" t="Include" />
               <e p="SkillButton.cs" t="Include" />
               <e p="SkillInfoPanel.cs" t="Include" />

@@ -32,7 +32,7 @@ MonoBehaviour:
   BaseLevel: 0
   LevelVariance: 0
   Stats:
-    MaxHp: 2147483647
+    MaxHp: 1
     InitialEp: 0
     EpGain: 0
     PhysAtk: 0

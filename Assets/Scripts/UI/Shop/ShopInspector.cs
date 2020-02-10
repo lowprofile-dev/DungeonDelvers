@@ -53,7 +53,7 @@ public class ShopInspector : MonoBehaviour
         if (player.CurrentGold >= item.Price)
         {
             player.CurrentGold -= item.Price;
-            player.AddItemToInventory(item.Item);
+            player.AddItemBaseToInventory(item.Item);
             ShopMenu.UpdateGoldText();
         }
         else

@@ -6,7 +6,7 @@ public class RemoveItemEffect : Effect
     
     public override EffectResult ExecuteEffect(SkillInfo skillInfo)
     {
-        PlayerController.Instance.RemoveItemFromInventory(Item, Cost);
+        PlayerController.Instance.RemoveItemBaseFromInventory(Item, Cost);
         return new ItemRemovedEffectResult
         {
             Item = Item,

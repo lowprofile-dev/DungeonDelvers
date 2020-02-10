@@ -112,15 +112,16 @@ public class BattleController : AsyncMonoBehaviour
                 battleResult = IsBattleOver();
             }
 
-            if (battleResult == 1)
+            switch (battleResult)
             {
-                Debug.Log("Ganhou");
-                Win();
-            }
-            else if (battleResult == -1)
-            {
-                Debug.Log("Perdeu");
-                Lose();
+                case 1:
+                    Debug.Log("Ganhou");
+                    await Win();
+                    break;
+                case -1:
+                    Debug.Log("Perdeu");
+                    Lose();
+                    break;
             }
         }
         catch (Exception e)
@@ -132,24 +133,49 @@ public class BattleController : AsyncMonoBehaviour
         }
         finally
         {
-            
             Battle = null;
         }
     }
 
-    private void Win()
+    
+    //?? arrumar algum dia
+    private async Task Win()
     {
-        PartyCommit();
-
-        GameController.Instance.QueueAction(() =>
+        bool finished = false;
+        //roll items
+        var items = new Item[] { };
+        
+        await QueueActionAndAwait(() =>
         {
-            PlayerController.Instance.GainEXP(_encounter.ExpReward);
-            PlayerController.Instance.CurrentGold += _encounter.GoldReward;
-
-            //items dps
+            battleCanvas.RewardPanel.ShowRewardPanel(_encounter.ExpReward, _encounter.GoldReward, items);
+            var rewardPanelClosedEvent = battleCanvas.RewardPanel.RewardPanelClosed;
+            
+            void CloseDialog()
+            {
+                finished = true;
+                rewardPanelClosedEvent.RemoveListener(CloseDialog);
+            }
+            
+            battleCanvas.RewardPanel.RewardPanelClosed.AddListener(CloseDialog);
         });
+        
+        while (!finished)
+            await Task.Delay(5);
+        
+        await QueueActionAndAwait((() => CommitWin(items)));
     }
 
+    private void CommitWin(IEnumerable<Item> rewards)
+    {
+        PartyCommit();
+        PlayerController.Instance.GainEXP(_encounter.ExpReward);
+        PlayerController.Instance.CurrentGold += _encounter.GoldReward;
+        foreach (var reward in rewards)
+        {
+            PlayerController.Instance.AddItemToInventory(reward);
+        }
+    }
+    
     private void Lose()
     {
         Application.Quit();
@@ -168,15 +194,10 @@ public class BattleController : AsyncMonoBehaviour
 
     private void PartyCommit()
     {
-        GameController.Instance.QueueAction(() =>
-        {
-            Party.ForEach(partyMember => partyMember.CommitChanges());
-            OnBattleEnd.Invoke();
-            PlayerController.Instance.UnpauseGame();
-            Destroy(battleCanvas.gameObject);
-
-            Debug.Log("Acabou");
-        });
+        Party.ForEach(partyMember => partyMember.CommitChanges());
+        OnBattleEnd.Invoke();
+        Destroy(battleCanvas.gameObject);
+        Debug.Log("Acabou");
     }
 
     private void CommitChanges()
@@ -206,29 +227,18 @@ public class BattleController : AsyncMonoBehaviour
                     Debug.Log($"Skill: {usedSkill.SkillName}, Targets: {String.Join(", ", turn.Targets.Select(target => $"{target.Name}"))}"));
 
                 await battler.ExecuteTurn(battler, usedSkill,
-                    targets); //Usa a skill, toca a animação de usar a skill. Talvez botar pra ser dentro do GetTurn mesmo. Ver.
-
-                //Roda a skill em todos os alvos em parelelo, espera todos eles retornarem os efeitos.
-
-                //Dá problema quando usa uma skill que dá dano em vários alvos inimigos. Ver porque. Idealmente é pra usar isso
+                    targets);
+                
                 var effectResults =
                     await Task.WhenAll(targets.EachDo((target) => target.ReceiveSkill(battler, usedSkill)));
-
-                // var effectResults = new List<IEnumerable<EffectResult>>();
-                //
-                // foreach (var target in targets)
-                // {
-                //     var effectResult = await target.ReceiveSkill(battler, usedSkill);
-                //     effectResults.Add(effectResult);
-                // }
 
                 var concatResults = effectResults.SelectMany(x => x);
 
                 await battler.AfterSkill(
-                    concatResults); //Ex. caso tenha alguma interação com o que aconteceu. Ex. curar 2% do dano dado, que é afetado pela rolagem de dano, crits, erros, etc.
+                    concatResults);
             }
 
-            await battler.TurnEnd(); //Cleanup ou outros efeitos
+            await battler.TurnEnd();
         }
         catch (Exception e)
         {

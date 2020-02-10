@@ -17,26 +17,19 @@ public class TransitionPoint : MonoBehaviour
         {
             case PointType.Start:
             {
-                if (StartPoint != null)
-                {
-                    Debug.LogError("Multiple Start Points.");
-                    DestroyImmediate(StartPoint);
-                }
                 StartPoint = this;
                 break;
             }
             case PointType.End:
             {
-                if (EndPoint != null)
-                {
-                    Debug.LogError("Multiple End Points.");
-                    DestroyImmediate(EndPoint);
-                }
-
                 EndPoint = this;
                 break;
             }
         }
+    }
+
+    private void Start()
+    {
         if (GameController.Instance != null)
             TransitionPlayer();
     }

@@ -62,4 +62,6 @@ MonoBehaviour:
   EpCost: 0
   SkillDescription: Generate AP
   Target: 6
+  TrueHit: 1
+  AccuracyModifier: 0
   AnimationType: 4

@@ -9,7 +9,6 @@ public class DamageEffect : Effect
 {
     public float DamageFactor = 1.0f;
     public DamageType DamageType = DamageType.Physical;
-    public bool TrueHit = false;
 
     public override EffectResult ExecuteEffect(SkillInfo skillInfo)
     {

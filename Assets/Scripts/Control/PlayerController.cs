@@ -293,11 +293,28 @@ public class PlayerController : AsyncMonoBehaviour
 
     #region InventoryFunctions
 
-    public void AddItemToInventory(ItemBase itemBase)
+    public void AddItemToInventory(Item item)
+    {
+        if (item is IStackable stackable)
+        {
+            AddStackableToInventory(stackable);
+            return;
+        }
+        
+        Inventory.Add(item);
+    }
+    
+    public void AddStackableToInventory(IStackable stackable)
+    {
+        Inventory.Add(stackable as Item);
+        Restack(stackable.StackableBase);
+    }
+    
+    public void AddItemBaseToInventory(ItemBase itemBase)
     {
         if (itemBase is IStackableBase iStackable)
         {
-            AddStackableToInventory(iStackable, 1);
+            AddStackableBaseToInventory(iStackable, 1);
             return;
         }
 
@@ -310,11 +327,11 @@ public class PlayerController : AsyncMonoBehaviour
         Inventory.Remove(item);
     }
 
-    public void RemoveItemFromInventory(ItemBase itemBase, int amount)
+    public void RemoveItemBaseFromInventory(ItemBase itemBase, int amount)
     {
         if (itemBase is IStackableBase stackableBase)
         {
-            RemoveStackableFromInventory(stackableBase, amount);
+            RemoveStackableBaseFromInventory(stackableBase, amount);
             return;
         }
 
@@ -337,7 +354,7 @@ public class PlayerController : AsyncMonoBehaviour
         }
     }
 
-    public void RemoveStackableFromInventory(IStackableBase stackableBase, int amount)
+    public void RemoveStackableBaseFromInventory(IStackableBase stackableBase, int amount)
     {
         var allStacks = Inventory.FindAll(item => item.Base == (ItemBase)stackableBase);
 
@@ -348,7 +365,7 @@ public class PlayerController : AsyncMonoBehaviour
         Restack(stackableBase, totalCount - amount);
     }
 
-    public void AddStackableToInventory(IStackableBase stackableBase, int quantity)
+    public void AddStackableBaseToInventory(IStackableBase stackableBase, int quantity)
     {
         if (quantity == 0)
             return;
@@ -398,6 +415,14 @@ public class PlayerController : AsyncMonoBehaviour
         }
     }
 
+    public void Restack(IStackableBase stackableBase)
+    {
+        var totalCount = Inventory.Where(item => item.Base == stackableBase.ItemBase).Cast<IStackable>()
+            .Select(stackable => stackable.Quantity).Sum();
+        
+        Restack(stackableBase,totalCount);
+    }
+    
     public void Restack(IStackableBase stackableBase, int totalQuantity)
     {
         Inventory.RemoveAll(item => item.Base == (ItemBase)stackableBase);

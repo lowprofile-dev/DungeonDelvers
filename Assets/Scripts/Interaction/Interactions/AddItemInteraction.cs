@@ -10,7 +10,7 @@ public class AddItemInteraction : Interaction
     {
 //        var item = ItemInstanceBuilder.BuildInstance(ItemBase);
 //        PlayerController.Instance.Inventory.Add(item);
-        PlayerController.Instance.AddItemToInventory(ItemBase);
+        PlayerController.Instance.AddItemBaseToInventory(ItemBase);
     }
 
     public override IEnumerator Completion => null;

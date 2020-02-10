@@ -15,6 +15,7 @@ public class BattleCanvas : AsyncMonoBehaviour
     public RectTransform MonsterPanel;
     public Image Battleground;
     public CharacterActionMenu CharacterActionMenu;
+    public RewardPanel RewardPanel;
 
     public GameObject DamagePrefab;
     public GameObject ActionArrowPrefab;

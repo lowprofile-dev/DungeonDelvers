@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection.Emit;
+using TMPro;
 
 namespace SkredUtils
 {
@@ -53,6 +55,45 @@ namespace SkredUtils
         }
 
         public static Ref<T> CreateRef<T>(this T @ref) => new Ref<T>(@ref);
+
+        public static IEnumerator TextWriter(TMP_Text textObject, string text, int updateFrequency = 1)
+        {
+            //Update frequency must be at least 1 (frames/character)
+            if (updateFrequency < 1)
+                throw new ArgumentException();
+            
+            using (var textEnumerator = text.GetEnumerator())
+            {
+                //While there are still characters to be printed out
+                while (textEnumerator.MoveNext())
+                {
+                    var currentChar = textEnumerator.Current;
+                    
+                    //If current character is a tag start, print until tag closes (or string is over)
+                    if (currentChar == '<')
+                    {
+                        var stringToAppend = "<";
+                        while (textEnumerator.MoveNext() && textEnumerator.Current != '>')
+                        {
+                            stringToAppend += textEnumerator.Current;
+                        }
+                        
+                        //Close it
+                        stringToAppend += ">";
+
+                        textObject.text += stringToAppend;
+                    }
+                    else
+                    {
+                        textObject.text += currentChar;
+                    }
+                    
+                    //Wait for X frames, where X is updateFrequency
+                    for (var i = 0; i < updateFrequency; i++)
+                        yield return null;
+                }
+            }
+        }
     }
 
     public class Ref<T>

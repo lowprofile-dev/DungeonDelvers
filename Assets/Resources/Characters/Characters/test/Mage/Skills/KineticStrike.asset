@@ -36,9 +36,6 @@ MonoBehaviour:
     - Name: DamageType
       Entry: 3
       Data: 1
-    - Name: TrueHit
-      Entry: 5
-      Data: false
     - Name: 
       Entry: 8
       Data: 

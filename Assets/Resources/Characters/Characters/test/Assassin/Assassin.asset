@@ -3036,7 +3036,6 @@ MonoBehaviour:
   BaseSkills:
   - {fileID: 11400000, guid: 71a3cb8b20046b7239bbe7d7915e89b0, type: 2}
   - {fileID: 11400000, guid: 8e01f04622ce68d5ab2239095366db63, type: 2}
-  - {fileID: 11400000, guid: 09c95ca7957be97678ea0721dd0561b0, type: 2}
   BasePassives:
   - {fileID: 11400000, guid: 8a26a5680e5ca86439fb5271297e9113, type: 2}
   Level: 1

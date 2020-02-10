@@ -103,7 +103,7 @@ public class SkillTargeter : SerializedMonoBehaviour
             BattleCanvas.BindTargetArrow(battler.RectTransform);
         }
 
-        Action DisplayTargets = () =>
+        void DisplayTargets()
         {
             BattleCanvas.CleanTargetArrows();
             var names = new List<string>();
@@ -111,7 +111,7 @@ public class SkillTargeter : SerializedMonoBehaviour
             foreach (var battler in TargetGroups[currentIndex])
             {
                 BattleCanvas.BindTargetArrow(battler.RectTransform);
-                names.Add(battler.Name);
+                names.Add($"Lv. {battler.Level} {battler.Name}");
             }
 
             var targetName = string.Join(", ", names);

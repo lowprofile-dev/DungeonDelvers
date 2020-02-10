@@ -7,7 +7,7 @@ public class AddStackableInteraction : Interaction
     public int Quantity;
     public override void Run(Interactable source)
     {
-        PlayerController.Instance.AddStackableToInventory(StackableBase,Quantity);
+        PlayerController.Instance.AddStackableBaseToInventory(StackableBase,Quantity);
     }
 
     public override IEnumerator Completion => null;
