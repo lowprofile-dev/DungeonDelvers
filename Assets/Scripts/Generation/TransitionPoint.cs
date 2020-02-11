@@ -36,12 +36,15 @@ public class TransitionPoint : MonoBehaviour
 
     private void TransitionPlayer()
     {
-        if (GameController.Instance.Transition != endType) //end -> start, start -> end
+        if (GameController.Instance.Transition.HasValue && GameController.Instance.Transition != endType) //end -> start, start -> end
         {
             var target = Point.transform.position;
-            PlayerController.Instance.transform.position = new Vector3(target.x, target.y, PlayerController.Instance.transform.position.z);
-            TrackPlayer.Instance.transform.position = new Vector3(target.x, target.y, TrackPlayer.Instance.transform.position.z);
+            var playerTransform = PlayerController.Instance.transform;
+            playerTransform.position = new Vector3(target.x, target.y, playerTransform.position.z);
+            var trackTransform = TrackPlayer.Instance.transform;
+            trackTransform.position = new Vector3(target.x, target.y, trackTransform.position.z);
             PlayerController.Instance.Direction = EnterDirection;
+            GameController.Instance.Transition = null;
         }
     }
     

@@ -23,7 +23,8 @@ public class Character
             baseUid = Base.uniqueIdentifier,
             currentHp = currentHp,
             masteryLevels = MasteryGroup.Masteries.Values.Select(mI => mI.CurrentLevel).ToArray(),
-            Equipment = EquippableSaves()
+            Equipment = EquippableSaves(),
+            masteryPoints = CurrentMp,
         };
 
         return save;
@@ -72,6 +73,7 @@ public class Character
             Regenerate();
 
             currentHp = save.currentHp;
+            CurrentMp = save.masteryPoints;
         }
         catch (Exception e)
         {

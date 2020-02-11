@@ -20,6 +20,8 @@ public class RewardPanel : MonoBehaviour
         var text = $"The party gained <color=#00FFFF>{expGained} EXP</color> and <color=#FFFF00>{goldGained}g</color>.";
         if (itemsGained.Any())
             text += $"\nThey also found {string.Join(", ", itemsGained.Select(item => item.InspectorName))}";
+        if (expGained >= PlayerController.Instance.ExpToNextLevel - PlayerController.Instance.CurrentExp)
+            text += $"\nThe party is now level {PlayerController.Instance.PartyLevel+1}!";
         RewardText.text = "";
 
         rewardTextString = text;
@@ -28,7 +30,7 @@ public class RewardPanel : MonoBehaviour
 
     private IEnumerator TypeText(string text)
     {
-        TypeTextCoroutine = StartCoroutine(SkredUtils.SkredUtils.TextWriter(RewardText, text, 10));
+        TypeTextCoroutine = StartCoroutine(SkredUtils.SkredUtils.TextWriter(RewardText, text, 4));
         yield return TypeTextCoroutine;
         TypeTextCoroutine = null;
     }

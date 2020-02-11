@@ -2,15 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d8eb85f-203a-42cc-a492-a61dc70ead53" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dungeons/testdungeon/testdungeon1_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dungeons/testdungeon/testdungeon1_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Assassin.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Assassin.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Skills/SlashAssassin.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Skills/SlashAssassin.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Skills/Stab.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/Skills/Stab.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Skills/Chop.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/Skills/Chop.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Warrior/Skills/Slash.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Warrior/Skills/Slash.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/AStarPathfindingProjectPro.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/PlayMaker.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/RAIN.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/SECTR_VIS.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/Unity NavMesh.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Samples/DungeonCrawler.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/CharacterAnimations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/CharacterAnimations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/GameDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/GameDatabase.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/CharacterSave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/MenuEffects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/RewardPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/RewardPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TODO.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Assembly-CSharp-firstpass.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Assembly-CSharp-firstpass.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/AssetIcons.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/AssetIcons.dll" afterDir="false" />
@@ -23,7 +36,6 @@
       <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.TextMeshPro.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.Timeline.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.Timeline.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/UnityEngine.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/UnityEngine.UI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/boot.config" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/boot.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/linux_Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/globalgamemanagers" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/linux_Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/globalgamemanagers.assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/linux_Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/level0" afterDir="false" />
@@ -57,6 +69,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MessageBox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ConsumableUse/ConsumableUses/LevelUpConsumableUse.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/MessageBoxInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/InventoryConverter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/FeetBase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -78,6 +91,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Sirenix/Demos/Custom Drawers/Scripts/GenericDrawerExample.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/EquippableBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ConsumableBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/RewardPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Effect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ItemBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AssetIcons/Demo/Demo Resources/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
@@ -110,6 +124,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/BaseStatMasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/MasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/ToggleComponentActiveInteraction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/PlayerSkill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/AddPassiveMasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/LearnSkillMasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryGroup.cs" root0="FORCE_HIGHLIGHTING" />
@@ -158,8 +173,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/CharacterActionMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Control/SerializableAsset.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/GameDatabase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/ISerializable.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ConsumableBase.cs" />
@@ -177,13 +190,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryItemInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/CharacterInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/TODO.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/GameSaveController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterSave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/InventoryConverter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/PartyConverter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/ItemInstanceBuilder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Camera/TrackPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" />
@@ -194,7 +204,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/OpenShopInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DoTPassiveEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/ApplyStatusEffectEffect.cs" />
@@ -208,7 +217,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/RewardPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/MainMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/TODO.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterSave.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" />
       </list>
     </option>
   </component>
@@ -290,6 +305,9 @@
       <workItem from="1580388768699" duration="4050000" />
       <workItem from="1580675817243" duration="3634000" />
       <workItem from="1581108078849" duration="2966000" />
+      <workItem from="1581341038725" duration="2102000" />
+      <workItem from="1581428521553" duration="1449000" />
+      <workItem from="1581454279232" duration="702000" />
     </task>
     <servers />
   </component>

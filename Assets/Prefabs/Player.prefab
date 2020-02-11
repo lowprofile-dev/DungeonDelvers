@@ -84,10 +84,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42485ac7352004c6a8bc01c3505ca003, type: 2}
   - {fileID: 11400000, guid: f9f6f4482b3fd3e9ebc8cd7b92caaeca, type: 2}
   - {fileID: 11400000, guid: fb1fbb4bb0c7667e6833f3be9cba04f4, type: 2}
-  InventoryBase:
-  - {fileID: 11400000, guid: 59b0a2f636fdc911c9db9e508c90caa7, type: 2}
-  - {fileID: 11400000, guid: 59b0a2f636fdc911c9db9e508c90caa7, type: 2}
-  - {fileID: 11400000, guid: 59b0a2f636fdc911c9db9e508c90caa7, type: 2}
+  InventoryBase: []
   MovementSpeed: 5
   MainMenuPrefab: {fileID: 9044932552085264921, guid: bc9cf6ed27b58c5a2856ff9100a8fdde,
     type: 3}
@@ -143,6 +140,9 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: Random
+      Entry: 6
+      Data: 
     - Name: Transition
       Entry: 7
       Data: System.Nullable`1[[TransitionPoint+PointType, Assembly-CSharp]], mscorlib
@@ -196,6 +196,8 @@ MonoBehaviour:
     type: 3}
   PlayerPrefab: {fileID: 0}
   CameraPrefab: {fileID: 0}
+  MainCanvasPrefab: {fileID: 0}
+  GraphyPrefab: {fileID: 0}
   OnBeginEncounter:
     m_PersistentCalls:
       m_Calls: []

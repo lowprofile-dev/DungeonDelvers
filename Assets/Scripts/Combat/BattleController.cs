@@ -196,6 +196,7 @@ public class BattleController : AsyncMonoBehaviour
     {
         Party.ForEach(partyMember => partyMember.CommitChanges());
         OnBattleEnd.Invoke();
+        PlayerController.Instance.UnpauseGame();
         Destroy(battleCanvas.gameObject);
         Debug.Log("Acabou");
     }

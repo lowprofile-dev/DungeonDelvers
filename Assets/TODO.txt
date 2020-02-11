@@ -1,11 +1,4 @@
-Ver battlecomponent: tem algo que eu faria que precisa de algo fora SkillInfo (target,source,skill)?
-Mudar skillinfo pra actioninfo(?)
-passar os statuseffects pra battlecomponents 
-Refazer statuseffects (mudar o statuseffect atual pra outra coisa, status effects são coisas bases tipo paralyze, poison, sleep, silence)
-
-Fazer um battler abstrato principal do qual o monster e o player herdam em vez de uma interface só.
-Ver como fazer os personagens terem referencia ao maior HP durante a batalha.
-Fazer histórico de batalha
+Arrumar loading de um mapa (não ser teleportado pra a ultima entrada)
 
 Completar cidade.
 Começar a fazer os monstros + boss.

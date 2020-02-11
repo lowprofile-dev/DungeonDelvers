@@ -8,5 +8,5 @@ public struct CharacterSave
     public int currentHp;
     public int[] masteryLevels;
     public EquippableSave[] Equipment;
-    
+    public int masteryPoints;
 }

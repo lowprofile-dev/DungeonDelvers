@@ -54,7 +54,7 @@ public class MainMenu : MonoBehaviour
             CharacterPanels[index].SetOnClick(() => OpenCharacterInspector(party[index]));
         }
 
-        PartyLevelText.text = $"Party Lv. {PlayerController.Instance.PartyLevel}";
+        PartyLevelText.text = $"Party Lv. {PlayerController.Instance.PartyLevel} ({PlayerController.Instance.CurrentExp}/{PlayerController.Instance.ExpToNextLevel})";
     }
 
     private void Update()
