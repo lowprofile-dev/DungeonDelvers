@@ -2,15 +2,20 @@ Dungeons:
 
 Cidade 1: Castelo, saindo em expedição para a Dark Dimension
 Dungeon 1: Floresta, até chegar na entrada de uma caverna
+Maps: 4
 
 Cidade 2: Vilarejo na entrada da caverna
 Dungeon 2: Caverna
+Maps: 6
 
 Cidade 3: Acampamento dentro da caverna
 Dungeon 3: Deeper caverns (texturas diferentes e tal)
+Maps: 8
 
 Cidade 4: Vilarejo no fundo da caverna, na porta de um templo (cidade de dwarfs?)
 Dungeon 4: Templo dentro da caverna, indo até um portal no final
+Maps: 10
 
 Cidade 5: Entrada da Dark Dimension
 Dungeon 5: Dark Dimension -> Boss Final
+Maps: 12

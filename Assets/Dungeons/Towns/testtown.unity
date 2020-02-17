@@ -15290,69 +15290,39 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 6776608694746677356, guid: 387acfde1dce59b41a92fa08db762417, type: 3}
-    - {fileID: 6776608694746677356, guid: 1ddb76c9846fc494c947fe63307d0f45, type: 3}
-    - {fileID: 6776608694746677356, guid: 530ad914752ae284e9f67a56de4f0cf7, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: Encounters
+    - Name: DefaultMapEncounterSet
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[MapEncounter, Assembly-CSharp]],
+      Data: 0|MapEncounterSet, Assembly-CSharp
+    - Name: MapEncounters
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[MapEncounter, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: MapEncounter, Assembly-CSharp
-    - Name: Encounter
-      Entry: 10
       Data: 0
-    - Name: Chance
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: MapEncounter, Assembly-CSharp
-    - Name: Encounter
-      Entry: 10
-      Data: 1
-    - Name: Chance
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: MapEncounter, Assembly-CSharp
-    - Name: Encounter
-      Entry: 10
-      Data: 2
-    - Name: Chance
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
+    - Name: MinEncounterDistance
+      Entry: 4
+      Data: 10
+    - Name: MaxEncounterDistance
+      Entry: 4
+      Data: 25
+    - Name: 
+      Entry: 8
+      Data: 
   previousSceneIndex: -1
   nextSceneIndex: 1
-  EncounterEnabled: 0
-  MinEncounterDistance: 2
-  MaxEncounterDistance: 3
   RemainingEncounterDistance: 0
   OverrideBackgroundColor: {r: 0.20784314, g: 0.25490198, b: 0.28627452, a: 0}
 --- !u!4 &562398170

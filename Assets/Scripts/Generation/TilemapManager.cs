@@ -20,29 +20,32 @@ public class TilemapManager : SerializedMonoBehaviour
     public List<Tilemap> MainTilemaps;
     public void Start()
     {
-        var stopwatch = Stopwatch.StartNew();
-        
-        var hasBeenGenerated = GameController.Instance.Seeds.TryGetValue(SceneManager.GetActiveScene().buildIndex, out var seed);
-
-        if (ForcedSeed.HasValue)
+        if (Dungeon != null)
         {
-            Dungeon.Generator.Seed = ForcedSeed.Value;
-            Debug.Log($"Map using forced seed {ForcedSeed.Value}.");
-        } else if (hasBeenGenerated){
-            Dungeon.Generator.Seed = seed;
-            Debug.Log($"Seed for Map {SceneManager.GetActiveScene().buildIndex} found: {seed}.");
-        } else {
-            Dungeon.Generator.RandomizeSeed();
-            GameController.Instance.Seeds[SceneManager.GetActiveScene().buildIndex] = Dungeon.Generator.Seed;
-            Debug.Log($"No previous seed found for Map {SceneManager.GetActiveScene().buildIndex}. Generated {Dungeon.Generator.Seed}");
+            var stopwatch = Stopwatch.StartNew();
+        
+            var hasBeenGenerated = GameController.Instance.Seeds.TryGetValue(SceneManager.GetActiveScene().buildIndex, out var seed);
+
+            if (ForcedSeed.HasValue)
+            {
+                Dungeon.Generator.Seed = ForcedSeed.Value;
+                Debug.Log($"Map using forced seed {ForcedSeed.Value}.");
+            } else if (hasBeenGenerated){
+                Dungeon.Generator.Seed = seed;
+                Debug.Log($"Seed for Map {SceneManager.GetActiveScene().buildIndex} found: {seed}.");
+            } else {
+                Dungeon.Generator.RandomizeSeed();
+                GameController.Instance.Seeds[SceneManager.GetActiveScene().buildIndex] = Dungeon.Generator.Seed;
+                Debug.Log($"No previous seed found for Map {SceneManager.GetActiveScene().buildIndex}. Generated {Dungeon.Generator.Seed}");
+            }
+        
+            Dungeon.Generate();
+
+            stopwatch.Stop();
+
+            Debug.Log($"Generated dungeon in {stopwatch.ElapsedMilliseconds}ms");
         }
         
-        Dungeon.Generate();
-
-        stopwatch.Stop();
-
-        Debug.Log($"Generated dungeon in {stopwatch.ElapsedMilliseconds}ms");
-
         Try();
     }
 
