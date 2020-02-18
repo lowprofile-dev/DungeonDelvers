@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class TransitionPoint : MonoBehaviour
 {
-    [ShowInInspector] public static TransitionPoint StartPoint { get; private set; }
-    [ShowInInspector] public static TransitionPoint EndPoint { get; private set; }
+    [ShowInInspector, HideInEditorMode] public static TransitionPoint StartPoint { get; private set; }
+    [ShowInInspector, HideInEditorMode] public static TransitionPoint EndPoint { get; private set; }
 
     public Transform Point;
     public PlayerController.PlayerDirection EnterDirection;

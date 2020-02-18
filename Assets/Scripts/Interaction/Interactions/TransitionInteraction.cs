@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TransitionInteraction : Interaction
@@ -13,6 +14,8 @@ public class TransitionInteraction : Interaction
             : MapSettings.Instance.nextSceneIndex;
 
         GameController.Instance.Transition = Direction;
+        
+        Debug.Log($"Transitioning to index {index}");
         
         SceneManager.LoadScene(index);
     }

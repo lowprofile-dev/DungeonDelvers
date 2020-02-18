@@ -16,6 +16,7 @@ public class Skill : SerializableAsset
     public SkillAnimation SkillAnimation = null;
 
     public bool TrueHit = false;
+    public bool CanBeSilenced;
     [Range(-1,1), HideIf("TrueHit")] public float AccuracyModifier = 0f;
     
     //Ver se necessario mais depois, eg. Raise-equivalent -> one dead ally

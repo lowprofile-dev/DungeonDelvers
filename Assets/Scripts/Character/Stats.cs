@@ -13,9 +13,9 @@ public struct Stats
     public int MagDef;
     public int Speed;
     [PropertyRange(0, 1)] public float Accuracy;
-    [PropertyRange(0, 1)] public float Evasion;
+    [PropertyRange(-1, 1)] public float Evasion;
     [PropertyRange(0, 1)] public float CritChance;
-    [PropertyRange(0, 1)] public float CritAvoid;
+    [PropertyRange(-1, 1)] public float CritAvoid;
 
     public static Stats operator +(Stats a, Stats b)
     {

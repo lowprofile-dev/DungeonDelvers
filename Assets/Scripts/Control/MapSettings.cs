@@ -13,9 +13,9 @@ public class MapSettings : SerializedMonoBehaviour
 
     [FoldoutGroup("Scene Sequence")] public int previousSceneIndex = -1;
     [FoldoutGroup("Scene Sequence")] public int nextSceneIndex = -1;
-    
-    [FormerlySerializedAs("Encounters"), FoldoutGroup("Encounter")] public MapEncounterSet DefaultMapEncounterSet = new MapEncounterSet();
-    [FoldoutGroup("Encounter"), ShowInInspector] private MapEncounterSet _mapEncounterSet;
+
+    [FormerlySerializedAs("Encounters"), FoldoutGroup("Encounter")] public MapEncounterSet DefaultMapEncounterSet = null;
+    [FoldoutGroup("Encounter"), ShowInInspector, ReadOnly] private MapEncounterSet _mapEncounterSet;
     public MapEncounterSet MapEncounterSet
     {
         get => _mapEncounterSet;

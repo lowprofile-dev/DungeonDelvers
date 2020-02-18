@@ -1,5 +1,3 @@
-Arrumar loading de um mapa (não ser teleportado pra a ultima entrada)
-
 Completar cidade.
 Começar a fazer os monstros + boss.
 
@@ -9,9 +7,6 @@ Fazer o jogo pseudo-funcional:
 Futuro:
 Resolver certas UIs mostrando detalhes placeholders antes de mostrar os corretos.
 Arrumar mainmenu/battlecanvas para fazerem parte do maincanvas e terem cleanup em vez de serem instanciados.
-Mudar o backrroundcoloroverride pra um MapSettings, que tem os encounters e tal (pra mudar encounter só fazer um trigger na sala que faz isso).
-Ver como ficar em relação ao dicionário nos players
-Refazer parte de passivas -> criar uma PassiveInstance, que tem uma referencia a passiva base
 Salvar um histórico de cada turno no BattleController
 Refazer o block como statuseffect(?)
 Ver como vai ser em relação a stackable/item/slot (prob. usar peso, ter que fazer tela de dropar algo do inventário depois da batalha. dois menus com setas de trocar entre (loot) -> <- (inventario)
