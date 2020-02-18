@@ -2,50 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d8eb85f-203a-42cc-a492-a61dc70ead53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/TilesetMerger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/TilesetMerger.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/AStarPathfindingProjectPro.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/PlayMaker.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/RAIN.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/SECTR_VIS.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/Unity NavMesh.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Samples/DungeonCrawler.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Dungeons/Forest/Forest1/Forest1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dungeons/Forest/Forest1/Forest1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Dungeons/Forest/Forest1/ForestEntrance.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dungeons/Forest/Forest1/ForestEntrance.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Character/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Character/Stats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/TransitionInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/TransitionInteraction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/MenuEffects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TODO.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TODO.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Assembly-CSharp-firstpass.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Assembly-CSharp-firstpass.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/AssetIcons.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/AssetIcons.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Sirenix.OdinInspector.CompatibilityLayer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Sirenix.OdinInspector.CompatibilityLayer.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.2D.Common.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.2D.Common.Runtime.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.2D.PixelPerfect.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.2D.PixelPerfect.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.2D.SpriteShape.Runtime.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.InternalAPIEngineBridge.001.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.Mathematics.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.Mathematics.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.TextMeshPro.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.Timeline.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/Unity.Timeline.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/Managed/UnityEngine.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/Managed/UnityEngine.UI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/boot.config" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/boot.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/globalgamemanagers" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/globalgamemanagers.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/level0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/level1" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/level1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/resources.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/resources.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/sharedassets0.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/sharedassets0.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/sharedassets0.assets.resS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/sharedassets1.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/sharedassets1.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/sharedassets1.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Game/linux_Data/sharedassets1.assets.resS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/linux_Data/sharedassets1.resource" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,6 +59,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/RewardPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Effect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ItemBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Generation/TilesetMerger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AssetIcons/Demo/Demo Resources/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ItemDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" root0="FORCE_HIGHLIGHTING" />
@@ -125,6 +88,7 @@
     <setting file="file://$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/MainCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryCondition/MasteryCondition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Dungeons/Forest/Forest1/Forest1.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/BaseStatMasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/MasteryEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/ToggleComponentActiveInteraction.cs" root0="FORCE_HIGHLIGHTING" />
@@ -178,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ConsumableBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillActionMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryInstance.cs" />
@@ -229,6 +192,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/TransitionInteraction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TilesetMerger.cs" />
       </list>
     </option>
   </component>
@@ -316,7 +280,7 @@
       <workItem from="1581600930473" duration="207000" />
       <workItem from="1581601279739" duration="79000" />
       <workItem from="1581601397769" duration="688000" />
-      <workItem from="1581950446868" duration="1848000" />
+      <workItem from="1581950446868" duration="3179000" />
     </task>
     <servers />
   </component>
