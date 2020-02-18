@@ -4912,6 +4912,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3406148248690233230}
   - component: {fileID: 3406148248690233229}
+  - component: {fileID: 78831138659516404}
   m_Layer: 0
   m_Name: ForestEntrance
   m_TagString: Untagged
@@ -4952,6 +4953,55 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+--- !u!114 &78831138659516404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3406148248690233228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 238d443cf4b172f4989d5ce455c57c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowImmediateRepeats: 1
+  AllowRotation: 1
+  RepeatMode: 0
+  OverrideAutomaticTileBounds: 1
+  TileBoundsOverride:
+    m_Center: {x: 6, y: 1, z: 0}
+    m_Extent: {x: 19, y: 14, z: 0}
+  Entrance: {fileID: 0}
+  Exit: {fileID: 3406148249983419949}
+  OverrideConnectionChance: 0
+  ConnectionChance: 0
+  placement:
+    UsedDoorways: []
+    UnusedDoorways: []
+    AllDoorways: []
+    pathDepth: 0
+    normalizedPathDepth: 0
+    branchDepth: 0
+    normalizedBranchDepth: 0
+    isOnMainPath: 0
+    bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    localBounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    root: {fileID: 0}
+    tile: {fileID: 0}
+  archetype: {fileID: 0}
+  tileSet: {fileID: 0}
+  node:
+    flow: {fileID: 0}
+    index: 0
+  line:
+    flow: {fileID: 0}
+    index: 0
+  fileVersion: 1
 --- !u!1 &3406148249114531596
 GameObject:
   m_ObjectHideFlags: 0
@@ -4967,7 +5017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3406148249114531597
 Transform:
   m_ObjectHideFlags: 0
@@ -8444,13 +8494,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3406148249983419955}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: -0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.70710677, z: -0.70710677, w: 0}
+  m_LocalPosition: {x: 4.5, y: -13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3406148249114531597}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 90}
+  m_LocalEulerAnglesHint: {x: 90, y: 270, z: 90}
 --- !u!114 &3406148249983419949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8477,7 +8527,7 @@ MonoBehaviour:
   - {fileID: 3406148248628863989}
   - {fileID: 8554075118545455255}
   socketGroup_obsolete: -1
-  socket: {fileID: -8556351885296041325, guid: f7b0ea6329e51e1488dd8222ebcb7fc7, type: 2}
+  socket: {fileID: 11400000, guid: 1efc51bd4c700524aa89847da0f05f91, type: 2}
   doorPrefab: {fileID: 0}
   doorComponent: {fileID: 0}
   tile: {fileID: 0}

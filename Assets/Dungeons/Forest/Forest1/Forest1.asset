@@ -15,8 +15,8 @@ MonoBehaviour:
   globalPropGroupID_obsolete: 
   globalPropRanges_obsolete: []
   Length:
-    Min: 5
-    Max: 10
+    Min: 10
+    Max: 14
   BranchMode: 0
   BranchCount:
     Min: 1
@@ -28,7 +28,8 @@ MonoBehaviour:
   TileInjectionRules: []
   Nodes:
   - Graph: {fileID: 11400000}
-    TileSets: []
+    TileSets:
+    - {fileID: 11400000, guid: b8a1b23ceba17964393f511eb5128c20, type: 2}
     NodeType: 1
     Position: 0
     Label: Start
