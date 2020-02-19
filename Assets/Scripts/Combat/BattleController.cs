@@ -274,7 +274,30 @@ public class BattleController : AsyncMonoBehaviour
             var playerPosition = PlayerController.Instance.transform.position;
             var playerTilemapPosition = groundTilemap.WorldToCell(playerPosition);
             var playerTile = groundTilemap.GetSprite(playerTilemapPosition);
-            return playerTile;
+            if (playerTile == null)
+            {
+                var x = playerTilemapPosition.x;
+                var y = playerTilemapPosition.y;
+                var z = playerTilemapPosition.z;
+
+                var positionGrid = new Vector3Int[]
+                {
+                    new Vector3Int(x-1, y-1, z), new Vector3Int(x, y-1, z), new Vector3Int(x+1, y-1, z),
+                    new Vector3Int(x-1, y, z), /**/ new Vector3Int(x+1,y,z),
+                    new Vector3Int(x-1, y+1, z), new Vector3Int(x,y+1,z), new Vector3Int(x+1,y+1,z),   
+                };
+
+                foreach (var position in positionGrid)
+                {
+                    var tile = groundTilemap.GetSprite(position);
+                    if (tile != null)
+                        return tile;
+                }
+
+                return null;
+            }
+            else
+                return playerTile;
         }
         catch (Exception e)
         {

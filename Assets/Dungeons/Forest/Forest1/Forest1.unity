@@ -675,10 +675,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Dungeon: {fileID: 1865200511}
-  MainTilemaps:
-  - {fileID: 1367725976}
-  - {fileID: 2137732261}
-  - {fileID: 1675218948}
 --- !u!4 &1865200509
 Transform:
   m_ObjectHideFlags: 0
@@ -709,6 +705,7 @@ MonoBehaviour:
   - {fileID: 1367725976}
   - {fileID: 2137732261}
   - {fileID: 1675218948}
+  DestroyOnMerge: 1
 --- !u!114 &1865200511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -729,7 +726,7 @@ MonoBehaviour:
     UseMaximumPairingAttempts: 0
     MaxPairingAttempts: 5
     IgnoreSpriteBounds: 0
-    UpDirection: 2
+    UpDirection: 4
     OverrideRepeatMode: 0
     RepeatMode: 0
     OverrideAllowTileRotation: 1
@@ -740,7 +737,7 @@ MonoBehaviour:
     TileTriggerLayer: 2
     GenerateAsynchronously: 0
     MaxAsyncFrameMilliseconds: 50
-    PauseBetweenRooms: 3
+    PauseBetweenRooms: 1
     RestrictDungeonToBounds: 0
     TilePlacementBounds:
       m_Center: {x: 0, y: 0, z: 0}

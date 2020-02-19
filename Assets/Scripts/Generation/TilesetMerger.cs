@@ -10,6 +10,8 @@ public class TilesetMerger : MonoBehaviour
 {
     public List<Tilemap> MainTilemaps = new List<Tilemap>();
 
+    public bool DestroyOnMerge = true;
+
     public void MergeTilemaps()
     {
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
@@ -34,7 +36,8 @@ public class TilesetMerger : MonoBehaviour
         }
         
         //Cleanup unused
-        tilemapsInScene.ForEach(tilemap => Destroy(tilemap.gameObject));
+        if (DestroyOnMerge)
+            tilemapsInScene.ForEach(tilemap => Destroy(tilemap.gameObject));
         
         foreach (var tilemap in tilemaps.Values)
         {

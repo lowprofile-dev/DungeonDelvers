@@ -17,8 +17,7 @@ public class TilemapManager : SerializedMonoBehaviour
     public RuntimeDungeon Dungeon;
     public int? ForcedSeed;
     private TilesetMerger _tilesetMerger;
-
-    public List<Tilemap> MainTilemaps;
+    
     public void Start()
     {
         _tilesetMerger = GetComponent<TilesetMerger>();
