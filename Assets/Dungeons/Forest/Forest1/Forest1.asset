@@ -23,8 +23,8 @@ MonoBehaviour:
     Max: 5
   GlobalProps: []
   KeyManager: {fileID: 0}
-  DoorwayConnectionChance: 0
-  RestrictConnectionToSameSection: 0
+  DoorwayConnectionChance: 0.5
+  RestrictConnectionToSameSection: 1
   TileInjectionRules: []
   Nodes:
   - Graph: {fileID: 11400000}

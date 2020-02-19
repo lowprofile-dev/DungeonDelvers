@@ -720,7 +720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Generator:
     allowImmediateRepeats: 0
-    Seed: 0
+    Seed: 2132240447
     ShouldRandomizeSeed: 1
     MaxAttemptCount: 20
     UseMaximumPairingAttempts: 0
@@ -738,10 +738,10 @@ MonoBehaviour:
     GenerateAsynchronously: 0
     MaxAsyncFrameMilliseconds: 50
     PauseBetweenRooms: 1
-    RestrictDungeonToBounds: 0
+    RestrictDungeonToBounds: 1
     TilePlacementBounds:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0, y: 0, z: 0}
+      m_Center: {x: 3, y: -80, z: 0}
+      m_Extent: {x: 285, y: 100, z: 20}
     OverlapThreshold: 0.01
     Padding: 0
     DisallowOverhangs: 1
