@@ -394,69 +394,17 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 6776608694746677356, guid: 387acfde1dce59b41a92fa08db762417, type: 3}
-    - {fileID: 6776608694746677356, guid: 1ddb76c9846fc494c947fe63307d0f45, type: 3}
-    - {fileID: 6776608694746677356, guid: 530ad914752ae284e9f67a56de4f0cf7, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: Encounters
-      Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[MapEncounter, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: MapEncounter, Assembly-CSharp
-    - Name: Encounter
-      Entry: 10
-      Data: 0
-    - Name: Chance
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: MapEncounter, Assembly-CSharp
-    - Name: Encounter
-      Entry: 10
-      Data: 1
-    - Name: Chance
-      Entry: 3
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: MapEncounter, Assembly-CSharp
-    - Name: Encounter
-      Entry: 10
-      Data: 2
-    - Name: Chance
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
+    - Name: DefaultMapEncounterSet
+      Entry: 6
       Data: 
   previousSceneIndex: 0
   nextSceneIndex: -1
-  EncounterEnabled: 1
-  MinEncounterDistance: 10
-  MaxEncounterDistance: 25
   RemainingEncounterDistance: 0
   OverrideBackgroundColor: {r: 0.21176472, g: 0.18039216, b: 0.24705884, a: 0}
 --- !u!1001 &1777927444
@@ -496,6 +444,11 @@ PrefabInstance:
       propertyPath: MainTilemaps.Array.data[2]
       value: 
       objectReference: {fileID: 2069705508}
+    - target: {fileID: 7942455540505996166, guid: fc787cb4efa25474fac516cc603c5116,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7942455540505996166, guid: fc787cb4efa25474fac516cc603c5116,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -601,6 +554,16 @@ PrefabInstance:
     - target: {fileID: 7942455540505996185, guid: fc787cb4efa25474fac516cc603c5116,
         type: 3}
       propertyPath: Generator.DebugRender
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942455540505996185, guid: fc787cb4efa25474fac516cc603c5116,
+        type: 3}
+      propertyPath: Generator.GenerateAsynchronously
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7942455540505996185, guid: fc787cb4efa25474fac516cc603c5116,
+        type: 3}
+      propertyPath: Generator.PauseBetweenRooms
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7942455540505996187, guid: fc787cb4efa25474fac516cc603c5116,

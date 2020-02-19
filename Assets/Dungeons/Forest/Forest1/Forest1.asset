@@ -37,7 +37,8 @@ MonoBehaviour:
     Locks: []
     LockPlacement: 0
   - Graph: {fileID: 11400000}
-    TileSets: []
+    TileSets:
+    - {fileID: 11400000, guid: 0ee8e94f01b811bbd9a76db600746900, type: 2}
     NodeType: 2
     Position: 1
     Label: Goal
@@ -46,7 +47,8 @@ MonoBehaviour:
     LockPlacement: 0
   Lines:
   - Graph: {fileID: 11400000}
-    DungeonArchetypes: []
+    DungeonArchetypes:
+    - {fileID: 11400000, guid: df0ef36f1374c5968bc5b3ec38b094e5, type: 2}
     Position: 0
     Length: 1
     Keys: []
