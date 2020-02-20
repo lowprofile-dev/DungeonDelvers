@@ -205,8 +205,35 @@ public class BattleController : AsyncMonoBehaviour
     {
         var playerController = PlayerController.Instance;
         Party.ForEach(partyMember => partyMember.CommitChanges());
-        playerController.GainEXP(_encounter.ExpReward);
+        playerController.GainEXP(GetExpReward());
         playerController.CurrentGold += _encounter.GoldReward;
+    }
+
+    private int GetExpReward()
+    {
+        var partyLevel = PlayerController.Instance.PartyLevel;
+        var enemyEncounterAverageLevel = (float)_encounter.Monsters
+            .Select(monster => monster.Level)
+            .Average();
+
+        var clampedDelta = Mathf.Clamp(enemyEncounterAverageLevel - partyLevel, -5f, 5f);
+
+        float expModifier = 1f;
+
+        if (clampedDelta > 0)
+        {
+            expModifier += clampedDelta / 10;
+        }
+        else
+        {
+            expModifier -= clampedDelta / 5;
+        }
+
+        var modifiedExp = (int) (_encounter.ExpReward * expModifier);
+        
+        Debug.Log($"Calculated Exp Reward -- Base: {_encounter.ExpReward}, Pt. Level: {partyLevel}, Enc. Level: {enemyEncounterAverageLevel:F}, C. Delta: {clampedDelta}, Modifier: {expModifier}, Final: {modifiedExp}");
+
+        return modifiedExp;
     }
     
     async Task BattlerTurn(IBattler battler)

@@ -675,7 +675,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865200507}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b35b533fb9b73f246b255d361a49484c, type: 3}
   m_Name: 
@@ -745,12 +745,12 @@ MonoBehaviour:
   Generator:
     allowImmediateRepeats: 0
     Seed: 2132240447
-    ShouldRandomizeSeed: 1
+    ShouldRandomizeSeed: 0
     MaxAttemptCount: 20
     UseMaximumPairingAttempts: 0
     MaxPairingAttempts: 5
     IgnoreSpriteBounds: 0
-    UpDirection: 4
+    UpDirection: 5
     OverrideRepeatMode: 0
     RepeatMode: 0
     OverrideAllowTileRotation: 1
@@ -764,8 +764,8 @@ MonoBehaviour:
     PauseBetweenRooms: 1
     RestrictDungeonToBounds: 1
     TilePlacementBounds:
-      m_Center: {x: 3, y: -80, z: 0}
-      m_Extent: {x: 285, y: 100, z: 20}
+      m_Center: {x: 3, y: -164.56128, z: 0}
+      m_Extent: {x: 285, y: 184.56128, z: 20}
     OverlapThreshold: 0.01
     Padding: 0
     DisallowOverhangs: 1

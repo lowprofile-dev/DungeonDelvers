@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7e5dcd198672d4ab3572da034b41ed, type: 3}
+  m_Name: New Monster
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MonsterAi
+      Entry: 6
+      Data: 
+  uniqueIdentifier: 
+  databaseIgnore: 0
+  MonsterName: 
+  MonsterBattler: {fileID: 0}
+  BaseLevel: 0
+  LevelVariance: 0
+  Stats:
+    MaxHp: 0
+    InitialEp: 0
+    EpGain: 0
+    PhysAtk: 0
+    MagAtk: 0
+    PhysDef: 0
+    MagDef: 0
+    Speed: 0
+    Accuracy: 0
+    Evasion: 0
+    CritChance: 0
+    CritAvoid: 0
+  StatLevelVariance:
+    MaxHp: 0
+    InitialEp: 0
+    EpGain: 0
+    PhysAtk: 0
+    MagAtk: 0
+    PhysDef: 0
+    MagDef: 0
+    Speed: 0
+    Accuracy: 0
+    Evasion: 0
+    CritChance: 0
+    CritAvoid: 0
+  Skills: []
+  Passives: []
