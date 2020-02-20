@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -78,4 +79,12 @@ public class TilesetMerger : MonoBehaviour
         source.SetTiles(toErase.ToArray(), Enumerable.Repeat<TileBase>(null, toErase.Count).ToArray());
         target.SetTiles(toMerge.Item1.ToArray(), toMerge.Item2.ToArray());
     }
+    
+    #if UNITY_EDITOR || DEVELOPMENT_BUILD
+    [Button("Force Merge")]
+    private void _forceMerge()
+    {
+        MergeTilemaps();
+    }
+    #endif
 }
