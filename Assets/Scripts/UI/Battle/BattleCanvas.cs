@@ -75,10 +75,10 @@ public class BattleCanvas : AsyncMonoBehaviour
         return characterBattlers;
     }
 
-    public List<MonsterBattler> SetupMonsters(GameObject encounterPrefab)
+    public List<MonsterBattler> SetupMonsters(GameObject encounterPrefab, out Encounter encounter)
     {
         var encounterObject = Instantiate(encounterPrefab, transform);
-        var encounter = encounterObject.GetComponent<Encounter>();
+        encounter = encounterObject.GetComponent<Encounter>();
         return encounter.Monsters;
     }
 

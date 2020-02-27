@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MonsterAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 4
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 051ec4cc1d1cbe436afaf83a6a918f1f, type: 3}
+    totalSpriteSurfaceArea: 1087559
+    bindAsDefault: 1
+    storedHash:
+      serializedVersion: 2
+      Hash: c5bd3757bd4725bacad7dd3ac65bb1c5
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 04ae93302bb548c5c90c800c3862f11a, type: 3}
+  - {fileID: 21300000, guid: 889cfa6189ceef0d9845b2d0cd48a160, type: 3}
+  - {fileID: 21300000, guid: e92e9ca15260ea9118383488d06c5add, type: 3}
+  - {fileID: 21300000, guid: d60781d232764b600b0768ea82c2126a, type: 3}
+  - {fileID: 21300000, guid: 33e6a62398a2f1d36a209e84d8b343be, type: 3}
+  - {fileID: 21300000, guid: 2094e9c3add909b1d8bf31dddfdc7fb5, type: 3}
+  - {fileID: 21300000, guid: f8ce7484a26182652916d91cc241765a, type: 3}
+  - {fileID: 21300000, guid: 99bb4584fc04c7de0aca0e0783e8f0fd, type: 3}
+  - {fileID: 21300000, guid: e3423d94c8e174112af7aec784916e6a, type: 3}
+  - {fileID: 21300000, guid: 98dc37c476c19da3c802343aa4465784, type: 3}
+  - {fileID: 21300000, guid: 11ddce564642fff888877c2a325947f4, type: 3}
+  - {fileID: 21300000, guid: acd5e266e51785a51b4be6c84a894589, type: 3}
+  - {fileID: 21300000, guid: 0dc4f5b6dd562998cb1bee6481d51347, type: 3}
+  - {fileID: 21300000, guid: 96a366c63af8b2388969f9e3b34e613c, type: 3}
+  - {fileID: 21300000, guid: a03b8bd64cc2f931b8007159457046dc, type: 3}
+  - {fileID: 21300000, guid: e1ee19e68755c29488dc6fe1ee6981cc, type: 3}
+  - {fileID: 21300000, guid: e7b24c67458ee5f52bb96607f60ecd6e, type: 3}
+  - {fileID: 21300000, guid: 5321d288b32bbd1ea8e74157b8b42768, type: 3}
+  - {fileID: 21300000, guid: e2bce4a8c83f1ce40863f3e49948d940, type: 3}
+  - {fileID: 21300000, guid: 966408c86240bc51291f9fce195c450d, type: 3}
+  - {fileID: 21300000, guid: f6090989578145664aa8f512b5330aa0, type: 3}
+  - {fileID: 21300000, guid: 847f8ba9c5af0786e90fd82d1b989313, type: 3}
+  - {fileID: 21300000, guid: 24b3efe99a9e771498a98938df18bd7f, type: 3}
+  - {fileID: 21300000, guid: 5895c7fad63643145ae564df0f982a62, type: 3}
+  - {fileID: 21300000, guid: 118b411bf2af0a912af495d5e33078c5, type: 3}
+  - {fileID: 21300000, guid: 4248b4fb6c36cfcbeb0739706d830b0e, type: 3}
+  - {fileID: 21300000, guid: b97b332d1b27cb4c588050eed97ae537, type: 3}
+  - {fileID: 21300000, guid: 286a995e16b8f3ffba2ab6cc3effc423, type: 3}
+  - {fileID: 21300000, guid: f982678fe89fa69b593565e0a07a706e, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Earth Gemstone Golem
+  - Earth Wisp
+  - Forest Tree
+  - Forest Darkluff
+  - Forest Fangrot
+  - Slime Icei
+  - Slime Firei
+  - Forest Deer
+  - Slime Blue
+  - Earth Mandrake
+  - Earth Lion
+  - Insects Caterpillar B
+  - Forest Shroomy
+  - Earth Snake
+  - Earth Leaf Imp
+  - Elemental Wolf Earth
+  - Slime Darki
+  - Insects Bee
+  - Forest Mobun
+  - Insects Scarab
+  - Earth Turtle
+  - Earth Rock Golem
+  - Earth Spawn
+  - Forest Shroom
+  - Slime Earthi
+  - Earth Bush Wisp
+  - Slime Holyi
+  - Forest Sprout
+  - Forest Noxluff
+  m_Tag: MonsterAtlas
+  m_IsVariant: 0

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf7e5dcd198672d4ab3572da034b41ed, type: 3}
-  m_Name: New Monster
+  m_Name: ForestSprite
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -22,39 +22,44 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes:
     - Name: MonsterAi
-      Entry: 6
+      Entry: 7
+      Data: 0|RandomAI, Assembly-CSharp
+    - Name: 
+      Entry: 8
       Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
-  MonsterName: 
-  MonsterBattler: {fileID: 0}
-  BaseLevel: 0
-  LevelVariance: 0
+  MonsterName: Forest Sprite
+  MonsterBattler: {fileID: 3341307739312195433, guid: 09c8331390f15994db4eb4b7660a5072,
+    type: 3}
+  BaseLevel: 2
+  LevelVariance: 1
   Stats:
-    MaxHp: 0
-    InitialEp: 0
-    EpGain: 0
-    PhysAtk: 0
-    MagAtk: 0
-    PhysDef: 0
-    MagDef: 0
-    Speed: 0
-    Accuracy: 0
-    Evasion: 0
+    MaxHp: 75
+    InitialEp: 15
+    EpGain: 10
+    PhysAtk: 32
+    MagAtk: 25
+    PhysDef: 25
+    MagDef: 25
+    Speed: 18
+    Accuracy: 0.95
+    Evasion: -0.05
     CritChance: 0
-    CritAvoid: 0
+    CritAvoid: -0.05
   StatLevelVariance:
-    MaxHp: 0
+    MaxHp: 15
     InitialEp: 0
     EpGain: 0
-    PhysAtk: 0
-    MagAtk: 0
-    PhysDef: 0
-    MagDef: 0
-    Speed: 0
+    PhysAtk: 6
+    MagAtk: 4
+    PhysDef: 4
+    MagDef: 4
+    Speed: 3
     Accuracy: 0
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
-  Skills: []
+  Skills:
+  - {fileID: 11400000, guid: e07bc40db4e43524f97da1022fda3f16, type: 2}
   Passives: []

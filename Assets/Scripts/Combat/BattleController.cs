@@ -13,6 +13,9 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
+// ReSharper disable HeuristicUnreachableCode
+// ReSharper disable LoopVariableIsNeverChangedInsideLoop
+// ReSharper disable ConditionIsAlwaysTrueOrFalse
 
 public class BattleController : AsyncMonoBehaviour
 {
@@ -65,7 +68,7 @@ public class BattleController : AsyncMonoBehaviour
 
         //Monta party e inimigos
         Party = battleCanvas.SetupParty(PlayerController.Instance.Party);
-        Enemies = battleCanvas.SetupMonsters(encounterPrefab);
+        Enemies = battleCanvas.SetupMonsters(encounterPrefab, out _encounter);
         Party.ForEach((partyMember) => { partyMember.UpdateAnimator(); });
 
         //Inicia o combate
@@ -136,7 +139,6 @@ public class BattleController : AsyncMonoBehaviour
             Battle = null;
         }
     }
-
     
     //?? arrumar algum dia
     private async Task Win()
@@ -144,10 +146,13 @@ public class BattleController : AsyncMonoBehaviour
         bool finished = false;
         //roll items
         var items = new Item[] { };
+
+        var expReward = GetExpReward();
+        var goldReward = _encounter.GoldReward; //GetGoldReward();
         
         await QueueActionAndAwait(() =>
         {
-            battleCanvas.RewardPanel.ShowRewardPanel(_encounter.ExpReward, _encounter.GoldReward, items);
+            battleCanvas.RewardPanel.ShowRewardPanel(expReward, goldReward, items);
             var rewardPanelClosedEvent = battleCanvas.RewardPanel.RewardPanelClosed;
             
             void CloseDialog()
@@ -161,19 +166,19 @@ public class BattleController : AsyncMonoBehaviour
         
         while (!finished)
             await Task.Delay(5);
-        
-        await QueueActionAndAwait((() => CommitWin(items)));
+
+        await QueueActionAndAwait(() => CommitWin(expReward,goldReward,items));
     }
 
-    private void CommitWin(IEnumerable<Item> rewards)
+    private void CommitWin(int expReward, int goldReward, IEnumerable<Item> rewards)
     {
-        PartyCommit();
-        PlayerController.Instance.GainEXP(_encounter.ExpReward);
-        PlayerController.Instance.CurrentGold += _encounter.GoldReward;
+        PlayerController.Instance.GainEXP(expReward);
+        PlayerController.Instance.CurrentGold += goldReward;
         foreach (var reward in rewards)
         {
             PlayerController.Instance.AddItemToInventory(reward);
         }
+        PartyCommit();
     }
     
     private void Lose()
@@ -212,7 +217,7 @@ public class BattleController : AsyncMonoBehaviour
     private int GetExpReward()
     {
         var partyLevel = PlayerController.Instance.PartyLevel;
-        var enemyEncounterAverageLevel = (float)_encounter.Monsters
+        var enemyEncounterAverageLevel = (float)Enemies
             .Select(monster => monster.Level)
             .Average();
 

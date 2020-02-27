@@ -20,8 +20,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
     [SerializeField, ReadOnly] private GameObject monsterBattler;
     [SerializeField, ReadOnly] private Image image;
     private BattleController BattleController;
-
-
+    
     #region Control
     public Dictionary<object, object> BattleDictionary { get; private set; }
     
@@ -70,7 +69,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
     
     #region Stats
 
-    public int Level { get; private set; }
+    [ShowInInspector] public int Level { get; private set; }
     public string Name => MonsterBase.MonsterName;
     [FoldoutGroup("Stats"), ShowInInspector, PropertyOrder(999)] private Stats stats;
     public Stats Stats => stats;
