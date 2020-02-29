@@ -1,3 +1,5 @@
+Unificar MonsterBattler e CharacterBattler
+
 Completar cidade.
 Começar a fazer os monstros + boss.
 

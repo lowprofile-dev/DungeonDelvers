@@ -13,10 +13,14 @@ public class Skill : SerializableAsset
     [TextArea] public string SkillDescription;
     public TargetType Target;
     public List<Effect> Effects = new List<Effect>();
+    [ShowIf("CanCritical")] public List<Effect> CriticalEffects = new List<Effect>();
+    
     public SkillAnimation SkillAnimation = null;
-
+    
     public bool TrueHit = false;
     public bool CanBeSilenced;
+    public bool CanCritical;
+    
     [Range(-1,1), HideIf("TrueHit")] public float AccuracyModifier = 0f;
     
     //Ver se necessario mais depois, eg. Raise-equivalent -> one dead ally
@@ -30,7 +34,6 @@ public class Skill : SerializableAsset
         All,
         Self
     }
-
 }
 
 public struct SkillInfo
@@ -38,6 +41,7 @@ public struct SkillInfo
     public IBattler Target;
     public IBattler Source;
     public Skill Skill;
+    public bool HasCrit;
 }
 
 public struct EffectInfo

@@ -35,20 +35,20 @@ MonoBehaviour:
   BaseLevel: 2
   LevelVariance: 1
   Stats:
-    MaxHp: 75
+    MaxHp: 55
     InitialEp: 15
     EpGain: 10
-    PhysAtk: 32
+    PhysAtk: 25
     MagAtk: 25
-    PhysDef: 25
-    MagDef: 25
+    PhysDef: 19
+    MagDef: 19
     Speed: 18
     Accuracy: 0.95
     Evasion: -0.05
     CritChance: 0
     CritAvoid: -0.05
   StatLevelVariance:
-    MaxHp: 15
+    MaxHp: 9
     InitialEp: 0
     EpGain: 0
     PhysAtk: 6
