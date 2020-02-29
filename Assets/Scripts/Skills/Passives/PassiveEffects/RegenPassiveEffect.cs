@@ -38,7 +38,19 @@ public class RegenPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
         });
         
         Debug.Log($"Curando {healAmount} em {battler.Name}");
-        await battler.ReceiveEffect(battler, null, effect);
+        
+        //await battler.ReceiveEffect(battler, null, effect);
+        await battler.ReceiveEffect(new EffectInfo
+        {
+            SkillInfo = new SkillInfo
+            {
+                HasCrit = false,
+                Skill = null,
+                Source = battler,
+                Target = battler
+            },
+            Effect = effect
+        });
         
         battler.QueueAction(() =>
         {

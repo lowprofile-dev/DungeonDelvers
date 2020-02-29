@@ -22,6 +22,7 @@ public class Skill : SerializableAsset
     public bool CanCritical;
     
     [Range(-1,1), HideIf("TrueHit")] public float AccuracyModifier = 0f;
+    [Range(-1, 1), ShowIf("CanCritical")] public float CriticalModifier = 0f;
     
     //Ver se necessario mais depois, eg. Raise-equivalent -> one dead ally
     public enum TargetType

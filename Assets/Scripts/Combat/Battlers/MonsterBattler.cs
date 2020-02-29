@@ -193,8 +193,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
             
         }
     }
-
-    //result = out
+    
     public async Task<IEnumerable<EffectResult>> ReceiveSkill(IBattler source, Skill skill)
     {
         Debug.Log($"Recebendo skill em {Name}");
@@ -222,9 +221,46 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
         if (hasHit)
         {
             var results = new List<EffectResult>();
-            foreach (var effect in skill.Effects)
+
+            bool hasCrit;
+
+            if (skill.CanCritical)
             {
-                results.Add(await ReceiveEffect(source, skill, effect));
+                hasCrit = false;
+                Debug.Log($"{source.Name} não critou {Name} com {skill.SkillName} por não poder critar.");
+            }
+            else
+            {
+                var critAccuracy = source.Stats.CritChance + skill.CriticalModifier;
+                var critEvasion = Stats.CritAvoid;
+
+                var critChance = critAccuracy - critEvasion;
+
+                var rng = GameController.Instance.Random.NextDouble();
+
+                hasCrit = rng <= critChance;
+                
+                Debug.Log($"{source.Name} {(hasCrit ? "":"não")} critou {Name} com {skill.SkillName} -- Acc: {critAccuracy}, Eva: {critEvasion}, Rng: {rng}");
+            }
+            
+            var skillInfo = new SkillInfo
+            {
+                HasCrit = hasCrit,
+                Skill = skill,
+                Source = source,
+                Target = this
+            };
+
+            var effects = hasCrit ? skill.CriticalEffects : skill.Effects;
+            
+            foreach (var effect in effects)
+            {
+                results.Add(
+                    await ReceiveEffect(new EffectInfo
+                    {
+                        SkillInfo = skillInfo,
+                        Effect = effect
+                    }));
             }
             return results;
         }
@@ -236,18 +272,13 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
         }
     }
 
-    public async Task<EffectResult> ReceiveEffect(IBattler source, Skill skillSource, Effect effect)
+    public async Task<EffectResult> ReceiveEffect(EffectInfo effectInfo)
     {
         EffectResult effectResult = null;
         
         await QueueActionAndAwait(() =>
         {
-            effectResult = effect.ExecuteEffect(new SkillInfo
-            {
-                Skill = skillSource,
-                Source = source,
-                Target = this
-            });
+            effectResult = effectInfo.Effect.ExecuteEffect(effectInfo.SkillInfo);
         });
 
         //Ver pra mostrar Miss! quando o golpe errar, mostrar vermelho quando crita

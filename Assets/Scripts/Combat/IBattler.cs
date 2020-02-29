@@ -30,7 +30,7 @@ public interface IBattler
     Task<Turn> GetTurn();
     Task ExecuteTurn(IBattler source, Skill skill, IEnumerable<IBattler> targets);
     Task<IEnumerable<EffectResult>> ReceiveSkill(IBattler source, Skill skill);
-    Task<EffectResult> ReceiveEffect(IBattler source, Skill skillSource, Effect effect);
+    Task<EffectResult> ReceiveEffect(EffectInfo effectInfo);
     Task AfterSkill(IEnumerable<EffectResult> result);
 
     Task QueueActionAndAwait(Action action);

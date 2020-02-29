@@ -261,7 +261,7 @@ public class BattleController : AsyncMonoBehaviour
 
                 await battler.ExecuteTurn(battler, usedSkill,
                     targets);
-                
+
                 var effectResults =
                     await Task.WhenAll(targets.EachDo((target) => target.ReceiveSkill(battler, usedSkill)));
 

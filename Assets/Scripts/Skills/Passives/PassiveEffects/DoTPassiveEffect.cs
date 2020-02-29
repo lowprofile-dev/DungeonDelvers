@@ -1,6 +1,5 @@
 ﻿using System.Threading.Tasks;
 
-//Arrumar, ver como a source ser o personagem que aplicou o DoT
 public class DoTPassiveEffect : PassiveEffect, ITurnStartPassiveEffect, IHasSource
 {
     public DamageEffect DamageEffect;
@@ -10,7 +9,20 @@ public class DoTPassiveEffect : PassiveEffect, ITurnStartPassiveEffect, IHasSour
     {
         battler.QueueAction(() =>
             BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(PassiveSource.GetName));
-        await battler.ReceiveEffect(Source, null, DamageEffect);
+        
+        //await battler.ReceiveEffect(Source, null, DamageEffect);
+        await battler.ReceiveEffect(new EffectInfo
+        {
+            SkillInfo = new SkillInfo
+            {
+                HasCrit = false,
+                Skill = null,
+                Source = Source,
+                Target = battler
+            },
+            Effect = DamageEffect
+        });
+        
         battler.QueueAction(() =>
         {
             BattleController.Instance.battleCanvas.battleInfoPanel.HideInfo();
