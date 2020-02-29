@@ -4,20 +4,15 @@ using UnityEngine.SceneManagement;
 
 public class TransitionInteraction : Interaction
 {
-    public TransitionPoint.PointType Direction;
+    public int sceneTargetIndex;
     
     public override void Run(Interactable source)
     {
         //tela de carregar futuramente
-        var index = Direction == TransitionPoint.PointType.Start
-            ? MapSettings.Instance.previousSceneIndex
-            : MapSettings.Instance.nextSceneIndex;
+        
+        GameController.Instance.TransitionSource = SceneManager.GetActiveScene().buildIndex;
 
-        GameController.Instance.Transition = Direction;
-        
-        Debug.Log($"Transitioning to index {index}");
-        
-        SceneManager.LoadScene(index);
+        SceneManager.LoadScene(sceneTargetIndex);
     }
 
     public override IEnumerator Completion => null;

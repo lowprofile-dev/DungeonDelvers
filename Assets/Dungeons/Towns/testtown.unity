@@ -15174,9 +15174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e732a36e2ae542368828ced3cea9e5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConnectionIndex: 1
   Point: {fileID: 473089433}
   EnterDirection: 2
-  endType: 1
 --- !u!1 &513850368
 GameObject:
   m_ObjectHideFlags: 0
@@ -16183,7 +16183,7 @@ GameObject:
   - component: {fileID: 1821581623}
   - component: {fileID: 1821581622}
   m_Layer: 8
-  m_Name: Transition
+  m_Name: Transition Forest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16295,7 +16295,7 @@ MonoBehaviour:
     - Name: SkipWaiting
       Entry: 5
       Data: false
-    - Name: Direction
+    - Name: sceneTargetIndex
       Entry: 3
       Data: 1
     - Name: 
@@ -16447,12 +16447,6 @@ MonoBehaviour:
       Data: 
   interactableType: 0
   IsInteracting: 0
---- !u!95 &1992683545 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 435624883052052424, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
-    type: 3}
-  m_PrefabInstance: {fileID: 4691186421468384359}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2120431615
 GameObject:
   m_ObjectHideFlags: 0
@@ -16563,12 +16557,12 @@ PrefabInstance:
     - target: {fileID: 4691186423368760445, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
         type: 3}
       propertyPath: serializationData.PrefabModifications.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4691186423368760445, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
         type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4691186423368760445, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
         type: 3}
@@ -16580,26 +16574,11 @@ PrefabInstance:
         type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 1992683545}
-    - target: {fileID: 4691186423368760445, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
-        type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[1]
-      value: 
       objectReference: {fileID: 1009270318}
     - target: {fileID: 4691186423368760445, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
         type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
-      value: '"path":"Interactions.[0].animator","value":$eref:0'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4691186423368760445, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
-        type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[1]
-      value: '"path":"Interactions.[2].target","value":$eref:1'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4691186423368760445, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
-        type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[2]
-      value: '"path":"Interactions.[4].animator","value":$eref:0'
+      value: '"path":"Interactions.[2].target","value":$eref:0'
       objectReference: {fileID: 0}
     - target: {fileID: 4691186423368760447, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
         type: 3}

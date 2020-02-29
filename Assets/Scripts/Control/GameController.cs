@@ -21,7 +21,7 @@ public class GameController : AsyncMonoBehaviour
     
     public Random Random;
 
-    public TransitionPoint.PointType? Transition = null;
+    public int? TransitionSource = null;
     
     [HideInInspector] public UnityEvent OnBeginEncounter;
     [HideInInspector] public UnityEvent OnEndEncounter;
@@ -50,7 +50,7 @@ public class GameController : AsyncMonoBehaviour
         Instantiate(GraphyPrefab);
 #endif
     }
-    
+
     public Dictionary<string, int> Globals = new Dictionary<string, int>();
     public Dictionary<int,int> Seeds = new Dictionary<int,int>();
 

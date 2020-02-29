@@ -114,14 +114,6 @@ public class MapSettings : SerializedMonoBehaviour
             listener.ApplyMapSettings(this);
         }
     }
-    //encontros e tal
-    
-    #if UNITY_EDITOR
-
-    [ShowInInspector] public TransitionPoint mapStart => TransitionPoint.StartPoint;
-    [ShowInInspector] public TransitionPoint mapEnd => TransitionPoint.EndPoint;
-
-    #endif
 }
 
 public interface IMapSettingsListener
