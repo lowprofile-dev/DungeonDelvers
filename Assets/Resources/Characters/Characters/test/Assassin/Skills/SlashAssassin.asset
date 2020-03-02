@@ -29,19 +29,58 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|DamageEffect, Assembly-CSharp
-    - Name: DamageFactor
-      Entry: 4
-      Data: 0.95
+      Data: 1|MultiHitDamageEffect, Assembly-CSharp
+    - Name: HitInfo
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[HitInfo, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: HitInfo, Assembly-CSharp
     - Name: DamageType
       Entry: 3
       Data: 0
-    - Name: TrueHit
-      Entry: 5
-      Data: false
+    - Name: DamageFactor
+      Entry: 4
+      Data: 0.6
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 7
+      Data: HitInfo, Assembly-CSharp
+    - Name: DamageType
+      Entry: 3
+      Data: 0
+    - Name: DamageFactor
+      Entry: 4
+      Data: 0.6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: CriticalEffects
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -69,5 +108,8 @@ MonoBehaviour:
   SkillDescription: Attack one target with a knife.
   Target: 0
   TrueHit: 0
+  CanBeSilenced: 0
+  CanCritical: 0
   AccuracyModifier: 0
+  CriticalModifier: 0
   AnimationType: 2

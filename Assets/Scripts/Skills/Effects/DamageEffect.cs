@@ -12,8 +12,7 @@ public class DamageEffect : Effect
 
     public override EffectResult ExecuteEffect(SkillInfo skillInfo)
     {
-        //override de tipo
-        var damage = (int)(Mathf.Max(0,BattleController.Instance.DamageCalculation(skillInfo.Source, skillInfo.Target, this)) * DamageFactor);
+        var damage = (int)(Mathf.Max(0,BattleController.Instance.DamageCalculation(skillInfo.Source, skillInfo.Target, DamageType)) * DamageFactor);
 
         Debug.Log($"Calculado {damage}");
         

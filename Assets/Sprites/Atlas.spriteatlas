@@ -17,7 +17,7 @@ SpriteAtlas:
       textureCompression: 0
       filterMode: 0
       generateMipMaps: 0
-      readable: 0
+      readable: 1
       crunchedCompression: 0
       sRGB: 1
     platformSettings:
@@ -47,11 +47,11 @@ SpriteAtlas:
     - {fileID: 102900000, guid: bdd36d91d8f191445948868b08fc891f, type: 3}
     - {fileID: 102900000, guid: a364e2119c02a04b08f112fe42484f5d, type: 3}
     - {fileID: 102900000, guid: 25d004b12996d6bae96280dc6434c01a, type: 3}
-    totalSpriteSurfaceArea: 9357722
+    totalSpriteSurfaceArea: 9358746
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
-      Hash: 0591ec22ff331fbd4f09f6f7dfaa22ef
+      Hash: 0e6936b98b802e4dcaefb3dc7f5707c1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 3205500544072061111, guid: e1933e501b4d6094c8b14948793eb749, type: 3}
@@ -6823,6 +6823,7 @@ SpriteAtlas:
   - {fileID: 1625216065112836408, guid: c074bca8d9dfa2c4583477b7d8429cf4, type: 3}
   - {fileID: -8728395592042206452, guid: c074bca8d9dfa2c4583477b7d8429cf4, type: 3}
   - {fileID: 4969162799273008732, guid: c074bca8d9dfa2c4583477b7d8429cf4, type: 3}
+  - {fileID: 21300000, guid: 2399c979318ef9a49a48dd12172439e2, type: 3}
   - {fileID: -549963974979817573, guid: 079e6c8917daeb14db9e634195da6772, type: 3}
   - {fileID: 8330546680854303654, guid: 079e6c8917daeb14db9e634195da6772, type: 3}
   - {fileID: -1825501033178363164, guid: 079e6c8917daeb14db9e634195da6772, type: 3}
@@ -15748,6 +15749,7 @@ SpriteAtlas:
   - ruindungeons_sheet_full_1027
   - ruindungeons_sheet_full_1067
   - ruindungeons_sheet_full_1077
+  - MinimapCanvas
   - Mage_Idle_Sword_Fire_2
   - Mage_Idle_Sword_Fire_0
   - Mage_Idle_Sword_Fire_1

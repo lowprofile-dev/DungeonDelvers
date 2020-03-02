@@ -272,7 +272,7 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
 
             bool hasCrit;
 
-            if (skill.CanCritical)
+            if (!skill.CanCritical)
             {
                 hasCrit = false;
                 Debug.Log($"{source.Name} não critou {Name} com {skill.SkillName} por não poder critar.");
@@ -353,6 +353,22 @@ public class CharacterBattler : AsyncMonoBehaviour, IBattler
             {
                 await BattleController.Instance.battleCanvas.ShowSkillResult(this, gainApEffectResult.ApGained.ToString(),
                     Color.cyan);
+                break;
+            }
+            case MultiHitDamageEffect.MultiHitDamageEffectResult multiHitDamageEffectResult:
+            {
+                //Botar um pequeno delay entre cada hit do dano graficamente depois
+                var tasks = new List<Task>();
+                if (multiHitDamageEffectResult.TotalDamageDealt > 0)
+                {
+                    tasks.Add(AsyncPlayAndWait(CharacterBattlerAnimation.Damage));
+                    tasks.Add(PlayCoroutine(DamageBlinkCoroutine()));
+                }
+
+                var damageString = string.Join("\n", multiHitDamageEffectResult.HitResults.Select(result => result.DamageDealt.ToString()));
+                tasks.Add(BattleController.Instance.battleCanvas.ShowSkillResult(this, damageString, Color.white));
+                
+                await Task.WhenAll(tasks);
                 break;
             }
         }

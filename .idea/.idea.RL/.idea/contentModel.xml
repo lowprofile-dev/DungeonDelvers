@@ -312,6 +312,7 @@
             <e p="SkredUtils.cs" t="Include" />
           </e>
           <e p="Generation" t="Include">
+            <e p="Minimap.cs" t="Include" />
             <e p="TilemapManager.cs" t="Include" />
             <e p="TilesetMerger.cs" t="Include" />
             <e p="TransitionPoint.cs" t="Include" />
@@ -403,6 +404,7 @@
               <e p="DamageEffect.cs" t="Include" />
               <e p="GainApEffect.cs" t="Include" />
               <e p="HealEffect.cs" t="Include" />
+              <e p="MultiHitDamageEffect.cs" t="Include" />
               <e p="RemoveItemEffect.cs" t="Include" />
             </e>
             <e p="MonsterSkill.cs" t="Include" />

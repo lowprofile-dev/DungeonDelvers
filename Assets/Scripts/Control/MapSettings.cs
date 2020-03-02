@@ -32,6 +32,8 @@ public class MapSettings : SerializedMonoBehaviour
     }
     [FoldoutGroup("Encounter")][ReadOnly] public float RemainingEncounterDistance = 0;
     private Vector2 lastPosition;
+    public Color MinimapWallColor;
+    public Color MinimapFloorColor;
     
     public void Awake()
     {

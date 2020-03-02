@@ -1,5 +1,4 @@
-Unificar MonsterBattler e CharacterBattler
-Deixar o Battler mais funcional
+Unificar battler
 
 Completar cidade.
 Começar a fazer os monstros + boss.

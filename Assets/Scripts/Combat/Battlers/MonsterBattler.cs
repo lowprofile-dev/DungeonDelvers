@@ -224,7 +224,7 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
 
             bool hasCrit;
 
-            if (skill.CanCritical)
+            if (!skill.CanCritical)
             {
                 hasCrit = false;
                 Debug.Log($"{source.Name} não critou {Name} com {skill.SkillName} por não poder critar.");
@@ -287,18 +287,12 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
         {
             case DamageEffect.DamageEffectResult damageEffectResult when !Fainted:
             {
-                // Task damage = ShowDamage(damageEffectResult.DamageDealt);
-                // Task flash = DamageFlash();
-                //
-                // await Task.WhenAll(flash, damage);
-
-                await ShowDamageAndFlash(damageEffectResult.DamageDealt);
-                
+                await ShowDamageAndFlash(damageEffectResult.DamageDealt, effectInfo.SkillInfo.HasCrit);
                 break;
             }
             case DamageEffect.DamageEffectResult damageEffectResult:
             {
-                Task damage = ShowDamage(damageEffectResult.DamageDealt);
+                Task damage = ShowDamage(damageEffectResult.DamageDealt, effectInfo.SkillInfo.HasCrit);
                 Task fade = Fade();
                 
                 await Task.WhenAll(fade, damage);
@@ -310,6 +304,33 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
                     Color.green);
                 break;
             } 
+            case MultiHitDamageEffect.MultiHitDamageEffectResult multiHitDamageEffectResult:
+            {
+                //Botar um pequeno delay entre cada hit do dano graficamente depois
+                var tasks = new List<Task>();
+
+                var damage = multiHitDamageEffectResult.TotalDamageDealt;
+
+                if (damage == 0)
+                {
+                    //tasks.Add(ShowDamage(damage,effectInfo.SkillInfo.HasCrit));
+                } else if (!Fainted)
+                {
+                    //tasks.Add(ShowDamageAndFlash(damage, effectInfo.SkillInfo.HasCrit));
+                    tasks.Add(DamageFlash());
+                }
+                else
+                {
+                    //tasks.Add(ShowDamage(damage,effectInfo.SkillInfo.HasCrit));
+                    tasks.Add(Fade());
+                }
+
+                var damageString = string.Join("\n", multiHitDamageEffectResult.HitResults.Select(result => result.DamageDealt.ToString()));
+                tasks.Add(BattleController.Instance.battleCanvas.ShowSkillResult(this, damageString, Color.white));
+                
+                await Task.WhenAll(tasks);
+                break;
+            }
         }
 
         return effectResult;
@@ -324,18 +345,21 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
 
     #region Animations
 
-    private async Task ShowDamageAndFlash(int damageAmount)
+    private async Task ShowDamageAndFlash(int damageAmount, bool isCrit)
     {
-        await PlayCoroutine(ShowDamageAndFlashCoroutine(damageAmount));
+        await PlayCoroutine(ShowDamageAndFlashCoroutine(damageAmount, isCrit));
     }
 
-    private IEnumerator ShowDamageAndFlashCoroutine(int damageAmount)
+    private IEnumerator ShowDamageAndFlashCoroutine(int damageAmount, bool isCrit)
     {
         var damageInstance = Instantiate(BattleController.Instance.battleCanvas.DamagePrefab, BattleController.Instance.battleCanvas.transform);
         damageInstance.transform.position = transform.position + new Vector3(0, 100, 0);
 
         var damageComponent = damageInstance.GetComponent<DamageText>();
-        damageComponent.SetupDamageText(damageAmount.ToString(), Color.white);
+        if (isCrit)
+            damageComponent.SetupDamageText(damageAmount.ToString(),Color.red, 4);
+        else
+            damageComponent.SetupDamageText(damageAmount.ToString(), Color.white);
         
         var normalColor = image.color;
         var blinkingColor = new Color(image.color.r, image.color.g, image.color.b, 0.3f);
@@ -353,18 +377,21 @@ public class MonsterBattler : AsyncMonoBehaviour, IBattler
         Destroy(damageInstance);
     }
     
-    private async Task ShowDamage(int damageAmount)
+    private async Task ShowDamage(int damageAmount, bool isCrit)
     {
-        await PlayCoroutine(ShowDamageCoroutine(damageAmount), this);
+        await PlayCoroutine(ShowDamageCoroutine(damageAmount, isCrit), this);
     }
 
-    private IEnumerator ShowDamageCoroutine(int damageAmount)
+    private IEnumerator ShowDamageCoroutine(int damageAmount, bool isCrit)
     {
         var damageInstance = Instantiate(BattleController.Instance.battleCanvas.DamagePrefab, BattleController.Instance.battleCanvas.transform);
         damageInstance.transform.position = transform.position + new Vector3(0, 100, 0);
 
         var damageComponent = damageInstance.GetComponent<DamageText>();
-        damageComponent.SetupDamageText(damageAmount.ToString(), Color.white);
+        if (isCrit)
+            damageComponent.SetupDamageText(damageAmount.ToString(),Color.red, 4);
+        else
+            damageComponent.SetupDamageText(damageAmount.ToString(), Color.white);
         
         yield return new WaitForSeconds(1.4f);
         

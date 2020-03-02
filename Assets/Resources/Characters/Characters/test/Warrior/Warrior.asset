@@ -3024,7 +3024,7 @@ MonoBehaviour:
     Speed: 7
     Accuracy: 0
     Evasion: 0
-    CritChance: 0
+    CritChance: 0.05
     CritAvoid: 0
   WeaponTypes: 00000000
   ArmorTypes: 

@@ -11,12 +11,17 @@ using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
+using System.Drawing;
+using System.IO;
+using UnityEngine.UI;
 
 public class TilemapManager : SerializedMonoBehaviour
 {
     public RuntimeDungeon Dungeon;
     public int? ForcedSeed;
     private TilesetMerger _tilesetMerger;
+
+    public Image image;
     
     public void Start()
     {
@@ -49,11 +54,90 @@ public class TilemapManager : SerializedMonoBehaviour
         }
         
         _tilesetMerger.MergeTilemaps();
+
+        // var bitmapStopwatch = Stopwatch.StartNew();
+        //
+        // CreateBitmap();
+        //
+        // bitmapStopwatch.Stop();
+        //
+        // Debug.Log($"Created bitmap in {bitmapStopwatch.ElapsedMilliseconds}ms");
     }
 
     [Button("New Seed")]
     public void GetNewSeed()
     {
         Dungeon.Generator.RandomizeSeed();
+    }
+
+    [Button("Try Create Bitmap")]
+    public void CreateBitmap()
+    {
+        var wallTilemap = _tilesetMerger.MainTilemaps.First(tilemap => tilemap.CompareTag("PG_Wall"));
+        var floorTilemap = _tilesetMerger.MainTilemaps.First(tilemap => tilemap.CompareTag("PG_Floor"));
+        var ceilingTilemap = _tilesetMerger.MainTilemaps.First(tilemap => tilemap.CompareTag("PG_Ceiling"));
+
+        var tilemaps = new[] {floorTilemap, wallTilemap, ceilingTilemap};
+        var colors = new[] {MapSettings.Instance.MinimapFloorColor, MapSettings.Instance.MinimapWallColor, MapSettings.Instance.MinimapWallColor};
+        
+        int initalX = Int32.MaxValue;
+        int finalX = Int32.MinValue;
+        int initialY = Int32.MaxValue;
+        int finalY = Int32.MinValue;
+
+        foreach (var tilemap in tilemaps)
+        {
+            var bounds = tilemap.cellBounds;
+
+            if (bounds.x < initalX)
+                initalX = bounds.x;
+            if (bounds.y < initialY)
+                initialY = bounds.y;
+            if (bounds.xMax > finalX)
+                finalX = bounds.xMax;
+            if (bounds.yMax > finalY)
+                finalY = bounds.yMax;
+        }
+
+        var padding = 5;
+        var texture = new Texture2D(finalX-initalX+(padding*2), finalY-initialY+(padding*2));
+
+        (int x, int y) cellPositionToTexturePosition(Vector3Int cellPosition, BoundsInt source)
+        {
+            return (cellPosition.x-source.x+padding, cellPosition.y-source.y+padding);
+        }
+
+        //Paint black
+        var pix = texture.GetPixels();
+        for(int i = 0; i < pix.Length; i++)
+            pix[i] = Color.black;
+        texture.SetPixels(pix);
+
+        for (int i = 0; i < tilemaps.Length; i++)
+        {
+            var tilemap = tilemaps[i];
+            var color = colors[i];
+
+            var bounds = tilemap.cellBounds;
+            var positions = bounds.allPositionsWithin;
+
+            foreach (var position in positions)
+            {
+                if (tilemap.HasTile(position))
+                {
+                    var texturePosition = cellPositionToTexturePosition(position, bounds);
+                    
+                    texture.SetPixel(texturePosition.x,texturePosition.y,color);
+                }
+            }
+        }
+
+        texture.Apply();
+        var png = texture.EncodeToPNG();
+        File.WriteAllBytes(Path.Combine(Application.persistentDataPath, $"minimap{DateTime.Now:yy-MM-dd-hh-mm-ss}.png"), png);
+
+        var sprite = Sprite.Create(texture, new Rect(0,0,texture.width,texture.height), new Vector2(0,0));
+        
+        image.sprite = sprite;
     }
 }
