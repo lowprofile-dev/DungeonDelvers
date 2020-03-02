@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d8eb85f-203a-42cc-a492-a61dc70ead53" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/MapTile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/MapTile.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/AStarPathfindingProjectPro.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/PlayMaker.unitypackage.meta" beforeDir="false" />
@@ -9,13 +12,12 @@
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/SECTR_VIS.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/Unity NavMesh.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Samples/DungeonCrawler.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dungeons/Towns/testtown.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dungeons/Towns/testtown.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dungeons/Forest/Forest1/ForestCell1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dungeons/Forest/Forest1/ForestCell1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/CharacterAnimations.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/TransitionInteraction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/TransitionInteraction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generation/Minimap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/Minimap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/MenuEffects.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Atlas.spriteatlas" afterDir="false" />
@@ -70,6 +72,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ConsumableBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/RewardPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Effect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Generation/MapTile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ItemBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Generation/TilesetMerger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/AssetIcons/Demo/Demo Resources/Scripts/Item.cs" root0="FORCE_HIGHLIGHTING" />
@@ -91,6 +94,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/WaitForKeyPressInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/TransitionInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Generation/Minimap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Effects/DamageEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/ItemInstanceBuilder.cs" root0="FORCE_HIGHLIGHTING" />
@@ -155,8 +159,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillActionMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryInstance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/LearnSkillMasteryEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryGroup.cs" />
@@ -201,11 +203,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Stats.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TilesetMerger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/TransitionInteraction.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Generation/Minimap.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Generation/MapTile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" />
       </list>
     </option>
   </component>
@@ -296,6 +300,7 @@
       <workItem from="1581950446868" duration="8438000" />
       <workItem from="1582210440845" duration="869000" />
       <workItem from="1582921584884" duration="2519000" />
+      <workItem from="1583114657597" duration="3885000" />
     </task>
     <servers />
   </component>

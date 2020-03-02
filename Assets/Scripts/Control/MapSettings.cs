@@ -35,6 +35,8 @@ public class MapSettings : SerializedMonoBehaviour
     public Color MinimapWallColor;
     public Color MinimapFloorColor;
     
+    public List<MapTile> MapTiles = new List<MapTile>();
+    
     public void Awake()
     {
         if (Instance != null)

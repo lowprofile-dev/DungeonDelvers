@@ -2878,6 +2878,7 @@ GameObject:
   - component: {fileID: 3406148248690233230}
   - component: {fileID: 3406148248690233229}
   - component: {fileID: 6841029362319874516}
+  - component: {fileID: 5357416015541958876}
   m_Layer: 0
   m_Name: ForestCell2
   m_TagString: Untagged
@@ -2967,6 +2968,29 @@ MonoBehaviour:
     flow: {fileID: 0}
     index: 0
   fileVersion: 1
+--- !u!114 &5357416015541958876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3406148248690233228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801d710daf7c4d91b14633050167e04e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  TileIndex: 0
+  MinimapCell: {fileID: 0}
 --- !u!1 &3406148249114531596
 GameObject:
   m_ObjectHideFlags: 0

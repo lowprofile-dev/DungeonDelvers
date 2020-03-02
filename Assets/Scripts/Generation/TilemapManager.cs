@@ -53,7 +53,7 @@ public class TilemapManager : SerializedMonoBehaviour
             Debug.Log($"Generated dungeon in {stopwatch.ElapsedMilliseconds}ms");
         }
         
-        _tilesetMerger.MergeTilemaps();
+        //_tilesetMerger.MergeTilemaps();
 
         // var bitmapStopwatch = Stopwatch.StartNew();
         //
@@ -62,6 +62,64 @@ public class TilemapManager : SerializedMonoBehaviour
         // bitmapStopwatch.Stop();
         //
         // Debug.Log($"Created bitmap in {bitmapStopwatch.ElapsedMilliseconds}ms");
+
+        var mapTiles = FindObjectsOfType<MapTile>().Select(mapTile => mapTile.GetComponent<MapTile>()).ToArray();
+        var tileMaps = mapTiles.SelectMany(mapTile => mapTile.Tilemaps).ToArray();
+        var ColorDictionary = new Dictionary<string, Color>
+        {
+            {"PG_Floor", Color.white},
+            {"PG_Wall", Color.black},
+            {"PG_Ceiling", Color.black}
+        };
+        
+        int initalX = Int32.MaxValue;
+        int finalX = Int32.MinValue;
+        int initialY = Int32.MaxValue;
+        int finalY = Int32.MinValue;
+
+        foreach (var tilemap in tileMaps)
+        {
+            var bounds = tilemap.cellBounds;
+
+            if (bounds.x < initalX)
+                initalX = bounds.x;
+            if (bounds.y < initialY)
+                initialY = bounds.y;
+            if (bounds.xMax > finalX)
+                finalX = bounds.xMax;
+            if (bounds.yMax > finalY)
+                finalY = bounds.yMax;
+        }
+
+        var padding = 5;
+        var texture = new Texture2D(finalX-initalX+(padding*2), finalY-initialY+(padding*2));
+
+        Vector2Int cellPositionToTexturePosition(Vector3Int cellPosition, BoundsInt source)
+        {
+            return new Vector2Int(cellPosition.x-source.x+padding, cellPosition.y-source.y+padding);
+        }
+
+        var destinationTilemaps = _tilesetMerger.MainTilemaps;
+
+        foreach (var mapTile in mapTiles)
+        {
+            mapTile.MergeTilemap(destinationTilemaps,cellPositionToTexturePosition,new Vector2Int(texture.width,texture.height), ColorDictionary);
+        }
+
+        int counter = 0;
+        var time = DateTime.Now.ToString("MM-dd-yyyy-HH:mm:ss");
+        
+        void SaveTex(Texture2D tx)
+        {
+            var png = tx.EncodeToPNG();
+            File.WriteAllBytes(Path.Combine(Application.persistentDataPath,$"/tile{counter++}-{time}.png"), png);
+        }
+        
+//        SaveTex(texture);
+//
+//        mapTiles.ForEach(mapTile => { SaveTex(mapTile.MinimapCell); });
+        
+        Debug.Log(Application.persistentDataPath);
     }
 
     [Button("New Seed")]
