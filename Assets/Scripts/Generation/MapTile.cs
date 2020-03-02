@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
@@ -23,12 +24,14 @@ public class MapTile : SerializedMonoBehaviour
     public void MergeTilemap(List<Tilemap> destination, Func<Vector3Int, BoundsInt, Vector2Int> CellToArray, Vector2Int TextureSize, Dictionary<string,Color> MinimapColors)
     {
         var texture = new Texture2D(TextureSize.x,TextureSize.y);
+        var merged = new List<GameObject>();
         
         foreach (var tilemap in Tilemaps)
-        {
-            var dest = destination.First(t => t.CompareTag(tilemap.tag));
+        { 
+            var dest = destination.FirstOrDefault(t => t.CompareTag(tilemap.tag));
+
             if (dest == null)
-                throw new ArgumentException();
+                continue;
 
             var bounds = tilemap.cellBounds;
             var positions = bounds.allPositionsWithin;
@@ -57,8 +60,10 @@ public class MapTile : SerializedMonoBehaviour
 
             dest.SetTiles(toErase.ToArray(), Enumerable.Repeat<TileBase>(null, toErase.Count).ToArray());
             dest.SetTiles(toMerge.Item1.ToArray(), toMerge.Item2.ToArray());
+            merged.Add(tilemap.gameObject);
         }
 
+        merged.ForEach(Destroy);
         MinimapCell = texture;
     }
 }

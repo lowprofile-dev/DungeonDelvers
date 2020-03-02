@@ -64,7 +64,10 @@ public class TilemapManager : SerializedMonoBehaviour
         // Debug.Log($"Created bitmap in {bitmapStopwatch.ElapsedMilliseconds}ms");
 
         var mapTiles = FindObjectsOfType<MapTile>().Select(mapTile => mapTile.GetComponent<MapTile>()).ToArray();
-        var tileMaps = mapTiles.SelectMany(mapTile => mapTile.Tilemaps).ToArray();
+        var tileMaps = mapTiles
+            .SelectMany(mapTile => mapTile.Tilemaps)
+            .ToArray();
+        
         var ColorDictionary = new Dictionary<string, Color>
         {
             {"PG_Floor", Color.white},
@@ -115,9 +118,9 @@ public class TilemapManager : SerializedMonoBehaviour
             File.WriteAllBytes(Path.Combine(Application.persistentDataPath,$"/tile{counter++}-{time}.png"), png);
         }
         
-//        SaveTex(texture);
-//
-//        mapTiles.ForEach(mapTile => { SaveTex(mapTile.MinimapCell); });
+        SaveTex(texture);
+
+        mapTiles.ForEach(mapTile => { SaveTex(mapTile.MinimapCell); });
         
         Debug.Log(Application.persistentDataPath);
     }
