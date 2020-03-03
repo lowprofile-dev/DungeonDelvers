@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generation/MapTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/MapTile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generation/TilesetMerger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/TilesetMerger.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,13 +198,13 @@
         <option value="$PROJECT_DIR$/Assets/TODO.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Stats.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TilesetMerger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/TransitionInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/Minimap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TilesetMerger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/MapTile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" />
       </list>
@@ -296,7 +297,7 @@
       <workItem from="1581950446868" duration="8438000" />
       <workItem from="1582210440845" duration="869000" />
       <workItem from="1582921584884" duration="2519000" />
-      <workItem from="1583114657597" duration="5382000" />
+      <workItem from="1583114657597" duration="9674000" />
     </task>
     <servers />
   </component>
@@ -333,6 +334,12 @@
     <reveal-manager>
       <revealed-members>
         <RevealItemInfo typeName="UnityEngine.Tilemaps.Tilemap" fieldName="tag" />
+        <RevealItemInfo typeName="UnityEngine.BoundsInt" fieldName="yMax" />
+        <RevealItemInfo typeName="UnityEngine.BoundsInt" fieldName="xMax" />
+        <RevealItemInfo typeName="UnityEngine.BoundsInt" fieldName="y" />
+        <RevealItemInfo typeName="UnityEngine.BoundsInt" fieldName="x" />
+        <RevealItemInfo typeName="UnityEngine.BoundsInt" fieldName="yMin" />
+        <RevealItemInfo typeName="UnityEngine.BoundsInt" fieldName="xMin" />
       </revealed-members>
     </reveal-manager>
   </component>
