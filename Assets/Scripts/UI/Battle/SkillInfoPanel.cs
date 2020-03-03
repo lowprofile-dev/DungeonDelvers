@@ -12,7 +12,16 @@ public class SkillInfoPanel : MonoBehaviour
 
     public void BuildSkillInfo(Skill skill)
     {
+        if (skill == null)
+        {
+            SkillName.text = "";
+            SkillIcon.enabled = false;
+            SkillCost.text = "";
+            SkillDescription.text = "";
+        }
+        
         SkillName.text = skill.SkillName;
+        SkillIcon.enabled = true;
         SkillIcon.sprite = skill.SkillIcon;
         SkillCost.text = skill.EpCost.ToString(); //=> Ver depois quando tiver custos de HP ou etc.
         SkillDescription.text = skill.SkillDescription;

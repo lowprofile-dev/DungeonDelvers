@@ -7,3 +7,9 @@ Magician -> Tome, 1h-Sword -> Light
 Paladin -> Spear, Staff -> Heavy
 Hunter -> Bow, Axe -> Heavy
 
+---
+Knight
+Fighter
+Magician
+Assassin
+

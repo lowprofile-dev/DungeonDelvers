@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3d8eb85f-203a-42cc-a492-a61dc70ead53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Classes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Classes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillActionMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillActionMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillInfoPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillInfoPanel.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,6 +122,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/Equippable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillInfoPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Stats.cs" root0="FORCE_HIGHLIGHTING" />
@@ -154,9 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryInstance.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryEffect/LearnSkillMasteryEffect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryGroup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/Mastery.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryCondition/MasteryCondition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryCondition/HasMasteryMasteryCondition.cs" />
@@ -205,6 +205,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TilesetMerger.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/MapTile.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TilemapManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Classes.txt" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillInfoPanel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillActionMenu.cs" />
       </list>
     </option>
   </component>
@@ -295,7 +298,7 @@
       <workItem from="1581950446868" duration="8438000" />
       <workItem from="1582210440845" duration="869000" />
       <workItem from="1582921584884" duration="2519000" />
-      <workItem from="1583114657597" duration="10312000" />
+      <workItem from="1583114657597" duration="11250000" />
     </task>
     <servers />
   </component>

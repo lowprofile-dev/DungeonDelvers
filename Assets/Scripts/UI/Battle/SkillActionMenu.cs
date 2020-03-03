@@ -73,7 +73,7 @@ public class SkillActionMenu : SerializedMonoBehaviour
             .AvailableSkills
             .OrderBy(skill => skill.EpCost)
             .ToArray();
-
+        
         for (var i = 0; i < skills.Length; i++)
         {
             var skillButtonObject = Instantiate(SkillButtonPrefab, SkillGridContent);
@@ -87,8 +87,11 @@ public class SkillActionMenu : SerializedMonoBehaviour
                 EventSystem.current.SetSelectedGameObject(skillButton.Button.gameObject);
             }
         }
-        
-        
+
+        if (skills.Length == 0)
+        {
+            ShowSkillInfo(null);
+        }
     }
 
     private void BuildItems()
@@ -120,6 +123,11 @@ public class SkillActionMenu : SerializedMonoBehaviour
                 SelectedSkill = skillButton;
                 EventSystem.current.SetSelectedGameObject(skillButton.Button.gameObject);
             }
+        }
+        
+        if (consumables.Length == 0)
+        {
+            ShowSkillInfo(null);
         }
     }
 
