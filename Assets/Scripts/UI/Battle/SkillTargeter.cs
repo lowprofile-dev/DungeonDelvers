@@ -11,7 +11,7 @@ public class SkillTargeter : SerializedMonoBehaviour
     public CharacterActionMenu CharacterActionMenu;
     [ReadOnly] public Skill Skill;
     [ReadOnly] public bool TargetChosen;
-    [ReadOnly] public List<IBattler[]> TargetGroups;
+    [ReadOnly] public List<Battler[]> TargetGroups;
     [ShowInInspector, ReadOnly] private BattleCanvas BattleCanvas;
     [ReadOnly] public SkillActionMenu PreviousMenu;
     private Coroutine Targeting;
@@ -31,7 +31,7 @@ public class SkillTargeter : SerializedMonoBehaviour
     private void SetupTargets()
     {
         //Cleanup
-        TargetGroups = new List<IBattler[]>();
+        TargetGroups = new List<Battler[]>();
 
         switch (Skill.Target)
         {
@@ -111,7 +111,7 @@ public class SkillTargeter : SerializedMonoBehaviour
             foreach (var battler in TargetGroups[currentIndex])
             {
                 BattleCanvas.BindTargetArrow(battler.RectTransform);
-                names.Add($"Lv. {battler.Level} {battler.Name}");
+                names.Add($"Lv. {battler.Level} {battler.BattlerName}");
             }
 
             var targetName = string.Join(", ", names);
@@ -152,7 +152,7 @@ public class SkillTargeter : SerializedMonoBehaviour
                 int index = 0;
                 float indexDistance = float.PositiveInfinity;
                 
-                Func<IBattler[], float> GetDistance = (group) =>
+                Func<Battler[], float> GetDistance = (group) =>
                 {
                     var groupPositions =
                         group.Select(target => target.RectTransform.position);
@@ -206,7 +206,7 @@ public class SkillTargeter : SerializedMonoBehaviour
         BattleCanvas.battleInfoPanel.HideInfo();
     }
 
-    private void ChooseTargets(IEnumerable<IBattler> targets)
+    private void ChooseTargets(IEnumerable<Battler> targets)
     {
         BattleCanvas.CleanTargetArrows();
         TargetChosen = true;

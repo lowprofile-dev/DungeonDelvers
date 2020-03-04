@@ -5,15 +5,15 @@ public class RandomAI : MonsterAI
 {
     public override Turn BuildTurn(MonsterBattler battler)
     {
-        var useableSkills = battler.Skills.Where(monsterSkill => monsterSkill.Evaluate(battler));
+        var usableSkills = battler.Skills.Where(monsterSkill => monsterSkill.Evaluate(battler)).ToArray();
 
-        if (useableSkills.Any() == false)
+        if (usableSkills.Any() == false)
             return new Turn();
         
-        var randomIndex = Random.Range(0, useableSkills.Count());
-        var chosenSkill = useableSkills.ElementAt(randomIndex);
+        var randomIndex = Random.Range(0, usableSkills.Count());
+        var chosenSkill = usableSkills.ElementAt(randomIndex);
 
-        var possibleTargets = BattleController.Instance.Party.Where(partyMember => !partyMember.Fainted);
+        var possibleTargets = BattleController.Instance.Party.Where(partyMember => !partyMember.Fainted).ToArray();
         
         if (possibleTargets.Any() == false)
             return new Turn();

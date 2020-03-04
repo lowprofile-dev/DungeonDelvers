@@ -39,8 +39,8 @@ public class Skill : SerializableAsset
 
 public struct SkillInfo
 {
-    public IBattler Target;
-    public IBattler Source;
+    public Battler Target;
+    public Battler Source;
     public Skill Skill;
     public bool HasCrit;
 }

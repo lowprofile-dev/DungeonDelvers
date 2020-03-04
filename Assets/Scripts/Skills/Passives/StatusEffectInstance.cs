@@ -2,6 +2,6 @@ public class StatusEffectInstance
 {
     public StatusEffect StatusEffect;
     public int TurnDuration;
-    public IBattler Source;
-    public IBattler Target;
+    public Battler Source;
+    public Battler Target;
 }

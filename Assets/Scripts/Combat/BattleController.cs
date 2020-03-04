@@ -25,7 +25,7 @@ public class BattleController : AsyncMonoBehaviour
     public List<CharacterBattler> Party;
     public List<MonsterBattler> Enemies;
 
-    public IEnumerable<IBattler> Battlers => Party.Concat<IBattler>(Enemies);
+    public IEnumerable<Battler> Battlers => Party.Concat<Battler>(Enemies);
 
     public UnityEvent OnBattleEnd;
 
@@ -34,7 +34,7 @@ public class BattleController : AsyncMonoBehaviour
     public BattleCanvas battleCanvas;
 
     [ReadOnly] public int CurrentTurn;
-    [ReadOnly] public IBattler CurrentBattler;
+    [ReadOnly] public Battler CurrentBattler;
 
     private Task Battle;
     private CancellationTokenSource CancelBattle = new CancellationTokenSource();
@@ -241,7 +241,7 @@ public class BattleController : AsyncMonoBehaviour
         return modifiedExp;
     }
     
-    async Task BattlerTurn(IBattler battler)
+    async Task BattlerTurn(Battler battler)
     {
         try
         {
@@ -257,10 +257,9 @@ public class BattleController : AsyncMonoBehaviour
                 var targets = turn.Targets;
                 
                 GameController.Instance.QueueAction(() =>
-                    Debug.Log($"Skill: {usedSkill.SkillName}, Targets: {String.Join(", ", turn.Targets.Select(target => $"{target.Name}"))}"));
+                    Debug.Log($"Skill: {usedSkill.SkillName}, Targets: {String.Join(", ", turn.Targets.Select(target => $"{target.BattlerName}"))}"));
 
-                await battler.ExecuteTurn(battler, usedSkill,
-                    targets);
+                await battler.ExecuteTurn(turn);
 
                 var effectResults =
                     await Task.WhenAll(targets.EachDo((target) => target.ReceiveSkill(battler, usedSkill)));
@@ -349,7 +348,7 @@ public class BattleController : AsyncMonoBehaviour
         Debug.Log(partyMember.Character.Base.CharacterName + " terminou");
     }
 
-    public int DamageCalculation(IBattler source, IBattler target, DamageType damageType, float variance = 0.15f)
+    public int DamageCalculation(Battler source, Battler target, DamageType damageType, float variance = 0.15f)
     {
         ////Alguma logica aqui (ou antes) que leva em conta as passivas, pegar se é magico ou fisico do effect
         //return source.Stats.PhysAtk - target.Stats.PhysDef;
@@ -457,5 +456,5 @@ public abstract class EffectResult
 public class Turn
 {
     public Skill Skill { get; set; }
-    public IEnumerable<IBattler> Targets { get; set; }
+    public IEnumerable<Battler> Targets { get; set; }
 }

@@ -3,7 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="3d8eb85f-203a-42cc-a492-a61dc70ead53" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/SkillAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/SkillAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/SkillAnimations/FromSourceToTargetSkillAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/SkillAnimations/FromSourceToTargetSkillAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/SkillAnimations/PlayAtTargetSkillAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/SkillAnimations/PlayAtTargetSkillAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Battler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Battler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/MonsterAI/AIs/RandomAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/MonsterAI/AIs/RandomAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/IPassiveEffectSource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/IPassiveEffectSource.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DefendPassiveEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DefendPassiveEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DoTPassiveEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DoTPassiveEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/RegenPassiveEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/RegenPassiveEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffectInstance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffectInstance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleCanvas.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,12 +152,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/WeaponBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/PassiveEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/AddItemInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/MonsterAI/AIs/RandomAI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Serialization/PartyConverter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopMenu.cs" root0="FORCE_HIGHLIGHTING" />
@@ -151,21 +169,17 @@
     <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Effects/ApplyStatusEffectEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffectInstance.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/SkillAnimations/PlayAtTargetSkillAnimation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/SkillAnimations/FromSourceToTargetSkillAnimation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/GameDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/BranchInteraction.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/SkillAnimation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillActionMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/Battler.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ItemBase.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/InventoryItemInspector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/CharacterInspector.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipMenu.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/GameSaveController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/InventoryConverter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Serialization/PartyConverter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Instancing/ItemInstanceBuilder.cs" />
@@ -178,22 +192,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Shop/ShopInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/OpenShopInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Shop/Shop.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DoTPassiveEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Effects/ApplyStatusEffectEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleCanvas.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" />
         <option value="$PROJECT_DIR$/Assets/seeds.txt" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/RewardPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterSave.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Character.cs" />
         <option value="$PROJECT_DIR$/Assets/TODO.txt" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/Stats.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Generation/TransitionPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/TransitionInteraction.cs" />
@@ -206,10 +214,23 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillActionMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Classes.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/Passive.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffectInstance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffectInstance.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/IPassiveEffectSource.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animation/SkillAnimations/FromSourceToTargetSkillAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animation/SkillAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Animation/SkillAnimations/PlayAtTargetSkillAnimation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/MonsterAI/AIs/RandomAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleCanvas.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/BattleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DefendPassiveEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DoTPassiveEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/RegenPassiveEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" />
       </list>
     </option>
   </component>
@@ -300,7 +321,7 @@
       <workItem from="1581950446868" duration="8438000" />
       <workItem from="1582210440845" duration="869000" />
       <workItem from="1582921584884" duration="2519000" />
-      <workItem from="1583114657597" duration="13495000" />
+      <workItem from="1583114657597" duration="15338000" />
     </task>
     <servers />
   </component>

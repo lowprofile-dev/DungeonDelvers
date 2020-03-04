@@ -10,10 +10,10 @@ public interface IPassiveEffectSource
 //ver como vai ficar
 public interface IHasTarget
 {
-    IBattler Target { get; set; }
+    Battler Target { get; set; }
 }
 
 public interface IHasSource
 {
-    IBattler Source { get; set; }
+    Battler Source { get; set; }
 }

@@ -12,13 +12,13 @@ public class DefendPassiveEffect : PassiveEffect, DamageEffect.IReceiveDamagePas
         {
             var old = finalDamage;
             finalDamage = (int) (finalDamage * DamageFactor);
-            Debug.Log($"Aplicando DefendPassiveEffect -- Source: {skillInfo.Source.Name}, Target: {skillInfo.Target.Name}. {old} -> {finalDamage}");
+            Debug.Log($"Aplicando DefendPassiveEffect -- Source: {skillInfo.Source.BattlerName}, Target: {skillInfo.Target.BattlerName}. {old} -> {finalDamage}");
         }
     }
 
-    public async Task OnTurnStart(IBattler battler)
+    public async Task OnTurnStart(Battler battler)
     {
-        Debug.Log($"{battler.Name} -> [Defending]=false");
+        Debug.Log($"{battler.BattlerName} -> [Defending]=false");
         battler.BattleDictionary["Defending"] = false;
     }
 

@@ -3,9 +3,9 @@
 public class DoTPassiveEffect : PassiveEffect, ITurnStartPassiveEffect, IHasSource
 {
     public DamageEffect DamageEffect;
-    public IBattler Source { get; set; }
+    public Battler Source { get; set; }
 
-    public async Task OnTurnStart(IBattler battler)
+    public async Task OnTurnStart(Battler battler)
     {
         battler.QueueAction(() =>
             BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(PassiveSource.GetName));

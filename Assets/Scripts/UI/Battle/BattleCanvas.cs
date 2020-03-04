@@ -111,12 +111,12 @@ public class BattleCanvas : AsyncMonoBehaviour
         Turn = turn;
     }
 
-    public async Task ShowSkillResult(IBattler battler, string info, Color textColor, float duration = 1.4f)
+    public async Task ShowSkillResult(Battler battler, string info, Color textColor, float duration = 1.4f)
     {
         await GameController.Instance.PlayCoroutine(ShowDamageCoroutine(battler, info, textColor, duration));
     }
 
-    private IEnumerator ShowDamageCoroutine(IBattler battler, string info, Color textColor, float duration)
+    private IEnumerator ShowDamageCoroutine(Battler battler, string info, Color textColor, float duration)
     {
         var damageObject = Instantiate(DamagePrefab, transform);
         damageObject.transform.position = battler.RectTransform.position + new Vector3(0, 100, 0);

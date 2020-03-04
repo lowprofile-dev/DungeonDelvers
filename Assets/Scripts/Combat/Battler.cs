@@ -4,26 +4,8 @@ using System.Threading.Tasks;
 using Sirenix.Utilities;
 using UnityEngine;
 
-public abstract class Battler : AsyncMonoBehaviour, IBattler
+public abstract class Battler : AsyncMonoBehaviour
 {
-    #region tbi
-    
-    public string Name => "";
-    
-    public Task ExecuteTurn(IBattler source, Skill skill, IEnumerable<IBattler> targets)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public Task<IEnumerable<EffectResult>> ReceiveSkill(IBattler source, Skill skill)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    
-    #endregion
-    
-    
     public Dictionary<object, object> BattleDictionary { get; set; } = new Dictionary<object, object>();
 
     #region Fields
@@ -103,6 +85,8 @@ public abstract class Battler : AsyncMonoBehaviour, IBattler
         QueueAction(() => { BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(turn.Skill.SkillName); });
 
         await AnimateTurn(turn);
+        
+        QueueAction(() => {BattleController.Instance.battleCanvas.battleInfoPanel.HideInfo();});
     }
 
     public async Task<IEnumerable<EffectResult>> ReceiveSkill(Battler source, Skill skill)
@@ -210,8 +194,7 @@ public abstract class Battler : AsyncMonoBehaviour, IBattler
 
 public interface ITurnStartPassiveEffect
 {
-    Task OnTurnStart(IBattler battler);
-    //Task OnTurnStart(Battler battler);
+    Task OnTurnStart(Battler battler);
 }
 
 #endregion

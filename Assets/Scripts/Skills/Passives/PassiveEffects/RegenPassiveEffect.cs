@@ -13,7 +13,7 @@ public class RegenPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
 
     public bool IsPercentageValue = false;
 
-    public async Task OnTurnStart(IBattler battler)
+    public async Task OnTurnStart(Battler battler)
     {
         int healAmount;
 
@@ -37,7 +37,7 @@ public class RegenPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
             //BattleController.Instance.battleCanvas.BindActionArrow(battler.RectTransform);
         });
         
-        Debug.Log($"Curando {healAmount} em {battler.Name}");
+        Debug.Log($"Curando {healAmount} em {battler.BattlerName}");
         
         //await battler.ReceiveEffect(battler, null, effect);
         await battler.ReceiveEffect(new EffectInfo

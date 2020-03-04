@@ -6,30 +6,6 @@ using UnityEngine;
 
 public class FromSourceToTargetSkillAnimation : SkillAnimation
 {
-    public override async Task PlaySkillAnimation(IBattler source, IEnumerable<IBattler> targets)
-    {
-        List<Task> Animations = new List<Task>();
-        await GameController.Instance.QueueActionAndAwait(() =>
-        {
-            targets.ForEach(target =>
-            {
-                var animationObject = GameObject.Instantiate(GameController.Instance.AnimationObjectBase,
-                    BattleController.Instance.battleCanvas.transform);
-
-                var animation = animationObject.GetComponent<AnimationObject>();
-                animation.transform.position = target.RectTransform.position;
-
-                ScaleAnimation(animation.transform as RectTransform);
-                
-                Animations.Add(
-                    GameController.Instance.PlayCoroutine(MoveAnimationCoroutine(source.RectTransform.position,
-                        target.RectTransform.position, animationObject.transform, animation.animator, AnimationName), animation));
-            });
-        });
-
-        await Task.WhenAll(Animations);
-    }
-    
     public override async Task PlaySkillAnimation(Battler source, IEnumerable<Battler> targets)
     {
         List<Task> Animations = new List<Task>();
