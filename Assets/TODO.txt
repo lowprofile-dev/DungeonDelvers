@@ -1,3 +1,5 @@
+Arrumada em PassiveEffects/StatusEffects/etc. Fazer ficar mais funcional (não guardam variaveis fora as proprias)
+Fazer StatusEffect virar um ScriptableObject, adicionar um icone.
 Unificar battler
 
 Completar cidade.

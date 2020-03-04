@@ -9,7 +9,31 @@ Hunter -> Bow, Axe -> Heavy
 
 ---
 Knight
-Fighter
-Magician
+Jack of All Trades
+
+(Ver uma feature mais distintiva)
+2h-Sword:
+    AoE
+Spear:
+    DPS
+    
+Fighter:
+Glass Cannon
+Axe:
+    DPS, Alto Dano, Alto Crit
+2h-Sword:
+    AoE
+   
+Magician:
+Dano/Utility
+Tome:
+    AoE e utilidade, skills com muito dano mas muito gasto de AP
+1h-Sword:
+    Encanta espadas com magia, ainda tem alguma utilidade mas menos, DPS maior por ter custos baixos de AP
+    
 Assassin
+Knife:
+    DoT, Multiple Hits, Custo baixo de AP nas skills
+Bow:
+    Menos hits com mais mano, maior DPS, menos utilidade
 

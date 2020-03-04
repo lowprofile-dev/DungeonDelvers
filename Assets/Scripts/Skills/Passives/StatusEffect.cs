@@ -2,12 +2,13 @@ using System.Collections.Generic;
 using System.Linq;
 using Sirenix.Utilities;
 
-//POR ENQUANTO
 public class StatusEffect : IPassiveEffectSource
 {
     public int TurnDuration = 0;
     public string StatusEffectName = "";
     public string GetName => StatusEffectName;
+    public StatusEffectType Type = StatusEffectType.None;
+    public bool Hidden = false;
     public List<PassiveEffect> Effects = new List<PassiveEffect>();
     public List<PassiveEffect> GetEffects => Effects;
 
@@ -38,13 +39,18 @@ public class StatusEffect : IPassiveEffectSource
         skillInfo.Target.StatusEffects.Add(instance);
     }
 
-    private void ApplyEffect(PassiveEffect passiveEffect)
-    {
-        passiveEffect.PassiveSource = this;
+    // private void ApplyEffect(PassiveEffect passiveEffect)
+    // {
+    //     passiveEffect.PassiveSource = this;
+    //
+    //     if (passiveEffect is IHasSource ihs)
+    //     {
+    //         
+    //     }
+    // }
 
-        if (passiveEffect is IHasSource ihs)
-        {
-            
-        }
+    public enum StatusEffectType
+    {
+        None
     }
 }

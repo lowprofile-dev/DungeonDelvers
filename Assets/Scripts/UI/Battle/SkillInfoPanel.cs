@@ -18,6 +18,7 @@ public class SkillInfoPanel : MonoBehaviour
             SkillIcon.enabled = false;
             SkillCost.text = "";
             SkillDescription.text = "";
+            return;
         }
         
         SkillName.text = skill.SkillName;

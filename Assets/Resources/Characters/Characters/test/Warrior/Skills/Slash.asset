@@ -36,9 +36,30 @@ MonoBehaviour:
     - Name: DamageType
       Entry: 3
       Data: 0
-    - Name: TrueHit
-      Entry: 5
-      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: CriticalEffects
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 3|DamageEffect, Assembly-CSharp
+    - Name: DamageFactor
+      Entry: 4
+      Data: 1.5
+    - Name: DamageType
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -69,5 +90,8 @@ MonoBehaviour:
   SkillDescription: Attack one target with a sword.
   Target: 0
   TrueHit: 0
+  CanBeSilenced: 0
+  CanCritical: 1
   AccuracyModifier: 0
+  CriticalModifier: 0
   AnimationType: 2

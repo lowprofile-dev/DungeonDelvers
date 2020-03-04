@@ -56,7 +56,7 @@ MonoBehaviour:
       Data: 3|DamageEffect, Assembly-CSharp
     - Name: DamageFactor
       Entry: 4
-      Data: 2
+      Data: 1.725
     - Name: DamageType
       Entry: 3
       Data: 0
@@ -93,5 +93,5 @@ MonoBehaviour:
   CanBeSilenced: 0
   CanCritical: 1
   AccuracyModifier: -0.1
-  CriticalModifier: 0.5
+  CriticalModifier: 0
   AnimationType: 2
