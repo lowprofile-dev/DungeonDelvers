@@ -12,16 +12,8 @@ public class Passive : SerializableAsset, IPassiveEffectSource
     [TextArea] public string PassiveDescription;
     [OnValueChanged("SetEffectOrigin")] public List<PassiveEffect> Effects = new List<PassiveEffect>();
     public List<PassiveEffect> GetEffects => Effects;
-
-    //Fazer classe separada para statuseffects. também tem uma lista de passiveeffects, mas eles tem também métodos para ver quando para o statuseffect,
-    //e um enum se é positivo/negativo/neutro, para fazer efeitos tipo "remova todos os efeitos negativos"
-    //
-
-    //enum PassiveType
-    //{
-    //    Passive,
-    //    StatusEffect
-    //}
+    
+    
     #if UNITY_EDITOR
     private void SetEffectOrigin()
     {
