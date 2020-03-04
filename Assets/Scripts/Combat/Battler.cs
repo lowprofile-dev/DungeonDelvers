@@ -4,14 +4,32 @@ using System.Threading.Tasks;
 using Sirenix.Utilities;
 using UnityEngine;
 
-public abstract class Battler : AsyncMonoBehaviour
+public abstract class Battler : AsyncMonoBehaviour, IBattler
 {
-    public Dictionary<object, object> BattleDictionary = new Dictionary<object, object>();
+    #region tbi
+    
+    public string Name => "";
+    
+    public Task ExecuteTurn(IBattler source, Skill skill, IEnumerable<IBattler> targets)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public Task<IEnumerable<EffectResult>> ReceiveSkill(IBattler source, Skill skill)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    
+    #endregion
+    
+    
+    public Dictionary<object, object> BattleDictionary { get; set; } = new Dictionary<object, object>();
 
     #region Fields
 
-    public virtual string BattlerName { get; set; }
-    public virtual int Level { get; set; }
+    public virtual string BattlerName { get; }
+    public virtual int Level { get; }
     public virtual int CurrentHp { get; set; }
     public virtual int CurrentEp { get; set; }
     public bool Fainted => CurrentHp == 0;
@@ -57,7 +75,7 @@ public abstract class Battler : AsyncMonoBehaviour
 
         foreach (var turnStartPassive in turnStartEffects)
         {
-            //await turnStartPassive.OnTurnStart(this);
+            await turnStartPassive.OnTurnStart(this);
         }
     }
 
@@ -67,7 +85,6 @@ public abstract class Battler : AsyncMonoBehaviour
     }
 
     public abstract Task<Turn> GetTurn();
-
     public async Task ExecuteTurn(Turn turn)
     {
         Debug.Log($"Executando o turno de {BattlerName}.");
@@ -91,28 +108,87 @@ public abstract class Battler : AsyncMonoBehaviour
     public async Task<IEnumerable<EffectResult>> ReceiveSkill(Battler source, Skill skill)
     {
         Debug.Log($"Recebendo skill em {BattlerName}");
-        var result = new List<EffectResult>();
-
-        foreach (var effect in skill.Effects)
+        bool hasHit;
+        
+        if (skill.TrueHit)
         {
-            result.Add(await ReceiveEffect(source, skill, effect));
+            Debug.Log($"{source.BattlerName} acertou {BattlerName} com {skill.SkillName} por ter True Hit");
+            hasHit = true;
         }
+        else
+        {
+            var accuracy = source.Stats.Accuracy + skill.AccuracyModifier;
+            var evasion = Stats.Evasion;
 
-        return result;
+            var hitChance = accuracy - evasion;
+
+            var rng = GameController.Instance.Random.NextDouble();
+
+            hasHit = rng <= hitChance;
+            
+            Debug.Log($"{source.BattleDictionary} {(hasHit ? "acertou":"errou")} {BattlerName} com {skill.SkillName} -- Acc: {accuracy}, Eva: {evasion}, Rng: {rng}");
+        }
+        if (hasHit)
+        {
+            var results = new List<EffectResult>();
+
+            bool hasCrit;
+
+            if (!skill.CanCritical)
+            {
+                hasCrit = false;
+                Debug.Log($"{source.BattlerName} não critou {BattlerName} com {skill.SkillName} por não poder critar.");
+            }
+            else
+            {
+                var critAccuracy = source.Stats.CritChance + skill.CriticalModifier;
+                var critEvasion = Stats.CritAvoid;
+
+                var critChance = critAccuracy - critEvasion;
+
+                var rng = GameController.Instance.Random.NextDouble();
+
+                hasCrit = rng <= critChance;
+                
+                Debug.Log($"{source.BattlerName} {(hasCrit ? "":"não")} critou {BattlerName} com {skill.SkillName} -- Acc: {critAccuracy}, Eva: {critEvasion}, Rng: {rng}");
+            }
+            
+            var skillInfo = new SkillInfo
+            {
+                HasCrit = hasCrit,
+                Skill = skill,
+                Source = source,
+                Target = this
+            };
+
+            var effects = hasCrit ? skill.CriticalEffects : skill.Effects;
+            
+            foreach (var effect in effects)
+            {
+                results.Add(
+                    await ReceiveEffect(new EffectInfo
+                    {
+                        SkillInfo = skillInfo,
+                        Effect = effect
+                    }));
+            }
+            return results;
+        }
+        else
+        {
+            await BattleController.Instance.battleCanvas.ShowSkillResult(this, "Miss!", Color.white);
+            return new EffectResult[] { };
+            //retonar missresult depois(?)
+        }
     }
 
-    public async Task<EffectResult> ReceiveEffect(Battler source, Skill skill, Effect effect)
+    public async Task<EffectResult> ReceiveEffect(EffectInfo effectInfo)
     {
         EffectResult effectResult = null;
 
         await QueueActionAndAwait(() =>
         {
-            // effectResult = effect.ExecuteEffect(new ActionInfo<Skill>
-            // {
-            //     ActionSource = skill,
-            //     Source = source,
-            //     Target = this
-            // });
+            effectResult = effectInfo.Effect.ExecuteEffect(effectInfo.SkillInfo);
         });
 
         await AnimateEffectResult(effectResult);
@@ -135,8 +211,7 @@ public abstract class Battler : AsyncMonoBehaviour
 public interface ITurnStartPassiveEffect
 {
     Task OnTurnStart(IBattler battler);
-
-    // Task OnTurnStart(Battler battler);
+    //Task OnTurnStart(Battler battler);
 }
 
 #endregion

@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d8eb85f-203a-42cc-a492-a61dc70ead53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffectInstance.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffectInstance.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/AStarPathfindingProjectPro.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/PlayMaker.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/RAIN.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/SECTR_VIS.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/Unity NavMesh.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Samples/DungeonCrawler.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/MenuEffects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/Passive.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/Passive.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Battler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Battler.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,11 +154,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Control/GameDatabase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/BranchInteraction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillActionMenu.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Combat/Battler.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryCondition/HasMasteryMasteryCondition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/EquipButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Character/CharacterBase.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/Items/ItemBase.cs" />
@@ -196,7 +184,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleCanvas.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" />
         <option value="$PROJECT_DIR$/Assets/seeds.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/SkillTargeter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/RewardPanel.cs" />
@@ -221,6 +208,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/Passive.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffectInstance.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/IBattler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" />
       </list>
     </option>
   </component>
@@ -311,7 +300,7 @@
       <workItem from="1581950446868" duration="8438000" />
       <workItem from="1582210440845" duration="869000" />
       <workItem from="1582921584884" duration="2519000" />
-      <workItem from="1583114657597" duration="12611000" />
+      <workItem from="1583114657597" duration="13495000" />
     </task>
     <servers />
   </component>
