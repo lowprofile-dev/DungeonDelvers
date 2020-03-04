@@ -39,7 +39,7 @@ public class CharacterBattler : Battler
         CurrentEp = Stats.InitialEp;
         Skills = character.Skills;
         Passives = character.Passives;
-        StatusEffects = new List<StatusEffect>();
+        StatusEffectInstances = new List<StatusEffectInstance>();
     }
     
     public void CommitChanges()
@@ -56,24 +56,24 @@ public class CharacterBattler : Battler
             var highestHp = (int) highestHpObject;
             if (CurrentHp > highestHp)
             {
-                Debug.Log($"{Name} Highest HP: {CurrentHp}");
+                Debug.Log($"{BattlerName} Highest HP: {CurrentHp}");
                 BattleDictionary["HighestHP"] = CurrentHp;
             }
         }
         else
         {
-            Debug.Log($"{Name} Highest HP: {CurrentHp}");
+            Debug.Log($"{BattlerName} Highest HP: {CurrentHp}");
             BattleDictionary["HighestHP"] = CurrentHp;
         }
     }
     #endregion
     
     #region Stats
-    public int Level => PlayerController.Instance.PartyLevel;
-    public string Name => Character.Base.CharacterName;
-    [FoldoutGroup("Stats")] public Stats Stats { get; private set; }
+    public override int Level => PlayerController.Instance.PartyLevel;
+    public override string BattlerName => Character.Base.CharacterName;
+    [FoldoutGroup("Stats")] public override Stats Stats { get; protected set; }
     [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] private int currentEp;
-    public int CurrentEp
+    public override int CurrentEp
     {
         get => currentEp;
         set
@@ -83,7 +83,7 @@ public class CharacterBattler : Battler
         }
     }
     [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] private int currentHp;
-    public int CurrentHp
+    public override int CurrentHp
     {
         get => currentHp;
         set
@@ -94,10 +94,9 @@ public class CharacterBattler : Battler
             SetHighestHp();
         }
     }
-    public bool Fainted => CurrentHp == 0;
     [FoldoutGroup("Skills")] public List<PlayerSkill> Skills { get; private set; }
-    [FoldoutGroup("Passives"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public List<Passive> Passives { get; set; } = new List<Passive>();
-    [FoldoutGroup("Status Effects"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public List<StatusEffect> StatusEffects
+    [FoldoutGroup("Passives"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public override List<Passive> Passives { get; protected set; } = new List<Passive>();
+    [FoldoutGroup("Status Effects"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public override List<StatusEffectInstance> StatusEffectInstances
     {
         get;
         set;

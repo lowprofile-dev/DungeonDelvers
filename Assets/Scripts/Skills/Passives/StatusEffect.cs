@@ -1,56 +1,36 @@
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.Utilities;
+using UnityEngine;
 
-public class StatusEffect : IPassiveEffectSource
+public class StatusEffect
 {
-    public int TurnDuration = 0;
     public string StatusEffectName = "";
+    public Sprite StatusEffectIcon;
     public string GetName => StatusEffectName;
     public StatusEffectType Type = StatusEffectType.None;
     public bool Hidden = false;
     public List<PassiveEffect> Effects = new List<PassiveEffect>();
     public List<PassiveEffect> GetEffects => Effects;
 
-    public void Apply(SkillInfo skillInfo)
+    public void Apply(SkillInfo skillInfo,int turnDuration)
     {
-        var instance = new StatusEffect
+        var instance = new StatusEffectInstance
         {
-            TurnDuration = TurnDuration + BattleController.Instance.CurrentTurn,
-            StatusEffectName = StatusEffectName,
-            Effects = Effects.Select(effect => effect.GetInstance()).ToList()
+            Source = skillInfo.Source,
+            Target = skillInfo.Target,
+            StatusEffect = this,
+            TurnDuration = turnDuration
         };
         
-        instance.Effects.ForEach(passiveEffect =>
-        {
-            passiveEffect.PassiveSource = this;
-
-            if (passiveEffect is IHasSource ihs)
-            {
-                ihs.Source = skillInfo.Source;
-            }
-
-            if (passiveEffect is IHasTarget iht)
-            {
-                iht.Target = skillInfo.Target;
-            }
-        });
-
-        skillInfo.Target.StatusEffects.Add(instance);
+        skillInfo.Target.StatusEffectInstances.Add(instance);
     }
-
-    // private void ApplyEffect(PassiveEffect passiveEffect)
-    // {
-    //     passiveEffect.PassiveSource = this;
-    //
-    //     if (passiveEffect is IHasSource ihs)
-    //     {
-    //         
-    //     }
-    // }
-
+    
     public enum StatusEffectType
     {
         None
+        //Poison
+        //Sleep
+        //etc
     }
 }

@@ -16,21 +16,10 @@ public class DefendPassiveEffect : PassiveEffect, DamageEffect.IReceiveDamagePas
         }
     }
 
-    public async Task OnTurnStart(Battler battler)
+    public async Task OnTurnStart(PassiveEffectInfo passiveEffectInfo)
     {
+        var battler = passiveEffectInfo.Target;
         Debug.Log($"{battler.BattlerName} -> [Defending]=false");
         battler.BattleDictionary["Defending"] = false;
-    }
-
-    public override PassiveEffect GetInstance()
-    {
-        var instance = new DefendPassiveEffect
-        {
-            Priority = Priority,
-            DamageFactor = DamageFactor,
-            PassiveSource = PassiveSource
-        };
-
-        return instance;
     }
 }

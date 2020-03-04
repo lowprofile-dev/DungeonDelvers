@@ -1,10 +1,11 @@
 public class ApplyStatusEffectEffect : Effect
 {
     public StatusEffect StatusEffect = new StatusEffect();
+    public int turnDuration;
     
     public override EffectResult ExecuteEffect(SkillInfo skillInfo)
     {
-        StatusEffect.Apply(skillInfo);
+        StatusEffect.Apply(skillInfo, turnDuration);
         
         return new ApplyStatusEffectResult
         {

@@ -58,9 +58,9 @@ public class MonsterBattler : Battler
         
         BattleDictionary = new Dictionary<object, object>();
         Passives = MonsterBase.Passives;
-        StatusEffects = new List<StatusEffect>();
+        StatusEffectInstances = new List<StatusEffectInstance>();
         
-        Debug.Log($"Inicializado Lv.{level}{Name}");
+        Debug.Log($"Inicializado Lv.{level} {BattlerName}");
     }
 
     private bool NoMonster => MonsterBase == null;
@@ -69,13 +69,13 @@ public class MonsterBattler : Battler
     
     #region Stats
 
-    [ShowInInspector] public int Level { get; private set; }
-    public string Name => MonsterBase.MonsterName;
+    [ShowInInspector] public override int Level { get; protected set; }
+    public override string BattlerName => MonsterBase.MonsterName;
     [FoldoutGroup("Stats"), ShowInInspector, PropertyOrder(999)] private Stats stats;
-    public Stats Stats => stats;
+    public override Stats Stats => stats;
     
     [FoldoutGroup("Stats"), SerializeField] private int currentHp;
-    public int CurrentHp
+    public override int CurrentHp
     {
         get => currentHp;
         set
@@ -85,7 +85,7 @@ public class MonsterBattler : Battler
         }
     }
     [FoldoutGroup("Stats"), SerializeField] private int currentEp;
-    public int CurrentEp
+    public override int CurrentEp
     {
         get => currentEp;
         set
@@ -96,15 +96,13 @@ public class MonsterBattler : Battler
     }
     
     public List<MonsterSkill> Skills;
-    public List<Passive> Passives { get; private set; }
-    [ShowInInspector, ReadOnly] public List<StatusEffect> StatusEffects
+    public override List<Passive> Passives { get; protected set; }
+    [ShowInInspector, ReadOnly] public override List<StatusEffectInstance> StatusEffectInstances
     {
         get;
         set;
     }
     public MonsterAI MonsterAi;
-
-    public bool Fainted => CurrentHp == 0;
 
     //[FoldoutGroup("Passives"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public List<BattlePassive> Passives { get; set; } = new List<BattlePassive>();
 
@@ -150,7 +148,7 @@ public class MonsterBattler : Battler
         if (Fainted || MonsterAi == null)
             return null;
         
-        Debug.Log($"Começou a pegar o turno de {Name}");
+        Debug.Log($"Começou a pegar o turno de {BattlerName}");
 
         Turn turn = new Turn();
 

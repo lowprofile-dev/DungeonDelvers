@@ -8,12 +8,13 @@ using UnityEngine;
 
 public class RegenPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
 {
+    //Alterar para ser um efeito de heal (que nem o DoTPassiveEffect usa dano)
     [HideIf("IsPercentageValue")] public int FlatValue = 0;
     [ShowIf("IsPercentageValue"), PropertyRange(0,1f)] public float PercentageValue = 0f;
 
     public bool IsPercentageValue = false;
 
-    public async Task OnTurnStart(Battler battler)
+    public async Task OnTurnStart(PassiveEffectInfo passiveEffectInfo)
     {
         int healAmount;
 
@@ -23,7 +24,7 @@ public class RegenPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
         }
         else
         {
-            healAmount = (int) (battler.Stats.MaxHp * PercentageValue);
+            healAmount = (int) (passiveEffectInfo.Target.Stats.MaxHp * PercentageValue);
         }
 
         var effect = new HealEffect
@@ -31,46 +32,32 @@ public class RegenPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
             HealAmount = healAmount
         };
 
-        battler.QueueAction(() =>
+        passiveEffectInfo.Target.QueueAction(() =>
         {
-            BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(PassiveSource.GetName);
+            BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(passiveEffectInfo.PassiveEffectSourceName);
             //BattleController.Instance.battleCanvas.BindActionArrow(battler.RectTransform);
         });
         
-        Debug.Log($"Curando {healAmount} em {battler.BattlerName}");
+        Debug.Log($"{passiveEffectInfo.Source.BattlerName} curou {healAmount} em {passiveEffectInfo.Target.BattlerName}");
         
         //await battler.ReceiveEffect(battler, null, effect);
-        await battler.ReceiveEffect(new EffectInfo
+        await passiveEffectInfo.Target.ReceiveEffect(new EffectInfo
         {
             SkillInfo = new SkillInfo
             {
                 HasCrit = false,
                 Skill = null,
-                Source = battler,
-                Target = battler
+                Source = passiveEffectInfo.Source,
+                Target = passiveEffectInfo.Target
             },
             Effect = effect
         });
         
-        battler.QueueAction(() =>
+        passiveEffectInfo.Target.QueueAction(() =>
         {
             BattleController.Instance.battleCanvas.battleInfoPanel.HideInfo();
             //BattleController.Instance.battleCanvas.UnbindActionArrow();
         });
-    }
-
-    public override PassiveEffect GetInstance()
-    {
-        var instance = new RegenPassiveEffect
-        {
-            Priority = Priority,
-            FlatValue = FlatValue,
-            IsPercentageValue = IsPercentageValue,
-            PassiveSource = PassiveSource,
-            PercentageValue = PercentageValue
-        };
-
-        return instance;
     }
 }
 

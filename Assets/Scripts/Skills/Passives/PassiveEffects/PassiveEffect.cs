@@ -9,8 +9,12 @@ using UnityEngine;
 
 public abstract class PassiveEffect
 {
-    [Sirenix.OdinInspector.ReadOnly] public IPassiveEffectSource PassiveSource;
     public int Priority = 0;
-    public abstract PassiveEffect GetInstance();
 }
 
+public struct PassiveEffectInfo
+{
+    public string PassiveEffectSourceName;
+    public Battler Source;
+    public Battler Target;
+}

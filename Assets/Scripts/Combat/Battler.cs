@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Sirenix.Utilities;
@@ -10,8 +11,8 @@ public abstract class Battler : AsyncMonoBehaviour
 
     #region Fields
 
-    public virtual string BattlerName { get; }
-    public virtual int Level { get; }
+    public virtual string BattlerName { get; private set; }
+    public virtual int Level { get; protected set; }
     public virtual int CurrentHp { get; set; }
     public virtual int CurrentEp { get; set; }
     public bool Fainted => CurrentHp == 0;
@@ -20,9 +21,10 @@ public abstract class Battler : AsyncMonoBehaviour
 
     #region Stats
 
-    public virtual Stats Stats { get; }
-    public virtual List<Passive> Passives { get; }
-    public virtual List<StatusEffect> StatusEffects { get; }
+    public virtual Stats Stats { get; protected set; }
+    public virtual List<Passive> Passives { get; protected set; }
+    //public virtual List<StatusEffect> StatusEffects { get; set; }
+    public virtual List<StatusEffectInstance> StatusEffectInstances { get; set; }
     public virtual RectTransform RectTransform { get; }
 
     #endregion
@@ -34,35 +36,73 @@ public abstract class Battler : AsyncMonoBehaviour
         CurrentEp += Stats.EpGain;
         Debug.Log($"Começou o turno de {BattlerName}");
 
-        var expiredStatusEffects = StatusEffects
-            .Where(statusEffect => statusEffect.TurnDuration <= BattleController.Instance.CurrentTurn)
+        var expiredStatusEffects = StatusEffectInstances
+            .Where(statusEffect => statusEffect.TurnDuration <= 0)
             .ToArray();
 
         expiredStatusEffects
-            .ForEach(expired => StatusEffects.Remove(expired));
+            .ForEach(expired => StatusEffectInstances.Remove(expired));
+
+//        var effectsFromPassives = Passives
+//            .SelectMany(passive => passive.Effects
+//                .Where(effect => effect is ITurnStartPassiveEffect));
+//
+//        var effectsFromStatuses = StatusEffectInstances
+//            .SelectMany(instance => instance.StatusEffect.Effects
+//                .Where(effect => effect is ITurnStartPassiveEffect));
+//
+//        var turnStartEffects = effectsFromPassives
+//            .Concat(effectsFromStatuses)
+//            .OrderByDescending(effect => effect.Priority)
+//            .Cast<ITurnStartPassiveEffect>()
+//            .ToArray();
 
         var effectsFromPassives = Passives
             .SelectMany(passive => passive.Effects
-                .Where(effect => effect is ITurnStartPassiveEffect));
+                .Where(effect => effect is ITurnStartPassiveEffect)
+                .Select(effect => (passive as object, effect))).ToArray();
 
-        var effectsFromStatuses = StatusEffects
-            .SelectMany(statusEffect => statusEffect.Effects
-                .Where(effect => effect is ITurnStartPassiveEffect));
+        var effectsFromStatuses = StatusEffectInstances
+            .SelectMany(instance => instance.StatusEffect.Effects
+                .Where(effect => effect is ITurnStartPassiveEffect)
+                .Select(effect => (instance as object, effect))).ToArray();
 
         var turnStartEffects = effectsFromPassives
             .Concat(effectsFromStatuses)
-            .OrderByDescending(effect => effect.Priority)
-            .Cast<ITurnStartPassiveEffect>()
+            .OrderByDescending(turnStartEffect => turnStartEffect.effect.Priority)
+            .Select(turnStartEffect => (turnStartEffect.Item1,turnStartEffect.Item2 as ITurnStartPassiveEffect))
             .ToArray();
 
         foreach (var turnStartPassive in turnStartEffects)
         {
-            await turnStartPassive.OnTurnStart(this);
+            if (turnStartPassive.Item1 is Passive passive)
+            {
+                await turnStartPassive.Item2.OnTurnStart(new PassiveEffectInfo
+                {
+                    PassiveEffectSourceName = passive.GetName,
+                    Source = this,
+                    Target = this
+                });
+            }
+            else if (turnStartPassive.Item1 is StatusEffectInstance statusEffectInstance)
+            {
+                await turnStartPassive.Item2.OnTurnStart(new PassiveEffectInfo
+                {
+                    PassiveEffectSourceName = statusEffectInstance.StatusEffect.GetName,
+                    Source = statusEffectInstance.Source,
+                    Target = statusEffectInstance.Target
+                });
+            }
+            else
+            {
+                throw new ArgumentException();
+            }
         }
     }
 
     public async Task TurnEnd()
     {
+        StatusEffectInstances.ForEach(instance => { instance.TurnDuration--; });
         Debug.Log($"Acabou o turno de {BattlerName}.");
     }
 
@@ -194,7 +234,7 @@ public abstract class Battler : AsyncMonoBehaviour
 
 public interface ITurnStartPassiveEffect
 {
-    Task OnTurnStart(Battler battler);
+    Task OnTurnStart(PassiveEffectInfo passiveEffectInfo);
 }
 
 #endregion

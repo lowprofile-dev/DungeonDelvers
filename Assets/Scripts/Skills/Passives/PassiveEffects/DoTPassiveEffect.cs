@@ -1,45 +1,33 @@
 ﻿using System.Threading.Tasks;
 
-public class DoTPassiveEffect : PassiveEffect, ITurnStartPassiveEffect, IHasSource
+public class DoTPassiveEffect : PassiveEffect
 {
     public DamageEffect DamageEffect;
-    public Battler Source { get; set; }
 
-    public async Task OnTurnStart(Battler battler)
+    public async Task OnTurnStart(PassiveEffectInfo passiveEffectInfo)
     {
-        battler.QueueAction(() =>
-            BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(PassiveSource.GetName));
+        var source = passiveEffectInfo.Source;
+        var target = passiveEffectInfo.Target;
+        
+        target.QueueAction(() =>
+            BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(passiveEffectInfo.PassiveEffectSourceName));
         
         //await battler.ReceiveEffect(Source, null, DamageEffect);
-        await battler.ReceiveEffect(new EffectInfo
+        await target.ReceiveEffect(new EffectInfo
         {
             SkillInfo = new SkillInfo
             {
                 HasCrit = false,
                 Skill = null,
-                Source = Source,
-                Target = battler
+                Source = source,
+                Target = target
             },
             Effect = DamageEffect
         });
         
-        battler.QueueAction(() =>
+        target.QueueAction(() =>
         {
             BattleController.Instance.battleCanvas.battleInfoPanel.HideInfo();
-            //BattleController.Instance.battleCanvas.UnbindActionArrow();
         });
-    }
-
-    public override PassiveEffect GetInstance()
-    {
-        var instance = new DoTPassiveEffect
-        {
-            DamageEffect = DamageEffect,
-            PassiveSource = PassiveSource,
-            Priority = Priority,
-            Source = Source
-        };
-
-        return instance;
     }
 }

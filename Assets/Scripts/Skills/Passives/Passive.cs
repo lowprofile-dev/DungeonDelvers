@@ -4,7 +4,7 @@ using Sirenix.Serialization;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Passive")]
-public class Passive : SerializableAsset, IPassiveEffectSource
+public class Passive : SerializableAsset
 {
     [AssetIcon] public Sprite AssetIcon;
     public string PassiveName;
@@ -12,15 +12,4 @@ public class Passive : SerializableAsset, IPassiveEffectSource
     [TextArea] public string PassiveDescription;
     [OnValueChanged("SetEffectOrigin")] public List<PassiveEffect> Effects = new List<PassiveEffect>();
     public List<PassiveEffect> GetEffects => Effects;
-    
-    
-    #if UNITY_EDITOR
-    private void SetEffectOrigin()
-    {
-        foreach (var effect in Effects)
-        {
-            effect.PassiveSource = this;
-        }
-    }
-    #endif
 }
