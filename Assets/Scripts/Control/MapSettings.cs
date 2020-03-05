@@ -56,7 +56,7 @@ public class MapSettings : SerializedMonoBehaviour
 
     public void FixedUpdate()
     {
-        if (MapEncounterSet != null)
+        if (MapEncounterSet != null && MapEncounterSet.MapEncounters.Any())
         {
             var currentPosition = (Vector2)PlayerController.Instance.transform.position;
             var deltaDistance = (currentPosition-lastPosition).magnitude;
