@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-public class DoTPassiveEffect : PassiveEffect
+public class DoTPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
 {
     public DamageEffect DamageEffect;
 

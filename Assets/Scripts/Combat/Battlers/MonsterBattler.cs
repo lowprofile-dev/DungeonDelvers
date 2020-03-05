@@ -193,12 +193,21 @@ public class MonsterBattler : Battler
         {
             case DamageEffect.DamageEffectResult damageEffectResult when !Fainted:
             {
-                await ShowDamageAndFlash(damageEffectResult.DamageDealt, effectResult.skillInfo.HasCrit);
+                var time = effectResult.skillInfo.HasCrit ? 1.4f : 1f;
+//                await ShowDamageAndFlash(damageEffectResult.DamageDealt, effectResult.skillInfo.HasCrit);
+                Task damage = BattleController.Instance.battleCanvas.ShowSkillResult(this,
+                    damageEffectResult.DamageDealt.ToString(), Color.white, time);
+                Task blink = PlayCoroutine(DamageBlinkCoroutine());
+
+                await Task.WhenAll(damage, blink);
                 break;
             }
             case DamageEffect.DamageEffectResult damageEffectResult:
             {
-                Task damage = ShowDamage(damageEffectResult.DamageDealt, effectResult.skillInfo.HasCrit);
+                var time = effectResult.skillInfo.HasCrit ? 1.4f : 1f;
+                //Task damage = ShowDamage(damageEffectResult.DamageDealt, effectResult.skillInfo.HasCrit);
+                Task damage = BattleController.Instance.battleCanvas.ShowSkillResult(this,
+                    damageEffectResult.DamageDealt.ToString(), Color.white, time);
                 Task fade = Fade();
                 
                 await Task.WhenAll(fade, damage);

@@ -17,25 +17,26 @@ public class MultiHitDamageEffect : Effect
 
         HitInfo.ForEach((info, i) =>
         {
-            var damage = (int)(Mathf.Max(0,BattleController.Instance.DamageCalculation(skillInfo.Source, skillInfo.Target, info.DamageType)) * info.DamageFactor);
-
-            Debug.Log($"Calculado hit {i+1}: {damage}");
-        
-            var targetPassives = skillInfo.Target.Passives
-                .SelectMany(passive => passive.Effects.Where(passiveEffect => passiveEffect is DamageEffect.IReceiveDamagePassiveEffect))
-                .OrderByDescending(effect => effect.Priority)
-                .Cast<DamageEffect.IReceiveDamagePassiveEffect>()
-                .ToArray();
-
-            targetPassives.ForEach(targetPassive => targetPassive.BeforeReceive(skillInfo, ref damage));
-        
-            Debug.Log($"{skillInfo.Source} causou {damage} de dano em {skillInfo.Target}.");
-
-            hitResults.Add(new HitResult
-            {
-                DamageDealt = damage,
-                DamageType = info.DamageType
-            });
+            throw new NotImplementedException();
+//            var damage = (int)(Mathf.Max(0,BattleController.Instance.DamageCalculation(skillInfo.Source, skillInfo.Target, info.DamageType)) * info.DamageFactor);
+//
+//            Debug.Log($"Calculado hit {i+1}: {damage}");
+//        
+//            var targetPassives = skillInfo.Target.Passives
+//                .SelectMany(passive => passive.Effects.Where(passiveEffect => passiveEffect is DamageEffect.IReceiveDamagePassiveEffect))
+//                .OrderByDescending(effect => effect.Priority)
+//                .Cast<DamageEffect.IReceiveDamagePassiveEffect>()
+//                .ToArray();
+//
+//            targetPassives.ForEach(targetPassive => targetPassive.BeforeReceive(skillInfo, ref damage));
+//        
+//            Debug.Log($"{skillInfo.Source} causou {damage} de dano em {skillInfo.Target}.");
+//
+//            hitResults.Add(new HitResult
+//            {
+//                DamageDealt = damage,
+//                DamageType = info.DamageType
+//            });
         });
 
         var result = new MultiHitDamageEffectResult

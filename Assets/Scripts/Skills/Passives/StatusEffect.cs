@@ -1,12 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.Utilities;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
-public class StatusEffect
+[CreateAssetMenu(menuName = "Skill/StatusEffect")]
+public class StatusEffect : SerializableAsset
 {
     public string StatusEffectName = "";
-    public Sprite StatusEffectIcon;
+    [AssetIcon] public Sprite StatusEffectIcon;
     public string GetName => StatusEffectName;
     public StatusEffectType Type = StatusEffectType.None;
     public bool Hidden = false;

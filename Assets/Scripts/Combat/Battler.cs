@@ -23,9 +23,18 @@ public abstract class Battler : AsyncMonoBehaviour
 
     public virtual Stats Stats { get; protected set; }
     public virtual List<Passive> Passives { get; protected set; }
-    //public virtual List<StatusEffect> StatusEffects { get; set; }
     public virtual List<StatusEffectInstance> StatusEffectInstances { get; set; }
-    public virtual RectTransform RectTransform { get; }
+    
+    public virtual List<PassiveEffect> PassiveEffects =>
+        Passives
+            .SelectMany(passive => passive.Effects)
+            .Concat(
+                StatusEffectInstances
+                    .SelectMany(statusEffectInstance => statusEffectInstance.StatusEffect.Effects))
+            .OrderByDescending(passiveEffect => passiveEffect.Priority)
+            .ToList();
+
+    public virtual RectTransform RectTransform => transform as RectTransform;
 
     #endregion
 
@@ -42,20 +51,6 @@ public abstract class Battler : AsyncMonoBehaviour
 
         expiredStatusEffects
             .ForEach(expired => StatusEffectInstances.Remove(expired));
-
-//        var effectsFromPassives = Passives
-//            .SelectMany(passive => passive.Effects
-//                .Where(effect => effect is ITurnStartPassiveEffect));
-//
-//        var effectsFromStatuses = StatusEffectInstances
-//            .SelectMany(instance => instance.StatusEffect.Effects
-//                .Where(effect => effect is ITurnStartPassiveEffect));
-//
-//        var turnStartEffects = effectsFromPassives
-//            .Concat(effectsFromStatuses)
-//            .OrderByDescending(effect => effect.Priority)
-//            .Cast<ITurnStartPassiveEffect>()
-//            .ToArray();
 
         var effectsFromPassives = Passives
             .SelectMany(passive => passive.Effects
@@ -150,7 +145,7 @@ public abstract class Battler : AsyncMonoBehaviour
 
             hasHit = rng <= hitChance;
             
-            Debug.Log($"{source.BattleDictionary} {(hasHit ? "acertou":"errou")} {BattlerName} com {skill.SkillName} -- Acc: {accuracy}, Eva: {evasion}, Rng: {rng}");
+            Debug.Log($"{source.BattleDictionary} {(hasHit ? "acertou":"errou")} {BattlerName} com {skill.SkillName} -- Acc: {accuracy}, Eva: {evasion}, Rng: {rng:F3}");
         }
         if (hasHit)
         {
@@ -174,7 +169,7 @@ public abstract class Battler : AsyncMonoBehaviour
 
                 hasCrit = rng <= critChance;
                 
-                Debug.Log($"{source.BattlerName} {(hasCrit ? "":"não")} critou {BattlerName} com {skill.SkillName} -- Acc: {critAccuracy}, Eva: {critEvasion}, Rng: {rng}");
+                Debug.Log($"{source.BattlerName} {(hasCrit ? "":"não")} critou {BattlerName} com {skill.SkillName} -- Acc: {critAccuracy}, Eva: {critEvasion}, Rng: {rng:F3}");
             }
             
             var skillInfo = new SkillInfo

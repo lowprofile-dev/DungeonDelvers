@@ -10,13 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
-  m_Name: Stab
+  m_Name: MageSlash
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 11400000, guid: f73c1388a4601d5949e912127e239da6, type: 2}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -27,7 +26,7 @@ MonoBehaviour:
       Data: 0|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 1|DamageEffect, Assembly-CSharp
@@ -50,27 +49,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 2|ApplyStatusEffectEffect, Assembly-CSharp
-    - Name: ElementOverride
-      Entry: 7
-      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: StatusEffect
-      Entry: 10
-      Data: 0
-    - Name: turnDuration
-      Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -78,13 +56,13 @@ MonoBehaviour:
       Data: 
     - Name: CriticalEffects
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+      Data: 2|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
-      Data: 4|DamageEffect, Assembly-CSharp
+      Data: 3|DamageEffect, Assembly-CSharp
     - Name: ElementOverride
       Entry: 7
       Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
@@ -104,27 +82,6 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 7
-      Data: 5|ApplyStatusEffectEffect, Assembly-CSharp
-    - Name: ElementOverride
-      Entry: 7
-      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: StatusEffect
-      Entry: 10
-      Data: 0
-    - Name: turnDuration
-      Entry: 3
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -138,18 +95,18 @@ MonoBehaviour:
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
-  SkillName: Stab
+  SkillName: Slash
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 25
+  EpCost: 8
   Element: 0
-  SkillDescription: Attack one target with a knife, making them bleed.
+  SkillDescription: Attack one target with a sword.
   Target: 0
   TrueHit: 0
   CanBeSilenced: 0

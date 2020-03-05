@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
+  m_Name: EnchantWater
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: a137550b80e2e2213b060858c7ac38bc, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Effects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|ApplyStatusEffectEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: StatusEffect
+      Entry: 10
+      Data: 0
+    - Name: turnDuration
+      Entry: 3
+      Data: 8
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: CriticalEffects
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SkillAnimation
+      Entry: 6
+      Data: 
+    - Name: RequiredWeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+  uniqueIdentifier: 
+  databaseIgnore: 0
+  SkillName: Enchant (Water)
+  SkillIcon: {fileID: -2396315254400908331, guid: cc992c58d47d97548895862c5e45375c,
+    type: 3}
+  EpCost: 20
+  Element: 7
+  SkillDescription: Enchant your sword with the power of water.
+  Target: 6
+  TrueHit: 1
+  CanBeSilenced: 0
+  CanCritical: 0
+  AccuracyModifier: 0
+  CriticalModifier: 0
+  AnimationType: 4

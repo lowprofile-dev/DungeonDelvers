@@ -1,6 +1,5 @@
-Arrumada em PassiveEffects/StatusEffects/etc. Fazer ficar mais funcional (não guardam variaveis fora as proprias)
-Fazer StatusEffect virar um ScriptableObject, adicionar um icone.
-Unificar battler
+Adicionar uma referencia a skill que aplicou na instance(?)
+Arrumar as coisas dos overrides em relação ao battler.
 
 Completar cidade.
 Começar a fazer os monstros + boss.
@@ -61,16 +60,21 @@ Lightning
 Water
 Wind 
 
-Red Mage:
+Magician:
 Fire
 Water
 Earth
 
 Assassin:
 Dark
+Ice
 
 Priest:
 Holy
+Wind
 
 Paladin:
 Holy
+
+Rogue:
+Lightning

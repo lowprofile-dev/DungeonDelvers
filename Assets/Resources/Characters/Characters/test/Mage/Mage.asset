@@ -3037,6 +3037,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e17376f47dc127947ba7d94e8487d4bc, type: 2}
   - {fileID: 11400000, guid: 312123f09b7a00e418cb2f40dc3c77ed, type: 2}
   - {fileID: 11400000, guid: a15be2fe07337714fbd24950925a1b71, type: 2}
+  - {fileID: 11400000, guid: c24fccbf322991e49aaf84d92510d235, type: 2}
+  - {fileID: 11400000, guid: 41cf442eff2eaa0cbac4bb643a33414b, type: 2}
+  - {fileID: 11400000, guid: 6247f79a3e899859ca690fc6ea3aa1a2, type: 2}
+  - {fileID: 11400000, guid: b1d73cacc33d51d2d8b46c211b9a618f, type: 2}
   BasePassives:
   - {fileID: 11400000, guid: 8a26a5680e5ca86439fb5271297e9113, type: 2}
   Level: 1

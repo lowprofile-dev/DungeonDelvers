@@ -12,7 +12,25 @@ public class DamageEffect : Effect
 
     public override EffectResult ExecuteEffect(SkillInfo skillInfo)
     {
-        var damage = (int)(Mathf.Max(0,BattleController.Instance.DamageCalculation(skillInfo.Source, skillInfo.Target, DamageType)) * DamageFactor);
+        var damageCalculationInfo = new DamageCalculationInfo
+        {
+            DamageElement = skillInfo.Skill != null? skillInfo.Skill.Element : Element.None,
+            DamageType = DamageType,
+            Source = skillInfo.Source,
+            Target = skillInfo.Target
+        };
+
+        var damageCalculationPassives = skillInfo.Source
+            .PassiveEffects
+            .Where(passiveEffect => passiveEffect is IDamageCalculationInfoOverride)
+            .Cast<IDamageCalculationInfoOverride>()
+            .ToArray();
+
+        damageCalculationPassives
+            .ForEach(damageCalculationPassive =>
+                damageCalculationPassive.OverrideDamageCalculationInfo(ref damageCalculationInfo));
+        
+        var damage = (int)(Mathf.Max(0,BattleController.Instance.DamageCalculation(damageCalculationInfo)) * DamageFactor);
 
         Debug.Log($"Calculado {damage}");
         
@@ -39,9 +57,24 @@ public class DamageEffect : Effect
         public int DamageDealt;
     }
 
+    public struct DamageCalculationInfo
+    {
+        public Battler Source;
+        public Battler Target;
+        public DamageType DamageType;
+        public Element DamageElement;
+        
+        //mais info que tiver;
+    }
+    
     public interface IDealDamagePassiveEffect
     {
         void BeforeDeal(SkillInfo skillInfo, ref int finalDamage);
+    }
+
+    public interface IDamageCalculationInfoOverride
+    {
+        void OverrideDamageCalculationInfo(ref DamageCalculationInfo damageCalculationInfo);
     }
     
     public interface IReceiveDamagePassiveEffect
@@ -56,3 +89,30 @@ public enum DamageType
     Magical,
     Pure
 }
+
+public enum Element
+{
+    None,
+    Earth,
+    Fire,
+    Holy,
+    Dark,
+    Ice,
+    Lightning,
+    Water,
+    Wind
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

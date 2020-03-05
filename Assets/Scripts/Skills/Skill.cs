@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ public class Skill : SerializableAsset
     public string SkillName = "";
     [AssetIcon] public Sprite SkillIcon;
     public int EpCost;
+    public Element Element;
     [TextArea] public string SkillDescription;
     public TargetType Target;
     public List<Effect> Effects = new List<Effect>();
@@ -41,7 +43,7 @@ public struct SkillInfo
 {
     public Battler Target;
     public Battler Source;
-    public Skill Skill;
+    [CanBeNull] public Skill Skill;
     public bool HasCrit;
 }
 

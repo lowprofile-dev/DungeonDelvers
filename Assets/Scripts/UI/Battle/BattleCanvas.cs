@@ -111,7 +111,7 @@ public class BattleCanvas : AsyncMonoBehaviour
         Turn = turn;
     }
 
-    public async Task ShowSkillResult(Battler battler, string info, Color textColor, float duration = 1.4f)
+    public async Task ShowSkillResult(Battler battler, string info, Color textColor, float duration = 1f)
     {
         await GameController.Instance.PlayCoroutine(ShowDamageCoroutine(battler, info, textColor, duration));
     }

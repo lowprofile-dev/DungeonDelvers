@@ -348,10 +348,14 @@ public class BattleController : AsyncMonoBehaviour
         Debug.Log(partyMember.Character.Base.CharacterName + " terminou");
     }
 
-    public int DamageCalculation(Battler source, Battler target, DamageType damageType, float variance = 0.15f)
+    public int DamageCalculation(DamageEffect.DamageCalculationInfo damageCalculationInfo, float variance = 0.15f)
     {
         ////Alguma logica aqui (ou antes) que leva em conta as passivas, pegar se é magico ou fisico do effect
         //return source.Stats.PhysAtk - target.Stats.PhysDef;
+        var damageType = damageCalculationInfo.DamageType;
+        var source = damageCalculationInfo.Source;
+        var target = damageCalculationInfo.Target;
+        
         int damage;
 
         switch (damageType)
