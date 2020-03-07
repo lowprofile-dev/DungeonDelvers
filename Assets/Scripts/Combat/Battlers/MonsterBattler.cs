@@ -43,7 +43,7 @@ public class MonsterBattler : Battler
             MonsterBase.BaseLevel + MonsterBase.LevelVariance + 1);
 
         Level = level;
-        stats = MonsterBase.Stats + MonsterBase.StatLevelVariance*(Level-MonsterBase.BaseLevel);
+        Stats = MonsterBase.Stats + MonsterBase.StatLevelVariance*(Level-MonsterBase.BaseLevel);
 
         Skills = MonsterBase.Skills;
         MonsterAi = MonsterBase.MonsterAi;
@@ -59,6 +59,7 @@ public class MonsterBattler : Battler
         BattleDictionary = new Dictionary<object, object>();
         Passives = MonsterBase.Passives;
         StatusEffectInstances = new List<StatusEffectInstance>();
+        BattlerName = MonsterBase.MonsterName;
         
         Debug.Log($"Inicializado Lv.{level} {BattlerName}");
     }
@@ -69,11 +70,6 @@ public class MonsterBattler : Battler
     
     #region Stats
 
-    [ShowInInspector] public override int Level { get; protected set; }
-    public override string BattlerName => MonsterBase.MonsterName;
-    [FoldoutGroup("Stats"), ShowInInspector, PropertyOrder(999)] private Stats stats;
-    public override Stats Stats => stats;
-    
     [FoldoutGroup("Stats"), SerializeField] private int currentHp;
     public override int CurrentHp
     {
@@ -96,53 +92,13 @@ public class MonsterBattler : Battler
     }
     
     public List<MonsterSkill> Skills;
-    public override List<Passive> Passives { get; protected set; }
-    [ShowInInspector, ReadOnly] public override List<StatusEffectInstance> StatusEffectInstances
-    {
-        get;
-        set;
-    }
-    public MonsterAI MonsterAi;
 
-    //[FoldoutGroup("Passives"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public List<BattlePassive> Passives { get; set; } = new List<BattlePassive>();
+    public MonsterAI MonsterAi;
 
     #endregion
     
     #region TurnEvents
 
-//    public async Task TurnStart()
-//    {
-//        currentEp += Stats.EpGain;
-//        Debug.Log($"Começou o turno de {Name}");
-//        
-//        var expiredStatusEffects = StatusEffects.Where(statusEffect => statusEffect.TurnDuration <= BattleController.Instance.CurrentTurn).ToArray();
-//
-//        expiredStatusEffects.ForEach(expired => StatusEffects.Remove(expired));
-//        
-//        var turnStartPassives =
-//            Passives.SelectMany(passive => passive.Effects.Where(effect => effect is ITurnStartPassiveEffect))
-//                .Concat(StatusEffects.SelectMany(statusEffect => statusEffect.Effects.Where(effect => effect is ITurnStartPassiveEffect))
-//                    )
-//                .OrderByDescending(effect => effect.Priority).Cast<ITurnStartPassiveEffect>().ToArray();
-//        
-//        if (turnStartPassives.Any())
-//            await QueueActionAndAwait(() => BattleController.Instance.battleCanvas.BindActionArrow(RectTransform));
-//        
-//        foreach (var turnStartPassive in turnStartPassives)
-//        {
-//            await turnStartPassive.OnTurnStart(this);
-//            if (Fainted)
-//                break;
-//        }
-//        
-//        await QueueActionAndAwait(() => BattleController.Instance.battleCanvas.UnbindActionArrow());
-//    }
-//
-//    public async Task TurnEnd()
-//    {
-//        Debug.Log($"Acabou o turno de {Name}");
-//    }
-    
     public override async Task<Turn> GetTurn()
     {
         if (Fainted || MonsterAi == null)
@@ -249,185 +205,6 @@ public class MonsterBattler : Battler
         }
     }
 
-//    public async Task ExecuteTurn(IBattler source, Skill skill, IEnumerable<IBattler> targets)
-//    {
-//        if (skill.EpCost > CurrentEp)
-//        {
-//            Debug.LogError($"{MonsterBase.MonsterName} tentou usar uma skill com custo maior que o EP Atual");
-//            return;
-//        }
-//
-//        CurrentEp -= skill.EpCost;
-//
-//        if (Skills != null)
-//        {
-//            QueueAction(() =>
-//            {
-//                BattleController.Instance.battleCanvas.BindActionArrow(RectTransform);
-//                foreach (var target in targets)
-//                {
-//                    BattleController.Instance.battleCanvas.BindTargetArrow(target.RectTransform);
-//                }
-//            });
-//            
-//            await BattleController.Instance.battleCanvas.battleInfoPanel.DisplayInfo(skill.SkillName);
-//            
-//            QueueAction(() =>
-//            {
-//                BattleController.Instance.battleCanvas.UnbindActionArrow();
-//                BattleController.Instance.battleCanvas.CleanTargetArrows();
-//            });
-//            
-//        }
-//    }
-//    
-//    public async Task<IEnumerable<EffectResult>> ReceiveSkill(IBattler source, Skill skill)
-//    {
-//        Debug.Log($"Recebendo skill em {Name}");
-//        
-//        bool hasHit;
-//
-//        if (skill.TrueHit)
-//        {
-//            Debug.Log($"{source.Name} acertou {Name} com {skill.SkillName} por ter True Hit");
-//            hasHit = true;
-//        }
-//        else
-//        {
-//            var accuracy = source.Stats.Accuracy + skill.AccuracyModifier;
-//            var evasion = Stats.Evasion;
-//
-//            var hitChance = accuracy - evasion;
-//
-//            var rng = GameController.Instance.Random.NextDouble();
-//
-//            hasHit = rng <= hitChance;
-//            
-//            Debug.Log($"{source.Name} {(hasHit ? "acertou":"errou")} {Name} com {skill.SkillName} -- Acc: {accuracy:F3}, Eva: {evasion:F3}, Rng: {rng:F3}");
-//        }
-//        if (hasHit)
-//        {
-//            var results = new List<EffectResult>();
-//
-//            bool hasCrit;
-//
-//            if (!skill.CanCritical)
-//            {
-//                hasCrit = false;
-//                Debug.Log($"{source.Name} não critou {Name} com {skill.SkillName} por não poder critar.");
-//            }
-//            else
-//            {
-//                var critAccuracy = source.Stats.CritChance + skill.CriticalModifier;
-//                var critEvasion = Stats.CritAvoid;
-//
-//                var critChance = critAccuracy - critEvasion;
-//
-//                var rng = GameController.Instance.Random.NextDouble();
-//
-//                hasCrit = rng <= critChance;
-//                
-//                Debug.Log($"{source.Name} {(hasCrit ? "":"não")} critou {Name} com {skill.SkillName} -- Acc: {critAccuracy}, Eva: {critEvasion}, Rng: {rng}");
-//            }
-//            
-//            var skillInfo = new SkillInfo
-//            {
-//                HasCrit = hasCrit,
-//                Skill = skill,
-//                Source = source,
-//                Target = this
-//            };
-//
-//            var effects = hasCrit ? skill.CriticalEffects : skill.Effects;
-//            
-//            foreach (var effect in effects)
-//            {
-//                results.Add(
-//                    await ReceiveEffect(new EffectInfo
-//                    {
-//                        SkillInfo = skillInfo,
-//                        Effect = effect
-//                    }));
-//            }
-//            return results;
-//        }
-//        else
-//        {
-//            await BattleController.Instance.battleCanvas.ShowSkillResult(this, "Miss!", Color.white);
-//            return new EffectResult[] { };
-//            //retonar missresult depois(?)
-//        }
-//    }
-
-//    public async Task<EffectResult> ReceiveEffect(EffectInfo effectInfo)
-//    {
-//        EffectResult effectResult = null;
-//        
-//        await QueueActionAndAwait(() =>
-//        {
-//            effectResult = effectInfo.Effect.ExecuteEffect(effectInfo.SkillInfo);
-//        });
-//
-//        //Ver pra mostrar Miss! quando o golpe errar, mostrar vermelho quando crita
-//
-//        switch (effectResult)
-//        {
-//            case DamageEffect.DamageEffectResult damageEffectResult when !Fainted:
-//            {
-//                await ShowDamageAndFlash(damageEffectResult.DamageDealt, effectInfo.SkillInfo.HasCrit);
-//                break;
-//            }
-//            case DamageEffect.DamageEffectResult damageEffectResult:
-//            {
-//                Task damage = ShowDamage(damageEffectResult.DamageDealt, effectInfo.SkillInfo.HasCrit);
-//                Task fade = Fade();
-//                
-//                await Task.WhenAll(fade, damage);
-//                break;
-//            }
-//            case HealEffect.HealEffectResult healEffectResult:
-//            {
-//                await BattleController.Instance.battleCanvas.ShowSkillResult(this, healEffectResult.AmountHealed.ToString(),
-//                    Color.green);
-//                break;
-//            } 
-//            case MultiHitDamageEffect.MultiHitDamageEffectResult multiHitDamageEffectResult:
-//            {
-//                //Botar um pequeno delay entre cada hit do dano graficamente depois
-//                var tasks = new List<Task>();
-//
-//                var damage = multiHitDamageEffectResult.TotalDamageDealt;
-//
-//                if (damage == 0)
-//                {
-//                    //tasks.Add(ShowDamage(damage,effectInfo.SkillInfo.HasCrit));
-//                } else if (!Fainted)
-//                {
-//                    //tasks.Add(ShowDamageAndFlash(damage, effectInfo.SkillInfo.HasCrit));
-//                    tasks.Add(DamageFlash());
-//                }
-//                else
-//                {
-//                    //tasks.Add(ShowDamage(damage,effectInfo.SkillInfo.HasCrit));
-//                    tasks.Add(Fade());
-//                }
-//
-//                var damageString = string.Join("\n", multiHitDamageEffectResult.HitResults.Select(result => result.DamageDealt.ToString()));
-//                tasks.Add(BattleController.Instance.battleCanvas.ShowSkillResult(this, damageString, Color.white));
-//                
-//                await Task.WhenAll(tasks);
-//                break;
-//            }
-//        }
-//
-//        return effectResult;
-//    }
-
-//    public async Task AfterSkill(IEnumerable<EffectResult> result)
-//    {
-//        //Processar o que aconteceu quando usou a skill
-//    }
-
     #endregion
 
     #region Animations
@@ -524,7 +301,6 @@ public class MonsterBattler : Battler
     }
 
     #endregion
-   
-    
+
     public RectTransform RectTransform => transform as RectTransform;
 }

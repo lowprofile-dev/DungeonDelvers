@@ -312,6 +312,7 @@
             <e p="SkredUtils.cs" t="Include" />
           </e>
           <e p="Generation" t="Include">
+            <e p="MapTile.cs" t="Include" />
             <e p="Minimap.cs" t="Include" />
             <e p="TilemapManager.cs" t="Include" />
             <e p="TilesetMerger.cs" t="Include" />
@@ -412,12 +413,15 @@
               <e p="IPassiveEffectSource.cs" t="Include" />
               <e p="Passive.cs" t="Include" />
               <e p="PassiveEffects" t="Include">
+                <e p="BonusStatPassiveEffect.cs" t="Include" />
                 <e p="DefendPassiveEffect.cs" t="Include" />
                 <e p="DoTPassiveEffect.cs" t="Include" />
+                <e p="EnchantAttackPassiveEffect.cs" t="Include" />
                 <e p="PassiveEffect.cs" t="Include" />
                 <e p="RegenPassiveEffect.cs" t="Include" />
               </e>
               <e p="StatusEffect.cs" t="Include" />
+              <e p="StatusEffectInstance.cs" t="Include" />
             </e>
             <e p="PlayerSkill.cs" t="Include" />
             <e p="Skill.cs" t="Include" />

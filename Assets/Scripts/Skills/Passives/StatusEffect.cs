@@ -9,11 +9,9 @@ public class StatusEffect : SerializableAsset
 {
     public string StatusEffectName = "";
     [AssetIcon] public Sprite StatusEffectIcon;
-    public string GetName => StatusEffectName;
     public StatusEffectType Type = StatusEffectType.None;
     public bool Hidden = false;
     public List<PassiveEffect> Effects = new List<PassiveEffect>();
-    public List<PassiveEffect> GetEffects => Effects;
 
     public void Apply(SkillInfo skillInfo,int turnDuration)
     {

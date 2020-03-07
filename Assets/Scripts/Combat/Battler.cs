@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using UnityEngine;
 
@@ -11,19 +12,20 @@ public abstract class Battler : AsyncMonoBehaviour
 
     #region Fields
 
-    public virtual string BattlerName { get; private set; }
+    public virtual string BattlerName { get; protected set; }
     public virtual int Level { get; protected set; }
-    public virtual int CurrentHp { get; set; }
-    public virtual int CurrentEp { get; set; }
+    [FoldoutGroup("Stats")] public virtual int CurrentHp { get; set; }
+    [FoldoutGroup("Stats")] public virtual int CurrentEp { get; set; }
     public bool Fainted => CurrentHp == 0;
 
     #endregion
 
     #region Stats
 
-    public virtual Stats Stats { get; protected set; }
-    public virtual List<Passive> Passives { get; protected set; }
-    public virtual List<StatusEffectInstance> StatusEffectInstances { get; set; }
+    [FoldoutGroup("Stats")] public Stats Stats { get; protected set; }
+    [FoldoutGroup("Stats")] public Stats BaseStats { get; protected set; }
+    [TabGroup("Passives"), ShowInInspector, ReadOnly]public virtual List<Passive> Passives { get; protected set; }
+    [TabGroup("Status Effects")] public virtual List<StatusEffectInstance> StatusEffectInstances { get; set; }
     
     public virtual List<PassiveEffect> PassiveEffects =>
         Passives
@@ -74,7 +76,7 @@ public abstract class Battler : AsyncMonoBehaviour
             {
                 await turnStartPassive.Item2.OnTurnStart(new PassiveEffectInfo
                 {
-                    PassiveEffectSourceName = passive.GetName,
+                    PassiveEffectSourceName = passive.PassiveName,
                     Source = this,
                     Target = this
                 });
@@ -83,7 +85,7 @@ public abstract class Battler : AsyncMonoBehaviour
             {
                 await turnStartPassive.Item2.OnTurnStart(new PassiveEffectInfo
                 {
-                    PassiveEffectSourceName = statusEffectInstance.StatusEffect.GetName,
+                    PassiveEffectSourceName = statusEffectInstance.StatusEffect.StatusEffectName,
                     Source = statusEffectInstance.Source,
                     Target = statusEffectInstance.Target
                 });
@@ -223,6 +225,15 @@ public abstract class Battler : AsyncMonoBehaviour
     protected abstract Task AnimateEffectResult(EffectResult effectResult);
 
     #endregion
+
+    #region Functions
+
+    public void RecalculateStats()
+    {
+        
+    }
+
+    #endregion
 }
 
 #region PassiveInterfaces
@@ -230,6 +241,11 @@ public abstract class Battler : AsyncMonoBehaviour
 public interface ITurnStartPassiveEffect
 {
     Task OnTurnStart(PassiveEffectInfo passiveEffectInfo);
+}
+
+public interface IStatModifierPassiveEffect
+{
+    void AddBonuses(Battler battler, ref Stats bonuses);
 }
 
 #endregion

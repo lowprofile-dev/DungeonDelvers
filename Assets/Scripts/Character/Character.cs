@@ -6,7 +6,6 @@ using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using Unity.Collections;
 using UnityEngine;
-using UnityEngine.Assertions;
 using UnityEngine.Events;
 using Debug = UnityEngine.Debug;
 

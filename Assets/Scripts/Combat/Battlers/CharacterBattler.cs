@@ -71,7 +71,6 @@ public class CharacterBattler : Battler
     #region Stats
     public override int Level => PlayerController.Instance.PartyLevel;
     public override string BattlerName => Character.Base.CharacterName;
-    [FoldoutGroup("Stats")] public override Stats Stats { get; protected set; }
     [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] private int currentEp;
     public override int CurrentEp
     {
@@ -95,7 +94,6 @@ public class CharacterBattler : Battler
         }
     }
     [FoldoutGroup("Skills")] public List<PlayerSkill> Skills { get; private set; }
-    [FoldoutGroup("Passives"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public override List<Passive> Passives { get; protected set; } = new List<Passive>();
     [FoldoutGroup("Status Effects"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public override List<StatusEffectInstance> StatusEffectInstances
     {
         get;
