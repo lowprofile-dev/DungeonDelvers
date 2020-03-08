@@ -13,7 +13,7 @@ public class CharacterBase : SerializableAsset
     [PropertyOrder(-100)] public string CharacterName = "";
     [PropertyOrder(-98)] public GameObject CharacterPrefab = null;
     [PropertyOrder(-97)] public GameObject BattlerPrefab = null;
-    [PropertyOrder(-96)] public Dictionary<WeaponBase.WeaponType?, RuntimeAnimatorController> BattlerAnimationControllers;
+    [PropertyOrder(-96)] public List<BattlerAnimationController> BattlerAnimationControllers = new List<BattlerAnimationController>();
 
     [FoldoutGroup("Stats")] public Stats Bases;
     [FoldoutGroup("Stats")] public Stats Growths;
@@ -34,6 +34,12 @@ public class CharacterBase : SerializableAsset
 
     #endregion
 
+    public struct BattlerAnimationController
+    {
+        public WeaponBase.WeaponType? WeaponType;
+        public RuntimeAnimatorController AnimatorController;
+    }
+    
 #if UNITY_EDITOR
     [Button("Generate Generic Masteries")]
     public void _generateGenericMasteries()

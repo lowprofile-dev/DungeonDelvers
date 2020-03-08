@@ -15,21 +15,53 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 9100000, guid: 9c7c6cbaeb339ea4299a275fb82e4cdd, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: BattlerAnimationControllers
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[CharacterBase+BattlerAnimationController,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
+    - Name: WeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimatorController
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: Masteries
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Mastery, Assembly-CSharp]], mscorlib
+      Data: 1|System.Collections.Generic.List`1[[Mastery, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 30
     - Name: 
       Entry: 7
-      Data: 1|Mastery, Assembly-CSharp
+      Data: 2|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Hit Point Training I
@@ -41,7 +73,7 @@ MonoBehaviour:
       Data: 1
     - Name: Conditions
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 3|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -54,14 +86,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 4|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 5|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -118,7 +150,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 5|Mastery, Assembly-CSharp
+      Data: 6|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Hit Point Training II
@@ -130,17 +162,17 @@ MonoBehaviour:
       Data: 2
     - Name: Conditions
       Entry: 7
-      Data: 6|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 7|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 7|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 8|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 1
+      Data: 2
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -155,14 +187,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 8|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 9|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 9|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 10|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -219,7 +251,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 10|Mastery, Assembly-CSharp
+      Data: 11|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Hit Point Training III
@@ -231,17 +263,17 @@ MonoBehaviour:
       Data: 3
     - Name: Conditions
       Entry: 7
-      Data: 11|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 12|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 12|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 13|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 5
+      Data: 6
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -256,14 +288,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 13|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 14|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 14|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 15|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -320,7 +352,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 15|Mastery, Assembly-CSharp
+      Data: 16|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Hit Point Training IV
@@ -332,17 +364,17 @@ MonoBehaviour:
       Data: 4
     - Name: Conditions
       Entry: 7
-      Data: 16|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 17|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 17|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 18|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 10
+      Data: 11
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -357,14 +389,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 18|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 19|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 19|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 20|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -421,7 +453,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 20|Mastery, Assembly-CSharp
+      Data: 21|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Hit Point Training V
@@ -433,17 +465,17 @@ MonoBehaviour:
       Data: 5
     - Name: Conditions
       Entry: 7
-      Data: 21|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 22|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 22|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 23|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 15
+      Data: 16
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -458,14 +490,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 23|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 24|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 24|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 25|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -522,7 +554,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 25|Mastery, Assembly-CSharp
+      Data: 26|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Physical Attack Training I
@@ -534,7 +566,7 @@ MonoBehaviour:
       Data: 1
     - Name: Conditions
       Entry: 7
-      Data: 26|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 27|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -547,14 +579,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 27|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 28|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 28|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 29|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -611,7 +643,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 29|Mastery, Assembly-CSharp
+      Data: 30|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Physical Attack Training II
@@ -623,17 +655,17 @@ MonoBehaviour:
       Data: 2
     - Name: Conditions
       Entry: 7
-      Data: 30|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 31|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 31|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 32|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 25
+      Data: 26
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -648,14 +680,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 32|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 33|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 33|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 34|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -712,7 +744,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 34|Mastery, Assembly-CSharp
+      Data: 35|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Physical Attack Training III
@@ -724,17 +756,17 @@ MonoBehaviour:
       Data: 3
     - Name: Conditions
       Entry: 7
-      Data: 35|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 36|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 36|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 37|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 29
+      Data: 30
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -749,14 +781,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 37|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 38|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 38|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 39|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -813,7 +845,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 39|Mastery, Assembly-CSharp
+      Data: 40|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Physical Attack Training IV
@@ -825,17 +857,17 @@ MonoBehaviour:
       Data: 4
     - Name: Conditions
       Entry: 7
-      Data: 40|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 41|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 41|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 42|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 34
+      Data: 35
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -850,14 +882,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 42|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 43|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 43|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 44|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -914,7 +946,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 44|Mastery, Assembly-CSharp
+      Data: 45|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Physical Attack Training V
@@ -926,17 +958,17 @@ MonoBehaviour:
       Data: 5
     - Name: Conditions
       Entry: 7
-      Data: 45|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 46|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 46|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 47|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 39
+      Data: 40
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -951,14 +983,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 47|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 48|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 48|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 49|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -1015,7 +1047,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 49|Mastery, Assembly-CSharp
+      Data: 50|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Magical Attack Training I
@@ -1027,7 +1059,7 @@ MonoBehaviour:
       Data: 1
     - Name: Conditions
       Entry: 7
-      Data: 50|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 51|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -1040,14 +1072,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 51|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 52|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 52|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 53|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -1104,7 +1136,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 53|Mastery, Assembly-CSharp
+      Data: 54|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Magical Attack Training II
@@ -1116,17 +1148,17 @@ MonoBehaviour:
       Data: 2
     - Name: Conditions
       Entry: 7
-      Data: 54|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 55|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 55|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 56|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 49
+      Data: 50
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -1141,14 +1173,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 56|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 57|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 57|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 58|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -1205,7 +1237,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 58|Mastery, Assembly-CSharp
+      Data: 59|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Magical Attack Training III
@@ -1217,17 +1249,17 @@ MonoBehaviour:
       Data: 3
     - Name: Conditions
       Entry: 7
-      Data: 59|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 60|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 60|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 61|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 53
+      Data: 54
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -1242,14 +1274,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 61|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 62|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 62|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 63|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -1306,7 +1338,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 63|Mastery, Assembly-CSharp
+      Data: 64|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Magical Attack Training IV
@@ -1318,17 +1350,17 @@ MonoBehaviour:
       Data: 4
     - Name: Conditions
       Entry: 7
-      Data: 64|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 65|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 65|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 66|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 58
+      Data: 59
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -1343,14 +1375,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 66|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 67|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 67|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 68|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -1407,7 +1439,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 68|Mastery, Assembly-CSharp
+      Data: 69|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Magical Attack Training V
@@ -1419,17 +1451,17 @@ MonoBehaviour:
       Data: 5
     - Name: Conditions
       Entry: 7
-      Data: 69|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 70|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 70|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 71|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 63
+      Data: 64
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -1444,14 +1476,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 71|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 72|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 72|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 73|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -1508,7 +1540,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 73|Mastery, Assembly-CSharp
+      Data: 74|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Physical Defense Training I
@@ -1520,7 +1552,7 @@ MonoBehaviour:
       Data: 1
     - Name: Conditions
       Entry: 7
-      Data: 74|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 75|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -1533,14 +1565,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 75|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 76|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 76|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 77|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -1597,7 +1629,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 77|Mastery, Assembly-CSharp
+      Data: 78|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Physical Defense Training II
@@ -1609,17 +1641,17 @@ MonoBehaviour:
       Data: 2
     - Name: Conditions
       Entry: 7
-      Data: 78|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 79|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 79|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 80|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 73
+      Data: 74
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -1634,14 +1666,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 80|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 81|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 81|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 82|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -1698,7 +1730,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 82|Mastery, Assembly-CSharp
+      Data: 83|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Physical Defense Training III
@@ -1710,17 +1742,17 @@ MonoBehaviour:
       Data: 3
     - Name: Conditions
       Entry: 7
-      Data: 83|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 84|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 84|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 85|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 77
+      Data: 78
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -1735,14 +1767,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 85|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 86|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 86|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 87|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -1799,7 +1831,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 87|Mastery, Assembly-CSharp
+      Data: 88|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Physical Defense Training IV
@@ -1811,17 +1843,17 @@ MonoBehaviour:
       Data: 4
     - Name: Conditions
       Entry: 7
-      Data: 88|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 89|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 89|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 90|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 82
+      Data: 83
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -1836,14 +1868,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 90|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 91|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 91|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 92|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -1900,7 +1932,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 92|Mastery, Assembly-CSharp
+      Data: 93|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Physical Defense Training V
@@ -1912,17 +1944,17 @@ MonoBehaviour:
       Data: 5
     - Name: Conditions
       Entry: 7
-      Data: 93|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 94|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 94|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 95|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 87
+      Data: 88
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -1937,14 +1969,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 95|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 96|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 96|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 97|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -2001,7 +2033,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 97|Mastery, Assembly-CSharp
+      Data: 98|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Magical Defense Training I
@@ -2013,7 +2045,7 @@ MonoBehaviour:
       Data: 1
     - Name: Conditions
       Entry: 7
-      Data: 98|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 99|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -2026,14 +2058,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 99|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 100|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 100|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 101|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -2090,7 +2122,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 101|Mastery, Assembly-CSharp
+      Data: 102|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Magical Defense Training II
@@ -2102,17 +2134,17 @@ MonoBehaviour:
       Data: 2
     - Name: Conditions
       Entry: 7
-      Data: 102|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 103|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 103|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 104|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 97
+      Data: 98
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -2127,14 +2159,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 104|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 105|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 105|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 106|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -2191,7 +2223,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 106|Mastery, Assembly-CSharp
+      Data: 107|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Magical Defense Training III
@@ -2203,17 +2235,17 @@ MonoBehaviour:
       Data: 3
     - Name: Conditions
       Entry: 7
-      Data: 107|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 108|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 108|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 109|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 101
+      Data: 102
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -2228,14 +2260,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 109|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 110|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 110|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 111|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -2292,7 +2324,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 111|Mastery, Assembly-CSharp
+      Data: 112|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Magical Defense Training IV
@@ -2304,17 +2336,17 @@ MonoBehaviour:
       Data: 4
     - Name: Conditions
       Entry: 7
-      Data: 112|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 113|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 113|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 114|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 106
+      Data: 107
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -2329,14 +2361,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 114|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 115|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 115|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 116|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -2393,7 +2425,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 116|Mastery, Assembly-CSharp
+      Data: 117|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Magical Defense Training V
@@ -2405,17 +2437,17 @@ MonoBehaviour:
       Data: 5
     - Name: Conditions
       Entry: 7
-      Data: 117|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 118|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 118|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 119|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 111
+      Data: 112
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -2430,14 +2462,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 119|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 120|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 120|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 121|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -2494,7 +2526,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 121|Mastery, Assembly-CSharp
+      Data: 122|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Speed Training I
@@ -2506,7 +2538,7 @@ MonoBehaviour:
       Data: 1
     - Name: Conditions
       Entry: 7
-      Data: 122|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 123|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -2519,14 +2551,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 123|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 124|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 124|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 125|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -2583,7 +2615,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 125|Mastery, Assembly-CSharp
+      Data: 126|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Speed Training II
@@ -2595,17 +2627,17 @@ MonoBehaviour:
       Data: 2
     - Name: Conditions
       Entry: 7
-      Data: 126|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 127|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 127|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 128|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 121
+      Data: 122
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -2620,14 +2652,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 128|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 129|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 129|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 130|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -2684,7 +2716,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 130|Mastery, Assembly-CSharp
+      Data: 131|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Speed Training III
@@ -2696,17 +2728,17 @@ MonoBehaviour:
       Data: 3
     - Name: Conditions
       Entry: 7
-      Data: 131|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 132|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 132|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 133|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 125
+      Data: 126
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -2721,14 +2753,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 133|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 134|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 134|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 135|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -2785,7 +2817,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 135|Mastery, Assembly-CSharp
+      Data: 136|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Speed Training IV
@@ -2797,17 +2829,17 @@ MonoBehaviour:
       Data: 4
     - Name: Conditions
       Entry: 7
-      Data: 136|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 137|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 137|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 138|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 130
+      Data: 131
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -2822,14 +2854,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 138|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 139|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 139|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 140|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -2886,7 +2918,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 140|Mastery, Assembly-CSharp
+      Data: 141|Mastery, Assembly-CSharp
     - Name: MasteryName
       Entry: 1
       Data: Speed Training V
@@ -2898,17 +2930,17 @@ MonoBehaviour:
       Data: 5
     - Name: Conditions
       Entry: 7
-      Data: 141|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
+      Data: 142|System.Collections.Generic.List`1[[MasteryCondition, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 142|HasMasteryMasteryCondition, Assembly-CSharp
+      Data: 143|HasMasteryMasteryCondition, Assembly-CSharp
     - Name: Mastery
       Entry: 9
-      Data: 135
+      Data: 136
     - Name: RequiredLevel
       Entry: 3
       Data: 10
@@ -2923,14 +2955,14 @@ MonoBehaviour:
       Data: 
     - Name: Effects
       Entry: 7
-      Data: 143|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+      Data: 144|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 144|BaseStatMasteryEffect, Assembly-CSharp
+      Data: 145|BaseStatMasteryEffect, Assembly-CSharp
     - Name: Stats
       Entry: 7
       Data: Stats, Assembly-CSharp
@@ -2994,7 +3026,6 @@ MonoBehaviour:
   uniqueIdentifier: 1
   databaseIgnore: 0
   CharacterName: Fighter
-  CharacterFace: {fileID: 0}
   CharacterPrefab: {fileID: 4926351740937089460, guid: 6b1c03872d39085498683e1163d118fa,
     type: 3}
   BattlerPrefab: {fileID: 7439843032942050208, guid: 4738f22a4a418c541a2166d1569d93b2,

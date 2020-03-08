@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 using CharacterBattlerAnimation = CharacterBattler.CharacterBattlerAnimation;
@@ -15,14 +16,19 @@ public class CharacterBattlerAnimator : MonoBehaviour
     {
         Animator = GetComponent<Animator>();
         CharacterBattler = GetComponent<CharacterBattler>();
+
+        var weaponType = (CharacterBattler.Character.Weapon?.EquippableBase as WeaponBase)?.weaponType;
+        var battlerAnimator =
+            CharacterBattler.Character.Base.BattlerAnimationControllers.First(controller =>
+                controller.WeaponType == weaponType);
+
+        Animator.runtimeAnimatorController = battlerAnimator.AnimatorController;
     }
 
     public IEnumerator PlayAndWait(CharacterBattlerAnimation characterBattlerAnimation)
     {
         var state = GetStateNameFromAnimation(characterBattlerAnimation);
-        
-        Debug.Log($"Playing {state}.");
-        
+
         Animator.Play(state);
         
         yield return new WaitForEndOfFrame();
@@ -32,8 +38,6 @@ public class CharacterBattlerAnimator : MonoBehaviour
     public async Task AsyncPlayAndWait(CharacterBattlerAnimation characterBattlerAnimation)
     {
         var state = GetStateNameFromAnimation(characterBattlerAnimation);
-        
-        Debug.Log($"Playing {state}.");
 
         await CharacterBattler.QueueActionAndAwait(() =>
         {
@@ -61,8 +65,6 @@ public class CharacterBattlerAnimator : MonoBehaviour
     {
         var state = GetStateNameFromAnimation(characterBattlerAnimation);
 
-        Debug.Log($"Playing {state}.");
-        
         if (lockTransition)
         {
             Animator.SetBool("CanTransition", false);
