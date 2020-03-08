@@ -293,6 +293,24 @@ public class PlayerController : AsyncMonoBehaviour
 
     #region InventoryFunctions
 
+    public void ValidateInventory()
+    {
+        var invalidStackables = Inventory.Where(item =>
+        {
+            if (item is IStackable stackable)
+            {
+                return stackable.Quantity <= 0;
+            }
+
+            return false;
+        });
+
+        foreach (var invalidStackable in invalidStackables)
+        {
+            Inventory.Remove(invalidStackable);
+        }
+    }
+    
     public void AddItemToInventory(Item item)
     {
         if (item is IStackable stackable)

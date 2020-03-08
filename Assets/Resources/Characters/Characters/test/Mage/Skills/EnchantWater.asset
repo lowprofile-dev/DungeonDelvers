@@ -27,10 +27,28 @@ MonoBehaviour:
       Data: 0|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 1|ApplyStatusEffectEffect, Assembly-CSharp
+      Data: 1|DispelStatusEffectTypeEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: DispelType
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|ApplyStatusEffectEffect, Assembly-CSharp
     - Name: ElementOverride
       Entry: 7
       Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
@@ -57,7 +75,7 @@ MonoBehaviour:
       Data: 
     - Name: CriticalEffects
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+      Data: 3|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -79,7 +97,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
+  uniqueIdentifier: 6
   databaseIgnore: 0
   SkillName: Enchant (Water)
   SkillIcon: {fileID: -2396315254400908331, guid: cc992c58d47d97548895862c5e45375c,

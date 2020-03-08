@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2506904389010253804}
   - component: {fileID: 2506904389010253805}
   - component: {fileID: 1870484597730738}
-  - component: {fileID: 4591051286854955703}
   - component: {fileID: -2075033788339862833}
+  - component: {fileID: 7628024813364207631}
   m_Layer: 5
   m_Name: WarriorBattler
   m_TagString: Untagged
@@ -96,18 +96,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4591051286854955703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2506904389010253803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7763ae8735c06f4596b38d013094318, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-2075033788339862833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,5 +116,20 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  animator: {fileID: 1870484597730738}
+    SerializationNodes:
+    - Name: Character
+      Entry: 6
+      Data: 
+  Animator: {fileID: 7628024813364207631}
+--- !u!114 &7628024813364207631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506904389010253803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec6d779f01d4c54abf0243cefbdb0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

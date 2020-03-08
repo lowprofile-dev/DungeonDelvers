@@ -11,9 +11,9 @@ public class CharacterBase : SerializableAsset
     #region Data
 
     [PropertyOrder(-100)] public string CharacterName = "";
-    [PropertyOrder(-99)] public Sprite CharacterFace = null;
     [PropertyOrder(-98)] public GameObject CharacterPrefab = null;
     [PropertyOrder(-97)] public GameObject BattlerPrefab = null;
+    [PropertyOrder(-96)] public Dictionary<WeaponBase.WeaponType?, RuntimeAnimatorController> BattlerAnimationControllers;
 
     [FoldoutGroup("Stats")] public Stats Bases;
     [FoldoutGroup("Stats")] public Stats Growths;

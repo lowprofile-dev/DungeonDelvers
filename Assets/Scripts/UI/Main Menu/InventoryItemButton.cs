@@ -7,14 +7,14 @@ using UnityEngine.UI;
 public class InventoryItemButton : SerializedMonoBehaviour
 {
     [ReadOnly] public InventoryMenu InventoryMenu;
-    [ReadOnly] public Item item;
+    [ReadOnly] public Item Item;
     public Image itemImage;
     public Text itemName;
 
     public void Setup(InventoryMenu inventoryMenu, Item item)
     {
         InventoryMenu = inventoryMenu;
-        this.item = item;
+        Item = item;
         itemImage.sprite = item.Base.itemIcon;
         itemName.text = item.Base.itemName;
 

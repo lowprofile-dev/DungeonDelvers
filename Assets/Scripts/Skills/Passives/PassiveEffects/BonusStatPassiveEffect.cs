@@ -5,10 +5,10 @@
     
     public void AddBonuses(Battler battler, ref Stats bonuses)
     {
-        if (IsMultiplier)
-        {
-            var bases = battler.BaseStats;
-            
-        }
+        // if (IsMultiplier)
+        // {
+        //     var bases = battler.BaseStats;
+        //     
+        // }
     }
 }

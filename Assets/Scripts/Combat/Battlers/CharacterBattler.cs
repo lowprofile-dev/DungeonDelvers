@@ -18,22 +18,26 @@ using Random = System.Random;
 
 public class CharacterBattler : Battler
 {
-    public Animator animator;
+    public CharacterBattlerAnimator Animator;
     public Character Character;
     private Image image;
 
     #region Control
+
     public Dictionary<object, object> BattleDictionary { get; private set; }
-    
-    private void Start()
+
+    private void Awake()
     {
         image = GetComponent<Image>();
+        Animator = GetComponent<CharacterBattlerAnimator>();
     }
 
     public void Create(Character character)
     {
         BattleDictionary = new Dictionary<object, object>();
         Character = character;
+        BattlerName = Character.Base.CharacterName;
+        Level = PlayerController.Instance.PartyLevel;
         Stats = character.Stats;
         CurrentHp = character.CurrentHp;
         CurrentEp = Stats.InitialEp;
@@ -41,7 +45,7 @@ public class CharacterBattler : Battler
         Passives = character.Passives;
         StatusEffectInstances = new List<StatusEffectInstance>();
     }
-    
+
     public void CommitChanges()
     {
         Character.CurrentHp = currentHp;
@@ -66,12 +70,14 @@ public class CharacterBattler : Battler
             BattleDictionary["HighestHP"] = CurrentHp;
         }
     }
+
     #endregion
-    
+
     #region Stats
-    public override int Level => PlayerController.Instance.PartyLevel;
-    public override string BattlerName => Character.Base.CharacterName;
-    [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] private int currentEp;
+
+    [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly]
+    private int currentEp;
+
     public override int CurrentEp
     {
         get => currentEp;
@@ -81,7 +87,10 @@ public class CharacterBattler : Battler
             currentEp = Mathf.Clamp(currentEp, 0, 100);
         }
     }
-    [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] private int currentHp;
+
+    [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly]
+    private int currentHp;
+
     public override int CurrentHp
     {
         get => currentHp;
@@ -93,68 +102,28 @@ public class CharacterBattler : Battler
             SetHighestHp();
         }
     }
+
     [FoldoutGroup("Skills")] public List<PlayerSkill> Skills { get; private set; }
-    [FoldoutGroup("Status Effects"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public override List<StatusEffectInstance> StatusEffectInstances
-    {
-        get;
-        set;
-    }
+
+    [FoldoutGroup("Status Effects"), ShowInInspector, Sirenix.OdinInspector.ReadOnly]
+    public override List<StatusEffectInstance> StatusEffectInstances { get; set; }
+
     #endregion
 
     #region Animation
 
-    public IEnumerator PlayAndWait(CharacterBattlerAnimation animation)
-    {
-        animator.Play(animation.ToString());
+    public IEnumerator PlayAndWait(CharacterBattlerAnimation characterBattlerAnimation) =>
+        Animator.PlayAndWait(characterBattlerAnimation);
 
-        yield return new WaitForEndOfFrame();
-        yield return new WaitWhile(() => animator.GetCurrentAnimatorStateInfo(0).IsName(animation.ToString()));
-    }
+    public Task AsyncPlayAndWait(CharacterBattlerAnimation animation) =>
+        Animator.AsyncPlayAndWait(animation);
 
-    public async Task AsyncPlayAndWait(CharacterBattlerAnimation animation)
-    {
-        await QueueActionAndAwait(() =>
-        {
-            Play(animation);
-        });
-        
-        await Task.Delay(5);
+    public void Play(CharacterBattlerAnimation animation, bool lockTransition = false) =>
+        Animator.Play(animation, lockTransition);
 
-        bool? condition = null;
+    public void UpdateAnimator() => Animator.UpdateAnimator();
 
-        Action evaluateCondition = () =>
-        {
-            condition = animator.GetCurrentAnimatorStateInfo(0).IsName(animation.ToString());
-        };
-
-        await QueueActionAndAwait(evaluateCondition);
-        
-        while (condition.HasValue && condition.Value == true)
-        {
-            await QueueActionAndAwait(evaluateCondition);
-        }
-    }
-
-    public void Play(CharacterBattlerAnimation animation, bool lockTransition = false)
-    {
-        if (lockTransition)
-        {
-            animator.SetBool("CanTransition",false);
-        }
-        animator.Play(animation.ToString());
-    }
-
-    public void UpdateAnimator()
-    {
-        animator.SetBool("HasWeapon", Character.Weapon != null);
-        animator.SetBool("Fainted", Fainted);
-    }
-
-    public bool CanTransition
-    {
-        get => animator.GetBool("CanTransition");
-        set => animator.SetBool("CanTransition", value);
-    }
+    public bool CanTransition => Animator.CanTransition;
 
     public enum CharacterBattlerAnimation
     {

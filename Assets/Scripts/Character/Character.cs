@@ -111,8 +111,6 @@ public class Character
     [FoldoutGroup("Equips")] public Equippable Feet;
     [FoldoutGroup("Equips")] public Equippable Accessory;
 
-    //[FoldoutGroup("Passives")] public List<StatPassive> StatPassives;
-
     [ShowInInspector] public List<PlayerSkill> Skills { get; private set; }
 
     [ShowInInspector] public MasteryGroup MasteryGroup { get; private set; }
@@ -220,7 +218,7 @@ public class Character
 
         var slot = equippable.EquippableBase.Slot;
 
-        if (!CanBeEquipped(equippable.EquippableBase))
+        if (!CanEquip(equippable.EquippableBase))
         {
             Debug.LogError($"{Base.CharacterName} não pode equipar {equippable.EquippableBase.itemName}");
             return;
@@ -229,7 +227,7 @@ public class Character
         switch (slot)
         {
             case EquippableBase.EquippableSlot.Accessory:
-            {
+                {
                 var old = Unequip(EquippableBase.EquippableSlot.Accessory);
                 Accessory = equippable;
                 OnEquip.Invoke(Accessory);
@@ -270,6 +268,8 @@ public class Character
                     OnEquip.Invoke(Weapon);
                     break;
                 }
+            default:
+                throw new ArgumentOutOfRangeException();
         }
 
         PlayerController.Instance.Inventory.Remove(equippable);
@@ -315,12 +315,13 @@ public class Character
         {
             PlayerController.Instance.Inventory.Add(old);
             OnUnequip.Invoke(old);
+            Regenerate();
         }
         
         return old;
     }
     
-    private bool CanBeEquipped(EquippableBase equippable)
+    public bool CanEquip(EquippableBase equippable)
     {
         if (equippable is WeaponBase weaponBase)
         {
@@ -333,6 +334,8 @@ public class Character
         else
             return true;
     }
+
+    public bool CanEquip(Equippable equippable) => CanEquip(equippable.EquippableBase);
 
     #endregion
 

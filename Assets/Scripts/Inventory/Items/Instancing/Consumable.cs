@@ -36,7 +36,7 @@ public class Consumable : Item, IStackable
 
     public Consumable(ConsumableBase consumableBase) : base(consumableBase)
     {
-        
+        Quantity = 1;
     }
 
     public Consumable(ConsumableSave consumableSave) : base(consumableSave)

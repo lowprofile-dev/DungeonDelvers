@@ -14,8 +14,8 @@ public abstract class Battler : AsyncMonoBehaviour
 
     public virtual string BattlerName { get; protected set; }
     public virtual int Level { get; protected set; }
-    [FoldoutGroup("Stats")] public virtual int CurrentHp { get; set; }
-    [FoldoutGroup("Stats")] public virtual int CurrentEp { get; set; }
+    [FoldoutGroup("Stats")] public abstract int CurrentHp { get; set; }
+    [FoldoutGroup("Stats")] public abstract int CurrentEp { get; set; }
     public bool Fainted => CurrentHp == 0;
 
     #endregion
@@ -23,7 +23,6 @@ public abstract class Battler : AsyncMonoBehaviour
     #region Stats
 
     [FoldoutGroup("Stats")] public Stats Stats { get; protected set; }
-    [FoldoutGroup("Stats")] public Stats BaseStats { get; protected set; }
     [TabGroup("Passives"), ShowInInspector, ReadOnly]public virtual List<Passive> Passives { get; protected set; }
     [TabGroup("Status Effects")] public virtual List<StatusEffectInstance> StatusEffectInstances { get; set; }
     
@@ -52,7 +51,7 @@ public abstract class Battler : AsyncMonoBehaviour
             .ToArray();
 
         expiredStatusEffects
-            .ForEach(expired => StatusEffectInstances.Remove(expired));
+            .ForEach(RemoveStatusEffect);
 
         var effectsFromPassives = Passives
             .SelectMany(passive => passive.Effects
@@ -147,7 +146,7 @@ public abstract class Battler : AsyncMonoBehaviour
 
             hasHit = rng <= hitChance;
             
-            Debug.Log($"{source.BattleDictionary} {(hasHit ? "acertou":"errou")} {BattlerName} com {skill.SkillName} -- Acc: {accuracy}, Eva: {evasion}, Rng: {rng:F3}");
+            Debug.Log($"{source.BattlerName} {(hasHit ? "acertou":"errou")} {BattlerName} com {skill.SkillName} -- Acc: {accuracy}, Eva: {evasion}, Rng: {rng:F3}");
         }
         if (hasHit)
         {
@@ -228,9 +227,22 @@ public abstract class Battler : AsyncMonoBehaviour
 
     #region Functions
 
-    public void RecalculateStats()
+    public void ApplyStatusEffect(StatusEffectInstance statusEffectInstance)
     {
-        
+        StatusEffectInstances.Add(statusEffectInstance);
+        if (statusEffectInstance is IOnApplyPassiveEffect onApplyPassiveEffect)
+        {
+            onApplyPassiveEffect.OnApply(this);
+        }
+    }
+
+    public void RemoveStatusEffect(StatusEffectInstance statusEffectInstance)
+    {
+        var removed = StatusEffectInstances.Remove(statusEffectInstance);
+        if (removed && statusEffectInstance is IOnApplyPassiveEffect onApplyPassiveEffect)
+        {
+            onApplyPassiveEffect.OnUnapply(this);
+        }
     }
 
     #endregion
@@ -246,6 +258,12 @@ public interface ITurnStartPassiveEffect
 public interface IStatModifierPassiveEffect
 {
     void AddBonuses(Battler battler, ref Stats bonuses);
+}
+
+public interface IOnApplyPassiveEffect
+{
+    void OnApply(Battler battler);
+    void OnUnapply(Battler battler);
 }
 
 #endregion

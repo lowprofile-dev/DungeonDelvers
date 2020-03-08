@@ -2995,7 +2995,7 @@ MonoBehaviour:
   databaseIgnore: 0
   CharacterName: Mage
   CharacterFace: {fileID: 0}
-  CharacterPrefab: {fileID: 8521580809372860284, guid: 1736b34fe64ca480bb1a5a1e1dc5f947,
+  CharacterPrefab: {fileID: 8521580809372860284, guid: c227d6ea46ca1b142b7a5c5c62e5bb73,
     type: 3}
   BattlerPrefab: {fileID: 6494535058643958303, guid: dba77baa08951014b8b945b6c8690f93,
     type: 3}
@@ -3025,7 +3025,7 @@ MonoBehaviour:
     Evasion: 0
     CritChance: 0.05
     CritAvoid: 0
-  WeaponTypes: 05000000
+  WeaponTypes: 0500000000000000
   ArmorTypes: 
   Weapon: {fileID: 11400000, guid: b3952e5b9c86d8d4b9ead719951f2437, type: 2}
   Head: {fileID: 0}

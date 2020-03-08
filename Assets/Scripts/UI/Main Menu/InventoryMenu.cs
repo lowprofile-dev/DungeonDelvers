@@ -15,6 +15,7 @@ public class InventoryMenu : MonoBehaviour
 
     public void OpenInventory()
     {
+        PlayerController.Instance.ValidateInventory();
         gameObject.SetActive(true);
         SetupItems(PlayerController.Instance.Inventory);
         InventoryItemInspector.Inspect(null);

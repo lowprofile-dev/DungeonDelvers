@@ -377,7 +377,7 @@ PrefabInstance:
     - target: {fileID: 5979865846293740295, guid: 65b8c4be0229f85449220730dd139bde,
         type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
-      value: '"path":"Transition","value":null'
+      value: '"path":"TransitionSource","value":null'
       objectReference: {fileID: 0}
     - target: {fileID: 8197452036133343253, guid: 65b8c4be0229f85449220730dd139bde,
         type: 3}

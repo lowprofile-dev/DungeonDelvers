@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6494535058643958370}
   - component: {fileID: 6494535058643958301}
   - component: {fileID: -7204785754322097117}
+  - component: {fileID: -9218180456604280887}
   m_Layer: 5
   m_Name: MageBattler
   m_TagString: Untagged
@@ -65,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5713787004579456998, guid: a4118a02b85288a0a8fe6d2bd0cb42fd,
+  m_Sprite: {fileID: -6547040153931818471, guid: 88270df935063c247a6ee6aa183cb983,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -115,5 +116,20 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  animator: {fileID: 6494535058643958301}
+    SerializationNodes:
+    - Name: Character
+      Entry: 6
+      Data: 
+  Animator: {fileID: -9218180456604280887}
+--- !u!114 &-9218180456604280887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6494535058643958303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec6d779f01d4c54abf0243cefbdb0ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

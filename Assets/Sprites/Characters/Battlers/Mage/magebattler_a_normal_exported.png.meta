@@ -1,0 +1,1399 @@
+fileFormatVersion: 2
+guid: 88270df935063c247a6ee6aa183cb983
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6547040153931818471
+    second: magebattler_a_normal_exported_0
+  - first:
+      213: 5031846498383765336
+    second: magebattler_a_normal_exported_1
+  - first:
+      213: 3533030993017719329
+    second: magebattler_a_normal_exported_2
+  - first:
+      213: -3082608600078950019
+    second: magebattler_a_normal_exported_3
+  - first:
+      213: -6582508600947477104
+    second: magebattler_a_normal_exported_4
+  - first:
+      213: -1180683055727927861
+    second: magebattler_a_normal_exported_5
+  - first:
+      213: 1310088143698043236
+    second: magebattler_a_normal_exported_6
+  - first:
+      213: -1839011134387468258
+    second: magebattler_a_normal_exported_7
+  - first:
+      213: -7196137892131138604
+    second: magebattler_a_normal_exported_8
+  - first:
+      213: -5245049015656700429
+    second: magebattler_a_normal_exported_9
+  - first:
+      213: -68174825340665540
+    second: magebattler_a_normal_exported_10
+  - first:
+      213: 6046641152806644560
+    second: magebattler_a_normal_exported_11
+  - first:
+      213: 3330440171149502361
+    second: magebattler_a_normal_exported_12
+  - first:
+      213: 1109602983886894375
+    second: magebattler_a_normal_exported_13
+  - first:
+      213: 6977835216803342657
+    second: magebattler_a_normal_exported_14
+  - first:
+      213: -354137564958488179
+    second: magebattler_a_normal_exported_15
+  - first:
+      213: -5926517044094446877
+    second: magebattler_a_normal_exported_16
+  - first:
+      213: -1495808646835765028
+    second: magebattler_a_normal_exported_17
+  - first:
+      213: -2756373759338077559
+    second: magebattler_a_normal_exported_18
+  - first:
+      213: 6084421364651319974
+    second: magebattler_a_normal_exported_19
+  - first:
+      213: -3010546221445953866
+    second: magebattler_a_normal_exported_20
+  - first:
+      213: -6259298126762488109
+    second: magebattler_a_normal_exported_21
+  - first:
+      213: -5695618501638185085
+    second: magebattler_a_normal_exported_22
+  - first:
+      213: -1433707754183643839
+    second: magebattler_a_normal_exported_23
+  - first:
+      213: 8994602709209515629
+    second: magebattler_a_normal_exported_24
+  - first:
+      213: 7602072881971333339
+    second: magebattler_a_normal_exported_25
+  - first:
+      213: 6707688594417097567
+    second: magebattler_a_normal_exported_26
+  - first:
+      213: -7526017114515435815
+    second: magebattler_a_normal_exported_27
+  - first:
+      213: -3419497623538327052
+    second: magebattler_a_normal_exported_28
+  - first:
+      213: 3146708068613644033
+    second: magebattler_a_normal_exported_29
+  - first:
+      213: 1121283549767959832
+    second: magebattler_a_normal_exported_30
+  - first:
+      213: -1716613322418457220
+    second: magebattler_a_normal_exported_31
+  - first:
+      213: 7379401220960163780
+    second: magebattler_a_normal_exported_32
+  - first:
+      213: -2919496769467790910
+    second: magebattler_a_normal_exported_33
+  - first:
+      213: 4718889776371880910
+    second: magebattler_a_normal_exported_34
+  - first:
+      213: -6506981636418611486
+    second: magebattler_a_normal_exported_35
+  - first:
+      213: -1899016316816713723
+    second: magebattler_a_normal_exported_36
+  - first:
+      213: -4723250349465226531
+    second: magebattler_a_normal_exported_37
+  - first:
+      213: -2016664311978704065
+    second: magebattler_a_normal_exported_38
+  - first:
+      213: 2260804171306070399
+    second: magebattler_a_normal_exported_39
+  - first:
+      213: -4690540246800625133
+    second: magebattler_a_normal_exported_40
+  - first:
+      213: -5424217580282129086
+    second: magebattler_a_normal_exported_41
+  - first:
+      213: -1042587973325589593
+    second: magebattler_a_normal_exported_42
+  - first:
+      213: 5505181567787283044
+    second: magebattler_a_normal_exported_43
+  - first:
+      213: 1805129045972049829
+    second: magebattler_a_normal_exported_44
+  - first:
+      213: 2768560123637363823
+    second: magebattler_a_normal_exported_45
+  - first:
+      213: -5074985816311484981
+    second: magebattler_a_normal_exported_46
+  - first:
+      213: 1967839649660827404
+    second: magebattler_a_normal_exported_47
+  - first:
+      213: -8035611993408460189
+    second: magebattler_a_normal_exported_48
+  - first:
+      213: -1945952136827158742
+    second: magebattler_a_normal_exported_49
+  - first:
+      213: -2506130412574334667
+    second: magebattler_a_normal_exported_50
+  - first:
+      213: 1106118436347550736
+    second: magebattler_a_normal_exported_51
+  - first:
+      213: 349992159660417254
+    second: magebattler_a_normal_exported_52
+  - first:
+      213: -7290550442313995416
+    second: magebattler_a_normal_exported_53
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 960
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91bcb06d617614548b52e598ae3abf4e
+      internalID: -6547040153931818471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_1
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 960
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9265a63febdbba74eb430e2b88e87832
+      internalID: 5031846498383765336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_2
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 960
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa697343cdde4a4fb97cd10a20e827e
+      internalID: 3533030993017719329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 960
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 370e01bfdf656d849af45511b9aa5f08
+      internalID: -3082608600078950019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_4
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 960
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 227a177a5c386274d99dea5468d34bc5
+      internalID: -6582508600947477104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_5
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 960
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f80de8cab1fb4244a8d41c3b9e0a063
+      internalID: -1180683055727927861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_6
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 960
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c50f39fef75ed4dbc82d18b7ac06db
+      internalID: 1310088143698043236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_7
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 960
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950a81096c9bc5143996888ffe170626
+      internalID: -1839011134387468258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_8
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 960
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 882ab098c1d581a4796a12adc21b6260
+      internalID: -7196137892131138604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_9
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 768
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ef17da7ea1b684b8bc5cd6b287a10a
+      internalID: -5245049015656700429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_10
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 768
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97cc647a47ee3f14da9e141d5fed0e5f
+      internalID: -68174825340665540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_11
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 768
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8e95350d42b5a428d50d90dc9b683d
+      internalID: 6046641152806644560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_12
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 768
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99a599693ec652499739dd22e500fff
+      internalID: 3330440171149502361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_13
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 768
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599f19b2400bd24408e0266542ac0d30
+      internalID: 1109602983886894375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_14
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 768
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ba865180cd030429b8ce2710f7f146
+      internalID: 6977835216803342657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_15
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 768
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea7cc10080fec946b0f951ef36c2c48
+      internalID: -354137564958488179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_16
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 768
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f75aac8c3a580459e5a4b16642f14b
+      internalID: -5926517044094446877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_17
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 768
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5531cf7fb8fcae549a1dd77d1ce52117
+      internalID: -1495808646835765028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_18
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4437e728ebca8347b10128fec2f0986
+      internalID: -2756373759338077559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_19
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2632d7465030446b5f9a71f9af0105
+      internalID: 6084421364651319974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_20
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9417bc02da2ec6241a5012cc831de321
+      internalID: -3010546221445953866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_21
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519c646458292e6469bb0a1549e56bd9
+      internalID: -6259298126762488109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_22
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c34504f3ab65d40b95c34a924849e1
+      internalID: -5695618501638185085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_23
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b84ca38b1da150418bffae9259fa8cc
+      internalID: -1433707754183643839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_24
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607a8847262384a4580c07a0e1fc523f
+      internalID: 8994602709209515629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_25
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e31ca1d06e4f7498b25f9de32d939b
+      internalID: 7602072881971333339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_26
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 576
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37d56bee3e58634f90993ed757586bb
+      internalID: 6707688594417097567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_27
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 384
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0647f714846e546a3d45a637e4cc05
+      internalID: -7526017114515435815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_28
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 384
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2f1c761da1f6f41a890ab949731abd
+      internalID: -3419497623538327052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_29
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 384
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1487be808111b94a9295de29c32dcc4
+      internalID: 3146708068613644033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_30
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 384
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fac8e9ae77a5ab146b028ee1d340bc3b
+      internalID: 1121283549767959832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_31
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 384
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b513c97036f55c4da8909ca968469ab
+      internalID: -1716613322418457220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_32
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 384
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3573202b91d7481488fdc2087bcaafe4
+      internalID: 7379401220960163780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_33
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 384
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13affd4dfd133fa4892114fe79f79691
+      internalID: -2919496769467790910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_34
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 384
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ddd4d34d0ee7c24ebce23334d43f7aa
+      internalID: 4718889776371880910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_35
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 384
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45670098677c1f439103daa332b8a44
+      internalID: -6506981636418611486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_36
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 192
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ab04b529579a34aac94d683685f4f5
+      internalID: -1899016316816713723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_37
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 192
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896ab64e9088f97469b9fc305e243480
+      internalID: -4723250349465226531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_38
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 192
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd076d062db16944b023d34121b28ab
+      internalID: -2016664311978704065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_39
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 192
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1ee4466edc35c4f925be159fae9899
+      internalID: 2260804171306070399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_40
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 192
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f141f5af1102ea34b8b6bfe0020d55b7
+      internalID: -4690540246800625133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_41
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 192
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062b595277e63e84da66296f103c9b08
+      internalID: -5424217580282129086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_42
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 192
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75cd2826e4629949981b5c843faeee0
+      internalID: -1042587973325589593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_43
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 192
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb5c57b2a3767d46bcd0b1bf06bd35f
+      internalID: 5505181567787283044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_44
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 192
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c015ba3c4082a6429efeb8991464213
+      internalID: 1805129045972049829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_45
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f99993ac2f5bff843bc1377546174765
+      internalID: 2768560123637363823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_46
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 414bc460d339c124abf75038b697c1f7
+      internalID: -5074985816311484981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_47
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508fdcdacb2fd424898be68ad25042f4
+      internalID: 1967839649660827404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_48
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f69a38993d9ef4bb8b58da2db8136c
+      internalID: -8035611993408460189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_49
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f106e1d3ebe628349b6f6551b2beada1
+      internalID: -1945952136827158742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_50
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c37b44fd734c274eb2d0c20ebd82ae5
+      internalID: -2506130412574334667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_51
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d75e6ce889cc83458c3424dfa2b97cb
+      internalID: 1106118436347550736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_52
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2294c6435d7d86947b829db645133053
+      internalID: 349992159660417254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magebattler_a_normal_exported_53
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 0
+        width: 144
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b538f35a7bcdde44e954bca57a26945c
+      internalID: -7290550442313995416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

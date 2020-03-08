@@ -27,7 +27,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 1|EnchantAttackPassiveEffect, Assembly-CSharp
@@ -40,6 +40,24 @@ MonoBehaviour:
     - Name: DamageType
       Entry: 3
       Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|SetAnimatorVariablePassiveEffect, Assembly-CSharp
+    - Name: Priority
+      Entry: 3
+      Data: 0
+    - Name: Name
+      Entry: 1
+      Data: MageSwordEnchantment
+    - Name: ApplyValue
+      Entry: 1
+      Data: 2
+    - Name: UnapplyValue
+      Entry: 1
+      Data: 0
     - Name: 
       Entry: 8
       Data: 

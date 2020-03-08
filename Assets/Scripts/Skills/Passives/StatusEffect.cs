@@ -23,12 +23,14 @@ public class StatusEffect : SerializableAsset
             TurnDuration = turnDuration
         };
         
-        skillInfo.Target.StatusEffectInstances.Add(instance);
+        //skillInfo.Target.StatusEffectInstances.Add(instance);
+        skillInfo.Target.ApplyStatusEffect(instance);
     }
     
     public enum StatusEffectType
     {
-        None
+        None,
+        Enchantment
         //Poison
         //Sleep
         //etc

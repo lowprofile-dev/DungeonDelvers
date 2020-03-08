@@ -32,7 +32,7 @@ public class InventoryItemInspector : MonoBehaviour
         }
 
         SelectedItem = inventoryItemButton;
-        var item = inventoryItemButton.item;
+        var item = inventoryItemButton.Item;
         ItemName.text = item.InspectorName;
         ItemImage.enabled = true;
         ItemImage.sprite = item.Base.itemIcon;
@@ -47,11 +47,11 @@ public class InventoryItemInspector : MonoBehaviour
     public void UseItem()
     {
         //Dar throw error se não existir nenhum item no inventário do selected
-        if (SelectedItem.item is Equippable)
+        if (SelectedItem.Item is Equippable)
         {
             throw new NotImplementedException();
         }
-        else if (SelectedItem.item is Consumable consumable)
+        else if (SelectedItem.Item is Consumable consumable)
         {
             StartCoroutine(UseItemCoroutine(consumable));
         }
@@ -61,6 +61,12 @@ public class InventoryItemInspector : MonoBehaviour
     private IEnumerator UseItemCoroutine(Consumable consumable)
     {
         Character target = null;
+
+        if (consumable.Quantity <= 0)
+        {
+            PlayerController.Instance.ValidateInventory();
+            yield break;
+        }
 
         if (consumable.ConsumableBase.ConsumableUses.Any(use => use is TargetedConsumableUse))
         {
@@ -90,19 +96,19 @@ public class InventoryItemInspector : MonoBehaviour
         }
         else
         {
-            SelectedItem.Setup(InventoryMenu, SelectedItem.item);
+            SelectedItem.Setup(InventoryMenu, SelectedItem.Item);
         }
     }
 
     public void DropItem()
     {
-        if (SelectedItem.item is IStackable stackable)
+        if (SelectedItem.Item is IStackable stackable)
         {
             stackable.Quantity--;
             if (stackable.Quantity == 0)
             {
-                PlayerController.Instance.Inventory.Remove(SelectedItem.item);
-                var itemBase = SelectedItem.item.Base;
+                PlayerController.Instance.Inventory.Remove(SelectedItem.Item);
+                var itemBase = SelectedItem.Item.Base;
                 
                 Destroy(SelectedItem.gameObject);
                 
@@ -110,7 +116,7 @@ public class InventoryItemInspector : MonoBehaviour
                 {
                     var otherInstance =
                         InventoryMenu.ItemButtons.FindLast(itemButton =>
-                            itemButton.GetComponent<InventoryItemButton>().item.Base == itemBase);
+                            itemButton.GetComponent<InventoryItemButton>().Item.Base == itemBase);
 
                     Inspect(otherInstance.GetComponent<InventoryItemButton>());
                 }
@@ -121,12 +127,12 @@ public class InventoryItemInspector : MonoBehaviour
             }
             else
             {
-                SelectedItem.Setup(InventoryMenu, SelectedItem.item);
+                SelectedItem.Setup(InventoryMenu, SelectedItem.Item);
             }
         }
         else
         {
-            PlayerController.Instance.RemoveItemFromInventory(SelectedItem.item);
+            PlayerController.Instance.RemoveItemFromInventory(SelectedItem.Item);
             Destroy(SelectedItem.gameObject);
             Inspect(null);
         }

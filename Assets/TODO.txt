@@ -1,5 +1,4 @@
-Adicionar uma referencia a skill que aplicou na instance(?)
-Arrumar as coisas dos overrides em relação ao battler.
+Refazer o animador do char pra em vez de esperar não ser mais o nome, esperar 
 
 Completar cidade.
 Começar a fazer os monstros + boss.
@@ -61,9 +60,10 @@ Water
 Wind 
 
 Magician:
-Fire
+Fire 
 Water
 Earth
+(Animator values: 0 - None, 1 - Fire, 2 - Water, 3 - Earth)
 
 Assassin:
 Dark
