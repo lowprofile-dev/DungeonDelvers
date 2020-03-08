@@ -28,12 +28,20 @@ public class CharacterPanel : MonoBehaviour
             var battler = CharacterBattler.GetComponent<CharacterBattler>();
             var hasWeapon = character.Weapon != null;
             
+//            if (character.Fainted)
+//                battler.Play(global::CharacterBattler.CharacterBattlerAnimation.Fainted, true);
+//            else if (hasWeapon)
+//                battler.Play(global::CharacterBattler.CharacterBattlerAnimation.Idle, true);
+//            else
+//                battler.Play(global::CharacterBattler.CharacterBattlerAnimation.IdleNoWeapon, true);
             if (character.Fainted)
                 battler.Play(global::CharacterBattler.CharacterBattlerAnimation.Fainted, true);
-            else if (hasWeapon)
-                battler.Play(global::CharacterBattler.CharacterBattlerAnimation.Idle, true);
             else
-                battler.Play(global::CharacterBattler.CharacterBattlerAnimation.IdleNoWeapon, true);
+            {
+                var weaponType = (battler.Character.Weapon?.EquippableBase as WeaponBase)?.weaponType;
+                battler.Animator.LoadControllerForWeapon(weaponType);
+                battler.Animator.CanTransition = false;
+            }
         }
         CharacterName.text = character.Base.CharacterName;
         CharacterHealth.text = $"{character.CurrentHp}/{character.Stats.MaxHp}";

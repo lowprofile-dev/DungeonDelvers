@@ -156,4 +156,4 @@ MonoBehaviour:
   CanCritical: 1
   AccuracyModifier: 0
   CriticalModifier: 0
-  AnimationType: 2
+  AnimationType: 1

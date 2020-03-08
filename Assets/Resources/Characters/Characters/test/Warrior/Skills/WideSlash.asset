@@ -30,6 +30,15 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|DamageEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: DamageFactor
       Entry: 4
       Data: 1.3
@@ -54,6 +63,15 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 3|DamageEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: DamageFactor
       Entry: 4
       Data: 1.95
@@ -87,6 +105,7 @@ MonoBehaviour:
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
   EpCost: 30
+  Element: 0
   SkillDescription: Attack all enemies with one strike.
   Target: 3
   TrueHit: 0
@@ -94,4 +113,4 @@ MonoBehaviour:
   CanCritical: 1
   AccuracyModifier: 0
   CriticalModifier: 0
-  AnimationType: 2
+  AnimationType: 1

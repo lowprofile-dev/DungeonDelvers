@@ -3023,7 +3023,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 3
+  uniqueIdentifier: Characters/Characters/Warrior/Warrior
   databaseIgnore: 0
   CharacterName: Knight
   CharacterPrefab: {fileID: 8521580809372860284, guid: b85aa7e9225067e4f93b96eccb5cca71,

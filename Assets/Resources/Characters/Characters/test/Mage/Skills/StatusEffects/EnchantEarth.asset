@@ -51,13 +51,25 @@ MonoBehaviour:
       Data: 0
     - Name: Name
       Entry: 1
-      Data: MageSwordEnchantment
+      Data: MageSwordElement
     - Name: ApplyValue
-      Entry: 1
+      Entry: 7
+      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
+    - Name: 
+      Entry: 3
       Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: UnapplyValue
-      Entry: 1
+      Entry: 7
+      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
+    - Name: 
+      Entry: 3
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 

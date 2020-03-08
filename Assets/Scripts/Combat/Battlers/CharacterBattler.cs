@@ -128,7 +128,6 @@ public class CharacterBattler : Battler
     public enum CharacterBattlerAnimation
     {
         Idle,
-        IdleNoWeapon,
         Attack,
         Damage,
         Cast,

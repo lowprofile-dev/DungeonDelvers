@@ -30,12 +30,33 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|GainApEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: ApAmount
       Entry: 3
       Data: 40
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: CriticalEffects
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -60,8 +81,12 @@ MonoBehaviour:
   SkillIcon: {fileID: 1460658371370403240, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
   EpCost: 0
+  Element: 0
   SkillDescription: Generate AP
   Target: 6
   TrueHit: 1
+  CanBeSilenced: 0
+  CanCritical: 0
   AccuracyModifier: 0
-  AnimationType: 4
+  CriticalModifier: 0
+  AnimationType: 3

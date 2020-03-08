@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 079e6c8917daeb14db9e634195da6772
+guid: 59cda5af994cda884bb2d16470934789
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8330546680854303654
-    second: Mage_Idle_Sword_Fire_0
+      213: 1396486046806823436
+    second: Mage_Idle_Tome_0
   - first:
-      213: -1825501033178363164
-    second: Mage_Idle_Sword_Fire_1
+      213: -5208037981379685716
+    second: Mage_Idle_Tome_1
   - first:
-      213: -549963974979817573
-    second: Mage_Idle_Sword_Fire_2
+      213: 1447825759396969888
+    second: Mage_Idle_Tome_2
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
-    sRGBTexture: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -56,7 +56,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -84,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mage_Idle_Sword_Fire_0
+      name: Mage_Idle_Tome_0
       rect:
         serializedVersion: 2
         x: 24
@@ -109,14 +109,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b687696629975cfb6b05081bb25726c8
-      internalID: 8330546680854303654
+      spriteID: 56773e4697073dc9292336ec65f4692e
+      internalID: 1396486046806823436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mage_Idle_Sword_Fire_1
+      name: Mage_Idle_Tome_1
       rect:
         serializedVersion: 2
         x: 216
@@ -130,14 +130,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce112e95baaff7dc2920dce7d0be991e
-      internalID: -1825501033178363164
+      spriteID: e3451bd994fa6ea95ade2cd44b7fe7d1
+      internalID: -5208037981379685716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mage_Idle_Sword_Fire_2
+      name: Mage_Idle_Tome_2
       rect:
         serializedVersion: 2
         x: 408
@@ -151,8 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3abedb8adb6f52a99bca8ec8aaff702a
-      internalID: -549963974979817573
+      spriteID: 180497a006a3a45a9a44fbffdbfc6951
+      internalID: 1447825759396969888
       vertices: []
       indices: 
       edges: []

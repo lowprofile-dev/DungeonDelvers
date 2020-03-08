@@ -30,6 +30,15 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|DamageEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: DamageFactor
       Entry: 4
       Data: 1.85
@@ -42,67 +51,21 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 2|ApplyStatusEffectEffect, Assembly-CSharp
-    - Name: StatusEffect
+    - Name: ElementOverride
       Entry: 7
-      Data: 3|StatusEffect, Assembly-CSharp
-    - Name: TurnDuration
-      Entry: 3
-      Data: 5
-    - Name: StatusEffectName
-      Entry: 1
-      Data: Burn
-    - Name: Effects
-      Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[PassiveEffect, Assembly-CSharp]],
-        mscorlib
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 5|DoTPassiveEffect, Assembly-CSharp
-    - Name: PassiveSource
-      Entry: 7
-      Data: 6|StatusEffect, Assembly-CSharp
-    - Name: TurnDuration
-      Entry: 3
-      Data: 4
-    - Name: StatusEffectName
-      Entry: 1
-      Data: Burn
-    - Name: Effects
-      Entry: 9
-      Data: 4
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
-    - Name: Priority
+    - Name: StatusEffect
+      Entry: 6
+      Data: 
+    - Name: turnDuration
       Entry: 3
       Data: 0
-    - Name: DamageEffect
-      Entry: 7
-      Data: 7|DamageEffect, Assembly-CSharp
-    - Name: DamageFactor
-      Entry: 4
-      Data: 1.1
-    - Name: DamageType
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -114,56 +77,25 @@ MonoBehaviour:
       Data: 
     - Name: CriticalEffects
       Entry: 7
-      Data: 8|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+      Data: 3|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 9|DamageEffect, Assembly-CSharp
-    - Name: DamageFactor
-      Entry: 4
-      Data: 5
-    - Name: DamageType
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
+      Data: 4|DamageEffect, Assembly-CSharp
+    - Name: ElementOverride
       Entry: 7
-      Data: 10|ApplyStatusEffectEffect, Assembly-CSharp
-    - Name: StatusEffect
-      Entry: 7
-      Data: 11|StatusEffect, Assembly-CSharp
-    - Name: TurnDuration
-      Entry: 3
-      Data: 5
-    - Name: StatusEffectName
-      Entry: 1
-      Data: Burn
-    - Name: Effects
-      Entry: 7
-      Data: 12|System.Collections.Generic.List`1[[PassiveEffect, Assembly-CSharp]],
-        mscorlib
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 13|DoTPassiveEffect, Assembly-CSharp
-    - Name: PassiveSource
       Entry: 6
       Data: 
-    - Name: Priority
-      Entry: 3
-      Data: 0
-    - Name: DamageEffect
-      Entry: 7
-      Data: 14|DamageEffect, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: DamageFactor
       Entry: 4
-      Data: 1.1
+      Data: 5
     - Name: DamageType
       Entry: 3
       Data: 1
@@ -171,17 +103,23 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
-      Entry: 8
+      Entry: 7
+      Data: 5|ApplyStatusEffectEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
       Data: 
     - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
       Entry: 8
       Data: 
-    - Name: 
-      Entry: 8
+    - Name: StatusEffect
+      Entry: 6
       Data: 
+    - Name: turnDuration
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -193,7 +131,7 @@ MonoBehaviour:
       Data: 
     - Name: SkillAnimation
       Entry: 7
-      Data: 15|FromSourceToTargetSkillAnimation, Assembly-CSharp
+      Data: 6|FromSourceToTargetSkillAnimation, Assembly-CSharp
     - Name: AnimationName
       Entry: 1
       Data: Fireball1
@@ -230,6 +168,7 @@ MonoBehaviour:
   SkillIcon: {fileID: 7790395862663275768, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
   EpCost: 70
+  Element: 0
   SkillDescription: Throw a weak fireball at an enemy.
   Target: 1
   TrueHit: 0
@@ -237,4 +176,4 @@ MonoBehaviour:
   CanCritical: 1
   AccuracyModifier: 0
   CriticalModifier: 0
-  AnimationType: 4
+  AnimationType: 1

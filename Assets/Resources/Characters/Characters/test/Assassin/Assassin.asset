@@ -3023,7 +3023,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 0
+  uniqueIdentifier: Characters/Characters/Assassin/Assassin
   databaseIgnore: 0
   CharacterName: Assassin
   CharacterPrefab: {fileID: 8521580809372860284, guid: 1736b34fe64ca480bb1a5a1e1dc5f947,

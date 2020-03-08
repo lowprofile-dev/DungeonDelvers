@@ -47,11 +47,11 @@ SpriteAtlas:
     - {fileID: 102900000, guid: bdd36d91d8f191445948868b08fc891f, type: 3}
     - {fileID: 102900000, guid: a364e2119c02a04b08f112fe42484f5d, type: 3}
     - {fileID: 102900000, guid: 25d004b12996d6bae96280dc6434c01a, type: 3}
-    totalSpriteSurfaceArea: 10579578
+    totalSpriteSurfaceArea: 10691706
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
-      Hash: 6c909518adcd3f8da38d0b077995b8e2
+      Hash: ac21354614bc945a5fcbbbebdc909586
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 3205500544072061111, guid: e1933e501b4d6094c8b14948793eb749, type: 3}
@@ -9045,6 +9045,9 @@ SpriteAtlas:
   - {fileID: 7445016707085198867, guid: b486ad3ebd7ab224bb003c851fe858a8, type: 3}
   - {fileID: 9134691764263040968, guid: b486ad3ebd7ab224bb003c851fe858a8, type: 3}
   - {fileID: 21300000, guid: 34a1ff1f1ecdc6943abd7de48d6561ea, type: 3}
+  - {fileID: -5208037981379685716, guid: 59cda5af994cda884bb2d16470934789, type: 3}
+  - {fileID: 1396486046806823436, guid: 59cda5af994cda884bb2d16470934789, type: 3}
+  - {fileID: 1447825759396969888, guid: 59cda5af994cda884bb2d16470934789, type: 3}
   m_PackedSpriteNamesToIndex:
   - house_1126
   - house_1130
@@ -18037,5 +18040,8 @@ SpriteAtlas:
   - inside_369
   - inside_368
   - 9slicesimple
+  - Mage_Idle_Tome_1
+  - Mage_Idle_Tome_0
+  - Mage_Idle_Tome_2
   m_Tag: Atlas
   m_IsVariant: 0

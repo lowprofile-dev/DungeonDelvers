@@ -244,6 +244,10 @@
         <e p="Scripts" t="Include">
           <e p="Animation" t="Include">
             <e p="AnimationObject.cs" t="Include" />
+            <e p="AnimatorOverrides" t="Include">
+              <e p="MageCharacterBattlerAnimator.cs" t="Include" />
+            </e>
+            <e p="CharacterBattlerAnimator.cs" t="Include" />
             <e p="SkillAnimation.cs" t="Include" />
             <e p="SkillAnimations" t="Include">
               <e p="FromSourceToTargetSkillAnimation.cs" t="Include" />
@@ -305,6 +309,7 @@
             <e p="SetUniqueName.cs" t="Include" />
           </e>
           <e p="Extensions" t="Include">
+            <e p="DDExtensions.cs" t="Include" />
             <e p="SkredUtils.cs" t="Include" />
           </e>
           <e p="Generation" t="Include">
@@ -399,6 +404,7 @@
             <e p="Effects" t="Include">
               <e p="ApplyStatusEffectEffect.cs" t="Include" />
               <e p="DamageEffect.cs" t="Include" />
+              <e p="DispelStatusEffectTypeEffect.cs" t="Include" />
               <e p="GainApEffect.cs" t="Include" />
               <e p="HealEffect.cs" t="Include" />
               <e p="MultiHitDamageEffect.cs" t="Include" />
@@ -409,11 +415,13 @@
               <e p="IPassiveEffectSource.cs" t="Include" />
               <e p="Passive.cs" t="Include" />
               <e p="PassiveEffects" t="Include">
+                <e p="BonusStatPassiveEffect.cs" t="Include" />
                 <e p="DefendPassiveEffect.cs" t="Include" />
                 <e p="DoTPassiveEffect.cs" t="Include" />
                 <e p="EnchantAttackPassiveEffect.cs" t="Include" />
                 <e p="PassiveEffect.cs" t="Include" />
                 <e p="RegenPassiveEffect.cs" t="Include" />
+                <e p="SetAnimatorVariablePassiveEffect.cs" t="Include" />
               </e>
               <e p="StatusEffect.cs" t="Include" />
               <e p="StatusEffectInstance.cs" t="Include" />

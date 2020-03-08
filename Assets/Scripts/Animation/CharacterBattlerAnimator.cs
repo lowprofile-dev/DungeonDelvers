@@ -9,20 +9,26 @@ using CharacterBattlerAnimation = CharacterBattler.CharacterBattlerAnimation;
 [RequireComponent(typeof(CharacterBattler), typeof(Animator))]
 public class CharacterBattlerAnimator : MonoBehaviour
 {
+    public Dictionary<string, int> AnimatorValues = new Dictionary<string, int>();
     private CharacterBattler CharacterBattler;
     private Animator Animator;
 
+    public virtual void LoadControllerForWeapon(WeaponBase.WeaponType? weaponType)
+    {
+        var battlerAnimator =
+            CharacterBattler.Character.Base.BattlerAnimationControllers.First(controller =>
+                controller.WeaponType == weaponType);
+
+        Animator.runtimeAnimatorController = battlerAnimator.AnimatorController;
+    }
+    
     protected void Awake()
     {
         Animator = GetComponent<Animator>();
         CharacterBattler = GetComponent<CharacterBattler>();
 
         var weaponType = (CharacterBattler.Character.Weapon?.EquippableBase as WeaponBase)?.weaponType;
-        var battlerAnimator =
-            CharacterBattler.Character.Base.BattlerAnimationControllers.First(controller =>
-                controller.WeaponType == weaponType);
-
-        Animator.runtimeAnimatorController = battlerAnimator.AnimatorController;
+        LoadControllerForWeapon(weaponType);
     }
 
     public IEnumerator PlayAndWait(CharacterBattlerAnimation characterBattlerAnimation)
@@ -75,7 +81,7 @@ public class CharacterBattlerAnimator : MonoBehaviour
 
     public void UpdateAnimator()
     {
-        Animator.SetBool("HasWeapon", CharacterBattler.Character.Weapon != null);
+        //Animator.SetBool("HasWeapon", CharacterBattler.Character.Weapon != null);
         Animator.SetBool("Fainted", CharacterBattler.Fainted);
     }
     
@@ -91,7 +97,6 @@ public class CharacterBattlerAnimator : MonoBehaviour
         {
             case CharacterBattlerAnimation.Attack:
             case CharacterBattlerAnimation.Idle:
-            case CharacterBattlerAnimation.IdleNoWeapon:
             case CharacterBattlerAnimation.Damage:
             case CharacterBattlerAnimation.Cast:
             case CharacterBattlerAnimation.Fainted:
