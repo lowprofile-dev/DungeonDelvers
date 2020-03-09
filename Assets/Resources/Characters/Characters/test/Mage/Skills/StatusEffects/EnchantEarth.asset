@@ -45,19 +45,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 2|SetAnimatorVariablePassiveEffect, Assembly-CSharp
+      Data: 2|SetMageSwordElementPassiveEffect, Assembly-CSharp
     - Name: Priority
       Entry: 3
       Data: 0
-    - Name: Name
-      Entry: 1
-      Data: MageSwordElement
-    - Name: ApplyValue
-      Entry: 1
-      Data: 3
-    - Name: UnapplyValue
-      Entry: 1
-      Data: 0
+    - Name: Element
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -72,5 +66,5 @@ MonoBehaviour:
   StatusEffectName: Enchant (Earth)
   StatusEffectIcon: {fileID: -2396315254400908331, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  Type: 1
+  Type: 0
   Hidden: 0

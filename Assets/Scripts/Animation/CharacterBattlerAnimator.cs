@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using CharacterBattlerAnimation = CharacterBattler.CharacterBattlerAnimation;
 
 [RequireComponent(typeof(CharacterBattler), typeof(Animator))]
-public class CharacterBattlerAnimator : MonoBehaviour
+public class CharacterBattlerAnimator : SerializedMonoBehaviour
 {
     public Dictionary<string, int> AnimatorValues = new Dictionary<string, int>();
     protected CharacterBattler CharacterBattler;
@@ -22,13 +23,13 @@ public class CharacterBattlerAnimator : MonoBehaviour
         Animator.runtimeAnimatorController = battlerAnimator.AnimatorController;
     }
 
-    protected void Awake()
+    protected virtual void Awake()
     {
         Animator = GetComponent<Animator>();
         CharacterBattler = GetComponent<CharacterBattler>();
     }
     
-    protected void Start()
+    protected virtual void Start()
     {
         var weaponType = (CharacterBattler.Character.Weapon?.EquippableBase as WeaponBase)?.weaponType;
         LoadControllerForWeapon(weaponType);
@@ -84,7 +85,7 @@ public class CharacterBattlerAnimator : MonoBehaviour
         Animator.Play(state);
     }
 
-    public void UpdateAnimator()
+    public virtual void UpdateAnimator()
     {
         //Animator.SetBool("HasWeapon", CharacterBattler.Character.Weapon != null);
         Animator.SetBool("Fainted", CharacterBattler.Fainted);

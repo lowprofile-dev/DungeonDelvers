@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d8eb85f-203a-42cc-a492-a61dc70ead53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions/DDExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Extensions/DDExtensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/SetMageSwordElementPassiveEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/SetMageSwordElementPassiveEffect.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/AStarPathfindingProjectPro.unitypackage.meta" beforeDir="false" />
@@ -12,22 +12,13 @@
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/SECTR_VIS.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/Unity NavMesh.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/DunGen/Samples/DungeonCrawler.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/AssassinBattlerAnimatorController.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/AssassinBattlerAnimatorController.controller.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/FighterBattlerAnimatorController.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Fighter/FighterBattlerAnimatorController.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/MageBattlerAnimatorController.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Mage/MageBattlerAnimatorController.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Warrior/WarriorBattlerAnimatorController.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Warrior/WarriorBattlerAnimatorController.controller.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimatorOverrides/MageCharacterBattlerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimatorOverrides/MageCharacterBattlerAnimator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/CharacterBattlerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/CharacterBattlerAnimator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/MenuEffects.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/SetAnimatorVariablePassiveEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/SetAnimatorVariablePassiveEffect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/CharacterPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/CharacterPanel.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,6 +118,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Battle/BattleInfoPanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/Mastery.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/SetMageSwordElementPassiveEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/AccessoryBase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Mastery/MasteryInstance.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/Items/Equipment/HandBase.cs" root0="FORCE_HIGHLIGHTING" />
@@ -184,7 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interaction/Interactions/FadeInteraction.cs" />
         <option value="$PROJECT_DIR$/Assets/seeds.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Battle/RewardPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/MainMenu.cs" />
@@ -219,7 +210,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/MonsterBattler.cs" />
         <option value="$PROJECT_DIR$/Assets/issues.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Effect.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/EnchantAttackPassiveEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/DoTPassiveEffect.cs" />
@@ -229,11 +219,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Skill.cs" />
         <option value="$PROJECT_DIR$/Assets/TODO.txt" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Control/MapSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/CharacterPanel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Extensions/DDExtensions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/SetAnimatorVariablePassiveEffect.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/SetMageSwordElementPassiveEffect.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animation/CharacterBattlerAnimator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animation/AnimatorOverrides/MageCharacterBattlerAnimator.cs" />
       </list>
     </option>
@@ -328,6 +320,7 @@
       <workItem from="1583114657597" duration="17552000" />
       <workItem from="1583333417074" duration="3379000" />
       <workItem from="1583410961128" duration="10118000" />
+      <workItem from="1583755304050" duration="1534000" />
     </task>
     <servers />
   </component>

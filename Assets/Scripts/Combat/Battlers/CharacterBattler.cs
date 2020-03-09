@@ -98,8 +98,8 @@ public class CharacterBattler : Battler
         {
             currentHp = value;
             currentHp = Mathf.Clamp(currentHp, 0, Stats.MaxHp);
-            UpdateAnimator();
             SetHighestHp();
+            UpdateAnimator();
         }
     }
 
@@ -146,7 +146,7 @@ public class CharacterBattler : Battler
             return null;
 
         var turn = await BattleController.Instance.battleCanvas.GetTurn(this);
-
+        
         return turn.Skill == null ? null : turn;
     }
 

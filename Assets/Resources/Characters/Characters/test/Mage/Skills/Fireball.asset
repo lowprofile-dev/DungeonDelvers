@@ -66,7 +66,7 @@ MonoBehaviour:
       Data: 0
     - Name: turnDuration
       Entry: 3
-      Data: 4
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -96,7 +96,7 @@ MonoBehaviour:
       Data: 
     - Name: DamageFactor
       Entry: 4
-      Data: 2.775
+      Data: 5
     - Name: DamageType
       Entry: 3
       Data: 1
@@ -120,7 +120,7 @@ MonoBehaviour:
       Data: 0
     - Name: turnDuration
       Entry: 3
-      Data: 6
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -131,7 +131,28 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: SkillAnimation
-      Entry: 6
+      Entry: 7
+      Data: 6|FromSourceToTargetSkillAnimation, Assembly-CSharp
+    - Name: AnimationName
+      Entry: 1
+      Data: Fireball1
+    - Name: SpeedMultiplier
+      Entry: 4
+      Data: 2
+    - Name: AnimationSize
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 200
+    - Name: 
+      Entry: 4
+      Data: 200
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: RequiredWeaponType
       Entry: 7
@@ -142,7 +163,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 7
+  uniqueIdentifier: 
   databaseIgnore: 0
   SkillName: Fireball
   SkillIcon: {fileID: 7790395862663275768, guid: cc992c58d47d97548895862c5e45375c,

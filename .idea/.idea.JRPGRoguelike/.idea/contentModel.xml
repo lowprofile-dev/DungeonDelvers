@@ -422,6 +422,7 @@
                 <e p="PassiveEffect.cs" t="Include" />
                 <e p="RegenPassiveEffect.cs" t="Include" />
                 <e p="SetAnimatorVariablePassiveEffect.cs" t="Include" />
+                <e p="SetMageSwordElementPassiveEffect.cs" t="Include" />
               </e>
               <e p="StatusEffect.cs" t="Include" />
               <e p="StatusEffectInstance.cs" t="Include" />
