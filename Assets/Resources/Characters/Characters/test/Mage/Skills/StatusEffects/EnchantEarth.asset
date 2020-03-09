@@ -53,23 +53,11 @@ MonoBehaviour:
       Entry: 1
       Data: MageSwordElement
     - Name: ApplyValue
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 3
+      Entry: 1
       Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: UnapplyValue
-      Entry: 7
-      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
-    - Name: 
-      Entry: 3
+      Entry: 1
       Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -84,5 +72,5 @@ MonoBehaviour:
   StatusEffectName: Enchant (Earth)
   StatusEffectIcon: {fileID: -2396315254400908331, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  Type: 0
+  Type: 1
   Hidden: 0

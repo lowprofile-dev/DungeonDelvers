@@ -11,7 +11,6 @@ using UnityEngine.Tilemaps;
 using UnityEngine.SceneManagement;
 using Debug = UnityEngine.Debug;
 using Random = UnityEngine.Random;
-using System.Drawing;
 using System.IO;
 using UnityEngine.UI;
 

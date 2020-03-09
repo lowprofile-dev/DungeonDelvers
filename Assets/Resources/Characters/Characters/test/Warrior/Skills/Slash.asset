@@ -99,7 +99,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
+  uniqueIdentifier: 11
   databaseIgnore: 0
   SkillName: Slash
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,

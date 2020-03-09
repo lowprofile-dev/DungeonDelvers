@@ -99,7 +99,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
+  uniqueIdentifier: 2
   databaseIgnore: 0
   SkillName: Chop
   SkillIcon: {fileID: -8726097045332059612, guid: cc992c58d47d97548895862c5e45375c,

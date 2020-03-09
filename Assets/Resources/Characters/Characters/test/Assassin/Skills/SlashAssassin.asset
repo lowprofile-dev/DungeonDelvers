@@ -74,7 +74,7 @@ MonoBehaviour:
       Data: 
     - Name: DamageFactor
       Entry: 4
-      Data: 1.35
+      Data: 1.45
     - Name: DamageType
       Entry: 3
       Data: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
+  uniqueIdentifier: 0
   databaseIgnore: 0
   SkillName: Slash
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,

@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 1405fb12be53aacc088898a46ed97408, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -61,11 +62,11 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: StatusEffect
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: turnDuration
       Entry: 3
-      Data: 0
+      Data: 4
     - Name: 
       Entry: 8
       Data: 
@@ -95,7 +96,7 @@ MonoBehaviour:
       Data: 
     - Name: DamageFactor
       Entry: 4
-      Data: 5
+      Data: 2.775
     - Name: DamageType
       Entry: 3
       Data: 1
@@ -115,11 +116,11 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: StatusEffect
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: turnDuration
       Entry: 3
-      Data: 0
+      Data: 6
     - Name: 
       Entry: 8
       Data: 
@@ -130,28 +131,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: SkillAnimation
-      Entry: 7
-      Data: 6|FromSourceToTargetSkillAnimation, Assembly-CSharp
-    - Name: AnimationName
-      Entry: 1
-      Data: Fireball1
-    - Name: SpeedMultiplier
-      Entry: 4
-      Data: 2
-    - Name: AnimationSize
-      Entry: 7
-      Data: UnityEngine.Vector2, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 200
-    - Name: 
-      Entry: 4
-      Data: 200
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: RequiredWeaponType
       Entry: 7
@@ -162,7 +142,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
+  uniqueIdentifier: 7
   databaseIgnore: 0
   SkillName: Fireball
   SkillIcon: {fileID: 7790395862663275768, guid: cc992c58d47d97548895862c5e45375c,

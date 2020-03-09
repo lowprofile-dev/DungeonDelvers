@@ -94,12 +94,12 @@ MonoBehaviour:
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 3
-      Data: 5
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
+  uniqueIdentifier: 8
   databaseIgnore: 0
   SkillName: Kinetic Strike
   SkillIcon: {fileID: -3973968794099671083, guid: cc992c58d47d97548895862c5e45375c,

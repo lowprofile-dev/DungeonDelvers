@@ -45,6 +45,7 @@ public class CharacterInspector : SerializedMonoBehaviour
         {
             CharacterBattler = Instantiate(character.Base.BattlerPrefab, CharacterRectTransform);
             var battler = CharacterBattler.GetComponent<CharacterBattler>();
+            battler.Character = Character;
             
             if (character.Fainted)
                 battler.Play(global::CharacterBattler.CharacterBattlerAnimation.Fainted, true);

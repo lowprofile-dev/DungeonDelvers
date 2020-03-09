@@ -26,6 +26,7 @@ public class CharacterPanel : MonoBehaviour
             var battlerRect = CharacterBattler.transform as RectTransform;
             battlerRect.sizeDelta = new Vector2(160, 160);
             var battler = CharacterBattler.GetComponent<CharacterBattler>();
+            battler.Character = character;
             var hasWeapon = character.Weapon != null;
             
 //            if (character.Fainted)

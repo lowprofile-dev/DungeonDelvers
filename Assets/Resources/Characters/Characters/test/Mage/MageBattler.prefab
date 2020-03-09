@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6494535058643958370}
   - component: {fileID: 6494535058643958301}
   - component: {fileID: -7204785754322097117}
-  - component: {fileID: -9218180456604280887}
+  - component: {fileID: 7302955471746130627}
   m_Layer: 5
   m_Name: MageBattler
   m_TagString: Untagged
@@ -87,7 +87,7 @@ Animator:
   m_GameObject: {fileID: 6494535058643958303}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cb6a1edcb78d7e548af2ca0cf433f105, type: 2}
+  m_Controller: {fileID: 9100000, guid: 81832681c1aa46fb799dd8209c353048, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
     - Name: Character
       Entry: 6
       Data: 
-  Animator: {fileID: -9218180456604280887}
---- !u!114 &-9218180456604280887
+  Animator: {fileID: 0}
+--- !u!114 &7302955471746130627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,6 +130,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6494535058643958303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ec6d779f01d4c54abf0243cefbdb0ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 606d66639718421e8cc7997f22151961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

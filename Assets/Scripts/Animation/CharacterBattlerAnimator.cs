@@ -10,8 +10,8 @@ using CharacterBattlerAnimation = CharacterBattler.CharacterBattlerAnimation;
 public class CharacterBattlerAnimator : MonoBehaviour
 {
     public Dictionary<string, int> AnimatorValues = new Dictionary<string, int>();
-    private CharacterBattler CharacterBattler;
-    private Animator Animator;
+    protected CharacterBattler CharacterBattler;
+    protected Animator Animator;
 
     public virtual void LoadControllerForWeapon(WeaponBase.WeaponType? weaponType)
     {
@@ -21,12 +21,15 @@ public class CharacterBattlerAnimator : MonoBehaviour
 
         Animator.runtimeAnimatorController = battlerAnimator.AnimatorController;
     }
-    
+
     protected void Awake()
     {
         Animator = GetComponent<Animator>();
         CharacterBattler = GetComponent<CharacterBattler>();
-
+    }
+    
+    protected void Start()
+    {
         var weaponType = (CharacterBattler.Character.Weapon?.EquippableBase as WeaponBase)?.weaponType;
         LoadControllerForWeapon(weaponType);
     }
@@ -43,10 +46,12 @@ public class CharacterBattlerAnimator : MonoBehaviour
 
     public async Task AsyncPlayAndWait(CharacterBattlerAnimation characterBattlerAnimation)
     {
-        var state = GetStateNameFromAnimation(characterBattlerAnimation);
+        var state = "";
+        await CharacterBattler.QueueActionAndAwait(() => state = GetStateNameFromAnimation(characterBattlerAnimation)); 
 
         await CharacterBattler.QueueActionAndAwait(() =>
         {
+            Debug.Log(state);
             Animator.Play(state);
         });
 

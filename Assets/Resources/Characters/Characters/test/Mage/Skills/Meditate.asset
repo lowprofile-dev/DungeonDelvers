@@ -75,7 +75,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
+  uniqueIdentifier: 10
   databaseIgnore: 0
   SkillName: Medidate
   SkillIcon: {fileID: 1460658371370403240, guid: cc992c58d47d97548895862c5e45375c,

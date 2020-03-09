@@ -74,7 +74,7 @@ MonoBehaviour:
       Data: 
     - Name: DamageFactor
       Entry: 4
-      Data: 2.5
+      Data: 2.25
     - Name: DamageType
       Entry: 3
       Data: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
+  uniqueIdentifier: 3
   databaseIgnore: 0
   SkillName: Cut Down
   SkillIcon: {fileID: -8726097045332059612, guid: cc992c58d47d97548895862c5e45375c,
