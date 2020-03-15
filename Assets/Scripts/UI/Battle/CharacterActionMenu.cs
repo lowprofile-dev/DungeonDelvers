@@ -7,13 +7,16 @@ using Sirenix.Utilities;
 using SkredUtils;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class CharacterActionMenu : SerializedMonoBehaviour
 {
     public BattleCanvas BattleCanvas;
     public GameObject Panel;
-    public GameObject InitialButton;
+    
+    public Button ActionButton;
+    public Button ItemButton;
 
     public SkillActionMenu SkillActionMenu;
 
@@ -53,8 +56,23 @@ public class CharacterActionMenu : SerializedMonoBehaviour
     public void ShowActionMenu()
     {
         Panel.SetActive(true);
+        
+        ActionButton.interactable = Battler.AvailableSkills.Any();
+        
+        var hasUsableConsumables = PlayerController.Instance.Inventory
+            .Any(item =>
+            {
+                if (item is Consumable cons)
+                {
+                    return cons.ConsumableBase.ItemSkill != null;
+                }
+                return false;
+            });
+        
+        ItemButton.interactable = hasUsableConsumables;
+        
         BattleCanvas.BindActionArrow(Battler.RectTransform);
-        EventSystem.current.SetSelectedGameObject(InitialButton);
+        EventSystem.current.SetSelectedGameObject(ActionButton.gameObject);
     }
     
     public void FinishTurn(Turn turn)

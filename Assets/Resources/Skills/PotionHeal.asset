@@ -31,6 +31,15 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 1|RemoveItemEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: Item
       Entry: 10
       Data: 0
@@ -43,6 +52,15 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 2|HealEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: HealAmount
       Entry: 3
       Data: 50
@@ -55,8 +73,29 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: CriticalEffects
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: SkillAnimation
       Entry: 6
+      Data: 
+    - Name: RequiredWeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   uniqueIdentifier: 3
   databaseIgnore: 0
@@ -64,6 +103,12 @@ MonoBehaviour:
   SkillIcon: {fileID: -5034413663038066961, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
   EpCost: 5
+  Element: 0
   SkillDescription: Heal a Target
   Target: 2
-  AnimationType: 4
+  TrueHit: 0
+  CanBeSilenced: 0
+  CanCritical: 0
+  AccuracyModifier: 0
+  CriticalModifier: 0
+  AnimationType: 3

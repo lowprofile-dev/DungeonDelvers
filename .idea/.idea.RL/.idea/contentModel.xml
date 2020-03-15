@@ -40,6 +40,93 @@
         </e>
         <e p="Classes.txt" t="Include" />
         <e p="Credits.txt" t="Include" />
+        <e p="DragonBones" t="Include">
+          <e p="Editor" t="Include">
+            <e p="AssetProcess.cs" t="Include" />
+            <e p="DragonBonesIcons.cs" t="Include" />
+            <e p="PickJsonDataWindow.cs" t="Include" />
+            <e p="ShowSlotsWindow.cs" t="Include" />
+            <e p="UnityArmatureEditor.cs" t="Include" />
+            <e p="UnityEditor.cs" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="DB_BlendMode_Grab.shader" t="Include" />
+              <e p="DB_BlendMode_UIGrab.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="3rdParty" t="Include">
+              <e p="MiniJSON.cs" t="Include" />
+            </e>
+            <e p="Animation" t="Include">
+              <e p="Animation.cs" t="Include" />
+              <e p="AnimationState.cs" t="Include" />
+              <e p="BaseTimelineState.cs" t="Include" />
+              <e p="IAnimatable.cs" t="Include" />
+              <e p="TimelineState.cs" t="Include" />
+              <e p="WorldClock.cs" t="Include" />
+            </e>
+            <e p="armature" t="Include">
+              <e p="Armature.cs" t="Include" />
+              <e p="Bone.cs" t="Include" />
+              <e p="Constraint.cs" t="Include" />
+              <e p="DeformVertices.cs" t="Include" />
+              <e p="IArmatureProxy.cs" t="Include" />
+              <e p="Slot.cs" t="Include" />
+              <e p="TransformObject.cs" t="Include" />
+            </e>
+            <e p="core" t="Include">
+              <e p="BaseObject.cs" t="Include" />
+              <e p="DragonBones.cs" t="Include" />
+            </e>
+            <e p="event" t="Include">
+              <e p="EventObject.cs" t="Include" />
+              <e p="IEventDispatcher.cs" t="Include" />
+            </e>
+            <e p="factory" t="Include">
+              <e p="BaseFactory.cs" t="Include" />
+            </e>
+            <e p="geom" t="Include">
+              <e p="ColorTransform.cs" t="Include" />
+              <e p="Matrix.cs" t="Include" />
+              <e p="Point.cs" t="Include" />
+              <e p="Rectangle.cs" t="Include" />
+              <e p="Transform.cs" t="Include" />
+            </e>
+            <e p="model" t="Include">
+              <e p="AnimationConfig.cs" t="Include" />
+              <e p="AnimationData.cs" t="Include" />
+              <e p="ArmatureData.cs" t="Include" />
+              <e p="BoundingBoxData.cs" t="Include" />
+              <e p="CanvasData.cs" t="Include" />
+              <e p="ConstraintData.cs" t="Include" />
+              <e p="DisplayData.cs" t="Include" />
+              <e p="DragonBonesData.cs" t="Include" />
+              <e p="SkinData.cs" t="Include" />
+              <e p="TextureAtlasData.cs" t="Include" />
+              <e p="UserData.cs" t="Include" />
+            </e>
+            <e p="parser" t="Include">
+              <e p="BinaryDataParser.cs" t="Include" />
+              <e p="BinaryDataReader.cs" t="Include" />
+              <e p="BinaryDataWriter.cs" t="Include" />
+              <e p="DataParser.cs" t="Include" />
+              <e p="ObjectDataParser.cs" t="Include" />
+            </e>
+            <e p="Unity" t="Include">
+              <e p="MeshBuffer.cs" t="Include" />
+              <e p="UnityArmatureComponent.cs" t="Include" />
+              <e p="UnityCombineMeshs.cs" t="Include" />
+              <e p="UnityDragonBonesData.cs" t="Include" />
+              <e p="UnityEventDispatcher.cs" t="Include" />
+              <e p="UnityFactory.cs" t="Include" />
+              <e p="UnitySlot.cs" t="Include" />
+              <e p="UnityTextureAtlasData.cs" t="Include" />
+              <e p="UnityUGUIDisplay.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="DunGen" t="Include">
           <e p="Code" t="Include">
             <e p="AcceptGameObjectTypesAttribute.cs" t="Include" />
@@ -240,6 +327,17 @@
             <e p="Readme.txt" t="Include" />
           </e>
         </e>
+        <e p="Resources" t="Include">
+          <e p="DragonBones" t="Include">
+            <e p="Xoer" t="Include">
+              <e p="dragonbones_assets" t="Include">
+                <e p="SKXoer_settings.txt" t="Include" />
+              </e>
+              <e p="How to use.txt" t="Include" />
+              <e p="Terms of use.txt" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="_Debug" t="Include">
             <e p="GoToScene.cs" t="Include" />
@@ -426,6 +524,7 @@
                 <e p="PassiveEffect.cs" t="Include" />
                 <e p="RegenPassiveEffect.cs" t="Include" />
                 <e p="SetAnimatorVariablePassiveEffect.cs" t="Include" />
+                <e p="SetMageSwordElementPassiveEffect.cs" t="Include" />
               </e>
               <e p="StatusEffect.cs" t="Include" />
               <e p="StatusEffectInstance.cs" t="Include" />
@@ -550,6 +649,15 @@
           </e>
         </e>
         <e p="test_sandbox" t="Include">
+          <e p="test" t="Include">
+            <e p="dg" t="Include">
+              <e p="dragonbones_assets" t="Include">
+                <e p="BladeMaster_Settings.txt" t="Include" />
+              </e>
+              <e p="How to use.txt" t="Include" />
+              <e p="Terms of use.txt" t="Include" />
+            </e>
+          </e>
           <e p="test.cs" t="Include" />
           <e p="testgetrectransform.cs" t="Include" />
           <e p="testloadsceneadditive.cs" t="Include" />

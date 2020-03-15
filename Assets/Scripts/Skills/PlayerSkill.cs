@@ -11,8 +11,8 @@ public class PlayerSkill : Skill
         if (RequiredWeaponType == null)
             return true;
 
-        var weapon = (character.Weapon.EquippableBase) as WeaponBase;
+        var weapon = (character.Weapon?.EquippableBase as WeaponBase)?.weaponType ;
 
-        return weapon.weaponType == RequiredWeaponType;
+        return weapon == RequiredWeaponType;
     }
 }

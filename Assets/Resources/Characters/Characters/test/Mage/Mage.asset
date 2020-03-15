@@ -3064,7 +3064,7 @@ MonoBehaviour:
   uniqueIdentifier: 2
   databaseIgnore: 0
   CharacterName: Mage
-  CharacterPrefab: {fileID: 8521580809372860284, guid: 1736b34fe64ca480bb1a5a1e1dc5f947,
+  CharacterPrefab: {fileID: 8521580809372860284, guid: c227d6ea46ca1b142b7a5c5c62e5bb73,
     type: 3}
   BattlerPrefab: {fileID: 6494535058643958303, guid: dba77baa08951014b8b945b6c8690f93,
     type: 3}

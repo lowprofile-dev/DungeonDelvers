@@ -80,8 +80,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
   PartyBases:
-  - {fileID: 11400000, guid: f9f6f4482b3fd3e9ebc8cd7b92caaeca, type: 2}
   - {fileID: 11400000, guid: f77e24618f897f945a0248b51cc1267f, type: 2}
+  - {fileID: 11400000, guid: f9f6f4482b3fd3e9ebc8cd7b92caaeca, type: 2}
   - {fileID: 11400000, guid: 42485ac7352004c6a8bc01c3505ca003, type: 2}
   - {fileID: 11400000, guid: fb1fbb4bb0c7667e6833f3be9cba04f4, type: 2}
   InventoryBase:

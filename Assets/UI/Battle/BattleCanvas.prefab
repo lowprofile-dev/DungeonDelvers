@@ -1751,7 +1751,8 @@ MonoBehaviour:
       Data: 
   BattleCanvas: {fileID: 7208889783106911598}
   Panel: {fileID: 2803211003645388853}
-  InitialButton: {fileID: 4596428342405737927}
+  ActionButton: {fileID: 4878914701878571650}
+  ItemButton: {fileID: 8851879664789420933}
   SkillActionMenu: {fileID: 6565209019656746723}
 --- !u!1 &2506853641738937479
 GameObject:

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f8bea8ce8e3c2140884b897ab691e92, type: 3}
+  m_Name: BladeMaster_Data
+  m_EditorClassIdentifier: 
+  dataName: BladeMaster
+  dragonBonesJSON: {fileID: 4900000, guid: eae515b3f9eda544b8c60a66a6beb900, type: 3}
+  textureAtlas:
+  - textureAtlasJSON: {fileID: 4900000, guid: 7f55d5a192b7c6744b17b21976cf2126, type: 3}
+    texture: {fileID: 2800000, guid: 5b6a6c0d986bc2d4ea66f3fb8c0959e2, type: 3}
+    material: {fileID: 2100000, guid: f7402709511f44647823b5cbeaaaa91c, type: 2}
+    uiMaterial: {fileID: 2100000, guid: 0c825892d37ef594dae1f5002710a14f, type: 2}
