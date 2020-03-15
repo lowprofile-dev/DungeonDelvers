@@ -12,9 +12,11 @@ public class MageCharacterBattlerAnimator : CharacterBattlerAnimator
         set
         {
             animationElement = value;
-            var controller = ElementControllers.Find(c => c.Element == value).RuntimeAnimatorController;
-            Animator.runtimeAnimatorController = controller;
-            UpdateAnimator();
+            if (EquippedWeaponType == WeaponBase.WeaponType.Sword1H){
+                var controller = ElementControllers.Find(c => c.Element == value).RuntimeAnimatorController;
+                Animator.runtimeAnimatorController = controller;
+                UpdateAnimator();
+            }
         }
     }
     

@@ -13,6 +13,7 @@ public class CharacterBattlerAnimator : SerializedMonoBehaviour
     public Dictionary<string, int> AnimatorValues = new Dictionary<string, int>();
     protected CharacterBattler CharacterBattler;
     protected Animator Animator;
+    protected WeaponBase.WeaponType? EquippedWeaponType;
 
     public virtual void LoadControllerForWeapon(WeaponBase.WeaponType? weaponType)
     {
@@ -31,8 +32,8 @@ public class CharacterBattlerAnimator : SerializedMonoBehaviour
     
     protected virtual void Start()
     {
-        var weaponType = (CharacterBattler.Character.Weapon?.EquippableBase as WeaponBase)?.weaponType;
-        LoadControllerForWeapon(weaponType);
+        EquippedWeaponType = (CharacterBattler.Character.Weapon?.EquippableBase as WeaponBase)?.weaponType;
+        LoadControllerForWeapon(EquippedWeaponType);
     }
 
     public IEnumerator PlayAndWait(CharacterBattlerAnimation characterBattlerAnimation)

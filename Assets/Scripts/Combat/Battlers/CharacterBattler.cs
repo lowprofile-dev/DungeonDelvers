@@ -23,9 +23,6 @@ public class CharacterBattler : Battler
     private Image image;
 
     #region Control
-
-    public Dictionary<object, object> BattleDictionary { get; private set; }
-
     private void Awake()
     {
         image = GetComponent<Image>();
@@ -234,7 +231,5 @@ public class CharacterBattler : Battler
     public PlayerSkill[] AvailableSkills => Skills.Where(skill => skill.HasRequiredWeapon(Character)).ToArray();
 
     #endregion
-    
-    public RectTransform RectTransform => transform as RectTransform;
 }
 

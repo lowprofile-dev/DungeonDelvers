@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d8eb85f-203a-42cc-a492-a61dc70ead53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/SetMageSwordElementPassiveEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/SetMageSwordElementPassiveEffect.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.JRPGRoguelike/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/AStarPathfindingProjectPro.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/PlayMaker.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/RAIN.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/SECTR_VIS.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Integration/Unity NavMesh.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DunGen/Samples/DungeonCrawler.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Characters/Characters/test/Assassin/CharacterAnimations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimatorOverrides/MageCharacterBattlerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimatorOverrides/MageCharacterBattlerAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/CharacterBattlerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/CharacterBattlerAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Combat/Battlers/CharacterBattler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/MenuEffects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/SetAnimatorVariablePassiveEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/PassiveEffects/SetAnimatorVariablePassiveEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Skills/Passives/StatusEffect.meta" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -320,7 +304,7 @@
       <workItem from="1583114657597" duration="17552000" />
       <workItem from="1583333417074" duration="3379000" />
       <workItem from="1583410961128" duration="10118000" />
-      <workItem from="1583755304050" duration="1534000" />
+      <workItem from="1583755304050" duration="4154000" />
     </task>
     <servers />
   </component>

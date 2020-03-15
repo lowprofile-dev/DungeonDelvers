@@ -330,7 +330,7 @@ public class BattleController : AsyncMonoBehaviour
             else
                 return playerTile;
         }
-        catch (Exception e)
+        catch (Exception)
         {
             return null;
         }
@@ -374,7 +374,8 @@ public class BattleController : AsyncMonoBehaviour
             {
                 //damage = (int) DamageFormula1(source.Level, source.Stats.MagAtk, target.Level, target.Stats.MagDef);
                 throw new NotImplementedException();
-                break;
+                //damage = (int) DamageFormula2(source.)
+                //break;
             }
             default:
                 throw new ArgumentOutOfRangeException();
@@ -399,7 +400,7 @@ public class BattleController : AsyncMonoBehaviour
 
             return (damage*levelDeltaMultiplier).Min(0);
         }
-        catch (Exception e)
+        catch (Exception)
         {
             Debug.LogError($"DF1 {sourceLevel} {sourceAttack} {targetLevel} {targetDefense}");
             return 0;
@@ -422,7 +423,7 @@ public class BattleController : AsyncMonoBehaviour
 
             return (damage*levelDeltaMultiplier).Min(0);
         }
-        catch (Exception e)
+        catch (Exception)
         {
             Debug.LogError($"DF2 {sourceLevel} {sourceAttack} {targetLevel} {targetDefense}");
             return 0;

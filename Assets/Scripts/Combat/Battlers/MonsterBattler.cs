@@ -22,8 +22,6 @@ public class MonsterBattler : Battler
     private BattleController BattleController;
     
     #region Control
-    public Dictionary<object, object> BattleDictionary { get; private set; }
-    
     private void Awake()
     {
         LoadBase();
@@ -262,10 +260,10 @@ public class MonsterBattler : Battler
         Destroy(damageInstance);
     }
 
-    private async Task ShowHeal()
-    {
+    // private async Task ShowHeal()
+    // {
         
-    }
+    // }
     
     private async Task DamageFlash()
     {
@@ -301,6 +299,4 @@ public class MonsterBattler : Battler
     }
 
     #endregion
-
-    public RectTransform RectTransform => transform as RectTransform;
 }
