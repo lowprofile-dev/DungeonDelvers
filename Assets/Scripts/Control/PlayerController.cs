@@ -47,7 +47,7 @@ public class PlayerController : AsyncMonoBehaviour
     [HideInEditorMode, ReadOnly] public int PartyLevel = 1;
     [HideInEditorMode, ReadOnly] public int CurrentExp = 0;
     public int CurrentGold = 0;
-    [ShowInInspector] public int ExpToNextLevel => (int)(5 + 10 * PartyLevel + 4 * Mathf.Pow(PartyLevel - 1, 2));
+    [ShowInInspector] public int ExpToNextLevel => expFormula(PartyLevel);
     [HideInEditorMode] public List<Character> Party = new List<Character>();
     [HideInEditorMode] public List<Item> Inventory = new List<Item>();
     [ReadOnly] public GameObject OverworldCharacter;
@@ -176,6 +176,9 @@ public class PlayerController : AsyncMonoBehaviour
     #endregion
 
     #region ControlFunctions
+
+    private int expFormula(int level) => (int)(20 + 10 * PartyLevel + 3 * Mathf.Pow(level - 1, 2) + 3 * Mathf.Pow(level-1, 3));
+
     private void Movement()
     {
         transform.position += new Vector3(hInput * MovementSpeed * Time.fixedDeltaTime, vInput * MovementSpeed * Time.fixedDeltaTime);
@@ -535,4 +538,19 @@ public class PlayerController : AsyncMonoBehaviour
     }
 
     #endregion
+
+    #if UNITY_EDITOR
+
+    [Button]
+    private void _printLevelScale(){
+        var cumulative = 0;
+        var message = "";        
+        for(int i = 1; i < 50; i++){
+            var neededExp = expFormula(i);
+            cumulative += neededExp;
+            message += $"{i} to {i+1}: {neededExp}. Cumulative: {cumulative}\n";
+        }
+        Debug.Log(message);
+    }
+    #endif
 }
