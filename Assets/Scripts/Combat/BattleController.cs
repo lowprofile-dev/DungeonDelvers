@@ -50,6 +50,20 @@ public class BattleController : AsyncMonoBehaviour
         Instance = this;
     }
 
+    public void BeginBattle(EncounterSet encounter, Sprite backgroundSprite = null, bool playAnimation = false){
+        PlayerController.Instance.PauseGame();
+
+        if (backgroundSprite == null)
+            backgroundSprite = GetPlayerGroundSprite();
+
+        battleCanvas = Instantiate(BattleCanvasPrefab).GetComponent<BattleCanvas>();
+        battleCanvas.SetupBattleground(backgroundSprite);
+
+        Party = battleCanvas.SetupParty(PlayerController.Instance.Party);
+        
+
+    }
+
     public void BeginBattle(GameObject encounterPrefab, Sprite backgroundSprite = null, bool playAnimation = false)
     {
         //Pega uma referencia ao Encounter
@@ -216,29 +230,39 @@ public class BattleController : AsyncMonoBehaviour
 
     private int GetExpReward()
     {
-        var partyLevel = PlayerController.Instance.PartyLevel;
-        var enemyEncounterAverageLevel = (float)Enemies
-            .Select(monster => monster.Level)
-            .Average();
+        // var partyLevel = PlayerController.Instance.PartyLevel;
+        // var enemyEncounterAverageLevel = (float)Enemies
+        //     .Select(monster => monster.Level)
+        //     .Average();
 
-        var clampedDelta = Mathf.Clamp(enemyEncounterAverageLevel - partyLevel, -5f, 5f);
+        // var clampedDelta = Mathf.Clamp(enemyEncounterAverageLevel - partyLevel, -5f, 5f);
 
-        float expModifier = 1f;
+        // float expModifier = 1f;
 
-        if (clampedDelta > 0)
-        {
-            expModifier += clampedDelta / 10;
-        }
-        else
-        {
-            expModifier -= clampedDelta / 5;
-        }
+        // if (clampedDelta > 0)
+        // {
+        //     expModifier += clampedDelta / 10;
+        // }
+        // else
+        // {
+        //     expModifier -= clampedDelta / 5;
+        // }
 
-        var modifiedExp = (int) (_encounter.ExpReward * expModifier);
+        // var modifiedExp = (int) (_encounter.ExpReward * expModifier);
         
-        Debug.Log($"Calculated Exp Reward -- Base: {_encounter.ExpReward}, Pt. Level: {partyLevel}, Enc. Level: {enemyEncounterAverageLevel:F}, C. Delta: {clampedDelta}, Modifier: {expModifier}, Final: {modifiedExp}");
+        // Debug.Log($"Calculated Exp Reward -- Base: {_encounter.ExpReward}, Pt. Level: {partyLevel}, Enc. Level: {enemyEncounterAverageLevel:F}, C. Delta: {clampedDelta}, Modifier: {expModifier}, Final: {modifiedExp}");
 
-        return modifiedExp;
+        // return modifiedExp;
+
+        var partyLevel = PlayerController.Instance.PartyLevel;
+
+        var expReward = Enemies
+            .Select(enemy => Mathf.Max(0,enemy.Level-partyLevel))
+            .Sum();
+
+        Debug.Log($"Calculated Exp Reward -- {expReward}");
+
+        return expReward;
     }
     
     async Task BattlerTurn(Battler battler)

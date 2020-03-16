@@ -1,4 +1,9 @@
-Refazer o animador do char pra em vez de esperar não ser mais o nome, esperar 
+Refazer parte do battlecontroller de instanciar inimigos (deixar o layout como tá por enquanto, ver zigzag)
+Arrumar ^^^^ (no momento falta arrumar a instanciação dos inimigos (fazendo o loadbase mas prob alterar ter isso(?)))
+Limpar código do player
+Limpar e reorganizar BattleController, fazer ficar mais fácil a mensagem de fim de batalha.
+Avisar pro player que não ganhou XP porque o nível dos monstros era mais baixo quando for o caso.
+
 
 Completar cidade.
 Começar a fazer os monstros + boss.

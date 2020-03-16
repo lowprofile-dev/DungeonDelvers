@@ -24,7 +24,7 @@ public class MonsterBattler : Battler
     #region Control
     private void Awake()
     {
-        LoadBase();
+        //LoadBase();
     }
 
     private void Start()
