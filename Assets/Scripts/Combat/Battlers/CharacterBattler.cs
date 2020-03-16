@@ -35,7 +35,8 @@ public class CharacterBattler : Battler
         Character = character;
         BattlerName = Character.Base.CharacterName;
         Level = PlayerController.Instance.PartyLevel;
-        Stats = character.Stats;
+        BaseStats = character.BaseStats;
+        BonusStats = character.BonusStats;
         CurrentHp = character.CurrentHp;
         CurrentEp = Stats.InitialEp;
         Skills = character.Skills;

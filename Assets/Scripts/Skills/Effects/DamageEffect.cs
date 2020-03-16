@@ -20,6 +20,9 @@ public class DamageEffect : Effect
             Target = skillInfo.Target
         };
 
+        if (ElementOverride.HasValue)
+            damageCalculationInfo.DamageElement = ElementOverride.Value;
+        
         var damageCalculationPassives = skillInfo.Source
             .PassiveEffects
             .Where(passiveEffect => passiveEffect is IDamageCalculationInfoOverride)
@@ -42,7 +45,7 @@ public class DamageEffect : Effect
 
         targetPassives.ForEach(targetPassive => targetPassive.BeforeReceive(skillInfo, ref damage));
         
-        Debug.Log($"{skillInfo.Source} causou {damage} de dano em {skillInfo.Target}.");
+        Debug.Log($"{skillInfo.Source} causou {damage} de dano em {skillInfo.Target}. Elemento: {damageCalculationInfo.DamageElement}");
 
         skillInfo.Target.CurrentHp -= damage;
         return new DamageEffectResult()
@@ -81,26 +84,6 @@ public class DamageEffect : Effect
     {
         void BeforeReceive(SkillInfo skillInfo, ref int finalDamage);
     }
-}
-
-public enum DamageType
-{
-    Physical,
-    Magical,
-    Pure
-}
-
-public enum Element
-{
-    None,
-    Earth,
-    Fire,
-    Holy,
-    Dark,
-    Ice,
-    Lightning,
-    Water,
-    Wind
 }
 
 

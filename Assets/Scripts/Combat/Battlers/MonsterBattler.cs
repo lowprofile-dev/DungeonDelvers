@@ -41,7 +41,10 @@ public class MonsterBattler : Battler
             MonsterBase.BaseLevel + MonsterBase.LevelVariance + 1);
 
         Level = level;
-        Stats = MonsterBase.Stats + MonsterBase.StatLevelVariance*(Level-MonsterBase.BaseLevel);
+        
+        //Stats = MonsterBase.Stats + MonsterBase.StatLevelVariance*(Level-MonsterBase.BaseLevel);
+        BaseStats = MonsterBase.Stats;
+        BonusStats = MonsterBase.StatLevelVariance * (Level - MonsterBase.BaseLevel);
 
         Skills = MonsterBase.Skills;
         MonsterAi = MonsterBase.MonsterAi;

@@ -177,7 +177,7 @@ public class PlayerController : AsyncMonoBehaviour
 
     #region ControlFunctions
 
-    private int expFormula(int level) => (int)(20 + 10 * PartyLevel + 3 * Mathf.Pow(level - 1, 2) + 3 * Mathf.Pow(level-1, 3));
+    private int expFormula(int level) => (int)(45 + 5 * level + 3 * Math.Pow(level,2));
 
     private void Movement()
     {

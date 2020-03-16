@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  uniqueIdentifier: 
+  uniqueIdentifier: 6
   databaseIgnore: 0
   itemIcon: {fileID: -1259408508766424310, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
@@ -33,7 +33,7 @@ MonoBehaviour:
     MaxHp: 0
     InitialEp: 0
     EpGain: 0
-    PhysAtk: 0
+    PhysAtk: 8
     MagAtk: 0
     PhysDef: 0
     MagDef: 0

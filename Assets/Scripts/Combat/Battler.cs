@@ -22,8 +22,42 @@ public abstract class Battler : AsyncMonoBehaviour
 
     #region Stats
 
-    [FoldoutGroup("Stats")] public Stats Stats { get; protected set; }
-    [TabGroup("Passives"), ShowInInspector, ReadOnly]public virtual List<Passive> Passives { get; protected set; }
+    private bool _statsDirty = true;
+    [FoldoutGroup("Stats"), ShowInInspector] private Stats baseStats;
+    [FoldoutGroup("Stats"), ShowInInspector] private Stats bonusStats;
+    [FoldoutGroup("Stats"), ShowInInspector] private Stats totalStats;
+
+    public Stats BaseStats
+    {
+        get => baseStats;
+        set
+        {
+            _statsDirty = true;
+            baseStats = value;
+        }
+    }
+    public Stats BonusStats
+    {
+        get => bonusStats;
+        set
+        {
+            _statsDirty = true;
+            bonusStats = value;
+        }
+    }
+    public Stats Stats
+    {
+        get
+        {
+            if (_statsDirty)
+            {
+                totalStats = baseStats + bonusStats;
+            }
+            return totalStats;
+        }
+    }
+    
+    [TabGroup("Passives"), ShowInInspector, ReadOnly] public virtual List<Passive> Passives { get; protected set; }
     [TabGroup("Status Effects")] public virtual List<StatusEffectInstance> StatusEffectInstances { get; set; }
     
     public virtual List<PassiveEffect> PassiveEffects =>
@@ -227,6 +261,11 @@ public abstract class Battler : AsyncMonoBehaviour
 
     #region Functions
 
+    public void RecalculateStats()
+    {
+        
+    }
+    
     public async Task ApplyStatusEffect(StatusEffectInstance statusEffectInstance)
     {
         StatusEffectInstances.Add(statusEffectInstance);

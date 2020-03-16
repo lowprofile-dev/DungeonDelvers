@@ -350,8 +350,6 @@ public class BattleController : AsyncMonoBehaviour
 
     public int DamageCalculation(DamageEffect.DamageCalculationInfo damageCalculationInfo, float variance = 0.15f)
     {
-        ////Alguma logica aqui (ou antes) que leva em conta as passivas, pegar se é magico ou fisico do effect
-        //return source.Stats.PhysAtk - target.Stats.PhysDef;
         var damageType = damageCalculationInfo.DamageType;
         var source = damageCalculationInfo.Source;
         var target = damageCalculationInfo.Target;
@@ -381,9 +379,10 @@ public class BattleController : AsyncMonoBehaviour
                 throw new ArgumentOutOfRangeException();
         }
 
+        var elementalMultiplier = target.Stats.ElementalResistance[damageCalculationInfo.DamageElement];
         var finalDamageMultiplier = Random.Range(1 - variance, 1 + variance);
 
-        return (int)(damage*finalDamageMultiplier);
+        return (int)(damage*elementalMultiplier*finalDamageMultiplier);
     }
 
     private float DamageFormula1(int sourceLevel, int sourceAttack, int targetLevel, int targetDefense)
