@@ -21,15 +21,14 @@ public class BattleController : AsyncMonoBehaviour
 {
     public static BattleController Instance { get; private set; }
 
-    [ReadOnly, ShowInInspector] private Encounter _encounter;
+    [ReadOnly, ShowInInspector] private EncounterSet _encounterSet;
     public List<CharacterBattler> Party;
     public List<MonsterBattler> Enemies;
 
     public IEnumerable<Battler> Battlers => Party.Concat<Battler>(Enemies);
 
     public UnityEvent OnBattleEnd;
-
-    //Mandar isso pro battlecanvas. Tudo gráfico é pra tar lá.
+    
     public GameObject BattleCanvasPrefab;
     public BattleCanvas battleCanvas;
 
@@ -50,42 +49,21 @@ public class BattleController : AsyncMonoBehaviour
         Instance = this;
     }
 
-    public void BeginBattle(EncounterSet encounter, Sprite backgroundSprite = null, bool playAnimation = false){
-        PlayerController.Instance.PauseGame();
-
-        if (backgroundSprite == null)
-            backgroundSprite = GetPlayerGroundSprite();
-
-        battleCanvas = Instantiate(BattleCanvasPrefab).GetComponent<BattleCanvas>();
-        battleCanvas.SetupBattleground(backgroundSprite);
-
-        Party = battleCanvas.SetupParty(PlayerController.Instance.Party);
-        
-
-    }
-
-    public void BeginBattle(GameObject encounterPrefab, Sprite backgroundSprite = null, bool playAnimation = false)
+    public void BeginBattle(EncounterSet encounter, Sprite backgroundSprite = null, bool playAnimation = false)
     {
-        //Pega uma referencia ao Encounter
-        _encounter = encounterPrefab.GetComponent<Encounter>();
-        
-        //Pausa o Jogo
+        _encounterSet = encounter;
         PlayerController.Instance.PauseGame();
 
-        //Caso não tenha chão especificado, tenta pegar o chão que o player está
         if (backgroundSprite == null)
             backgroundSprite = GetPlayerGroundSprite();
 
-        //Monta o BattleCanvas
         battleCanvas = Instantiate(BattleCanvasPrefab).GetComponent<BattleCanvas>();
         battleCanvas.SetupBattleground(backgroundSprite);
 
-        //Monta party e inimigos
         Party = battleCanvas.SetupParty(PlayerController.Instance.Party);
-        Enemies = battleCanvas.SetupMonsters(encounterPrefab, out _encounter);
+        Enemies = battleCanvas.SetupMonsters(encounter);
         Party.ForEach((partyMember) => { partyMember.UpdateAnimator(); });
 
-        //Inicia o combate
         Battle = Task.Run(BattleLoop, CancelBattle.Token);
     }
 
@@ -158,11 +136,11 @@ public class BattleController : AsyncMonoBehaviour
     private async Task Win()
     {
         bool finished = false;
-        //roll items
-        var items = new Item[] { };
+
+        var items = _encounterSet.GetItemReward();
 
         var expReward = GetExpReward();
-        var goldReward = _encounter.GoldReward; //GetGoldReward();
+        var goldReward = _encounterSet.GetGoldReward();
         
         await QueueActionAndAwait(() =>
         {
@@ -220,14 +198,6 @@ public class BattleController : AsyncMonoBehaviour
         Debug.Log("Acabou");
     }
 
-    private void CommitChanges()
-    {
-        var playerController = PlayerController.Instance;
-        Party.ForEach(partyMember => partyMember.CommitChanges());
-        playerController.GainEXP(GetExpReward());
-        playerController.CurrentGold += _encounter.GoldReward;
-    }
-
     private int GetExpReward()
     {
         // var partyLevel = PlayerController.Instance.PartyLevel;
@@ -254,6 +224,11 @@ public class BattleController : AsyncMonoBehaviour
 
         // return modifiedExp;
 
+        if (_encounterSet.overrideExpGain.HasValue)
+        {
+            return _encounterSet.overrideExpGain.Value;
+        }
+        
         var partyLevel = PlayerController.Instance.PartyLevel;
 
         var expReward = Enemies

@@ -164,6 +164,8 @@ public class SkillTargeter : SerializedMonoBehaviour
                         totalPosition += position;
                     }
 
+                    totalPosition = new Vector3(totalPosition.x,totalPosition.y,0);
+                    
                     var averagePosition = totalPosition / group.Length;
                     var deltaPosition = averagePosition - mousePosition;
                     var distance = deltaPosition.magnitude;

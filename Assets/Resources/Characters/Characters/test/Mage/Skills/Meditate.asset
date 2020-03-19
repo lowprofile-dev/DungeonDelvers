@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: a7a331baa381cd04da600f2aa41a5a8a, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -26,10 +27,10 @@ MonoBehaviour:
       Data: 0|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 1|GainApEffect, Assembly-CSharp
+      Data: 1|DispelStatusEffectTypeEffect, Assembly-CSharp
     - Name: ElementOverride
       Entry: 7
       Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
@@ -39,9 +40,30 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: ApAmount
+    - Name: DispelType
       Entry: 3
-      Data: 40
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|ApplyStatusEffectEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: StatusEffect
+      Entry: 10
+      Data: 0
+    - Name: turnDuration
+      Entry: 3
+      Data: 5
     - Name: 
       Entry: 8
       Data: 
@@ -53,7 +75,7 @@ MonoBehaviour:
       Data: 
     - Name: CriticalEffects
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+      Data: 3|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -85,7 +107,7 @@ MonoBehaviour:
   SkillDescription: Generate AP
   Target: 6
   TrueHit: 1
-  CanBeSilenced: 0
+  CanBeSilenced: 1
   CanCritical: 0
   AccuracyModifier: 0
   CriticalModifier: 0

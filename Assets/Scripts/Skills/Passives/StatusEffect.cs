@@ -29,7 +29,8 @@ public class StatusEffect : SerializableAsset
     public enum StatusEffectType
     {
         None,
-        Enchantment
+        Enchantment,
+        Medidate
         //Poison
         //Sleep
         //etc

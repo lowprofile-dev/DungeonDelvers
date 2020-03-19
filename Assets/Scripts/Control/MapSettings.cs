@@ -134,6 +134,6 @@ public class MapEncounterSet
 
 public struct MapEncounter
 {
-    public GameObject Encounter;
+    public EncounterSet Encounter;
     public int Chance;
 }

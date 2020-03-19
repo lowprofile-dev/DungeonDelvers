@@ -16,6 +16,7 @@ public class BattleCanvas : AsyncMonoBehaviour
     public Image Battleground;
     public CharacterActionMenu CharacterActionMenu;
     public RewardPanel RewardPanel;
+    public MonsterLayoutManager MonsterLayoutManager;
 
     public GameObject DamagePrefab;
     public GameObject ActionArrowPrefab;
@@ -23,12 +24,12 @@ public class BattleCanvas : AsyncMonoBehaviour
     public GameObject TargetArrowPrefab;
     private List<GameObject> targetArrows = new List<GameObject>();
     public BattleInfoPanel battleInfoPanel;
-    
+
     [ReadOnly] public CharacterBattler currentCharacter;
     private readonly EventWaitHandle WaitHandle = new AutoResetEvent(false);
     private Turn Turn;
     private GameObject lastSelect = null;
-    
+
     private void Start()
     {
         actionArrow = Instantiate(ActionArrowPrefab, transform);
@@ -56,7 +57,7 @@ public class BattleCanvas : AsyncMonoBehaviour
             lastSelect = EventSystem.current.currentSelectedGameObject;
         }
     }
-    
+
     public List<CharacterBattler> SetupParty(List<Character> characters)
     {
         var characterBattlers = new List<CharacterBattler>();
@@ -66,13 +67,33 @@ public class BattleCanvas : AsyncMonoBehaviour
         {
             var parentRect = PartyBattlerHolders[index++];
             var characterBattlerObject = Instantiate(character.Base.BattlerPrefab, parentRect);
-            ((RectTransform) characterBattlerObject.transform).sizeDelta = new Vector2(200,200);
+            ((RectTransform) characterBattlerObject.transform).sizeDelta = new Vector2(200, 200);
             var characterBattler = characterBattlerObject.GetComponent<CharacterBattler>();
             characterBattler.Create(character);
             characterBattlers.Add(characterBattler);
         });
 
         return characterBattlers;
+    }
+
+    public List<MonsterBattler> SetupMonsters(EncounterSet encounterSet)
+    {
+        var monsters = encounterSet.BuildMonsters();
+
+        foreach (var monster in monsters)
+        {
+            var tf = monster.RectTransform;
+            
+            tf.parent = MonsterPanel;
+            tf.localRotation = Quaternion.Euler(-55,0,0);
+            tf.localPosition = new Vector3(0,0,0);
+        }
+
+        MonsterLayoutManager.SetMonsters(monsters);
+        MonsterLayoutManager.SetLayout(encounterSet.Layout);
+        MonsterLayoutManager.OrderRects();
+        
+        return monsters;
     }
 
     public List<MonsterBattler> SetupMonsters(GameObject encounterPrefab, out Encounter encounter)

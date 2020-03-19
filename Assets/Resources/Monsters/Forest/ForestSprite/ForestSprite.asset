@@ -27,6 +27,19 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: MonsterDrops
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Monster+IMonsterDrop, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
   MonsterName: Forest Sprite
@@ -35,31 +48,50 @@ MonoBehaviour:
   BaseLevel: 2
   LevelVariance: 1
   Stats:
-    MaxHp: 55
+    MaxHp: 40
     InitialEp: 15
     EpGain: 10
-    PhysAtk: 25
-    MagAtk: 25
-    PhysDef: 19
-    MagDef: 19
+    PhysAtk: 16
+    MagAtk: 16
+    PhysDef: 15
+    MagDef: 15
     Speed: 18
     Accuracy: 0.95
     Evasion: -0.05
     CritChance: 0
     CritAvoid: -0.05
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: -1
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
   StatLevelVariance:
-    MaxHp: 9
+    MaxHp: 7
     InitialEp: 0
     EpGain: 0
-    PhysAtk: 6
-    MagAtk: 4
-    PhysDef: 4
-    MagDef: 4
-    Speed: 3
+    PhysAtk: 4
+    MagAtk: 3
+    PhysDef: 3
+    MagDef: 3
+    Speed: 2
     Accuracy: 0
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
   Skills:
   - {fileID: 11400000, guid: e07bc40db4e43524f97da1022fda3f16, type: 2}
   Passives: []
+  goldReward: {x: 4, y: 8}

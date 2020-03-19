@@ -35,8 +35,8 @@ MonoBehaviour:
       Entry: 7
       Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 6
-      Data: 
+      Entry: 3
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -163,13 +163,13 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
+  uniqueIdentifier: 7
   databaseIgnore: 0
   SkillName: Fireball
   SkillIcon: {fileID: 7790395862663275768, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
   EpCost: 70
-  Element: 0
+  Element: 2
   SkillDescription: Throw a weak fireball at an enemy.
   Target: 1
   TrueHit: 0

@@ -17,8 +17,8 @@ public class MonsterBattler : Battler
 {
     [ReadOnly] public Encounter Encounter;
     [OnValueChanged("LoadBase")] public Monster MonsterBase;
-    [SerializeField, ReadOnly] private GameObject monsterBattler;
-    [SerializeField, ReadOnly] private Image image;
+    [ReadOnly] public GameObject monsterBattler;
+    [ReadOnly] public Image image;
     private BattleController BattleController;
     
     #region Control
@@ -32,6 +32,39 @@ public class MonsterBattler : Battler
         BattleController = BattleController.Instance;
     }
 
+    public void LoadEncounterMonster(EncounterMonster monster)
+    {
+        MonsterBase = monster.Monster;
+
+        var minLevel = monster.MinLevel;
+        var maxLevel = monster.MaxLevel;
+
+        var level = GameController.Instance.Random.Next(minLevel, maxLevel);
+
+        Level = level;
+
+        BaseStats = MonsterBase.Stats;
+        BonusStats = MonsterBase.StatLevelVariance * (Level - MonsterBase.BaseLevel);
+
+        Skills = MonsterBase.Skills; //Ver unlocks
+        MonsterAi = MonsterBase.MonsterAi;
+        
+        monsterBattler = Instantiate(MonsterBase.MonsterBattler, RectTransform);
+        image = monsterBattler.GetComponent<Image>();
+        // monsterBattler = gameObject;
+        // image = GetComponent<Image>();
+
+        CurrentHp = Stats.MaxHp;
+        CurrentEp = Stats.InitialEp;
+        
+        BattleDictionary = new Dictionary<object, object>();
+        Passives = MonsterBase.Passives;
+        StatusEffectInstances = new List<StatusEffectInstance>();
+        BattlerName = MonsterBase.MonsterName;
+        
+        Debug.Log($"Inicializado Lv.{level} {BattlerName}");
+    }
+    
     public void LoadBase()
     {
         if (MonsterBase == null)

@@ -392,6 +392,7 @@
               <e p="MonsterBattler.cs" t="Include" />
             </e>
             <e p="Encounter.cs" t="Include" />
+            <e p="EncounterSet.cs" t="Include" />
             <e p="IBattler.cs" t="Include" />
             <e p="Monster.cs" t="Include" />
             <e p="MonsterAI" t="Include">
@@ -523,6 +524,7 @@
                 <e p="DefendPassiveEffect.cs" t="Include" />
                 <e p="DoTPassiveEffect.cs" t="Include" />
                 <e p="EnchantAttackPassiveEffect.cs" t="Include" />
+                <e p="MedidatePassiveEffect.cs" t="Include" />
                 <e p="PassiveEffect.cs" t="Include" />
                 <e p="RegenPassiveEffect.cs" t="Include" />
                 <e p="SetAnimatorVariablePassiveEffect.cs" t="Include" />
@@ -547,6 +549,7 @@
               <e p="BattleInfoPanel.cs" t="Include" />
               <e p="CharacterActionMenu.cs" t="Include" />
               <e p="DamageText.cs" t="Include" />
+              <e p="MonsterLayoutManager.cs" t="Include" />
               <e p="RewardPanel.cs" t="Include" />
               <e p="SkillActionMenu.cs" t="Include" />
               <e p="SkillButton.cs" t="Include" />

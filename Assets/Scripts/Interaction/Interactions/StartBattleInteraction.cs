@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class StartBattleInteraction : Interaction
 {
-    public GameObject encounterPrefab;
+    public EncounterSet encounterSet;
     public Sprite battlegroundSprite;
     private bool finished;
     
@@ -11,7 +11,7 @@ public class StartBattleInteraction : Interaction
     {
         finished = false;
         BattleController.Instance.OnBattleEnd.AddListener(FinishStartBattleInteraction);
-        BattleController.Instance.BeginBattle(encounterPrefab, battlegroundSprite);
+        BattleController.Instance.BeginBattle(encounterSet, battlegroundSprite);
     }
 
     private void FinishStartBattleInteraction()

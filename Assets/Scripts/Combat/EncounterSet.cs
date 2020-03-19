@@ -1,26 +1,63 @@
 using System;
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 
 [CreateAssetMenu(menuName = "EncounterSet")]
 public class EncounterSet : SerializableAsset {
     public List<EncounterMonster> EncounterMonsters = new List<EncounterMonster>();
     public EncounterLayout Layout;
+    public int? overrideExpGain;
+    public int? overrideGoldGain;
+    public List<ItemBase> overrideItemDrops; //Refazer pra permitir consumivel futuramente, usando IMonsterDrop(?)
+    
+    public List<MonsterBattler> BuildMonsters()
+    {
+        var battlers = new List<MonsterBattler>();
 
-    public List<MonsterBattler> LoadMonstersInto(RectTransform encounterBase){
-        var monsters = new List<MonsterBattler>();
-
-        foreach(var encounterMonster in EncounterMonsters){
-            var monsterBattler = Instantiate(encounterMonster.Monster.MonsterBattler, encounterBase);
-            var rect = monsterBattler.GetComponent<RectTransform>();
-            rect.transform.rotation = Quaternion.Euler(50,0,0);
-            var monster = monsterBattler.AddComponent<MonsterBattler>();
-            monster.LoadBase(encounterMonster.Monster);
+        foreach (var encounterMonster in EncounterMonsters)
+        {
+            var battler = new GameObject(encounterMonster.Monster.MonsterName);
+            battler.AddComponent<RectTransform>();
+            var monsterBattler = battler.AddComponent<MonsterBattler>();
+            monsterBattler.LoadEncounterMonster(encounterMonster);
+            battlers.Add(monsterBattler);
+            // var battler = Instantiate(encounterMonster.Monster.MonsterBattler);
+            // var monsterBattler = battler.AddComponent<MonsterBattler>();
+            // monsterBattler.LoadEncounterMonster(encounterMonster);
+            // battlers.Add(monsterBattler);
         }
+
+        return battlers;
     }
 
+    public int GetGoldReward()
+    {
+        if (overrideGoldGain.HasValue)
+            return overrideGoldGain.Value;
+
+        return EncounterMonsters.Sum(encounterMonster => encounterMonster.Monster.RollGold());
+    }
+
+    public IList<Item> GetItemReward()
+    {
+        if (overrideItemDrops != null)
+            return overrideItemDrops.Select(ItemInstanceBuilder.BuildInstance).ToList();
+
+        var list = new List<Item>();
+
+        foreach (var encounterMonster in EncounterMonsters)
+        {
+            var monsterDrop = encounterMonster.Monster.RollItems();
+            list.AddRange(monsterDrop);
+        }
+
+        return list;
+    }
+    
     public enum EncounterLayout {
-        ZigZag
+        ZigZag,
+        Line
     }
 }
 
