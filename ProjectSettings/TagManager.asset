@@ -7,6 +7,8 @@ TagManager:
   - PG_Floor
   - PG_Wall
   - PG_Ceiling
+  - MainGrid
+  - PG_Objects
   layers:
   - Default
   - TransparentFX

@@ -8570,7 +8570,7 @@ GameObject:
   - component: {fileID: 7951985865218292377}
   m_Layer: 0
   m_Name: Objects2
-  m_TagString: Untagged
+  m_TagString: PG_Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9983,7 +9983,7 @@ GameObject:
   - component: {fileID: 2282567219906292024}
   m_Layer: 0
   m_Name: Objects1
-  m_TagString: Untagged
+  m_TagString: PG_Objects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

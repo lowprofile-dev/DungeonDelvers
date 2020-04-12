@@ -59,7 +59,7 @@
             <e p="3rdParty" t="Include">
               <e p="MiniJSON.cs" t="Include" />
             </e>
-            <e p="Animation" t="Include">
+            <e p="animation" t="Include">
               <e p="Animation.cs" t="Include" />
               <e p="AnimationState.cs" t="Include" />
               <e p="BaseTimelineState.cs" t="Include" />
@@ -264,7 +264,7 @@
                 <e p="ScreenText.cs" t="Include" />
               </e>
             </e>
-            <e p="Readme.txt" t="Include" />
+            <e p="README.txt" t="Include" />
             <e p="Simple 2D" t="Include">
               <e p="Scripts" t="Include">
                 <e p="PlayerController2D.cs" t="Include" />
@@ -324,7 +324,7 @@
                 <e p="VectorIntFormatters.cs" t="Include" />
               </e>
             </e>
-            <e p="Readme.txt" t="Include" />
+            <e p="README.txt" t="Include" />
           </e>
         </e>
         <e p="Resources" t="Include">
@@ -340,11 +340,12 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="_Debug" t="Include">
+            <e p="CreateCameraCoveringMap.cs" t="Include" />
             <e p="GoToScene.cs" t="Include" />
             <e p="test1.cs" t="Include" />
             <e p="testtogglepixelperfect.cs" t="Include" />
           </e>
-          <e p="Animation" t="Include">
+          <e p="animation" t="Include">
             <e p="AnimationObject.cs" t="Include" />
             <e p="AnimatorOverrides" t="Include">
               <e p="MageCharacterBattlerAnimator.cs" t="Include" />
@@ -416,6 +417,7 @@
           <e p="Extensions" t="Include">
             <e p="DDExtensions.cs" t="Include" />
             <e p="SkredUtils.cs" t="Include" />
+            <e p="SpecialTextMatcher.cs" t="Include" />
           </e>
           <e p="Generation" t="Include">
             <e p="MapTile.cs" t="Include" />

@@ -1,4 +1,7 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using UnityEngine;
 
 public class DispelStatusEffectTypeEffect : Effect
 {
@@ -10,6 +13,12 @@ public class DispelStatusEffectTypeEffect : Effect
 
         var targetStatusEffectsOfType =
             target.StatusEffectInstances.Where(instance => instance.StatusEffect.Type == DispelType).ToArray();
+
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        var statusEffectNames = targetStatusEffectsOfType.Select(sE => sE.StatusEffect.StatusEffectName);
+        var message = string.Join(", ", statusEffectNames);
+        Debug.Log($"Dispelled status effects: {message}");
+#endif
 
         foreach (var instance in targetStatusEffectsOfType)
         {

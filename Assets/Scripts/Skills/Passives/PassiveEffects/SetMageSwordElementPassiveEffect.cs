@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class SetMageSwordElementPassiveEffect : PassiveEffect, IOnApplyPassiveEffect
 {
     public Element Element;

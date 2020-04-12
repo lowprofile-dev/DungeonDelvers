@@ -36,6 +36,7 @@ public class MapSettings : SerializedMonoBehaviour
     public Color MinimapFloorColor;
     
     public List<MapTile> MapTiles = new List<MapTile>();
+    public Dictionary<int, bool> MapTileSeen = new Dictionary<int, bool>();
     
     public void Awake()
     {

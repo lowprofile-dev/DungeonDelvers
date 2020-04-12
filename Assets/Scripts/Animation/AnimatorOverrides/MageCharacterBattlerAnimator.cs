@@ -13,11 +13,18 @@ public class MageCharacterBattlerAnimator : CharacterBattlerAnimator
         {
             animationElement = value;
             if (EquippedWeaponType == WeaponBase.WeaponType.Sword1H){
-                var controller = ElementControllers.Find(c => c.Element == value).RuntimeAnimatorController;
-                Animator.runtimeAnimatorController = controller;
-                UpdateAnimator();
+                GameController.Instance.QueueAction(UpdateElement);
             }
         }
+    }
+
+    private void UpdateElement()
+    {
+        var controller = ElementControllers.Find(c => c.Element == animationElement).RuntimeAnimatorController;
+        if (controller == Animator.runtimeAnimatorController)
+            return;
+        Animator.runtimeAnimatorController = controller;
+        UpdateAnimator();
     }
     
     public List<ElementController> ElementControllers = new List<ElementController>();

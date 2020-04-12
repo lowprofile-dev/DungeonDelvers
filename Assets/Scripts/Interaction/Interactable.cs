@@ -13,9 +13,6 @@ public class Interactable : SerializedMonoBehaviour
     public List<Interaction> StartupInteractions = new List<Interaction>();
     public List<Interaction> Interactions = new List<Interaction>();
     [ReadOnly] public bool IsInteracting = false;
-    
-    //public Dictionary<string, int> Locals = new Dictionary<string, int>();
-
     private void Awake()
     {
         var originalName = name;
@@ -42,26 +39,7 @@ public class Interactable : SerializedMonoBehaviour
 
     private void Start()
     {
-        //ReloadLocals();
         StartCoroutine(_Interact(StartupInteractions, null));
-    }
-
-    private void ReloadLocals()
-    {
-//        var key = $"LOCAL{name}_";
-//        var keyLength = key.Length;
-//
-//        var locals = GameController.Instance.Globals.Keys.Where(globalKey => globalKey.StartsWith(key));
-//
-//        foreach (var local in locals)
-//        {
-//            var value = GameController.GetGlobal(local);
-//            var localName = local.Remove(0, keyLength);
-//
-//            Locals[localName] = value;
-//
-//            Debug.Log($"Reloading local {localName} ({local})");
-//        }
     }
 
     private string LocalKeyToGlobalKey(string localKey)

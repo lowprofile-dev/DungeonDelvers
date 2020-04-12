@@ -17,6 +17,9 @@ using UnityEngine.UI;
 public class TilemapManager : SerializedMonoBehaviour
 {
     public RuntimeDungeon Dungeon;
+    public Tilemap[] Tilemaps;
+    public Transform CopyableParent;
+    public Transform MoveableParent;
     public int? ForcedSeed;
     private TilesetMerger _tilesetMerger;
 
@@ -24,6 +27,9 @@ public class TilemapManager : SerializedMonoBehaviour
     
     public void Start()
     {
+        Tilemaps = GameObject.FindGameObjectWithTag("MainGrid").transform.Find("Main Tilemaps")
+            ?.GetComponentsInChildren<Tilemap>();
+        
         _tilesetMerger = GetComponent<TilesetMerger>();
         
         if (Dungeon != null)
@@ -52,7 +58,7 @@ public class TilemapManager : SerializedMonoBehaviour
             Debug.Log($"Generated dungeon in {stopwatch.ElapsedMilliseconds}ms");
         }
         
-        _tilesetMerger.MergeTilemaps(true);
+        _tilesetMerger.MergeTilemaps(Tilemaps, MoveableParent,CopyableParent);
 
          var bitmapStopwatch = Stopwatch.StartNew();
         
@@ -72,9 +78,9 @@ public class TilemapManager : SerializedMonoBehaviour
     [Button("Try Create Bitmap")]
     public void CreateBitmap()
     {
-        var wallTilemap = _tilesetMerger.MainTilemaps.First(tilemap => tilemap.CompareTag("PG_Wall"));
-        var floorTilemap = _tilesetMerger.MainTilemaps.First(tilemap => tilemap.CompareTag("PG_Floor"));
-        var ceilingTilemap = _tilesetMerger.MainTilemaps.First(tilemap => tilemap.CompareTag("PG_Ceiling"));
+        var wallTilemap = Tilemaps.First(tilemap => tilemap.CompareTag("PG_Wall"));
+        var floorTilemap = Tilemaps.First(tilemap => tilemap.CompareTag("PG_Floor"));
+        var ceilingTilemap = Tilemaps.First(tilemap => tilemap.CompareTag("PG_Ceiling"));
 
         var tilemaps = new[] {floorTilemap, wallTilemap, ceilingTilemap};
         var colors = new[] {MapSettings.Instance.MinimapFloorColor, MapSettings.Instance.MinimapWallColor, MapSettings.Instance.MinimapWallColor};
