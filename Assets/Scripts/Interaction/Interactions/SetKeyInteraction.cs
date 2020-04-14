@@ -1,66 +1,33 @@
+﻿
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
+[InteractableNode(defaultNodeName = "Key/Set")]
 public class SetKeyInteraction : Interaction
 {
-    public ValueInteractableCondition.ValueScope Scope;
-    public Operation operation;
-    public string Key = "";
-    public int Value = 0;
-    public override void Run(Interactable source)
+    [Input] public KeyType KeyType;
+    [Input] public string Key;
+    [Input] public int Value;
+    
+    public override IEnumerator PerformInteraction(Interactable source)
     {
-        if (Scope == ValueInteractableCondition.ValueScope.Global)
-        {
-            switch (operation)
-            {
-                case Operation.Set:
-                    GameController.SetGlobal(Key,Value);
-                    break;
-                case Operation.Increase:
-                    GameController.SetGlobal(Key,GameController.GetGlobal(Key)+Value);
-                    break;    
-                case Operation.Decrease:
-                    GameController.SetGlobal(Key,GameController.GetGlobal(Key)-Value);
-                    break;
-            }
-        }
-        else
-        {
-            switch (operation)
-            {
-                case Operation.Set:
-                    source.SetLocal(Key, Value);
-                    break;
-                case Operation.Increase:
-                    source.SetLocal(Key, source.GetLocal(Key) + Value);
-                    break;
-                case Operation.Decrease:
-                    source.SetLocal(Key, source.GetLocal(Key) - Value);
-                    break;
-            }
-            //var localKey = $"{source.name}_{Key}";
-            //switch (operation)
-            //{
-            //    case Operation.Set:
-            //        GameController.SetGlobal(localKey, Value);
-            //        break;
-            //    case Operation.Increase:
-            //        GameController.SetGlobal(localKey, GameController.GetGlobal(localKey) + Value);
-            //        break;
-            //    case Operation.Decrease:
-            //        source.SetLocal(localKey, GameController.GetGlobal(localKey) - Value);
-            //        break;
-            //}
-        }
-    }
+        var keyType = GetInputValue("KeyType", KeyType);
+        var key = GetInputValue("Key", Key);
+        var value = GetInputValue("Value", Value);
 
-    public override IEnumerator Completion => null;
-
-    public enum Operation
-    {
-        Set,
-        Increase,
-        Decrease
+        switch (keyType)
+        {
+            case KeyType.Global:
+                GameController.SetGlobal(key,value);
+                break;
+            case KeyType.Local:
+                source.SetLocal(key,Value);
+                break;
+            case KeyType.Instance:
+                source.SetInstance(key,Value);
+                break;
+        }
+        
+        yield break;
     }
 }
+

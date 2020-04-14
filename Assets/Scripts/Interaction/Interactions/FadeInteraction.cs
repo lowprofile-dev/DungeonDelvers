@@ -1,75 +1,71 @@
-﻿using System.Collections;
-using TMPro;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
+[InteractableNode(defaultNodeName = "Fade Interaction")]
 public class FadeInteraction : Interaction
 {
-    public Color FadeColor;
-    public float Duration = 1f;
-    public FadeMode fadeMode;
+    [Input] public Color fadeColor = Color.black;
+    [Input] public float duration = 1f;
+    [Input] public FadeMode fadeMode = FadeMode.Out;
     
-    public override void Run(Interactable source)
+    public override IEnumerator PerformInteraction(Interactable source)
     {
-        if (fadeMode == FadeMode.Out)
+        var mode = GetInputValue("fadeMode", fadeMode);
+        var color = GetInputValue("fadeColor", fadeColor);
+        var fadeDuration = GetInputValue("duration", duration);
+        Image fade;
+
+        try
         {
-            var fade = MainCanvas.Instance.FadeImage;
-            fade.color = FadeColor;
+            fade = MainCanvas.Instance.FadeImage;
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        
+        if (mode == FadeMode.Out)
+        {
+            var elapsedTime = 0f;
             fade.enabled = true;
-        }
-    }
 
-    private IEnumerator FadeInCoroutine()
-    {
-        if (MainCanvas.Instance == null)
-            yield break;
-        
-        var elapsedTime = 0f;
-        var fade = MainCanvas.Instance.FadeImage;
-
-        while (fade.enabled && fade.color.a > 0)
-        {
-            var frameTime = Time.deltaTime;
-            elapsedTime += frameTime;
-            var framePercentage = 1 - (elapsedTime / Duration);
-            var newColor = new Color(FadeColor.r,FadeColor.g,FadeColor.b,framePercentage);
-            fade.color = newColor;
+            while (fade.enabled && fade.color.a < 1)
+            {
+                var frameTime = Time.deltaTime;
+                elapsedTime += frameTime;
+                var framePercentage = elapsedTime / fadeDuration;
+                var newColor = new Color(color.r,color.g,color.b,framePercentage);
+                fade.color = newColor;
             
-            yield return null;
-        }
-
-        fade.enabled = false;
-    }
-
-    private IEnumerator FadeOutCoroutine()
-    {
-        var elapsedTime = 0f;
-        var fade = MainCanvas.Instance.FadeImage;
-
-        while (fade.enabled && fade.color.a < 1)
-        {
-            var frameTime = Time.deltaTime;
-            elapsedTime += frameTime;
-            var framePercentage = elapsedTime / Duration;
-            var newColor = new Color(FadeColor.r,FadeColor.g,FadeColor.b,framePercentage);
-            fade.color = newColor;
-            
-            yield return null;
-        }
+                yield return null;
+            }
         
-        fade.color = new Color(FadeColor.r,FadeColor.g,FadeColor.b, 1);
-    }
-
-    public override IEnumerator Completion
-    {
-        get
+            fade.color = new Color(color.r,color.g,color.b, 1);
+        }
+        else if (mode == FadeMode.In)
         {
-            if (fadeMode == FadeMode.In)
-                yield return FadeInCoroutine();
-            else
-                yield return FadeOutCoroutine();
+            fade.color = color;
+
+            var elapsedTime = 0f;
+
+            while (fade.enabled && fade.color.a > 0)
+            {
+                var frameTime = Time.deltaTime;
+                elapsedTime += frameTime;
+                var framePercentage = 1 - (elapsedTime / fadeDuration);
+                var newColor = new Color(color.r,color.g,color.b,framePercentage);
+                fade.color = newColor;
+            
+                yield return null;
+            }
+
+            fade.enabled = false;
         }
     }
 
+    [Serializable]
     public enum FadeMode
     {
         Out,

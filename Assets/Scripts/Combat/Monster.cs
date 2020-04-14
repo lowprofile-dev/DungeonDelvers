@@ -3,11 +3,29 @@ using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(menuName = "Monster")]
 public class Monster : SerializableAsset
 {
+#if UNITY_EDITOR
+    [AssetIcon,SerializeField,HideInInspector] private Sprite _assetIcon;
+    private void _updateAssetIcon()
+    {
+        try
+        {
+            _assetIcon = MonsterBattler.GetComponent<Image>().sprite;
+        }
+        catch
+        {
+            // ignored
+        }
+    }
+#endif
     public string MonsterName;
+    #if UNITY_EDITOR
+    [OnValueChanged("_updateAssetIcon")]
+    #endif
     public GameObject MonsterBattler;
     public int BaseLevel;
     public int LevelVariance;

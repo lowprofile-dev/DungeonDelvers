@@ -235,12 +235,12 @@ public class PlayerController : AsyncMonoBehaviour
         if (ray.collider != null)
         {
             var interactableObject = ray.collider.gameObject;
-            Debug.Log($"Interacting with {interactableObject.name}");
             var interactable = interactableObject.GetComponent<Interactable>();
 
             if (interactable == null || interactable.interactableType != Interactable.InteractableType.Action)
                 return;
 
+            Debug.Log($"Interacting with {interactableObject.name}");
             interactable.Interact();
         }
         else

@@ -121,6 +121,60 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &8849783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fcd92d6237e471db815a3bd64231bf7, type: 3}
+  m_Name: Teleport Interaction
+  m_EditorClassIdentifier: 
+  graph: {fileID: 398271306}
+  position: {x: 168, y: -72}
+  ports:
+    keys:
+    - Target
+    - Entry
+    - Exit
+    values:
+    - _fieldName: Target
+      _node: {fileID: 8849783}
+      _typeQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Entry
+      _node: {fileID: 8849783}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Exit
+        node: {fileID: 1181647305}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Exit
+      _node: {fileID: 8849783}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 1514809073}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  Target: {fileID: 1009270318}
 --- !u!1 &26292856
 GameObject:
   m_ObjectHideFlags: 0
@@ -7122,6 +7176,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &26739632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a360069844d33aa47917c47b63c0935d, type: 3}
+  m_Name: Interaction Entry Point
+  m_EditorClassIdentifier: 
+  graph: {fileID: 1068060352}
+  position: {x: -520, y: -72}
+  ports:
+    keys:
+    - Entry
+    values:
+    - _fieldName: Entry
+      _node: {fileID: 26739632}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 552954684}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entryPointType: 1
 --- !u!1 &244868697
 GameObject:
   m_ObjectHideFlags: 0
@@ -14272,6 +14357,7 @@ GameObject:
   - component: {fileID: 249992620}
   - component: {fileID: 249992619}
   - component: {fileID: 249992618}
+  - component: {fileID: 249992621}
   m_Layer: 8
   m_Name: Warp
   m_TagString: Untagged
@@ -14294,111 +14380,26 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 2120431616}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartupInteractions
+    - Name: InstanceVars
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Interaction, Assembly-CSharp]],
-        mscorlib
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 12
       Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Interactions
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Interaction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: 2|FadeInteraction, Assembly-CSharp
-    - Name: SkipWaiting
-      Entry: 5
-      Data: false
-    - Name: FadeColor
-      Entry: 7
-      Data: UnityEngine.Color, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Duration
-      Entry: 4
-      Data: 0.5
-    - Name: fadeMode
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|TeleportInteraction, Assembly-CSharp
-    - Name: SkipWaiting
-      Entry: 5
-      Data: false
-    - Name: target
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|FadeInteraction, Assembly-CSharp
-    - Name: SkipWaiting
-      Entry: 5
-      Data: false
-    - Name: FadeColor
-      Entry: 7
-      Data: UnityEngine.Color, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Duration
-      Entry: 4
-      Data: 0.5
-    - Name: fadeMode
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -14446,14 +14447,38 @@ Transform:
   m_Children:
   - {fileID: 2120431616}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &347851812 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 435624883052052424, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
-    type: 3}
-  m_PrefabInstance: {fileID: 4691186421468384359}
+--- !u!114 &249992621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249992617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f34515f83d543d5b51cce2c3a28138f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  graph: {fileID: 1068060352}
+--- !u!114 &398271306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dfa6f9c361dd7a45bcdca638c3f3c3e, type: 3}
+  m_Name: DoorInteractable-graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 1979892233}
+  - {fileID: 1181647305}
+  - {fileID: 1514809073}
+  - {fileID: 8849783}
 --- !u!1 &429166175
 GameObject:
   m_ObjectHideFlags: 0
@@ -14705,7 +14730,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 9
-      m_TileSpriteIndex: 9
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14714,7 +14739,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 2
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14750,7 +14775,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 7
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14759,7 +14784,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14777,7 +14802,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14858,6 +14883,14 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: c5a0bc9527cf9884c9f207cfb78fbde7, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 9248d7542d3f17540bd1649fe938eccb, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 2
     m_Data: {fileID: 5593651271722820242, guid: b486ad3ebd7ab224bb003c851fe858a8,
@@ -14865,25 +14898,33 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 1307447398266272689, guid: b486ad3ebd7ab224bb003c851fe858a8,
       type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -4350136063735392651, guid: b486ad3ebd7ab224bb003c851fe858a8,
-      type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 3673868592966796235, guid: b486ad3ebd7ab224bb003c851fe858a8,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 2
     m_Data: {fileID: 2195060215880133258, guid: b486ad3ebd7ab224bb003c851fe858a8,
       type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 6943024585288776146, guid: b486ad3ebd7ab224bb003c851fe858a8,
       type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -1617666379563950318, guid: b486ad3ebd7ab224bb003c851fe858a8,
+      type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -9114906903399696380, guid: b486ad3ebd7ab224bb003c851fe858a8,
       type: 3}
   - m_RefCount: 1
+    m_Data: {fileID: 3673868592966796235, guid: b486ad3ebd7ab224bb003c851fe858a8,
+      type: 3}
+  - m_RefCount: 1
     m_Data: {fileID: 222795694624161427, guid: b486ad3ebd7ab224bb003c851fe858a8, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -1617666379563950318, guid: b486ad3ebd7ab224bb003c851fe858a8,
+    m_Data: {fileID: -4350136063735392651, guid: b486ad3ebd7ab224bb003c851fe858a8,
       type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 8422468454431802147, guid: b486ad3ebd7ab224bb003c851fe858a8,
@@ -14914,7 +14955,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -2, y: -10, z: 0}
-  m_Size: {x: 111, y: 11, z: 1}
+  m_Size: {x: 111, y: 12, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -14969,80 +15010,26 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 5457389356766954974, guid: 987eb3dfcca3ea48e93d20d121103e54, type: 3}
-    - {fileID: 430233336}
-    - {fileID: 7640681385663065397, guid: 2014795010362a74c8334521ee309dfd, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartupInteractions
+    - Name: InstanceVars
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Interaction, Assembly-CSharp]],
-        mscorlib
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 12
       Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Interactions
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Interaction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 3
-    - Name: 
-      Entry: 7
-      Data: 2|MessageBoxInteraction, Assembly-CSharp
-    - Name: SkipWaiting
-      Entry: 5
-      Data: false
-    - Name: Text
-      Entry: 1
-      Data: Hello
-    - Name: MessageBoxPrefab
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|OpenShopInteraction, Assembly-CSharp
-    - Name: SkipWaiting
-      Entry: 5
-      Data: false
-    - Name: shop
-      Entry: 10
-      Data: 1
-    - Name: ShopMenu
-      Entry: 10
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 4|MessageBoxInteraction, Assembly-CSharp
-    - Name: SkipWaiting
-      Entry: 5
-      Data: false
-    - Name: Text
-      Entry: 1
-      Data: Goodbye
-    - Name: MessageBoxPrefab
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -15114,7 +15101,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &430233335
 BoxCollider2D:
@@ -15177,6 +15164,37 @@ MonoBehaviour:
     FixedPrice: 5
     PriceMultiplier: 0
   SellModifier: 0
+--- !u!114 &447866003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a360069844d33aa47917c47b63c0935d, type: 3}
+  m_Name: Interaction Entry Point
+  m_EditorClassIdentifier: 
+  graph: {fileID: 1577450311}
+  position: {x: -488, y: -88}
+  ports:
+    keys:
+    - Entry
+    values:
+    - _fieldName: Entry
+      _node: {fileID: 447866003}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 956814460}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entryPointType: 1
 --- !u!1 &473089432
 GameObject:
   m_ObjectHideFlags: 0
@@ -15302,8 +15320,157 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &526858831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1beb5b46591949c2a91b866e1e2a454d, type: 3}
+  m_Name: Fade Interaction
+  m_EditorClassIdentifier: 
+  graph: {fileID: 1068060352}
+  position: {x: 408, y: -40}
+  ports:
+    keys:
+    - fadeColor
+    - duration
+    - fadeMode
+    - Entry
+    - Exit
+    values:
+    - _fieldName: fadeColor
+      _node: {fileID: 526858831}
+      _typeQualifiedName: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: duration
+      _node: {fileID: 526858831}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fadeMode
+      _node: {fileID: 526858831}
+      _typeQualifiedName: FadeInteraction+FadeMode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Entry
+      _node: {fileID: 526858831}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Exit
+        node: {fileID: 2096390584}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Exit
+      _node: {fileID: 526858831}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  duration: 0.5
+  fadeMode: 1
+--- !u!114 &552954684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1beb5b46591949c2a91b866e1e2a454d, type: 3}
+  m_Name: Fade Interaction
+  m_EditorClassIdentifier: 
+  graph: {fileID: 1068060352}
+  position: {x: -184, y: -24}
+  ports:
+    keys:
+    - fadeColor
+    - duration
+    - fadeMode
+    - Entry
+    - Exit
+    values:
+    - _fieldName: fadeColor
+      _node: {fileID: 552954684}
+      _typeQualifiedName: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: duration
+      _node: {fileID: 552954684}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fadeMode
+      _node: {fileID: 552954684}
+      _typeQualifiedName: FadeInteraction+FadeMode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Entry
+      _node: {fileID: 552954684}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 26739632}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Exit
+      _node: {fileID: 552954684}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 2096390584}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  duration: 0.5
+  fadeMode: 0
 --- !u!1 &562398168
 GameObject:
   m_ObjectHideFlags: 0
@@ -15367,6 +15534,26 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: MapTileSeen
+      Entry: 7
+      Data: 2|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.Boolean,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 3|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   previousSceneIndex: -1
   nextSceneIndex: 1
   RemainingEncounterDistance: 0
@@ -15386,8 +15573,70 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &572384349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6ce4ce19445452dba9a0079bceff7db, type: 3}
+  m_Name: Start Battle Interaction
+  m_EditorClassIdentifier: 
+  graph: {fileID: 1834694690}
+  position: {x: 40, y: -24}
+  ports:
+    keys:
+    - EncounterSet
+    - BattlegroundSprite
+    - Entry
+    - Exit
+    values:
+    - _fieldName: EncounterSet
+      _node: {fileID: 572384349}
+      _typeQualifiedName: EncounterSet, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: BattlegroundSprite
+      _node: {fileID: 572384349}
+      _typeQualifiedName: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Entry
+      _node: {fileID: 572384349}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 783648001}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Exit
+      _node: {fileID: 572384349}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  EncounterSet: {fileID: 11400000, guid: aa3795a108b68a34da9d8357dea71ba6, type: 2}
+  BattlegroundSprite: {fileID: 0}
 --- !u!1 &650234203
 GameObject:
   m_ObjectHideFlags: 0
@@ -15432,9 +15681,423 @@ Transform:
   - {fileID: 26292857}
   - {fileID: 429166176}
   - {fileID: 1124707248}
+  - {fileID: 758965841}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &758965840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 758965841}
+  - component: {fileID: 758965843}
+  - component: {fileID: 758965842}
+  m_Layer: 0
+  m_Name: Objects_NoCol
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &758965841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758965840}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 650234205}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!483693784 &758965842
+TilemapRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758965840}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 4
+  m_ChunkSize: {x: 32, y: 32, z: 32}
+  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_MaxChunkCount: 16
+  m_MaxFrameAge: 16
+  m_SortOrder: 0
+  m_Mode: 0
+  m_DetectChunkCullingBounds: 0
+  m_MaskInteraction: 0
+--- !u!1839735485 &758965843
+Tilemap:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758965840}
+  m_Enabled: 1
+  m_Tiles:
+  - first: {x: -2, y: -5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 9
+      m_TileSpriteIndex: 13
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 104, y: -5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 2
+      m_TileSpriteIndex: 12
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 105, y: -5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 106, y: -5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 107, y: -5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 5
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 108, y: -5, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 7
+      m_TileSpriteIndex: 11
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 104, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 10
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 105, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 106, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 6
+      m_TileSpriteIndex: 9
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 107, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 108, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 8
+      m_TileSpriteIndex: 8
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -6, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 13
+      m_TileSpriteIndex: 7
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -5, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 12
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 104, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 108, y: -3, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -6, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 11
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -5, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 10
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 104, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 108, y: -2, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -1, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 13
+      m_TileSpriteIndex: 7
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 12
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -1, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 11
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 10
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  m_AnimatedTiles: {}
+  m_TileAssetArray:
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: e16b4dde92604a746946ac2d9c88138c, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 977bc60786a8d9e48b8d260e47a7e23b, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 22b03112210465849829e23e998e709c, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 6ad46e940367bcb41b34549579f21a3e, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: df07683b53690f84ea48c08f35344497, type: 2}
+  - m_RefCount: 3
+    m_Data: {fileID: 11400000, guid: 8f317c47e89dcf142b98f6b30c38cd7a, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: e974065a93818e34bb7d156d0f6ba286, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 03e5a932d5189744ea8d83d979d4a61d, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: c5a0bc9527cf9884c9f207cfb78fbde7, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 9248d7542d3f17540bd1649fe938eccb, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: d5ed7ed2992ff6c44abc7497b84f59c6, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 9547892a774c81543a0dbc28565d2447, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 350fde25e3df2204db255e75bd7b3ee2, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: 274c9009b0d263146838bff0eba3fb19, type: 2}
+  m_TileSpriteArray:
+  - m_RefCount: 2
+    m_Data: {fileID: 5593651271722820242, guid: b486ad3ebd7ab224bb003c851fe858a8,
+      type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: 1307447398266272689, guid: b486ad3ebd7ab224bb003c851fe858a8,
+      type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: -8166560988785266386, guid: 29733c2edd14e01409e6fc974361417b,
+      type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: 3345104967112980269, guid: 29733c2edd14e01409e6fc974361417b,
+      type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: 2195060215880133258, guid: b486ad3ebd7ab224bb003c851fe858a8,
+      type: 3}
+  - m_RefCount: 3
+    m_Data: {fileID: 6943024585288776146, guid: b486ad3ebd7ab224bb003c851fe858a8,
+      type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: -1599587214927587660, guid: 29733c2edd14e01409e6fc974361417b,
+      type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: 6806007241276498400, guid: 29733c2edd14e01409e6fc974361417b,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1617666379563950318, guid: b486ad3ebd7ab224bb003c851fe858a8,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -9114906903399696380, guid: b486ad3ebd7ab224bb003c851fe858a8,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 3673868592966796235, guid: b486ad3ebd7ab224bb003c851fe858a8,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 222795694624161427, guid: b486ad3ebd7ab224bb003c851fe858a8, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -4350136063735392651, guid: b486ad3ebd7ab224bb003c851fe858a8,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 8422468454431802147, guid: b486ad3ebd7ab224bb003c851fe858a8,
+      type: 3}
+  m_TileMatrixArray:
+  - m_RefCount: 23
+    m_Data:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_TileColorArray:
+  - m_RefCount: 23
+    m_Data: {r: 1, g: 1, b: 1, a: 1}
+  m_TileObjectToInstantiateArray: []
+  m_AnimationFrameRate: 1
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Origin: {x: -6, y: -10, z: 0}
+  m_Size: {x: 115, y: 12, z: 1}
+  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileOrientation: 0
+  m_TileOrientationMatrix:
+    e00: 1
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 1
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 1
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
 --- !u!1001 &775803817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15480,7 +16143,7 @@ PrefabInstance:
     - target: {fileID: 5209852890658400294, guid: 35b23d03ae9effc4da9811c984dd6bcc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5209852890658400294, guid: 35b23d03ae9effc4da9811c984dd6bcc,
         type: 3}
@@ -15510,102 +16173,123 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35b23d03ae9effc4da9811c984dd6bcc, type: 3}
---- !u!1001 &803948968
-PrefabInstance:
+--- !u!114 &783648001
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5979865846293740295, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5979865846293740295, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5979865846293740295, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: serializationData.Prefab
-      value: 
-      objectReference: {fileID: 5979865846293740295, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-    - target: {fileID: 5979865846293740295, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: serializationData.PrefabModifications.Array.data[0]
-      value: '"path":"TransitionSource","value":null'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8197452036133343253, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8197452036133343253, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8197452036133343253, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8197452036133343253, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8197452036133343253, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8197452036133343253, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8197452036133343253, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8197452036133343253, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8197452036133343253, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8197452036133343253, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8197452036133343253, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8883773267995078506, guid: 65b8c4be0229f85449220730dd139bde,
-        type: 3}
-      propertyPath: m_Name
-      value: Game Controller
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 65b8c4be0229f85449220730dd139bde, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a360069844d33aa47917c47b63c0935d, type: 3}
+  m_Name: Interaction Entry Point
+  m_EditorClassIdentifier: 
+  graph: {fileID: 1834694690}
+  position: {x: -328, y: -24}
+  ports:
+    keys:
+    - Entry
+    values:
+    - _fieldName: Entry
+      _node: {fileID: 783648001}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 572384349}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entryPointType: 1
+--- !u!114 &956814460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c04a34a9ed641a292e9847e51da6cf9, type: 3}
+  m_Name: Message Box Interaction
+  m_EditorClassIdentifier: 
+  graph: {fileID: 1577450311}
+  position: {x: -136, y: -72}
+  ports:
+    keys:
+    - Text
+    - MessageBoxPrefab
+    - Entry
+    - Exit
+    values:
+    - _fieldName: Text
+      _node: {fileID: 956814460}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: MessageBoxPrefab
+      _node: {fileID: 956814460}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Entry
+      _node: {fileID: 956814460}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 447866003}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Exit
+      _node: {fileID: 956814460}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  Text: Bem-vindo a Test Village!
+  MessageBoxPrefab: {fileID: 5457389356766954974, guid: 987eb3dfcca3ea48e93d20d121103e54,
+    type: 3}
 --- !u!4 &1009270318 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4691186422477648457, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
     type: 3}
   m_PrefabInstance: {fileID: 4691186421468384359}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1068060352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dfa6f9c361dd7a45bcdca638c3f3c3e, type: 3}
+  m_Name: Warp-graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 26739632}
+  - {fileID: 552954684}
+  - {fileID: 526858831}
+  - {fileID: 2096390584}
 --- !u!1 &1124707247
 GameObject:
   m_ObjectHideFlags: 0
@@ -15986,7 +16670,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 11
-      m_TileSpriteIndex: 11
+      m_TileSpriteIndex: 15
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -15995,7 +16679,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 12
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16031,7 +16715,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 12
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16040,7 +16724,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 11
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -16147,13 +16831,15 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 9fdb049b90f0715488d4926d399ff40e, type: 2}
   - m_RefCount: 29
     m_Data: {fileID: 11400000, guid: 52df2df831dc32a61bad4badcdf1259c, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -8319349232512875810, guid: e1933e501b4d6094c8b14948793eb749,
-      type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 5563451364821363847, guid: e1933e501b4d6094c8b14948793eb749,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -224422094518916173, guid: e1933e501b4d6094c8b14948793eb749,
       type: 3}
@@ -16181,13 +16867,19 @@ Tilemap:
     m_Data: {fileID: -7475043366467872547, guid: b486ad3ebd7ab224bb003c851fe858a8,
       type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -6867078439534655457, guid: b486ad3ebd7ab224bb003c851fe858a8,
+    m_Data: {fileID: 5563451364821363847, guid: e1933e501b4d6094c8b14948793eb749,
+      type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -8319349232512875810, guid: e1933e501b4d6094c8b14948793eb749,
+      type: 3}
+  - m_RefCount: 29
+    m_Data: {fileID: 4197395872047891421, guid: a99c05a645dd3bdc3ab751e230483dd8,
       type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 7586909819984474198, guid: b486ad3ebd7ab224bb003c851fe858a8,
       type: 3}
-  - m_RefCount: 29
-    m_Data: {fileID: 4197395872047891421, guid: a99c05a645dd3bdc3ab751e230483dd8,
+  - m_RefCount: 1
+    m_Data: {fileID: -6867078439534655457, guid: b486ad3ebd7ab224bb003c851fe858a8,
       type: 3}
   m_TileMatrixArray:
   - m_RefCount: 47
@@ -16235,6 +16927,271 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1181647305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1beb5b46591949c2a91b866e1e2a454d, type: 3}
+  m_Name: Fade Interaction
+  m_EditorClassIdentifier: 
+  graph: {fileID: 398271306}
+  position: {x: -120, y: -88}
+  ports:
+    keys:
+    - fadeColor
+    - duration
+    - fadeMode
+    - Entry
+    - Exit
+    values:
+    - _fieldName: fadeColor
+      _node: {fileID: 1181647305}
+      _typeQualifiedName: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: duration
+      _node: {fileID: 1181647305}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fadeMode
+      _node: {fileID: 1181647305}
+      _typeQualifiedName: FadeInteraction+FadeMode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Entry
+      _node: {fileID: 1181647305}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 1979892233}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Exit
+      _node: {fileID: 1181647305}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 8849783}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  duration: 0.5
+  fadeMode: 0
+--- !u!114 &1514809073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1beb5b46591949c2a91b866e1e2a454d, type: 3}
+  m_Name: Fade Interaction
+  m_EditorClassIdentifier: 
+  graph: {fileID: 398271306}
+  position: {x: 472, y: -72}
+  ports:
+    keys:
+    - fadeColor
+    - duration
+    - fadeMode
+    - Entry
+    - Exit
+    values:
+    - _fieldName: fadeColor
+      _node: {fileID: 1514809073}
+      _typeQualifiedName: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: duration
+      _node: {fileID: 1514809073}
+      _typeQualifiedName: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fadeMode
+      _node: {fileID: 1514809073}
+      _typeQualifiedName: FadeInteraction+FadeMode, Assembly-CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Entry
+      _node: {fileID: 1514809073}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Exit
+        node: {fileID: 8849783}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Exit
+      _node: {fileID: 1514809073}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  duration: 0.5
+  fadeMode: 1
+--- !u!114 &1577450311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dfa6f9c361dd7a45bcdca638c3f3c3e, type: 3}
+  m_Name: GameObject (2)-graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 447866003}
+  - {fileID: 956814460}
+--- !u!1 &1610734392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1610734394}
+  - component: {fileID: 1610734393}
+  - component: {fileID: 1610734395}
+  m_Layer: 8
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &1610734393
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610734392}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.014484376, y: 0.11587405}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8980219, y: 1.75318}
+  m_EdgeRadius: 0
+--- !u!4 &1610734394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610734392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.79, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1610734395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610734392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8343ff44e9ba7a948d9995154d143f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: InstanceVars
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  interactableType: 0
+  IsInteracting: 0
 --- !u!1 &1821581621
 GameObject:
   m_ObjectHideFlags: 0
@@ -16300,71 +17257,20 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartupInteractions
+    - Name: InstanceVars
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Interaction, Assembly-CSharp]],
-        mscorlib
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 12
       Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Interactions
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Interaction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 2|FadeInteraction, Assembly-CSharp
-    - Name: SkipWaiting
-      Entry: 5
-      Data: false
-    - Name: FadeColor
-      Entry: 7
-      Data: UnityEngine.Color, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Duration
-      Entry: 4
-      Data: 0.5
-    - Name: fadeMode
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 3|TransitionInteraction, Assembly-CSharp
-    - Name: SkipWaiting
-      Entry: 5
-      Data: false
-    - Name: sceneTargetIndex
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -16386,8 +17292,23 @@ Transform:
   m_Children:
   - {fileID: 473089433}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1834694690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dfa6f9c361dd7a45bcdca638c3f3c3e, type: 3}
+  m_Name: dummyfight-graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 783648001}
+  - {fileID: 572384349}
 --- !u!1 &1902157075
 GameObject:
   m_ObjectHideFlags: 0
@@ -16399,6 +17320,7 @@ GameObject:
   - component: {fileID: 1902157077}
   - component: {fileID: 1902157076}
   - component: {fileID: 1902157078}
+  - component: {fileID: 1902157079}
   m_Layer: 8
   m_Name: dummyfight
   m_TagString: Untagged
@@ -16444,7 +17366,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1902157078
 MonoBehaviour:
@@ -16461,48 +17383,26 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 497576484689059306, guid: 3398d26cef84ae045a49bd82c313a679, type: 3}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartupInteractions
+    - Name: InstanceVars
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Interaction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
     - Name: 
       Entry: 8
       Data: 
-    - Name: Interactions
-      Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Interaction, Assembly-CSharp]],
-        mscorlib
     - Name: 
       Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 2|StartBattleInteraction, Assembly-CSharp
-    - Name: SkipWaiting
-      Entry: 5
-      Data: false
-    - Name: encounterPrefab
-      Entry: 10
       Data: 0
-    - Name: battlegroundSprite
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -16511,6 +17411,219 @@ MonoBehaviour:
       Data: 
   interactableType: 0
   IsInteracting: 0
+--- !u!114 &1902157079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902157075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f34515f83d543d5b51cce2c3a28138f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  graph: {fileID: 1834694690}
+--- !u!1 &1949756631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1949756634}
+  - component: {fileID: 1949756633}
+  - component: {fileID: 1949756635}
+  - component: {fileID: 1949756632}
+  m_Layer: 8
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1949756632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949756631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f34515f83d543d5b51cce2c3a28138f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  graph: {fileID: 1577450311}
+--- !u!61 &1949756633
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949756631}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.12033892, y: -0.012033939}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8664398, y: 1.5054235}
+  m_EdgeRadius: 0
+--- !u!4 &1949756634
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949756631}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.9, y: -2.16, z: -2.5707264}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1949756635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949756631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8343ff44e9ba7a948d9995154d143f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: InstanceVars
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  interactableType: 0
+  IsInteracting: 0
+--- !u!114 &1979892233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a360069844d33aa47917c47b63c0935d, type: 3}
+  m_Name: Interaction Entry Point
+  m_EditorClassIdentifier: 
+  graph: {fileID: 398271306}
+  position: {x: -408, y: -88}
+  ports:
+    keys:
+    - Entry
+    values:
+    - _fieldName: Entry
+      _node: {fileID: 1979892233}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 1181647305}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entryPointType: 1
+--- !u!114 &2096390584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fcd92d6237e471db815a3bd64231bf7, type: 3}
+  m_Name: Teleport Interaction
+  m_EditorClassIdentifier: 
+  graph: {fileID: 1068060352}
+  position: {x: 72, y: -8}
+  ports:
+    keys:
+    - Target
+    - Entry
+    - Exit
+    values:
+    - _fieldName: Target
+      _node: {fileID: 2096390584}
+      _typeQualifiedName: UnityEngine.Transform, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Entry
+      _node: {fileID: 2096390584}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Exit
+        node: {fileID: 552954684}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Exit
+      _node: {fileID: 2096390584}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 526858831}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  Target: {fileID: 2120431616}
 --- !u!1 &2120431615
 GameObject:
   m_ObjectHideFlags: 0
@@ -16596,7 +17709,7 @@ PrefabInstance:
     - target: {fileID: 4691186423368760432, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4691186423368760432, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
         type: 3}
@@ -16626,8 +17739,14 @@ PrefabInstance:
     - target: {fileID: 4691186423368760445, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
         type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4691186423368760445, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
+        type: 3}
+      propertyPath: Interactions
+      value: 
+      objectReference: {fileID: 11400000, guid: eb992fc6b396b394690231fb012875c5,
+        type: 2}
     - target: {fileID: 4691186423368760445, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -16638,21 +17757,18 @@ PrefabInstance:
         type: 3}
       propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 347851812}
-    - target: {fileID: 4691186423368760445, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
-        type: 3}
-      propertyPath: serializationData.PrefabModificationsReferencedUnityObjects.Array.data[1]
-      value: 
       objectReference: {fileID: 1009270318}
     - target: {fileID: 4691186423368760445, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
         type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[0]
-      value: '"path":"Interactions.[0].animator","value":$eref:0'
+      value: '"path":"InstanceVars","value":{"$id":0,"$type":"System.Collections.Generic.Dictionary`2[[System.String,
+        mscorlib],[System.Object, mscorlib]], mscorlib","comparer":{"$id":1,"$type":"System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib"},"$rlength":1,"$rcontent":[{"$k":"Target","$v":$eref:0}]}'
       objectReference: {fileID: 0}
     - target: {fileID: 4691186423368760445, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
         type: 3}
       propertyPath: serializationData.PrefabModifications.Array.data[1]
-      value: '"path":"Interactions.[2].target","value":$eref:1'
+      value: '"path":"InstanceVars.{\"Target\"}","value":$eref:0'
       objectReference: {fileID: 0}
     - target: {fileID: 4691186423368760447, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
         type: 3}
@@ -16661,3 +17777,142 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fc4530bf92f8ef278e51fea5c8d7e79, type: 3}
+--- !u!1 &4691186421468384360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4691186423368760433, guid: 6fc4530bf92f8ef278e51fea5c8d7e79,
+    type: 3}
+  m_PrefabInstance: {fileID: 4691186421468384359}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4691186421468384361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4691186421468384360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f34515f83d543d5b51cce2c3a28138f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  graph: {fileID: 398271306}
+--- !u!114 &6244086690646730694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9156437302868652971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e7ffc297f0c46fa8b30ac9eaeb9a7d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Random
+      Entry: 6
+      Data: 
+    - Name: TransitionSource
+      Entry: 7
+      Data: System.Nullable`1[[System.Int32, mscorlib]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Globals
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Seeds
+      Entry: 7
+      Data: 2|System.Collections.Generic.Dictionary`2[[System.Int32, mscorlib],[System.Int32,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 3|System.Collections.Generic.GenericEqualityComparer`1[[System.Int32,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  AnimationObjectBase: {fileID: 2556044651023131637, guid: 52fde5e2d15ca134a9920643bfcbe459,
+    type: 3}
+  PlayerPrefab: {fileID: 3993753518470717486, guid: 6fca6d830a7e1c64480b639389a661e8,
+    type: 3}
+  CameraPrefab: {fileID: 19635246577722888, guid: ed79898cbb9288b498391cd864f43a5a,
+    type: 3}
+  MainCanvasPrefab: {fileID: 1297924371412730462, guid: ef8910094b5fb06419806b1ba039cee6,
+    type: 3}
+  GraphyPrefab: {fileID: 6065829648339744890, guid: 2bdfc096237e37ce6b63b351fe2614fc,
+    type: 3}
+  OnBeginEncounter:
+    m_PersistentCalls:
+      m_Calls: []
+  OnEndEncounter:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &8473664257386204372
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9156437302868652971}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -4.62, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9156437302868652971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8473664257386204372}
+  - component: {fileID: 6244086690646730694}
+  m_Layer: 0
+  m_Name: Game Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1

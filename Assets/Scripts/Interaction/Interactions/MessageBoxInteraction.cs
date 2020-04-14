@@ -1,24 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
+[InteractableNode(defaultNodeName = "Message Box")]
 public class MessageBoxInteraction : Interaction
 {
-    [TextArea] public string Text;
-    public GameObject MessageBoxPrefab;
-    private MessageBox MessageBox;
+    [TextArea, Input] public string Text;
+    [Input] public GameObject MessageBoxPrefab;
 
-    public override void Run(Interactable source)
+    public override IEnumerator PerformInteraction(Interactable source)
     {
-        var obj = Object.Instantiate(MessageBoxPrefab);
-        MessageBox = obj.GetComponent<MessageBox>();
-        MessageBox.Text.text = Text;
-    }
+        var text = GetInputValue("Text", Text);
+        var messageBoxPrefab = GetInputValue("MessageBoxPrefab", MessageBoxPrefab);
 
-    public override void Cleanup()
-    {
-        Object.Destroy(MessageBox.gameObject);
+        var obj = Instantiate(messageBoxPrefab);
+        var messageBox = obj.GetComponent<MessageBox>();
+        messageBox.Text.text = text;
+        
+        yield return new WaitUntil(() => messageBox.Dismissed);
+        
+        Destroy(obj);
     }
-
-    public override IEnumerator Completion => new WaitUntil(() => MessageBox.Dismissed);
 }

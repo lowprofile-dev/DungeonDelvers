@@ -6,15 +6,17 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using XNode;
 
 public class Interactable : SerializedMonoBehaviour
 {
     public InteractableType interactableType = InteractableType.Action;
-    public List<Interaction> StartupInteractions = new List<Interaction>();
-    public List<Interaction> Interactions = new List<Interaction>();
+    private InteractionSet Interactions;
+    public Dictionary<string, object> InstanceVars = new Dictionary<string, object>();
     [ReadOnly] public bool IsInteracting = false;
     private void Awake()
     {
+        Interactions = GetComponent<InteractionSet>();
         var originalName = name;
         var appendedName = $"{SceneManager.GetActiveScene().buildIndex}_{originalName}";
 
@@ -32,14 +34,13 @@ public class Interactable : SerializedMonoBehaviour
                     name = attempt;
                     break;
                 }
-
             }
         }
     }
 
     private void Start()
     {
-        StartCoroutine(_Interact(StartupInteractions, null));
+        StartCoroutine(InteractionCoroutine(InteractionEntryPoint.EntryPointType.Startup));
     }
 
     private string LocalKeyToGlobalKey(string localKey)
@@ -59,49 +60,30 @@ public class Interactable : SerializedMonoBehaviour
         GameController.SetGlobal(globalKey,value);
     }
 
-    public void Interact(bool isNested = false, Interactable parent = null)
+    public object GetInstance(string key)
     {
-        if (isNested)
-        {
-            StartCoroutine(_NestedInteraction(Interactions, parent));
-        }
-        else if (!IsInteracting)
-        {
-            StartCoroutine(_Interact(Interactions, parent));
-        }
-    }
-
-    IEnumerator _NestedInteraction(IEnumerable<Interaction> interactions, Interactable parent)
-    {
-        IsInteracting = true;
-        var source = parent != null ? parent : this;
-        foreach (var interaction in interactions)
-        {
-            interaction.Run(source);
-            var completion = interaction.Completion;
-            if (completion != null && interaction.SkipWaiting == false)
-                yield return completion;
-            interaction.Cleanup();
-        }
-
-        IsInteracting = false;
+        if (!InstanceVars.ContainsKey(key))
+            InstanceVars[key] = null;
+        return InstanceVars[key];
     }
     
-    IEnumerator _Interact(IEnumerable<Interaction> interactions, Interactable parent)
+    public void SetInstance(string key, int value)
     {
-        StartInteraction();
+        InstanceVars[key] = value;
+    }
 
-        var source = parent != null ? parent : this;
-        foreach (var interaction in interactions)
-        {
-            //yield return null;
-            interaction.Run(source);
-            var completion = interaction.Completion;
-            if (completion != null && interaction.SkipWaiting == false)
-                yield return completion;
-            interaction.Cleanup();
-        }
-        
+    public void Interact()
+    {
+        if (!IsInteracting)
+            StartCoroutine(InteractionCoroutine(InteractionEntryPoint.EntryPointType.Active));
+    }
+
+    private IEnumerator InteractionCoroutine(InteractionEntryPoint.EntryPointType entryPointType)
+    {
+        if (Interactions == null || Interactions.graph == null)
+            yield break;
+        StartInteraction();
+        yield return Interactions.graph.Run(entryPointType, this);
         EndInteraction();
     }
 
@@ -111,16 +93,6 @@ public class Interactable : SerializedMonoBehaviour
             EndInteraction();
         
         //UploadLocals();
-    }
-
-    public void UploadLocals()
-    {
-//        foreach (var local in Locals)
-//        {
-//            var globalName = $"LOCAL{name}_{local.Key}";
-//            GameController.SetGlobal(globalName, local.Value);
-//            Debug.Log($"Saving local {local} ({globalName})");
-//        }
     }
 
     private void StartInteraction()

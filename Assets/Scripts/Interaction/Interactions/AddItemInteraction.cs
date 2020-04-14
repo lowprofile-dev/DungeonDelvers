@@ -1,17 +1,13 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
+[InteractableNode(defaultNodeName = "Add Item")]
 public class AddItemInteraction : Interaction
 {
-    public ItemBase ItemBase;
-
-    public override void Run(Interactable source)
+    [Input] public ItemBase ItemBase;
+    
+    public override IEnumerator PerformInteraction(Interactable source)
     {
-//        var item = ItemInstanceBuilder.BuildInstance(ItemBase);
-//        PlayerController.Instance.Inventory.Add(item);
-        PlayerController.Instance.AddItemBaseToInventory(ItemBase);
+        PlayerController.Instance.AddItemBaseToInventory(GetInputValue("ItemBase", ItemBase));
+        yield break;
     }
-
-    public override IEnumerator Completion => null;
 }

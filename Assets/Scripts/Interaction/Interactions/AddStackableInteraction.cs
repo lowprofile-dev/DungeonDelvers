@@ -1,14 +1,14 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 
+[InteractableNode(defaultNodeName = "Add Stackable")]
 public class AddStackableInteraction : Interaction
 {
-    public IStackableBase StackableBase;
-    public int Quantity;
-    public override void Run(Interactable source)
+    [Input] private IStackableBase StackableBase;
+    [Input] public int Quantity;
+    
+    public override IEnumerator PerformInteraction(Interactable source)
     {
-        PlayerController.Instance.AddStackableBaseToInventory(StackableBase,Quantity);
+        PlayerController.Instance.AddStackableBaseToInventory(GetInputValue("StackableBase",StackableBase), GetInputValue("Quantity",Quantity));
+        yield break;
     }
-
-    public override IEnumerator Completion => null;
 }

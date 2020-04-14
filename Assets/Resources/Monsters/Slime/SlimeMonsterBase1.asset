@@ -27,8 +27,22 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: MonsterDrops
+      Entry: 7
+      Data: 1|System.Collections.Generic.List`1[[Monster+IMonsterDrop, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
+  _assetIcon: {fileID: 21300000, guid: e3423d94c8e174112af7aec784916e6a, type: 3}
   MonsterName: Slime
   MonsterBattler: {fileID: 3515542978881643201, guid: 8c74195d025782e40aa8c326ba0292cc,
     type: 3}
@@ -47,6 +61,15 @@ MonoBehaviour:
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
   StatLevelVariance:
     MaxHp: 0
     InitialEp: 0
@@ -60,7 +83,17 @@ MonoBehaviour:
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
   Skills:
   - {fileID: 11400000, guid: 66006c83b7492c845b3abe6274d06cf3, type: 2}
   Passives:
   - {fileID: 11400000, guid: 1f03885d0b6edaa8c94393567ae38857, type: 2}
+  goldReward: {x: 0, y: 0}

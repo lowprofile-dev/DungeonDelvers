@@ -409,10 +409,14 @@
             <e p="Element.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
             <e p="GameDatabase.cs" t="Include" />
+            <e p="KeyType.cs" t="Include" />
             <e p="MapSettings.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="SerializableAsset.cs" t="Include" />
             <e p="SetUniqueName.cs" t="Include" />
+          </e>
+          <e p="Editor" t="Include">
+            <e p="InteractionGraphEditor.cs" t="Include" />
           </e>
           <e p="Extensions" t="Include">
             <e p="DDExtensions.cs" t="Include" />
@@ -427,30 +431,35 @@
             <e p="TransitionPoint.cs" t="Include" />
           </e>
           <e p="Interaction" t="Include">
-            <e p="Conditions" t="Include">
-              <e p="ValueInteractableCondition.cs" t="Include" />
-            </e>
-            <e p="IInteractableCondition.cs" t="Include" />
             <e p="Interactable.cs" t="Include" />
+            <e p="InteractableNodeAttribute.cs" t="Include" />
             <e p="Interaction.cs" t="Include" />
+            <e p="InteractionBase.cs" t="Include" />
+            <e p="InteractionEntryPoint.cs" t="Include" />
+            <e p="InteractionGraph.cs" t="Include" />
             <e p="Interactions" t="Include">
               <e p="AddItemInteraction.cs" t="Include" />
               <e p="AddStackableInteraction.cs" t="Include" />
               <e p="BranchInteraction.cs" t="Include" />
-              <e p="CallInteractableInteraction.cs" t="Include" />
               <e p="DestroyObjectInteraction.cs" t="Include" />
               <e p="FadeInteraction.cs" t="Include" />
+              <e p="GetKeyInteraction.cs" t="Include" />
+              <e p="GetSelfRefInteraction.cs" t="Include" />
+              <e p="LogInteraction.cs" t="Include" />
               <e p="MessageBoxInteraction.cs" t="Include" />
-              <e p="MultipleInteraction.cs" t="Include" />
-              <e p="OpenShopInteraction.cs" t="Include" />
               <e p="PlayAnimationInteraction.cs" t="Include" />
               <e p="PlaySoundInteraction.cs" t="Include" />
               <e p="SetKeyInteraction.cs" t="Include" />
+              <e p="ShopInteraction.cs" t="Include" />
               <e p="StartBattleInteraction.cs" t="Include" />
               <e p="TeleportInteraction.cs" t="Include" />
-              <e p="ToggleComponentActiveInteraction.cs" t="Include" />
+              <e p="ToggleComponentInteraction.cs" t="Include" />
               <e p="TransitionInteraction.cs" t="Include" />
               <e p="WaitForKeyPressInteraction.cs" t="Include" />
+            </e>
+            <e p="InteractionSet.cs" t="Include" />
+            <e p="NodeUtility" t="Include">
+              <e p="GetSumNode.cs" t="Include" />
             </e>
           </e>
           <e p="Inventory" t="Include">

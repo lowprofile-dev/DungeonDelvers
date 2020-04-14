@@ -1,30 +1,16 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
+[InteractableNode(defaultNodeName = "Wait for Keypress")]
 public class WaitForKeyPressInteraction : Interaction
 {
-    private bool keepWaiting = true;
-    public KeyCode Key;
+    [Input] public KeyCode Key;
     
-    public override void Run(Interactable source)
+    public override IEnumerator PerformInteraction(Interactable source)
     {
-        keepWaiting = true;
-        Debug.Log("Esperando");
-        source.StartCoroutine(WaitForKeyPress());
-    }
+        var key = GetInputValue("Key", Key);
 
-    public override IEnumerator Completion
-    {
-        get { return new WaitUntil(() => !keepWaiting);}
-    }
-
-    IEnumerator WaitForKeyPress()
-    {
-        while (!Input.GetKeyDown(Key))
+        while (!Input.GetKeyDown(key))
             yield return null;
-
-        Debug.Log("foi");
-        
-        keepWaiting = false;
     }
 }

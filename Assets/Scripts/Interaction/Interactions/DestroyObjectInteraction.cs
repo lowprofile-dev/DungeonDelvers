@@ -1,19 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
+[InteractableNode(defaultNodeName = "Destroy Object")]
 public class DestroyObjectInteraction : Interaction
 {
-    public UnityEngine.Object Object;
-    public bool Immediate = false;
-
-    public override void Run(Interactable source)
+    [Input] public GameObject GameObject;
+    
+    public override IEnumerator PerformInteraction(Interactable source)
     {
-        if (Immediate)
-            UnityEngine.Object.DestroyImmediate(Object);
-        else
-            UnityEngine.Object.Destroy(Object);
+        Destroy(GetInputValue("GameObject",GameObject));
+        yield return null;
     }
-
-    public override IEnumerator Completion => null;
 }

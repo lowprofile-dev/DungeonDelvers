@@ -1,3 +1,4 @@
+Ver como fazer o Odin desenhar o xNode
 Rever o sistema de variaveis (Globals, Locals, Instance?)
 Mudar o acesso de globals para set get or default 
 Alterar o modo de mergir, fazer como tava antes que merge num tilemap só, mas o RelocativeTiles retorna 2 Actions agora (desligar, ligar tiles) (struct que tem isso pra fazer um dicionario depois)

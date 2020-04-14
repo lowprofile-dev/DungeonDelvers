@@ -1,19 +1,17 @@
 ﻿using System.Collections;
-using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[InteractableNode(defaultNodeName = "Transition")]
 public class TransitionInteraction : Interaction
 {
-    public int sceneTargetIndex;
+    [Input] public int Index;
     
-    public override void Run(Interactable source)
+    public override IEnumerator PerformInteraction(Interactable source)
     {
-        //tela de carregar futuramente
-        
+        var index = GetInputValue("Index", Index);
         GameController.Instance.TransitionSource = SceneManager.GetActiveScene().buildIndex;
-
-        SceneManager.LoadScene(sceneTargetIndex);
+        SceneManager.LoadScene(index);
+        
+        yield break;
     }
-
-    public override IEnumerator Completion => null;
 }

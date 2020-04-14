@@ -1,35 +1,17 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using XNode;
 
-public class  BranchInteraction : Interaction
+[InteractableNode(defaultNodeName = "Branch")]
+public class BranchInteraction : InteractionBase
 {
-    public List<Branch> Branches = new List<Branch>();
-    public Interactable Default = null;
-    private Interactable chosenInteractable;
-    public override void Run(Interactable source)
+    [Input] public bool condition;
+    [Output] public bool @true;
+    [Output] public bool @false;
+    
+    
+    public override InteractionBase GetNextNode()
     {
-        chosenInteractable = Default;
-        foreach (var branch in Branches)
-        {
-            if (branch.interactableCondition.ConditionReached(source))
-            {
-                chosenInteractable = branch.Interactable;
-                break;
-            }
-        }
-
-        if (chosenInteractable != null)
-            chosenInteractable.Interact(true, source);
-    }
-
-    public override IEnumerator Completion => new WaitUntil(() => chosenInteractable == null || !chosenInteractable.IsInteracting);
-
-    [Serializable]
-    public struct Branch
-    {
-        public IInteractableCondition interactableCondition;
-        public Interactable Interactable;
+        return GetInputValue<bool>("condition", condition) ?
+            GetOutputPort("@true")?.Connection?.node as InteractionBase : 
+            GetOutputPort("@false")?.Connection?.node as InteractionBase;
     }
 }

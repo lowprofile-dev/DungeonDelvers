@@ -1,14 +1,26 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using UnityEngine;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
+using JetBrains.Annotations;
+using XNode;
 
-public abstract class Interaction
+public abstract class Interaction : InteractionBase
 {
-    public bool SkipWaiting = false;
-    public abstract void Run(Interactable source);
-    public virtual void Cleanup() { }
-    public abstract IEnumerator Completion { get; }
+    
+    [Input(ShowBackingValue.Never, ConnectionType.Override)]
+    public FlowControl Entry;
+    [Output(connectionType = ConnectionType.Override)]
+    public FlowControl Exit;
+
+    public override InteractionBase GetNextNode()
+    {
+        var exitPort = GetOutputPort("Exit")?.Connection?.node as InteractionBase;
+        return exitPort;
+    }
+    
+    [CanBeNull] public abstract IEnumerator PerformInteraction(Interactable source);
 }
 
+[Serializable]
+public sealed class  FlowControl { }

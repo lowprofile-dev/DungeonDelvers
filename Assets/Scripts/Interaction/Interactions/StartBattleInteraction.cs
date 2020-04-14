@@ -1,31 +1,26 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+[InteractableNode(defaultNodeName = "Start Battle")]
 public class StartBattleInteraction : Interaction
 {
-    public EncounterSet encounterSet;
-    public Sprite battlegroundSprite;
-    private bool finished;
-    
-    public override void Run(Interactable source)
-    {
-        finished = false;
-        BattleController.Instance.OnBattleEnd.AddListener(FinishStartBattleInteraction);
-        BattleController.Instance.BeginBattle(encounterSet, battlegroundSprite);
-    }
+    [Input] public EncounterSet EncounterSet;
+    [Input] public Sprite BattlegroundSprite;
 
-    private void FinishStartBattleInteraction()
+    public override IEnumerator PerformInteraction(Interactable source)
     {
-        finished = true;
-        BattleController.Instance.OnBattleEnd.RemoveListener(FinishStartBattleInteraction);
-    }
-    
-    public override IEnumerator Completion
-    {
-        get
-        {
-            yield return new WaitWhile(() => !finished);
-            yield return null;
-        }
+        var encounterSet = GetInputValue("EncounterSet", EncounterSet);
+        var battlegroundSprite = GetInputValue("BattlegroundSprite", BattlegroundSprite);
+
+        var finished = false;
+        void stopWaiting() => finished = true;
+        
+        BattleController.Instance.OnBattleEnd.AddListener(stopWaiting);
+        BattleController.Instance.BeginBattle(encounterSet,battlegroundSprite);
+        
+        yield return new WaitWhile((() => !finished));
+        yield return null;
+        
+        BattleController.Instance.OnBattleEnd.RemoveListener(stopWaiting);
     }
 }

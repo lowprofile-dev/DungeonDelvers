@@ -1,30 +1,19 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 using UnityEngine;
 
+[InteractableNode(defaultNodeName = "Play Animation")]
 public class PlayAnimationInteraction : Interaction
 {
-    public Animator animator;
-    public string animationName;
-
-    public override void Run(Interactable source)
+    [Input] public Animator animator;
+    [Input] public string animationName;
+    
+    public override IEnumerator PerformInteraction(Interactable source)
     {
-        animator.Play(animationName);
+        var anim = GetInputValue("animator", animator);
+        var animName = GetInputValue("animationName", animationName);
+        
+        yield return null;
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName(animName))
+            yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length + anim.GetCurrentAnimatorStateInfo(0).normalizedTime);
     }
-
-    public override IEnumerator Completion
-    {
-        get
-        {
-            yield return null;
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName(animationName))
-                yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length + animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
-        }
-    }
-
 }
-
