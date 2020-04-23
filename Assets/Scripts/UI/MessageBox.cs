@@ -7,25 +7,51 @@ using UnityEngine.UI;
 
 public class MessageBox : MonoBehaviour
 {
-    //Adicionar funcionalidades de digitar letra por letra, interpretar variaveis (ex. -> $coisa) pra Globals.Get(coisa)
     private bool _dismissed = false;
+    private string fullText;
+    private Coroutine typingCoroutine;
     public bool Dismissed => _dismissed;
 
-    public TMP_Text Text;
+    [SerializeField] private TMP_Text Text;
 
     private void Start()
     {
-        StartCoroutine(WaitForInput());
+        StartCoroutine(MessageBoxCoroutine());
     }
 
-    IEnumerator WaitForInput()
+    public void SetText(string text)
+    {
+        
+    }
+
+    IEnumerator MessageBoxCoroutine()
     {
         //Delay para a caixa de texto não fechar imediatamente
+        StartCoroutine(TypingCoroutine());
         yield return new WaitForSeconds(0.15f);
-        
-        while (!Input.GetButtonDown("Submit"))
-            yield return null;
 
-        _dismissed = true;
+        while (!Dismissed)
+        {
+            if (!Input.GetButtonDown("Submit"))
+            {
+                if (typingCoroutine != null)
+                {
+                    StopCoroutine(typingCoroutine);
+                    Text.text = fullText;
+                }
+                else
+                {
+                    _dismissed = true;
+                }
+            }
+            yield return null;
+        }
+    }
+
+    IEnumerator TypingCoroutine()
+    {
+        typingCoroutine = StartCoroutine(SkredUtils.SkredUtils.TextWriter(Text, fullText));
+        yield return typingCoroutine;
+        typingCoroutine = null;
     }
 }

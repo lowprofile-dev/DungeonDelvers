@@ -8,6 +8,7 @@ using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using XNode;
 
+[RequireComponent(typeof(InteractionSet))]
 public class Interactable : SerializedMonoBehaviour
 {
     public InteractableType interactableType = InteractableType.Action;

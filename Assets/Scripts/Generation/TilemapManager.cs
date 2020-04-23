@@ -57,6 +57,8 @@ public class TilemapManager : SerializedMonoBehaviour
 
             Debug.Log($"Generated dungeon in {stopwatch.ElapsedMilliseconds}ms");
         }
+
+        return;
         
         _tilesetMerger.MergeTilemaps(Tilemaps, MoveableParent,CopyableParent);
 

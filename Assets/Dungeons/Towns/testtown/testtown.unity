@@ -7207,6 +7207,90 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   entryPointType: 1
+--- !u!114 &76503970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dfa6f9c361dd7a45bcdca638c3f3c3e, type: 3}
+  m_Name: GameObject (2)-graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 1180526342}
+  - {fileID: 848445943}
+  - {fileID: 752199994}
+  - {fileID: 1154259962}
+  - {fileID: 122663572}
+--- !u!114 &122663572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c04a34a9ed641a292e9847e51da6cf9, type: 3}
+  m_Name: Message Box Interaction
+  m_EditorClassIdentifier: 
+  graph: {fileID: 76503970}
+  position: {x: 504, y: 56}
+  ports:
+    keys:
+    - Text
+    - MessageBoxPrefab
+    - Entry
+    - Exit
+    values:
+    - _fieldName: Text
+      _node: {fileID: 122663572}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: result
+        node: {fileID: 1154259962}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: MessageBoxPrefab
+      _node: {fileID: 122663572}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Entry
+      _node: {fileID: 122663572}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Exit
+        node: {fileID: 752199994}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Exit
+      _node: {fileID: 122663572}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  Text: 
+  MessageBoxPrefab: {fileID: 5457389356766954974, guid: 987eb3dfcca3ea48e93d20d121103e54,
+    type: 3}
 --- !u!1 &244868697
 GameObject:
   m_ObjectHideFlags: 0
@@ -15164,7 +15248,7 @@ MonoBehaviour:
     FixedPrice: 5
     PriceMultiplier: 0
   SellModifier: 0
---- !u!114 &447866003
+--- !u!114 &435160188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15173,28 +15257,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a360069844d33aa47917c47b63c0935d, type: 3}
-  m_Name: Interaction Entry Point
+  m_Script: {fileID: 11500000, guid: 56130d7819214d5facef994346da6b29, type: 3}
+  m_Name: Transition Interaction
   m_EditorClassIdentifier: 
-  graph: {fileID: 1577450311}
-  position: {x: -488, y: -88}
+  graph: {fileID: 810727429}
+  position: {x: -8, y: -72}
   ports:
     keys:
+    - Index
     - Entry
+    - Exit
     values:
+    - _fieldName: Index
+      _node: {fileID: 435160188}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
     - _fieldName: Entry
-      _node: {fileID: 447866003}
+      _node: {fileID: 435160188}
       _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: Entry
-        node: {fileID: 956814460}
+        node: {fileID: 1116836469}
         reroutePoints: []
-      _direction: 1
-      _connectionType: 0
+      _direction: 0
+      _connectionType: 1
       _typeConstraint: 0
       _dynamic: 0
-  entryPointType: 1
+    - _fieldName: Exit
+      _node: {fileID: 435160188}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  Index: 1
 --- !u!1 &473089432
 GameObject:
   m_ObjectHideFlags: 0
@@ -15685,6 +15789,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &752199994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c04a34a9ed641a292e9847e51da6cf9, type: 3}
+  m_Name: Message Box Interaction
+  m_EditorClassIdentifier: 
+  graph: {fileID: 76503970}
+  position: {x: 152, y: 24}
+  ports:
+    keys:
+    - Text
+    - MessageBoxPrefab
+    - Entry
+    - Exit
+    values:
+    - _fieldName: Text
+      _node: {fileID: 752199994}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: MessageBoxPrefab
+      _node: {fileID: 752199994}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Entry
+      _node: {fileID: 752199994}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Exit
+        node: {fileID: 848445943}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Exit
+      _node: {fileID: 752199994}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 122663572}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 1
+      _typeConstraint: 0
+      _dynamic: 0
+  Text: '4 + 5 = '
+  MessageBoxPrefab: {fileID: 5457389356766954974, guid: 987eb3dfcca3ea48e93d20d121103e54,
+    type: 3}
 --- !u!1 &758965840
 GameObject:
   m_ObjectHideFlags: 0
@@ -16204,7 +16374,22 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   entryPointType: 1
---- !u!114 &956814460
+--- !u!114 &810727429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dfa6f9c361dd7a45bcdca638c3f3c3e, type: 3}
+  m_Name: Transition Forest-graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 1116836469}
+  - {fileID: 435160188}
+--- !u!114 &848445943
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16216,8 +16401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c04a34a9ed641a292e9847e51da6cf9, type: 3}
   m_Name: Message Box Interaction
   m_EditorClassIdentifier: 
-  graph: {fileID: 1577450311}
-  position: {x: -136, y: -72}
+  graph: {fileID: 76503970}
+  position: {x: -104, y: 8}
   ports:
     keys:
     - Text
@@ -16226,7 +16411,7 @@ MonoBehaviour:
     - Exit
     values:
     - _fieldName: Text
-      _node: {fileID: 956814460}
+      _node: {fileID: 848445943}
       _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       connections: []
@@ -16235,7 +16420,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: MessageBoxPrefab
-      _node: {fileID: 956814460}
+      _node: {fileID: 848445943}
       _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       connections: []
@@ -16244,27 +16429,30 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: Entry
-      _node: {fileID: 956814460}
+      _node: {fileID: 848445943}
       _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
       - fieldName: Entry
-        node: {fileID: 447866003}
+        node: {fileID: 1180526342}
         reroutePoints: []
       _direction: 0
       _connectionType: 1
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: Exit
-      _node: {fileID: 956814460}
+      _node: {fileID: 848445943}
       _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: Entry
+        node: {fileID: 752199994}
+        reroutePoints: []
       _direction: 1
       _connectionType: 1
       _typeConstraint: 0
       _dynamic: 0
-  Text: Bem-vindo a Test Village!
+  Text: "Voc\xEA tem {CGOLD}g"
   MessageBoxPrefab: {fileID: 5457389356766954974, guid: 987eb3dfcca3ea48e93d20d121103e54,
     type: 3}
 --- !u!4 &1009270318 stripped
@@ -16290,6 +16478,37 @@ MonoBehaviour:
   - {fileID: 552954684}
   - {fileID: 526858831}
   - {fileID: 2096390584}
+--- !u!114 &1116836469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a360069844d33aa47917c47b63c0935d, type: 3}
+  m_Name: Interaction Entry Point
+  m_EditorClassIdentifier: 
+  graph: {fileID: 810727429}
+  position: {x: -328, y: -88}
+  ports:
+    keys:
+    - Entry
+    values:
+    - _fieldName: Entry
+      _node: {fileID: 1116836469}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 435160188}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entryPointType: 1
 --- !u!1 &1124707247
 GameObject:
   m_ObjectHideFlags: 0
@@ -16927,6 +17146,90 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1154259962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f763f675279eeb84aa3399458db6b1b9, type: 3}
+  m_Name: Get Sum
+  m_EditorClassIdentifier: 
+  graph: {fileID: 76503970}
+  position: {x: 280, y: 216}
+  ports:
+    keys:
+    - a
+    - b
+    - result
+    values:
+    - _fieldName: a
+      _node: {fileID: 1154259962}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: b
+      _node: {fileID: 1154259962}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: result
+      _node: {fileID: 1154259962}
+      _typeQualifiedName: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections:
+      - fieldName: Text
+        node: {fileID: 122663572}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  a: 4
+  b: 5
+  result: 0
+--- !u!114 &1180526342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a360069844d33aa47917c47b63c0935d, type: 3}
+  m_Name: Interaction Entry Point
+  m_EditorClassIdentifier: 
+  graph: {fileID: 76503970}
+  position: {x: -445, y: 31.5}
+  ports:
+    keys:
+    - Entry
+    values:
+    - _fieldName: Entry
+      _node: {fileID: 1180526342}
+      _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 848445943}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  entryPointType: 1
 --- !u!114 &1181647305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17076,21 +17379,6 @@ MonoBehaviour:
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   duration: 0.5
   fadeMode: 1
---- !u!114 &1577450311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dfa6f9c361dd7a45bcdca638c3f3c3e, type: 3}
-  m_Name: GameObject (2)-graph
-  m_EditorClassIdentifier: 
-  nodes:
-  - {fileID: 447866003}
-  - {fileID: 956814460}
 --- !u!1 &1610734392
 GameObject:
   m_ObjectHideFlags: 0
@@ -17203,6 +17491,7 @@ GameObject:
   - component: {fileID: 1821581624}
   - component: {fileID: 1821581623}
   - component: {fileID: 1821581622}
+  - component: {fileID: 1821581625}
   m_Layer: 8
   m_Name: Transition Forest
   m_TagString: Untagged
@@ -17294,6 +17583,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1821581625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821581621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f34515f83d543d5b51cce2c3a28138f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  graph: {fileID: 810727429}
 --- !u!114 &1834694690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17452,10 +17754,40 @@ MonoBehaviour:
   m_GameObject: {fileID: 1949756631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f34515f83d543d5b51cce2c3a28138f, type: 3}
+  m_Script: {fileID: 11500000, guid: e8343ff44e9ba7a948d9995154d143f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  graph: {fileID: 1577450311}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: InstanceVars
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object,
+        mscorlib]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  interactableType: 0
+  IsInteracting: 0
 --- !u!61 &1949756633
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17505,40 +17837,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1949756631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8343ff44e9ba7a948d9995154d143f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f34515f83d543d5b51cce2c3a28138f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
-    ReferencedUnityObjects: []
-    SerializedBytesString: 
-    Prefab: {fileID: 0}
-    PrefabModificationsReferencedUnityObjects: []
-    PrefabModifications: []
-    SerializationNodes:
-    - Name: InstanceVars
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
-        mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-  interactableType: 0
-  IsInteracting: 0
+  graph: {fileID: 76503970}
 --- !u!114 &1979892233
 MonoBehaviour:
   m_ObjectHideFlags: 0

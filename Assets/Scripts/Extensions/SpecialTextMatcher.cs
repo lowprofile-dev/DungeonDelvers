@@ -28,7 +28,7 @@ public class SpecialTextMatcher
         //SpecialKeywords.Add();
     }
 
-    private void match(Interactable context, ref string text)
+    private string match(Interactable context, string text)
     {
         Regex rx = new Regex(@"\{(.*?)\}");
         
@@ -45,12 +45,12 @@ public class SpecialTextMatcher
                 if (isSpecialKeyword)
                 {
                     var keywordValue = keywordFunction();
-                    replace(match,keyword,ref text);
+                    replace(match,keywordValue,ref text);
                 }
                 else if (stringValue[0] == 'G')
                 {
                     var globalValue = GameController.Instance.Globals[stringValue.Substring(2)].ToString();
-                    replace(match,keyword,ref text);
+                    replace(match,globalValue,ref text);
                 } else if (stringValue[0] == 'L')
                 {
                     //var localValue = GameController.Instance.Globals[stringValue.Substring(2)].ToString();
@@ -58,12 +58,16 @@ public class SpecialTextMatcher
             }
             match = rx.Match(text);
         }
+
+        return text;
     }
 
     private void replace(Match match, string newValue, ref string text) => text = text.Substring(0, match.Index) + newValue + text.Substring(match.Index + match.Length);
 
-    public static void Match([NotNull] Interactable context, ref string text)
+    public static string Match([NotNull] Interactable context, string text)
     {
-        _instance.match(context, ref text);
+        if (string.IsNullOrWhiteSpace(text))
+            return text;
+        return Instance.match(context, text);
     }
 }

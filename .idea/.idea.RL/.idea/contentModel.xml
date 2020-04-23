@@ -460,6 +460,7 @@
             <e p="InteractionSet.cs" t="Include" />
             <e p="NodeUtility" t="Include">
               <e p="GetSumNode.cs" t="Include" />
+              <e p="StringConcatInteraction.cs" t="Include" />
             </e>
           </e>
           <e p="Inventory" t="Include">

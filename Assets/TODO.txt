@@ -1,9 +1,6 @@
-Ver como fazer o Odin desenhar o xNode
-Rever o sistema de variaveis (Globals, Locals, Instance?)
-Mudar o acesso de globals para set get or default 
-Alterar o modo de mergir, fazer como tava antes que merge num tilemap só, mas o RelocativeTiles retorna 2 Actions agora (desligar, ligar tiles) (struct que tem isso pra fazer um dicionario depois)
-Refazer parte do battlecontroller de instanciar inimigos (deixar o layout como tá por enquanto, ver zigzag)
-Arrumar ^^^^ (no momento falta arrumar a instanciação dos inimigos (fazendo o loadbase mas prob alterar ter isso(?)))
+Refazer a parte da geração de mapa (não parece ter necessidade de mergir os tilemaps, mas dar um pouco mais de testada anyway, e ver como marcar tiles para ativar/desativar quando necessário.)
+Mudar o acesso de globals para set get or default (acho que ja tá, só conferir)
+Ver se tem como refazer a lógica do Defend.
 Limpar código do player
 Limpar e reorganizar BattleController, fazer ficar mais fácil a mensagem de fim de batalha.
 Avisar pro player que não ganhou XP porque o nível dos monstros era mais baixo quando for o caso.
