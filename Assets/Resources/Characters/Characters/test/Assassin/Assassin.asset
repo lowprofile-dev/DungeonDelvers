@@ -85,6 +85,15 @@ MonoBehaviour:
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
   Growths:
     MaxHp: 6
     InitialEp: 0
@@ -98,6 +107,15 @@ MonoBehaviour:
     Evasion: 0
     CritChance: 0.05
     CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
   WeaponTypes: 03000000
   ArmorTypes: 
   Weapon: {fileID: 11400000, guid: c6a2b27634d9e364b8c3529451c6e3a3, type: 2}
@@ -109,6 +127,6 @@ MonoBehaviour:
   BaseSkills:
   - {fileID: 11400000, guid: 71a3cb8b20046b7239bbe7d7915e89b0, type: 2}
   - {fileID: 11400000, guid: 8e01f04622ce68d5ab2239095366db63, type: 2}
-  BasePassives:
-  - {fileID: 11400000, guid: 8a26a5680e5ca86439fb5271297e9113, type: 2}
+  BasePassives: []
+  DefaultDefendSkill: {fileID: 11400000, guid: 3fda503906d7d314d8cdd9e2b6e3a30d, type: 2}
   Level: 1

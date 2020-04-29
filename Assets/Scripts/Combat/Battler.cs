@@ -85,7 +85,7 @@ public abstract class Battler : AsyncMonoBehaviour
             .ToArray();
 
         await Task.WhenAll(expiredStatusEffects
-            .Select(RemoveStatusEffect));
+            .Select(RemoveStatusEffectAsync));
 
         var effectsFromPassives = Passives
             .SelectMany(passive => passive.Effects
@@ -266,20 +266,30 @@ public abstract class Battler : AsyncMonoBehaviour
         
     }
     
-    public async Task ApplyStatusEffect(StatusEffectInstance statusEffectInstance)
+    public async Task ApplyStatusEffectAsync(StatusEffectInstance statusEffectInstance)
+    {
+        await QueueActionAndAwait(() => ApplyStatusEffect(statusEffectInstance));
+    }
+
+    public async Task RemoveStatusEffectAsync(StatusEffectInstance statusEffectInstance)
+    {
+        await QueueActionAndAwait(() => RemoveStatusEffect(statusEffectInstance));
+    }
+
+    public void ApplyStatusEffect(StatusEffectInstance statusEffectInstance)
     {
         StatusEffectInstances.Add(statusEffectInstance);
         var effects = statusEffectInstance.StatusEffect.Effects
             .Where(effect => effect is IOnApplyPassiveEffect)
             .Cast<IOnApplyPassiveEffect>();
-
+        
         foreach (var effect in effects)
         {
-            await QueueActionAndAwait(()=>effect.OnApply(this));
+            effect.OnApply(this);
         }
     }
 
-    public async Task RemoveStatusEffect(StatusEffectInstance statusEffectInstance)
+    public void RemoveStatusEffect(StatusEffectInstance statusEffectInstance)
     {
         var removed = StatusEffectInstances.Remove(statusEffectInstance);
         
@@ -292,7 +302,7 @@ public abstract class Battler : AsyncMonoBehaviour
 
         foreach (var effect in effects)
         {
-            await QueueActionAndAwait(()=>effect.OnUnapply(this));
+            effect.OnUnapply(this);
         }
     }
 

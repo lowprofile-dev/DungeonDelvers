@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -12,8 +13,8 @@ public class SkillButton : SerializedMonoBehaviour, ISelectHandler, IPointerEnte
     [ShowInInspector, ReadOnly] public PlayerSkill Skill { get; private set; }
     public Image SelectedIndicatior;
     public Image SkillIcon;
-    public Text SkillName;
-    public Text SkillCost;
+    public TMP_Text SkillName;
+    public TMP_Text SkillCost;
     public Button Button;
 
     private bool canBeUsed;

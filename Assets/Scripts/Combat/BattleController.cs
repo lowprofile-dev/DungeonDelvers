@@ -295,46 +295,64 @@ public class BattleController : AsyncMonoBehaviour
         return 0;
     }
 
+    // public Sprite GetPlayerGroundSprite()
+    // {
+    //     try
+    //     {
+    //         var tileMaps = MapSettings.Instance.GetCurrentMapTile()?.Tilemaps;
+    //         if (tileMaps == null)
+    //             return null;
+    //         var playerPosition = PlayerController.Instance.transform.position;
+    //         var groundTilemaps = tileMaps
+    //             .Where(tileMap => tileMap.CompareTag("PG_Floor"))
+    //             .Where(tileMap =>
+    //             {
+    //                 var localBounds = tileMap.localBounds;
+    //                 var worldBounds = new Bounds(tileMap.transform.position,localBounds.size);
+    //                 return worldBounds.Contains(playerPosition);
+    //             });
+    //         foreach (var groundTilemap in groundTilemaps)
+    //         {
+    //             var playerTilemapPosition = groundTilemap.WorldToCell(playerPosition);
+    //             var playerTile = groundTilemap.GetSprite(playerTilemapPosition);
+    //             if (playerTile == null)
+    //             {
+    //                 var x = playerTilemapPosition.x;
+    //                 var y = playerTilemapPosition.y;
+    //                 var z = playerTilemapPosition.z;
+    //
+    //                 var positionGrid = new Vector3Int[]
+    //                 {
+    //                     new Vector3Int(x-1, y-1, z), new Vector3Int(x, y-1, z), new Vector3Int(x+1, y-1, z),
+    //                     new Vector3Int(x-1, y, z), /**/ new Vector3Int(x+1,y,z),
+    //                     new Vector3Int(x-1, y+1, z), new Vector3Int(x,y+1,z), new Vector3Int(x+1,y+1,z),   
+    //                 };
+    //
+    //                 foreach (var position in positionGrid)
+    //                 {
+    //                     var tile = groundTilemap.GetSprite(position);
+    //                     if (tile != null)
+    //                         return tile;
+    //                 }
+    //             }
+    //             else
+    //                 return playerTile;
+    //         }
+    //         return null;
+    //     }
+    //     catch (Exception e)
+    //     {
+    //         Debug.LogException(e);
+    //         return null;
+    //     }
+    // }
+
     public Sprite GetPlayerGroundSprite()
     {
-        try
-        {
-            var tileMaps = GameObject.FindObjectsOfType<Tilemap>();
-            var groundTilemap = tileMaps.First(tilemap => tilemap.CompareTag("PG_Floor"));
-            var playerPosition = PlayerController.Instance.transform.position;
-            var playerTilemapPosition = groundTilemap.WorldToCell(playerPosition);
-            var playerTile = groundTilemap.GetSprite(playerTilemapPosition);
-            if (playerTile == null)
-            {
-                var x = playerTilemapPosition.x;
-                var y = playerTilemapPosition.y;
-                var z = playerTilemapPosition.z;
-
-                var positionGrid = new Vector3Int[]
-                {
-                    new Vector3Int(x-1, y-1, z), new Vector3Int(x, y-1, z), new Vector3Int(x+1, y-1, z),
-                    new Vector3Int(x-1, y, z), /**/ new Vector3Int(x+1,y,z),
-                    new Vector3Int(x-1, y+1, z), new Vector3Int(x,y+1,z), new Vector3Int(x+1,y+1,z),   
-                };
-
-                foreach (var position in positionGrid)
-                {
-                    var tile = groundTilemap.GetSprite(position);
-                    if (tile != null)
-                        return tile;
-                }
-
-                return null;
-            }
-            else
-                return playerTile;
-        }
-        catch (Exception)
-        {
-            return null;
-        }
+        var currentMapTile = MapSettings.Instance.GetCurrentMapTile();
+        return currentMapTile.BattleSprite;
     }
-
+    
     [Button("Test")]
     public void test()
     {

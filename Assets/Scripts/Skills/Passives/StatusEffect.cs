@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Sirenix.Utilities;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ public class StatusEffect : SerializableAsset
     public bool Hidden = false;
     public List<PassiveEffect> Effects = new List<PassiveEffect>();
 
-    public void Apply(SkillInfo skillInfo,int turnDuration)
+    public async Task ApplyAsync(SkillInfo skillInfo,int turnDuration)
     {
         var instance = new StatusEffectInstance
         {
@@ -22,7 +23,19 @@ public class StatusEffect : SerializableAsset
             TurnDuration = turnDuration
         };
         
-        //skillInfo.Target.StatusEffectInstances.Add(instance);
+        await skillInfo.Target.ApplyStatusEffectAsync(instance);
+    }
+
+    public void Apply(SkillInfo skillInfo, int turnDuration)
+    {
+        var instance = new StatusEffectInstance
+        {
+            Source = skillInfo.Source,
+            Target = skillInfo.Target,
+            StatusEffect = this,
+            TurnDuration = turnDuration
+        };
+        
         skillInfo.Target.ApplyStatusEffect(instance);
     }
     

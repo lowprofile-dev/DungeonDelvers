@@ -21,9 +21,11 @@ public class MapTile : SerializedMonoBehaviour
         }
     }
     public int TileIndex;
+    private BoxCollider2D _collider2D;
+    public Bounds Bounds => _collider2D.bounds;
     private DunGen.Tile _tile;
-    public Texture2D MinimapCell;
-    
+    public Sprite BattleSprite;
+
     private void Awake()
     {
         _tile = GetComponent<DunGen.Tile>();
@@ -42,110 +44,23 @@ public class MapTile : SerializedMonoBehaviour
     {
         var bounds = _tile.Bounds;
         DestroyImmediate(gameObject.GetComponent<BoxCollider>());
-        var triggerCollider = gameObject.AddComponent<BoxCollider2D>();
-        triggerCollider.isTrigger = true;
-        triggerCollider.offset = bounds.center - transform.position;
-        triggerCollider.size = bounds.size;
+        _collider2D = gameObject.AddComponent<BoxCollider2D>();
+        _collider2D.isTrigger = true;
+        _collider2D.offset = bounds.center - transform.position;
+        _collider2D.size = bounds.size;
+        SetTilemapLayer(LayerMask.NameToLayer("MinimapHidden"));
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (Settings.MapTileSeen[TileIndex] == false)
-        {
-            Settings.MapTileSeen[TileIndex] = true;
-        }
+        SetTilemapLayer(LayerMask.NameToLayer("Default"));
     }
 
-    // public void MergeTilemap(List<Tilemap> destination, Func<Vector3Int, BoundsInt, Vector2Int> CellToArray, Vector2Int TextureSize, Dictionary<string,Color> MinimapColors)
-    // {
-    //     var texture = new Texture2D(TextureSize.x,TextureSize.y);
-    //     var merged = new List<GameObject>();
-    //     
-    //     foreach (var tilemap in Tilemaps)
-    //     { 
-    //         var dest = destination.FirstOrDefault(t => t.CompareTag(tilemap.tag));
-    //
-    //         if (dest == null)
-    //             continue;
-    //
-    //         var bounds = tilemap.cellBounds;
-    //         var positions = bounds.allPositionsWithin;
-    //         
-    //         var toErase = new List<Vector3Int>();
-    //         var toMerge = (new List<Vector3Int>(), new List<TileBase>());
-    //
-    //         foreach (var position in positions)
-    //         {
-    //             var tile = tilemap.GetTile(position);
-    //         
-    //             if (tile != null)
-    //             {
-    //                 var worldPosition = tilemap.CellToWorld(position);
-    //                 var targetPosition = dest.WorldToCell(worldPosition);
-    //                 toMerge.Item1.Add(targetPosition);
-    //                 toMerge.Item2.Add(tile);
-    //                 toErase.Add(position);
-    //
-    //                 var texturePosition = CellToArray(position, bounds);
-    //                 var color = MinimapColors[tilemap.tag];
-    //                 
-    //                 texture.SetPixel(texturePosition.x,texturePosition.y, color);
-    //             }
-    //         }
-    //
-    //         dest.SetTiles(toErase.ToArray(), Enumerable.Repeat<TileBase>(null, toErase.Count).ToArray());
-    //         dest.SetTiles(toMerge.Item1.ToArray(), toMerge.Item2.ToArray());
-    //         merged.Add(tilemap.gameObject);
-    //     }
-    //
-    //     merged.ForEach(Destroy);
-    //     MinimapCell = texture;
-    // }
-    //
-    // public Texture2D MergeTilemap(List<Tilemap> destination, Func<Vector3Int, Tilemap, Vector2Int> CellToArray, Vector2Int TextureSize, Dictionary<string,Color> MinimapColors)
-    // {
-    //     var texture = new Texture2D(TextureSize.x,TextureSize.y);
-    //     var merged = new List<GameObject>();
-    //     
-    //     foreach (var tilemap in Tilemaps)
-    //     { 
-    //         var dest = destination.FirstOrDefault(t => t.CompareTag(tilemap.tag));
-    //
-    //         if (dest == null)
-    //             continue;
-    //
-    //         var bounds = tilemap.cellBounds;
-    //         var positions = bounds.allPositionsWithin;
-    //         
-    //         var toErase = new List<Vector3Int>();
-    //         var toMerge = (new List<Vector3Int>(), new List<TileBase>());
-    //
-    //         foreach (var position in positions)
-    //         {
-    //             var tile = tilemap.GetTile(position);
-    //         
-    //             if (tile != null)
-    //             {
-    //                 var worldPosition = tilemap.CellToWorld(position);
-    //                 var targetPosition = dest.WorldToCell(worldPosition);
-    //                 toMerge.Item1.Add(targetPosition);
-    //                 toMerge.Item2.Add(tile);
-    //                 toErase.Add(position);
-    //
-    //                 var texturePosition = CellToArray(position, tilemap);
-    //                 var color = MinimapColors[tilemap.tag];
-    //                 
-    //                 texture.SetPixel(texturePosition.x,texturePosition.y, color);
-    //             }
-    //         }
-    //
-    //         dest.SetTiles(toErase.ToArray(), Enumerable.Repeat<TileBase>(null, toErase.Count).ToArray());
-    //         dest.SetTiles(toMerge.Item1.ToArray(), toMerge.Item2.ToArray());
-    //         merged.Add(tilemap.gameObject);
-    //     }
-    //
-    //     merged.ForEach(Destroy);
-    //     MinimapCell = texture;
-    //     return texture;
-    // }
+    public void SetTilemapLayer(int layerIndex)
+    {
+        foreach (var tilemap in Tilemaps)
+        {
+            tilemap.gameObject.layer = layerIndex;
+        }
+    }
 }

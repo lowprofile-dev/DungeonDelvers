@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using JetBrains.Annotations;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -32,8 +34,7 @@ public class MapSettings : SerializedMonoBehaviour
     }
     [FoldoutGroup("Encounter")][ReadOnly] public float RemainingEncounterDistance = 0;
     private Vector2 lastPosition;
-    public Color MinimapWallColor;
-    public Color MinimapFloorColor;
+    public Camera MinimapCamera;
     
     public List<MapTile> MapTiles = new List<MapTile>();
     public Dictionary<int, bool> MapTileSeen = new Dictionary<int, bool>();
@@ -118,6 +119,32 @@ public class MapSettings : SerializedMonoBehaviour
         {
             listener.ApplyMapSettings(this);
         }
+    }
+
+    public void MinimapMode(bool toggle)
+    {
+        if (toggle)
+        {
+            MinimapCamera.enabled = true;
+        }
+        else
+        {
+            MinimapCamera.enabled = false;
+        }
+    }
+
+    [CanBeNull] public MapTile GetCurrentMapTile()
+    {
+        var playerPosition = PlayerController.Instance.transform.position;
+
+        foreach (var mapTile in MapTiles)
+        {
+            var bounds = mapTile.Bounds;
+            if (bounds.Contains(playerPosition))
+                return mapTile;
+        }
+
+        return null;
     }
 }
 

@@ -68,7 +68,7 @@ public class MonsterLayoutManager : MonoBehaviour
         {
             var obj = new GameObject("Spacing");
             obj.AddComponent<RectTransform>();
-            obj.transform.parent = MonsterLayoutRect;
+            obj.transform.SetParent(MonsterLayoutRect,false);
             objectOrder.Add(obj);
         }
         

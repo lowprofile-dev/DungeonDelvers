@@ -84,7 +84,7 @@ public class BattleCanvas : AsyncMonoBehaviour
         {
             var tf = monster.RectTransform;
             
-            tf.parent = MonsterPanel;
+            tf.SetParent(MonsterPanel,false);
             tf.localRotation = Quaternion.Euler(-55,0,0);
             tf.localPosition = new Vector3(0,0,0);
         }

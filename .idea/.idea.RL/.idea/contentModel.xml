@@ -533,6 +533,7 @@
               <e p="Passive.cs" t="Include" />
               <e p="PassiveEffects" t="Include">
                 <e p="BonusStatPassiveEffect.cs" t="Include" />
+                <e p="DamageReductionPassiveEffect.cs" t="Include" />
                 <e p="DefendPassiveEffect.cs" t="Include" />
                 <e p="DoTPassiveEffect.cs" t="Include" />
                 <e p="EnchantAttackPassiveEffect.cs" t="Include" />
@@ -683,6 +684,7 @@
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
           </e>
+          <e p="Glyph Report.txt" t="Include" />
           <e p="Resources" t="Include">
             <e p="LineBreaking Following Characters.txt" t="Include" />
             <e p="LineBreaking Leading Characters.txt" t="Include" />

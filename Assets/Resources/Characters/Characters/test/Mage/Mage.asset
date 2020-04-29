@@ -171,6 +171,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -272,6 +302,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -373,6 +433,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -474,6 +564,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -575,6 +695,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -664,6 +814,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -765,6 +945,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -866,6 +1076,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -967,6 +1207,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1068,6 +1338,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1157,6 +1457,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1258,6 +1588,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1359,6 +1719,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1460,6 +1850,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1561,6 +1981,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1650,6 +2100,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1751,6 +2231,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1852,6 +2362,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -1953,6 +2493,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -2054,6 +2624,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -2143,6 +2743,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -2244,6 +2874,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -2345,6 +3005,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -2446,6 +3136,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -2547,6 +3267,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -2636,6 +3386,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -2737,6 +3517,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -2838,6 +3648,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -2939,6 +3779,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -3040,6 +3910,36 @@ MonoBehaviour:
     - Name: CritAvoid
       Entry: 4
       Data: 0
+    - Name: ElementalResistance
+      Entry: 7
+      Data: ElementalResistance, Assembly-CSharp
+    - Name: EarthResistance
+      Entry: 4
+      Data: 0
+    - Name: FireResistance
+      Entry: 4
+      Data: 0
+    - Name: HolyResistance
+      Entry: 4
+      Data: 0
+    - Name: DarkResistance
+      Entry: 4
+      Data: 0
+    - Name: IceResistance
+      Entry: 4
+      Data: 0
+    - Name: LightningResistance
+      Entry: 4
+      Data: 0
+    - Name: WaterResistance
+      Entry: 4
+      Data: 0
+    - Name: WindResistance
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -3081,6 +3981,15 @@ MonoBehaviour:
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
   Growths:
     MaxHp: 6
     InitialEp: 0
@@ -3094,6 +4003,15 @@ MonoBehaviour:
     Evasion: 0
     CritChance: 0.05
     CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
   WeaponTypes: 0500000000000000
   ArmorTypes: 
   Weapon: {fileID: 11400000, guid: b3952e5b9c86d8d4b9ead719951f2437, type: 2}
@@ -3110,6 +4028,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 41cf442eff2eaa0cbac4bb643a33414b, type: 2}
   - {fileID: 11400000, guid: 6247f79a3e899859ca690fc6ea3aa1a2, type: 2}
   - {fileID: 11400000, guid: b1d73cacc33d51d2d8b46c211b9a618f, type: 2}
-  BasePassives:
-  - {fileID: 11400000, guid: 8a26a5680e5ca86439fb5271297e9113, type: 2}
+  BasePassives: []
+  DefaultDefendSkill: {fileID: 11400000, guid: 3fda503906d7d314d8cdd9e2b6e3a30d, type: 2}
   Level: 1

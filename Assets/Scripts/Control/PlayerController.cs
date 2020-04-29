@@ -115,6 +115,7 @@ public class PlayerController : AsyncMonoBehaviour
         }
 
         //test
+        #if UNITY_EDITOR || DEVELOPMENT_BUILD
         if (Input.GetKeyDown(KeyCode.LeftShift))
             MovementSpeed = 10;
         if (Input.GetKeyUp(KeyCode.LeftShift))
@@ -123,6 +124,9 @@ public class PlayerController : AsyncMonoBehaviour
             GameSaveController.Save();
         if (Input.GetKeyDown(KeyCode.X))
             GameSaveController.Load();
+        if (Input.GetKeyDown(KeyCode.Q))
+            _toggleMinimapCamera();
+        #endif
     }
 
     private void FixedUpdate()
@@ -540,7 +544,7 @@ public class PlayerController : AsyncMonoBehaviour
 
     #endregion
 
-    #if UNITY_EDITOR
+    #if UNITY_EDITOR || DEVELOPMENT_BUILD
 
     [Button]
     private void _printLevelScale(){
@@ -552,6 +556,23 @@ public class PlayerController : AsyncMonoBehaviour
             message += $"{i} to {i+1}: {neededExp}. Cumulative: {cumulative}\n";
         }
         Debug.Log(message);
+    }
+
+    private bool _minimapCameraActive = false;
+    private void _toggleMinimapCamera()
+    {
+        if (_minimapCameraActive)
+        {
+            MapSettings.Instance.MinimapMode(false);
+            _minimapCameraActive = false;
+            State = PlayerState.Active;
+        }
+        else
+        {
+            MapSettings.Instance.MinimapMode(true);
+            _minimapCameraActive = true;
+            State = PlayerState.Busy;
+        }
     }
     #endif
 }

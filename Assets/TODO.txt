@@ -1,6 +1,4 @@
-Refazer a parte da geração de mapa (não parece ter necessidade de mergir os tilemaps, mas dar um pouco mais de testada anyway, e ver como marcar tiles para ativar/desativar quando necessário.)
-Mudar o acesso de globals para set get or default (acho que ja tá, só conferir)
-Ver se tem como refazer a lógica do Defend.
+Arrumar Defend.
 Limpar código do player
 Limpar e reorganizar BattleController, fazer ficar mais fácil a mensagem de fim de batalha.
 Avisar pro player que não ganhou XP porque o nível dos monstros era mais baixo quando for o caso.

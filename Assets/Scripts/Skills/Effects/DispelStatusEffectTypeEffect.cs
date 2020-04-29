@@ -22,7 +22,7 @@ public class DispelStatusEffectTypeEffect : Effect
 
         foreach (var instance in targetStatusEffectsOfType)
         {
-            target.RemoveStatusEffect(instance);
+            target.RemoveStatusEffectAsync(instance);
         }
 
         return new DispelStatusEffectTypeEffectResult

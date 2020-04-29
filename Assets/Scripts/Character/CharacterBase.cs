@@ -31,6 +31,7 @@ public class CharacterBase : SerializableAsset
     [ListDrawerSettings(ListElementLabelName = "_masteryElementName")]public List<Mastery> Masteries = new List<Mastery>();
     public List<PlayerSkill> BaseSkills = new List<PlayerSkill>();
     public List<Passive> BasePassives = new List<Passive>();
+    public PlayerSkill DefaultDefendSkill;
 
     #endregion
 

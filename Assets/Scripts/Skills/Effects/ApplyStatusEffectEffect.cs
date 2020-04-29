@@ -1,6 +1,6 @@
 public class ApplyStatusEffectEffect : Effect
 {
-    public StatusEffect StatusEffect = new StatusEffect();
+    public StatusEffect StatusEffect;
     public int turnDuration;
     
     public override EffectResult ExecuteEffect(SkillInfo skillInfo)

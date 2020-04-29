@@ -5,6 +5,7 @@ using System.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using SkredUtils;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -97,8 +98,8 @@ public class CharacterActionMenu : SerializedMonoBehaviour
     
     struct StatusText
     {
-        public Text Name;
-        public Text Life;
+        public TMP_Text Name;
+        public TMP_Text Life;
         public Image Panel;
     }
 
@@ -122,10 +123,19 @@ public class CharacterActionMenu : SerializedMonoBehaviour
 
     public void Defend()
     {
-        //Por enquanto pula o turno. Botar pra dar um buff de redução de dano.
-        Battler.BattleDictionary["Defending"] = true;
-        Debug.Log($"{Battler.BattlerName} -> [Defending]=true");
-        FinishTurn(new Turn());
+        var defendSkill = Battler.Character.Base.DefaultDefendSkill;
+        if (defendSkill != null)
+        {
+            FinishTurn(new Turn
+            {
+                Skill = defendSkill,
+                Targets = new []{Battler}
+            });
+        }
+        else
+        {
+            FinishTurn(new Turn());
+        }
     }
 
     public void Run()
