@@ -88,7 +88,7 @@ MonoBehaviour:
   Element: 0
   SkillDescription: 
   Target: 6
-  TrueHit: 0
+  TrueHit: 1
   CanBeSilenced: 0
   CanCritical: 0
   AccuracyModifier: 0

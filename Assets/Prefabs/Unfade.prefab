@@ -52,56 +52,17 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: StartupInteractions
+    - Name: InstanceVars
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Interaction, Assembly-CSharp]],
-        mscorlib
-    - Name: 
-      Entry: 12
-      Data: 1
-    - Name: 
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Object,
+        mscorlib]], mscorlib
+    - Name: comparer
       Entry: 7
-      Data: 1|FadeInteraction, Assembly-CSharp
-    - Name: SkipWaiting
-      Entry: 5
-      Data: false
-    - Name: FadeColor
-      Entry: 7
-      Data: UnityEngine.Color, UnityEngine.CoreModule
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
-    - Name: 
-      Entry: 4
-      Data: 0
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
     - Name: 
       Entry: 8
       Data: 
-    - Name: Duration
-      Entry: 4
-      Data: 0.5
-    - Name: fadeMode
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: Interactions
-      Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Interaction, Assembly-CSharp]],
-        mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -112,4 +73,5 @@ MonoBehaviour:
       Entry: 8
       Data: 
   interactableType: 0
+  Interactions: {fileID: 11400000, guid: 41155f412cdf2af43a01933e990e14d4, type: 2}
   IsInteracting: 0

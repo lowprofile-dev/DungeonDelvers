@@ -154,6 +154,31 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: Animations
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 8|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
+    - Name: Animation
+      Entry: 3
+      Data: 3
+    - Name: speed
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: RequiredWeaponType
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
@@ -173,8 +198,7 @@ MonoBehaviour:
   SkillDescription: Throw a weak fireball at an enemy.
   Target: 1
   TrueHit: 0
-  CanBeSilenced: 0
+  CanBeSilenced: 1
   CanCritical: 1
   AccuracyModifier: 0
   CriticalModifier: 0
-  AnimationType: 1

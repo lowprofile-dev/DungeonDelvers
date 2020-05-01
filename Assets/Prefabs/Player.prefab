@@ -90,6 +90,7 @@ MonoBehaviour:
   MainMenuPrefab: {fileID: 9044932552085264921, guid: bc9cf6ed27b58c5a2856ff9100a8fdde,
     type: 3}
   MainCameraPrefab: {fileID: 0}
+  InteractionRange: 1.5
   PartyLevel: 1
   CurrentExp: 0
   CurrentGold: 500

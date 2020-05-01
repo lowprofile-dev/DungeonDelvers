@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Inexpugnable_Outlined
+  m_Name: Inexpugnable_Outlined_Small
   m_EditorClassIdentifier: 
   hashCode: -758744793
   material: {fileID: 7137808383857181206}

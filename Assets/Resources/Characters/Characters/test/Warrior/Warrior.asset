@@ -3951,8 +3951,8 @@ MonoBehaviour:
     type: 3}
   Bases:
     MaxHp: 94
-    InitialEp: 15
-    EpGain: 10
+    InitialEp: 35
+    EpGain: 25
     PhysAtk: 36
     MagAtk: 15
     PhysDef: 36

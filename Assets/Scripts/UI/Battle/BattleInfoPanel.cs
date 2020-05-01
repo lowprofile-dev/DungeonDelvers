@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BattleInfoPanel : SerializedMonoBehaviour
 {
     public GameObject Panel;
-    public Text Text;
+    public TMP_Text Text;
 
     public async Task DisplayInfo(string info, int duration = 2000)
     {

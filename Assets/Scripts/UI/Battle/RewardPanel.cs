@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Sirenix.Utilities;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events; 
@@ -13,7 +14,12 @@ public class RewardPanel : MonoBehaviour
     private Coroutine TypeTextCoroutine;
     private string rewardTextString;
 
-    public void ShowRewardPanel(int expGained, int goldGained, IEnumerable<Item> itemsGained)
+    public Color ExpColor;
+    public Color GoldColor;
+    public Color ItemColor;
+    public Color LevelColor;
+
+    public void ShowRewardPanel(int expGained, int goldGained, Item[] itemsGained)
     {
         //Fazer depois animação de aparecer + animação de digitar.
         gameObject.SetActive(true);
@@ -21,7 +27,7 @@ public class RewardPanel : MonoBehaviour
         if (itemsGained.Any())
             text += $"\nThey also found {string.Join(", ", itemsGained.Select(item => item.InspectorName))}";
         if (expGained >= PlayerController.Instance.ExpToNextLevel - PlayerController.Instance.CurrentExp)
-            text += $"\nThe party is now level {PlayerController.Instance.PartyLevel+1}!";
+            text += $"\nThe party is now <color=#008000>Lv. {PlayerController.Instance.PartyLevel+1}</color>!";
         RewardText.text = "";
 
         rewardTextString = text;
@@ -30,7 +36,7 @@ public class RewardPanel : MonoBehaviour
 
     private IEnumerator TypeText(string text)
     {
-        TypeTextCoroutine = StartCoroutine(SkredUtils.SkredUtils.TextWriter(RewardText, text, 4));
+        TypeTextCoroutine = StartCoroutine(SkredUtils.SkredUtils.TextWriter(RewardText, text, 2));
         yield return TypeTextCoroutine;
         TypeTextCoroutine = null;
     }

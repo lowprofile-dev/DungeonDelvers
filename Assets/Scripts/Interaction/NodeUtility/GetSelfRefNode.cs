@@ -1,22 +1,15 @@
-﻿using System.Collections;
-using XNode;
+﻿using XNode;
 
 [InteractableNode(defaultNodeName = "Util/Self Reference")]
-public class GetSelfRefInteraction : Interaction
+public class GetSelfRefNode : Node
 {
     [Output] public Interactable Owner;
     
-    public override IEnumerator PerformInteraction(Interactable source)
-    {
-        Owner = source;
-        yield break;
-    }
-
     public override object GetValue(NodePort port)
     {
         if (port.fieldName == "Owner")
         {
-            return Owner;
+            return (graph as InteractionGraph).source;
         }
         return null;
     }

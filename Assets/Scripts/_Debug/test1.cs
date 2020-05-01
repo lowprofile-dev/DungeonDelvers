@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
+using Sirenix.Utilities;
 using UnityEngine;
 
 public class test1 : SerializedMonoBehaviour
 {
-    public List<ItemBase> test;
-    // Start is called before the first frame update
+    public Color color;
+
+    [Button] public void PrintColor()
+    {
+        Debug.Log(ColorUtility.ToHtmlStringRGB(color));
+    }
+    
 }

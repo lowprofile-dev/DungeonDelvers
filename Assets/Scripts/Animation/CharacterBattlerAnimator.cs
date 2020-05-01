@@ -36,24 +36,26 @@ public class CharacterBattlerAnimator : SerializedMonoBehaviour
         LoadControllerForWeapon(EquippedWeaponType);
     }
 
-    public IEnumerator PlayAndWait(CharacterBattlerAnimation characterBattlerAnimation)
+    public IEnumerator PlayAndWait(CharacterBattlerAnimation characterBattlerAnimation, float speedModifier = 1f)
     {
+        Animator.speed = speedModifier;
         var state = GetStateNameFromAnimation(characterBattlerAnimation);
 
         Animator.Play(state);
         
         yield return new WaitForEndOfFrame();
         yield return new WaitWhile(() => Animator.GetCurrentAnimatorStateInfo(0).IsName(state));
+        Animator.speed = 1f;
     }
 
-    public async Task AsyncPlayAndWait(CharacterBattlerAnimation characterBattlerAnimation)
+    public async Task AsyncPlayAndWait(CharacterBattlerAnimation characterBattlerAnimation, float speedModifier = 1f)
     {
         var state = "";
         await CharacterBattler.QueueActionAndAwait(() => state = GetStateNameFromAnimation(characterBattlerAnimation)); 
 
         await CharacterBattler.QueueActionAndAwait(() =>
         {
-            Debug.Log(state);
+            Animator.speed = speedModifier;
             Animator.Play(state);
         });
 
@@ -64,6 +66,10 @@ public class CharacterBattlerAnimator : SerializedMonoBehaviour
         void EvaluteCondition()
         {
             condition = Animator.GetCurrentAnimatorStateInfo(0).IsName(state);
+            if (!condition)
+            {
+                Animator.speed = 1f;
+            }
         }
 
         await CharacterBattler.QueueActionAndAwait(EvaluteCondition);

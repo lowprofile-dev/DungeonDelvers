@@ -138,8 +138,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 15 AP
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 723a3e6e58aa79542a7ea3a66c30b203, type: 2}
-  m_sharedMaterial: {fileID: 7137808383857181206, guid: 723a3e6e58aa79542a7ea3a66c30b203,
+  m_fontAsset: {fileID: 11400000, guid: 16be33541a6e7624ea91f7e77afe380f, type: 2}
+  m_sharedMaterial: {fileID: 7137808383857181206, guid: 16be33541a6e7624ea91f7e77afe380f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -367,8 +367,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Skill Name
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 723a3e6e58aa79542a7ea3a66c30b203, type: 2}
-  m_sharedMaterial: {fileID: 7137808383857181206, guid: 723a3e6e58aa79542a7ea3a66c30b203,
+  m_fontAsset: {fileID: 11400000, guid: 16be33541a6e7624ea91f7e77afe380f, type: 2}
+  m_sharedMaterial: {fileID: 7137808383857181206, guid: 16be33541a6e7624ea91f7e77afe380f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

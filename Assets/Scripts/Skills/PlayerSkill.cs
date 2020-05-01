@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using DD.Skill.Animation;
+using UnityEngine;
 
 [CreateAssetMenu(menuName = "Skill/PlayerSkill")]
 public class PlayerSkill : Skill
 {
-    public CharacterBattler.CharacterBattlerAnimation AnimationType;
+    public List<IPlayerSkillAnimation> Animations = new List<IPlayerSkillAnimation>(); 
     public WeaponBase.WeaponType? RequiredWeaponType;
 
     public bool HasRequiredWeapon(Character character)

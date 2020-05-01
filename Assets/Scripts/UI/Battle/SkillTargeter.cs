@@ -59,8 +59,8 @@ public class SkillTargeter : SerializedMonoBehaviour
                     .ForEach(partyMember => TargetGroups.Add(new[] {partyMember}));
                 break;
             case Skill.TargetType.AllEnemies:
-                //TargetGroups.Add(BattleController.Instance.Enemies.Where(enemy => !enemy.Fainted).ToArray());
-                ChooseTargets(BattleController.Instance.Enemies.Where(enemy => !enemy.Fainted).ToArray());
+                TargetGroups.Add(BattleController.Instance.Enemies.Where(enemy => !enemy.Fainted).ToArray());
+                //ChooseTargets(BattleController.Instance.Enemies.Where(enemy => !enemy.Fainted).ToArray());
                 break;
         }
         
@@ -145,55 +145,61 @@ public class SkillTargeter : SerializedMonoBehaviour
             }
             
             //Handle click
-            if (Input.GetMouseButtonDown(0) && TargetGroups.Count >= 2)
+            if (Input.GetMouseButtonDown(0))
             {
-                var mousePosition = Input.mousePosition;
+                if (TargetGroups.Count >= 2)
+                {
+                    var mousePosition = Input.mousePosition;
 
-                int index = 0;
-                float indexDistance = float.PositiveInfinity;
+                    int index = 0;
+                    float indexDistance = float.PositiveInfinity;
                 
-                Func<Battler[], float> GetDistance = (group) =>
-                {
-                    var groupPositions =
-                        group.Select(target => target.RectTransform.position);
-
-                    var totalPosition = new Vector3(0, 0, 0);
-
-                    foreach (var position in groupPositions)
+                    Func<Battler[], float> GetDistance = (group) =>
                     {
-                        totalPosition += position;
-                    }
+                        var groupPositions =
+                            group.Select(target => target.RectTransform.position);
 
-                    totalPosition = new Vector3(totalPosition.x,totalPosition.y,0);
+                        var totalPosition = new Vector3(0, 0, 0);
+
+                        foreach (var position in groupPositions)
+                        {
+                            totalPosition += position;
+                        }
+
+                        totalPosition = new Vector3(totalPosition.x,totalPosition.y,0);
                     
-                    var averagePosition = totalPosition / group.Length;
-                    var deltaPosition = averagePosition - mousePosition;
-                    var distance = deltaPosition.magnitude;
+                        var averagePosition = totalPosition / group.Length;
+                        var deltaPosition = averagePosition - mousePosition;
+                        var distance = deltaPosition.magnitude;
 
-                    return distance;
-                };
+                        return distance;
+                    };
 
-                for (int i = 0; i < TargetGroups.Count; i++)
-                {
-                    var distance = GetDistance(TargetGroups[i]);
-
-                    if (distance < indexDistance)
+                    for (int i = 0; i < TargetGroups.Count; i++)
                     {
-                        index = i;
-                        indexDistance = distance;
-                    }
-                }
+                        var distance = GetDistance(TargetGroups[i]);
 
-                if (index != currentIndex)
-                {
-                    currentIndex = index;
-                    DisplayTargets();
+                        if (distance < indexDistance)
+                        {
+                            index = i;
+                            indexDistance = distance;
+                        }
+                    }
+
+                    if (index != currentIndex)
+                    {
+                        currentIndex = index;
+                        DisplayTargets();
+                    }
+                    else
+                    {
+                        ChooseTargets(TargetGroups[index]);
+                    }
                 }
                 else
                 {
-                    ChooseTargets(TargetGroups[index]);
+                    ChooseTargets(TargetGroups.First());
                 }
-                
             }
 
             if (Input.GetMouseButtonDown(1))

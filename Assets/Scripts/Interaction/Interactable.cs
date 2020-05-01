@@ -8,16 +8,16 @@ using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using XNode;
 
-[RequireComponent(typeof(InteractionSet))]
 public class Interactable : SerializedMonoBehaviour
 {
     public InteractableType interactableType = InteractableType.Action;
-    private InteractionSet Interactions;
+    public InteractionGraph Interactions;
     public Dictionary<string, object> InstanceVars = new Dictionary<string, object>();
     [ReadOnly] public bool IsInteracting = false;
     private void Awake()
     {
-        Interactions = GetComponent<InteractionSet>();
+        if (Interactions == null)
+            Interactions = GetComponent<InteractionSet>().graph;
         var originalName = name;
         var appendedName = $"{SceneManager.GetActiveScene().buildIndex}_{originalName}";
 
@@ -61,14 +61,14 @@ public class Interactable : SerializedMonoBehaviour
         GameController.SetGlobal(globalKey,value);
     }
 
-    public object GetInstance(string key)
+    public object GetInstance(string key, object defaultIfNull)
     {
-        if (!InstanceVars.ContainsKey(key))
-            InstanceVars[key] = null;
+        if (!InstanceVars.ContainsKey(key) || InstanceVars[key] == null)
+            return defaultIfNull;
         return InstanceVars[key];
     }
     
-    public void SetInstance(string key, int value)
+    public void SetInstance(string key, object value)
     {
         InstanceVars[key] = value;
     }
@@ -81,10 +81,10 @@ public class Interactable : SerializedMonoBehaviour
 
     private IEnumerator InteractionCoroutine(InteractionEntryPoint.EntryPointType entryPointType)
     {
-        if (Interactions == null || Interactions.graph == null)
+        if (Interactions == null)
             yield break;
         StartInteraction();
-        yield return Interactions.graph.Run(entryPointType, this);
+        yield return Interactions.Run(entryPointType, this);
         EndInteraction();
     }
 

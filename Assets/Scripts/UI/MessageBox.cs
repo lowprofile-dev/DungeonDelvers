@@ -7,36 +7,39 @@ using UnityEngine.UI;
 
 public class MessageBox : MonoBehaviour
 {
-    private bool _dismissed = false;
+    [SerializeField] private bool _dismissed = false;
     private string fullText;
     private Coroutine typingCoroutine;
     public bool Dismissed => _dismissed;
 
     [SerializeField] private TMP_Text Text;
 
-    private void Start()
+    private void Awake()
     {
-        StartCoroutine(MessageBoxCoroutine());
+        Text.text = "";
     }
 
     public void SetText(string text)
     {
-        
+        fullText = text;
+        StartCoroutine(MessageBoxCoroutine());
     }
 
     IEnumerator MessageBoxCoroutine()
     {
-        //Delay para a caixa de texto não fechar imediatamente
         StartCoroutine(TypingCoroutine());
-        yield return new WaitForSeconds(0.15f);
+        //Delay para a caixa de texto não fechar imediatamente
+        yield return new WaitForFixedUpdate();
+        yield return new WaitForFixedUpdate();
 
         while (!Dismissed)
         {
-            if (!Input.GetButtonDown("Submit"))
+            if (Input.GetButtonDown("Submit"))
             {
                 if (typingCoroutine != null)
                 {
                     StopCoroutine(typingCoroutine);
+                    typingCoroutine = null;
                     Text.text = fullText;
                 }
                 else
@@ -50,7 +53,7 @@ public class MessageBox : MonoBehaviour
 
     IEnumerator TypingCoroutine()
     {
-        typingCoroutine = StartCoroutine(SkredUtils.SkredUtils.TextWriter(Text, fullText));
+        typingCoroutine = StartCoroutine(SkredUtils.SkredUtils.TextWriter(Text, fullText,2));
         yield return typingCoroutine;
         typingCoroutine = null;
     }

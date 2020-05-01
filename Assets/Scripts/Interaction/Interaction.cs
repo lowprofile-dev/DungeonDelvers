@@ -7,8 +7,7 @@ using XNode;
 
 public abstract class Interaction : InteractionBase
 {
-    
-    [Input(ShowBackingValue.Never, ConnectionType.Override)]
+    [Input(ShowBackingValue.Never)]
     public FlowControl Entry;
     [Output(connectionType = ConnectionType.Override)]
     public FlowControl Exit;

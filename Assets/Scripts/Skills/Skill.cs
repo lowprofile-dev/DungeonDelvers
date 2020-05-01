@@ -22,6 +22,8 @@ public class Skill : SerializableAsset
     public bool TrueHit = false;
     public bool CanBeSilenced;
     public bool CanCritical;
+
+    public SoundInfo HitSound;
     
     [Range(-1,1), HideIf("TrueHit")] public float AccuracyModifier = 0f;
     [Range(-1, 1), ShowIf("CanCritical")] public float CriticalModifier = 0f;

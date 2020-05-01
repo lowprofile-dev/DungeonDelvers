@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection.Emit;
+using System.Threading.Tasks;
 using TMPro;
+using UnityEngine;
 
 namespace SkredUtils
 {
@@ -90,9 +92,39 @@ namespace SkredUtils
                     
                     //Wait for X frames, where X is updateFrequency
                     for (var i = 0; i < updateFrequency; i++)
-                        yield return null;
+                        yield return new WaitForFixedUpdate();
                 }
             }
+        }
+
+        public static string ToHex(this Color color)
+        {
+            return $"#{ColorUtility.ToHtmlStringRGB(color)}";
+        }
+
+        public static async Task PlayOneShotAsync(this AudioSource source, AudioClip clip, float volume = 1f)
+        {
+            IEnumerator PlayCoroutine()
+            {
+                source.PlayOneShot(clip,volume);
+                yield return new WaitForSeconds(clip.length);
+            }
+            await GameController.Instance.PlayCoroutine(PlayCoroutine());
+        }
+        
+        public static async Task PlayOneShotAsync(this AudioSource source, AsyncMonoBehaviour runner, AudioClip clip, float volume = 1f)
+        {
+            IEnumerator PlayCoroutine()
+            {
+                source.PlayOneShot(clip,volume);
+                yield return new WaitForSeconds(clip.length);
+            }
+            await runner.PlayCoroutine(PlayCoroutine());
+        }
+
+        public static void PlayOneShot(this AudioSource source, SoundInfo info)
+        {
+            source.PlayOneShot(info.AudioClip,info.Volume);
         }
     }
 

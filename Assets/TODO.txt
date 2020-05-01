@@ -1,24 +1,30 @@
-Arrumar Defend.
-Limpar código do player
-Limpar e reorganizar BattleController, fazer ficar mais fácil a mensagem de fim de batalha.
-Avisar pro player que não ganhou XP porque o nível dos monstros era mais baixo quando for o caso.
-
-
-Completar cidade.
-Começar a fazer os monstros + boss.
+Ver como vai sfx, prob dano do ataque na skill, dano de receber no inimigo?
+Organizar tudo -
+    Dar uma olhada no editor de muita coisa, ver se tem como deixar mais organizado, olhar scripts de editor ou só atributos do Odin
+    Criar namespaces, renomear um monte de classes
+    Limpar código e funcionalidades
+    Testar combate (mais especificamente funcionalidade do AsyncMonoBehaviour) em framerate baixa <20, <10
+Depois:
+Continuar design do combate
 
 Fazer o jogo pseudo-funcional:
 	Tela inicial, que procura se tem save.
 
+Maybe:
+Avisar pro player que não ganhou XP porque o nível dos monstros era mais baixo quando for o caso.
+Lojas tem modificadores de preço, pode ser alterado com certas condições (tipo player completou quest da região)
+Travelling Merchant -> Aparece aleatóriamente em mapas algumas vezes (muda de posição/talvez não aparece mesmo com a mesma seed)
+Inimigos não dropam gold, mas os ETC que dropam podem ser vendidos (e são materiais pra crafting também)
+
 Futuro:
+Implementar 
+Dar uma olhada no particlesystem e shadergraph
 Resolver certas UIs mostrando detalhes placeholders antes de mostrar os corretos.
 Arrumar mainmenu/battlecanvas para fazerem parte do maincanvas e terem cleanup em vez de serem instanciados.
 Salvar um histórico de cada turno no BattleController
-Refazer o block como statuseffect(?)
 Ver como vai ser em relação a stackable/item/slot (prob. usar peso, ter que fazer tela de dropar algo do inventário depois da batalha. dois menus com setas de trocar entre (loot) -> <- (inventario)
 Alterar todas as instancias de skill no menu pra PlayerSkill. Adicionar campo de default target na skill
 Calcular melhor equip (ignorar passivas provavelmente, só pra ter algo basico simples, e pra poder usar na hora de desequipar)
-Botar maneira de printar variável na text box.
 Mudar EP -> AP (Action Point)
 Deixar terminologia mais consistente
 Refazer o menu principal.

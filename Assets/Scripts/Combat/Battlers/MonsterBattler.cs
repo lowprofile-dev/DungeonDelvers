@@ -179,6 +179,15 @@ public class MonsterBattler : Battler
 
     protected override async Task AnimateEffectResult(EffectResult effectResult)
     {
+        var soundClip = effectResult?.skillInfo.Skill?.HitSound;
+        
+        var soundAction = QueueActionAndAwait(() =>
+        {
+            if (soundClip != null)
+                AudioSource.PlayOneShot(soundClip);
+        });
+            
+        
         switch (effectResult)
         {
             case DamageEffect.DamageEffectResult damageEffectResult when !Fainted:
@@ -237,6 +246,8 @@ public class MonsterBattler : Battler
                 break;
             }
         }
+
+        await soundAction;
     }
 
     #endregion

@@ -132,7 +132,6 @@ public class BattleController : AsyncMonoBehaviour
         }
     }
     
-    //?? arrumar algum dia
     private async Task Win()
     {
         bool finished = false;
@@ -153,7 +152,7 @@ public class BattleController : AsyncMonoBehaviour
                 rewardPanelClosedEvent.RemoveListener(CloseDialog);
             }
             
-            battleCanvas.RewardPanel.RewardPanelClosed.AddListener(CloseDialog);
+            rewardPanelClosedEvent.AddListener(CloseDialog);
         });
         
         while (!finished)
@@ -200,33 +199,9 @@ public class BattleController : AsyncMonoBehaviour
 
     private int GetExpReward()
     {
-        // var partyLevel = PlayerController.Instance.PartyLevel;
-        // var enemyEncounterAverageLevel = (float)Enemies
-        //     .Select(monster => monster.Level)
-        //     .Average();
-
-        // var clampedDelta = Mathf.Clamp(enemyEncounterAverageLevel - partyLevel, -5f, 5f);
-
-        // float expModifier = 1f;
-
-        // if (clampedDelta > 0)
-        // {
-        //     expModifier += clampedDelta / 10;
-        // }
-        // else
-        // {
-        //     expModifier -= clampedDelta / 5;
-        // }
-
-        // var modifiedExp = (int) (_encounter.ExpReward * expModifier);
-        
-        // Debug.Log($"Calculated Exp Reward -- Base: {_encounter.ExpReward}, Pt. Level: {partyLevel}, Enc. Level: {enemyEncounterAverageLevel:F}, C. Delta: {clampedDelta}, Modifier: {expModifier}, Final: {modifiedExp}");
-
-        // return modifiedExp;
-
         if (_encounterSet.overrideExpGain.HasValue)
         {
-            return _encounterSet.overrideExpGain.Value;
+            return (int)(_encounterSet.overrideExpGain.Value * GameController.Instance.GlobalExperienceModifier);
         }
         
         var partyLevel = PlayerController.Instance.PartyLevel;
@@ -237,7 +212,7 @@ public class BattleController : AsyncMonoBehaviour
 
         Debug.Log($"Calculated Exp Reward -- {expReward}");
 
-        return expReward;
+        return (int)(expReward*GameController.Instance.GlobalExperienceModifier);
     }
     
     async Task BattlerTurn(Battler battler)
@@ -350,7 +325,7 @@ public class BattleController : AsyncMonoBehaviour
     public Sprite GetPlayerGroundSprite()
     {
         var currentMapTile = MapSettings.Instance.GetCurrentMapTile();
-        return currentMapTile.BattleSprite;
+        return currentMapTile?.BattleSprite;
     }
     
     [Button("Test")]

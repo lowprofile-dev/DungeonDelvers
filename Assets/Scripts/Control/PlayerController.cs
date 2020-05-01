@@ -40,6 +40,7 @@ public class PlayerController : AsyncMonoBehaviour
     public float MovementSpeed;
     public GameObject MainMenuPrefab;
     public GameObject MainCameraPrefab;
+    public float InteractionRange;
 
     #endregion
 
@@ -149,7 +150,7 @@ public class PlayerController : AsyncMonoBehaviour
     {
         Gizmos.color = Color.magenta;
         var position = transform.position;
-        Gizmos.DrawLine(position, position + (Vector3)Front);
+        Gizmos.DrawLine(position, position + (Vector3)Front*InteractionRange);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -234,7 +235,7 @@ public class PlayerController : AsyncMonoBehaviour
         Debug.Log("Trying to Interact");
         var mask = LayerMask.GetMask("Interactable");
 
-        var ray = Physics2D.Raycast(transform.position, Front, 1f, mask);
+        var ray = Physics2D.Raycast(transform.position, Front, InteractionRange, mask);
 
         if (ray.collider != null)
         {

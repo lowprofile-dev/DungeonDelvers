@@ -53,7 +53,12 @@ public class SpecialTextMatcher
                     replace(match,globalValue,ref text);
                 } else if (stringValue[0] == 'L')
                 {
-                    //var localValue = GameController.Instance.Globals[stringValue.Substring(2)].ToString();
+                    var localValue = context.GetLocal(stringValue.Substring(2)).ToString();
+                    replace(match,localValue,ref text);
+                } else if (stringValue[0] == 'I')
+                {
+                    var instanceValue = context.GetInstance(stringValue.Substring(2), "").ToString();
+                    replace(match,instanceValue,ref text);
                 }
             }
             match = rx.Match(text);

@@ -82,7 +82,7 @@ public class CharacterBattler : Battler
         set
         {
             currentEp = value;
-            currentEp = Mathf.Clamp(currentEp, 0, 100);
+            currentEp = Mathf.Clamp(currentEp, 0, 200);
         }
     }
 
@@ -110,11 +110,11 @@ public class CharacterBattler : Battler
 
     #region Animation
 
-    public IEnumerator PlayAndWait(CharacterBattlerAnimation characterBattlerAnimation) =>
-        Animator.PlayAndWait(characterBattlerAnimation);
+    public IEnumerator PlayAndWait(CharacterBattlerAnimation characterBattlerAnimation, float speed = 1f) =>
+        Animator.PlayAndWait(characterBattlerAnimation,speed);
 
-    public Task AsyncPlayAndWait(CharacterBattlerAnimation animation) =>
-        Animator.AsyncPlayAndWait(animation);
+    public Task AsyncPlayAndWait(CharacterBattlerAnimation animation, float speed = 1f) =>
+        Animator.AsyncPlayAndWait(animation, speed);
 
     public void Play(CharacterBattlerAnimation animation, bool lockTransition = false) =>
         Animator.Play(animation, lockTransition);
@@ -151,8 +151,12 @@ public class CharacterBattler : Battler
     protected override async Task AnimateTurn(Turn turn)
     {
         var skill = turn.Skill;
-        var playerSkill = skill as PlayerSkill;
-        await AsyncPlayAndWait(playerSkill.AnimationType);
+        var playerSkill = (PlayerSkill)skill;
+
+        foreach (var animation in playerSkill.Animations)
+        {
+            await animation.Play(this);
+        }
 
         if (skill.SkillAnimation != null)
         {

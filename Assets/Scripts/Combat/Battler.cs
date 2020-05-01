@@ -71,6 +71,21 @@ public abstract class Battler : AsyncMonoBehaviour
 
     public virtual RectTransform RectTransform => transform as RectTransform;
 
+    protected AudioSource audioSource;
+    public AudioSource AudioSource
+    {
+        get
+        {
+            if (audioSource == null)
+            {
+                var hasAudioSource = TryGetComponent(out audioSource);
+                if (!hasAudioSource) audioSource = gameObject.AddComponent<AudioSource>();
+            }
+                
+            return audioSource;
+        }
+    }
+
     #endregion
 
     #region BattleEvents
@@ -261,6 +276,11 @@ public abstract class Battler : AsyncMonoBehaviour
 
     #region Functions
 
+    public void PlaySound(AudioClip clip, float volume)
+    {
+        AudioSource.PlayOneShot(clip,volume);
+    }
+    
     public void RecalculateStats()
     {
         

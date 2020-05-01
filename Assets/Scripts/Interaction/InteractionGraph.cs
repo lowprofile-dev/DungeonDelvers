@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using XNode;
 
+[CreateAssetMenu(menuName = "Interaction Graph")]
 public class InteractionGraph : NodeGraph
 {
     public Interactable source { get; private set; }

@@ -26,6 +26,9 @@ public class GameController : AsyncMonoBehaviour
     [HideInInspector] public UnityEvent OnBeginEncounter;
     [HideInInspector] public UnityEvent OnEndEncounter;
 
+    public float GlobalPriceModifier = 1f;
+    public float GlobalExperienceModifier = 1f;
+    
     private void Awake()
     {
         if (Instance != null)

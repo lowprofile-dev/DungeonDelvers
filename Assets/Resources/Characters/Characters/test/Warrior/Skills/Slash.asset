@@ -90,6 +90,31 @@ MonoBehaviour:
     - Name: SkillAnimation
       Entry: 6
       Data: 
+    - Name: Animations
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
+    - Name: Animation
+      Entry: 3
+      Data: 1
+    - Name: speed
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: RequiredWeaponType
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
@@ -111,6 +136,8 @@ MonoBehaviour:
   TrueHit: 0
   CanBeSilenced: 0
   CanCritical: 1
+  HitSound:
+    AudioClip: {fileID: 8300000, guid: a9e0e39240fe4d548ae0fe809819b709, type: 3}
+    Volume: 0.2
   AccuracyModifier: 0
   CriticalModifier: 0
-  AnimationType: 1

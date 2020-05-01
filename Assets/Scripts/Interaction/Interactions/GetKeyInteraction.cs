@@ -1,5 +1,4 @@
-﻿
-using System.Collections;
+﻿using System.Collections;
 using XNode;
 
 [InteractableNode(defaultNodeName = "Key/Get")]
@@ -24,9 +23,9 @@ public class GetKeyInteraction : Node
                 case KeyType.Global:
                     return GameController.GetGlobal(key);
                 case KeyType.Local:
-                    return interactable.GetLocal(key);
+                    return interactable?.GetLocal(key);
                 case KeyType.Instance:
-                    return interactable.GetInstance(key);
+                    return interactable?.GetInstance(key,0);
             }
         }
         return null;

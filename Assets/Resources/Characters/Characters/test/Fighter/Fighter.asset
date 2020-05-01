@@ -3932,14 +3932,14 @@ MonoBehaviour:
     type: 3}
   Bases:
     MaxHp: 102
-    InitialEp: 15
-    EpGain: 10
+    InitialEp: 35
+    EpGain: 25
     PhysAtk: 39
     MagAtk: 8
     PhysDef: 25
     MagDef: 19
     Speed: 27
-    Accuracy: 0.95
+    Accuracy: 0.85
     Evasion: 0
     CritChance: 0
     CritAvoid: 0

@@ -39,10 +39,10 @@ public class EncounterSet : SerializableAsset {
         return EncounterMonsters.Sum(encounterMonster => encounterMonster.Monster.RollGold());
     }
 
-    public IList<Item> GetItemReward()
+    public Item[] GetItemReward()
     {
         if (overrideItemDrops != null)
-            return overrideItemDrops.Select(ItemInstanceBuilder.BuildInstance).ToList();
+            return overrideItemDrops.Select(ItemInstanceBuilder.BuildInstance).ToArray();
 
         var list = new List<Item>();
 
@@ -52,7 +52,7 @@ public class EncounterSet : SerializableAsset {
             list.AddRange(monsterDrop);
         }
 
-        return list;
+        return list.ToArray();
     }
     
     public enum EncounterLayout {

@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SkillInfoPanel : MonoBehaviour
 {
-    public Text SkillName;
+    public TMP_Text SkillName;
     public Image SkillIcon;
-    public Text SkillCost;
-    public Text SkillDescription;
+    public TMP_Text SkillCost;
+    public TMP_Text SkillDescription;
 
     public void BuildSkillInfo(Skill skill)
     {
