@@ -7,7 +7,9 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using CharacterBattlerAnimation = CharacterBattler.CharacterBattlerAnimation;
 
-[RequireComponent(typeof(CharacterBattler), typeof(Animator))]
+namespace DD.Animation
+{
+    [RequireComponent(typeof(CharacterBattler), typeof(Animator))]
 public class CharacterBattlerAnimator : SerializedMonoBehaviour
 {
     public Dictionary<string, int> AnimatorValues = new Dictionary<string, int>();
@@ -118,3 +120,5 @@ public class CharacterBattlerAnimator : SerializedMonoBehaviour
         }
     }
 }
+}
+

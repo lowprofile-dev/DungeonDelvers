@@ -13,6 +13,7 @@ using Random = System.Random;
 public class GameController : AsyncMonoBehaviour
 {
     public static GameController Instance { get; private set; }
+    public int targetFrameRate = -1;
     public GameObject AnimationObjectBase;
     public GameObject PlayerPrefab;
     public GameObject CameraPrefab;
@@ -48,9 +49,10 @@ public class GameController : AsyncMonoBehaviour
             Instantiate(MainCanvasPrefab);
         
         Random = new Random();
-        
+
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
         Instantiate(GraphyPrefab);
+        Application.targetFrameRate = targetFrameRate;
 #endif
     }
 

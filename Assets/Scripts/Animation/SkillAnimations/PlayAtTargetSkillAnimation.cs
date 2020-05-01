@@ -4,27 +4,31 @@ using Sirenix.Utilities;
 using SkredUtils;
 using UnityEngine;
 
-public class PlayAtTargetSkillAnimation : SkillAnimation
+namespace DD.Skill.Animation
 {
-    public override async Task PlaySkillAnimation(Battler source, IEnumerable<Battler> targets)
+    public class PlayAtTargetSkillAnimation : Animation
     {
-        List<Task> Animations = new List<Task>();
-        await GameController.Instance.QueueActionAndAwait(() =>
+        public override async Task PlaySkillAnimation(Battler source, IEnumerable<Battler> targets)
         {
-            targets.ForEach(target =>
+            List<Task> Animations = new List<Task>();
+            await GameController.Instance.QueueActionAndAwait(() =>
             {
-                var animationObject = GameObject.Instantiate(GameController.Instance.AnimationObjectBase,
-                    BattleController.Instance.battleCanvas.transform);
+                targets.ForEach(target =>
+                {
+                    var animationObject = GameObject.Instantiate(GameController.Instance.AnimationObjectBase,
+                        BattleController.Instance.battleCanvas.transform);
 
-                var animation = animationObject.GetComponent<AnimationObject>();
-                animation.transform.position = target.RectTransform.position;
+                    var animation = animationObject.GetComponent<AnimationObject>();
+                    animation.transform.position = target.RectTransform.position;
                 
-                ScaleAnimation(animation.transform as RectTransform);
+                    ScaleAnimation(animation.transform as RectTransform);
                 
-                Animations.Add(animation.PlayAndAwait(AnimationName,SpeedMultiplier));
+                    Animations.Add(animation.PlayAndAwait(AnimationName,SpeedMultiplier));
+                });
             });
-        });
 
-        await Task.WhenAll(Animations);
+            await Task.WhenAll(Animations);
+        }
     }
 }
+

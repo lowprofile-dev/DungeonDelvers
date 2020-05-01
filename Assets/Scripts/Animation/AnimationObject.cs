@@ -4,32 +4,36 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
-public class AnimationObject : MonoBehaviour
+namespace DD.Skill.Animation
 {
-    public Animator animator;
-    
-    public async Task PlayAndAwait(string animation, float speedMultiplier = 1f)
+    public class AnimationObject : MonoBehaviour
     {
-        await GameController.Instance.QueueActionAndAwait(() =>
+        public Animator animator;
+    
+        public async Task PlayAndAwait(string animation, float speedMultiplier = 1f)
         {
-            animator.SetFloat("SpeedMultiplier",speedMultiplier);
-            animator.Play(animation);
-        });
+            await GameController.Instance.QueueActionAndAwait(() =>
+            {
+                animator.SetFloat("SpeedMultiplier",speedMultiplier);
+                animator.Play(animation);
+            });
         
-        await Task.Delay(5);
+            await Task.Delay(5);
 
-        bool? condition = null;
+            bool? condition = null;
 
-        Action evaluateCondition = () =>
-        {
-            condition = animator.GetCurrentAnimatorStateInfo(0).IsName(animation.ToString());
-        };
+            Action evaluateCondition = () =>
+            {
+                condition = animator.GetCurrentAnimatorStateInfo(0).IsName(animation.ToString());
+            };
 
-        await GameController.Instance.QueueActionAndAwait(evaluateCondition);
-        
-        while (condition.HasValue && condition.Value == true)
-        {
             await GameController.Instance.QueueActionAndAwait(evaluateCondition);
+        
+            while (condition.HasValue && condition.Value == true)
+            {
+                await GameController.Instance.QueueActionAndAwait(evaluateCondition);
+            }
         }
     }
 }
+

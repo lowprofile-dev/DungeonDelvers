@@ -17,14 +17,12 @@ public class Skill : SerializableAsset
     public List<Effect> Effects = new List<Effect>();
     [ShowIf("CanCritical")] public List<Effect> CriticalEffects = new List<Effect>();
     
-    public SkillAnimation SkillAnimation = null;
+    public DD.Skill.Animation.Animation SkillAnimation = null;
     
     public bool TrueHit = false;
     public bool CanBeSilenced;
     public bool CanCritical;
 
-    public SoundInfo HitSound;
-    
     [Range(-1,1), HideIf("TrueHit")] public float AccuracyModifier = 0f;
     [Range(-1, 1), ShowIf("CanCritical")] public float CriticalModifier = 0f;
     

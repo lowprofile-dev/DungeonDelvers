@@ -1,3 +1,4 @@
+using DD.Animation;
 using UnityEngine;
 
 public class SetMageSwordElementPassiveEffect : PassiveEffect, IOnApplyPassiveEffect

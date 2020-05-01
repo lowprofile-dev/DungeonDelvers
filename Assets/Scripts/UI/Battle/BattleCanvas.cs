@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Sirenix.OdinInspector;
+using SkredUtils;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.PlayerLoop;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
@@ -29,6 +31,8 @@ public class BattleCanvas : AsyncMonoBehaviour
     private readonly EventWaitHandle WaitHandle = new AutoResetEvent(false);
     private Turn Turn;
     private GameObject lastSelect = null;
+
+    private List<GameObject> skillResultObjects = new List<GameObject>();
 
     private void Start()
     {
@@ -132,12 +136,11 @@ public class BattleCanvas : AsyncMonoBehaviour
         Turn = turn;
     }
 
-    public async Task ShowSkillResult(Battler battler, string info, Color textColor, float duration = 1f)
-    {
-        await GameController.Instance.PlayCoroutine(ShowDamageCoroutine(battler, info, textColor, duration));
-    }
+    public  Task ShowSkillResultAsync(Battler battler, string info, Color textColor, float duration = 1f) 
+        => GameController.Instance.PlayCoroutine(ShowSkillResult(battler, info, textColor, duration));
+    
 
-    private IEnumerator ShowDamageCoroutine(Battler battler, string info, Color textColor, float duration)
+    public IEnumerator ShowSkillResult(Battler battler, string info, Color textColor, float duration = 1f)
     {
         var damageObject = Instantiate(DamagePrefab, transform);
         damageObject.transform.position = battler.RectTransform.position + new Vector3(0, 100, 0);
@@ -145,11 +148,60 @@ public class BattleCanvas : AsyncMonoBehaviour
         var damageText = damageObject.GetComponent<DamageText>();
         damageText.SetupDamageText(info,textColor);
         
+        skillResultObjects.Add(damageObject);
+        
         yield return new WaitForSeconds(duration);
         
-        GameController.Instance.QueueAction(() => Destroy(damageObject));
+        GameController.Instance.QueueAction(() =>
+        {
+            skillResultObjects.Remove(damageObject);
+            if (damageObject != null) Destroy(damageObject);
+        });
     }
 
+    public Task ShowModifiableSkillResultAsync(Battler battler, Ref<(string text, Color color)> info,
+        float duration = 1f) => GameController.Instance.PlayCoroutine(ShowModifiableSkillResult(battler, info, duration));
+    
+    public IEnumerator ShowModifiableSkillResult(Battler battler, Ref<(string text, Color color)> info,
+        float duration = 1f)
+    {
+        var damageObject = Instantiate(DamagePrefab, transform);
+        damageObject.transform.position = battler.RectTransform.position + new Vector3(0, 100, 0);
+
+        var damageText = damageObject.GetComponent<DamageText>();
+        var lastInfo = info.Instance;
+        damageText.SetupDamageText(lastInfo.text,lastInfo.color);
+        
+        skillResultObjects.Add(damageObject);
+
+        float elapsedTime = 0;
+        while (elapsedTime < duration)
+        {
+            yield return null;
+            elapsedTime += Time.deltaTime;
+            if (info.Instance != lastInfo)
+            {
+                lastInfo = info.Instance;
+                damageText.SetupDamageText(lastInfo.text,lastInfo.color);
+            }
+        }
+        
+        GameController.Instance.QueueAction(() =>
+        {
+            skillResultObjects.Remove(damageObject);
+            if (damageObject != null) Destroy(damageObject);
+        });
+    }
+
+    public void ClearSkillResults()
+    {
+        foreach (var skillResultObject in skillResultObjects)
+        {
+            Destroy(skillResultObject);
+        }
+        skillResultObjects.Clear();
+    }
+    
     public void BindActionArrow(RectTransform rectTransform)
     {
         actionArrow.SetActive(true);

@@ -32,6 +32,7 @@ public class CharacterBase : SerializableAsset
     public List<PlayerSkill> BaseSkills = new List<PlayerSkill>();
     public List<Passive> BasePassives = new List<Passive>();
     public PlayerSkill DefaultDefendSkill;
+    public SoundInfo HitSound;
 
     #endregion
 

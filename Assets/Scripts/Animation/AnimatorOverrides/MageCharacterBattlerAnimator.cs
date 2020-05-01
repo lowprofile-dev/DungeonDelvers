@@ -2,36 +2,40 @@
 using System.Linq;
 using UnityEngine;
 
-public class MageCharacterBattlerAnimator : CharacterBattlerAnimator
+namespace DD.Animation
 {
-    private Element animationElement;
-
-    public Element AnimationElement
+    public class MageCharacterBattlerAnimator : CharacterBattlerAnimator
     {
-        get => animationElement;
-        set
+        private Element animationElement;
+
+        public Element AnimationElement
         {
-            animationElement = value;
-            if (EquippedWeaponType == WeaponBase.WeaponType.Sword1H){
-                GameController.Instance.QueueAction(UpdateElement);
+            get => animationElement;
+            set
+            {
+                animationElement = value;
+                if (EquippedWeaponType == WeaponBase.WeaponType.Sword1H){
+                    GameController.Instance.QueueAction(UpdateElement);
+                }
             }
         }
-    }
 
-    private void UpdateElement()
-    {
-        var controller = ElementControllers.Find(c => c.Element == animationElement).RuntimeAnimatorController;
-        if (controller == Animator.runtimeAnimatorController)
-            return;
-        Animator.runtimeAnimatorController = controller;
-        UpdateAnimator();
-    }
+        private void UpdateElement()
+        {
+            var controller = ElementControllers.Find(c => c.Element == animationElement).RuntimeAnimatorController;
+            if (controller == Animator.runtimeAnimatorController)
+                return;
+            Animator.runtimeAnimatorController = controller;
+            UpdateAnimator();
+        }
     
-    public List<ElementController> ElementControllers = new List<ElementController>();
+        public List<ElementController> ElementControllers = new List<ElementController>();
 
-    public struct ElementController
-    {
-        public Element Element;
-        public RuntimeAnimatorController RuntimeAnimatorController;
+        public struct ElementController
+        {
+            public Element Element;
+            public RuntimeAnimatorController RuntimeAnimatorController;
+        }
     }
 }
+

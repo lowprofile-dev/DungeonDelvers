@@ -4,49 +4,52 @@ using System.Threading.Tasks;
 using Sirenix.Utilities;
 using UnityEngine;
 
-public class FromSourceToTargetSkillAnimation : SkillAnimation
+namespace DD.Skill.Animation
 {
-    public override async Task PlaySkillAnimation(Battler source, IEnumerable<Battler> targets)
+    public class FromSourceToTargetSkillAnimation : Animation
     {
-        List<Task> Animations = new List<Task>();
-        await GameController.Instance.QueueActionAndAwait(() =>
+        public override async Task PlaySkillAnimation(Battler source, IEnumerable<Battler> targets)
         {
-            targets.ForEach(target =>
+            List<Task> Animations = new List<Task>();
+            await GameController.Instance.QueueActionAndAwait(() =>
             {
-                var animationObject = GameObject.Instantiate(GameController.Instance.AnimationObjectBase,
-                    BattleController.Instance.battleCanvas.transform);
+                targets.ForEach(target =>
+                {
+                    var animationObject = GameObject.Instantiate(GameController.Instance.AnimationObjectBase,
+                        BattleController.Instance.battleCanvas.transform);
 
-                var animation = animationObject.GetComponent<AnimationObject>();
-                animation.transform.position = target.RectTransform.position;
+                    var animation = animationObject.GetComponent<AnimationObject>();
+                    animation.transform.position = target.RectTransform.position;
 
-                ScaleAnimation(animation.transform as RectTransform);
+                    ScaleAnimation(animation.transform as RectTransform);
                 
-                Animations.Add(
-                    GameController.Instance.PlayCoroutine(MoveAnimationCoroutine(source.RectTransform.position,
-                        target.RectTransform.position, animationObject.transform, animation.animator, AnimationName), animation));
+                    Animations.Add(
+                        GameController.Instance.PlayCoroutine(MoveAnimationCoroutine(source.RectTransform.position,
+                            target.RectTransform.position, animationObject.transform, animation.animator, AnimationName), animation));
+                });
             });
-        });
 
-        await Task.WhenAll(Animations);
-    }
-
-    private IEnumerator MoveAnimationCoroutine(Vector2 source, Vector2 target, Transform animation, Animator animator, string animationName)
-    {
-        //Funcionando por enquanto. Arrumar a rotação depois (opcional)
-        animator.SetFloat("SpeedMultiplier",SpeedMultiplier);
-        animator.Play(animationName);
-        yield return new WaitForEndOfFrame();
-
-        var info = animator.GetCurrentAnimatorStateInfo(0);
-        var elapsedTime = 0f;
-        var finishTime = info.length / SpeedMultiplier;
-
-        while (elapsedTime < finishTime)
-        {
-            elapsedTime += Time.deltaTime;
-            animation.position = Vector2.Lerp(source, target, elapsedTime / finishTime);
-            yield return null;
+            await Task.WhenAll(Animations);
         }
-        GameObject.Destroy(animation.gameObject);
+
+        private IEnumerator MoveAnimationCoroutine(Vector2 source, Vector2 target, Transform animation, Animator animator, string animationName)
+        {
+            //Funcionando por enquanto. Arrumar a rotação depois (opcional)
+            animator.SetFloat("SpeedMultiplier",SpeedMultiplier);
+            animator.Play(animationName);
+            yield return new WaitForEndOfFrame();
+
+            var info = animator.GetCurrentAnimatorStateInfo(0);
+            var elapsedTime = 0f;
+            var finishTime = info.length / SpeedMultiplier;
+
+            while (elapsedTime < finishTime)
+            {
+                elapsedTime += Time.deltaTime;
+                animation.position = Vector2.Lerp(source, target, elapsedTime / finishTime);
+                yield return null;
+            }
+            GameObject.Destroy(animation.gameObject);
+        }
     }
 }

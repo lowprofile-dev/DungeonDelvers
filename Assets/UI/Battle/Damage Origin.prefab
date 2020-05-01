@@ -78,7 +78,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 144
+  m_text: '40
+
+    40'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a1ca243aa01e81944a1a55ff49de5eab, type: 2}
   m_sharedMaterial: {fileID: -4700229314715752356, guid: a1ca243aa01e81944a1a55ff49de5eab,
@@ -117,7 +119,7 @@ MonoBehaviour:
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -60
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -148,12 +150,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 5834698792309443009}
-    characterCount: 3
+    characterCount: 5
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

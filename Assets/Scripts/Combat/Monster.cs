@@ -31,6 +31,7 @@ public class Monster : SerializableAsset
     public int LevelVariance;
     public Stats Stats;
     public Stats StatLevelVariance;
+    public SoundInfo HitSound;
     public List<MonsterSkill> Skills = new List<MonsterSkill>();
     public List<Passive> Passives = new List<Passive>();
     public MonsterAI MonsterAi;

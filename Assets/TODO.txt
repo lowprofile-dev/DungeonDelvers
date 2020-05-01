@@ -1,4 +1,4 @@
-Ver como vai sfx, prob dano do ataque na skill, dano de receber no inimigo?
+Continuar arrumando código, arrumar todos os sons, organizar as animações dos Battlers
 Organizar tudo -
     Dar uma olhada no editor de muita coisa, ver se tem como deixar mais organizado, olhar scripts de editor ou só atributos do Odin
     Criar namespaces, renomear um monte de classes

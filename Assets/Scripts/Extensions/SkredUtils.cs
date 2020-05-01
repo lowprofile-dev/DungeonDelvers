@@ -130,7 +130,7 @@ namespace SkredUtils
 
     public class Ref<T>
     {
-        public T Instance { get; set; }
+        public T Instance;
         public bool HasValue => Instance != null;
 
         public Ref()
@@ -144,7 +144,6 @@ namespace SkredUtils
         }
 
         public static implicit operator T(Ref<T> @ref) => @ref.Instance;
-        //public static implicit operator Ref<T>(T inst) => new Ref<T>(inst);
     }
     
     //Credit Enigmativity@https://stackoverflow.com/questions/10966331/two-way-bidirectional-dictionary-in-c

@@ -127,6 +127,10 @@ MonoBehaviour:
   BaseSkills:
   - {fileID: 11400000, guid: 71a3cb8b20046b7239bbe7d7915e89b0, type: 2}
   - {fileID: 11400000, guid: 8e01f04622ce68d5ab2239095366db63, type: 2}
+  - {fileID: 11400000, guid: cc2b46c3c44f81b4e8ffb76366cdcd33, type: 2}
   BasePassives: []
   DefaultDefendSkill: {fileID: 11400000, guid: 3fda503906d7d314d8cdd9e2b6e3a30d, type: 2}
+  HitSound:
+    AudioClip: {fileID: 0}
+    Volume: 1
   Level: 1

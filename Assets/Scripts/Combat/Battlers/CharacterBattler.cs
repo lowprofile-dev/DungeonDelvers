@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DD.Animation;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using SkredUtils;
@@ -42,6 +43,7 @@ public class CharacterBattler : Battler
         Skills = character.Skills;
         Passives = character.Passives;
         StatusEffectInstances = new List<StatusEffectInstance>();
+        HitSound = character.Base.HitSound;
     }
 
     public void CommitChanges()
@@ -179,18 +181,18 @@ public class CharacterBattler : Battler
                 
                 var time = effectResult.skillInfo.HasCrit ? 1.4f : 1f;
 
-                tasks.Add(BattleController.Instance.battleCanvas.ShowSkillResult(this, damageEffectResult.DamageDealt.ToString(), Color.white, time));
+                tasks.Add(BattleController.Instance.battleCanvas.ShowSkillResultAsync(this, damageEffectResult.DamageDealt.ToString(), Color.white, time));
                 
                 await Task.WhenAll(tasks);
                 break;
             }
             case HealEffect.HealEffectResult healEffectResult:
-                await BattleController.Instance.battleCanvas.ShowSkillResult(this, healEffectResult.AmountHealed.ToString(),
+                await BattleController.Instance.battleCanvas.ShowSkillResultAsync(this, healEffectResult.AmountHealed.ToString(),
                     Color.green);
                 break;
             case GainApEffect.GainApEffectResult gainApEffectResult:
             {
-                await BattleController.Instance.battleCanvas.ShowSkillResult(this, gainApEffectResult.ApGained.ToString(),
+                await BattleController.Instance.battleCanvas.ShowSkillResultAsync(this, gainApEffectResult.ApGained.ToString(),
                     Color.cyan);
                 break;
             }
@@ -205,7 +207,7 @@ public class CharacterBattler : Battler
                 }
 
                 var damageString = string.Join("\n", multiHitDamageEffectResult.HitResults.Select(result => result.DamageDealt.ToString()));
-                tasks.Add(BattleController.Instance.battleCanvas.ShowSkillResult(this, damageString, Color.white));
+                tasks.Add(BattleController.Instance.battleCanvas.ShowSkillResultAsync(this, damageString, Color.white));
                 
                 await Task.WhenAll(tasks);
                 break;

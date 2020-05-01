@@ -17,6 +17,7 @@ public abstract class Battler : AsyncMonoBehaviour
     [FoldoutGroup("Stats")] public abstract int CurrentHp { get; set; }
     [FoldoutGroup("Stats")] public abstract int CurrentEp { get; set; }
     public bool Fainted => CurrentHp == 0;
+    public SoundInfo HitSound;
 
     #endregion
 
@@ -71,7 +72,7 @@ public abstract class Battler : AsyncMonoBehaviour
 
     public virtual RectTransform RectTransform => transform as RectTransform;
 
-    protected AudioSource audioSource;
+    private AudioSource audioSource;
     public AudioSource AudioSource
     {
         get
@@ -245,7 +246,7 @@ public abstract class Battler : AsyncMonoBehaviour
         }
         else
         {
-            await BattleController.Instance.battleCanvas.ShowSkillResult(this, "Miss!", Color.white);
+            await BattleController.Instance.battleCanvas.ShowSkillResultAsync(this, "Miss!", Color.white);
             return new EffectResult[] { };
             //retonar missresult depois(?)
         }

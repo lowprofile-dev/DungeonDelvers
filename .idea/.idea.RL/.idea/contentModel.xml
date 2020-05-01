@@ -351,13 +351,10 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="_Debug" t="Include">
-            <e p="CreateCameraCoveringMap.cs" t="Include" />
             <e p="GoToScene.cs" t="Include" />
-            <e p="NodeSaver.cs" t="Include" />
-            <e p="test1.cs" t="Include" />
-            <e p="testtogglepixelperfect.cs" t="Include" />
           </e>
           <e p="animation" t="Include">
+            <e p="Animation.cs" t="Include" />
             <e p="AnimationObject.cs" t="Include" />
             <e p="AnimatorOverrides" t="Include">
               <e p="MageCharacterBattlerAnimator.cs" t="Include" />
@@ -366,7 +363,6 @@
             <e p="IPlayerSkillAnimation.cs" t="Include" />
             <e p="MultiAnimation.cs" t="Include" />
             <e p="SingleAnimation.cs" t="Include" />
-            <e p="SkillAnimation.cs" t="Include" />
             <e p="SkillAnimations" t="Include">
               <e p="FromSourceToTargetSkillAnimation.cs" t="Include" />
               <e p="PlayAtTargetSkillAnimation.cs" t="Include" />
