@@ -11,6 +11,7 @@ public abstract class Interaction : InteractionBase
     public FlowControl Entry;
     [Output(connectionType = ConnectionType.Override)]
     public FlowControl Exit;
+    public bool waitForCompletion = true;
 
     public override InteractionBase GetNextNode()
     {

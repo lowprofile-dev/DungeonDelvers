@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using E7.Introloop;
 using JetBrains.Annotations;
 using Sirenix.OdinInspector;
+using SkredUtils;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Object = UnityEngine.Object;
@@ -13,9 +15,9 @@ public class MapSettings : SerializedMonoBehaviour
 {
     public static MapSettings Instance { get; private set;}
 
-    [FoldoutGroup("Scene Sequence")] public int previousSceneIndex = -1;
-    [FoldoutGroup("Scene Sequence")] public int nextSceneIndex = -1;
-
+    public IntroloopAudio MapBgm;
+    public IntroloopAudio BattleBgm;
+    private BGMPlayer Player;
     [FormerlySerializedAs("Encounters"), FoldoutGroup("Encounter")] public MapEncounterSet DefaultMapEncounterSet = null;
     [FoldoutGroup("Encounter"), ShowInInspector, ReadOnly] private MapEncounterSet _mapEncounterSet;
     public MapEncounterSet MapEncounterSet
@@ -48,11 +50,13 @@ public class MapSettings : SerializedMonoBehaviour
         }
         
         Instance = this;
+        Player = BGMPlayer.Get;
     }
 
     public void Start()
     {
         MapEncounterSet = DefaultMapEncounterSet;
+        Player.Play(MapBgm);
         ApplyMapSettings();
     }
 
@@ -132,6 +136,9 @@ public class MapSettings : SerializedMonoBehaviour
             MinimapCamera.enabled = false;
         }
     }
+
+    public void PauseBgm() => Player.Pause(0.1f);
+    public void UnpauseBgm() => Player.Resume(2f);
 
     [CanBeNull] public MapTile GetCurrentMapTile()
     {

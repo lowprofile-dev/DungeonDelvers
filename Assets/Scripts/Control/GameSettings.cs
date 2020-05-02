@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Sirenix.OdinInspector;
+using UnityEngine;
+using UnityEngine.Audio;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -27,4 +29,8 @@ public class GameSettings : ScriptableObject
             return instance;
         }
     }
+    
+    public AudioMixer AudioMixer;
+    public AudioMixerGroup BGMChannel;
+    public AudioMixerGroup SFXChannel;
 }

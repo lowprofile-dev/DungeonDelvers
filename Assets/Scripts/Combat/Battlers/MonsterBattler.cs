@@ -22,8 +22,9 @@ public class MonsterBattler : Battler
     private BattleController BattleController;
     
     #region Control
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         //LoadBase();
     }
 
@@ -184,30 +185,26 @@ public class MonsterBattler : Battler
         {
             case DamageEffect.DamageEffectResult damageEffectResult when !Fainted:
             {
-                var hitSound = HitSound != null
-                    ? QueueActionAndAwait(() => AudioSource.PlayOneShot(HitSound))
-                    : Task.CompletedTask;
-                var time = effectResult.skillInfo.HasCrit ? 1.4f : 1f;
-//                await ShowDamageAndFlash(damageEffectResult.DamageDealt, effectResult.skillInfo.HasCrit);
+                var hitSound = PlayHitSound();
+                var hasCrit = effectResult.skillInfo.HasCrit;
+                var time = hasCrit ? 1.4f : 1f;
+                var color = hasCrit ? Color.red : Color.white;
                 Task damage = BattleController.Instance.battleCanvas.ShowSkillResultAsync(this,
-                    damageEffectResult.DamageDealt.ToString(), Color.white, time);
+                    damageEffectResult.DamageDealt.ToString(), color, time);
                 Task blink = PlayCoroutine(DamageBlinkCoroutine());
-
                 await Task.WhenAll(damage, blink, hitSound);
                 break;
             }
             case DamageEffect.DamageEffectResult damageEffectResult:
             {
-                var hitSound = HitSound != null
-                    ? QueueActionAndAwait(() => AudioSource.PlayOneShot(HitSound))
-                    : Task.CompletedTask;
-                var time = effectResult.skillInfo.HasCrit ? 1.4f : 1f;
-                //Task damage = ShowDamage(damageEffectResult.DamageDealt, effectResult.skillInfo.HasCrit);
+                var hitSound = PlayHitSound();
+                var hasCrit = effectResult.skillInfo.HasCrit;
+                var time = hasCrit ? 1.4f : 1f;
+                var color = hasCrit ? Color.red : Color.white;
                 Task damage = BattleController.Instance.battleCanvas.ShowSkillResultAsync(this,
-                    damageEffectResult.DamageDealt.ToString(), Color.white, time);
+                    damageEffectResult.DamageDealt.ToString(), color, time);
                 Task fade = Fade();
-                
-                await Task.WhenAll(fade, damage,hitSound);
+                await Task.WhenAll(fade, damage, hitSound);
                 break;
             }
             case HealEffect.HealEffectResult healEffectResult:
@@ -218,59 +215,8 @@ public class MonsterBattler : Battler
             } 
             case MultiHitDamageEffect.MultiHitDamageEffectResult multiHitDamageEffectResult:
             {
-                //Botar um pequeno delay entre cada hit do dano graficamente depois
-                // var tasks = new List<Task>();
-                //
-                // var damage = multiHitDamageEffectResult.TotalDamageDealt;
-                //
-                // if (damage == 0)
-                // {
-                //     //tasks.Add(ShowDamage(damage,effectInfo.SkillInfo.HasCrit));
-                // } else if (!Fainted)
-                // {
-                //     //tasks.Add(ShowDamageAndFlash(damage, effectInfo.SkillInfo.HasCrit));
-                //     tasks.Add(DamageFlash());
-                // }
-                // else
-                // {
-                //     //tasks.Add(ShowDamage(damage,effectInfo.SkillInfo.HasCrit));
-                //     tasks.Add(Fade());
-                // }
-                //
-                // var damageString = string.Join("\n", multiHitDamageEffectResult.HitResults.Select(result => result.DamageDealt.ToString()));
-                // tasks.Add(BattleController.Instance.battleCanvas.ShowSkillResult(this, damageString, Color.white));
-                //
-                // await Task.WhenAll(tasks);
-
-                async Task MultiHitTask(float duration)
-                {
-                    var damage = multiHitDamageEffectResult.TotalDamageDealt;
-                    var hits = multiHitDamageEffectResult.HitResults;
-                    var hitCount = hits.Count;
-                    var damageString = "";
-                    float segment = duration / hitCount;
-                    
-                    Ref<(string text, Color color)> multiHitInfo = new Ref<(string, Color)>((String.Empty, effectResult.skillInfo.HasCrit ? Color.red : Color.white));
-                    var task = BattleController.Instance.battleCanvas.ShowModifiableSkillResultAsync(this, multiHitInfo,
-                        duration + 0.2f);
-
-                    var leftoverTasks = new List<Task>();
-                    leftoverTasks.Add(task);
-                    
-                    for (int i = 0; i < hitCount; i++)
-                    {
-                        damageString += $"{hits[i].DamageDealt}\n";
-                        multiHitInfo.Instance.text = damageString;
-                        if (HitSound != null) leftoverTasks.Add(QueueActionAndAwait(() => AudioSource.PlayOneShot(HitSound)));
-                        if (damage > 0) leftoverTasks.Add(DamageFlash());
-                        await Task.Delay((int) (segment*1000));
-                    }
-                    
-                    await Task.WhenAll(leftoverTasks);
-                }
-
                 var tasks = new List<Task>();
-                tasks.Add(MultiHitTask(1));
+                tasks.Add(MultiHitTask(multiHitDamageEffectResult, 1));
                 if (Fainted) tasks.Add(Fade());
                 await Task.WhenAll(tasks);
                 break;
@@ -282,12 +228,12 @@ public class MonsterBattler : Battler
 
     #region Animations
 
-    private async Task ShowDamageAndFlash(int damageAmount, bool isCrit)
+    protected virtual async Task ShowDamageAndFlash(int damageAmount, bool isCrit)
     {
         await PlayCoroutine(ShowDamageAndFlashCoroutine(damageAmount, isCrit));
     }
 
-    private IEnumerator ShowDamageAndFlashCoroutine(int damageAmount, bool isCrit)
+    protected virtual IEnumerator ShowDamageAndFlashCoroutine(int damageAmount, bool isCrit)
     {
         var damageInstance = Instantiate(BattleController.Instance.battleCanvas.DamagePrefab, BattleController.Instance.battleCanvas.transform);
         damageInstance.transform.position = transform.position + new Vector3(0, 100, 0);
@@ -314,12 +260,12 @@ public class MonsterBattler : Battler
         Destroy(damageInstance);
     }
     
-    private async Task ShowDamage(int damageAmount, bool isCrit)
+    protected virtual async Task ShowDamage(int damageAmount, bool isCrit)
     {
         await PlayCoroutine(ShowDamageCoroutine(damageAmount, isCrit), this);
     }
 
-    private IEnumerator ShowDamageCoroutine(int damageAmount, bool isCrit)
+    protected virtual IEnumerator ShowDamageCoroutine(int damageAmount, bool isCrit)
     {
         var damageInstance = Instantiate(BattleController.Instance.battleCanvas.DamagePrefab, BattleController.Instance.battleCanvas.transform);
         damageInstance.transform.position = transform.position + new Vector3(0, 100, 0);
@@ -335,17 +281,12 @@ public class MonsterBattler : Battler
         Destroy(damageInstance);
     }
 
-    // private async Task ShowHeal()
-    // {
-        
-    // }
-    
-    private async Task DamageFlash()
+    protected virtual async Task DamageFlash()
     {
         await PlayCoroutine(DamageBlinkCoroutine());
     }
 
-    private IEnumerator DamageBlinkCoroutine()
+    protected virtual IEnumerator DamageBlinkCoroutine()
     {
         var normalColor = image.color;
         var blinkingColor = new Color(image.color.r, image.color.g, image.color.b, 0.3f);
@@ -359,12 +300,12 @@ public class MonsterBattler : Battler
         }
     }
 
-    private async Task Fade()
+    protected virtual async Task Fade()
     {
         await PlayCoroutine(FadeCoroutine());
     }
     
-    private IEnumerator FadeCoroutine(float speed = 0.05f)
+    protected virtual IEnumerator FadeCoroutine(float speed = 0.05f)
     {
         while (image.color.a > 0)
         {
@@ -373,5 +314,35 @@ public class MonsterBattler : Battler
         }
     }
 
+    protected virtual Task PlayHitSound() => HitSound != null
+        ? QueueActionAndAwait(() => AudioSource.PlayOneShot(HitSound))
+        : Task.CompletedTask;
+    
+    protected virtual async Task MultiHitTask(MultiHitDamageEffect.MultiHitDamageEffectResult multiHitDamageEffectResult, float duration)
+    {
+        var damage = multiHitDamageEffectResult.TotalDamageDealt;
+        var hits = multiHitDamageEffectResult.HitResults;
+        var hitCount = hits.Count;
+        var damageString = "";
+        float segment = duration / hitCount;
+                    
+        Ref<(string text, Color color)> multiHitInfo = new Ref<(string, Color)>((String.Empty, multiHitDamageEffectResult.skillInfo.HasCrit ? Color.red : Color.white));
+        var task = BattleController.Instance.battleCanvas.ShowModifiableSkillResultAsync(this, multiHitInfo,
+            duration + 0.2f);
+
+        var leftoverTasks = new List<Task>();
+        leftoverTasks.Add(task);
+                    
+        for (int i = 0; i < hitCount; i++)
+        {
+            damageString += $"{hits[i].DamageDealt}\n";
+            multiHitInfo.Instance.text = damageString;
+            if (HitSound != null) leftoverTasks.Add(QueueActionAndAwait(() => AudioSource.PlayOneShot(HitSound)));
+            if (damage > 0 && !Fainted) leftoverTasks.Add(DamageFlash());
+            await Task.Delay((int) (segment*1000));
+        }
+                    
+        await Task.WhenAll(leftoverTasks);
+    }
     #endregion
 }

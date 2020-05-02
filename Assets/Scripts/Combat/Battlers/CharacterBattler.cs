@@ -24,8 +24,9 @@ public class CharacterBattler : Battler
     private Image image;
 
     #region Control
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         image = GetComponent<Image>();
         Animator = GetComponent<CharacterBattlerAnimator>();
     }

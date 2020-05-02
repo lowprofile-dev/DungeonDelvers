@@ -1,3 +1,5 @@
+Ver BGM de luta continuar após fim da batalha fora do editor.
+Guardar todos os defaults/prefabs num singleton no menu
 Continuar arrumando código, arrumar todos os sons, organizar as animações dos Battlers
 Organizar tudo -
     Dar uma olhada no editor de muita coisa, ver se tem como deixar mais organizado, olhar scripts de editor ou só atributos do Odin

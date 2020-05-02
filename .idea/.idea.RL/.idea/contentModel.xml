@@ -287,6 +287,23 @@
           <e p="Dungeons.txt" t="Include" />
         </e>
         <e p="FBBCommission.txt" t="Include" />
+        <e p="Introloop" t="Include">
+          <e p="Editor" t="Include">
+            <e p="IntroloopAudioEditor.cs" t="Include" />
+            <e p="IntroloopContextMenu.cs" t="Include" />
+            <e p="PositiveFloatDrawer.cs" t="Include" />
+          </e>
+          <e p="Runtime" t="Include">
+            <e p="InternalsVisibleTo.cs" t="Include" />
+            <e p="IntroloopAudio.cs" t="Include" />
+            <e p="IntroloopException.cs" t="Include" />
+            <e p="IntroloopPlayer.cs" t="Include" />
+            <e p="IntroloopPlayerAbstract.cs" t="Include" />
+            <e p="IntroloopSettings.cs" t="Include" />
+            <e p="IntroloopTrack.cs" t="Include" />
+            <e p="PositiveFloatAttribute.cs" t="Include" />
+          </e>
+        </e>
         <e p="issues.txt" t="Include" />
         <e p="JsonDotNet" t="Include">
           <e p="link.xml" t="Include" />
@@ -352,6 +369,8 @@
         <e p="Scripts" t="Include">
           <e p="_Debug" t="Include">
             <e p="GoToScene.cs" t="Include" />
+            <e p="playanim.cs" t="Include" />
+            <e p="playbgm.cs" t="Include" />
           </e>
           <e p="animation" t="Include">
             <e p="Animation.cs" t="Include" />
@@ -572,6 +591,10 @@
             </e>
             <e p="SkillDatabase.cs" t="Include" />
           </e>
+          <e p="Sound" t="Include">
+            <e p="BGMPlayer.cs" t="Include" />
+            <e p="SFXPlayer.cs" t="Include" />
+          </e>
           <e p="UI" t="Include">
             <e p="Battle" t="Include">
               <e p="BattleCanvas.cs" t="Include" />
@@ -726,6 +749,8 @@
         </e>
         <e p="TODO.txt" t="Include" />
       </e>
+      <e p="E7.Introloop.csproj" t="IncludeRecursive" />
+      <e p="E7.Introloop.Editor.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="RL.sln" t="IncludeFlat" />

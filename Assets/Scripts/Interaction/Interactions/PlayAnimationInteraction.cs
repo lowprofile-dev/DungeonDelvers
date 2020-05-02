@@ -12,8 +12,9 @@ public class PlayAnimationInteraction : Interaction
         var anim = GetInputValue("animator", animator);
         var animName = GetInputValue("animationName", animationName);
         
-        yield return null;
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName(animName))
-            yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length + anim.GetCurrentAnimatorStateInfo(0).normalizedTime);
+        anim.Play(animName);
+        
+        yield return new WaitForEndOfFrame();
+        yield return new WaitWhile(() => anim.GetCurrentAnimatorStateInfo(0).IsName(animName));
     }
 }

@@ -30,7 +30,12 @@ public class InteractionEntryPoint : Node
             {
                 var operation =  interaction.PerformInteraction(source);
                 if (operation != null)
-                    yield return operation;
+                {
+                    if (interaction.waitForCompletion)
+                        yield return operation;
+                    else
+                        source.StartCoroutine(operation);
+                }
             }
             node = node.GetNextNode();
         }

@@ -4,12 +4,23 @@ using System.Linq;
 using System.Threading.Tasks;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
+using SkredUtils;
 using UnityEngine;
 
 public abstract class Battler : AsyncMonoBehaviour
 {
     public Dictionary<object, object> BattleDictionary { get; set; } = new Dictionary<object, object>();
 
+    #region UnityEvents
+
+    protected virtual void Awake()
+    {
+        this.Ensure(ref AudioSource);
+        AudioSource.outputAudioMixerGroup = GameSettings.Instance.SFXChannel;
+    }
+
+    #endregion
+    
     #region Fields
 
     public virtual string BattlerName { get; protected set; }
@@ -72,20 +83,7 @@ public abstract class Battler : AsyncMonoBehaviour
 
     public virtual RectTransform RectTransform => transform as RectTransform;
 
-    private AudioSource audioSource;
-    public AudioSource AudioSource
-    {
-        get
-        {
-            if (audioSource == null)
-            {
-                var hasAudioSource = TryGetComponent(out audioSource);
-                if (!hasAudioSource) audioSource = gameObject.AddComponent<AudioSource>();
-            }
-                
-            return audioSource;
-        }
-    }
+    protected AudioSource AudioSource;
 
     #endregion
 

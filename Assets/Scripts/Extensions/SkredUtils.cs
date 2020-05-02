@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection.Emit;
 using System.Threading.Tasks;
+using E7.Introloop;
 using TMPro;
 using UnityEngine;
 
@@ -124,7 +125,12 @@ namespace SkredUtils
 
         public static void PlayOneShot(this AudioSource source, SoundInfo info)
         {
-            source.PlayOneShot(info.AudioClip,info.Volume);
+            source.PlayOneShot(info.AudioClip, info.Volume);
+        }
+
+        public static void Ensure<T>(this MonoBehaviour behaviour, ref T field) where T : Component
+        {
+            if (!behaviour.TryGetComponent(out field)) field = behaviour.gameObject.AddComponent<T>();
         }
     }
 

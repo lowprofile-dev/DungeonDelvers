@@ -64,6 +64,11 @@ public class BattleController : AsyncMonoBehaviour
         Enemies = battleCanvas.SetupMonsters(encounter);
         Party.ForEach((partyMember) => { partyMember.UpdateAnimator(); });
 
+        var bgm = encounter.bgmOverride != null ? encounter.bgmOverride : MapSettings.Instance.BattleBgm;
+        
+        MapSettings.Instance.PauseBgm();
+        battleCanvas.StartBattleMusic(bgm);
+        
         Battle = Task.Run(BattleLoop, CancelBattle.Token);
     }
 
@@ -158,7 +163,11 @@ public class BattleController : AsyncMonoBehaviour
         while (!finished)
             await Task.Delay(5);
 
-        await QueueActionAndAwait(() => CommitWin(expReward,goldReward,items));
+        await QueueActionAndAwait(() =>
+        {
+            CommitWin(expReward, goldReward, items);
+            Cleanup();
+        });
     }
 
     private void CommitWin(int expReward, int goldReward, IEnumerable<Item> rewards)
@@ -185,6 +194,7 @@ public class BattleController : AsyncMonoBehaviour
             CancelBattle.Cancel();
             CancelBattle = new CancellationTokenSource();
             Battle = null;
+            Cleanup();
         }
     }
 
@@ -213,6 +223,12 @@ public class BattleController : AsyncMonoBehaviour
         Debug.Log($"Calculated Exp Reward -- {expReward}");
 
         return (int)(expReward*GameController.Instance.GlobalExperienceModifier);
+    }
+
+    private void Cleanup()
+    {
+        battleCanvas.PauseBattleMusic();
+        MapSettings.Instance.UnpauseBgm();
     }
     
     async Task BattlerTurn(Battler battler)

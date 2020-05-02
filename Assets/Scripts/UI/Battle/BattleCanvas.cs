@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using E7.Introloop;
 using Sirenix.OdinInspector;
 using SkredUtils;
 using UnityEngine;
@@ -13,6 +14,8 @@ using UnityEngine.UI;
 
 public class BattleCanvas : AsyncMonoBehaviour
 {
+
+    private BGMPlayer Player;
     public RectTransform[] PartyBattlerHolders;
     public RectTransform MonsterPanel;
     public Image Battleground;
@@ -34,6 +37,11 @@ public class BattleCanvas : AsyncMonoBehaviour
 
     private List<GameObject> skillResultObjects = new List<GameObject>();
 
+    private void Awake()
+    {
+        Player = BGMPlayer.Get;
+    }
+
     private void Start()
     {
         actionArrow = Instantiate(ActionArrowPrefab, transform);
@@ -49,6 +57,12 @@ public class BattleCanvas : AsyncMonoBehaviour
     {
 
     }
+
+    public void StartBattleMusic(IntroloopAudio audio) => Player.Play(audio);
+
+    public void UnpauseBattleMusic() => Player.Resume();
+
+    public void PauseBattleMusic() => Player.Pause();
 
     private void KeepSelect()
     {

@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
+using E7.Introloop;
 
 [CreateAssetMenu(menuName = "EncounterSet")]
 public class EncounterSet : SerializableAsset {
@@ -9,6 +10,7 @@ public class EncounterSet : SerializableAsset {
     public EncounterLayout Layout;
     public int? overrideExpGain;
     public int? overrideGoldGain;
+    public IntroloopAudio bgmOverride;
     public List<ItemBase> overrideItemDrops; //Refazer pra permitir consumivel futuramente, usando IMonsterDrop(?)
     
     public List<MonsterBattler> BuildMonsters()
@@ -22,10 +24,6 @@ public class EncounterSet : SerializableAsset {
             var monsterBattler = battler.AddComponent<MonsterBattler>();
             monsterBattler.LoadEncounterMonster(encounterMonster);
             battlers.Add(monsterBattler);
-            // var battler = Instantiate(encounterMonster.Monster.MonsterBattler);
-            // var monsterBattler = battler.AddComponent<MonsterBattler>();
-            // monsterBattler.LoadEncounterMonster(encounterMonster);
-            // battlers.Add(monsterBattler);
         }
 
         return battlers;
