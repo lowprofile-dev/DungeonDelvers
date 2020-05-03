@@ -1,47 +1,39 @@
-﻿using System.Linq;
+﻿using System;
 using UnityEngine;
+using XNode;
 
+[Serializable]
 public class MasteryInstance
 {
-    public MasteryGroup MasteryGroup { get; private set; }
-    public Mastery Mastery { get; private set; }
-
-    public int CurrentLevel { get; set; } = 0;
-
-    public MasteryInstance(Mastery mastery, MasteryGroup masteryGroup)
+    public MasteryGraph Graph { get; private set; }
+    public MasteryNode Node { get; private set; }
+    public int Id { get; private set; }
+    private int level;
+    public int Level
     {
-        Mastery = mastery;
-        MasteryGroup = masteryGroup;
-        CurrentLevel = 0;
+        get => level;
+        set { level = Mathf.Min(Node.MasteryMaxLevel, value); }
     }
 
-    public bool CanLevelUp() =>
-        !(Mastery.Conditions.Any(condition => !condition.Achieved(MasteryGroup)) ||
-          CurrentLevel == Mastery.MasteryMaxLevel);
-
-    public void LevelUp()
+    public MasteryInstance(MasteryNode masteryNode)
     {
-        if (CurrentLevel >= Mastery.MasteryMaxLevel)
-        {
-            Debug.LogWarning($"{Mastery.MasteryName} não pode subir de nível. Atual: {CurrentLevel}, Máximo: {Mastery.MasteryMaxLevel}");
-        }
-        else if (Mastery.MPCost > MasteryGroup.Character.CurrentMp)
-        {
-            Debug.LogWarning($"{MasteryGroup.Character.Base.CharacterName} não possui MP suficiente para subir de nível.");
-        }
-        else
-        {
-            MasteryGroup.Character.CurrentMp -= Mastery.MPCost;
-            CurrentLevel++;
-            MasteryGroup.Character.Regenerate();
-        }
+        Graph = (MasteryGraph) masteryNode.graph;
+        Node = masteryNode;
+        Id = masteryNode.Id;
+        Level = 0;
     }
 
-    public void ApplyMastery()
+    public MasteryInstance(MasteryGraph graph, SerializedMasteryInstance serializedMasteryInstance)
     {
-        foreach (var effect in Mastery.Effects)
-        {
-            effect.ApplyBonuses(CurrentLevel, MasteryGroup.Character);
-        }
+        Graph = graph;
+        Node = (MasteryNode) graph.nodes[serializedMasteryInstance.Id];
+        Id = serializedMasteryInstance.Id;
+        Level = serializedMasteryInstance.Level;
     }
+}
+
+public struct SerializedMasteryInstance
+{
+    public int Id;
+    public int Level;
 }

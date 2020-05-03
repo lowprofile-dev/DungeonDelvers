@@ -3932,7 +3932,7 @@ MonoBehaviour:
     type: 3}
   Bases:
     MaxHp: 102
-    InitialEp: 35
+    InitialEp: 15
     EpGain: 25
     PhysAtk: 39
     MagAtk: 8
@@ -3987,4 +3987,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 773cc8c9b4915e742b982047f8e72a05, type: 2}
   BasePassives: []
   DefaultDefendSkill: {fileID: 11400000, guid: 3fda503906d7d314d8cdd9e2b6e3a30d, type: 2}
+  HitSound:
+    AudioClip: {fileID: 8300000, guid: a9e0e39240fe4d548ae0fe809819b709, type: 3}
+    Volume: 0.1
   Level: 1

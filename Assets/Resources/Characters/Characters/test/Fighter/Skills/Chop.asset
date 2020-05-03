@@ -148,7 +148,7 @@ MonoBehaviour:
   SkillName: Chop
   SkillIcon: {fileID: -8726097045332059612, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 10
+  EpCost: 20
   Element: 0
   SkillDescription: Attack one target with an axe.
   Target: 1

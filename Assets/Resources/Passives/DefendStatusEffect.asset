@@ -36,7 +36,7 @@ MonoBehaviour:
       Data: 0
     - Name: DamageFactor
       Entry: 4
-      Data: 35
+      Data: 0.75
     - Name: 
       Entry: 8
       Data: 

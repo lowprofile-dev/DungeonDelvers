@@ -37,8 +37,9 @@ public class DamageEffect : Effect
 
         Debug.Log($"Calculado {damage}");
         
-        var targetPassives = skillInfo.Target.Passives
-            .SelectMany(passive => passive.Effects.Where(passiveEffect => passiveEffect is IReceiveDamagePassiveEffect))
+        var targetPassives = skillInfo.Target.PassiveEffects
+            //.SelectMany(passive => passive.Effects.Where(passiveEffect => passiveEffect is IReceiveDamagePassiveEffect))
+            .Where(pE => pE is IReceiveDamagePassiveEffect)
             .OrderByDescending(effect => effect.Priority)
             .Cast<IReceiveDamagePassiveEffect>()
             .ToArray();

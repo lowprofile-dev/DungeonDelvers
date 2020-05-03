@@ -13,10 +13,10 @@ public class MasteryButton : MonoBehaviour
     public TMP_Text MasteryNameText;
     public TMP_Text MasteryCostText;
     public Button Button;
-    [ReadOnly] public MasteryInstance Mastery;
+    [ReadOnly] public _MasteryInstance Mastery;
     [ReadOnly] public MasteryMenu MasteryMenu;
 
-    public void BuildMasteryButton(MasteryInstance masteryInstance, MasteryMenu menu)
+    public void BuildMasteryButton(_MasteryInstance masteryInstance, MasteryMenu menu)
     {
         Mastery = masteryInstance;
         MasteryMenu = menu;

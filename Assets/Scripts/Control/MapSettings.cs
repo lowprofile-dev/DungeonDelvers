@@ -56,6 +56,8 @@ public class MapSettings : SerializedMonoBehaviour
 
     public void Start()
     {
+        //Clear null
+        MapTiles = MapTiles.Where(tile => tile != null).ToList();
         MapEncounterSet = DefaultMapEncounterSet;
         Player.Play(MapBgm,2f);
         ApplyMapSettings();

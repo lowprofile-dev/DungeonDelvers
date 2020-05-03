@@ -121,10 +121,10 @@ public class PlayerController : AsyncMonoBehaviour
             MovementSpeed = 10;
         if (Input.GetKeyUp(KeyCode.LeftShift))
             MovementSpeed = 5;
-        if (Input.GetKeyDown(KeyCode.Z))
-            GameSaveController.Save();
-        if (Input.GetKeyDown(KeyCode.X))
-            GameSaveController.Load();
+        // if (Input.GetKeyDown(KeyCode.Z))
+        //     GameSaveController.Save();
+        // if (Input.GetKeyDown(KeyCode.X))
+        //     GameSaveController.Load();
         if (Input.GetKeyDown(KeyCode.Q))
             _toggleMinimapCamera();
         #endif

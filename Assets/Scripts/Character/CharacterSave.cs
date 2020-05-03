@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 
-[Serializable]
-public struct CharacterSave
+
+[Serializable] public struct CharacterSave
 {
     public string baseUid;
     public int currentHp;

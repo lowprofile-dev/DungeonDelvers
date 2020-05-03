@@ -148,7 +148,7 @@ MonoBehaviour:
   SkillName: Slash
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 6
+  EpCost: 15
   Element: 0
   SkillDescription: Attack one target with a knife.
   Target: 0

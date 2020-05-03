@@ -144,30 +144,11 @@ MonoBehaviour:
       Entry: 7
       Data: 7|DD.Skill.Animation.MultiAnimation, Assembly-CSharp
     - Name: Animations
-      Entry: 7
-      Data: 8|System.Collections.Generic.List`1[[CharacterBattler+CharacterBattlerAnimation,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 3
-      Data: 1
-    - Name: 
-      Entry: 13
+      Entry: 6
       Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: speedModifier
+    - Name: animationDelay
       Entry: 4
-      Data: 1.8
-    - Name: delay
-      Entry: 4
-      Data: 0.02
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -191,7 +172,7 @@ MonoBehaviour:
   SkillName: Stab
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 20
+  EpCost: 15
   Element: 0
   SkillDescription: Attack one target with a knife, making them bleed.
   Target: 0

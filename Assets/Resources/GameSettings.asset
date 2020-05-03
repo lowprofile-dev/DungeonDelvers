@@ -31,8 +31,21 @@ MonoBehaviour:
     type: 3}
   GraphyPrefab: {fileID: 6065829648339744890, guid: 2bdfc096237e37ce6b63b351fe2614fc,
     type: 3}
+  DefaultMasteries: {fileID: 11400000, guid: 9d17c1ab98998a4428b129d187f82a4c, type: 2}
   AudioMixer: {fileID: 24100000, guid: 32df65edd7948dd468271bc046f84089, type: 2}
   BGMChannel: {fileID: 7151828996764371312, guid: 32df65edd7948dd468271bc046f84089,
     type: 2}
   SFXChannel: {fileID: -4900852842141550145, guid: 32df65edd7948dd468271bc046f84089,
     type: 2}
+  TextChannel: {fileID: 7642293261712378747, guid: 32df65edd7948dd468271bc046f84089,
+    type: 2}
+  DefaultFanfare:
+    AudioClip: {fileID: 8300000, guid: d7378f4ec3793b34d9c8d580f2ac5d4d, type: 3}
+    Volume: 0.025
+  DefaultMessageBox: {fileID: 5457389356766954974, guid: 987eb3dfcca3ea48e93d20d121103e54,
+    type: 3}
+  DefaultTypingSound:
+    AudioClip: {fileID: 8300000, guid: 08178d42762d84649b765e9e42814b1a, type: 3}
+    Volume: 0.01
+  DefaultShopMenu: {fileID: 7640681385663065397, guid: 2014795010362a74c8334521ee309dfd,
+    type: 3}

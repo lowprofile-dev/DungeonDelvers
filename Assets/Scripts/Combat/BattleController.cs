@@ -148,6 +148,7 @@ public class BattleController : AsyncMonoBehaviour
         
         await QueueActionAndAwait(() =>
         {
+            battleCanvas.StopBattleMusic();
             battleCanvas.RewardPanel.ShowRewardPanel(expReward, goldReward, items);
             var rewardPanelClosedEvent = battleCanvas.RewardPanel.RewardPanelClosed;
             

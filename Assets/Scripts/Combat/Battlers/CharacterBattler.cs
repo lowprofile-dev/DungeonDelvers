@@ -180,6 +180,7 @@ public class CharacterBattler : Battler
             case DamageEffect.DamageEffectResult damageEffectResult:
             {
                 var tasks = new List<Task>();
+                tasks.Add(PlayHitSound());
                 if (damageEffectResult.DamageDealt > 0)
                 {
                     tasks.Add(AsyncPlayAndWait(CharacterBattlerAnimation.Damage));
@@ -206,18 +207,19 @@ public class CharacterBattler : Battler
             case MultiHitDamageEffect.MultiHitDamageEffectResult multiHitDamageEffectResult:
             {
                 //Botar um pequeno delay entre cada hit do dano graficamente depois
-                var tasks = new List<Task>();
-                if (multiHitDamageEffectResult.TotalDamageDealt > 0)
-                {
-                    tasks.Add(AsyncPlayAndWait(CharacterBattlerAnimation.Damage));
-                    tasks.Add(PlayCoroutine(DamageBlinkCoroutine()));
-                }
-
-                var damageString = string.Join("\n", multiHitDamageEffectResult.HitResults.Select(result => result.DamageDealt.ToString()));
-                tasks.Add(BattleController.Instance.battleCanvas.ShowSkillResultAsync(this, damageString, Color.white));
-                
-                await Task.WhenAll(tasks);
-                break;
+                throw new NotImplementedException();
+                // var tasks = new List<Task>();
+                // if (multiHitDamageEffectResult.TotalDamageDealt > 0)
+                // {
+                //     tasks.Add(AsyncPlayAndWait(CharacterBattlerAnimation.Damage));
+                //     tasks.Add(PlayCoroutine(DamageBlinkCoroutine()));
+                // }
+                //
+                // var damageString = string.Join("\n", multiHitDamageEffectResult.HitResults.Select(result => result.DamageDealt.ToString()));
+                // tasks.Add(BattleController.Instance.battleCanvas.ShowSkillResultAsync(this, damageString, Color.white));
+                //
+                // await Task.WhenAll(tasks);
+                // break;
             }
         }
     }

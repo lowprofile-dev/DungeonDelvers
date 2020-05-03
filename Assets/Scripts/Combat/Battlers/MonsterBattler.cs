@@ -187,7 +187,7 @@ public class MonsterBattler : Battler
             {
                 var hitSound = PlayHitSound();
                 var hasCrit = effectResult.skillInfo.HasCrit;
-                var time = hasCrit ? 1.4f : 1f;
+                var time = hasCrit ? 1.2f : 0.9f;
                 var color = hasCrit ? Color.red : Color.white;
                 Task damage = BattleController.Instance.battleCanvas.ShowSkillResultAsync(this,
                     damageEffectResult.DamageDealt.ToString(), color, time);
@@ -199,7 +199,7 @@ public class MonsterBattler : Battler
             {
                 var hitSound = PlayHitSound();
                 var hasCrit = effectResult.skillInfo.HasCrit;
-                var time = hasCrit ? 1.4f : 1f;
+                var time = hasCrit ? 1.2f : 0.9f;
                 var color = hasCrit ? Color.red : Color.white;
                 Task damage = BattleController.Instance.battleCanvas.ShowSkillResultAsync(this,
                     damageEffectResult.DamageDealt.ToString(), color, time);
@@ -314,10 +314,6 @@ public class MonsterBattler : Battler
         }
     }
 
-    protected virtual Task PlayHitSound() => HitSound != null
-        ? QueueActionAndAwait(() => AudioSource.PlayOneShot(HitSound))
-        : Task.CompletedTask;
-    
     protected virtual async Task MultiHitTask(MultiHitDamageEffect.MultiHitDamageEffectResult multiHitDamageEffectResult, float duration)
     {
         var damage = multiHitDamageEffectResult.TotalDamageDealt;

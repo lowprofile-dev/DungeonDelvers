@@ -75,7 +75,7 @@ MonoBehaviour:
       Data: 
     - Name: DamageFactor
       Entry: 4
-      Data: 2.4
+      Data: 2.2
     - Name: DamageType
       Entry: 3
       Data: 1
@@ -148,7 +148,7 @@ MonoBehaviour:
   SkillName: Kinetic Strike
   SkillIcon: {fileID: 2319972033531883032, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 35
+  EpCost: 40
   Element: 0
   SkillDescription: Attack a target with kinetic energy.
   Target: 0

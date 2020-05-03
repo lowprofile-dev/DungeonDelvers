@@ -619,7 +619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1950583cdaa4a4ba3b8ffbfd5dbed9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TilemapManager: {fileID: 1865200508}
 --- !u!1001 &1641521739956735681
 PrefabInstance:
   m_ObjectHideFlags: 0

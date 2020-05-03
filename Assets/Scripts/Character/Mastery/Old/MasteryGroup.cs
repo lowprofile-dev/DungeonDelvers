@@ -3,20 +3,21 @@ using Newtonsoft.Json;
 using System.Linq;
 using Sirenix.OdinInspector;
 
+
 public class MasteryGroup
 {
     [ReadOnly] public Character Character;
 
-    public Dictionary<Mastery, MasteryInstance> Masteries;
+    public Dictionary<_Mastery, _MasteryInstance> Masteries;
 
     public MasteryGroup(Character character)
     {
         Character = character;
-        Masteries = new Dictionary<Mastery, MasteryInstance>();
+        Masteries = new Dictionary<_Mastery, _MasteryInstance>();
 
         character.Base.Masteries.ForEach(mastery =>
         {
-            var instance = new MasteryInstance(mastery,this);
+            var instance = new _MasteryInstance(mastery, this);
             Masteries.Add(mastery, instance);
         });
     }

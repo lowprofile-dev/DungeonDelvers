@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 [InteractableNode(defaultNodeName = "Shop")]
@@ -6,6 +7,11 @@ public class ShopInteraction : Interaction
 {
     [Input] public Shop Shop;
     [Input] public GameObject ShopMenu;
+
+    private void Reset()
+    {
+        ShopMenu = GameSettings.Instance.DefaultShopMenu;
+    }
 
     public override IEnumerator PerformInteraction(Interactable source)
     {

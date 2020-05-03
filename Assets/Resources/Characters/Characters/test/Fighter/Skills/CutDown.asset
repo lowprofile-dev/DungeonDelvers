@@ -148,7 +148,7 @@ MonoBehaviour:
   SkillName: Cut Down
   SkillIcon: {fileID: -8726097045332059612, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 30
+  EpCost: 50
   Element: 0
   SkillDescription: Execute a strong strike on any target. More likely to critically
     strike.

@@ -16,7 +16,6 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: a7a331baa381cd04da600f2aa41a5a8a, type: 2}
     - {fileID: 8300000, guid: 5159310bc5212d1458040ea62d81c5ad, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -28,10 +27,10 @@ MonoBehaviour:
       Data: 0|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
-      Data: 1|DispelStatusEffectTypeEffect, Assembly-CSharp
+      Data: 1|GainApEffect, Assembly-CSharp
     - Name: ElementOverride
       Entry: 7
       Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
@@ -41,30 +40,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: DispelType
+    - Name: ApAmount
       Entry: 3
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 2|ApplyStatusEffectEffect, Assembly-CSharp
-    - Name: ElementOverride
-      Entry: 7
-      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: StatusEffect
-      Entry: 10
-      Data: 0
-    - Name: turnDuration
-      Entry: 3
-      Data: 5
+      Data: 60
     - Name: 
       Entry: 8
       Data: 
@@ -76,7 +54,7 @@ MonoBehaviour:
       Data: 
     - Name: CriticalEffects
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+      Data: 2|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -91,17 +69,17 @@ MonoBehaviour:
       Data: 
     - Name: Animations
       Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
+      Data: 3|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 5|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
+      Data: 4|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
     - Name: Animation
       Entry: 7
-      Data: 6|BattlerAnimationInfo, Assembly-CSharp
+      Data: 5|BattlerAnimationInfo, Assembly-CSharp
     - Name: stateName
       Entry: 1
       Data: Cast
@@ -110,10 +88,10 @@ MonoBehaviour:
       Data: 1
     - Name: soundInfo
       Entry: 7
-      Data: 7|SoundInfo, Assembly-CSharp
+      Data: 6|SoundInfo, Assembly-CSharp
     - Name: AudioClip
       Entry: 10
-      Data: 1
+      Data: 0
     - Name: Volume
       Entry: 4
       Data: 0.1

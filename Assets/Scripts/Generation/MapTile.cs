@@ -21,7 +21,7 @@ public class MapTile : SerializedMonoBehaviour
         }
     }
     public int TileIndex;
-    private BoxCollider2D _collider2D;
+    [SerializeField] private BoxCollider2D _collider2D;
     public Bounds Bounds => _collider2D.bounds;
     private DunGen.Tile _tile;
     public Sprite BattleSprite;
@@ -34,14 +34,15 @@ public class MapTile : SerializedMonoBehaviour
             DestroyImmediate(this);
             return;
         }
-        Settings = MapSettings.Instance;
-        TileIndex = Settings.MapTiles.Count;
-        Settings.MapTiles.Add(this);
-        Settings.MapTileSeen.Add(TileIndex, false);
     }
 
     private void Start()
     {
+        Settings = MapSettings.Instance;
+        TileIndex = Settings.MapTiles.Count;
+        Settings.MapTiles.Add(this);
+        Settings.MapTileSeen.Add(TileIndex, false);
+        
         var bounds = _tile.Bounds;
         DestroyImmediate(gameObject.GetComponent<BoxCollider>());
         _collider2D = gameObject.AddComponent<BoxCollider2D>();

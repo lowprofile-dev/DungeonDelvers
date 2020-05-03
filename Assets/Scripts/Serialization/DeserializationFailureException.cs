@@ -11,7 +11,6 @@ public class DeserializationFailureException : Exception
 
     public DeserializationFailureException(Type type)
     {
-
         DeserializedType = type;
     }
 }

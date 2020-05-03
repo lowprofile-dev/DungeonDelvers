@@ -59,7 +59,7 @@ namespace SkredUtils
 
         public static Ref<T> CreateRef<T>(this T @ref) => new Ref<T>(@ref);
 
-        public static IEnumerator TextWriter(TMP_Text textObject, string text, int updateFrequency = 1)
+        public static IEnumerator TextWriter(TMP_Text textObject, string text, int updateFrequency = 1, Action<string> writeEvent = null)
         {
             //Update frequency must be at least 1 (frames/character)
             if (updateFrequency < 1)
@@ -90,6 +90,8 @@ namespace SkredUtils
                     {
                         textObject.text += currentChar;
                     }
+                    
+                    writeEvent.Invoke(textObject.text);
                     
                     //Wait for X frames, where X is updateFrequency
                     for (var i = 0; i < updateFrequency; i++)

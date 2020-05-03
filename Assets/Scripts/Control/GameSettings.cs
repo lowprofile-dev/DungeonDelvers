@@ -30,14 +30,24 @@ public class GameSettings : SerializedScriptableObject
         }
     }
 
-    [TabGroup("Default Prefabs")] public GameObject AnimationObject;
-    [TabGroup("Default Prefabs")] public GameObject PlayerPrefab;
-    [TabGroup("Default Prefabs")] public GameObject CameraPrefab;
-    [TabGroup("Default Prefabs")] public GameObject MainCanvasPrefab;
-    [TabGroup("Default Prefabs")] public GameObject GraphyPrefab;
+    [TabGroup("1", "Default Prefabs")] public GameObject AnimationObject;
+    [TabGroup("1", "Default Prefabs")] public GameObject PlayerPrefab;
+    [TabGroup("1", "Default Prefabs")] public GameObject CameraPrefab;
+    [TabGroup("1", "Default Prefabs")] public GameObject MainCanvasPrefab;
+    [TabGroup("1", "Default Prefabs")] public GameObject GraphyPrefab;
 
-    [TabGroup("Audio Settings")] public AudioMixer AudioMixer;
-    [TabGroup("Audio Settings")] public AudioMixerGroup BGMChannel;
-    [TabGroup("Audio Settings")] public AudioMixerGroup SFXChannel;
+    [TabGroup("1", "Audio Settings")] public AudioMixer AudioMixer;
+    [TabGroup("1", "Audio Settings")] public AudioMixerGroup BGMChannel;
+    [TabGroup("1", "Audio Settings")] public AudioMixerGroup SFXChannel;
+    [TabGroup("1", "Audio Settings")] public AudioMixerGroup TextChannel;
+
+    [TabGroup("1", "Battle Settings")] public SoundInfo DefaultFanfare;
     
+    [TabGroup("2","Message Box")] public GameObject DefaultMessageBox;
+    [TabGroup("2","Message Box")] public SoundInfo DefaultTypingSound;
+    
+    [TabGroup("2","Shop Menu")] public GameObject DefaultShopMenu;
+    
+
+
 }

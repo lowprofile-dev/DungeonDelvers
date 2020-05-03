@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using SkredUtils;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,8 @@ using UnityEngine.UI;
 public class MessageBox : MonoBehaviour
 {
     [SerializeField] private bool _dismissed = false;
+    public AudioSource AudioSource;
+    public SoundInfo SoundInfo;
     private string fullText;
     private Coroutine typingCoroutine;
     public bool Dismissed => _dismissed;
@@ -17,12 +20,26 @@ public class MessageBox : MonoBehaviour
     private void Awake()
     {
         Text.text = "";
+        this.Ensure(ref AudioSource);
+        AudioSource.outputAudioMixerGroup = GameSettings.Instance.TextChannel;
     }
 
     public void SetText(string text)
     {
         fullText = text;
         StartCoroutine(MessageBoxCoroutine());
+    }
+
+    public void SetText(string text, SoundInfo soundInfo)
+    {
+        fullText = text;
+        SoundInfo = soundInfo;
+        StartCoroutine(MessageBoxCoroutine());
+    }
+
+    private void PlayTypeSound()
+    {
+        AudioSource.PlayOneShot(SoundInfo);
     }
 
     IEnumerator MessageBoxCoroutine()
@@ -53,7 +70,7 @@ public class MessageBox : MonoBehaviour
 
     IEnumerator TypingCoroutine()
     {
-        typingCoroutine = StartCoroutine(SkredUtils.SkredUtils.TextWriter(Text, fullText,2));
+        typingCoroutine = StartCoroutine(SkredUtils.SkredUtils.TextWriter(Text, fullText,2, str => PlayTypeSound()));
         yield return typingCoroutine;
         typingCoroutine = null;
     }

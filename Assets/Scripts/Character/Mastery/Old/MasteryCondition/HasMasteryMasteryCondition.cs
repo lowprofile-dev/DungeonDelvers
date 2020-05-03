@@ -1,7 +1,8 @@
 public class HasMasteryMasteryCondition : MasteryCondition
 {
-    public Mastery Mastery;
+    public _Mastery Mastery;
     public int RequiredLevel;
+
     public override bool Achieved(MasteryGroup group)
     {
         var hasMastery = group.Masteries.ContainsKey(Mastery);

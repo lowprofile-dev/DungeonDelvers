@@ -1,25 +1,24 @@
-Arrumar/limpar animator
-Guardar todos os defaults/prefabs num singleton no menu
-Continuar arrumando código, arrumar todos os sons, organizar as animações dos Battlers
-Organizar tudo -
-    Dar uma olhada no editor de muita coisa, ver se tem como deixar mais organizado, olhar scripts de editor ou só atributos do Odin
-    Criar namespaces, renomear um monte de classes
-    Limpar código e funcionalidades
-    Testar combate (mais especificamente funcionalidade do AsyncMonoBehaviour) em framerate baixa <20, <10
-Depois:
-Continuar design do combate
-
-Fazer o jogo pseudo-funcional:
-	Tela inicial, que procura se tem save.
+Refazer masteries usando xNode
+Refazer uma base de masteries (criar um graph que são as masteries padrões e quando cria um masterygraph copia o que tem lá)
+Fazer mais inimigos simples pra floresta
+Refazer IA com xNode
+Fazer boss da floresta com IA especial e DragonBones
+Fazer cidade
+Terminar os mapas da dungeon (4 mapas até o boss, ai acaba o jogo por enquanto)
+Fazer sistema de equipamento com raridade e upgrade
+Rebalancear a primeira dungeon
+Polir o que tem até esse ponto
+Criar uma demo e criar o grupo de teste no zipzop.
 
 Maybe:
+Characters só podem ter X skills equipadas?
 Avisar pro player que não ganhou XP porque o nível dos monstros era mais baixo quando for o caso.
 Lojas tem modificadores de preço, pode ser alterado com certas condições (tipo player completou quest da região)
 Travelling Merchant -> Aparece aleatóriamente em mapas algumas vezes (muda de posição/talvez não aparece mesmo com a mesma seed)
 Inimigos não dropam gold, mas os ETC que dropam podem ser vendidos (e são materiais pra crafting também)
 
 Futuro:
-Implementar 
+Textbox vê se o texto vai passar das linhas, se sim ele pausa, espera input, levanta a textbox (com animação) ou apaga o que já tinha e continua. 
 Dar uma olhada no particlesystem e shadergraph
 Resolver certas UIs mostrando detalhes placeholders antes de mostrar os corretos.
 Arrumar mainmenu/battlecanvas para fazerem parte do maincanvas e terem cleanup em vez de serem instanciados.

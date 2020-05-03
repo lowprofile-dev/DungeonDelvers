@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.Utilities;
@@ -10,6 +11,9 @@ using SkredUtils;
 public class RewardPanel : MonoBehaviour
 {
     public TMP_Text RewardText;
+    public AudioSource FanfareAudioSource;
+    public AudioSource TypingAudioSource;
+    public SoundInfo SoundInfo;
     public UnityEvent RewardPanelClosed;
     private Coroutine TypeTextCoroutine;
     private string rewardTextString;
@@ -19,10 +23,20 @@ public class RewardPanel : MonoBehaviour
     public Color ItemColor;
     public Color LevelColor;
 
+    private void Awake()
+    {
+        this.Ensure(ref TypingAudioSource);
+        TypingAudioSource.outputAudioMixerGroup = GameSettings.Instance.TextChannel;
+        if (SoundInfo == null) SoundInfo = GameSettings.Instance.DefaultTypingSound;
+        
+        this.Ensure(ref FanfareAudioSource);
+        FanfareAudioSource.outputAudioMixerGroup = GameSettings.Instance.SFXChannel;
+    }
+
     public void ShowRewardPanel(int expGained, int goldGained, Item[] itemsGained)
     {
-        //Fazer depois animação de aparecer + animação de digitar.
         gameObject.SetActive(true);
+        FanfareAudioSource.PlayOneShot(GameSettings.Instance.DefaultFanfare);
         var text = $"The party gained <color=#00FFFF>{expGained} EXP</color> and <color=#FFFF00>{goldGained}g</color>.";
         if (itemsGained.Any())
             text += $"\nThey also found {string.Join(", ", itemsGained.Select(item => item.InspectorName))}";
@@ -34,9 +48,14 @@ public class RewardPanel : MonoBehaviour
         StartCoroutine(TypeText(text));
     }
 
+    private void PlayTypeSound()
+    {
+        TypingAudioSource.PlayOneShot(SoundInfo);
+    }
+    
     private IEnumerator TypeText(string text)
     {
-        TypeTextCoroutine = StartCoroutine(SkredUtils.SkredUtils.TextWriter(RewardText, text, 2));
+        TypeTextCoroutine = StartCoroutine(SkredUtils.SkredUtils.TextWriter(RewardText, text, 2, str => PlayTypeSound()));
         yield return TypeTextCoroutine;
         TypeTextCoroutine = null;
     }

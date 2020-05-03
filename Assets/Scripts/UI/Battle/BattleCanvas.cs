@@ -65,6 +65,8 @@ public class BattleCanvas : AsyncMonoBehaviour
 
     public void PauseBattleMusic() => Player.Pause();
 
+    public void StopBattleMusic() => Player.Stop();
+
     private void KeepSelect()
     {
         if (EventSystem.current.currentSelectedGameObject == null)

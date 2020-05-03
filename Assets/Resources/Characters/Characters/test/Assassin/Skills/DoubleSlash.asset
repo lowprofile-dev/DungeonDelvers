@@ -13,21 +13,191 @@ MonoBehaviour:
   m_Name: DoubleSlash
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 0
-    SerializedBytes: 010007000000456666656374732f00000000004600000053797374656d2e436f6c6c656374696f6e732e47656e657269632e4c69737460315b5b4566666563742c20417373656d626c792d4353686172705d5d2c206d73636f726c696200000000060100000000000000022f0100000000250000004d756c746948697444616d6167654566666563742c20417373656d626c792d4353686172700100000003000f000000456c656d656e744f766572726964652f02000000003700000053797374656d2e4e756c6c61626c6560315b5b456c656d656e742c20417373656d626c792d4353686172705d5d2c206d73636f726c69622e05010007000000486974496e666f2f03000000004700000053797374656d2e436f6c6c656374696f6e732e47656e657269632e4c69737460315b5b486974496e666f2c20417373656d626c792d4353686172705d5d2c206d73636f726c696202000000060200000000000000042f040000000018000000486974496e666f2c20417373656d626c792d4353686172701d000a00000044616d6167655479706500000000000000001f000c00000044616d616765466163746f723333333f050430040000001d000a00000044616d6167655479706500000000000000001f000c00000044616d616765466163746f723333333f05070505070501000f000000437269746963616c4566666563747330000000000300000006000000000000000007052d000e000000536b696c6c416e696d6174696f6e01000a000000416e696d6174696f6e732f05000000006800000053797374656d2e436f6c6c656374696f6e732e47656e657269632e4c69737460315b5b44442e536b696c6c2e416e696d6174696f6e2e49506c61796572536b696c6c416e696d6174696f6e2c20417373656d626c792d4353686172705d5d2c206d73636f726c696204000000060100000000000000022f06000000003200000044442e536b696c6c2e416e696d6174696f6e2e4d756c7469416e696d6174696f6e2c20417373656d626c792d4353686172700500000001000a000000416e696d6174696f6e732f07000000005400000053797374656d2e436f6c6c656374696f6e732e47656e657269632e4c69737460315b5b426174746c6572416e696d6174696f6e496e666f2c20417373656d626c792d4353686172705d5d2c206d73636f726c696206000000060200000000000000022f080000000025000000426174746c6572416e696d6174696f6e496e666f2c20417373656d626c792d4353686172700700000027000900000073746174654e616d65000600000041747461636b1f000500000073706565646666e63f010009000000736f756e64496e666f2f09000000001a000000536f756e64496e666f2c20417373656d626c792d435368617270080000000b0009000000417564696f436c6970000000001f0006000000566f6c756d65cdcccc3d05050230080000000900000027000900000073746174654e616d65000600000041747461636b1f000500000073706565646666e63f010009000000736f756e64496e666f30090000000a0000000b0009000000417564696f436c6970000000001f0006000000566f6c756d65cdcccc3d050507051f000e000000616e696d6174696f6e44656c6179000000000507050300120000005265717569726564576561706f6e547970652f0a000000004500000053797374656d2e4e756c6c61626c6560315b5b576561706f6e426173652b576561706f6e547970652c20417373656d626c792d4353686172705d5d2c206d73636f726c69621e030000000000000005
+    SerializedFormat: 2
+    SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 8300000, guid: 2c2fcc6fa5fa7f84689cf5c4163a3d22, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
+    SerializationNodes:
+    - Name: Effects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|MultiHitDamageEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: HitInfo
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[HitInfo, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: HitInfo, Assembly-CSharp
+    - Name: DamageType
+      Entry: 3
+      Data: 0
+    - Name: DamageFactor
+      Entry: 4
+      Data: 0.7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: HitInfo, Assembly-CSharp
+    - Name: DamageType
+      Entry: 3
+      Data: 0
+    - Name: DamageFactor
+      Entry: 4
+      Data: 0.7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: CriticalEffects
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SkillAnimation
+      Entry: 6
+      Data: 
+    - Name: Animations
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|DD.Skill.Animation.MultiAnimation, Assembly-CSharp
+    - Name: Animations
+      Entry: 7
+      Data: 6|System.Collections.Generic.List`1[[BattlerAnimationInfo, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 7|BattlerAnimationInfo, Assembly-CSharp
+    - Name: stateName
+      Entry: 1
+      Data: Attack
+    - Name: speed
+      Entry: 4
+      Data: 1.8
+    - Name: soundInfo
+      Entry: 7
+      Data: 8|SoundInfo, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
+      Data: 0
+    - Name: Volume
+      Entry: 4
+      Data: 0.1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 9|BattlerAnimationInfo, Assembly-CSharp
+    - Name: stateName
+      Entry: 1
+      Data: Attack
+    - Name: speed
+      Entry: 4
+      Data: 1.8
+    - Name: soundInfo
+      Entry: 7
+      Data: 10|SoundInfo, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
+      Data: 0
+    - Name: Volume
+      Entry: 4
+      Data: 0.1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: animationDelay
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: RequiredWeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
   uniqueIdentifier: 
   databaseIgnore: 0
   SkillName: Double Slash
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 0
+  EpCost: 50
   Element: 0
   SkillDescription: Attack an enemy twice.
   Target: 1

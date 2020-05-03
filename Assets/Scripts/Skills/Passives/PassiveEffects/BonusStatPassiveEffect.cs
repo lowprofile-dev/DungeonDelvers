@@ -1,4 +1,6 @@
-﻿public class BonusStatPassiveEffect : PassiveEffect, IStatModifierPassiveEffect
+﻿
+
+public class BonusStatPassiveEffect : PassiveEffect, IStatModifierPassiveEffect
 {
     public bool IsMultiplier = false;
     public Stats Stats;

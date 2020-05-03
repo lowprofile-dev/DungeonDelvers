@@ -13,12 +13,15 @@ public class CharacterBase : SerializableAsset
     [PropertyOrder(-100)] public string CharacterName = "";
     [PropertyOrder(-98)] public GameObject CharacterPrefab = null;
     [PropertyOrder(-97)] public GameObject BattlerPrefab = null;
-    [PropertyOrder(-96)] public List<BattlerAnimationController> BattlerAnimationControllers = new List<BattlerAnimationController>();
+
+    [PropertyOrder(-96)]
+    public List<BattlerAnimationController> BattlerAnimationControllers = new List<BattlerAnimationController>();
 
     [FoldoutGroup("Stats")] public Stats Bases;
     [FoldoutGroup("Stats")] public Stats Growths;
 
     [FoldoutGroup("Equips")] public List<WeaponBase.WeaponType> WeaponTypes = new List<WeaponBase.WeaponType>();
+
     [FoldoutGroup("Equips")] public List<EquippableBase.ArmorType> ArmorTypes = new List<EquippableBase.ArmorType>();
 
     [FoldoutGroup("Equips")] public WeaponBase Weapon;
@@ -28,7 +31,9 @@ public class CharacterBase : SerializableAsset
     [FoldoutGroup("Equips")] public FeetBase Feet;
     [FoldoutGroup("Equips")] public AccessoryBase Accessory;
 
-    [ListDrawerSettings(ListElementLabelName = "_masteryElementName")]public List<Mastery> Masteries = new List<Mastery>();
+    [ListDrawerSettings(ListElementLabelName = "_masteryElementName")]
+    public List<_Mastery> Masteries = new List<_Mastery>();
+
     public List<PlayerSkill> BaseSkills = new List<PlayerSkill>();
     public List<Passive> BasePassives = new List<Passive>();
     public PlayerSkill DefaultDefendSkill;
@@ -41,10 +46,9 @@ public class CharacterBase : SerializableAsset
         public WeaponBase.WeaponType? WeaponType;
         public RuntimeAnimatorController AnimatorController;
     }
-    
+
 #if UNITY_EDITOR
-    [Button("Generate Generic Masteries")]
-    public void _generateGenericMasteries()
+    [Button("Generate Generic Masteries")] public void _generateGenericMasteries()
     {
         //Arrumar pra apagar se já existir
         Func<int, string> indexToLevel = (index) =>
@@ -66,19 +70,19 @@ public class CharacterBase : SerializableAsset
             }
         };
 
-        Mastery previous = null;
+        _Mastery previous = null;
         for (int i = 0; i < 5; i++)
         {
             if (Masteries.All(mastery => mastery.MasteryName != $"Hit Point Training {indexToLevel(i)}"))
             {
-                var mastery = new Mastery();
+                var mastery = new _Mastery();
                 mastery.MasteryName = $"Hit Point Training {indexToLevel(i)}";
-                var effect = new BaseStatMasteryEffect();
+                var effect = new _BaseStatMasteryEffect();
                 mastery.MasteryMaxLevel = 10;
-                mastery.MPCost = 1 + 1*i;
+                mastery.MPCost = 1 + 1 * i;
                 effect.Stats = new Stats
                 {
-                    MaxHp = 4 + 2*i
+                    MaxHp = 4 + 2 * i
                 };
                 mastery.Effects.Add(effect);
                 if (previous != null)
@@ -88,6 +92,7 @@ public class CharacterBase : SerializableAsset
                     condition.RequiredLevel = 10;
                     mastery.Conditions.Add(condition);
                 }
+
                 previous = mastery;
                 Masteries.Add(mastery);
             }
@@ -98,9 +103,9 @@ public class CharacterBase : SerializableAsset
         {
             if (Masteries.All(mastery => mastery.MasteryName != $"Physical Attack Training {indexToLevel(i)}"))
             {
-                var mastery = new Mastery();
+                var mastery = new _Mastery();
                 mastery.MasteryName = $"Physical Attack Training {indexToLevel(i)}";
-                var effect = new BaseStatMasteryEffect();
+                var effect = new _BaseStatMasteryEffect();
                 mastery.MasteryMaxLevel = 10;
                 mastery.MPCost = 1 + 1 * i;
                 effect.Stats = new Stats
@@ -115,6 +120,7 @@ public class CharacterBase : SerializableAsset
                     condition.RequiredLevel = 10;
                     mastery.Conditions.Add(condition);
                 }
+
                 previous = mastery;
                 Masteries.Add(mastery);
             }
@@ -125,14 +131,14 @@ public class CharacterBase : SerializableAsset
         {
             if (Masteries.All(mastery => mastery.MasteryName != $"Magical Attack Training {indexToLevel(i)}"))
             {
-                var mastery = new Mastery();
+                var mastery = new _Mastery();
                 mastery.MasteryName = $"Magical Attack Training {indexToLevel(i)}";
-                var effect = new BaseStatMasteryEffect();
+                var effect = new _BaseStatMasteryEffect();
                 mastery.MasteryMaxLevel = 10;
-                mastery.MPCost = 1 + 1*i;
+                mastery.MPCost = 1 + 1 * i;
                 effect.Stats = new Stats
                 {
-                    MagAtk = 2 + 1*i
+                    MagAtk = 2 + 1 * i
                 };
                 mastery.Effects.Add(effect);
                 if (previous != null)
@@ -149,18 +155,18 @@ public class CharacterBase : SerializableAsset
         }
 
         previous = null;
-        for(int i = 0; i < 5; i++)
+        for (int i = 0; i < 5; i++)
         {
             if (Masteries.All(mastery => mastery.MasteryName != $"Physical Defense Training {indexToLevel(i)}"))
             {
-                var mastery = new Mastery();
+                var mastery = new _Mastery();
                 mastery.MasteryName = $"Physical Defense Training {indexToLevel(i)}";
-                var effect = new BaseStatMasteryEffect();
+                var effect = new _BaseStatMasteryEffect();
                 mastery.MasteryMaxLevel = 10;
-                mastery.MPCost = 1 + 1*i;
+                mastery.MPCost = 1 + 1 * i;
                 effect.Stats = new Stats
                 {
-                    PhysDef = 2 + 1*i
+                    PhysDef = 2 + 1 * i
                 };
                 mastery.Effects.Add(effect);
                 if (previous != null)
@@ -170,24 +176,25 @@ public class CharacterBase : SerializableAsset
                     condition.RequiredLevel = 10;
                     mastery.Conditions.Add(condition);
                 }
+
                 previous = mastery;
                 Masteries.Add(mastery);
             }
         }
 
         previous = null;
-        for (int i = 0; i<5; i++)
+        for (int i = 0; i < 5; i++)
         {
             if (Masteries.All(mastery => mastery.MasteryName != $"Magical Defense Training {indexToLevel(i)}"))
             {
-                var mastery = new Mastery();
+                var mastery = new _Mastery();
                 mastery.MasteryName = $"Magical Defense Training {indexToLevel(i)}";
-                var effect = new BaseStatMasteryEffect();
+                var effect = new _BaseStatMasteryEffect();
                 mastery.MasteryMaxLevel = 10;
-                mastery.MPCost = 1+1*i;
+                mastery.MPCost = 1 + 1 * i;
                 effect.Stats = new Stats
                 {
-                    MagDef = 2+1*i
+                    MagDef = 2 + 1 * i
                 };
                 mastery.Effects.Add(effect);
                 if (previous != null)
@@ -197,6 +204,7 @@ public class CharacterBase : SerializableAsset
                     condition.RequiredLevel = 10;
                     mastery.Conditions.Add(condition);
                 }
+
                 previous = mastery;
                 Masteries.Add(mastery);
             }
@@ -207,14 +215,14 @@ public class CharacterBase : SerializableAsset
         {
             if (Masteries.All(mastery => mastery.MasteryName != $"Speed Training {indexToLevel(i)}"))
             {
-                var mastery = new Mastery();
+                var mastery = new _Mastery();
                 mastery.MasteryName = $"Speed Training {indexToLevel(i)}";
-                var effect = new BaseStatMasteryEffect();
+                var effect = new _BaseStatMasteryEffect();
                 mastery.MasteryMaxLevel = 10;
-                mastery.MPCost = 1 + 1*i;
+                mastery.MPCost = 1 + 1 * i;
                 effect.Stats = new Stats
                 {
-                    Speed = 2 + 1*i
+                    Speed = 2 + 1 * i
                 };
                 mastery.Effects.Add(effect);
                 if (previous != null)
@@ -224,14 +232,16 @@ public class CharacterBase : SerializableAsset
                     condition.RequiredLevel = 10;
                     mastery.Conditions.Add(condition);
                 }
+
                 previous = mastery;
                 Masteries.Add(mastery);
             }
         }
     }
-    
-    [InfoBox("$LevelMessage", InfoMessageType.Info), FoldoutGroup("Stats"), PropertyOrder(-1), Range(1,50)] 
+
+    [InfoBox("$LevelMessage", InfoMessageType.Info), FoldoutGroup("Stats"), PropertyOrder(-1), Range(1, 50)]
     public int Level;
+
     public string LevelMessage
     {
         get

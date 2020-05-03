@@ -280,6 +280,10 @@ public abstract class Battler : AsyncMonoBehaviour
         AudioSource.PlayOneShot(clip,volume);
     }
     
+    protected virtual Task PlayHitSound() => HitSound != null
+        ? QueueActionAndAwait(() => AudioSource.PlayOneShot(HitSound))
+        : Task.CompletedTask;
+    
     public void RecalculateStats()
     {
         

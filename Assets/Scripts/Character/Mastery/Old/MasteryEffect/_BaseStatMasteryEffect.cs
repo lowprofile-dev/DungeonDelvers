@@ -1,6 +1,7 @@
-﻿public class BaseStatMasteryEffect : MasteryEffect
+﻿public class _BaseStatMasteryEffect : _MasteryEffect
 {
     public Stats Stats;
+
     public override void ApplyBonuses(int level, Character character)
     {
         var totalStats = new Stats();

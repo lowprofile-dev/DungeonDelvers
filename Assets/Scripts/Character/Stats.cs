@@ -1,8 +1,8 @@
 ﻿using System;
 using Sirenix.OdinInspector;
 
-[Serializable]
-public struct Stats
+
+[Serializable] public struct Stats
 {
     public int MaxHp;
     public int InitialEp;
@@ -99,8 +99,7 @@ public struct Stats
     }
 }
 
-[Serializable]
-public struct ElementalResistance
+[Serializable] public struct ElementalResistance
 {
     [PropertyRange(-1, 1)] public float EarthResistance;
     [PropertyRange(-1, 1)] public float FireResistance;
@@ -110,7 +109,7 @@ public struct ElementalResistance
     [PropertyRange(-1, 1)] public float LightningResistance;
     [PropertyRange(-1, 1)] public float WaterResistance;
     [PropertyRange(-1, 1)] public float WindResistance;
- 
+
     public float this[Element element]
     {
         get
@@ -120,21 +119,21 @@ public struct ElementalResistance
                 case Element.None:
                     return 1f;
                 case Element.Earth:
-                    return 1-EarthResistance;
+                    return 1 - EarthResistance;
                 case Element.Fire:
-                    return 1-FireResistance;
+                    return 1 - FireResistance;
                 case Element.Holy:
-                    return 1-HolyResistance;
+                    return 1 - HolyResistance;
                 case Element.Dark:
-                    return 1-DarkResistance;
+                    return 1 - DarkResistance;
                 case Element.Ice:
-                    return 1-IceResistance;
+                    return 1 - IceResistance;
                 case Element.Lightning:
-                    return 1-LightningResistance;
+                    return 1 - LightningResistance;
                 case Element.Water:
-                    return 1-WaterResistance;
+                    return 1 - WaterResistance;
                 case Element.Wind:
-                    return 1-WindResistance;
+                    return 1 - WindResistance;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(element), element, null);
             }
@@ -155,7 +154,7 @@ public struct ElementalResistance
             WindResistance = a.WaterResistance + b.WaterResistance
         };
     }
-    
+
     public static ElementalResistance operator -(ElementalResistance a, ElementalResistance b)
     {
         return new ElementalResistance
@@ -170,7 +169,7 @@ public struct ElementalResistance
             WindResistance = a.WaterResistance - b.WaterResistance
         };
     }
-    
+
     public static ElementalResistance operator *(ElementalResistance a, ElementalResistance b)
     {
         return new ElementalResistance
@@ -185,7 +184,7 @@ public struct ElementalResistance
             WindResistance = a.WaterResistance * b.WaterResistance
         };
     }
-    
+
     public static ElementalResistance operator /(ElementalResistance a, ElementalResistance b)
     {
         return new ElementalResistance
@@ -200,7 +199,7 @@ public struct ElementalResistance
             WindResistance = a.WaterResistance / b.WaterResistance
         };
     }
-    
+
     public static ElementalResistance operator *(ElementalResistance a, float b)
     {
         return new ElementalResistance
