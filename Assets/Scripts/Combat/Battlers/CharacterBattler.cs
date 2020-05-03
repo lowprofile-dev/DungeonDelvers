@@ -115,17 +115,23 @@ public class CharacterBattler : Battler
 
     public IEnumerator PlayAndWait(CharacterBattlerAnimation characterBattlerAnimation, float speed = 1f) =>
         Animator.PlayAndWait(characterBattlerAnimation,speed);
-
+    
     public Task AsyncPlayAndWait(CharacterBattlerAnimation animation, float speed = 1f) =>
         Animator.AsyncPlayAndWait(animation, speed);
-
+    
     public void Play(CharacterBattlerAnimation animation, bool lockTransition = false) =>
         Animator.Play(animation, lockTransition);
+
+    public IEnumerator PlayAndWait(BattlerAnimationInfo info) => Animator.PlayAndWait(info);
+
+    public Task AsyncPlayAndWait(BattlerAnimationInfo info) => Animator.AsyncPlayAndWait(info);
+
+    public void Play(string animation, bool lockTransition = false) => Animator.Play(animation, lockTransition);
 
     public void UpdateAnimator() => Animator.UpdateAnimator();
 
     public bool CanTransition => Animator.CanTransition;
-
+    
     public enum CharacterBattlerAnimation
     {
         Idle,

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using DD.Sound.IntroloopTypes;
 using E7.Introloop;
 using Sirenix.OdinInspector;
 using SkredUtils;
@@ -15,7 +16,7 @@ using UnityEngine.UI;
 public class BattleCanvas : AsyncMonoBehaviour
 {
 
-    private BGMPlayer Player;
+    private BattleBGMPlayer Player;
     public RectTransform[] PartyBattlerHolders;
     public RectTransform MonsterPanel;
     public Image Battleground;
@@ -39,7 +40,7 @@ public class BattleCanvas : AsyncMonoBehaviour
 
     private void Awake()
     {
-        Player = BGMPlayer.Get;
+        Player = BattleBGMPlayer.Get;
     }
 
     private void Start()

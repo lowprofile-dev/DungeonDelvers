@@ -1,12 +1,19 @@
-﻿using Sirenix.OdinInspector;
+﻿using System;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 public class playanim : MonoBehaviour
 {
     public string animName;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z)) PlayAnim();
+    }
+
     [Button] private void PlayAnim()
     {
-        GetComponent<Animator>().Play(animName);
+        var anim = GetComponent<Animator>();
+        anim.Play(animName);
     }
 }

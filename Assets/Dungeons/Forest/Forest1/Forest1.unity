@@ -306,8 +306,8 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  previousSceneIndex: 0
-  nextSceneIndex: 2
+  MapBgm: {fileID: 11400000, guid: d1030bab81d534949a5eae2456eaf34a, type: 2}
+  BattleBgm: {fileID: 11400000, guid: dbd8b89bed174cf4ca63796c2b57eee7, type: 2}
   RemainingEncounterDistance: 0
   MinimapCamera: {fileID: 0}
   MapTiles: []

@@ -12,6 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f784bd23ffa4f3d89e3505caba7ec5a, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  AnimationObject: {fileID: 2556044651023131637, guid: 52fde5e2d15ca134a9920643bfcbe459,
+    type: 3}
+  PlayerPrefab: {fileID: 3993753518470717486, guid: 6fca6d830a7e1c64480b639389a661e8,
+    type: 3}
+  CameraPrefab: {fileID: 19635246577722888, guid: ed79898cbb9288b498391cd864f43a5a,
+    type: 3}
+  MainCanvasPrefab: {fileID: 1297924371412730462, guid: ef8910094b5fb06419806b1ba039cee6,
+    type: 3}
+  GraphyPrefab: {fileID: 6065829648339744890, guid: 2bdfc096237e37ce6b63b351fe2614fc,
+    type: 3}
   AudioMixer: {fileID: 24100000, guid: 32df65edd7948dd468271bc046f84089, type: 2}
   BGMChannel: {fileID: 7151828996764371312, guid: 32df65edd7948dd468271bc046f84089,
     type: 2}

@@ -5,7 +5,7 @@ using UnityEngine.Audio;
 using UnityEditor;
 #endif
 
-public class GameSettings : ScriptableObject
+public class GameSettings : SerializedScriptableObject
 {
     private static GameSettings instance;
     public static GameSettings Instance
@@ -29,8 +29,15 @@ public class GameSettings : ScriptableObject
             return instance;
         }
     }
+
+    [TabGroup("Default Prefabs")] public GameObject AnimationObject;
+    [TabGroup("Default Prefabs")] public GameObject PlayerPrefab;
+    [TabGroup("Default Prefabs")] public GameObject CameraPrefab;
+    [TabGroup("Default Prefabs")] public GameObject MainCanvasPrefab;
+    [TabGroup("Default Prefabs")] public GameObject GraphyPrefab;
+
+    [TabGroup("Audio Settings")] public AudioMixer AudioMixer;
+    [TabGroup("Audio Settings")] public AudioMixerGroup BGMChannel;
+    [TabGroup("Audio Settings")] public AudioMixerGroup SFXChannel;
     
-    public AudioMixer AudioMixer;
-    public AudioMixerGroup BGMChannel;
-    public AudioMixerGroup SFXChannel;
 }

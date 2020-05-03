@@ -70,6 +70,19 @@ MonoBehaviour:
     - Name: SkillAnimation
       Entry: 6
       Data: 
+    - Name: Animations
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: RequiredWeaponType
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
@@ -93,4 +106,3 @@ MonoBehaviour:
   CanCritical: 0
   AccuracyModifier: 0
   CriticalModifier: 0
-  AnimationType: 0

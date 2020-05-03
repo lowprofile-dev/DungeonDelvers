@@ -378,10 +378,13 @@
             <e p="AnimatorOverrides" t="Include">
               <e p="MageCharacterBattlerAnimator.cs" t="Include" />
             </e>
+            <e p="BattlerAnimationInfo.cs" t="Include" />
             <e p="CharacterBattlerAnimator.cs" t="Include" />
             <e p="IPlayerSkillAnimation.cs" t="Include" />
-            <e p="MultiAnimation.cs" t="Include" />
-            <e p="SingleAnimation.cs" t="Include" />
+            <e p="PlayerSkillAnimations" t="Include">
+              <e p="MultiAnimation.cs" t="Include" />
+              <e p="SingleAnimation.cs" t="Include" />
+            </e>
             <e p="SkillAnimations" t="Include">
               <e p="FromSourceToTargetSkillAnimation.cs" t="Include" />
               <e p="PlayAtTargetSkillAnimation.cs" t="Include" />
@@ -445,7 +448,6 @@
             <e p="MapSettings.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="SerializableAsset.cs" t="Include" />
-            <e p="SetUniqueName.cs" t="Include" />
           </e>
           <e p="Editor" t="Include">
             <e p="GameSettingsEditorWindow.cs" t="Include" />
@@ -493,6 +495,7 @@
             <e p="InteractionSet.cs" t="Include" />
             <e p="NodeUtility" t="Include">
               <e p="ComparisonNode.cs" t="Include" />
+              <e p="GetComponentInteraction.cs" t="Include" />
               <e p="GetSelfRefNode.cs" t="Include" />
               <e p="GetSumNode.cs" t="Include" />
               <e p="StringConcatInteraction.cs" t="Include" />
@@ -592,8 +595,11 @@
             <e p="SkillDatabase.cs" t="Include" />
           </e>
           <e p="Sound" t="Include">
-            <e p="BGMPlayer.cs" t="Include" />
-            <e p="SFXPlayer.cs" t="Include" />
+            <e p="CustomIntroloopPlayer.cs" t="Include" />
+            <e p="IntroloopTypes" t="Include">
+              <e p="BattleBGMPlayer.cs" t="Include" />
+              <e p="MapBGMPlayer.cs" t="Include" />
+            </e>
           </e>
           <e p="UI" t="Include">
             <e p="Battle" t="Include">

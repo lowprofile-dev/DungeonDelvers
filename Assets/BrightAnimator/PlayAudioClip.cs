@@ -5,6 +5,7 @@ namespace BrightLib.Animation.Runtime
 {
 	public class PlayAudioClip : StateMachineBehaviour
 	{
+		public string identifiableName;
 		public bool useMultiple;
 		public SoundInfo clip;
 		public SoundInfo[] clips;
@@ -96,5 +97,8 @@ namespace BrightLib.Animation.Runtime
 			}
 			_valid = true;
 		}
+
+		public void SetSoundInfo(SoundInfo soundInfo) => clip = soundInfo;
+		public void Clear() => clip = null;
 	}
 }

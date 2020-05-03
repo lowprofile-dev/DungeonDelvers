@@ -216,7 +216,7 @@ public class MonsterBattler : Battler
             case MultiHitDamageEffect.MultiHitDamageEffectResult multiHitDamageEffectResult:
             {
                 var tasks = new List<Task>();
-                tasks.Add(MultiHitTask(multiHitDamageEffectResult, 1));
+                tasks.Add(MultiHitTask(multiHitDamageEffectResult, 1f));
                 if (Fainted) tasks.Add(Fade());
                 await Task.WhenAll(tasks);
                 break;

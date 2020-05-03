@@ -15,7 +15,7 @@ namespace DD.Skill.Animation
             {
                 targets.ForEach(target =>
                 {
-                    var animationObject = GameObject.Instantiate(GameController.Instance.AnimationObjectBase,
+                    var animationObject = GameObject.Instantiate(GameSettings.Instance.AnimationObject,
                         BattleController.Instance.battleCanvas.transform);
 
                     var animation = animationObject.GetComponent<AnimationObject>();

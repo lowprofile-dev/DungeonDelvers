@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using DD.Sound.IntroloopTypes;
 using E7.Introloop;
 using JetBrains.Annotations;
 using Sirenix.OdinInspector;
@@ -17,7 +18,7 @@ public class MapSettings : SerializedMonoBehaviour
 
     public IntroloopAudio MapBgm;
     public IntroloopAudio BattleBgm;
-    private BGMPlayer Player;
+    private MapBGMPlayer Player;
     [FormerlySerializedAs("Encounters"), FoldoutGroup("Encounter")] public MapEncounterSet DefaultMapEncounterSet = null;
     [FoldoutGroup("Encounter"), ShowInInspector, ReadOnly] private MapEncounterSet _mapEncounterSet;
     public MapEncounterSet MapEncounterSet
@@ -50,13 +51,13 @@ public class MapSettings : SerializedMonoBehaviour
         }
         
         Instance = this;
-        Player = BGMPlayer.Get;
+        Player = MapBGMPlayer.Get;
     }
 
     public void Start()
     {
         MapEncounterSet = DefaultMapEncounterSet;
-        Player.Play(MapBgm);
+        Player.Play(MapBgm,2f);
         ApplyMapSettings();
     }
 
@@ -138,7 +139,7 @@ public class MapSettings : SerializedMonoBehaviour
     }
 
     public void PauseBgm() => Player.Pause(0.1f);
-    public void UnpauseBgm() => Player.Resume(2f);
+    public void UnpauseBgm() => Player.Resume(4f);
 
     [CanBeNull] public MapTile GetCurrentMapTile()
     {

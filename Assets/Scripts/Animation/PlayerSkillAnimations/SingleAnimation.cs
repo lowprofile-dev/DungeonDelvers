@@ -5,12 +5,11 @@ namespace DD.Skill.Animation
 {
     public class SingleAnimation : IPlayerSkillAnimation
     {
-        public CharacterBattler.CharacterBattlerAnimation Animation;
-        public float speed = 1f;
+        public BattlerAnimationInfo Animation;
 
         public Task Play(CharacterBattler battler)
         {
-            return battler.AsyncPlayAndWait(Animation,speed);
+            return battler.AsyncPlayAndWait(Animation);
         }
     }
 }

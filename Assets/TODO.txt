@@ -1,4 +1,4 @@
-Ver BGM de luta continuar após fim da batalha fora do editor.
+Arrumar/limpar animator
 Guardar todos os defaults/prefabs num singleton no menu
 Continuar arrumando código, arrumar todos os sons, organizar as animações dos Battlers
 Organizar tudo -

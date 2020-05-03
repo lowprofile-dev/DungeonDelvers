@@ -15,13 +15,8 @@ public class GameController : AsyncMonoBehaviour
 {
     public static GameController Instance { get; private set; }
     public int targetFrameRate = -1;
-    public GameObject AnimationObjectBase;
-    public GameObject PlayerPrefab;
-    public GameObject CameraPrefab;
-    public GameObject MainCanvasPrefab;
-    public GameObject GraphyPrefab;
     
-    public Random Random;
+    [HideInInspector] public Random Random;
 
     public int? TransitionSource = null;
     
@@ -43,16 +38,16 @@ public class GameController : AsyncMonoBehaviour
         DontDestroyOnLoad(this);
         
         if (PlayerController.Instance == null)
-            Instantiate(PlayerPrefab);
+            Instantiate(GameSettings.Instance.PlayerPrefab);
         if (TrackPlayer.Instance == null)
-            Instantiate(CameraPrefab);
+            Instantiate(GameSettings.Instance.CameraPrefab);
         if (MainCanvas.Instance == null)
-            Instantiate(MainCanvasPrefab);
+            Instantiate(GameSettings.Instance.MainCanvasPrefab);
         
         Random = new Random();
 
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
-        Instantiate(GraphyPrefab);
+        Instantiate(GameSettings.Instance.GraphyPrefab);
         Application.targetFrameRate = targetFrameRate;
 #endif
     }

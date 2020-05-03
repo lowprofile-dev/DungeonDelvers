@@ -92,6 +92,9 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
+  HitSound:
+    AudioClip: {fileID: 8300000, guid: a9e0e39240fe4d548ae0fe809819b709, type: 3}
+    Volume: 0.1
   Skills:
   - {fileID: 11400000, guid: e07bc40db4e43524f97da1022fda3f16, type: 2}
   Passives: []

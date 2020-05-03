@@ -17,6 +17,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: a7a331baa381cd04da600f2aa41a5a8a, type: 2}
+    - {fileID: 8300000, guid: 5159310bc5212d1458040ea62d81c5ad, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -99,11 +100,29 @@ MonoBehaviour:
       Entry: 7
       Data: 5|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
     - Name: Animation
-      Entry: 3
-      Data: 3
+      Entry: 7
+      Data: 6|BattlerAnimationInfo, Assembly-CSharp
+    - Name: stateName
+      Entry: 1
+      Data: Cast
     - Name: speed
       Entry: 4
       Data: 1
+    - Name: soundInfo
+      Entry: 7
+      Data: 7|SoundInfo, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
+      Data: 1
+    - Name: Volume
+      Entry: 4
+      Data: 0.1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 

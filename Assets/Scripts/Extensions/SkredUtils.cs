@@ -125,12 +125,18 @@ namespace SkredUtils
 
         public static void PlayOneShot(this AudioSource source, SoundInfo info)
         {
-            source.PlayOneShot(info.AudioClip, info.Volume);
+            if (info != null) source.PlayOneShot(info.AudioClip, info.Volume);
         }
 
         public static void Ensure<T>(this MonoBehaviour behaviour, ref T field) where T : Component
         {
             if (!behaviour.TryGetComponent(out field)) field = behaviour.gameObject.AddComponent<T>();
+        }
+
+        public static T Ensure<T>(this GameObject obj) where T : Component
+        {
+            if (!obj.TryGetComponent(out T t)) t = obj.AddComponent<T>();
+            return t;
         }
     }
 

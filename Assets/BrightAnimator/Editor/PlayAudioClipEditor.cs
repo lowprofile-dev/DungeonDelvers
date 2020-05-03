@@ -13,6 +13,7 @@ namespace BrightLib.Animation.Runtime
             var tObject = (target as PlayAudioClip);
 
             EditorGUI.BeginChangeCheck();
+            tObject.identifiableName = EditorGUILayout.TextField("Name", tObject.identifiableName);
             tObject.useMultiple = EditorGUILayout.Toggle("Use Multiple", tObject.useMultiple);
             if (!tObject.useMultiple)
             {
