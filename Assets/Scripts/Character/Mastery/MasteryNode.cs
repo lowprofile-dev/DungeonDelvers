@@ -4,27 +4,52 @@ using System.Linq;
 using Sirenix.OdinInspector;
 using Sirenix.Serialization;
 using Sirenix.Utilities;
+using Unity.Collections;
 using UnityEngine;
 using XNode;
 
-public class MasteryNode : Node, IMasteryPrerequisite
+[ShowOdinSerializedPropertiesInInspector, NodeWidth(416)]
+public class MasteryNode : Node, IMasteryPrerequisite, ISerializationCallbackReceiver
 {
-    [ShowInInspector,PropertyOrder(-100)] public int Id => graph.nodes.IndexOf(this);
+    [Sirenix.OdinInspector.ReadOnly] public int Id;
     public string MasteryName;
     public Sprite MasterySprite;
     [TextArea] public string MasteryDescription;
-    [OdinSerialize] public List<MasteryEffect> MasteryEffects;
+    [OdinSerialize] public List<MasteryEffect> MasteryEffects = new List<MasteryEffect>();
     public int MasteryMaxLevel = 1;
     public int MasteryPointCost = 1;
-    private MasteryInstance Instance => (graph as MasteryGraph).Instances[Id];
     [Input(ShowBackingValue.Never)] public MasteryNode Prerequisites;
+    [Output(ShowBackingValue.Never)] public MasteryNode RequirementOf;
 
-    public MasteryNode[] GetPrerequisites() => GetInputValues("Prerequisites", Prerequisites);
+    public MasteryNode[] GetPrerequisites() => GetInputValues("Prerequisites", new MasteryNode[]{ });
+    
+    public bool PrerequisiteAchieved(Character context)
+    {
+        var instance = context.MasteryInstances[Id];
+        return instance.Maxed;
+    }
 
-    public bool Maxed => Instance.Level >= MasteryMaxLevel;
-    public bool PrerequisiteAchieved => Maxed;
-    public bool Available => GetPrerequisites().All(req => req.Maxed);
+    public override object GetValue(NodePort port)
+    {
+        if (port.fieldName == "RequirementOf") return this;
+        return null;
+    }
 
-    public void ApplyEffects(Character character) =>
-        MasteryEffects.ForEach(mE => mE.ApplyEffect(character, Instance.Level));
+    #region Odin Serialization
+
+    [SerializeField, HideInInspector]
+    private SerializationData serializationData;
+
+    void ISerializationCallbackReceiver.OnAfterDeserialize()
+    {
+        UnitySerializationUtility.DeserializeUnityObject(this, ref this.serializationData);
+    }
+
+    void ISerializationCallbackReceiver.OnBeforeSerialize()
+    {
+        UnitySerializationUtility.SerializeUnityObject(this, ref this.serializationData);
+    }
+
+    #endregion
+    
 }

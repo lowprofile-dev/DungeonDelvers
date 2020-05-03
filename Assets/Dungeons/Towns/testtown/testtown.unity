@@ -15709,7 +15709,7 @@ MonoBehaviour:
     PriceMultiplier: 0
   - Item: {fileID: 11400000, guid: 094b5d9b7b2c21647aca654a0c96f9d6, type: 2}
     IsFixedPrice: 1
-    FixedPrice: 99999
+    FixedPrice: 1
     PriceMultiplier: 0
   - Item: {fileID: 11400000, guid: f0ca1d086742b68698d5f98d7810133b, type: 2}
     IsFixedPrice: 1

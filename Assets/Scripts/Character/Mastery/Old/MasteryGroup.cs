@@ -15,11 +15,11 @@ public class MasteryGroup
         Character = character;
         Masteries = new Dictionary<_Mastery, _MasteryInstance>();
 
-        character.Base.Masteries.ForEach(mastery =>
-        {
-            var instance = new _MasteryInstance(mastery, this);
-            Masteries.Add(mastery, instance);
-        });
+        // character.Base.Masteries.ForEach(mastery =>
+        // {
+        //     var instance = new _MasteryInstance(mastery, this);
+        //     Masteries.Add(mastery, instance);
+        // });
     }
 
     public string Serialize()

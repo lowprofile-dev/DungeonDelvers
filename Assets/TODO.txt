@@ -1,4 +1,4 @@
-Refazer masteries usando xNode
+Terminar de refazer masteries (arrumar UI, testar ingame)
 Refazer uma base de masteries (criar um graph que são as masteries padrões e quando cria um masterygraph copia o que tem lá)
 Fazer mais inimigos simples pra floresta
 Refazer IA com xNode

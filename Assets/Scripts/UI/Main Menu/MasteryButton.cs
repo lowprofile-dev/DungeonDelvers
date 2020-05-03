@@ -13,19 +13,19 @@ public class MasteryButton : MonoBehaviour
     public TMP_Text MasteryNameText;
     public TMP_Text MasteryCostText;
     public Button Button;
-    [ReadOnly] public _MasteryInstance Mastery;
+    [ReadOnly] public MasteryInstance Mastery;
     [ReadOnly] public MasteryMenu MasteryMenu;
 
-    public void BuildMasteryButton(_MasteryInstance masteryInstance, MasteryMenu menu)
+    public void BuildMasteryButton(MasteryInstance masteryInstance, MasteryMenu menu)
     {
         Mastery = masteryInstance;
         MasteryMenu = menu;
 
         MasteryNameText.text =
-            $"{masteryInstance.Mastery.MasteryName} - <#c0c0c0ff>{masteryInstance.CurrentLevel}/{masteryInstance.Mastery.MasteryMaxLevel}</color>";
+            $"{masteryInstance.Node.MasteryName} - <#c0c0c0ff>{masteryInstance.Level}/{masteryInstance.Node.MasteryMaxLevel}</color>";
 
         MasteryCostText.text =
-            $"{masteryInstance.Mastery.MPCost}MP";
+            $"{masteryInstance.Node.MasteryPointCost}MP";
 
         Button.onClick.AddListener(LevelUpMastery);
     }

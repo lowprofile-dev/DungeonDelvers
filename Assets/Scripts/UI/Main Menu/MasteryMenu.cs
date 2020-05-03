@@ -33,11 +33,14 @@ public class MasteryMenu : MonoBehaviour
         MasteryButtons = new List<GameObject>();
 
 
-        var availableMasteries = Character.MasteryGroup.Masteries.Values
-            .Where(mI => mI.CanLevelUp()).ToArray();
+        // var availableMasteries = Character.MasteryGroup.Masteries.Values
+        //     .Where(mI => mI.CanLevelUp()).ToArray();
+
+        var availableMasteries = Character.MasteryInstances
+            .Where(instance => instance.Available).ToArray();
 
         var message = "Available Masteries: ";
-        availableMasteries.ForEach(aM => { message += $" {aM.Mastery.MasteryName}({aM.CurrentLevel})"; });
+        availableMasteries.ForEach(aM => { message += $" {aM.Node.MasteryName}({aM.Level})"; });
         Debug.Log(message);
 
         availableMasteries.ForEach(availableMastery =>
@@ -47,7 +50,7 @@ public class MasteryMenu : MonoBehaviour
 
             masteryButton.BuildMasteryButton(availableMastery, this);
 
-            if (Character.CurrentMp < availableMastery.Mastery.MPCost)
+            if (Character.CurrentMp < availableMastery.Node.MasteryPointCost)
                 masteryButton.Button.interactable = false;
 
             MasteryButtons.Add(masteryButtonObject);

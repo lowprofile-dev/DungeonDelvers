@@ -61,7 +61,7 @@ public class InventoryConverter : JsonConverter
             }
 
             var builtItem = ItemInstanceBuilder.BuildInstance(parsedSave);
-            Inventory.Add(builtItem);
+            if (builtItem != null) Inventory.Add(builtItem);
         }
 
         

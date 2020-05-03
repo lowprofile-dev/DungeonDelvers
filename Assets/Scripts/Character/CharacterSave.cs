@@ -6,7 +6,7 @@ using System.Collections.Generic;
 {
     public string baseUid;
     public int currentHp;
-    public int[] masteryLevels;
+    public SerializedMasteryInstance[] serializedMasteryInstances;
     public EquippableSave[] Equipment;
     public int masteryPoints;
 }
