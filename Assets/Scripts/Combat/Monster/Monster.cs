@@ -2,6 +2,7 @@
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,7 +29,7 @@ public class Monster : SerializableAsset
     #endif
     public GameObject MonsterBattler;
     public int BaseLevel;
-    public int LevelVariance;
+    // public int LevelVariance;
     public Stats Stats;
     public Stats StatLevelVariance;
     public SoundInfo HitSound;
@@ -38,6 +39,15 @@ public class Monster : SerializableAsset
 
     public Vector2Int goldReward;
     public List<IMonsterDrop> MonsterDrops = new List<IMonsterDrop>();
+
+    public virtual MonsterBattler BuildBattler(int level)
+    {
+        var battler = new GameObject(MonsterName);
+        battler.AddComponent<RectTransform>();
+        var monsterBattler = battler.AddComponent<MonsterBattler>();
+        monsterBattler.LoadMonsterBase(this,level);
+        return monsterBattler;
+    }
     
     public int RollGold()
     {

@@ -13,6 +13,11 @@ using UnityEngine.UI;
 using Random = System.Random;
 // ReSharper disable RedundantAssignment
 
+// public abstract class MonsterBattlerBase<T> : Battler where T : Monster
+// {
+//     public abstract void LoadMonsterBase(T monsterBase, int level);
+// }
+
 public class MonsterBattler : Battler
 {
     [ReadOnly] public Encounter Encounter;
@@ -27,27 +32,19 @@ public class MonsterBattler : Battler
         BattleController = BattleController.Instance;
     }
 
-    public virtual void LoadEncounterMonster(EncounterMonster monster)
+    public virtual void LoadMonsterBase(Monster monsterBase, int level)
     {
-        MonsterBase = monster.Monster;
-
-        var minLevel = monster.MinLevel;
-        var maxLevel = monster.MaxLevel;
-
-        var level = GameController.Instance.Random.Next(minLevel, maxLevel);
-
+        MonsterBase = monsterBase;
         Level = level;
 
         BaseStats = MonsterBase.Stats;
         BonusStats = MonsterBase.StatLevelVariance * (Level - MonsterBase.BaseLevel);
 
-        Skills = MonsterBase.Skills; //Ver unlocks
+        Skills = MonsterBase.Skills;
         MonsterAi = MonsterBase.MonsterAi;
-        
+
         monsterBattler = Instantiate(MonsterBase.MonsterBattler, RectTransform);
-        image = monsterBattler.GetComponent<Image>();
-        // monsterBattler = gameObject;
-        // image = GetComponent<Image>();
+        image = monsterBattler.gameObject.Ensure<Image>();
 
         CurrentHp = Stats.MaxHp;
         CurrentEp = Stats.InitialEp;
@@ -60,41 +57,20 @@ public class MonsterBattler : Battler
         
         Debug.Log($"Inicializado Lv.{level} {BattlerName}");
     }
+
+    [Obsolete]
+    public virtual void LoadEncounterMonster(EncounterMonster monster)
+    {
+        throw new NotImplementedException();
+    }
     
+    [Obsolete]
     public virtual void LoadBase()
     {
-        if (MonsterBase == null)
-            return;
-
-        var level = UnityEngine.Random.Range(MonsterBase.BaseLevel - MonsterBase.LevelVariance,
-            MonsterBase.BaseLevel + MonsterBase.LevelVariance + 1);
-
-        Level = level;
-        
-        //Stats = MonsterBase.Stats + MonsterBase.StatLevelVariance*(Level-MonsterBase.BaseLevel);
-        BaseStats = MonsterBase.Stats;
-        BonusStats = MonsterBase.StatLevelVariance * (Level - MonsterBase.BaseLevel);
-
-        Skills = MonsterBase.Skills;
-        MonsterAi = MonsterBase.MonsterAi;
-
-        if (monsterBattler == null)
-            monsterBattler = Instantiate(MonsterBase.MonsterBattler, RectTransform);
-        if (image == null)
-            image = monsterBattler.GetComponent<Image>();
-
-        CurrentHp = Stats.MaxHp;
-        CurrentEp = Stats.InitialEp;
-        
-        BattleDictionary = new Dictionary<object, object>();
-        Passives = MonsterBase.Passives;
-        StatusEffectInstances = new List<StatusEffectInstance>();
-        BattlerName = MonsterBase.MonsterName;
-        
-        Debug.Log($"Inicializado Lv.{level} {BattlerName}");
+        throw new NotImplementedException();
     }
 
-    private bool NoMonster => MonsterBase == null;
+    protected bool NoMonster => MonsterBase == null;
 
     #endregion
     

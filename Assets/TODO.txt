@@ -1,4 +1,3 @@
-Fazer o Daidarabotchi pseudo-funcional, substituir como Dummy -> Refazer o metodo do Monster que cria o battler, fazer virtual, criar scriptableobject que herda de monster
 Fazer mais inimigos simples pra floresta
 Refazer IA com xNode (maybe)
 Fazer boss da floresta com IA especial e DragonBones
@@ -17,6 +16,7 @@ Travelling Merchant -> Aparece aleatóriamente em mapas algumas vezes (muda de p
 Inimigos não dropam gold, mas os ETC que dropam podem ser vendidos (e são materiais pra crafting também)
 
 Futuro:
+Implementar o DragonbonesMonster -> Criar MonsterBase, (e Monster : MonsterBase, DragonbonesMonster : Monsterbase) e MonsterBattlerBase<T> where T : MonsterBase (e MonsterBattler : MonsterBattlerBase<Monster>, DragonbonesMonsterBattler<DragonbonesMonster>)
 Textbox vê se o texto vai passar das linhas, se sim ele pausa, espera input, levanta a textbox (com animação) ou apaga o que já tinha e continua. 
 Dar uma olhada no particlesystem e shadergraph
 Resolver certas UIs mostrando detalhes placeholders antes de mostrar os corretos.

@@ -439,7 +439,10 @@
             <e p="Encounter.cs" t="Include" />
             <e p="EncounterSet.cs" t="Include" />
             <e p="IBattler.cs" t="Include" />
-            <e p="Monster.cs" t="Include" />
+            <e p="Monster" t="Include">
+              <e p="DragonbonesMonster.cs" t="Include" />
+              <e p="Monster.cs" t="Include" />
+            </e>
             <e p="MonsterAI" t="Include">
               <e p="AIs" t="Include">
                 <e p="RandomAI.cs" t="Include" />

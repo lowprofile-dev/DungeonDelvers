@@ -19,11 +19,12 @@ public class EncounterSet : SerializableAsset {
 
         foreach (var encounterMonster in EncounterMonsters)
         {
-            var battler = new GameObject(encounterMonster.Monster.MonsterName);
-            battler.AddComponent<RectTransform>();
-            var monsterBattler = battler.AddComponent<MonsterBattler>();
-            monsterBattler.LoadEncounterMonster(encounterMonster);
-            battlers.Add(monsterBattler);
+            // var battler = new GameObject(encounterMonster.Monster.MonsterName);
+            // battler.AddComponent<RectTransform>();
+            // var monsterBattler = battler.AddComponent<MonsterBattler>();
+            // monsterBattler.LoadEncounterMonster(encounterMonster);
+            // battlers.Add(monsterBattler);
+            battlers.Add(encounterMonster.GenerateMonster());
         }
 
         return battlers;
@@ -64,4 +65,10 @@ public struct EncounterMonster{
     public Monster Monster;
     public int MinLevel;
     public int MaxLevel;
+
+    public MonsterBattler GenerateMonster()
+    {
+        var level = GameController.Instance.Random.Next(MinLevel, MaxLevel);
+        return Monster.BuildBattler(level);
+    }
 }
