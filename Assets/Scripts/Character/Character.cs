@@ -151,7 +151,7 @@ public class Character
 
     public void Regenerate()
     {
-        //FAZER VALIDAÇÕES QUE TUDO É VALIDO, EG. TUDO EQUIPADO PODE ESTAR EQUIPADO, ETC.
+        //Fazer validações em tudo, eg. ver se tudo que tá equipado é valido, masteries tem nivel valido (>= 0, <= max)
         var stopwatch = Stopwatch.StartNew();
 
         RecalculateBases();

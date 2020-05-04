@@ -112,7 +112,7 @@ MonoBehaviour:
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}
-  Masteries: {fileID: 11400000, guid: 9a99542640778c247b6e6102ea043be2, type: 2}
+  Masteries: {fileID: 11400000, guid: 43e9c9e6605f49e4b99f1a814e507543, type: 2}
   BaseSkills:
   - {fileID: 11400000, guid: 71a3cb8b20046b7239bbe7d7915e89b0, type: 2}
   - {fileID: 11400000, guid: cc2b46c3c44f81b4e8ffb76366cdcd33, type: 2}

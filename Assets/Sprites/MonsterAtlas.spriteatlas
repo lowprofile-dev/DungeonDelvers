@@ -43,11 +43,11 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 051ec4cc1d1cbe436afaf83a6a918f1f, type: 3}
-    totalSpriteSurfaceArea: 1087559
+    totalSpriteSurfaceArea: 1349703
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
-      Hash: c5bd3757bd4725bacad7dd3ac65bb1c5
+      Hash: 73e763525eede0876d149b2cf19d3420
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 04ae93302bb548c5c90c800c3862f11a, type: 3}
@@ -77,6 +77,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 118b411bf2af0a912af495d5e33078c5, type: 3}
   - {fileID: 21300000, guid: 4248b4fb6c36cfcbeb0739706d830b0e, type: 3}
   - {fileID: 21300000, guid: b97b332d1b27cb4c588050eed97ae537, type: 3}
+  - {fileID: 21300000, guid: 8086fc1e5950d50479c8e8cba52e3ffd, type: 3}
   - {fileID: 21300000, guid: 286a995e16b8f3ffba2ab6cc3effc423, type: 3}
   - {fileID: 21300000, guid: f982678fe89fa69b593565e0a07a706e, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -107,6 +108,7 @@ SpriteAtlas:
   - Slime Earthi
   - Earth Bush Wisp
   - Slime Holyi
+  - DAidarabotchi_tex
   - Forest Sprout
   - Forest Noxluff
   m_Tag: MonsterAtlas

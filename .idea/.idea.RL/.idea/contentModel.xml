@@ -368,6 +368,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="_Debug" t="Include">
+            <e p="dragonbonestest.cs" t="Include" />
             <e p="GoToScene.cs" t="Include" />
             <e p="playanim.cs" t="Include" />
             <e p="playbgm.cs" t="Include" />
@@ -380,6 +381,7 @@
             </e>
             <e p="BattlerAnimationInfo.cs" t="Include" />
             <e p="CharacterBattlerAnimator.cs" t="Include" />
+            <e p="DragonbonesAnimator.cs" t="Include" />
             <e p="IPlayerSkillAnimation.cs" t="Include" />
             <e p="PlayerSkillAnimations" t="Include">
               <e p="MultiAnimation.cs" t="Include" />
@@ -431,6 +433,7 @@
             <e p="Battler.cs" t="Include" />
             <e p="Battlers" t="Include">
               <e p="CharacterBattler.cs" t="Include" />
+              <e p="DragonbonesMonsterBattler.cs" t="Include" />
               <e p="MonsterBattler.cs" t="Include" />
             </e>
             <e p="Encounter.cs" t="Include" />
@@ -647,6 +650,15 @@
           </e>
         </e>
         <e p="seeds.txt" t="Include" />
+        <e p="Sprites" t="Include">
+          <e p="Monsters" t="Include">
+            <e p="DragonBones" t="Include">
+              <e p="Daidarabotchi" t="Include">
+                <e p="Daidarabotchi_settings.txt" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Tayx" t="Include">
           <e p="Graphy - Ultimate Stats Monitor" t="Include">
             <e p="Changelog.txt" t="Include" />

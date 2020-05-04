@@ -22,18 +22,12 @@ public class MonsterBattler : Battler
     private BattleController BattleController;
     
     #region Control
-    protected override void Awake()
-    {
-        base.Awake();
-        //LoadBase();
-    }
-
-    private void Start()
+    protected virtual void Start()
     {
         BattleController = BattleController.Instance;
     }
 
-    public void LoadEncounterMonster(EncounterMonster monster)
+    public virtual void LoadEncounterMonster(EncounterMonster monster)
     {
         MonsterBase = monster.Monster;
 
@@ -67,7 +61,7 @@ public class MonsterBattler : Battler
         Debug.Log($"Inicializado Lv.{level} {BattlerName}");
     }
     
-    public void LoadBase()
+    public virtual void LoadBase()
     {
         if (MonsterBase == null)
             return;

@@ -12,7 +12,7 @@ using XNode;
 public class MasteryNode : Node, IMasteryPrerequisite, ISerializationCallbackReceiver
 {
     [Sirenix.OdinInspector.ReadOnly] public int Id;
-    public string MasteryName;
+    [OnValueChanged("renameAsset")] public string MasteryName;
     public Sprite MasterySprite;
     [TextArea] public string MasteryDescription;
     [OdinSerialize] public List<MasteryEffect> MasteryEffects = new List<MasteryEffect>();
@@ -21,7 +21,7 @@ public class MasteryNode : Node, IMasteryPrerequisite, ISerializationCallbackRec
     [Input(ShowBackingValue.Never)] public MasteryNode Prerequisites;
     [Output(ShowBackingValue.Never)] public MasteryNode RequirementOf;
 
-    public MasteryNode[] GetPrerequisites() => GetInputValues("Prerequisites", new MasteryNode[]{ });
+    public IMasteryPrerequisite[] GetPrerequisites() => GetInputValues("Prerequisites", new IMasteryPrerequisite[]{ });
     
     public bool PrerequisiteAchieved(Character context)
     {
@@ -51,5 +51,11 @@ public class MasteryNode : Node, IMasteryPrerequisite, ISerializationCallbackRec
     }
 
     #endregion
-    
+
+    #if UNITY_EDITOR
+    private void renameAsset()
+    {
+        name = MasteryName;
+    }
+    #endif
 }

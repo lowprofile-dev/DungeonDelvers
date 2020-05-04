@@ -1,7 +1,6 @@
-Terminar de refazer masteries (arrumar UI, testar ingame)
-Refazer uma base de masteries (criar um graph que são as masteries padrões e quando cria um masterygraph copia o que tem lá)
+Fazer o Daidarabotchi pseudo-funcional, substituir como Dummy -> Refazer o metodo do Monster que cria o battler, fazer virtual, criar scriptableobject que herda de monster
 Fazer mais inimigos simples pra floresta
-Refazer IA com xNode
+Refazer IA com xNode (maybe)
 Fazer boss da floresta com IA especial e DragonBones
 Fazer cidade
 Terminar os mapas da dungeon (4 mapas até o boss, ai acaba o jogo por enquanto)

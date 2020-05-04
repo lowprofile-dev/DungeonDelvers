@@ -1,0 +1,51 @@
+<Attack animation: 13>
+<DragonBone Settings>
+Battler: MysticalAlchemistKalmulon
+Scalex: -1.0
+Scaley: 1.0
+Width: 200
+Height: 220
+
+Ani Wait: Idle
+Ani Walk: Idle
+Ani Attack: Attack A
+Ani Swing: Attack D
+Ani Thrust: Attack B
+Ani Missile: Attack C
+Ani Skill: Attack C
+Ani Chant: Idle
+Ani Spell: Attack C
+Ani Item: Attack A
+Ani Guard: Idle
+Ani Evade: Idle
+Ani Damage: Damage
+Ani Abnormal: Idle 
+Ani Sleep: Idle 
+Ani Dying: Idle
+Ani Dead: Damage
+Ani Victory: Idle
+Ani Escape: Idle
+
+Replace Sprite
+</DragonBone Settings>
+
+Available Motions:
+Attack A - Spark Shot
+Attack B - Force Shot
+Attack C - Power Shot Burst
+Attack D - Trusty throw
+Damage
+Idle
+
+<whole action>
+move user: FORWARD, 80, 30
+motion Attack C: user
+wait: 42
+animation 66: targets
+action effect
+move targets: FORWARD, -10, 3
+wait: 5
+move user: return, 15
+wait: 20
+</whole action>
+

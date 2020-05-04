@@ -7,6 +7,7 @@ using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 
+[Obsolete]
 public class Encounter : SerializedMonoBehaviour {
     public List<MonsterBattler> Monsters;
     
