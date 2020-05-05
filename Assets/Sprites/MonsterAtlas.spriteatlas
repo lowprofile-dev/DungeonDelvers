@@ -43,11 +43,11 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 051ec4cc1d1cbe436afaf83a6a918f1f, type: 3}
-    totalSpriteSurfaceArea: 1349703
+    totalSpriteSurfaceArea: 1384591
     bindAsDefault: 1
     storedHash:
       serializedVersion: 2
-      Hash: 73e763525eede0876d149b2cf19d3420
+      Hash: 154e360082137a77a616e5c876dd5661
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 04ae93302bb548c5c90c800c3862f11a, type: 3}
@@ -60,6 +60,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 99bb4584fc04c7de0aca0e0783e8f0fd, type: 3}
   - {fileID: 21300000, guid: e3423d94c8e174112af7aec784916e6a, type: 3}
   - {fileID: 21300000, guid: 98dc37c476c19da3c802343aa4465784, type: 3}
+  - {fileID: 21300000, guid: 33e50606d55ff014385069f585c55c4a, type: 3}
   - {fileID: 21300000, guid: 11ddce564642fff888877c2a325947f4, type: 3}
   - {fileID: 21300000, guid: acd5e266e51785a51b4be6c84a894589, type: 3}
   - {fileID: 21300000, guid: 0dc4f5b6dd562998cb1bee6481d51347, type: 3}
@@ -91,6 +92,7 @@ SpriteAtlas:
   - Forest Deer
   - Slime Blue
   - Earth Mandrake
+  - Elemental Gemstone Earth
   - Earth Lion
   - Insects Caterpillar B
   - Forest Shroomy

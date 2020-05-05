@@ -459,6 +459,62 @@ public class BattleController : AsyncMonoBehaviour
             Debug.Log($"{combatAttempt.Name} -> {damage}");
         }
     }
+
+    public bool IsAlly(Battler battler) => Party.Contains(battler);
+    public bool IsEnemy(Battler battler) => Enemies.Contains(battler);
+    
+    //Futuramente dar uma olhada na complexidade
+    public Battler[][] BuildPossibleTargets(Battler source, Skill.TargetType targetType)
+    {
+        if (IsAlly(source))
+        {
+            switch (targetType)
+            {
+                case Skill.TargetType.Any:
+                    return new List<Battler>(Party).Concat(Enemies).Where(b => !b.Fainted).Select(b => new []{b}).ToArray();
+                case Skill.TargetType.OneEnemy:
+                    return Enemies.Cast<Battler>().Where(e => !e.Fainted).Select(b => new []{b}).ToArray();
+                case Skill.TargetType.OneAlly:
+                    return Party.Cast<Battler>().Where(p => !p.Fainted).Select(p => new []{p}).ToArray();
+                case Skill.TargetType.AllEnemies:
+                    return new[] {Enemies.Cast<Battler>().ToArray()};
+                case Skill.TargetType.AllAllies:
+                    return new[] {Party.Cast<Battler>().ToArray()};
+                case Skill.TargetType.All:
+                    return new[] {new List<Battler>(Party).Concat(Enemies).Where(b => !b.Fainted).ToArray()};
+                case Skill.TargetType.Self:
+                    return new[] {new[] {source}};
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(targetType), targetType, null);
+            }
+        }
+        else if (IsEnemy(source))
+        {
+            switch (targetType)
+            {
+                case Skill.TargetType.Any:
+                    return new List<Battler>(Party).Concat(Enemies).Where(b => !b.Fainted).Select(b => new []{b}).ToArray();
+                case Skill.TargetType.OneEnemy:
+                    return Party.Cast<Battler>().Where(e => !e.Fainted).Select(p => new []{p}).ToArray();
+                case Skill.TargetType.OneAlly:
+                    return Enemies.Cast<Battler>().Where(p => !p.Fainted).Select(e => new []{e}).ToArray();
+                case Skill.TargetType.AllEnemies:
+                    return new[] {Party.Cast<Battler>().ToArray()};
+                case Skill.TargetType.AllAllies:
+                    return new[] {Enemies.Cast<Battler>().ToArray()};
+                case Skill.TargetType.All:
+                    return new[] {new List<Battler>(Party).Concat(Enemies).Where(b => !b.Fainted).ToArray()};
+                case Skill.TargetType.Self:
+                    return new[] {new[] {source}};
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(targetType), targetType, null);
+            }
+        }
+        else
+        {
+            return null;
+        }
+    }
 }
 
 public abstract class EffectResult

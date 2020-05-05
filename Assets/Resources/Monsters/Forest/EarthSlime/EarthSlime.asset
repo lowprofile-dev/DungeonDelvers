@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7e5dcd198672d4ab3572da034b41ed, type: 3}
+  m_Name: EarthSlime
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MonsterAi
+      Entry: 6
+      Data: 
+    - Name: MonsterDrops
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Monster+IMonsterDrop, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  uniqueIdentifier: 
+  databaseIgnore: 0
+  _assetIcon: {fileID: 21300000, guid: d60781d232764b600b0768ea82c2126a, type: 3}
+  MonsterName: Earth Slime
+  MonsterBattler: {fileID: 1941738787345818818, guid: 832768d8da26d8f4e83eb539558d3e41,
+    type: 3}
+  BaseLevel: 2
+  Stats:
+    MaxHp: 0
+    InitialEp: 0
+    EpGain: 0
+    PhysAtk: 0
+    MagAtk: 0
+    PhysDef: 0
+    MagDef: 0
+    Speed: 0
+    Accuracy: 0
+    Evasion: 0
+    CritChance: 0
+    CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
+  StatLevelVariance:
+    MaxHp: 0
+    InitialEp: 0
+    EpGain: 0
+    PhysAtk: 0
+    MagAtk: 0
+    PhysDef: 0
+    MagDef: 0
+    Speed: 0
+    Accuracy: 0
+    Evasion: 0
+    CritChance: 0
+    CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
+  HitSound:
+    AudioClip: {fileID: 0}
+    Volume: 1
+  Skills: []
+  Passives: []
+  goldReward: {x: 0, y: 0}

@@ -23,12 +23,12 @@ public class SkillButton : SerializedMonoBehaviour, ISelectHandler, IPointerEnte
     {
         SkillIcon.sprite = skill.SkillIcon;
         SkillName.text = skill.SkillName;
-        SkillCost.text = $"{skill.EpCost} EP";
+        SkillCost.text = $"{skill.ApCost} EP";
         Skill = skill;
         SkillActionMenu = skillActionMenu;
         gameObject.SetActive(true);
         
-        if (skillActionMenu.CharacterActionMenu.Battler.CurrentEp < skill.EpCost)
+        if (skillActionMenu.CharacterActionMenu.Battler.CurrentAp < skill.ApCost)
         {
             canBeUsed = false;
             {
@@ -57,7 +57,7 @@ public class SkillButton : SerializedMonoBehaviour, ISelectHandler, IPointerEnte
     {
         SkillIcon.sprite = consumable.itemIcon;
         SkillName.text = $"{consumable.itemName} x{PlayerController.Instance.GetQuantityOfItem(consumable)}";
-        SkillCost.text = $"{consumable.ItemSkill.EpCost} EP";
+        SkillCost.text = $"{consumable.ItemSkill.ApCost} EP";
         Skill = consumable.ItemSkill;
         SkillActionMenu = skillActionMenu;
         gameObject.SetActive(true);

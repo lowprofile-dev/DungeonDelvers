@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
+[Obsolete]
 public abstract class MonsterAI
 {
     public abstract Turn BuildTurn(MonsterBattler battler);

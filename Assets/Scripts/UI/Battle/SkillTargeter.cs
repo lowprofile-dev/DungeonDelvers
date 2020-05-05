@@ -30,39 +30,41 @@ public class SkillTargeter : SerializedMonoBehaviour
 
     private void SetupTargets()
     {
-        //Cleanup
-        TargetGroups = new List<Battler[]>();
+        ////Cleanup
+        //TargetGroups = new List<Battler[]>();
+        //
+        // switch (Skill.Target)
+        // {
+        //     case Skill.TargetType.OneEnemy:
+        //         BattleController.Instance.Enemies
+        //             .Where(enemy => !enemy.Fainted)
+        //             .ForEach(
+        //                 enemy => TargetGroups.Add(new[] {enemy})
+        //                 );
+        //         break;
+        //     case Skill.TargetType.Any:
+        //         BattleController.Instance.Battlers
+        //             .Where(battler => !battler.Fainted)
+        //             .ForEach(
+        //                 battler => TargetGroups.Add(new[] {battler})
+        //             );
+        //         break;
+        //     case Skill.TargetType.Self:
+        //         //TargetGroups.Add(new []{CharacterActionMenu.Battler});
+        //         ChooseTargets(new []{CharacterActionMenu.Battler});
+        //         break;
+        //     case Skill.TargetType.OneAlly:
+        //         BattleController.Instance.Party
+        //             .Where(partyMember => !partyMember.Fainted)
+        //             .ForEach(partyMember => TargetGroups.Add(new[] {partyMember}));
+        //         break;
+        //     case Skill.TargetType.AllEnemies:
+        //         TargetGroups.Add(BattleController.Instance.Enemies.Where(enemy => !enemy.Fainted).ToArray());
+        //         //ChooseTargets(BattleController.Instance.Enemies.Where(enemy => !enemy.Fainted).ToArray());
+        //         break;
+        // }
 
-        switch (Skill.Target)
-        {
-            case Skill.TargetType.OneEnemy:
-                BattleController.Instance.Enemies
-                    .Where(enemy => !enemy.Fainted)
-                    .ForEach(
-                        enemy => TargetGroups.Add(new[] {enemy})
-                        );
-                break;
-            case Skill.TargetType.Any:
-                BattleController.Instance.Battlers
-                    .Where(battler => !battler.Fainted)
-                    .ForEach(
-                        battler => TargetGroups.Add(new[] {battler})
-                    );
-                break;
-            case Skill.TargetType.Self:
-                //TargetGroups.Add(new []{CharacterActionMenu.Battler});
-                ChooseTargets(new []{CharacterActionMenu.Battler});
-                break;
-            case Skill.TargetType.OneAlly:
-                BattleController.Instance.Party
-                    .Where(partyMember => !partyMember.Fainted)
-                    .ForEach(partyMember => TargetGroups.Add(new[] {partyMember}));
-                break;
-            case Skill.TargetType.AllEnemies:
-                TargetGroups.Add(BattleController.Instance.Enemies.Where(enemy => !enemy.Fainted).ToArray());
-                //ChooseTargets(BattleController.Instance.Enemies.Where(enemy => !enemy.Fainted).ToArray());
-                break;
-        }
+        TargetGroups = new List<Battler[]>(BattleController.Instance.BuildPossibleTargets(CharacterActionMenu.Battler,Skill.Target));
         
         //Ordernar esquerda -> direita
         var orderedGroups = TargetGroups.OrderBy(targetGroup =>

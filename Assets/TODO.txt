@@ -1,3 +1,5 @@
+Tentar limpar todos os warnings
+Testar botar Chests na Floresta
 Fazer mais inimigos simples pra floresta
 Refazer IA com xNode (maybe)
 Fazer boss da floresta com IA especial e DragonBones
@@ -9,6 +11,7 @@ Polir o que tem até esse ponto
 Criar uma demo e criar o grupo de teste no zipzop.
 
 Maybe:
+Remover o uso do PlaySound nos behaviours e só tocar na audiosource mesmo.
 Characters só podem ter X skills equipadas?
 Avisar pro player que não ganhou XP porque o nível dos monstros era mais baixo quando for o caso.
 Lojas tem modificadores de preço, pode ser alterado com certas condições (tipo player completou quest da região)
@@ -16,6 +19,8 @@ Travelling Merchant -> Aparece aleatóriamente em mapas algumas vezes (muda de p
 Inimigos não dropam gold, mas os ETC que dropam podem ser vendidos (e são materiais pra crafting também)
 
 Futuro:
+Tirar o animationobject e só fazer pra criar um gameobject que tem um componente abstrato que recebe parametros, e esperar até esse objeto for destruido
+Refazer os metodos do AsyncMonoBehaviour sem ocupar a thread com Task.Delay
 Implementar o DragonbonesMonster -> Criar MonsterBase, (e Monster : MonsterBase, DragonbonesMonster : Monsterbase) e MonsterBattlerBase<T> where T : MonsterBase (e MonsterBattler : MonsterBattlerBase<Monster>, DragonbonesMonsterBattler<DragonbonesMonster>)
 Textbox vê se o texto vai passar das linhas, se sim ele pausa, espera input, levanta a textbox (com animação) ou apaga o que já tinha e continua. 
 Dar uma olhada no particlesystem e shadergraph

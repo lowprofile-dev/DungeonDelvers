@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using SkredUtils;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -68,30 +69,26 @@ public class InventoryItemInspector : MonoBehaviour
             yield break;
         }
 
-        if (consumable.ConsumableBase.ConsumableUses.Any(use => use is TargetedConsumableUse))
+        if (consumable.ConsumableBase.RequiresTarget)
         {
             InventoryMenu.MainMenu.CharacterSelector.StartSelection();
-
             void SelectTarget(Character character) => target = character;
-
             InventoryMenu.MainMenu.CharacterSelector.CharactedSelected.AddListener(SelectTarget);
-
             while (target == null)
                 yield return null;
+
+            yield return consumable.ConsumableBase.TargetedUseCoroutine(target);
         }
-
-        foreach (var use in consumable.ConsumableBase.ConsumableUses)
+        else
         {
-            if (use is TargetedConsumableUse targetedConsumableUse)
-                targetedConsumableUse.Target = target;
-
-            yield return use.ApplyUse();
+            yield return consumable.ConsumableBase.UseCoroutine();
         }
 
         consumable.Quantity--;
         if (consumable.Quantity == 0)
         {
             Destroy(SelectedItem.gameObject);
+            PlayerController.Instance.RemoveItemFromInventory(consumable);
             Inspect(null);
         }
         else

@@ -2,7 +2,6 @@
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -35,7 +34,9 @@ public class Monster : SerializableAsset
     public SoundInfo HitSound;
     public List<MonsterSkill> Skills = new List<MonsterSkill>();
     public List<Passive> Passives = new List<Passive>();
-    public MonsterAI MonsterAi;
+    //public MonsterAI MonsterAi;
+    public ISkillSelector SkillAi;
+    public ITargetSelector TargeterAi;
 
     public Vector2Int goldReward;
     public List<IMonsterDrop> MonsterDrops = new List<IMonsterDrop>();

@@ -17,10 +17,7 @@ public class Consumable : Item, IStackable
     }
 
     public Item Item => this;
-
-    //Lembrar de fazer função de quando recebe varios consumiveis de uma vez, funções de stackar, funções de juntar
-    //stacks quando uma esvazia.
-
+    
     public override ItemSave Serialize()
     {
         return new ConsumableSave

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Sirenix.OdinInspector;
+using SkredUtils;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Items/ConsumableBase", fileName = "ConsumableBase")]
@@ -10,10 +12,33 @@ public class ConsumableBase : ItemBase, IStackableBase
     public ItemBase ItemBase => this;
     public int MaxStack => maxStack;
 
-    [ValidateInput("_validateSkill", "Skill de Itens precisa remover o Item, e ter o mesmo sprite")]
+    [ValidateInput("_validateSkill", "Skill de Itens precisa remover o Item e ter o mesmo sprite")]
     public PlayerSkill ItemSkill;
 
+    public SoundInfo SoundInfo;
     public List<ConsumableUse> ConsumableUses;
+
+    public bool RequiresTarget => ConsumableUses.Any(cU => cU is TargetedConsumableUse);
+
+    public IEnumerator UseCoroutine()
+    {
+        GameController.Instance.SfxPlayer.PlayOneShot(SoundInfo);
+        foreach (var consumableUse in ConsumableUses)
+        {
+            yield return consumableUse.ApplyUse();
+        }
+    }
+
+    public IEnumerator TargetedUseCoroutine(Character target)
+    {
+        GameController.Instance.SfxPlayer.PlayOneShot(SoundInfo);
+        foreach (var consumableUse in ConsumableUses)
+        {
+            if (consumableUse is TargetedConsumableUse targetedConsumableUse)
+                targetedConsumableUse.Target = target;
+            yield return consumableUse.ApplyUse();
+        }
+    }
     
 #if UNITY_EDITOR
 
@@ -57,8 +82,7 @@ public class ConsumableBase : ItemBase, IStackableBase
 
         return ItemSkill.Effects.Find(effect =>
                    effect is RemoveItemEffect removeItemEffect && removeItemEffect.Item == this) != null
-               && ItemSkill.SkillIcon == itemIcon
-               && ItemSkill.SkillName == itemName;
+               && ItemSkill.SkillIcon == itemIcon;
     }
 #endif
 }

@@ -8,6 +8,8 @@ namespace DD.Skill.Animation
 {
     public class PlayAtTargetSkillAnimation : Animation
     {
+        public SoundInfo SoundInfo = new SoundInfo();
+        
         public override async Task PlaySkillAnimation(Battler source, IEnumerable<Battler> targets)
         {
             List<Task> Animations = new List<Task>();
@@ -23,7 +25,7 @@ namespace DD.Skill.Animation
                 
                     ScaleAnimation(animation.transform as RectTransform);
                 
-                    Animations.Add(animation.PlayAndAwait(AnimationName,SpeedMultiplier));
+                    Animations.Add(animation.PlayAndAwait(AnimationName,SoundInfo,SpeedMultiplier));
                 });
             });
 

@@ -21,15 +21,21 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: MonsterAi
+    - Name: SkillAi
       Entry: 7
-      Data: 0|RandomAI, Assembly-CSharp
+      Data: 0|RandomSkillAI, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: TargeterAi
+      Entry: 7
+      Data: 1|RandomTargetAI, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
     - Name: MonsterDrops
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Monster+IMonsterDrop, Assembly-CSharp]],
+      Data: 2|System.Collections.Generic.List`1[[Monster+IMonsterDrop, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -47,23 +53,22 @@ MonoBehaviour:
   MonsterBattler: {fileID: 3341307739312195433, guid: 09c8331390f15994db4eb4b7660a5072,
     type: 3}
   BaseLevel: 2
-  LevelVariance: 1
   Stats:
-    MaxHp: 40
-    InitialEp: 15
-    EpGain: 10
-    PhysAtk: 16
-    MagAtk: 16
-    PhysDef: 15
-    MagDef: 15
-    Speed: 18
+    MaxHp: 75
+    InitialEp: 25
+    EpGain: 15
+    PhysAtk: 22
+    MagAtk: 19
+    PhysDef: 20
+    MagDef: 20
+    Speed: 21
     Accuracy: 0.95
     Evasion: -0.05
     CritChance: 0
-    CritAvoid: -0.05
+    CritAvoid: 0
     ElementalResistance:
       EarthResistance: 0
-      FireResistance: -1
+      FireResistance: 0
       HolyResistance: 0
       DarkResistance: 0
       IceResistance: 0

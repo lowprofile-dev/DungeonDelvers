@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection.Emit;
 using System.Threading.Tasks;
 using E7.Introloop;
@@ -127,7 +128,7 @@ namespace SkredUtils
 
         public static void PlayOneShot(this AudioSource source, SoundInfo info)
         {
-            if (info != null || info.AudioClip != null) source.PlayOneShot(info.AudioClip, info.Volume);
+            if (info != null && info.AudioClip != null) source.PlayOneShot(info.AudioClip, info.Volume);
         }
 
         public static void Ensure<T>(this MonoBehaviour behaviour, ref T field) where T : Component
@@ -139,6 +140,13 @@ namespace SkredUtils
         {
             if (!obj.TryGetComponent(out T t)) t = obj.AddComponent<T>();
             return t;
+        }
+
+        public static T Random<T>(this IEnumerable<T> collection)
+        {
+            if (!collection.Any()) return default;
+            var index = GameController.Instance.Random.Next(collection.Count());
+            return collection.ElementAt(index);
         }
     }
 

@@ -1,5 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8417668113678307261
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4f48f952730a64eafc498c42bd2313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifiableName: Damage
+  useMultiple: 0
+  clip:
+    AudioClip: {fileID: 0}
+    Volume: 1
+  clips: []
+  condition: 0
+  delayer:
+    delayType: 1
+    timer:
+      loops: 0
+      time: 0
+    frameTimer:
+      loops: 0
+      frame: 0
+  frequencyTimer:
+    loops: 0
+    time: 0
+--- !u!114 &-7381214577500695065
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4f48f952730a64eafc498c42bd2313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifiableName: Idle
+  useMultiple: 0
+  clip:
+    AudioClip: {fileID: 0}
+    Volume: 1
+  clips: []
+  condition: 0
+  delayer:
+    delayType: 1
+    timer:
+      loops: 0
+      time: 0
+    frameTimer:
+      loops: 0
+      frame: 0
+  frequencyTimer:
+    loops: 0
+    time: 0
 --- !u!1102 &-6337864674935112304
 AnimatorState:
   serializedVersion: 5
@@ -115,6 +175,36 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-4602567442056343595
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4f48f952730a64eafc498c42bd2313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifiableName: Fainted
+  useMultiple: 0
+  clip:
+    AudioClip: {fileID: 0}
+    Volume: 1
+  clips: []
+  condition: 0
+  delayer:
+    delayType: 1
+    timer:
+      loops: 0
+      time: 0
+    frameTimer:
+      loops: 0
+      frame: 0
+  frequencyTimer:
+    loops: 0
+    time: 0
 --- !u!114 &-4216259008523624865
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,6 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4f48f952730a64eafc498c42bd2313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  identifiableName: Attack
   useMultiple: 0
   clip:
     AudioClip: {fileID: 8300000, guid: e6cd82d6616cc4e48903111f3c86538d, type: 3}
@@ -140,7 +231,7 @@ MonoBehaviour:
       time: 0
     frameTimer:
       loops: 0
-      frame: 1
+      frame: 0
   frequencyTimer:
     loops: 0
     time: 1
@@ -156,7 +247,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4661369383294498881}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -7381214577500695065}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -208,7 +300,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -5152688001453200655}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 7441745648081588314}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -235,7 +328,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 5874455099983093827}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -8417668113678307261}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -296,7 +390,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 4131206554089637652}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -4602567442056343595}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -364,3 +459,33 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &7441745648081588314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4f48f952730a64eafc498c42bd2313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifiableName: Cast
+  useMultiple: 0
+  clip:
+    AudioClip: {fileID: 0}
+    Volume: 1
+  clips: []
+  condition: 0
+  delayer:
+    delayType: 1
+    timer:
+      loops: 0
+      time: 0
+    frameTimer:
+      loops: 0
+      frame: 0
+  frequencyTimer:
+    loops: 0
+    time: 0

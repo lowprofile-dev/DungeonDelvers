@@ -333,7 +333,7 @@ MonoBehaviour:
   clips: []
   condition: 0
   delayer:
-    delayType: 0
+    delayType: 1
     timer:
       loops: 0
       time: 0
@@ -363,7 +363,7 @@ MonoBehaviour:
   clips: []
   condition: 0
   delayer:
-    delayType: 0
+    delayType: 1
     timer:
       loops: 0
       time: 0
@@ -418,13 +418,13 @@ MonoBehaviour:
   clips: []
   condition: 0
   delayer:
-    delayType: 0
+    delayType: 1
     timer:
       loops: 0
       time: 0
     frameTimer:
       loops: 0
-      frame: 0
+      frame: 1
   frequencyTimer:
     loops: 0
     time: 0
@@ -476,7 +476,7 @@ MonoBehaviour:
   clips: []
   condition: 0
   delayer:
-    delayType: 0
+    delayType: 1
     timer:
       loops: 0
       time: 0

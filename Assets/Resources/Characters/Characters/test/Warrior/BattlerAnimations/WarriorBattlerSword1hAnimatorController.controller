@@ -282,6 +282,36 @@ MonoBehaviour:
   frequencyTimer:
     loops: 0
     time: 0
+--- !u!114 &-1183910936886872688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4f48f952730a64eafc498c42bd2313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  identifiableName: Idle
+  useMultiple: 0
+  clip:
+    AudioClip: {fileID: 0}
+    Volume: 1
+  clips: []
+  condition: 0
+  delayer:
+    delayType: 0
+    timer:
+      loops: 0
+      time: 0
+    frameTimer:
+      loops: 0
+      frame: 0
+  frequencyTimer:
+    loops: 0
+    time: 0
 --- !u!1107 &-1146207485642915404
 AnimatorStateMachine:
   serializedVersion: 5
@@ -415,7 +445,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4389713260011970947}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -1183910936886872688}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

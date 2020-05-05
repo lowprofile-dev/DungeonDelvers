@@ -26,10 +26,11 @@ public abstract class Battler : AsyncMonoBehaviour
     public virtual string BattlerName { get; protected set; }
     public virtual int Level { get; protected set; }
     [FoldoutGroup("Stats")] public abstract int CurrentHp { get; set; }
-    [FoldoutGroup("Stats")] public abstract int CurrentEp { get; set; }
+    [FoldoutGroup("Stats")] public abstract int CurrentAp { get; set; }
     public bool Fainted => CurrentHp == 0;
     public SoundInfo HitSound;
-
+    public abstract IEnumerable<Skill> SkillList { get; }
+    
     #endregion
 
     #region Stats
@@ -91,7 +92,7 @@ public abstract class Battler : AsyncMonoBehaviour
 
     public async Task TurnStart()
     {
-        CurrentEp += Stats.EpGain;
+        CurrentAp += Stats.EpGain;
         Debug.Log($"Começou o turno de {BattlerName}");
 
         var expiredStatusEffects = StatusEffectInstances
@@ -158,13 +159,13 @@ public abstract class Battler : AsyncMonoBehaviour
         if (turn == null)
             return;
 
-        if (turn.Skill.EpCost > CurrentEp)
+        if (turn.Skill.ApCost > CurrentAp)
         {
             Debug.LogError(
-                $"{BattlerName} tentou usar uma skill com custo maior que o EP Atual. SkillName: {turn.Skill.SkillName}, SkillCost: {turn.Skill.EpCost}, CurrentEp: {CurrentEp}");
+                $"{BattlerName} tentou usar uma skill com custo maior que o EP Atual. SkillName: {turn.Skill.SkillName}, SkillCost: {turn.Skill.ApCost}, CurrentAp: {CurrentAp}");
         }
 
-        CurrentEp -= turn.Skill.EpCost;
+        CurrentAp -= turn.Skill.ApCost;
 
         QueueAction(() => { BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(turn.Skill.SkillName); });
 

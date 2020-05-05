@@ -65,21 +65,45 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: SkillAnimation
+      Entry: 7
+      Data: 3|DD.Skill.Animation.PlayAtTargetSkillAnimation, Assembly-CSharp
+    - Name: AnimationName
+      Entry: 1
+      Data: Heal1
+    - Name: SpeedMultiplier
+      Entry: 4
+      Data: 3
+    - Name: AnimationSize
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 250
+    - Name: 
+      Entry: 4
+      Data: 250
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SoundInfo
       Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: Animations
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
+      Data: 4|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 4|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
+      Data: 5|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
     - Name: Animation
       Entry: 7
-      Data: 5|BattlerAnimationInfo, Assembly-CSharp
+      Data: 6|BattlerAnimationInfo, Assembly-CSharp
     - Name: stateName
       Entry: 1
       Data: Cast
@@ -88,7 +112,7 @@ MonoBehaviour:
       Data: 1
     - Name: soundInfo
       Entry: 7
-      Data: 6|SoundInfo, Assembly-CSharp
+      Data: 7|SoundInfo, Assembly-CSharp
     - Name: AudioClip
       Entry: 10
       Data: 0
@@ -124,7 +148,7 @@ MonoBehaviour:
   SkillName: Medidate
   SkillIcon: {fileID: 1460658371370403240, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 0
+  ApCost: 0
   Element: 0
   SkillDescription: Generate AP
   Target: 6

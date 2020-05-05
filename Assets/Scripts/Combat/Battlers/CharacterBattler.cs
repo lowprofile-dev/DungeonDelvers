@@ -23,6 +23,8 @@ public class CharacterBattler : Battler
     public Character Character;
     private Image image;
 
+    public override IEnumerable<Skill> SkillList => Skills;
+
     #region Control
     protected override void Awake()
     {
@@ -40,7 +42,7 @@ public class CharacterBattler : Battler
         BaseStats = character.BaseStats;
         BonusStats = character.BonusStats;
         CurrentHp = character.CurrentHp;
-        CurrentEp = Stats.InitialEp;
+        CurrentAp = Stats.InitialEp;
         Skills = character.Skills;
         Passives = character.Passives;
         StatusEffectInstances = new List<StatusEffectInstance>();
@@ -79,7 +81,7 @@ public class CharacterBattler : Battler
     [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly]
     private int currentEp;
 
-    public override int CurrentEp
+    public override int CurrentAp
     {
         get => currentEp;
         set

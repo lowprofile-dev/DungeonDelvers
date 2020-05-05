@@ -44,7 +44,7 @@ public class SkillActionMenu : SerializedMonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (Input.GetButtonDown("Cancel") || Input.GetMouseButtonDown(1))
             CloseSkillMenu();
     }
 
@@ -71,7 +71,7 @@ public class SkillActionMenu : SerializedMonoBehaviour
         
         var skills = CharacterActionMenu.Battler
             .AvailableSkills
-            .OrderBy(skill => skill.EpCost)
+            .OrderBy(skill => skill.ApCost)
             .ToArray();
         
         for (var i = 0; i < skills.Length; i++)

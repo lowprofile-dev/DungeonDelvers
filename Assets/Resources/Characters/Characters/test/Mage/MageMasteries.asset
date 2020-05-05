@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Attack Training III
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -376, y: 280}
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Attack Training III
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -376, y: -8}
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Speed Training IV
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 40, y: 1144}
@@ -346,7 +346,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 28
-  MasteryName: Mag. Attack Training IV
+  MasteryName: Speed Training IV
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -463,7 +463,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Speed Training III
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -376, y: 1144}
@@ -497,7 +497,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 27
-  MasteryName: Mag. Attack Training III
+  MasteryName: Speed Training III
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -614,7 +614,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Attack Training V
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 456, y: -8}
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Attack Training II
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -792, y: -8}
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Hit Point Training I
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1208, y: -296}
@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Attack Training IV
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 40, y: 280}
@@ -1212,7 +1212,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Speed Training V
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 456, y: 1144}
@@ -1243,7 +1243,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 29
-  MasteryName: Mag. Attack Training V
+  MasteryName: Speed Training V
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Defense Training V
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 456, y: 856}
@@ -1391,7 +1391,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 24
-  MasteryName: Mag. Defebse Training V
+  MasteryName: Mag. Defense Training V
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -1508,7 +1508,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Defense Training IV
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 40, y: 856}
@@ -1659,7 +1659,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Speed Training I
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1208, y: 1144}
@@ -1690,7 +1690,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 25
-  MasteryName: Speed Attack Training I
+  MasteryName: Speed Training I
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Defense Training IV
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 40, y: 568}
@@ -2001,7 +2001,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Defense Training II
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -792, y: 568}
@@ -2152,7 +2152,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Defense Training III
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -376, y: 568}
@@ -2303,7 +2303,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Hit Point Training II
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -792, y: -296}
@@ -2454,7 +2454,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Attack Training I
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1208, y: -8}
@@ -2602,7 +2602,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Defense Training V
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 456, y: 568}
@@ -2633,7 +2633,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 19
-  MasteryName: Mag. Defense Training V
+  MasteryName: Phys. Defense Training V
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -2750,7 +2750,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Attack Training II
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -792, y: 280}
@@ -2901,7 +2901,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Defense Training I
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1208, y: 856}
@@ -3049,7 +3049,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Attack Training IV
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 40, y: -8}
@@ -3200,7 +3200,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Attack Training I
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1208, y: 280}
@@ -3348,7 +3348,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Hit Point Training IV
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 40, y: -296}
@@ -3499,7 +3499,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Attack Training V
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 456, y: 280}
@@ -3647,7 +3647,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Defense Training III
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -376, y: 856}
@@ -3798,7 +3798,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Speed Training II
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -792, y: 1144}
@@ -3832,7 +3832,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 26
-  MasteryName: Mag. Attack Training II
+  MasteryName: Speed Training II
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -3949,7 +3949,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Defense Training II
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -792, y: 856}
@@ -4100,7 +4100,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Hit Point Training V
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 456, y: -296}
@@ -4248,7 +4248,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Defense Training I
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1208, y: 568}
@@ -4396,7 +4396,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Hit Point Training III
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -376, y: -296}

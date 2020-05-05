@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 [CreateAssetMenu(menuName = "Skill/Skill")]
@@ -10,7 +11,7 @@ public class Skill : SerializableAsset
 {
     public string SkillName = "";
     [AssetIcon] public Sprite SkillIcon;
-    public int EpCost;
+    [FormerlySerializedAs("EpCost")] public int ApCost;
     public Element Element;
     [TextArea] public string SkillDescription;
     public TargetType Target;

@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using UnityEngine;
 
-public class RandomAI : MonsterAI
+public class _RandomAI : MonsterAI
 {
     public override Turn BuildTurn(MonsterBattler battler)
     {
@@ -10,7 +10,7 @@ public class RandomAI : MonsterAI
         if (usableSkills.Any() == false)
             return new Turn();
         
-        var randomIndex = Random.Range(0, usableSkills.Count());
+        var randomIndex = Random.Range(0, usableSkills.Length);
         var chosenSkill = usableSkills.ElementAt(randomIndex);
 
         var possibleTargets = BattleController.Instance.Party.Where(partyMember => !partyMember.Fainted).ToArray();

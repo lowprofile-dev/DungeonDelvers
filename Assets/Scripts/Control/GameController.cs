@@ -17,6 +17,7 @@ public class GameController : AsyncMonoBehaviour
     public int targetFrameRate = -1;
     
     [HideInInspector] public Random Random;
+    public AudioSource SfxPlayer;
 
     public int? TransitionSource = null;
     
@@ -50,6 +51,9 @@ public class GameController : AsyncMonoBehaviour
         Instantiate(GameSettings.Instance.GraphyPrefab);
         Application.targetFrameRate = targetFrameRate;
 #endif
+        
+        this.Ensure(ref SfxPlayer);
+        SfxPlayer.outputAudioMixerGroup = GameSettings.Instance.SFXChannel;
     }
 
     public Dictionary<string, int> Globals = new Dictionary<string, int>();

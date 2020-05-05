@@ -46,4 +46,5 @@ MonoBehaviour:
     MinLevel: 1
     MaxLevel: 1
   Layout: 0
+  bgmOverride: {fileID: 11400000, guid: 2b47dfd7fac4f534cb6f92cf21b2a919, type: 2}
   overrideItemDrops: []

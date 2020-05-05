@@ -47,7 +47,7 @@ public class CharacterActionMenu : SerializedMonoBehaviour
             }
                 
 
-            statusText.Life.text = $"{battler.CurrentHp}/{battler.Stats.MaxHp} - {battler.CurrentEp} EP";
+            statusText.Life.text = $"{battler.CurrentHp}/{battler.Stats.MaxHp} - {battler.CurrentAp} AP";
             statusText.Life.color = LifeToColor(battler.CurrentHp, battler.Stats.MaxHp);
         }
         

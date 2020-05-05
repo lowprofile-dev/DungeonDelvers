@@ -17,6 +17,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 59b0a2f636fdc911c9db9e508c90caa7, type: 2}
+    - {fileID: 8300000, guid: 0e400324959856740ba47313a3697eda, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -88,6 +89,49 @@ MonoBehaviour:
     - Name: SkillAnimation
       Entry: 6
       Data: 
+    - Name: Animations
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
+    - Name: Animation
+      Entry: 7
+      Data: 6|BattlerAnimationInfo, Assembly-CSharp
+    - Name: stateName
+      Entry: 1
+      Data: Cast
+    - Name: speed
+      Entry: 4
+      Data: 1
+    - Name: soundInfo
+      Entry: 7
+      Data: 7|SoundInfo, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
+      Data: 1
+    - Name: Volume
+      Entry: 4
+      Data: 0.1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: RequiredWeaponType
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
@@ -99,8 +143,8 @@ MonoBehaviour:
       Data: 
   uniqueIdentifier: 3
   databaseIgnore: 0
-  SkillName: Heal
-  SkillIcon: {fileID: -5034413663038066961, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
+  SkillName: Potion (S)
+  SkillIcon: {fileID: -4231952906909274518, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
   EpCost: 5
   Element: 0
@@ -111,4 +155,3 @@ MonoBehaviour:
   CanCritical: 0
   AccuracyModifier: 0
   CriticalModifier: 0
-  AnimationType: 3

@@ -52,4 +52,5 @@ MonoBehaviour:
     MinLevel: 2
     MaxLevel: 4
   Layout: 0
+  bgmOverride: {fileID: 0}
   overrideItemDrops: []

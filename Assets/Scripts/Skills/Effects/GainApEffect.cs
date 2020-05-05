@@ -4,7 +4,7 @@
 
     public override EffectResult ExecuteEffect(SkillInfo skillInfo)
     {
-        skillInfo.Target.CurrentEp += ApAmount;
+        skillInfo.Target.CurrentAp += ApAmount;
         return new GainApEffectResult()
         {
             ApGained = ApAmount,

@@ -11,18 +11,16 @@ public class MasteryGraph : NodeGraph
     public List<MasteryInstance> Initialize(Character owner)
     {
         var instances = new List<MasteryInstance>();
-        foreach (MasteryNode node in nodes)
-        {
-            instances.Add(new MasteryInstance(owner, node));
-        }
+        foreach (var node in nodes) 
+            if (node is MasteryNode masteryNode) instances.Add(new MasteryInstance(owner, masteryNode));
         return instances;
     }
 
     public List<MasteryInstance> Initialize(Character owner, SerializedMasteryInstance[] save)
     {
         var instances = new List<MasteryInstance>();
-        if (save.Length != nodes.Count)
-            throw new DeserializationFailureException(typeof(MasteryInstance));
+        // if (save.Length != nodes.Count)
+        //     throw new DeserializationFailureException(typeof(MasteryInstance));
 
         foreach (var serializedMasteryInstance in save)
         {
@@ -34,7 +32,7 @@ public class MasteryGraph : NodeGraph
     public override Node AddNode(Type type)
     {
         var node = base.AddNode(type);
-        for (var i = 0; i < nodes.Count; i++) ((MasteryNode) nodes[i]).Id = i;
+        for (var i = 0; i < nodes.Count; i++) if (nodes[i] is MasteryNode masteryNode) masteryNode.Id = i;
         return node;
     }
 

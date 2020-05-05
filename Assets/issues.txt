@@ -1,0 +1,1 @@
+Stripping Level Medium>= quebra as Masteries. Testar como arrumar.

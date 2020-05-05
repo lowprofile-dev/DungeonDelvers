@@ -25,7 +25,7 @@ public class SkillInfoPanel : MonoBehaviour
         SkillName.text = skill.SkillName;
         SkillIcon.enabled = true;
         SkillIcon.sprite = skill.SkillIcon;
-        SkillCost.text = skill.EpCost.ToString(); //=> Ver depois quando tiver custos de HP ou etc.
+        SkillCost.text = skill.ApCost.ToString(); //=> Ver depois quando tiver custos de HP ou etc.
         SkillDescription.text = skill.SkillDescription;
         gameObject.SetActive(true);
     }

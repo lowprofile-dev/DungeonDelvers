@@ -21,7 +21,10 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: MonsterAi
+    - Name: SkillAi
+      Entry: 6
+      Data: 
+    - Name: TargeterAi
       Entry: 6
       Data: 
     - Name: MonsterDrops
@@ -44,7 +47,6 @@ MonoBehaviour:
   MonsterBattler: {fileID: 1849427471425531011, guid: 1ccae06ba51acc741b5e72e93e9905bc,
     type: 3}
   BaseLevel: 0
-  LevelVariance: 0
   Stats:
     MaxHp: 2147483647
     InitialEp: 0

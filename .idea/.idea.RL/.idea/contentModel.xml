@@ -410,6 +410,10 @@
               <e p="MasteryGraph.cs" t="Include" />
               <e p="MasteryInstance.cs" t="Include" />
               <e p="MasteryNode.cs" t="Include" />
+              <e p="MasteryPrerequisites" t="Include">
+                <e p="PartialLevelPrerequisite.cs" t="Include" />
+                <e p="PartyLevelPrerequisite.cs" t="Include" />
+              </e>
               <e p="Old" t="Include">
                 <e p="_Mastery.cs" t="Include" />
                 <e p="_MasteryInstance.cs" t="Include" />
@@ -445,8 +449,17 @@
             </e>
             <e p="MonsterAI" t="Include">
               <e p="AIs" t="Include">
-                <e p="RandomAI.cs" t="Include" />
+                <e p="_RandomAI.cs" t="Include" />
+                <e p="Skill" t="Include">
+                  <e p="ConditionChanceSkillAi.cs" t="Include" />
+                  <e p="RandomSkillAI.cs" t="Include" />
+                </e>
+                <e p="Target" t="Include">
+                  <e p="RandomTargetAI.cs" t="Include" />
+                </e>
               </e>
+              <e p="ISkillSelector.cs" t="Include" />
+              <e p="ITargetSelector.cs" t="Include" />
               <e p="MonsterAI.cs" t="Include" />
             </e>
           </e>

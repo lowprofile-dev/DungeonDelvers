@@ -244,6 +244,8 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: f49e42389589e0a45948d8fa711d0c6f, type: 2}
+    - {fileID: 11400000, guid: 1f3d499d9693c4f4a9bbafc3c5c70094, type: 2}
+    - {fileID: 11400000, guid: bd9fd1068f17a284fb02553b968e02e0, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -258,13 +260,37 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 7
       Data: MapEncounter, Assembly-CSharp
     - Name: Encounter
       Entry: 10
       Data: 0
+    - Name: Chance
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: MapEncounter, Assembly-CSharp
+    - Name: Encounter
+      Entry: 10
+      Data: 1
+    - Name: Chance
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: MapEncounter, Assembly-CSharp
+    - Name: Encounter
+      Entry: 10
+      Data: 2
     - Name: Chance
       Entry: 3
       Data: 1

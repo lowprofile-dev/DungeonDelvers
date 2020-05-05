@@ -9,6 +9,7 @@ using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using SkredUtils;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = System.Random;
 // ReSharper disable RedundantAssignment
@@ -25,7 +26,11 @@ public class MonsterBattler : Battler
     [ReadOnly] public GameObject monsterBattler;
     [ReadOnly] public Image image;
     private BattleController BattleController;
-    
+
+    private ISkillSelector SkillAi;
+    private ITargetSelector TargeterAi;
+    public override IEnumerable<Skill> SkillList => Skills;
+
     #region Control
     protected virtual void Start()
     {
@@ -41,13 +46,14 @@ public class MonsterBattler : Battler
         BonusStats = MonsterBase.StatLevelVariance * (Level - MonsterBase.BaseLevel);
 
         Skills = MonsterBase.Skills;
-        MonsterAi = MonsterBase.MonsterAi;
+        SkillAi = MonsterBase.SkillAi;
+        TargeterAi = MonsterBase.TargeterAi;
 
         monsterBattler = Instantiate(MonsterBase.MonsterBattler, RectTransform);
         image = monsterBattler.gameObject.Ensure<Image>();
 
         CurrentHp = Stats.MaxHp;
-        CurrentEp = Stats.InitialEp;
+        CurrentAp = Stats.InitialEp;
         
         BattleDictionary = new Dictionary<object, object>();
         Passives = MonsterBase.Passives;
@@ -86,20 +92,18 @@ public class MonsterBattler : Battler
             currentHp = Mathf.Clamp(currentHp, 0, Stats.MaxHp);
         }
     }
-    [FoldoutGroup("Stats"), SerializeField] private int currentEp;
-    public override int CurrentEp
+    [FormerlySerializedAs("currentEp")] [FoldoutGroup("Stats"), SerializeField] private int currentAp;
+    public override int CurrentAp
     {
-        get => currentEp;
+        get => currentAp;
         set
         {
-            currentEp = value;
-            Mathf.Clamp(currentEp, 0, 100);
+            currentAp = value;
+            Mathf.Clamp(currentAp, 0, 100);
         }
     }
     
     public List<MonsterSkill> Skills;
-
-    public MonsterAI MonsterAi;
 
     #endregion
     
@@ -107,7 +111,7 @@ public class MonsterBattler : Battler
 
     public override async Task<Turn> GetTurn()
     {
-        if (Fainted || MonsterAi == null)
+        if (Fainted || SkillAi == null || TargeterAi == null)
             return null;
         
         Debug.Log($"Começou a pegar o turno de {BattlerName}");
@@ -116,7 +120,24 @@ public class MonsterBattler : Battler
 
         await QueueActionAndAwait(() =>
         {
-            turn = MonsterAi.BuildTurn(this);
+            //turn = MonsterAi.BuildTurn(this);
+            var skill = SkillAi.GetSkill(this);
+            if (skill == null)
+            {
+                turn = null;
+                return;
+            }
+            var targets = TargeterAi.GetTargets(this,skill);
+            if (targets == null)
+            {
+                turn = null;
+                return;
+            }
+            turn = new Turn
+            {
+                Skill = skill,
+                Targets = targets
+            };
         });
         
         return turn;

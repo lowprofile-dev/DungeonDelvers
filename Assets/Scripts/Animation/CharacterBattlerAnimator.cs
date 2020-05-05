@@ -53,49 +53,56 @@ namespace DD.Animation
             Animator.Play(hashName);
             
             yield return new WaitForEndOfFrame();
-            yield return new WaitWhile(() => Animator.GetCurrentAnimatorStateInfo(0).shortNameHash == hashName);
+            yield return new WaitForEndOfFrame();
+            
+            yield return new WaitWhile(() =>
+            {
+                var sNH = Animator.GetCurrentAnimatorStateInfo(0).shortNameHash;
+                return sNH == hashName;
+            });
         }
 
         public async Task AsyncPlayAndWait(BattlerAnimationInfo info)
         {
-            var state = -1;
-            await CharacterBattler.QueueActionAndAwait(() =>
-            {
-                state = Animator.StringToHash(info.stateName);
-                if (!Animator.HasState(0, state)) state = -1;
-            });
-            
-            if (state == -1) return;
-            
-            await CharacterBattler.QueueActionAndAwait(() =>
-            {
-                Animator.speed = info.speed;
-                Animator.Play(state);
-
-                var playAudio = Animator.GetBehaviours<PlayAudioClip>().FirstOrDefault(pac => pac.identifiableName == info.stateName);
-                playAudio?.SetSoundInfo(info.soundInfo);
-                
-            });
-
-            await Task.Delay(5);
-
-            bool condition = false;
-
-            void EvaluteCondition()
-            {
-                condition = Animator.GetCurrentAnimatorStateInfo(0).shortNameHash == state;
-                if (!condition)
-                {
-                    Animator.speed = 1f;
-                }
-            }
-
-            await CharacterBattler.QueueActionAndAwait(EvaluteCondition);
-
-            while (condition)
-            {
-                await CharacterBattler.QueueActionAndAwait(EvaluteCondition);
-            }
+            // var state = -1;
+            // await CharacterBattler.QueueActionAndAwait(() =>
+            // {
+            //     state = Animator.StringToHash(info.stateName);
+            //     if (!Animator.HasState(0, state)) state = -1;
+            // });
+            //
+            // if (state == -1) return;
+            //
+            // await CharacterBattler.QueueActionAndAwait(() =>
+            // {
+            //     Animator.speed = info.speed;
+            //     Animator.Play(state);
+            //
+            //     var playAudio = Animator.GetBehaviours<PlayAudioClip>().FirstOrDefault(pac => pac.identifiableName == info.stateName);
+            //     playAudio?.SetSoundInfo(info.soundInfo);
+            //     
+            // });
+            //
+            // await Task.Delay(5);
+            //
+            // bool condition = false;
+            //
+            // void EvaluteCondition()
+            // {
+            //     condition = Animator.GetCurrentAnimatorStateInfo(0).shortNameHash == state;
+            //     if (!condition)
+            //     {
+            //         Animator.speed = 1f;
+            //     }
+            // }
+            //
+            // await CharacterBattler.QueueActionAndAwait(EvaluteCondition);
+            //
+            // while (condition)
+            // {
+            //     await CharacterBattler.QueueActionAndAwait(EvaluteCondition);
+            // }
+            await CharacterBattler.PlayCoroutine(PlayAndWait(info));
         }
         
         public IEnumerator PlayAndWait(CharacterBattlerAnimation characterBattlerAnimation, float speedModifier = 1f)
@@ -181,8 +188,7 @@ namespace DD.Animation
             get => Animator.GetBool("CanTransition");
             set => Animator.SetBool("CanTransition", value);
         }
-
-        [Obsolete]
+        
         protected virtual string GetStateNameFromAnimation(CharacterBattlerAnimation characterBattlerAnimation)
         {
             switch (characterBattlerAnimation)
