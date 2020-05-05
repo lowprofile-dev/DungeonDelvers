@@ -4,7 +4,7 @@ using UnityEngine;
 using XNode;
 
 [InteractableNode(defaultNodeName = "Util/Get Component")]
-public class GetComponentInteraction : Node
+public class GetComponentNode : Node
 {
     public string typeName;
     [Output] public Component component;

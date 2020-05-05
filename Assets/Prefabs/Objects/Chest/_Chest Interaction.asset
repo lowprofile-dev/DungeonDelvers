@@ -196,7 +196,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   condition: 0
---- !u!114 &-4121462315100042011
+--- !u!114 &-3757512864828082209
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,44 +205,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0732064cb7ee446a9a85cb345723dcf2, type: 3}
-  m_Name: Open Chest Interaction
+  m_Script: {fileID: 11500000, guid: 5c04a34a9ed641a292e9847e51da6cf9, type: 3}
+  m_Name: Message Box Interaction
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 824, y: 328}
+  position: {x: 712, y: 328}
   ports:
     keys:
-    - AudioSource
-    - ChestComponent
+    - Text
+    - MessageBoxPrefab
     - Entry
     - Exit
+    - SoundInfo
     values:
-    - _fieldName: AudioSource
-      _node: {fileID: -4121462315100042011}
-      _typeQualifiedName: UnityEngine.AudioSource, UnityEngine.AudioModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: component
-        node: {fileID: 4248627792009398808}
-        reroutePoints: []
+    - _fieldName: Text
+      _node: {fileID: -3757512864828082209}
+      _typeQualifiedName: System.String, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-    - _fieldName: ChestComponent
-      _node: {fileID: -4121462315100042011}
-      _typeQualifiedName: ChestComponent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: component
-        node: {fileID: 5416899770443858250}
-        reroutePoints: []
+    - _fieldName: MessageBoxPrefab
+      _node: {fileID: -3757512864828082209}
+      _typeQualifiedName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: Entry
-      _node: {fileID: -4121462315100042011}
+      _node: {fileID: -3757512864828082209}
       _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
@@ -254,7 +249,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: Exit
-      _node: {fileID: -4121462315100042011}
+      _node: {fileID: -3757512864828082209}
       _typeQualifiedName: FlowControl, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
@@ -265,9 +260,22 @@ MonoBehaviour:
       _connectionType: 1
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: SoundInfo
+      _node: {fileID: -3757512864828082209}
+      _typeQualifiedName: SoundInfo, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
   waitForCompletion: 1
-  AudioSource: {fileID: 0}
-  ChestComponent: {fileID: 0}
+  Text: Opened
+  SoundInfo:
+    AudioClip: {fileID: 0}
+    Volume: 1
+  MessageBoxPrefab: {fileID: 5457389356766954974, guid: 987eb3dfcca3ea48e93d20d121103e54,
+    type: 3}
 --- !u!114 &-3372630952826375498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,7 +289,7 @@ MonoBehaviour:
   m_Name: Set Key Interaction
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1160, y: 328}
+  position: {x: 952, y: 344}
   ports:
     keys:
     - KeyType
@@ -323,7 +331,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: Exit
-        node: {fileID: -4121462315100042011}
+        node: {fileID: -3757512864828082209}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -454,7 +462,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dfa6f9c361dd7a45bcdca638c3f3c3e, type: 3}
-  m_Name: Chest Interaction
+  m_Name: _Chest Interaction
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 1058666471833301339}
@@ -469,12 +477,11 @@ MonoBehaviour:
   - {fileID: -6175490718002650014}
   - {fileID: 5140935526969847037}
   - {fileID: 251184393546946284}
+  - {fileID: -3757512864828082209}
   - {fileID: -3372630952826375498}
   - {fileID: 4957791514239570807}
   - {fileID: 4248627792009398808}
   - {fileID: -3177295461302864926}
-  - {fileID: -4121462315100042011}
-  - {fileID: 5416899770443858250}
 --- !u!114 &251184393546946284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,7 +542,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: Entry
-        node: {fileID: -4121462315100042011}
+        node: {fileID: -3757512864828082209}
         reroutePoints: []
       _direction: 1
       _connectionType: 1
@@ -735,14 +742,11 @@ MonoBehaviour:
       - fieldName: AudioSource
         node: {fileID: 5140935526969847037}
         reroutePoints: []
-      - fieldName: AudioSource
-        node: {fileID: -4121462315100042011}
-        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  typeName: AudioSource
+  typeName: Audio Source
   component: {fileID: 0}
 --- !u!114 &4836710339307235381
 MonoBehaviour:
@@ -916,38 +920,6 @@ MonoBehaviour:
     AudioClip: {fileID: 8300000, guid: 471f6a4c1865962439c65c9dbf110341, type: 3}
     Volume: 0.1
   AudioSource: {fileID: 0}
---- !u!114 &5416899770443858250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca060dd79ff14873a0603aa5d04b2c3b, type: 3}
-  m_Name: Get Component
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 520, y: 152}
-  ports:
-    keys:
-    - component
-    values:
-    - _fieldName: component
-      _node: {fileID: 5416899770443858250}
-      _typeQualifiedName: UnityEngine.Component, UnityEngine.CoreModule, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: ChestComponent
-        node: {fileID: -4121462315100042011}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  typeName: ChestComponent
-  component: {fileID: 0}
 --- !u!114 &7834878644528677937
 MonoBehaviour:
   m_ObjectHideFlags: 0

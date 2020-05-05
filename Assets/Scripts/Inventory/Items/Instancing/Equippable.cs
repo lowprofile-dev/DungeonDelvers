@@ -12,7 +12,7 @@ public class Equippable : Item
     }
     
     public EquippableBase EquippableBase => Base as EquippableBase;
-    [ShowInInspector] public EquippableBase.EquippableSlot Slot => EquippableBase.Slot;
+    [ShowIf("hasBase")] public EquippableBase.EquippableSlot Slot => EquippableBase.Slot;
     public Equippable(EquippableBase equippableBase) : base(equippableBase)
     {
         //aplicar coisas aqui
@@ -22,4 +22,8 @@ public class Equippable : Item
     {
         
     }
+    
+#if UNITY_EDITOR
+    private bool hasBase() => Base != null;
+#endif
 }

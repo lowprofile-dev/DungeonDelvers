@@ -1,4 +1,4 @@
-Tentar limpar todos os warnings
+Criar interação que faz basicamente tudo da chest.
 Testar botar Chests na Floresta
 Fazer mais inimigos simples pra floresta
 Refazer IA com xNode (maybe)

@@ -31,7 +31,6 @@ MonoBehaviour:
     type: 3}
   GraphyPrefab: {fileID: 6065829648339744890, guid: 2bdfc096237e37ce6b63b351fe2614fc,
     type: 3}
-  DefaultMasteries: {fileID: 11400000, guid: 9d17c1ab98998a4428b129d187f82a4c, type: 2}
   AudioMixer: {fileID: 24100000, guid: 32df65edd7948dd468271bc046f84089, type: 2}
   BGMChannel: {fileID: 7151828996764371312, guid: 32df65edd7948dd468271bc046f84089,
     type: 2}
@@ -49,3 +48,8 @@ MonoBehaviour:
     Volume: 0.01
   DefaultShopMenu: {fileID: 7640681385663065397, guid: 2014795010362a74c8334521ee309dfd,
     type: 3}
+  DefaultChestSound:
+    AudioClip: {fileID: 8300000, guid: 8fe4f1de94a1a7c44b80f9f9e53197b9, type: 3}
+    Volume: 1
+  GoldTextColor: {r: 1, g: 1, b: 0, a: 1}
+  DefaultItemTextColor: {r: 0, g: 1, b: 0.9582815, a: 1}

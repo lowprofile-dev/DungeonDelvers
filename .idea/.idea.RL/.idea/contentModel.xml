@@ -488,6 +488,7 @@
             <e p="SpecialTextMatcher.cs" t="Include" />
           </e>
           <e p="Generation" t="Include">
+            <e p="ChestComponent.cs" t="Include" />
             <e p="MapTile.cs" t="Include" />
             <e p="Minimap.cs" t="Include" />
             <e p="TilemapManager.cs" t="Include" />
@@ -510,6 +511,7 @@
               <e p="GetKeyInteraction.cs" t="Include" />
               <e p="LogInteraction.cs" t="Include" />
               <e p="MessageBoxInteraction.cs" t="Include" />
+              <e p="OpenChestInteraction.cs" t="Include" />
               <e p="PlayAnimationInteraction.cs" t="Include" />
               <e p="PlaySoundInteraction.cs" t="Include" />
               <e p="SetKeyInteraction.cs" t="Include" />
@@ -523,7 +525,8 @@
             <e p="InteractionSet.cs" t="Include" />
             <e p="NodeUtility" t="Include">
               <e p="ComparisonNode.cs" t="Include" />
-              <e p="GetComponentInteraction.cs" t="Include" />
+              <e p="GetChestSoundNode.cs" t="Include" />
+              <e p="GetComponentNode.cs" t="Include" />
               <e p="GetSelfRefNode.cs" t="Include" />
               <e p="GetSumNode.cs" t="Include" />
               <e p="StringConcatInteraction.cs" t="Include" />

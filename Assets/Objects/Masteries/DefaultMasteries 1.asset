@@ -21,8 +21,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: -9166500473435020060}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 2401259997300399123}
@@ -33,8 +33,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: -9166500473435020060}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: -4331412856172096298}
@@ -49,6 +49,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -148,12 +150,6 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
-      Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
       Data: 
 --- !u!114 &-7784497594866412979
 MonoBehaviour:
@@ -176,8 +172,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: -7784497594866412979}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: -5097286513029241927}
@@ -188,8 +184,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: -7784497594866412979}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: 3273778401650247835}
@@ -204,6 +200,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -304,12 +302,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &-6088784237877168701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,8 +323,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: -6088784237877168701}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: -5732226484563946261}
@@ -343,8 +335,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: -6088784237877168701}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: -3808807377410467546}
@@ -359,6 +351,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -459,12 +453,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &-5732226484563946261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -486,8 +474,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: -5732226484563946261}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 4175777326449661443}
@@ -498,8 +486,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: -5732226484563946261}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: -6088784237877168701}
@@ -514,6 +502,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -614,12 +604,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &-5565212959082923095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,8 +625,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: -5565212959082923095}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 3273778401650247835}
@@ -653,8 +637,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: -5565212959082923095}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
@@ -666,6 +650,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -766,12 +752,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &-5097286513029241927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -793,8 +773,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: -5097286513029241927}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 2198726342465737332}
@@ -805,8 +785,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: -5097286513029241927}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: -7784497594866412979}
@@ -821,6 +801,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -921,12 +903,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &-4675049158397388486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -948,8 +924,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: -4675049158397388486}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections: []
       _direction: 0
       _connectionType: 0
@@ -957,8 +933,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: -4675049158397388486}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: 2041214390067493728}
@@ -973,6 +949,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -1073,12 +1051,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &-4331412856172096298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1100,8 +1072,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: -4331412856172096298}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: -9166500473435020060}
@@ -1112,8 +1084,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: -4331412856172096298}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: 3611588962701746735}
@@ -1128,6 +1100,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -1227,12 +1201,6 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
-      Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
       Data: 
 --- !u!114 &-3808807377410467546
 MonoBehaviour:
@@ -1255,8 +1223,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: -3808807377410467546}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: -6088784237877168701}
@@ -1267,8 +1235,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: -3808807377410467546}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
@@ -1280,6 +1248,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -1379,12 +1349,6 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
-      Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
       Data: 
 --- !u!114 &-3549695140963260957
 MonoBehaviour:
@@ -1407,8 +1371,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: -3549695140963260957}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: -2554462063506091283}
@@ -1419,8 +1383,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: -3549695140963260957}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
@@ -1432,6 +1396,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -1532,12 +1498,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &-2554462063506091283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1559,8 +1519,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: -2554462063506091283}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 3817049961534409333}
@@ -1571,8 +1531,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: -2554462063506091283}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: -3549695140963260957}
@@ -1587,6 +1547,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -1687,12 +1649,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &-1579259201496718281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1714,8 +1670,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: -1579259201496718281}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections: []
       _direction: 0
       _connectionType: 0
@@ -1723,8 +1679,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: -1579259201496718281}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: 4175777326449661443}
@@ -1739,6 +1695,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -1839,12 +1797,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &-151076689545379348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,8 +1818,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: -151076689545379348}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 1520617408298781263}
@@ -1878,8 +1830,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: -151076689545379348}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: 2336372629829383174}
@@ -1894,6 +1846,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -1993,12 +1947,6 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
-      Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
       Data: 
 --- !u!114 &11400000
 MonoBehaviour:
@@ -2064,8 +2012,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 170239045212227392}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 7774469916211002673}
@@ -2076,8 +2024,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 170239045212227392}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: 1520617408298781263}
@@ -2092,6 +2040,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -2192,12 +2142,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &1520617408298781263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2219,8 +2163,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 1520617408298781263}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 170239045212227392}
@@ -2231,8 +2175,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 1520617408298781263}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: -151076689545379348}
@@ -2247,6 +2191,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -2347,12 +2293,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &2041214390067493728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2374,8 +2314,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 2041214390067493728}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: -4675049158397388486}
@@ -2386,8 +2326,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 2041214390067493728}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: 8478556644132186269}
@@ -2402,6 +2342,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -2502,12 +2444,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &2198726342465737332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2529,8 +2465,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 2198726342465737332}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections: []
       _direction: 0
       _connectionType: 0
@@ -2538,8 +2474,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 2198726342465737332}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: -5097286513029241927}
@@ -2554,6 +2490,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -2654,12 +2592,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &2336372629829383174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2681,8 +2613,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 2336372629829383174}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: -151076689545379348}
@@ -2693,8 +2625,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 2336372629829383174}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
@@ -2706,6 +2638,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -2806,12 +2740,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &2401259997300399123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2833,8 +2761,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 2401259997300399123}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 3311102818966778026}
@@ -2845,8 +2773,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 2401259997300399123}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: -9166500473435020060}
@@ -2861,6 +2789,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -2961,12 +2891,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &2765220616138509903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2988,8 +2912,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 2765220616138509903}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections: []
       _direction: 0
       _connectionType: 0
@@ -2997,8 +2921,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 2765220616138509903}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: 5589634337188821860}
@@ -3013,6 +2937,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -3113,12 +3039,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &3273778401650247835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3140,8 +3060,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 3273778401650247835}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: -7784497594866412979}
@@ -3152,8 +3072,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 3273778401650247835}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: -5565212959082923095}
@@ -3168,6 +3088,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -3268,12 +3190,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &3311102818966778026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3295,8 +3211,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 3311102818966778026}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections: []
       _direction: 0
       _connectionType: 0
@@ -3304,8 +3220,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 3311102818966778026}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: 2401259997300399123}
@@ -3320,6 +3236,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -3420,12 +3338,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &3604176463958029920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3447,8 +3359,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 3604176463958029920}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 8478556644132186269}
@@ -3459,8 +3371,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 3604176463958029920}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: 5663142588750179456}
@@ -3475,6 +3387,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -3575,12 +3489,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &3611588962701746735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3602,8 +3510,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 3611588962701746735}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: -4331412856172096298}
@@ -3614,8 +3522,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 3611588962701746735}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
@@ -3627,6 +3535,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -3727,12 +3637,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &3817049961534409333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3754,8 +3658,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 3817049961534409333}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 5589634337188821860}
@@ -3766,8 +3670,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 3817049961534409333}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: -2554462063506091283}
@@ -3782,6 +3686,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -3882,12 +3788,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &4175777326449661443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3909,8 +3809,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 4175777326449661443}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: -1579259201496718281}
@@ -3921,8 +3821,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 4175777326449661443}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: -5732226484563946261}
@@ -3937,6 +3837,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -4036,12 +3938,6 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
-      Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
       Data: 
 --- !u!114 &5589634337188821860
 MonoBehaviour:
@@ -4064,8 +3960,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 5589634337188821860}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 2765220616138509903}
@@ -4076,8 +3972,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 5589634337188821860}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: 3817049961534409333}
@@ -4092,6 +3988,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -4192,12 +4090,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &5663142588750179456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4219,8 +4111,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 5663142588750179456}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 3604176463958029920}
@@ -4231,8 +4123,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 5663142588750179456}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
@@ -4244,6 +4136,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -4344,12 +4238,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &7774469916211002673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4371,8 +4259,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 7774469916211002673}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections: []
       _direction: 0
       _connectionType: 0
@@ -4380,8 +4268,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 7774469916211002673}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: 170239045212227392}
@@ -4396,6 +4284,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -4496,12 +4386,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
-      Data: 
 --- !u!114 &8478556644132186269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4523,8 +4407,8 @@ MonoBehaviour:
     values:
     - _fieldName: Prerequisites
       _node: {fileID: 8478556644132186269}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: RequirementOf
         node: {fileID: 2041214390067493728}
@@ -4535,8 +4419,8 @@ MonoBehaviour:
       _dynamic: 0
     - _fieldName: RequirementOf
       _node: {fileID: 8478556644132186269}
-      _typeQualifiedName: IMasteryPrerequisite, Assembly-CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
       connections:
       - fieldName: Prerequisites
         node: {fileID: 3604176463958029920}
@@ -4551,6 +4435,8 @@ MonoBehaviour:
   MasteryDescription: 
   MasteryMaxLevel: 10
   MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
@@ -4650,10 +4536,4 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 8
-      Data: 
-    - Name: Prerequisites
-      Entry: 6
-      Data: 
-    - Name: RequirementOf
-      Entry: 6
       Data: 

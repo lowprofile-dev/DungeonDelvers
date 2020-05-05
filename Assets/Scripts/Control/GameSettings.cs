@@ -47,7 +47,10 @@ public class GameSettings : SerializedScriptableObject
     [TabGroup("2","Message Box")] public SoundInfo DefaultTypingSound;
     
     [TabGroup("2","Shop Menu")] public GameObject DefaultShopMenu;
+    [TabGroup("2", "Shop Menu")] public SoundInfo DefaultChestSound;
     
-
+    [TabGroup("2","Text Settings")] public Color GoldTextColor;
+    [TabGroup("2","Text Settings")] public Color DefaultItemTextColor;
+    
 
 }

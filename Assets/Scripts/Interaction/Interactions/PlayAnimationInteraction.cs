@@ -9,7 +9,7 @@ public class PlayAnimationInteraction : Interaction
     
     public override IEnumerator PerformInteraction(Interactable source)
     {
-        var anim = GetInputValue("animator", animator);
+        var anim = GetInputValue<object>("animator", animator) as Animator;
         var animName = GetInputValue("animationName", animationName);
         
         anim.Play(animName);

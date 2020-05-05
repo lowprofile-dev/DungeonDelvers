@@ -8,6 +8,11 @@ public abstract class Item
 {
     public abstract ItemSave Serialize();
 
+    public Item Copy()
+    {
+        return ItemInstanceBuilder.BuildInstance(Serialize());
+    }
+
     [ShowInInspector] public ItemBase Base { get; private set; }
 
     public Item(ItemBase itemBase)
