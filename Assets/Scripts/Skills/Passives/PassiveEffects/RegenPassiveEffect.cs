@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class RegenPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
 {
+    public DD.Skill.Animation.Animation Animation = null; 
     //Alterar para ser um efeito de heal (que nem o DoTPassiveEffect usa dano)
     [HideIf("IsPercentageValue")] public int FlatValue = 0;
     [ShowIf("IsPercentageValue"), PropertyRange(0,1f)] public float PercentageValue = 0f;
@@ -37,6 +38,11 @@ public class RegenPassiveEffect : PassiveEffect, ITurnStartPassiveEffect
             BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(passiveEffectInfo.PassiveEffectSourceName);
             //BattleController.Instance.battleCanvas.BindActionArrow(battler.RectTransform);
         });
+        
+        if (Animation != null)
+        {
+            await Animation.PlaySkillAnimation(passiveEffectInfo.Source, new []{passiveEffectInfo.Target});
+        }
         
         Debug.Log($"{passiveEffectInfo.Source.BattlerName} curou {healAmount} em {passiveEffectInfo.Target.BattlerName}");
         

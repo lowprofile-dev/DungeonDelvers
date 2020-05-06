@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7e5dcd198672d4ab3572da034b41ed, type: 3}
+  m_Name: Forest Elemental
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: SkillAi
+      Entry: 7
+      Data: 0|RandomSkillAI, Assembly-CSharp
+    - Name: randomType
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: TargeterAi
+      Entry: 7
+      Data: 1|RandomTargetAI, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: MonsterDrops
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[Monster+IMonsterDrop, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  uniqueIdentifier: 
+  databaseIgnore: 0
+  _assetIcon: {fileID: 21300000, guid: 33e50606d55ff014385069f585c55c4a, type: 3}
+  MonsterName: Forest Elemental
+  MonsterBattler: {fileID: 1941738787345818818, guid: e5f618e146690b9448ae2f95cbf18683,
+    type: 3}
+  BaseLevel: 4
+  Stats:
+    MaxHp: 85
+    InitialEp: 15
+    EpGain: 25
+    PhysAtk: 34
+    MagAtk: 28
+    PhysDef: 35
+    MagDef: 22
+    Speed: 26
+    Accuracy: 1
+    Evasion: 0
+    CritChance: 0
+    CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
+  StatLevelVariance:
+    MaxHp: 17
+    InitialEp: 0
+    EpGain: 0
+    PhysAtk: 6
+    MagAtk: 5
+    PhysDef: 5
+    MagDef: 3
+    Speed: 3
+    Accuracy: 0
+    Evasion: 0
+    CritChance: 0
+    CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
+  HitSound:
+    AudioClip: {fileID: 8300000, guid: a9e0e39240fe4d548ae0fe809819b709, type: 3}
+    Volume: 0.1
+  Skills:
+  - {fileID: 11400000, guid: 4e02c99f0ba68b24eaebd1b727676ab6, type: 2}
+  - {fileID: 11400000, guid: b4326c1c9fbee4e4b818e09291097d4f, type: 2}
+  Passives: []
+  goldReward: {x: 0, y: 0}

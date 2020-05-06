@@ -24,6 +24,9 @@ MonoBehaviour:
     - Name: SkillAi
       Entry: 7
       Data: 0|RandomSkillAI, Assembly-CSharp
+    - Name: randomType
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -54,16 +57,16 @@ MonoBehaviour:
     type: 3}
   BaseLevel: 2
   Stats:
-    MaxHp: 75
-    InitialEp: 25
-    EpGain: 15
+    MaxHp: 65
+    InitialEp: 15
+    EpGain: 25
     PhysAtk: 22
     MagAtk: 19
-    PhysDef: 20
-    MagDef: 20
+    PhysDef: 24
+    MagDef: 5
     Speed: 21
     Accuracy: 0.95
-    Evasion: -0.05
+    Evasion: 0
     CritChance: 0
     CritAvoid: 0
     ElementalResistance:
@@ -76,14 +79,14 @@ MonoBehaviour:
       WaterResistance: 0
       WindResistance: 0
   StatLevelVariance:
-    MaxHp: 7
+    MaxHp: 10
     InitialEp: 0
     EpGain: 0
     PhysAtk: 4
     MagAtk: 3
-    PhysDef: 3
-    MagDef: 3
-    Speed: 2
+    PhysDef: 4
+    MagDef: 1
+    Speed: 3
     Accuracy: 0
     Evasion: 0
     CritChance: 0
@@ -103,4 +106,4 @@ MonoBehaviour:
   Skills:
   - {fileID: 11400000, guid: e07bc40db4e43524f97da1022fda3f16, type: 2}
   Passives: []
-  goldReward: {x: 4, y: 8}
+  goldReward: {x: 4, y: 6}

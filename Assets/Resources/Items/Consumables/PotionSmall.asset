@@ -51,7 +51,7 @@ MonoBehaviour:
   goldValue: 5
   droppable: 1
   itemText: Small Potion
-  maxStack: 9
+  maxStack: 10
   ItemSkill: {fileID: 11400000, guid: 3aae108ae71cbf1168a17aba33a4c8d7, type: 2}
   SoundInfo:
     AudioClip: {fileID: 8300000, guid: 0e400324959856740ba47313a3697eda, type: 3}

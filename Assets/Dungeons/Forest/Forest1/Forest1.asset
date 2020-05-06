@@ -21,7 +21,11 @@ MonoBehaviour:
   BranchCount:
     Min: 1
     Max: 5
-  GlobalProps: []
+  GlobalProps:
+  - ID: 0
+    Count:
+      Min: 3
+      Max: 6
   KeyManager: {fileID: 0}
   DoorwayConnectionChance: 0.5
   RestrictConnectionToSameSection: 1

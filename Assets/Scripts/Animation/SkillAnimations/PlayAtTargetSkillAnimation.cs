@@ -13,13 +13,16 @@ namespace DD.Skill.Animation
         public override async Task PlaySkillAnimation(Battler source, IEnumerable<Battler> targets)
         {
             List<Task> Animations = new List<Task>();
-            await GameController.Instance.QueueActionAndAwait(() =>
+            var leftoverObjects = new List<GameObject>();
+            await source.QueueActionAndAwait(() =>
             {
                 targets.ForEach(target =>
                 {
                     var animationObject = GameObject.Instantiate(GameSettings.Instance.AnimationObject,
                         BattleController.Instance.battleCanvas.transform);
 
+                    leftoverObjects.Add(animationObject);
+                    
                     var animation = animationObject.GetComponent<AnimationObject>();
                     animation.transform.position = target.RectTransform.position;
                 
@@ -30,6 +33,10 @@ namespace DD.Skill.Animation
             });
 
             await Task.WhenAll(Animations);
+            await source.QueueActionAndAwait(() =>
+            {
+                foreach (var o in leftoverObjects) Object.Destroy(o);
+            });
         }
     }
 }

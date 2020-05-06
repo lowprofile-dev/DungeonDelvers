@@ -148,7 +148,7 @@ public class MonsterBattler : Battler
         var targets = turn.Targets;
         var skill = turn.Skill;
 
-        if (Skills != null)
+        if (skill != null)
         {
             QueueAction(() =>
             {
@@ -167,6 +167,10 @@ public class MonsterBattler : Battler
                 BattleController.Instance.battleCanvas.CleanTargetArrows();
             });
             
+            if (skill.SkillAnimation != null)
+            {
+                await skill.SkillAnimation.PlaySkillAnimation(this, turn.Targets);
+            }
         } 
     }
 
@@ -289,6 +293,8 @@ public class MonsterBattler : Battler
             image.color = normalColor;
             yield return new WaitForSeconds(0.05f);
         }
+
+        image.color = normalColor;
     }
 
     protected virtual async Task Fade()

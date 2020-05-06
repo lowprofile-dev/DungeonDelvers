@@ -172,7 +172,7 @@ MonoBehaviour:
   SkillName: Stab
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 15
+  ApCost: 15
   Element: 0
   SkillDescription: Attack one target with a knife, making them bleed.
   Target: 0

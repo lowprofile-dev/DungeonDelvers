@@ -41,6 +41,7 @@ public class GameSettings : SerializedScriptableObject
     [TabGroup("1", "Audio Settings")] public AudioMixerGroup SFXChannel;
     [TabGroup("1", "Audio Settings")] public AudioMixerGroup TextChannel;
 
+    [TabGroup("1", "Battle Settings")] public SoundInfo DefaultMonsterHitSound;
     [TabGroup("1", "Battle Settings")] public SoundInfo DefaultFanfare;
     
     [TabGroup("2","Message Box")] public GameObject DefaultMessageBox;

@@ -1,6 +1,6 @@
-Criar interação que faz basicamente tudo da chest.
-Testar botar Chests na Floresta
+Rebalancear um pouco os stats (ForestElemental deve dar mais dano do que tá dando, testar como ficaria em teoria contra party lv 4)
 Fazer mais inimigos simples pra floresta
+Remover CurrentEp e EpGain dos stats. Se for mudar a quantidade de Ep vai ser com passiva no inicio da luta/turno
 Refazer IA com xNode (maybe)
 Fazer boss da floresta com IA especial e DragonBones
 Fazer cidade

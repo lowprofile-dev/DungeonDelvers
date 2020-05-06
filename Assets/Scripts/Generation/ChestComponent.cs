@@ -11,7 +11,7 @@ public class ChestComponent : SerializedMonoBehaviour
 {
     //public SoundInfo SoundInfo;
     public GameObject MessageBoxPrefab;
-    public List<ChestReward> Rewards;
+    public List<ChestReward> Rewards = new List<ChestReward>();
 
     private void Reset()
     {
@@ -52,12 +52,27 @@ public class GoldChestReward : ChestReward
 
 public class ItemChestReward : ChestReward
 {
-    public Item Item;
+    public ItemBase Item;
+    [ShowIf("itemIsConsumable")]public int Quantity;
+    
+    #if UNITY_EDITOR
+    private bool itemIsConsumable() => Item as ConsumableBase != null;
+    #endif
     
     public override string GivePlayer()
     {
-        var copy = Item.Copy();
-        PlayerController.Instance.AddItemToInventory(copy);
-        return $"You found <color={GameSettings.Instance.DefaultItemTextColor.ToHex()}>{copy.InspectorName}</color>!";
+        var instance = ItemInstanceBuilder.BuildInstance(Item);
+        if (instance is IStackable stackable)
+        {
+            stackable.Quantity = Quantity;
+            PlayerController.Instance.AddItemToInventory(instance);
+            return $"You found {stackable.Quantity}x <color={GameSettings.Instance.DefaultItemTextColor.ToHex()}>{instance}</color>!";
+        }
+        else
+        {
+            PlayerController.Instance.AddItemToInventory(instance);
+            return $"You found <color={GameSettings.Instance.DefaultItemTextColor.ToHex()}>{instance}</color>!";
+        }
+        
     }
 }

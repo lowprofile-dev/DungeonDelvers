@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2592216887305988464}
   - component: {fileID: 6815109708225717876}
   - component: {fileID: 5164224238832317265}
+  - component: {fileID: 4699029521690510151}
   m_Layer: 8
   m_Name: Chest
   m_TagString: Untagged
@@ -269,5 +270,41 @@ MonoBehaviour:
       Entry: 8
       Data: 
   interactableType: 0
-  Interactions: {fileID: 11400000, guid: e3494203395d1484fa7bf63b4b1767a2, type: 2}
+  Interactions: {fileID: 11400000, guid: cee791add00cd8448b3292730bd65c2d, type: 2}
   IsInteracting: 0
+--- !u!114 &4699029521690510151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6287123691419617090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3a064a27dd4fe78b3060ed2bf23f46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Rewards
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[ChestReward, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  MessageBoxPrefab: {fileID: 5457389356766954974, guid: 987eb3dfcca3ea48e93d20d121103e54,
+    type: 3}

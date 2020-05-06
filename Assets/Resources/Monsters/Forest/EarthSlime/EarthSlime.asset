@@ -21,12 +21,24 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: MonsterAi
-      Entry: 6
+    - Name: SkillAi
+      Entry: 7
+      Data: 0|RandomSkillAI, Assembly-CSharp
+    - Name: randomType
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: TargeterAi
+      Entry: 7
+      Data: 1|RandomTargetAI, Assembly-CSharp
+    - Name: 
+      Entry: 8
       Data: 
     - Name: MonsterDrops
       Entry: 7
-      Data: 0|System.Collections.Generic.List`1[[Monster+IMonsterDrop, Assembly-CSharp]],
+      Data: 2|System.Collections.Generic.List`1[[Monster+IMonsterDrop, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
@@ -43,18 +55,18 @@ MonoBehaviour:
   MonsterName: Earth Slime
   MonsterBattler: {fileID: 1941738787345818818, guid: 832768d8da26d8f4e83eb539558d3e41,
     type: 3}
-  BaseLevel: 2
+  BaseLevel: 3
   Stats:
-    MaxHp: 0
-    InitialEp: 0
-    EpGain: 0
-    PhysAtk: 0
-    MagAtk: 0
-    PhysDef: 0
-    MagDef: 0
-    Speed: 0
-    Accuracy: 0
-    Evasion: 0
+    MaxHp: 70
+    InitialEp: 15
+    EpGain: 25
+    PhysAtk: 19
+    MagAtk: 20
+    PhysDef: 35
+    MagDef: 5
+    Speed: 12
+    Accuracy: 0.95
+    Evasion: -0.05
     CritChance: 0
     CritAvoid: 0
     ElementalResistance:
@@ -67,14 +79,14 @@ MonoBehaviour:
       WaterResistance: 0
       WindResistance: 0
   StatLevelVariance:
-    MaxHp: 0
+    MaxHp: 12
     InitialEp: 0
     EpGain: 0
-    PhysAtk: 0
-    MagAtk: 0
-    PhysDef: 0
-    MagDef: 0
-    Speed: 0
+    PhysAtk: 5
+    MagAtk: 4
+    PhysDef: 4
+    MagDef: 1
+    Speed: 1
     Accuracy: 0
     Evasion: 0
     CritChance: 0
@@ -89,8 +101,10 @@ MonoBehaviour:
       WaterResistance: 0
       WindResistance: 0
   HitSound:
-    AudioClip: {fileID: 0}
-    Volume: 1
-  Skills: []
-  Passives: []
+    AudioClip: {fileID: 8300000, guid: a9e0e39240fe4d548ae0fe809819b709, type: 3}
+    Volume: 0.1
+  Skills:
+  - {fileID: 11400000, guid: ca124cc1043ba054f9d930084d654df7, type: 2}
+  Passives:
+  - {fileID: 11400000, guid: e295e264571c5354eae54030eac639b5, type: 2}
   goldReward: {x: 0, y: 0}

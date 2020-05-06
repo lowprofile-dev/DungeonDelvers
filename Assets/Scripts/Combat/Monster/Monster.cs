@@ -41,6 +41,11 @@ public class Monster : SerializableAsset
     public Vector2Int goldReward;
     public List<IMonsterDrop> MonsterDrops = new List<IMonsterDrop>();
 
+    protected virtual void Reset()
+    {
+        HitSound = GameSettings.Instance.DefaultMonsterHitSound;
+    }
+
     public virtual MonsterBattler BuildBattler(int level)
     {
         var battler = new GameObject(MonsterName);

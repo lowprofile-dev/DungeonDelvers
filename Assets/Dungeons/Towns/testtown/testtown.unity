@@ -16168,7 +16168,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   waitForCompletion: 1
-  EncounterSet: {fileID: 11400000, guid: aa3795a108b68a34da9d8357dea71ba6, type: 2}
+  EncounterSet: {fileID: 11400000, guid: 43307fdcbfab091498c97269c4a8c3b7, type: 2}
   BattlegroundSprite: {fileID: 8765297898444631108, guid: a99c05a645dd3bdc3ab751e230483dd8,
     type: 3}
 --- !u!114 &633015371
@@ -18221,12 +18221,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4699029521690510151, guid: 2e5f4309175b2a24cb641d889a27dc82,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 4699029521690510151, guid: 2e5f4309175b2a24cb641d889a27dc82,
+        type: 3}
     - target: {fileID: 5164224238832317265, guid: 2e5f4309175b2a24cb641d889a27dc82,
         type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 5164224238832317265, guid: 2e5f4309175b2a24cb641d889a27dc82,
         type: 3}
+    - target: {fileID: 5164224238832317265, guid: 2e5f4309175b2a24cb641d889a27dc82,
+        type: 3}
+      propertyPath: Interactions
+      value: 
+      objectReference: {fileID: 11400000, guid: e3494203395d1484fa7bf63b4b1767a2,
+        type: 2}
     - target: {fileID: 6287123691419617090, guid: 2e5f4309175b2a24cb641d889a27dc82,
         type: 3}
       propertyPath: m_Name
@@ -19553,7 +19565,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9047619, y: 0.85714287}
+    oldSize: {x: 1.1875, y: 1.125}
     newSize: {x: 0.19, y: 0.18}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
