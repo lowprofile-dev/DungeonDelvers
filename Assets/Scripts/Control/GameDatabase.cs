@@ -7,7 +7,7 @@ using Sirenix.Serialization;
 using Sirenix.Utilities;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Game Database")]
+[CreateAssetMenu(menuName = "Database/Game Database"), Obsolete]
 public class GameDatabase : SerializedScriptableObject
 {
     private static GameDatabase _instance;
@@ -26,10 +26,10 @@ public class GameDatabase : SerializedScriptableObject
         }
     }
 
-    [SerializeField] private List<Database> _databases;
+    [SerializeField] private List<_Database> _databases;
     [SerializeField] public int DatabaseVersion { get; private set; }
 
-    public static Database Database =>
+    public static _Database Database =>
         Instance._databases.FirstOrDefault(database => database.DatabaseVersion == Instance.DatabaseVersion);
     
 #if UNITY_EDITOR
@@ -38,7 +38,7 @@ public class GameDatabase : SerializedScriptableObject
     {
         try
         {
-            var database = new Database();
+            var database = new _Database();
             if (_databases.Any())
             {
                 database.DatabaseVersion = _databases.OrderByDescending(db => db.DatabaseVersion).First().DatabaseVersion + 1;
@@ -101,7 +101,7 @@ public class GameDatabase : SerializedScriptableObject
 }
 
 [Serializable]
-public class Database
+public class _Database
 {
     public int DatabaseVersion;
     public List<CharacterBase> CharacterBases = new List<CharacterBase>();

@@ -7,7 +7,7 @@ public class MiscItem : Item, IStackable
     {
         return new MiscItemSave
         {
-            baseUid = Base.uniqueIdentifier,
+            baseUid = GameSettings.Instance.ItemDatabase.GetId(Base).Value,
             Quantity = quantity
         };
     }

@@ -7,27 +7,24 @@ using UnityEngine;
 
 public static class ItemInstanceBuilder
 {
-    public static Item BuildInstance(string uid)
+    public static Item BuildInstance(int uid)
     {
-        var database = ItemDatabase.Instance;
+        var database = GameSettings.Instance.ItemDatabase;
 
         if (database == null)
-            return null;
-
-        var uidQuery = from item in database.Items
-            where item.uniqueIdentifier == uid
-            select item;
-
-        var itemBases = uidQuery as ItemBase[] ?? uidQuery.ToArray();
-        if (!itemBases.Any())
         {
-            Debug.LogError($"UID {uid} inválido.");
-            return null;
+            Debug.LogError("Item Database Missing");
+            Application.Quit();
         }
 
-        var baseItem = itemBases.First();
+        var validUid = database.Content.TryGetValue(uid, out var itemBase);
 
-        return BuildInstance(baseItem);
+        if (!validUid)
+        {
+            Debug.LogError($"UID inválido: {uid}");
+        }
+
+        return BuildInstance(itemBase);
     }
 
     public static Item BuildInstance(ItemBase baseItem)
@@ -43,7 +40,7 @@ public static class ItemInstanceBuilder
 
     public static Item BuildInstance(ItemSave itemSave)
     {
-        if (string.IsNullOrEmpty(itemSave.baseUid))
+        if (itemSave.baseUid == -1)
             return null;
         
         if (itemSave is EquippableSave equippableSave)

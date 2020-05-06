@@ -22,7 +22,7 @@ public class Consumable : Item, IStackable
     {
         return new ConsumableSave
         {
-            baseUid = Base.uniqueIdentifier,
+            baseUid = GameSettings.Instance.ItemDatabase.GetId(Base).Value,
             Quantity = quantity
         };
     }

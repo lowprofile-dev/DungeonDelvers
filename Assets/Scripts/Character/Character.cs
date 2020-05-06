@@ -20,7 +20,7 @@ public class Character
     {
         var save = new CharacterSave()
         {
-            baseUid = Base.uniqueIdentifier,
+            baseUid = GameSettings.Instance.CharacterDatabase.GetId(Base).Value,
             currentHp = currentHp,
             serializedMasteryInstances = MasteryInstances.Select(mI => mI.Serialize()).ToArray(),
             Equipment = EquippableSaves(),
@@ -50,7 +50,15 @@ public class Character
     {
         try
         {
-            Base = GameDatabase.Database.CharacterBases.Find(x => x.uniqueIdentifier == save.baseUid);
+            //Base = GameDatabase.Database.CharacterBases.Find(x => x.uniqueIdentifier == save.baseUid);
+            var baseExists = GameSettings.Instance.CharacterDatabase.Content.TryGetValue(save.baseUid, out var characterBase);
+            if (!baseExists)
+            {
+                Debug.LogError("Missing character base");
+                throw new Exception();
+            }
+
+            Base = characterBase;
             MasteryInstances = Base.Masteries.Initialize(this, save.serializedMasteryInstances);
 
             Weapon = ItemInstanceBuilder.BuildInstance(save.Equipment[0]) as Equippable;
@@ -132,7 +140,7 @@ public class Character
             if (equipment == null)
                 return new EquippableSave
                 {
-                    baseUid = ""
+                    baseUid = -1
                 };
 
             return equipment.Serialize();

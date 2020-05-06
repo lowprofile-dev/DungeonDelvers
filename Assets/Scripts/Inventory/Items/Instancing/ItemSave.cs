@@ -3,5 +3,5 @@ using System;
 [Serializable]
 public class ItemSave
 {
-    public string baseUid;
+    public int baseUid;
 }

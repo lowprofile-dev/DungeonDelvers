@@ -466,6 +466,11 @@
           <e p="Control" t="Include">
             <e p="AsyncMonoBehaviour.cs" t="Include" />
             <e p="DamageType.cs" t="Include" />
+            <e p="Database" t="Include">
+              <e p="CharacterDatabase.cs" t="Include" />
+              <e p="Database.cs" t="Include" />
+              <e p="ItemDatabase.cs" t="Include" />
+            </e>
             <e p="Element.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
             <e p="GameDatabase.cs" t="Include" />
@@ -534,6 +539,7 @@
           </e>
           <e p="Inventory" t="Include">
             <e p="Items" t="Include">
+              <e p="_ItemDatabase.cs" t="Include" />
               <e p="ConsumableBase.cs" t="Include" />
               <e p="ConsumableUse" t="Include">
                 <e p="ConsumableUse.cs" t="Include" />
@@ -568,7 +574,6 @@
                 <e p="MiscItemSave.cs" t="Include" />
               </e>
               <e p="ItemBase.cs" t="Include" />
-              <e p="ItemDatabase.cs" t="Include" />
               <e p="MiscItemBase.cs" t="Include" />
             </e>
           </e>

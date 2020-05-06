@@ -31,7 +31,7 @@ public class InventoryConverter : JsonConverter
     {
         var Inventory = new List<Item>();
 
-        var jtoken =JToken.Load(reader);
+        var jtoken = JToken.Load(reader);
         var items = jtoken.ToObject<List<SerializedItem>>();
 
         foreach (var item in items)
@@ -60,10 +60,10 @@ public class InventoryConverter : JsonConverter
                     throw new DeserializationFailureException(typeof(Item));
             }
 
+            if (parsedSave.baseUid == -1) continue;
             var builtItem = ItemInstanceBuilder.BuildInstance(parsedSave);
             if (builtItem != null) Inventory.Add(builtItem);
         }
-
         
         return Inventory;
     }

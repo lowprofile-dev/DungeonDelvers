@@ -7,7 +7,7 @@ public class Equippable : Item
     {
         return new EquippableSave
         {
-            baseUid = Base.uniqueIdentifier
+            baseUid = GameSettings.Instance.ItemDatabase.GetId(Base).Value
         };
     }
     

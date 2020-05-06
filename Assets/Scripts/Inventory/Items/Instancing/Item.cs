@@ -25,7 +25,7 @@ public abstract class Item
         //Base = ItemDatabase.Instance.Items.Find(x => x.uniqueIdentifier == itemSave.baseUid);
         try
         {
-            Base = GameDatabase.Database.Items.Find(x => x.uniqueIdentifier == itemSave.baseUid);
+            Base = GameSettings.Instance.ItemDatabase.Content[itemSave.baseUid];
         }
         catch (Exception e)
         {

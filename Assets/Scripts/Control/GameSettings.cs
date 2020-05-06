@@ -53,5 +53,6 @@ public class GameSettings : SerializedScriptableObject
     [TabGroup("2","Text Settings")] public Color GoldTextColor;
     [TabGroup("2","Text Settings")] public Color DefaultItemTextColor;
     
-
+    [TabGroup("3","Databases")] public ItemDatabase ItemDatabase;
+    [TabGroup("3","Databases")] public CharacterDatabase CharacterDatabase;
 }

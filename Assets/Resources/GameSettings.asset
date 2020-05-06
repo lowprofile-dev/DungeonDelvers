@@ -56,3 +56,5 @@ MonoBehaviour:
     Volume: 1
   GoldTextColor: {r: 1, g: 1, b: 0, a: 1}
   DefaultItemTextColor: {r: 0, g: 1, b: 0.9582815, a: 1}
+  ItemDatabase: {fileID: 11400000, guid: f7ef9f9a82d541c498a2544685fd9cdc, type: 2}
+  CharacterDatabase: {fileID: 11400000, guid: a5f8fd2a2e291074880bacad09af25c8, type: 2}

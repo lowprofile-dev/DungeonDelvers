@@ -10,6 +10,6 @@ using UnityEngine;
 
 public class SerializableAsset : SerializedScriptableObject
 {
-    [PropertyOrder(-999)] public string uniqueIdentifier = "";
+    [PropertyOrder(-999), ReadOnly] public string uniqueIdentifier = "";
     [PropertyOrder(-998)] public bool databaseIgnore = false;
 }
