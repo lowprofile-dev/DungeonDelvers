@@ -369,6 +369,7 @@
         <e p="Scripts" t="Include">
           <e p="_Debug" t="Include">
             <e p="dragonbonestest.cs" t="Include" />
+            <e p="generaltest.cs" t="Include" />
             <e p="GoToScene.cs" t="Include" />
             <e p="playanim.cs" t="Include" />
             <e p="playbgm.cs" t="Include" />

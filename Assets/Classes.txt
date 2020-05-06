@@ -1,9 +1,9 @@
-﻿Knight -> 2h-Sword, Spear -> Heavy
-Fighter -> Axe, 2h-Sword -> Light
-Rogue -> 1h-Sword, Knife -> Light
+﻿Knight -> Longsword, Spear -> Heavy
+Fighter -> Axe, Longsword -> Light
+Rogue -> Shortsword, Knife -> Light
 Assassin -> Knife, Bow -> Light
 Priest -> Staff, Tome -> Heavy
-Magician -> Tome, 1h-Sword -> Light
+Magician -> Tome, Shortsword -> Light
 Paladin -> Spear, Staff -> Heavy
 Hunter -> Bow, Axe -> Heavy
 

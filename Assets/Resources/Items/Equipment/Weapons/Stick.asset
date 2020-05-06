@@ -22,18 +22,18 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   uniqueIdentifier: Items/Equipment/Weapons/Stick
-  databaseIgnore: 0
+  databaseIgnore: 1
   itemIcon: {fileID: 5598687599248470455, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
   itemName: Stick
   goldValue: 2
-  itemWeight: 0
+  droppable: 1
   itemText: Literally a stick.
-  Stats:
+  BaseStats:
     MaxHp: 0
     InitialEp: 0
     EpGain: 0
-    PhysAtk: 5
+    PhysAtk: 0
     MagAtk: 0
     PhysDef: 0
     MagDef: 0
@@ -42,6 +42,15 @@ MonoBehaviour:
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
   Skills:
   - {fileID: 11400000, guid: 49b227031f2f8b946a474b091b43415c, type: 2}
   Passives: []

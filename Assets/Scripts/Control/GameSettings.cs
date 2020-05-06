@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Audio;
 #if UNITY_EDITOR
@@ -55,4 +56,9 @@ public class GameSettings : SerializedScriptableObject
     
     [TabGroup("3","Databases")] public ItemDatabase ItemDatabase;
     [TabGroup("3","Databases")] public CharacterDatabase CharacterDatabase;
+    
+    [TabGroup("4","Equipment")] 
+    public Dictionary<EquippableBase.EquippableTier, int> DefaultEquipmentQualityChance;
+    [TabGroup("4", "Equipment")] 
+    public Dictionary<EquippableBase.EquippableTier, Color> DefaultEquipmentQualityColor;
 }

@@ -7,32 +7,53 @@ using UnityEngine;
 [Serializable]
 public abstract class EquippableBase : ItemBase
 {
+    private void Reset()
+    {
+        
+    }
+    
     [FoldoutGroup("Stats")] public Stats BaseStats;
     public List<PlayerSkill> Skills;
     public List<Passive> Passives;
-
-    [Serializable]
-    public enum EquippableSlot
-    {
-        Accessory,
-        Body,
-        Feet,
-        Hand,
-        Head,
-        Weapon
-    }
-
-    [Serializable]
-    public enum ArmorType
-    {
-        Light,
-        Heavy
-    }
     
     public abstract EquippableSlot Slot { get; }
+
+    //public 
+    
+    #region Declarations
+
+    [Serializable]
+        public enum EquippableSlot
+        {
+            Accessory,
+            Body,
+            Feet,
+            Hand,
+            Head,
+            Weapon
+        }
+    
+        [Serializable]
+        public enum ArmorType
+        {
+            Light,
+            Heavy
+        }
+        
+        [Serializable]
+        public enum EquippableTier
+        {
+            Damaged,
+            Normal,
+            Rare,
+            Epic,
+            Masterpiece
+        }
+
+    #endregion
 }
 
-public class EquipmentQuality
+public class EquippableTierRewards
 {
-    public string QualityName = "";
+    public EquippableBase.EquippableTier EquippableTier;
 }
