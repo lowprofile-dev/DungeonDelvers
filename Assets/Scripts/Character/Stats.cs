@@ -1,20 +1,21 @@
 ﻿using System;
 using Sirenix.OdinInspector;
+using SkredUtils;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 
 [Serializable] public struct Stats
 {
     public int MaxHp;
-    public int InitialEp;
-    public int EpGain;
     public int PhysAtk;
     public int MagAtk;
     public int PhysDef;
     public int MagDef;
     public int Speed;
-    [PropertyRange(0, 1)] public float Accuracy;
+    [PropertyRange(-1, 1)] public float Accuracy;
     [PropertyRange(-1, 1)] public float Evasion;
-    [PropertyRange(0, 1)] public float CritChance;
+    [PropertyRange(-1, 1)] public float CritChance;
     [PropertyRange(-1, 1)] public float CritAvoid;
     public ElementalResistance ElementalResistance;
 
@@ -23,8 +24,6 @@ using Sirenix.OdinInspector;
         return new Stats()
         {
             MaxHp = a.MaxHp + b.MaxHp,
-            InitialEp = a.InitialEp + b.InitialEp,
-            EpGain = a.EpGain + b.EpGain,
             PhysAtk = a.PhysAtk + b.PhysAtk,
             MagAtk = a.MagAtk + b.MagAtk,
             PhysDef = a.PhysDef + b.PhysDef,
@@ -43,8 +42,6 @@ using Sirenix.OdinInspector;
         return new Stats()
         {
             MaxHp = a.MaxHp - b.MaxHp,
-            InitialEp = a.InitialEp - b.InitialEp,
-            EpGain = a.EpGain - b.EpGain,
             PhysAtk = a.PhysAtk - b.PhysAtk,
             MagAtk = a.MagAtk - b.MagAtk,
             PhysDef = a.PhysDef - b.PhysDef,
@@ -63,8 +60,6 @@ using Sirenix.OdinInspector;
         return new Stats()
         {
             MaxHp = a.MaxHp * b.MaxHp,
-            InitialEp = a.InitialEp * b.InitialEp,
-            EpGain = a.EpGain * b.EpGain,
             PhysAtk = a.PhysAtk * b.PhysAtk,
             MagAtk = a.MagAtk * b.MagAtk,
             PhysDef = a.PhysDef * b.PhysDef,
@@ -83,8 +78,6 @@ using Sirenix.OdinInspector;
         return new Stats()
         {
             MaxHp = a.MaxHp * b,
-            InitialEp = a.InitialEp * b,
-            EpGain = a.EpGain * b,
             PhysAtk = a.PhysAtk * b,
             MagAtk = a.MagAtk * b,
             PhysDef = a.PhysDef * b,
@@ -95,6 +88,40 @@ using Sirenix.OdinInspector;
             CritChance = a.CritChance * b,
             CritAvoid = a.CritAvoid * b,
             ElementalResistance = a.ElementalResistance * b
+        };
+    }
+}
+
+[Serializable] public struct StatsRange
+{
+    public Vector2Int MaxHp;
+    public Vector2Int PhysAtk;
+    public Vector2Int MagAtk;
+    public Vector2Int PhysDef;
+    public Vector2Int MagDef;
+    public Vector2Int Speed;
+    [Space]
+    public Vector2 Accuracy;
+    public Vector2 Evasion;
+    public Vector2 CritChance;
+    public Vector2 CritAvoid;
+    public ElementalResistanceRange ElementalResistanceRange;
+
+    public Stats Roll()
+    {
+        return new Stats
+        {
+            MaxHp = Random.Range(MaxHp.x, MaxHp.y),
+            PhysAtk = Random.Range(PhysAtk.x, PhysAtk.y),
+            MagAtk = Random.Range(MagAtk.x, MagAtk.y),
+            PhysDef = Random.Range(PhysDef.x, PhysDef.y),
+            MagDef = Random.Range(MagDef.x, MagDef.y),
+            Speed = Random.Range(Speed.x, Speed.y),
+            Accuracy = Random.Range(Accuracy.x, Accuracy.y),
+            Evasion = Random.Range(Evasion.x, Evasion.y),
+            CritChance = Random.Range(CritChance.x, CritChance.y),
+            CritAvoid = Random.Range(CritAvoid.x, CritAvoid.y),
+            ElementalResistance = ElementalResistanceRange.Roll()
         };
     }
 }
@@ -212,6 +239,33 @@ using Sirenix.OdinInspector;
             LightningResistance = a.LightningResistance * b,
             WaterResistance = a.WaterResistance * b,
             WindResistance = a.WaterResistance * b
+        };
+    }
+}
+
+[Serializable] public struct ElementalResistanceRange
+{
+    public Vector2 EarthResistance;
+    public Vector2 FireResistance;
+    public Vector2 HolyResistance;
+    public Vector2 DarkResistance;
+    public Vector2 IceResistance;
+    public Vector2 LightningResistance;
+    public Vector2 WaterResistance;
+    public Vector2 WindResistance;
+
+    public ElementalResistance Roll()
+    {
+        return new ElementalResistance
+        {
+            EarthResistance = Random.Range(EarthResistance.x, EarthResistance.y),
+            FireResistance = Random.Range(FireResistance.x, FireResistance.y),
+            HolyResistance = Random.Range(HolyResistance.x, HolyResistance.y),
+            DarkResistance = Random.Range(DarkResistance.x, DarkResistance.y),
+            IceResistance = Random.Range(IceResistance.x, IceResistance.y),
+            LightningResistance = Random.Range(LightningResistance.x, LightningResistance.y),
+            WaterResistance = Random.Range(WaterResistance.x, WaterResistance.y),
+            WindResistance = Random.Range(WindResistance.x, WindResistance.y)
         };
     }
 }

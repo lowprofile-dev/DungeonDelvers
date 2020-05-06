@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Items/Equippable/BodyBase")]
+[CreateAssetMenu(menuName = "Items/Equippable/FeetBase")]
 public class FeetBase : EquippableBase, IArmorTypeEquipment
 {
     [SerializeField] private ArmorType _armorType;

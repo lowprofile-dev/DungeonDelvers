@@ -53,7 +53,7 @@ public class MonsterBattler : Battler
         image = monsterBattler.gameObject.Ensure<Image>();
 
         CurrentHp = Stats.MaxHp;
-        CurrentAp = Stats.InitialEp;
+        CurrentAp = GameSettings.Instance.InitialAp;
         
         BattleDictionary = new Dictionary<object, object>();
         Passives = MonsterBase.Passives;
@@ -178,6 +178,11 @@ public class MonsterBattler : Battler
     {
         switch (effectResult)
         {
+            case BlockPassiveEffect.BlockedResult _:
+            {
+                await BattleController.Instance.battleCanvas.ShowSkillResultAsync(this, "Blocked!", Color.white, 0.8f);
+                break;
+            }
             case DamageEffect.DamageEffectResult damageEffectResult when !Fainted:
             {
                 var hitSound = PlayHitSound();

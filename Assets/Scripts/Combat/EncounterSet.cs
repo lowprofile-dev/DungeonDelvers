@@ -41,7 +41,7 @@ public class EncounterSet : SerializableAsset {
     public Item[] GetItemReward()
     {
         if (overrideItemDrops != null)
-            return overrideItemDrops.Select(ItemInstanceBuilder.BuildInstance).ToArray();
+            return overrideItemDrops.Select(iB => ItemInstanceBuilder.BuildInstance(iB)).ToArray();
 
         var list = new List<Item>();
 

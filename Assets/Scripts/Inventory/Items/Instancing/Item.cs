@@ -36,6 +36,7 @@ public abstract class Item
 
     public virtual string InspectorName => Base.itemName;
     public virtual string InspectorDescription => Base.itemText;
+    public virtual string ColoredInspectorName => InspectorName;
 }
 
 //Ver como vai ser a serialização dos itens levando em conta os tipos diferentes

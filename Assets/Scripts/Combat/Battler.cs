@@ -92,7 +92,7 @@ public abstract class Battler : AsyncMonoBehaviour
 
     public async Task TurnStart()
     {
-        CurrentAp += Stats.EpGain;
+        CurrentAp += GameSettings.Instance.ApGain;
         Debug.Log($"Começou o turno de {BattlerName}");
 
         var expiredStatusEffects = StatusEffectInstances

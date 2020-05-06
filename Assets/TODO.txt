@@ -1,3 +1,4 @@
+Mover party base e inventario base para o gamesettings
 Rebalancear um pouco os stats (ForestElemental deve dar mais dano do que tá dando, testar como ficaria em teoria contra party lv 4)
 Fazer mais inimigos simples pra floresta
 Remover CurrentEp e EpGain dos stats. Se for mudar a quantidade de Ep vai ser com passiva no inicio da luta/turno
@@ -19,6 +20,8 @@ Travelling Merchant -> Aparece aleatóriamente em mapas algumas vezes (muda de p
 Inimigos não dropam gold, mas os ETC que dropam podem ser vendidos (e são materiais pra crafting também)
 
 Futuro:
+Refazer o MultiHitDamageEffect pra ser só varios DamageEffects
+Tratamento melhor de erros: ver como evitar quebrar o jogo e se possivel concertar quando dá coisa que não é pra dar (ex. equipado com arma invalida, ver em relação aos battlers)
 Tirar o animationobject e só fazer pra criar um gameobject que tem um componente abstrato que recebe parametros, e esperar até esse objeto for destruido
 Refazer os metodos do AsyncMonoBehaviour sem ocupar a thread com Task.Delay
 Implementar o DragonbonesMonster -> Criar MonsterBase, (e Monster : MonsterBase, DragonbonesMonster : Monsterbase) e MonsterBattlerBase<T> where T : MonsterBase (e MonsterBattler : MonsterBattlerBase<Monster>, DragonbonesMonsterBattler<DragonbonesMonster>)

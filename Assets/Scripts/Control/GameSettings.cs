@@ -44,6 +44,8 @@ public class GameSettings : SerializedScriptableObject
 
     [TabGroup("1", "Battle Settings")] public SoundInfo DefaultMonsterHitSound;
     [TabGroup("1", "Battle Settings")] public SoundInfo DefaultFanfare;
+    [TabGroup("1", "Battle Settings")] public int InitialAp;
+    [TabGroup("1", "Battle Settings")] public int ApGain;
     
     [TabGroup("2","Message Box")] public GameObject DefaultMessageBox;
     [TabGroup("2","Message Box")] public SoundInfo DefaultTypingSound;

@@ -185,8 +185,9 @@ public class Character
 
         foreach (var equipInstance in Equipment)
         {
-            var equip = equipInstance.EquippableBase;
-            BonusStats += equip.BaseStats;
+            // var equip = equipInstance.EquippableBase;
+            // BonusStats += equip.BaseStats;
+            BonusStats += equipInstance.GetStats;
         }
     }
 
@@ -197,7 +198,7 @@ public class Character
 
         foreach (var equippable in Equipment)
         {
-            Skills.AddRange(equippable.EquippableBase.Skills);
+            Skills.AddRange(equippable.GetSkills);
         }
     }
 
@@ -208,7 +209,7 @@ public class Character
 
         foreach (var equippable in Equipment)
         {
-            Passives.AddRange(equippable.EquippableBase.Passives);
+            Passives.AddRange(equippable.GetPassives);
         }
     }
 
@@ -222,7 +223,7 @@ public class Character
 
     public void Equip(Equippable equippable)
     {
-        if (equippable == null || equippable.EquippableBase == null)
+        if (equippable.EquippableBase == null)
             throw new NullReferenceException();
 
         var slot = equippable.EquippableBase.Slot;

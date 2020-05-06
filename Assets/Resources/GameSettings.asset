@@ -281,6 +281,8 @@ MonoBehaviour:
   DefaultFanfare:
     AudioClip: {fileID: 8300000, guid: d7378f4ec3793b34d9c8d580f2ac5d4d, type: 3}
     Volume: 0.025
+  InitialAp: 15
+  ApGain: 25
   DefaultMessageBox: {fileID: 5457389356766954974, guid: 987eb3dfcca3ea48e93d20d121103e54,
     type: 3}
   DefaultTypingSound:

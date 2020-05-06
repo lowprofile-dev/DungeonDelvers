@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d094aa0b39564153b139b8890360f490, type: 3}
+  m_Name: 8Regen
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 8300000, guid: 5159310bc5212d1458040ea62d81c5ad, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Effects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[PassiveEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|RegenPassiveEffect, Assembly-CSharp
+    - Name: Priority
+      Entry: 3
+      Data: 0
+    - Name: Animation
+      Entry: 7
+      Data: 2|DD.Skill.Animation.PlayAtTargetSkillAnimation, Assembly-CSharp
+    - Name: AnimationName
+      Entry: 1
+      Data: Heal1
+    - Name: SpeedMultiplier
+      Entry: 4
+      Data: 3
+    - Name: AnimationSize
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 250
+    - Name: 
+      Entry: 4
+      Data: 250
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimationOffset
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SoundInfo
+      Entry: 7
+      Data: 3|SoundInfo, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
+      Data: 0
+    - Name: Volume
+      Entry: 4
+      Data: 0.1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: FlatValue
+      Entry: 3
+      Data: 0
+    - Name: PercentageValue
+      Entry: 4
+      Data: 0.08
+    - Name: IsPercentageValue
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  databaseIgnore: 0
+  AssetIcon: {fileID: 6977888419319678485, guid: cc992c58d47d97548895862c5e45375c,
+    type: 3}
+  PassiveName: Regeneration
+  Hidden: 0
+  PassiveDescription: Restore 8% of Max HP at the beginning of the turn.

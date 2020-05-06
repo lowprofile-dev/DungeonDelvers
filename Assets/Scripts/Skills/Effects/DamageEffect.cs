@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using JetBrains.Annotations;
 using Sirenix.Utilities;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -22,9 +23,22 @@ public class DamageEffect : Effect
 
         if (ElementOverride.HasValue)
             damageCalculationInfo.DamageElement = ElementOverride.Value;
-        
-        var damageCalculationPassives = skillInfo.Source
-            .PassiveEffects
+
+        var passiveEffects = skillInfo.Target.PassiveEffects.ToArray();
+
+        var overrideDamageEffects = passiveEffects
+            .Where(pE => pE is IOverrideDamagePassiveEffect)
+            .Cast<IOverrideDamagePassiveEffect>()
+            .ToArray();
+
+        foreach (var overrideDamageEffect in overrideDamageEffects)
+        {
+            var overrideResult = overrideDamageEffect.Override(skillInfo, this);
+            if (overrideResult != null)
+                return overrideResult;
+        }
+
+        var damageCalculationPassives = passiveEffects
             .Where(passiveEffect => passiveEffect is IDamageCalculationInfoOverride)
             .Cast<IDamageCalculationInfoOverride>()
             .ToArray();
@@ -49,7 +63,7 @@ public class DamageEffect : Effect
         Debug.Log($"{skillInfo.Source} causou {damage} de dano em {skillInfo.Target}. Elemento: {damageCalculationInfo.DamageElement}");
 
         skillInfo.Target.CurrentHp -= damage;
-        return new DamageEffectResult()
+        return new DamageEffectResult
         {
             DamageDealt = damage,
             skillInfo = skillInfo
@@ -74,6 +88,11 @@ public class DamageEffect : Effect
     public interface IDealDamagePassiveEffect
     {
         void BeforeDeal(SkillInfo skillInfo, ref int finalDamage);
+    }
+    
+    public interface IOverrideDamagePassiveEffect
+    {
+        [CanBeNull] EffectResult Override(SkillInfo skillInfo, DamageEffect damageEffect);
     }
 
     public interface IDamageCalculationInfoOverride

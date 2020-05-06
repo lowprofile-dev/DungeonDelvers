@@ -63,7 +63,7 @@ public class CharacterInspector : SerializedMonoBehaviour
         var stats = character.Stats;
 
         var newText =
-            $"HP: {character.CurrentHp}/{stats.MaxHp}\nInitial AP: {stats.InitialEp}\nAP Gain: {stats.EpGain}\nPhysical Attack: {stats.PhysAtk}\nMagical Attack: {stats.MagAtk}\nPhysical Defense: {stats.PhysDef}\nMagical Defense: {stats.MagDef}\nSpeed: {stats.Speed}\nAccuracy: {stats.Accuracy:F}\nEvasion: {stats.Evasion:F}\nCritical Accuracy: {stats.CritChance:F}\nCritical Evasion: {stats.CritAvoid:F}";
+            $"HP: {character.CurrentHp}/{stats.MaxHp}\nPhysical Attack: {stats.PhysAtk}\nMagical Attack: {stats.MagAtk}\nPhysical Defense: {stats.PhysDef}\nMagical Defense: {stats.MagDef}\nSpeed: {stats.Speed}\nAccuracy: {stats.Accuracy:F}\nEvasion: {stats.Evasion:F}\nCritical Accuracy: {stats.CritChance:F}\nCritical Evasion: {stats.CritAvoid:F}";
 
         StatsText.text = newText;
 
@@ -76,7 +76,7 @@ public class CharacterInspector : SerializedMonoBehaviour
         if (equippable == null)
             text.text = "";
         else
-            text.text = equippable.InspectorName;
+            text.text = equippable.ColoredInspectorName;
     }
 
     public void CloseCharacterInspector()

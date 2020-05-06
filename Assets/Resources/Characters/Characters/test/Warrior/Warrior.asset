@@ -38,7 +38,7 @@ MonoBehaviour:
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -81,8 +81,6 @@ MonoBehaviour:
     type: 3}
   Bases:
     MaxHp: 94
-    InitialEp: 15
-    EpGain: 25
     PhysAtk: 36
     MagAtk: 15
     PhysDef: 36
@@ -103,8 +101,6 @@ MonoBehaviour:
       WindResistance: 0
   Growths:
     MaxHp: 8
-    InitialEp: 0
-    EpGain: 0
     PhysAtk: 7
     MagAtk: 4
     PhysDef: 6
@@ -123,9 +119,9 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  WeaponTypes: 00000000
+  WeaponTypes: 01000000
   ArmorTypes: 
-  Weapon: {fileID: 11400000, guid: f72bbb2f2c2440b468828ef5cf2289c3, type: 2}
+  Weapon: {fileID: 11400000, guid: 28e5896a8cfe7904d844e0b4d945085a, type: 2}
   Head: {fileID: 0}
   Body: {fileID: 0}
   Hand: {fileID: 0}

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using SkredUtils;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -10,9 +11,9 @@ using UnityEngine.UI;
 public class InventoryItemInspector : MonoBehaviour
 {
     public InventoryMenu InventoryMenu;
-    public Text ItemName;
+    public TMP_Text ItemName;
     public Image ItemImage;
-    public Text ItemDescription;
+    public TMP_Text ItemDescription;
 
     public InventoryItemButton SelectedItem;
 
@@ -34,7 +35,7 @@ public class InventoryItemInspector : MonoBehaviour
 
         SelectedItem = inventoryItemButton;
         var item = inventoryItemButton.Item;
-        ItemName.text = item.InspectorName;
+        ItemName.text = item.ColoredInspectorName;
         ItemImage.enabled = true;
         ItemImage.sprite = item.Base.itemIcon;
         ItemDescription.text = item.InspectorDescription;

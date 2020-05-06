@@ -92,7 +92,7 @@ public class PlayerController : AsyncMonoBehaviour
     {
         //#if UNITY_EDITOR
         Party = PartyBases.EachDo(characterBase => new Character(characterBase));
-        Inventory = InventoryBase.EachDo(ItemInstanceBuilder.BuildInstance);
+        Inventory = InventoryBase.EachDo(iB => ItemInstanceBuilder.BuildInstance(iB,true));
         //#endif
         GameController.Instance.OnBeginEncounter.AddListener(PauseGame);
         GameController.Instance.OnEndEncounter.AddListener(UnpauseGame);
@@ -199,7 +199,7 @@ public class PlayerController : AsyncMonoBehaviour
             Destroy(OverworldCharacter);
 
         OverworldCharacter = Instantiate(Party.First().Base.CharacterPrefab, transform);
-        OverworldCharacter.name = Party.First().Base.uniqueIdentifier;
+        OverworldCharacter.name = Party.First().Base.CharacterName;
         OverworldCharacterAnimator = OverworldCharacter.GetComponent<Animator>();
     }
 

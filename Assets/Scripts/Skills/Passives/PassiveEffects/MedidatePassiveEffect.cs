@@ -1,15 +1,17 @@
 ﻿using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MeditatePassiveEffect : PassiveEffect, ITurnStartPassiveEffect
 {
-    public int EpGain = 0;
+    public int ApGain = 0;
+    public DD.Skill.Animation.Animation Animation = null; 
 
     public async Task OnTurnStart(PassiveEffectInfo passiveEffectInfo)
     {
         var effect = new GainApEffect
         {
-            ApAmount = EpGain
+            ApAmount = ApGain
         };
         
         passiveEffectInfo.Target.QueueAction(() =>
@@ -17,7 +19,12 @@ public class MeditatePassiveEffect : PassiveEffect, ITurnStartPassiveEffect
             BattleController.Instance.battleCanvas.battleInfoPanel.ShowInfo(passiveEffectInfo.PassiveEffectSourceName);
         });
 
-        Debug.Log($"{passiveEffectInfo.Source.BattlerName} deu {EpGain} EP para {passiveEffectInfo.Target.BattlerName}");
+        if (Animation != null)
+        {
+            await Animation.PlaySkillAnimation(passiveEffectInfo.Source, new []{passiveEffectInfo.Target});
+        }
+        
+        Debug.Log($"{passiveEffectInfo.Source.BattlerName} deu {ApGain} EP para {passiveEffectInfo.Target.BattlerName}");
 
         await passiveEffectInfo.Target.ReceiveEffect(new EffectInfo
         {

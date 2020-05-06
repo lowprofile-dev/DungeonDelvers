@@ -100,8 +100,6 @@ MonoBehaviour:
     type: 3}
   Bases:
     MaxHp: 82
-    InitialEp: 15
-    EpGain: 25
     PhysAtk: 22
     MagAtk: 40
     PhysDef: 21
@@ -122,8 +120,6 @@ MonoBehaviour:
       WindResistance: 0
   Growths:
     MaxHp: 6
-    InitialEp: 0
-    EpGain: 0
     PhysAtk: 4
     MagAtk: 7
     PhysDef: 4
@@ -144,7 +140,7 @@ MonoBehaviour:
       WindResistance: 0
   WeaponTypes: 0500000000000000
   ArmorTypes: 
-  Weapon: {fileID: 11400000, guid: b3952e5b9c86d8d4b9ead719951f2437, type: 2}
+  Weapon: {fileID: 11400000, guid: 2d6a5a8a42a6dab4ba23021fe38a7e54, type: 2}
   Head: {fileID: 0}
   Body: {fileID: 0}
   Hand: {fileID: 0}

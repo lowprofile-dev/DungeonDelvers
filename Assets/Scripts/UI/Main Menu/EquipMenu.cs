@@ -11,6 +11,7 @@ public class EquipMenu : MonoBehaviour
     [ReadOnly] public Character Character;
     public RectTransform EquipmentGrid;
     public GameObject EquipButtonPrefab;
+    public EquipButton UnequipButton;
     [ReadOnly] public List<GameObject> Buttons = new List<GameObject>();
     
     public void BuildEquips(Character character, EquippableBase.EquippableSlot slot)
@@ -28,7 +29,7 @@ public class EquipMenu : MonoBehaviour
                 else if (equippable.Base is IArmorTypeEquipment armor)
                     return character.Base.ArmorTypes.Contains(armor.ArmorType);
                 else
-                    return false;
+                    return true;
             }).ToArray();
 
         var equippableItemsInOtherCharacters = PlayerController.Instance.Party.Where(partyMember => partyMember != character).Select(partyMember =>
@@ -61,47 +62,9 @@ public class EquipMenu : MonoBehaviour
             Destroy(button);
         }
 
+        SetUpUnequipButton(Character.GetSlot(slot));
         equippableItemsInInventory.ForEach(SetUpEquipButton);
         equippableItemsInOtherCharacters.ForEach(SetUpEquipButton);
-        
-        // equippableItemsInOtherCharacters.ForEach(item =>
-        // {
-        //     var button = Instantiate(EquipButtonPrefab, EquipmentGrid);
-        //     var equipButton = button.GetComponent<EquipButton>();
-        //     equipButton.Image.sprite = item.slottedEquip.Base.itemIcon;
-        //     equipButton.Button.onClick.AddListener(() =>
-        //     {
-        //         var oldEquip = Character.Unequip(slot);
-        //         var newEquip = item.partyMember.Unequip(slot);
-        //         
-        //         Character.Equip(newEquip);
-        //
-        //         //Refazer isso menos bugado.
-        //         if (oldEquip.Base is WeaponBase weapon)
-        //         {
-        //             if (item.partyMember.Base.WeaponTypes.Contains(weapon.weaponType))
-        //                 item.partyMember.Equip(oldEquip);
-        //             else
-        //             {
-        //                 var possibleEquips = PlayerController.Instance.Inventory.Where(i => i is Equippable)
-        //                     .Cast<Equippable>()
-        //                     .Where(e => e.Base is WeaponBase)
-        //                     .Where(w => item.partyMember.Base.WeaponTypes.Contains((w.Base as WeaponBase).weaponType));
-        //
-        //                 var rand = Random.Range(0, possibleEquips.Count());
-        //                 
-        //                 item.partyMember.Equip(possibleEquips.ElementAt(rand));
-        //             }
-        //         } else if (oldEquip.Base is IArmorTypeEquipment equipment)
-        //         {
-        //             if (item.partyMember.Base.ArmorTypes.Contains(equipment.ArmorType))
-        //                 item.partyMember.Equip(oldEquip);
-        //         }
-        //         CloseEquipMenu();
-        //     });
-        //     equipButton.Text.text = $"{item.slottedEquip.InspectorName}\n<#c0c0c0ff><size=22>(Equipped by {item.partyMember.Base.CharacterName})</size></color>";
-        //     Buttons.Add(button);
-        // });
     }
 
     public void Update()
@@ -120,8 +83,25 @@ public class EquipMenu : MonoBehaviour
             Character.Equip(item);
             CloseEquipMenu();
         });
-        equipButton.Text.text = item.InspectorName;
+        equipButton.Text.text = item.ColoredInspectorName;
         Buttons.Add(button);
+    }
+
+    private void SetUpUnequipButton(Equippable current)
+    {
+        if (current == null)
+        {
+            UnequipButton.gameObject.SetActive(false);
+            return;
+        }
+        UnequipButton.gameObject.SetActive(true);
+        var slot = current.Slot;
+        UnequipButton.Button.onClick.RemoveAllListeners();
+        UnequipButton.Button.onClick.AddListener(() =>
+        {
+            Character.Unequip(slot);
+            CloseEquipMenu();
+        });
     }
 
     private void SetUpEquipButton((Equippable equip, Character equippedTo) equippedItem)

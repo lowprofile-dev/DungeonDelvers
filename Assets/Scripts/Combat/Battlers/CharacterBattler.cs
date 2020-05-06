@@ -42,7 +42,7 @@ public class CharacterBattler : Battler
         BaseStats = character.BaseStats;
         BonusStats = character.BonusStats;
         CurrentHp = character.CurrentHp;
-        CurrentAp = Stats.InitialEp;
+        CurrentAp = GameSettings.Instance.InitialAp;
         Skills = character.Skills;
         Passives = character.Passives;
         StatusEffectInstances = new List<StatusEffectInstance>();
@@ -179,6 +179,11 @@ public class CharacterBattler : Battler
     {
         switch (effectResult)
         {
+            case BlockPassiveEffect.BlockedResult _:
+            {
+                await BattleController.Instance.battleCanvas.ShowSkillResultAsync(this, "Blocked!", Color.white, 0.8f);
+                break;
+            }
             case DamageEffect.DamageEffectResult damageEffectResult:
             {
                 var tasks = new List<Task>();

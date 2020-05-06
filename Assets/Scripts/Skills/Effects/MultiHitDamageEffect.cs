@@ -17,7 +17,6 @@ public class MultiHitDamageEffect : Effect
 
         HitInfo.ForEach((info, i) =>
         {
-            //throw new NotImplementedException();
             var damage = (int)(Mathf.Max(0,BattleController.Instance.DamageCalculation(
                                                new DamageEffect.DamageCalculationInfo
                                                {

@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
+using SkredUtils;
 using UnityEngine;
 
 public static class ItemInstanceBuilder
 {
-    public static Item BuildInstance(int uid)
+    public static Item BuildInstance(int uid, bool forceDefault = false)
     {
         var database = GameSettings.Instance.ItemDatabase;
 
@@ -24,13 +25,20 @@ public static class ItemInstanceBuilder
             Debug.LogError($"UID inválido: {uid}");
         }
 
-        return BuildInstance(itemBase);
+        return BuildInstance(itemBase,forceDefault);
     }
 
-    public static Item BuildInstance(ItemBase baseItem)
+    public static Item BuildInstance(ItemBase baseItem, bool forceDefault = false)
     {
         if (baseItem is EquippableBase equippableBase)
-            return new Equippable(equippableBase);
+        {
+            var equippable = new Equippable(equippableBase);
+
+            if (forceDefault) return equippable;
+            
+            equippable.Tier = equippableBase.GetRandomTier();
+            return equippable;
+        }
         if (baseItem is ConsumableBase consumableBase)
             return new Consumable(consumableBase);
         if (baseItem is MiscItemBase miscItemBase)
