@@ -72,7 +72,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: Characters/Characters/Warrior/Warrior
   databaseIgnore: 0
   CharacterName: Knight
   CharacterPrefab: {fileID: 8521580809372860284, guid: b85aa7e9225067e4f93b96eccb5cca71,
@@ -119,7 +118,7 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  WeaponTypes: 01000000
+  WeaponTypes: 0100000006000000
   ArmorTypes: 
   Weapon: {fileID: 11400000, guid: 28e5896a8cfe7904d844e0b4d945085a, type: 2}
   Head: {fileID: 0}

@@ -71,7 +71,7 @@ public class Equippable : Item
         {
             var equippableBase = EquippableBase;
             if (equippableBase is WeaponBase weaponBase) return weaponBase.weaponType.ToString();
-            if (equippableBase is IArmorTypeEquipment armorBase) return armorBase.ArmorType.ToString();
+            if (equippableBase is BodyBase bodyBase) return bodyBase.ArmorType.ToString();
             return equippableBase.Slot.ToString();
         }
     }

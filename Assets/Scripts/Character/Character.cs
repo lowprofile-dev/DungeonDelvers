@@ -337,9 +337,9 @@ public class Character
         {
             return Base.WeaponTypes.Contains(weaponBase.weaponType);
         }
-        else if (equippable is IArmorTypeEquipment armorBase)
+        else if (equippable is BodyBase bodyBase)
         {
-            return Base.ArmorTypes.Contains(armorBase.ArmorType);
+            return Base.ArmorTypes.Contains(bodyBase.ArmorType);
         }
         else
             return true;

@@ -1,4 +1,4 @@
-﻿public interface IArmorTypeEquipment
-{
-    EquippableBase.ArmorType ArmorType { get; }
-}
+﻿// public interface IArmorTypeEquipment
+// {
+//     EquippableBase.ArmorType ArmorType { get; }
+// }

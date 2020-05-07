@@ -471,6 +471,7 @@
               <e p="CharacterDatabase.cs" t="Include" />
               <e p="Database.cs" t="Include" />
               <e p="ItemDatabase.cs" t="Include" />
+              <e p="MonsterDatabase.cs" t="Include" />
             </e>
             <e p="Element.cs" t="Include" />
             <e p="GameController.cs" t="Include" />

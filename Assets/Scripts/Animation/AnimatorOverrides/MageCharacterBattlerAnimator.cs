@@ -14,7 +14,7 @@ namespace DD.Animation
             set
             {
                 animationElement = value;
-                if (EquippedWeaponType == WeaponBase.WeaponType.Sword1H){
+                if (EquippedWeaponType == WeaponBase.WeaponType.Shortsword){
                     GameController.Instance.QueueAction(UpdateElement);
                 }
             }

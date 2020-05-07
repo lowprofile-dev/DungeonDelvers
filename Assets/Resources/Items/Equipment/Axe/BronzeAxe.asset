@@ -101,7 +101,7 @@ MonoBehaviour:
       Data: 0
     - Name: Accuracy
       Entry: 4
-      Data: -0.1
+      Data: -0.15
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
       Data: 0
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: -0.1
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
       Data: 0
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: -0.5
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -522,7 +522,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 23
+      Data: 26
     - Name: MagAtk
       Entry: 3
       Data: 0

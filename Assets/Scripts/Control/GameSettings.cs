@@ -59,6 +59,7 @@ public class GameSettings : SerializedScriptableObject
     
     [TabGroup("3","Databases")] public ItemDatabase ItemDatabase;
     [TabGroup("3","Databases")] public CharacterDatabase CharacterDatabase;
+    [TabGroup("3","Databases")] public CharacterDatabase MonsterDatabase;
     
     [TabGroup("3","Shop")] public float BuyModifier = 1f;
     [TabGroup("3","Shop")] public float SellModifer = 1f;

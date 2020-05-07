@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cf48c1b54f14787bcbf7e72666c3fdd, type: 3}
-  m_Name: WoodenAxe
+  m_Name: Spear1
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -86,7 +86,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 9
+      Data: 0
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
       Data: 0
     - Name: Accuracy
       Entry: 4
-      Data: -0.1
+      Data: 0
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 11
+      Data: 0
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -304,7 +304,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 13
+      Data: 0
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -413,7 +413,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 16
+      Data: 0
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -434,7 +434,7 @@ MonoBehaviour:
       Data: 0
     - Name: CritChance
       Entry: 4
-      Data: 0.05
+      Data: 0
     - Name: CritAvoid
       Entry: 4
       Data: 0
@@ -522,7 +522,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 18
+      Data: 0
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -543,7 +543,7 @@ MonoBehaviour:
       Data: 0
     - Name: CritChance
       Entry: 4
-      Data: 0.1
+      Data: 0
     - Name: CritAvoid
       Entry: 4
       Data: 0
@@ -596,16 +596,15 @@ MonoBehaviour:
       Entry: 6
       Data: 
   databaseIgnore: 0
-  itemIcon: {fileID: 4538890974235334331, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
-    type: 3}
-  itemName: Wooden Axe
-  goldValue: 100
+  itemIcon: {fileID: 0}
+  itemName: 
+  goldValue: 0
   droppable: 1
-  itemText: "A wooden axe.\t"
-  EnhancementSlots: 2
+  itemText: 
+  EnhancementSlots: 0
   EnhancementStats:
     MaxHp: 0
-    PhysAtk: 1
+    PhysAtk: 0
     MagAtk: 0
     PhysDef: 0
     MagDef: 0
@@ -623,7 +622,7 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  EnhancementBaseCost: 50
+  EnhancementBaseCost: 0
   Skills: []
   Passives: []
-  weaponType: 2
+  weaponType: 6

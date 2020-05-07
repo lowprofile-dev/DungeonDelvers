@@ -26,8 +26,8 @@ public class EquipMenu : MonoBehaviour
             {
                 if (equippable.Base is WeaponBase weapon)
                     return character.Base.WeaponTypes.Contains(weapon.weaponType);
-                else if (equippable.Base is IArmorTypeEquipment armor)
-                    return character.Base.ArmorTypes.Contains(armor.ArmorType);
+                else if (equippable.Base is BodyBase bodyBase)
+                    return character.Base.ArmorTypes.Contains(bodyBase.ArmorType);
                 else
                     return true;
             }).ToArray();
@@ -41,8 +41,8 @@ public class EquipMenu : MonoBehaviour
             if (slottedEquip.Base is WeaponBase weapon &&
                 character.Base.WeaponTypes.Contains(weapon.weaponType))
                 return (slottedEquip, partyMember);
-            else if (slottedEquip.Base is IArmorTypeEquipment armor &&
-                     character.Base.ArmorTypes.Contains(armor.ArmorType))
+            else if (slottedEquip.Base is BodyBase bodyBase &&
+                     character.Base.ArmorTypes.Contains(bodyBase.ArmorType))
                 return (slottedEquip, partyMember);
             else
                 return (null, null);

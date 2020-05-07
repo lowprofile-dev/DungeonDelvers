@@ -1,4 +1,5 @@
-Mover party base e inventario base para o gamesettings
+Terminar de criar todos os equips base
+Arrumar um pouco a loja, criar enhancer e reforger
 Rebalancear um pouco os stats (ForestElemental deve dar mais dano do que tá dando, testar como ficaria em teoria contra party lv 4)
 Fazer mais inimigos simples pra floresta
 Remover CurrentEp e EpGain dos stats. Se for mudar a quantidade de Ep vai ser com passiva no inicio da luta/turno

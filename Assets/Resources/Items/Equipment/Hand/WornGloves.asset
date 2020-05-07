@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d1a4181f6184ababaad21b5dd9af4e7, type: 3}
-  m_Name: CopperBreastplate
+  m_Script: {fileID: 11500000, guid: 2bfb06ff927b458ca33438e4bdfd5053, type: 3}
+  m_Name: WornGloves
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -92,19 +92,19 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 6
+      Data: 1
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: -2
+      Data: 0
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: -0.1
+      Data: 0
     - Name: CritChance
       Entry: 4
       Data: 0
@@ -201,19 +201,19 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 8
+      Data: 1
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: Speed
       Entry: 3
-      Data: -1
+      Data: 1
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: -0.05
+      Data: 0
     - Name: CritChance
       Entry: 4
       Data: 0
@@ -310,13 +310,13 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 10
+      Data: 2
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 2
     - Name: Speed
       Entry: 3
-      Data: -1
+      Data: 1
     - Name: Accuracy
       Entry: 4
       Data: 0
@@ -416,19 +416,19 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 13
+      Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 2
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: 2
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: 0.05
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -528,16 +528,16 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 16
+      Data: 5
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: 0.1
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -596,12 +596,12 @@ MonoBehaviour:
       Entry: 6
       Data: 
   databaseIgnore: 0
-  itemIcon: {fileID: -3397544723387077071, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
+  itemIcon: {fileID: 8418799813607834284, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  itemName: Copper Brestplate
-  goldValue: 80
+  itemName: Worn Gloves
+  goldValue: 50
   droppable: 1
-  itemText: A copper breastplate.
+  itemText: 
   EnhancementSlots: 2
   EnhancementStats:
     MaxHp: 0
@@ -623,7 +623,6 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  EnhancementBaseCost: 40
+  EnhancementBaseCost: 30
   Skills: []
   Passives: []
-  _armorType: 1

@@ -8,8 +8,8 @@ public class WeaponBase : EquippableBase
     [Serializable]
     public enum WeaponType
     {
-        Sword1H,
-        Sword2H,
+        Shortsword,
+        Longsword,
         Axe,
         Knife,
         Staff,
