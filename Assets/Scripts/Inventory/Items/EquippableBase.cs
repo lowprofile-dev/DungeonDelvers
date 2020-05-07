@@ -12,11 +12,11 @@ public abstract class EquippableBase : ItemBase
 {
     private void Reset()
     {
-        Tiers.Add(EquippableTier.Damaged, new EquippableTierRewards());
-        Tiers.Add(EquippableTier.Normal, new EquippableTierRewards());
-        Tiers.Add(EquippableTier.Rare, new EquippableTierRewards());
-        Tiers.Add(EquippableTier.Epic, new EquippableTierRewards());
-        Tiers.Add(EquippableTier.Masterpiece, new EquippableTierRewards());
+        Tiers.Add(EquippableTier.Damaged, new EquippableTierRewards {BonusEnhancementSlots = 0});
+        Tiers.Add(EquippableTier.Normal, new EquippableTierRewards {BonusEnhancementSlots = 1});
+        Tiers.Add(EquippableTier.Rare, new EquippableTierRewards {BonusEnhancementSlots = 2});
+        Tiers.Add(EquippableTier.Epic, new EquippableTierRewards {BonusEnhancementSlots = 3});
+        Tiers.Add(EquippableTier.Masterpiece, new EquippableTierRewards {BonusEnhancementSlots = 4});
     }
 
     public int EnhancementSlots = 0;

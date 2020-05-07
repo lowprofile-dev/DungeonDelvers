@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using Unity.Collections;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class InventoryMenu : MonoBehaviour
     public GameObject ItemButtonPrefab;
     public RectTransform ScrollContent;
     public InventoryItemInspector InventoryItemInspector;
+    public TMP_Text GoldText;
     [ReadOnly] public List<GameObject> ItemButtons = new List<GameObject>();
 
     public void OpenInventory()
@@ -19,6 +21,7 @@ public class InventoryMenu : MonoBehaviour
         gameObject.SetActive(true);
         SetupItems(PlayerController.Instance.Inventory);
         InventoryItemInspector.Inspect(null);
+        GoldText.text = $"{PlayerController.Instance.CurrentGold}g";
     }
     
     public void SetupItems(IEnumerable<Item> items)

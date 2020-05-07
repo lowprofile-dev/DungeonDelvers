@@ -46,6 +46,7 @@ public class GameSettings : SerializedScriptableObject
     [TabGroup("1", "Battle Settings")] public SoundInfo DefaultFanfare;
     [TabGroup("1", "Battle Settings")] public int InitialAp;
     [TabGroup("1", "Battle Settings")] public int ApGain;
+    [TabGroup("1", "Battle Settings")] public float ExpModifier = 1f;
     
     [TabGroup("2","Message Box")] public GameObject DefaultMessageBox;
     [TabGroup("2","Message Box")] public SoundInfo DefaultTypingSound;
@@ -58,6 +59,9 @@ public class GameSettings : SerializedScriptableObject
     
     [TabGroup("3","Databases")] public ItemDatabase ItemDatabase;
     [TabGroup("3","Databases")] public CharacterDatabase CharacterDatabase;
+    
+    [TabGroup("3","Shop")] public float BuyModifier = 1f;
+    [TabGroup("3","Shop")] public float SellModifer = 1f;
     
     [TabGroup("4","Equipment")] 
     public Dictionary<EquippableBase.EquippableTier, int> DefaultEquipmentQualityChance;

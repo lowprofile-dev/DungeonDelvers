@@ -9,14 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85fd3f73c46440659bdff9c2033fc5c5, type: 3}
-  m_Name: MagicRing
+  m_Script: {fileID: 11500000, guid: 0cf48c1b54f14787bcbf7e72666c3fdd, type: 3}
+  m_Name: IronAxe
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 18914b696d47d83428f4fc63b41b3c2b, type: 2}
+    ReferencedUnityObjects: []
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -87,10 +86,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 15
     - Name: MagAtk
       Entry: 3
-      Data: 3
+      Data: 0
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -102,7 +101,7 @@ MonoBehaviour:
       Data: 0
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: -0.1
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -196,10 +195,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 18
     - Name: MagAtk
       Entry: 3
-      Data: 5
+      Data: 0
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -305,10 +304,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 23
     - Name: MagAtk
       Entry: 3
-      Data: 6
+      Data: 0
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -414,10 +413,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 28
     - Name: MagAtk
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -435,7 +434,7 @@ MonoBehaviour:
       Data: 0
     - Name: CritChance
       Entry: 4
-      Data: 0
+      Data: 0.05
     - Name: CritAvoid
       Entry: 4
       Data: 0
@@ -508,9 +507,6 @@ MonoBehaviour:
       Data: 16|System.Collections.Generic.List`1[[Passive, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 10
       Data: 0
     - Name: 
       Entry: 13
@@ -526,10 +522,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 32
     - Name: MagAtk
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -547,7 +543,7 @@ MonoBehaviour:
       Data: 0
     - Name: CritChance
       Entry: 4
-      Data: 0
+      Data: 0.1
     - Name: CritAvoid
       Entry: 4
       Data: 0
@@ -600,17 +596,17 @@ MonoBehaviour:
       Entry: 6
       Data: 
   databaseIgnore: 0
-  itemIcon: {fileID: -8132532376659892181, guid: cc992c58d47d97548895862c5e45375c,
+  itemIcon: {fileID: -4067356587103198873, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
-  itemName: Magic Ring
-  goldValue: 80
+  itemName: Iron Axe
+  goldValue: 350
   droppable: 1
-  itemText: 
+  itemText: An iron axe.
   EnhancementSlots: 2
   EnhancementStats:
     MaxHp: 0
-    PhysAtk: 0
-    MagAtk: 2
+    PhysAtk: 3
+    MagAtk: 0
     PhysDef: 0
     MagDef: 0
     Speed: 0
@@ -627,6 +623,7 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  EnhancementBaseCost: 50
+  EnhancementBaseCost: 150
   Skills: []
   Passives: []
+  weaponType: 2

@@ -90,10 +90,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 11a5cbaa607597c4692e241d924db8c9, type: 2}
   - {fileID: 11400000, guid: 2d6a5a8a42a6dab4ba23021fe38a7e54, type: 2}
   - {fileID: 11400000, guid: 425f3ef5cb676fa4fa05223f7bd6199e, type: 2}
-  - {fileID: 11400000, guid: 68b48211be04f1f4280d119de85b2ae7, type: 2}
-  - {fileID: 11400000, guid: 68b48211be04f1f4280d119de85b2ae7, type: 2}
-  - {fileID: 11400000, guid: 68b48211be04f1f4280d119de85b2ae7, type: 2}
-  - {fileID: 11400000, guid: 68b48211be04f1f4280d119de85b2ae7, type: 2}
   MovementSpeed: 5
   MainMenuPrefab: {fileID: 9044932552085264921, guid: bc9cf6ed27b58c5a2856ff9100a8fdde,
     type: 3}

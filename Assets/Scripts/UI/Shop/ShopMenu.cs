@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ShopMenu : MonoBehaviour
 {
+    public Shop Shop;
     public ShopInspector Inspector;
     public TMP_Text GoldText;
     public RectTransform ItemLayout;
@@ -17,6 +18,7 @@ public class ShopMenu : MonoBehaviour
 
     public void OpenShopMenu(Shop shop)
     {
+        Shop = shop;
         BuildItems(shop.Items);
         Inspect(null);
     }

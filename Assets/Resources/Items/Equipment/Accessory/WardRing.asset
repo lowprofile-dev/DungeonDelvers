@@ -602,7 +602,7 @@ MonoBehaviour:
   databaseIgnore: 0
   itemIcon: {fileID: -473550596606727266, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  itemName: 
+  itemName: Ward Ring
   goldValue: 80
   droppable: 1
   itemText: 

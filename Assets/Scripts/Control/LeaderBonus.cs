@@ -8,7 +8,7 @@ public static class LeaderBonus
         switch (leaderClass)
         {
             case Class.Knight:
-                GameController.Instance.GlobalPriceModifier *= 0.8f;
+                GameSettings.Instance.BuyModifier *= 0.8f;
                 break;
             case Class.Fighter:
                 //passiva que dá X% mais dano contra inimigos com <Y% de vida
@@ -29,7 +29,7 @@ public static class LeaderBonus
                 //X% redução de dano quando <Y% de vida
                 break;
             case Class.Hunter:
-                GameController.Instance.GlobalExperienceModifier *= 1.2f;
+                GameSettings.Instance.ExpModifier *= 1.2f;
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(leaderClass), leaderClass, null);
