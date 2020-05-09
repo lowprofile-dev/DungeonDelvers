@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 391cfa8c267a4b4c9534fdc67063811c, type: 3}
-  m_Name: Head1
+  m_Script: {fileID: 11500000, guid: 0cf48c1b54f14787bcbf7e72666c3fdd, type: 3}
+  m_Name: MagicStaff
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -89,19 +89,19 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 21
     - Name: PhysDef
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 11
     - Name: Speed
       Entry: 3
       Data: 0
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: -0.1
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -198,13 +198,13 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 25
     - Name: PhysDef
       Entry: 3
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 15
     - Name: Speed
       Entry: 3
       Data: 0
@@ -307,13 +307,13 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 30
     - Name: PhysDef
       Entry: 3
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 18
     - Name: Speed
       Entry: 3
       Data: 0
@@ -416,13 +416,13 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 36
     - Name: PhysDef
       Entry: 3
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 21
     - Name: Speed
       Entry: 3
       Data: 0
@@ -525,13 +525,13 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 44
     - Name: PhysDef
       Entry: 3
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 26
     - Name: Speed
       Entry: 3
       Data: 0
@@ -596,19 +596,19 @@ MonoBehaviour:
       Entry: 6
       Data: 
   databaseIgnore: 0
-  itemIcon: {fileID: 3265092186499932186, guid: cc992c58d47d97548895862c5e45375c,
+  itemIcon: {fileID: -2003476116941481334, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
-  itemName: Worn Hood
-  goldValue: 50
+  itemName: Magic Staff
+  goldValue: 350
   droppable: 1
   itemText: 
   EnhancementSlots: 2
   EnhancementStats:
     MaxHp: 0
     PhysAtk: 0
-    MagAtk: 0
+    MagAtk: 4
     PhysDef: 0
-    MagDef: 0
+    MagDef: 3
     Speed: 0
     Accuracy: 0
     Evasion: 0
@@ -623,6 +623,7 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  EnhancementBaseCost: 30
+  EnhancementBaseCost: 150
   Skills: []
   Passives: []
+  weaponType: 0

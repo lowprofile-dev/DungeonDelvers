@@ -7,6 +7,22 @@ public class Shop : SerializedMonoBehaviour
 {
     public bool forceDefaults = true;
     public List<ShopItem> Items;
+
+    private void Awake()
+    {
+        SortShop();
+    }
+
+    private void SortShop()
+    {
+        Items.Sort((i1, i2) =>
+        {
+            var price1 = i1.Price;
+            var price2 = i2.Price;
+            if (price1 != price2) return price1 - price2;
+            else return String.Compare(i1.Item.itemName, i2.Item.itemName, StringComparison.Ordinal);
+        });
+    }
 }
 
 [Serializable]
@@ -23,7 +39,7 @@ public class ShopItem
             if (IsFixedPrice)
                 return FixedPrice;
             else
-                return (int) (Item.goldValue * GameSettings.Instance.BuyModifier * 2);
+                return Mathf.CeilToInt(Item.goldValue * GameSettings.Instance.BuyModifier);
         }
     }
 }

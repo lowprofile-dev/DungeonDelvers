@@ -93,6 +93,11 @@ public class PlayerController : AsyncMonoBehaviour
         //#if UNITY_EDITOR
         Party = PartyBases.EachDo(characterBase => new Character(characterBase));
         Inventory = InventoryBase.EachDo(iB => ItemInstanceBuilder.BuildInstance(iB,true));
+        foreach (var character in Party)
+        {
+            var glc = (Equippable)ItemInstanceBuilder.BuildInstance(GameSettings.Instance.GoodLuckCharm);
+            character.Equip(glc);
+        }
         //#endif
         GameController.Instance.OnBeginEncounter.AddListener(PauseGame);
         GameController.Instance.OnEndEncounter.AddListener(UnpauseGame);

@@ -11,7 +11,7 @@ public class WeaponBase : EquippableBase
         Shortsword,
         Longsword,
         Axe,
-        Knife,
+        Dagger,
         Staff,
         Tome,
         Spear,

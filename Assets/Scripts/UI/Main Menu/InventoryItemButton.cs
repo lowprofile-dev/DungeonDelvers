@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class InventoryItemButton : SerializedMonoBehaviour
 {
     [ReadOnly] public InventoryMenu InventoryMenu;
+    [ReadOnly] public ForgeMenu ForgeMenu;
     [ReadOnly] public Item Item;
     public Image itemImage;
     public TMP_Text itemName;
@@ -25,8 +26,18 @@ public class InventoryItemButton : SerializedMonoBehaviour
         }
     }
 
+    public void Setup(ForgeMenu forgeMenu, Item item, string text = null)
+    {
+        ForgeMenu = forgeMenu;
+        Item = item;
+        itemImage.sprite = item.Base.itemIcon;
+        if (string.IsNullOrWhiteSpace(text)) itemName.text = item.ColoredInspectorName;
+        else itemName.text = text;
+    }
+
     public void OpenItemInfo()
     {
-        InventoryMenu.Inspect(this);
+        if (InventoryMenu != null) InventoryMenu.Inspect(this);
+        if (ForgeMenu != null) ForgeMenu.Inspect(Item as Equippable);
     }
 }

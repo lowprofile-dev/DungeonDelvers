@@ -32,6 +32,11 @@ public class ShopInspector : MonoBehaviour
         ItemImage.sprite = item.itemIcon;
         ItemName.text = item.name;
         ItemDescription.text = item.itemText;
+        if (item is EquippableBase equippable)
+        {
+            var sample = ItemInstanceBuilder.BuildInstance(equippable, true) as Equippable;
+            ItemDescription.text += $"\n{sample.StatsDescription}";
+        }
         ItemPrice.text = $"{shopItem.Price}g";
 
         if (shopItem.Price > PlayerController.Instance.CurrentGold)

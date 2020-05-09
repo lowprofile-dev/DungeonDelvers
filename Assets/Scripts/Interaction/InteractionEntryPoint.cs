@@ -31,12 +31,14 @@ public class InteractionEntryPoint : Node
                 var operation =  interaction.PerformInteraction(source);
                 if (operation != null)
                 {
+                    source.CurrentInteraction = interaction;
                     if (interaction.waitForCompletion)
                         yield return operation;
                     else
                         source.StartCoroutine(operation);
                 }
             }
+            source.CurrentInteraction = null;
             node = node.GetNextNode();
         }
     }

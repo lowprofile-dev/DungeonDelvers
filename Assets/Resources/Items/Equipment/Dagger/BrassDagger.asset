@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cf48c1b54f14787bcbf7e72666c3fdd, type: 3}
-  m_Name: Longsword3
+  m_Name: BrassDagger
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -86,7 +86,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 8
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -98,10 +98,10 @@ MonoBehaviour:
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: -0.1
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 12
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: Accuracy
       Entry: 4
       Data: 0
@@ -304,7 +304,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 16
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -316,16 +316,16 @@ MonoBehaviour:
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: 4
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: 0
+      Data: 0.019999999552965164
     - Name: CritChance
       Entry: 4
-      Data: 0
+      Data: 0.019999999552965164
     - Name: CritAvoid
       Entry: 4
       Data: 0
@@ -413,7 +413,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 20
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -425,16 +425,16 @@ MonoBehaviour:
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: 6
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: 0
+      Data: 0.05000000074505806
     - Name: CritChance
       Entry: 4
-      Data: 0
+      Data: 0.05000000074505806
     - Name: CritAvoid
       Entry: 4
       Data: 0
@@ -522,7 +522,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 24
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -534,16 +534,16 @@ MonoBehaviour:
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: 8
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: 0
+      Data: 0.10000000149011612
     - Name: CritChance
       Entry: 4
-      Data: 0
+      Data: 0.10000000149011612
     - Name: CritAvoid
       Entry: 4
       Data: 0
@@ -596,15 +596,16 @@ MonoBehaviour:
       Entry: 6
       Data: 
   databaseIgnore: 0
-  itemIcon: {fileID: 0}
-  itemName: 
-  goldValue: 0
+  itemIcon: {fileID: -8682394854412204737, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
+    type: 3}
+  itemName: Brass Dagger
+  goldValue: 100
   droppable: 1
   itemText: 
-  EnhancementSlots: 0
+  EnhancementSlots: 3
   EnhancementStats:
     MaxHp: 0
-    PhysAtk: 0
+    PhysAtk: 1
     MagAtk: 0
     PhysDef: 0
     MagDef: 0
@@ -622,7 +623,7 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  EnhancementBaseCost: 0
+  EnhancementBaseCost: 50
   Skills: []
   Passives: []
-  weaponType: 1
+  weaponType: 3

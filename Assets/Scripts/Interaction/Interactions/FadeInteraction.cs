@@ -31,7 +31,7 @@ public class FadeInteraction : Interaction
             var elapsedTime = 0f;
             fade.enabled = true;
 
-            while (fade.enabled && fade.color.a < 1)
+            while (fade.enabled && elapsedTime < fadeDuration)
             {
                 var frameTime = Time.deltaTime;
                 elapsedTime += frameTime;
@@ -50,7 +50,7 @@ public class FadeInteraction : Interaction
 
             var elapsedTime = 0f;
 
-            while (fade.enabled && fade.color.a > 0)
+            while (fade.enabled && elapsedTime < fadeDuration)
             {
                 var frameTime = Time.deltaTime;
                 elapsedTime += frameTime;

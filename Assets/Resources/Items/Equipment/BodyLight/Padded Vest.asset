@@ -92,10 +92,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 8
+      Data: 15
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 8
     - Name: Speed
       Entry: 3
       Data: 0
@@ -201,10 +201,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 11
+      Data: 19
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 10
     - Name: Speed
       Entry: 3
       Data: 0
@@ -310,10 +310,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 14
+      Data: 22
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 13
     - Name: Speed
       Entry: 3
       Data: 0
@@ -419,10 +419,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 17
+      Data: 25
     - Name: MagDef
       Entry: 3
-      Data: 1
+      Data: 13
     - Name: Speed
       Entry: 3
       Data: 0
@@ -528,10 +528,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 20
+      Data: 28
     - Name: MagDef
       Entry: 3
-      Data: 2
+      Data: 14
     - Name: Speed
       Entry: 3
       Data: 0
@@ -596,19 +596,19 @@ MonoBehaviour:
       Entry: 6
       Data: 
   databaseIgnore: 0
-  itemIcon: {fileID: 8261629727329727308, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
+  itemIcon: {fileID: 1261527537090145338, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
   itemName: Padded Vest
   goldValue: 250
   droppable: 1
   itemText: 
-  EnhancementSlots: 2
+  EnhancementSlots: 3
   EnhancementStats:
     MaxHp: 0
     PhysAtk: 0
     MagAtk: 0
-    PhysDef: 2
-    MagDef: 0
+    PhysDef: 3
+    MagDef: 1
     Speed: 0
     Accuracy: 0
     Evasion: 0.01
@@ -626,4 +626,4 @@ MonoBehaviour:
   EnhancementBaseCost: 110
   Skills: []
   Passives: []
-  _armorType: 0
+  ArmorType: 0

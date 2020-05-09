@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cf48c1b54f14787bcbf7e72666c3fdd, type: 3}
-  m_Name: Knife2
+  m_Name: EnchantedStaff
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -89,19 +89,19 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 14
     - Name: PhysDef
       Entry: 3
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 5
     - Name: Speed
       Entry: 3
       Data: 0
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: -0.1
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -198,13 +198,13 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 18
     - Name: PhysDef
       Entry: 3
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 8
     - Name: Speed
       Entry: 3
       Data: 0
@@ -307,13 +307,13 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 23
     - Name: PhysDef
       Entry: 3
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 11
     - Name: Speed
       Entry: 3
       Data: 0
@@ -416,13 +416,13 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 28
     - Name: PhysDef
       Entry: 3
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 13
     - Name: Speed
       Entry: 3
       Data: 0
@@ -525,13 +525,13 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 36
     - Name: PhysDef
       Entry: 3
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 17
     - Name: Speed
       Entry: 3
       Data: 0
@@ -596,18 +596,19 @@ MonoBehaviour:
       Entry: 6
       Data: 
   databaseIgnore: 0
-  itemIcon: {fileID: 0}
-  itemName: 
-  goldValue: 0
+  itemIcon: {fileID: 1893885518475532033, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
+    type: 3}
+  itemName: Enchanted Staff
+  goldValue: 200
   droppable: 1
   itemText: 
-  EnhancementSlots: 0
+  EnhancementSlots: 2
   EnhancementStats:
     MaxHp: 0
     PhysAtk: 0
-    MagAtk: 0
+    MagAtk: 3
     PhysDef: 0
-    MagDef: 0
+    MagDef: 2
     Speed: 0
     Accuracy: 0
     Evasion: 0
@@ -622,7 +623,7 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  EnhancementBaseCost: 0
+  EnhancementBaseCost: 100
   Skills: []
   Passives: []
   weaponType: 0

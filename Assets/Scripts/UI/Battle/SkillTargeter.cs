@@ -109,15 +109,26 @@ public class SkillTargeter : SerializedMonoBehaviour
         {
             BattleCanvas.CleanTargetArrows();
             var names = new List<string>();
-
+            
             foreach (var battler in TargetGroups[currentIndex])
             {
                 BattleCanvas.BindTargetArrow(battler.RectTransform);
                 names.Add($"Lv. {battler.Level} {battler.BattlerName}");
             }
-
+            
             var targetName = string.Join(", ", names);
             BattleCanvas.battleInfoPanel.ShowInfo(targetName);
+            // if (TargetGroups[currentIndex].Length == 1)
+            // {
+            //     var battler = TargetGroups[currentIndex][0];
+            //     BattleCanvas.BindActionArrow(battler.RectTransform);
+            //     BattleCanvas.battleInfoPanel.ShowInfo($"Lv. {battler.Level} {battler.BattlerName}");
+            // }
+            // else
+            // {
+            //     foreach (var battler in TargetGroups[currentIndex]) BattleCanvas.BindActionArrow(battler.RectTransform);
+            //     BattleCanvas.battleInfoPanel.ShowInfo("Multiple Targets");
+            // }
         };
 
         DisplayTargets();

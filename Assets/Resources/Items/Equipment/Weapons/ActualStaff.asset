@@ -20,19 +20,46 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes: []
-  uniqueIdentifier: 2
-  databaseIgnore: 0
+    SerializationNodes:
+    - Name: Tiers
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[EquippableBase+EquippableTier,
+        Assembly-CSharp],[EquippableTierRewards, Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[EquippableBase+EquippableTier,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: CustomTierWeights
+      Entry: 6
+      Data: 
+  databaseIgnore: 1
   itemIcon: {fileID: -1339902739103129484, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
   itemName: Staff
   goldValue: 0
   droppable: 1
   itemText: 
-  BaseStats:
+  EnhancementSlots: 0
+  EnhancementStats:
     MaxHp: 0
-    InitialEp: 0
-    EpGain: 0
     PhysAtk: 0
     MagAtk: 0
     PhysDef: 0
@@ -42,6 +69,16 @@ MonoBehaviour:
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
+  EnhancementBaseCost: 0
   Skills:
   - {fileID: 11400000, guid: 7886eed0d57c1c056967d523c2d0571f, type: 2}
   Passives: []

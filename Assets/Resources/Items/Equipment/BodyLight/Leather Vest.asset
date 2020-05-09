@@ -92,10 +92,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 5
+      Data: 13
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 6
     - Name: Speed
       Entry: 3
       Data: 0
@@ -201,10 +201,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 7
+      Data: 15
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 7
     - Name: Speed
       Entry: 3
       Data: 0
@@ -310,10 +310,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 10
+      Data: 19
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 9
     - Name: Speed
       Entry: 3
       Data: 0
@@ -419,10 +419,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 13
+      Data: 23
     - Name: MagDef
       Entry: 3
-      Data: 1
+      Data: 11
     - Name: Speed
       Entry: 3
       Data: 0
@@ -528,10 +528,10 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 16
+      Data: 27
     - Name: MagDef
       Entry: 3
-      Data: 2
+      Data: 13
     - Name: Speed
       Entry: 3
       Data: 0
@@ -607,7 +607,7 @@ MonoBehaviour:
     MaxHp: 0
     PhysAtk: 0
     MagAtk: 0
-    PhysDef: 1
+    PhysDef: 2
     MagDef: 0
     Speed: 0
     Accuracy: 0
@@ -626,4 +626,4 @@ MonoBehaviour:
   EnhancementBaseCost: 80
   Skills: []
   Passives: []
-  _armorType: 0
+  ArmorType: 0

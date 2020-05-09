@@ -11,6 +11,7 @@ using XNode;
 public class Interactable : SerializedMonoBehaviour
 {
     public InteractableType interactableType = InteractableType.Action;
+    [ReadOnly] public Interaction CurrentInteraction;
     public InteractionGraph Interactions;
     public Dictionary<string, object> InstanceVars = new Dictionary<string, object>();
     [ReadOnly] public bool IsInteracting = false;

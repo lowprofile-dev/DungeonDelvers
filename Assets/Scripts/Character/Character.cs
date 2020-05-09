@@ -33,12 +33,12 @@ public class Character
     public Character(CharacterBase characterBase)
     {
         Base = characterBase;
-        Weapon = ItemInstanceBuilder.BuildInstance(Base.Weapon) as Equippable;
-        Head = ItemInstanceBuilder.BuildInstance(Base.Head) as Equippable;
-        Body = ItemInstanceBuilder.BuildInstance(Base.Body) as Equippable;
-        Hand = ItemInstanceBuilder.BuildInstance(Base.Hand) as Equippable;
-        Feet = ItemInstanceBuilder.BuildInstance(Base.Feet) as Equippable;
-        Accessory = ItemInstanceBuilder.BuildInstance(Base.Accessory) as Equippable;
+        Weapon = ItemInstanceBuilder.BuildInstance(Base.Weapon, true) as Equippable;
+        Head = ItemInstanceBuilder.BuildInstance(Base.Head, true) as Equippable;
+        Body = ItemInstanceBuilder.BuildInstance(Base.Body, true) as Equippable;
+        Hand = ItemInstanceBuilder.BuildInstance(Base.Hand, true) as Equippable;
+        Feet = ItemInstanceBuilder.BuildInstance(Base.Feet, true) as Equippable;
+        Accessory = ItemInstanceBuilder.BuildInstance(Base.Accessory, true) as Equippable;
         MasteryInstances = Base.Masteries.Initialize(this);
 
         Regenerate();

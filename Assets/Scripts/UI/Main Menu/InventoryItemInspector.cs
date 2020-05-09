@@ -12,6 +12,8 @@ public class InventoryItemInspector : MonoBehaviour
 {
     public InventoryMenu InventoryMenu;
     public TMP_Text ItemName;
+    public TMP_Text EquipStatsText;
+    public GameObject Separator;
     public Image ItemImage;
     public TMP_Text ItemDescription;
 
@@ -40,8 +42,20 @@ public class InventoryItemInspector : MonoBehaviour
         ItemImage.sprite = item.Base.itemIcon;
         ItemDescription.text = item.InspectorDescription;
 
-        UseButton.interactable = (item is Consumable consumable && consumable.ConsumableBase.ConsumableUses.Any()) ||
-                                 item is Equippable;
+        if (item is Equippable equippable)
+        {
+            EquipStatsText.gameObject.SetActive(true);
+            Separator.SetActive(true);
+            EquipStatsText.text = equippable.StatsDescription;
+        }
+        else
+        {
+            EquipStatsText.gameObject.SetActive(false);
+            Separator.SetActive(false);
+        }
+        
+        UseButton.interactable = item is Consumable consumable && consumable.ConsumableBase.ConsumableUses.Any() 
+                                 /*|| item is Equippable*/;
         
         DropButton.interactable = item.Base.droppable;
     }

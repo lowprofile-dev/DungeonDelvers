@@ -28,7 +28,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 7
       Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
@@ -48,12 +48,47 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
+    - Name: WeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 3
+      Data: 7
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimatorController
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
+    - Name: WeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimatorController
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 0
   databaseIgnore: 0
   CharacterName: Assassin
   CharacterPrefab: {fileID: 8521580809372860284, guid: 1736b34fe64ca480bb1a5a1e1dc5f947,
@@ -67,7 +102,7 @@ MonoBehaviour:
     PhysDef: 23
     MagDef: 29
     Speed: 39
-    Accuracy: 0.95
+    Accuracy: 0.9
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
@@ -100,11 +135,11 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  WeaponTypes: 03000000
-  ArmorTypes: 
-  Weapon: {fileID: 11400000, guid: 11a5cbaa607597c4692e241d924db8c9, type: 2}
+  WeaponTypes: 0300000007000000
+  ArmorTypes: 00000000
+  Weapon: {fileID: 11400000, guid: e600dd83f574ce8408ccc09c0e6561b0, type: 2}
   Head: {fileID: 0}
-  Body: {fileID: 0}
+  Body: {fileID: 11400000, guid: 1c5afd80b8612f843a0ea31eae050a88, type: 2}
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}

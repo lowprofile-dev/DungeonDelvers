@@ -391,6 +391,8 @@ public class BattleController : AsyncMonoBehaviour
         var elementalMultiplier = target.Stats.ElementalResistance[damageCalculationInfo.DamageElement];
         var finalDamageMultiplier = Random.Range(1 - variance, 1 + variance);
 
+        Debug.Log($"Calculado {damage}");
+        
         return (int)(damage*elementalMultiplier*finalDamageMultiplier);
     }
 

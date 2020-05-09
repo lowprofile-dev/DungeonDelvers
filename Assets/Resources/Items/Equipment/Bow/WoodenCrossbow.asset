@@ -86,7 +86,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 10
+      Data: 19
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
       Data: 0
     - Name: Accuracy
       Entry: 4
-      Data: -0.1
+      Data: 0
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 14
+      Data: 24
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -304,7 +304,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 17
+      Data: 29
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -413,7 +413,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 21
+      Data: 35
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -522,7 +522,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 26
+      Data: 42
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -602,17 +602,17 @@ MonoBehaviour:
   goldValue: 350
   droppable: 1
   itemText: 
-  EnhancementSlots: 2
+  EnhancementSlots: 3
   EnhancementStats:
     MaxHp: 0
-    PhysAtk: 2
+    PhysAtk: 3
     MagAtk: 0
     PhysDef: 0
     MagDef: 0
     Speed: 0
-    Accuracy: 0
+    Accuracy: 0.009999999776482582
     Evasion: 0
-    CritChance: 0.01
+    CritChance: 0.009999999776482582
     CritAvoid: 0
     ElementalResistance:
       EarthResistance: 0

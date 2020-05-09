@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 391cfa8c267a4b4c9534fdc67063811c, type: 3}
-  m_Name: Head2
+  m_Script: {fileID: 11500000, guid: 0cf48c1b54f14787bcbf7e72666c3fdd, type: 3}
+  m_Name: TomeOfSpells
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -89,7 +89,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 25
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 31
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -307,7 +307,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 37
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -416,7 +416,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 44
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -525,7 +525,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 0
+      Data: 55
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -596,22 +596,23 @@ MonoBehaviour:
       Entry: 6
       Data: 
   databaseIgnore: 0
-  itemIcon: {fileID: 555945762270866185, guid: cc992c58d47d97548895862c5e45375c, type: 3}
-  itemName: Leather Hood
-  goldValue: 120
+  itemIcon: {fileID: 3294139958425731895, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
+    type: 3}
+  itemName: Tome of Spells
+  goldValue: 350
   droppable: 1
   itemText: 
   EnhancementSlots: 2
   EnhancementStats:
     MaxHp: 0
     PhysAtk: 0
-    MagAtk: 0
+    MagAtk: 6
     PhysDef: 0
     MagDef: 0
     Speed: 0
     Accuracy: 0
     Evasion: 0
-    CritChance: 0
+    CritChance: -0.009999999776482582
     CritAvoid: 0
     ElementalResistance:
       EarthResistance: 0
@@ -622,6 +623,7 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  EnhancementBaseCost: 50
+  EnhancementBaseCost: 150
   Skills: []
   Passives: []
+  weaponType: 5

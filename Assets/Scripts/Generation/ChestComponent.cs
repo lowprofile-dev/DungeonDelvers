@@ -13,6 +13,11 @@ public class ChestComponent : SerializedMonoBehaviour
     public GameObject MessageBoxPrefab;
     public List<ChestReward> Rewards = new List<ChestReward>();
 
+    private void Awake()
+    {
+        if (!Rewards.Any() && MapSettings.Instance != null) Rewards.AddRange(MapSettings.Instance.MapChestRewards);
+    }
+
     private void Reset()
     {
         MessageBoxPrefab = GameSettings.Instance.DefaultMessageBox;
@@ -68,10 +73,15 @@ public class ItemChestReward : ChestReward
             PlayerController.Instance.AddItemToInventory(instance);
             return $"You found {stackable.Quantity}x <color={GameSettings.Instance.DefaultItemTextColor.ToHex()}>{instance}</color>!";
         }
+        else if (instance is Equippable equippable)
+        {
+            PlayerController.Instance.AddItemToInventory(instance);
+            return $"You found {equippable.TierQualifiedName}!";
+        }
         else
         {
             PlayerController.Instance.AddItemToInventory(instance);
-            return $"You found <color={GameSettings.Instance.DefaultItemTextColor.ToHex()}>{instance}</color>!";
+            return $"You found <color={GameSettings.Instance.DefaultItemTextColor.ToHex()}>{instance.Base.itemName}</color>!";
         }
         
     }

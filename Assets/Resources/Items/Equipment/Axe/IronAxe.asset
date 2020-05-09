@@ -86,7 +86,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 15
+      Data: 33
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 18
+      Data: 39
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -304,7 +304,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 23
+      Data: 46
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
       Data: 0
     - Name: Accuracy
       Entry: 4
-      Data: -0.5
+      Data: -0.10000000149011612
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -413,7 +413,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 28
+      Data: 53
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
       Data: 0
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: -0.05000000074505806
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -522,7 +522,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 35
+      Data: 62
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
       Data: 0
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: -0.05000000074505806
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -596,21 +596,21 @@ MonoBehaviour:
       Entry: 6
       Data: 
   databaseIgnore: 0
-  itemIcon: {fileID: -4067356587103198873, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
+  itemIcon: {fileID: 4563543156725061176, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
   itemName: Iron Axe
   goldValue: 350
   droppable: 1
   itemText: An iron axe.
-  EnhancementSlots: 2
+  EnhancementSlots: 3
   EnhancementStats:
     MaxHp: 0
-    PhysAtk: 3
+    PhysAtk: 6
     MagAtk: 0
     PhysDef: 0
     MagDef: 0
     Speed: 0
-    Accuracy: 0
+    Accuracy: -0.009999999776482582
     Evasion: 0
     CritChance: 0
     CritAvoid: 0

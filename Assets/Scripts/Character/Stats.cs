@@ -13,10 +13,10 @@ using Random = UnityEngine.Random;
     public int PhysDef;
     public int MagDef;
     public int Speed;
-    [PropertyRange(-1, 1)] public float Accuracy;
-    [PropertyRange(-1, 1)] public float Evasion;
-    [PropertyRange(-1, 1)] public float CritChance;
-    [PropertyRange(-1, 1)] public float CritAvoid;
+    [PropertyRange(-1, 1)] public double Accuracy;
+    [PropertyRange(-1, 1)] public double Evasion;
+    [PropertyRange(-1, 1)] public double CritChance;
+    [PropertyRange(-1, 1)] public double CritAvoid;
     public ElementalResistance ElementalResistance;
 
     public static Stats operator +(Stats a, Stats b)

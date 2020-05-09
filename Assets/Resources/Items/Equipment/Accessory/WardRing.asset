@@ -96,7 +96,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 3
+      Data: 10
     - Name: Speed
       Entry: 3
       Data: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 5
+      Data: 15
     - Name: Speed
       Entry: 3
       Data: 0
@@ -314,7 +314,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 7
+      Data: 20
     - Name: Speed
       Entry: 3
       Data: 0
@@ -423,7 +423,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 8
+      Data: 25
     - Name: Speed
       Entry: 3
       Data: 0
@@ -535,7 +535,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagDef
       Entry: 3
-      Data: 10
+      Data: 30
     - Name: Speed
       Entry: 3
       Data: 0
@@ -606,13 +606,13 @@ MonoBehaviour:
   goldValue: 80
   droppable: 1
   itemText: 
-  EnhancementSlots: 2
+  EnhancementSlots: 3
   EnhancementStats:
     MaxHp: 0
     PhysAtk: 0
     MagAtk: 0
     PhysDef: 0
-    MagDef: 2
+    MagDef: 3
     Speed: 0
     Accuracy: 0
     Evasion: 0

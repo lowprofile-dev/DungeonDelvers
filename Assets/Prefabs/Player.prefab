@@ -84,12 +84,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42485ac7352004c6a8bc01c3505ca003, type: 2}
   - {fileID: 11400000, guid: fb1fbb4bb0c7667e6833f3be9cba04f4, type: 2}
   InventoryBase:
-  - {fileID: 11400000, guid: 59b0a2f636fdc911c9db9e508c90caa7, type: 2}
-  - {fileID: 11400000, guid: 28e5896a8cfe7904d844e0b4d945085a, type: 2}
-  - {fileID: 11400000, guid: 33460fde593de7d44aba5050108a14a1, type: 2}
-  - {fileID: 11400000, guid: 11a5cbaa607597c4692e241d924db8c9, type: 2}
-  - {fileID: 11400000, guid: 2d6a5a8a42a6dab4ba23021fe38a7e54, type: 2}
-  - {fileID: 11400000, guid: 425f3ef5cb676fa4fa05223f7bd6199e, type: 2}
+  - {fileID: 11400000, guid: dfd4ddf00c951e9499429d4b0e9d7732, type: 2}
+  - {fileID: 11400000, guid: 352d3c11248f93b409d420d76126dc03, type: 2}
+  - {fileID: 11400000, guid: 46eb8fe375710a6429b6aa1223754eb7, type: 2}
+  - {fileID: 11400000, guid: 55cef5d1ecc97df4891cd74385fdb84d, type: 2}
   MovementSpeed: 5
   MainMenuPrefab: {fileID: 9044932552085264921, guid: bc9cf6ed27b58c5a2856ff9100a8fdde,
     type: 3}
@@ -123,7 +121,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &3993753518470717522
 MonoBehaviour:

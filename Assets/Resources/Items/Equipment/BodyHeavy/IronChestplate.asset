@@ -92,13 +92,13 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 12
+      Data: 20
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: -3
+      Data: -4
     - Name: Accuracy
       Entry: 4
       Data: 0
@@ -201,13 +201,13 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 15
+      Data: 25
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: -2
+      Data: -3
     - Name: Accuracy
       Entry: 4
       Data: 0
@@ -310,13 +310,13 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 18
+      Data: 31
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: -1
+      Data: -2
     - Name: Accuracy
       Entry: 4
       Data: 0
@@ -419,13 +419,13 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 21
+      Data: 36
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: -2
     - Name: Accuracy
       Entry: 4
       Data: 0
@@ -528,13 +528,13 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 28
+      Data: 42
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: -1
     - Name: Accuracy
       Entry: 4
       Data: 0
@@ -596,21 +596,22 @@ MonoBehaviour:
       Entry: 6
       Data: 
   databaseIgnore: 0
-  itemIcon: {fileID: 897878138852915310, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8, type: 3}
-  itemName: Copper Brestplate
+  itemIcon: {fileID: -4516588145611309506, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
+    type: 3}
+  itemName: Iron Chestplate
   goldValue: 300
   droppable: 1
   itemText: A copper breastplate.
-  EnhancementSlots: 2
+  EnhancementSlots: 3
   EnhancementStats:
     MaxHp: 0
     PhysAtk: 0
     MagAtk: 0
-    PhysDef: 3
+    PhysDef: 6
     MagDef: 0
-    Speed: 0
+    Speed: -1
     Accuracy: 0
-    Evasion: 0
+    Evasion: -0.009999999776482582
     CritChance: 0
     CritAvoid: 0
     ElementalResistance:
@@ -625,4 +626,4 @@ MonoBehaviour:
   EnhancementBaseCost: 125
   Skills: []
   Passives: []
-  _armorType: 1
+  ArmorType: 1

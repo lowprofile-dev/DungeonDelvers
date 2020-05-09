@@ -335,14 +335,14 @@ MonoBehaviour:
     CritChance: 0.01
     CritAvoid: 0.01
     ElementalResistance:
-      EarthResistance: 0
-      FireResistance: 0
-      HolyResistance: 0
-      DarkResistance: 0
-      IceResistance: 0
-      LightningResistance: 0
-      WaterResistance: 0
-      WindResistance: 0
+      EarthResistance: 0.01
+      FireResistance: 0.01
+      HolyResistance: 0.01
+      DarkResistance: 0.01
+      IceResistance: 0.01
+      LightningResistance: 0.01
+      WaterResistance: 0.01
+      WindResistance: 0.01
   EnhancementBaseCost: 100
   Skills: []
   Passives: []

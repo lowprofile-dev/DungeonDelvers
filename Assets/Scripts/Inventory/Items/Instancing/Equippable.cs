@@ -9,7 +9,8 @@ public class Equippable : Item
         return new EquippableSave
         {
             baseUid = GameSettings.Instance.ItemDatabase.GetId(Base).Value,
-            Tier = (int)Tier,
+            EnhancementCount = EnhancementCount,
+            Tier = (int)Tier
         };
     }
     
@@ -20,7 +21,7 @@ public class Equippable : Item
 
     public PlayerSkill[] GetSkills => EquippableBase.GetPlayerSkills(Tier);
     public Passive[] GetPassives => EquippableBase.GetPassives(Tier);
-    public Stats GetStats => EquippableBase.Tiers[Tier].TierStats;
+    public Stats GetStats => EquippableBase.Tiers[Tier].TierStats + EquippableBase.EnhancementStats*EnhancementCount;
     public int EnhancementCount = 0;
     public EquippableBase.EquippableTier Tier = EquippableBase.EquippableTier.Normal;
 
@@ -36,6 +37,7 @@ public class Equippable : Item
     public Equippable(EquippableSave equippableSave) : base(equippableSave)
     {
         Tier = (EquippableBase.EquippableTier) equippableSave.Tier;
+        EnhancementCount = equippableSave.EnhancementCount;
     }
 
     #endregion
@@ -44,7 +46,9 @@ public class Equippable : Item
 
     public void Enhance() => EnhancementCount++;
 
-    public int GetEnhancementCost() => (EnhancementCount + 1) * EquippableBase.EnhancementBaseCost;
+    public int GetEnhancementCost => (EnhancementCount + 1) * EquippableBase.EnhancementBaseCost;
+
+    public int GetEnhancementSlots => EquippableBase.EnhancementSlots + EquippableBase.Tiers[Tier].BonusEnhancementSlots;
     
     public void Reforge()
     {
@@ -65,6 +69,11 @@ public class Equippable : Item
     public override string ColoredInspectorName =>
         $"<color={GameSettings.Instance.DefaultEquipmentQualityColor[Tier].ToHex()}>{InspectorName}</color>";
 
+    public string TierQualifiedName =>
+        Tier == EquippableBase.EquippableTier.Normal
+            ? Base.itemName
+            : $"<color={GameSettings.Instance.DefaultEquipmentQualityColor[Tier].ToHex()}>{Tier.ToString()} {Base.itemName}</color>";
+    
     public string SlotName
     {
         get
@@ -79,6 +88,37 @@ public class Equippable : Item
     public override string InspectorDescription =>
         $"Equipment Type: {SlotName}\nRarity: <color={GameSettings.Instance.DefaultEquipmentQualityColor[Tier].ToHex()}>{Tier.ToString()}</color>\n{Base.itemText}";
 
+    public string StatsDescription
+    {
+        get
+        {
+            var str = "";
+            var stats = GetStats;
+            if (stats.MaxHp > 0) str += $"Max HP: +{stats.MaxHp}\n";
+            if (stats.PhysAtk > 0) str += $"Phys. Attack: +{stats.PhysAtk}\n";
+            if (stats.MagAtk > 0) str += $"Mag. Attack: +{stats.MagAtk}\n";
+            if (stats.PhysDef > 0) str += $"Phys. Defense: +{stats.PhysDef}\n";
+            if (stats.MagDef > 0) str += $"Mag. Defense: +{stats.MagDef}\n";
+            if (stats.Speed > 0) str += $"Speed: +{stats.Speed}\n";
+            if (stats.Accuracy > 0) str += $"Accuracy: +{stats.Accuracy:F3}\n";
+            if (stats.Evasion > 0) str += $"Evasion: +{stats.Evasion:F3}\n";
+            if (stats.CritChance > 0) str += $"Crit. Chance: +{stats.CritChance:F3}\n";
+            if (stats.CritAvoid > 0) str += $"Crit. Avoid: +{stats.CritAvoid:F3}\n";
+            return str;
+        }
+    }
+
+    public string EnhancedStatsDescription
+    {
+        get
+        {
+            EnhancementCount++;
+            var str = StatsDescription;
+            EnhancementCount--;
+            return str;
+        }
+    }
+    
     #endregion
 
 #if UNITY_EDITOR

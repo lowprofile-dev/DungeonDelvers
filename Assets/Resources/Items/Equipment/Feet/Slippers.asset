@@ -92,19 +92,19 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 0
+      Data: 3
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 2
     - Name: Speed
       Entry: 3
-      Data: 1
+      Data: 6
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: -0.05
+      Data: -0.029999999329447746
     - Name: CritChance
       Entry: 4
       Data: 0
@@ -201,19 +201,19 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 1
+      Data: 4
     - Name: MagDef
       Entry: 3
-      Data: 1
+      Data: 3
     - Name: Speed
       Entry: 3
-      Data: 2
+      Data: 7
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: 0
+      Data: 0.019999999552965164
     - Name: CritChance
       Entry: 4
       Data: 0
@@ -310,19 +310,19 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 2
+      Data: 6
     - Name: MagDef
       Entry: 3
-      Data: 2
+      Data: 4
     - Name: Speed
       Entry: 3
-      Data: 3
+      Data: 9
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: 0
+      Data: 0.039999999105930328
     - Name: CritChance
       Entry: 4
       Data: 0
@@ -419,19 +419,19 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 2
+      Data: 7
     - Name: MagDef
       Entry: 3
-      Data: 3
+      Data: 5
     - Name: Speed
       Entry: 3
-      Data: 4
+      Data: 12
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: 0.05
+      Data: 0.059999998658895493
     - Name: CritChance
       Entry: 4
       Data: 0
@@ -528,13 +528,13 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 4
+      Data: 10
     - Name: MagDef
       Entry: 3
-      Data: 4
+      Data: 6
     - Name: Speed
       Entry: 3
-      Data: 5
+      Data: 16
     - Name: Accuracy
       Entry: 4
       Data: 0
@@ -602,16 +602,16 @@ MonoBehaviour:
   goldValue: 50
   droppable: 1
   itemText: 
-  EnhancementSlots: 0
+  EnhancementSlots: 2
   EnhancementStats:
     MaxHp: 0
     PhysAtk: 0
     MagAtk: 0
     PhysDef: 1
     MagDef: 0
-    Speed: 0
+    Speed: 1
     Accuracy: 0
-    Evasion: 0
+    Evasion: 0.009999999776482582
     CritChance: 0
     CritAvoid: 0
     ElementalResistance:

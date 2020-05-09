@@ -28,7 +28,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 7
       Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
@@ -48,12 +48,47 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
+    - Name: WeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimatorController
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
+    - Name: WeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimatorController
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 1
   databaseIgnore: 0
   CharacterName: Fighter
   CharacterPrefab: {fileID: 4926351740937089460, guid: 6b1c03872d39085498683e1163d118fa,
@@ -67,7 +102,7 @@ MonoBehaviour:
     PhysDef: 25
     MagDef: 19
     Speed: 27
-    Accuracy: 0.85
+    Accuracy: 0.9
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
@@ -100,11 +135,11 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  WeaponTypes: 02000000
-  ArmorTypes: 
-  Weapon: {fileID: 11400000, guid: 33460fde593de7d44aba5050108a14a1, type: 2}
+  WeaponTypes: 0200000001000000
+  ArmorTypes: 00000000
+  Weapon: {fileID: 11400000, guid: de30e4aef3dd3794f9833d78a35c6ed5, type: 2}
   Head: {fileID: 0}
-  Body: {fileID: 0}
+  Body: {fileID: 11400000, guid: 1c5afd80b8612f843a0ea31eae050a88, type: 2}
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}

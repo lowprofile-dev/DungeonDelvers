@@ -283,6 +283,7 @@ MonoBehaviour:
     Volume: 0.025
   InitialAp: 15
   ApGain: 25
+  ExpModifier: 1
   DefaultMessageBox: {fileID: 5457389356766954974, guid: 987eb3dfcca3ea48e93d20d121103e54,
     type: 3}
   DefaultTypingSound:
@@ -292,8 +293,14 @@ MonoBehaviour:
     type: 3}
   DefaultChestSound:
     AudioClip: {fileID: 8300000, guid: 8fe4f1de94a1a7c44b80f9f9e53197b9, type: 3}
-    Volume: 1
+    Volume: 0.1
+  DefaultForgeMenu: {fileID: 7640681385663065397, guid: 7934d4c909778b9469be7d915b09e75c,
+    type: 3}
   GoldTextColor: {r: 1, g: 1, b: 0, a: 1}
-  DefaultItemTextColor: {r: 0, g: 1, b: 0.9582815, a: 1}
+  DefaultItemTextColor: {r: 1, g: 1, b: 1, a: 1}
   ItemDatabase: {fileID: 11400000, guid: f7ef9f9a82d541c498a2544685fd9cdc, type: 2}
   CharacterDatabase: {fileID: 11400000, guid: a5f8fd2a2e291074880bacad09af25c8, type: 2}
+  MonsterDatabase: {fileID: 11400000, guid: 584758c9ab91a6943bf750bd3814af5d, type: 2}
+  BuyModifier: 1
+  SellModifer: 1
+  GoodLuckCharm: {fileID: 11400000, guid: 68b48211be04f1f4280d119de85b2ae7, type: 2}

@@ -376,6 +376,8 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+  Mode: 1
+  ChildIndex: 0
   typeName: Animator
   component: {fileID: 0}
 --- !u!114 &-1355571717770366816
@@ -742,6 +744,8 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+  Mode: 0
+  ChildIndex: 0
   typeName: AudioSource
   component: {fileID: 0}
 --- !u!114 &4836710339307235381
@@ -946,6 +950,8 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+  Mode: 0
+  ChildIndex: 0
   typeName: ChestComponent
   component: {fileID: 0}
 --- !u!114 &7834878644528677937

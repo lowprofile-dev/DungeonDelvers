@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d1a4181f6184ababaad21b5dd9af4e7, type: 3}
-  m_Name: CopperChestplate
+  m_Script: {fileID: 11500000, guid: 0cf48c1b54f14787bcbf7e72666c3fdd, type: 3}
+  m_Name: BrassSpear
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -86,13 +86,13 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 13
     - Name: MagAtk
       Entry: 3
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 6
+      Data: 0
     - Name: MagDef
       Entry: 3
       Data: 0
@@ -101,16 +101,16 @@ MonoBehaviour:
       Data: -3
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: -0.1
     - Name: Evasion
       Entry: 4
-      Data: -0.15
+      Data: 0
     - Name: CritChance
       Entry: 4
       Data: 0
     - Name: CritAvoid
       Entry: 4
-      Data: 0
+      Data: -0.05000000074505806
     - Name: ElementalResistance
       Entry: 7
       Data: ElementalResistance, Assembly-CSharp
@@ -195,31 +195,31 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 17
     - Name: MagAtk
       Entry: 3
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 8
+      Data: 0
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: -2
+      Data: -3
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: -0.1
+      Data: 0
     - Name: CritChance
       Entry: 4
       Data: 0
     - Name: CritAvoid
       Entry: 4
-      Data: 0
+      Data: -0.05000000074505806
     - Name: ElementalResistance
       Entry: 7
       Data: ElementalResistance, Assembly-CSharp
@@ -304,31 +304,31 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 22
     - Name: MagAtk
       Entry: 3
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: -1
+      Data: -2
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: -0.1
+      Data: 0
     - Name: CritChance
       Entry: 4
       Data: 0
     - Name: CritAvoid
       Entry: 4
-      Data: 0
+      Data: -0.02500000037252903
     - Name: ElementalResistance
       Entry: 7
       Data: ElementalResistance, Assembly-CSharp
@@ -413,31 +413,31 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 27
     - Name: MagAtk
       Entry: 3
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 13
+      Data: 0
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: -1
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: -0.05
+      Data: 0
     - Name: CritChance
       Entry: 4
       Data: 0
     - Name: CritAvoid
       Entry: 4
-      Data: 0.05
+      Data: -0.0099999997764825821
     - Name: ElementalResistance
       Entry: 7
       Data: ElementalResistance, Assembly-CSharp
@@ -522,13 +522,13 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 32
     - Name: MagAtk
       Entry: 3
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 18
+      Data: 0
     - Name: MagDef
       Entry: 3
       Data: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
       Data: 0
     - Name: CritAvoid
       Entry: 4
-      Data: 0.1
+      Data: 0
     - Name: ElementalResistance
       Entry: 7
       Data: ElementalResistance, Assembly-CSharp
@@ -596,24 +596,24 @@ MonoBehaviour:
       Entry: 6
       Data: 
   databaseIgnore: 0
-  itemIcon: {fileID: 7445151039034137675, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
+  itemIcon: {fileID: 8064503573396786541, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
-  itemName: Copper Brestplate
-  goldValue: 80
+  itemName: Brass Spear
+  goldValue: 100
   droppable: 1
-  itemText: A copper breastplate.
+  itemText: 
   EnhancementSlots: 2
   EnhancementStats:
     MaxHp: 0
-    PhysAtk: 0
+    PhysAtk: 2
     MagAtk: 0
-    PhysDef: 1
+    PhysDef: 0
     MagDef: 0
     Speed: 0
     Accuracy: 0
     Evasion: 0
     CritChance: 0
-    CritAvoid: 0
+    CritAvoid: -0.004999999888241291
     ElementalResistance:
       EarthResistance: 0
       FireResistance: 0
@@ -623,7 +623,7 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  EnhancementBaseCost: 40
+  EnhancementBaseCost: 50
   Skills: []
   Passives: []
-  _armorType: 1
+  weaponType: 6

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cf48c1b54f14787bcbf7e72666c3fdd, type: 3}
-  m_Name: Longsword2
+  m_Name: BronzeSpear
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -86,7 +86,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 19
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -98,10 +98,10 @@ MonoBehaviour:
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: -3
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: -0.1
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
       Data: 0
     - Name: CritAvoid
       Entry: 4
-      Data: 0
+      Data: -0.05000000074505806
     - Name: ElementalResistance
       Entry: 7
       Data: ElementalResistance, Assembly-CSharp
@@ -195,7 +195,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 25
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: -3
     - Name: Accuracy
       Entry: 4
       Data: 0
@@ -219,7 +219,7 @@ MonoBehaviour:
       Data: 0
     - Name: CritAvoid
       Entry: 4
-      Data: 0
+      Data: -0.05000000074505806
     - Name: ElementalResistance
       Entry: 7
       Data: ElementalResistance, Assembly-CSharp
@@ -304,7 +304,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 30
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -316,7 +316,7 @@ MonoBehaviour:
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: -2
     - Name: Accuracy
       Entry: 4
       Data: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
       Data: 0
     - Name: CritAvoid
       Entry: 4
-      Data: 0
+      Data: -0.02500000037252903
     - Name: ElementalResistance
       Entry: 7
       Data: ElementalResistance, Assembly-CSharp
@@ -413,7 +413,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 35
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -425,7 +425,7 @@ MonoBehaviour:
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: -1
     - Name: Accuracy
       Entry: 4
       Data: 0
@@ -437,7 +437,7 @@ MonoBehaviour:
       Data: 0
     - Name: CritAvoid
       Entry: 4
-      Data: 0
+      Data: -0.0099999997764825821
     - Name: ElementalResistance
       Entry: 7
       Data: ElementalResistance, Assembly-CSharp
@@ -522,7 +522,7 @@ MonoBehaviour:
       Data: 0
     - Name: PhysAtk
       Entry: 3
-      Data: 0
+      Data: 41
     - Name: MagAtk
       Entry: 3
       Data: 0
@@ -596,15 +596,16 @@ MonoBehaviour:
       Entry: 6
       Data: 
   databaseIgnore: 0
-  itemIcon: {fileID: 0}
-  itemName: 
-  goldValue: 0
+  itemIcon: {fileID: -3482835030561179922, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
+    type: 3}
+  itemName: Bronze Spear
+  goldValue: 200
   droppable: 1
   itemText: 
-  EnhancementSlots: 0
+  EnhancementSlots: 2
   EnhancementStats:
     MaxHp: 0
-    PhysAtk: 0
+    PhysAtk: 4
     MagAtk: 0
     PhysDef: 0
     MagDef: 0
@@ -612,7 +613,7 @@ MonoBehaviour:
     Accuracy: 0
     Evasion: 0
     CritChance: 0
-    CritAvoid: 0
+    CritAvoid: -0.00800000037997961
     ElementalResistance:
       EarthResistance: 0
       FireResistance: 0
@@ -622,7 +623,7 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  EnhancementBaseCost: 0
+  EnhancementBaseCost: 100
   Skills: []
   Passives: []
-  weaponType: 1
+  weaponType: 6

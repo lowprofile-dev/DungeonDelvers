@@ -49,19 +49,18 @@ public class MapTile : SerializedMonoBehaviour
         _collider2D.isTrigger = true;
         _collider2D.offset = bounds.center - transform.position;
         _collider2D.size = bounds.size;
-        SetTilemapLayer(LayerMask.NameToLayer("MinimapHidden"));
+        SetLayerRecursive(transform,LayerMask.NameToLayer("MinimapHidden"), 5);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        SetTilemapLayer(LayerMask.NameToLayer("Default"));
+        SetLayerRecursive(transform,LayerMask.NameToLayer("Default"));
     }
 
-    public void SetTilemapLayer(int layerIndex)
-    {
-        foreach (var tilemap in Tilemaps)
-        {
-            tilemap.gameObject.layer = layerIndex;
-        }
+    void SetLayerRecursive(Transform root, int layer, int maxDepth = Int32.MaxValue) {
+        if (maxDepth < 0) return;
+        if (root.gameObject.layer != LayerMask.NameToLayer("Interactable")) root.gameObject.layer = layer;
+        foreach(Transform child in root)
+            SetLayerRecursive(child, layer, maxDepth-1);
     }
 }

@@ -49,8 +49,6 @@ public class DamageEffect : Effect
         
         var damage = (int)(Mathf.Max(0,BattleController.Instance.DamageCalculation(damageCalculationInfo)) * DamageFactor);
 
-        Debug.Log($"Calculado {damage}");
-        
         var targetPassives = skillInfo.Target.PassiveEffects
             //.SelectMany(passive => passive.Effects.Where(passiveEffect => passiveEffect is IReceiveDamagePassiveEffect))
             .Where(pE => pE is IReceiveDamagePassiveEffect)

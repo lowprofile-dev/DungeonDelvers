@@ -90,7 +90,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 3
+      Data: 10
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 5
+      Data: 15
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -308,7 +308,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 6
+      Data: 20
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -417,7 +417,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 8
+      Data: 25
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -529,7 +529,7 @@ MonoBehaviour:
       Data: 0
     - Name: MagAtk
       Entry: 3
-      Data: 10
+      Data: 30
     - Name: PhysDef
       Entry: 3
       Data: 0
@@ -606,11 +606,11 @@ MonoBehaviour:
   goldValue: 80
   droppable: 1
   itemText: 
-  EnhancementSlots: 2
+  EnhancementSlots: 3
   EnhancementStats:
     MaxHp: 0
     PhysAtk: 0
-    MagAtk: 2
+    MagAtk: 3
     PhysDef: 0
     MagDef: 0
     Speed: 0

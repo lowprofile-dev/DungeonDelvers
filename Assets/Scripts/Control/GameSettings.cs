@@ -53,17 +53,20 @@ public class GameSettings : SerializedScriptableObject
     
     [TabGroup("2","Shop Menu")] public GameObject DefaultShopMenu;
     [TabGroup("2", "Shop Menu")] public SoundInfo DefaultChestSound;
+    [TabGroup("2", "Shop Menu")] public GameObject DefaultForgeMenu;
     
     [TabGroup("2","Text Settings")] public Color GoldTextColor;
     [TabGroup("2","Text Settings")] public Color DefaultItemTextColor;
     
     [TabGroup("3","Databases")] public ItemDatabase ItemDatabase;
     [TabGroup("3","Databases")] public CharacterDatabase CharacterDatabase;
-    [TabGroup("3","Databases")] public CharacterDatabase MonsterDatabase;
+    [TabGroup("3","Databases")] public MonsterDatabase MonsterDatabase;
     
     [TabGroup("3","Shop")] public float BuyModifier = 1f;
     [TabGroup("3","Shop")] public float SellModifer = 1f;
-    
+
+    [TabGroup("4", "Equipment")] 
+    public EquippableBase GoodLuckCharm;
     [TabGroup("4","Equipment")] 
     public Dictionary<EquippableBase.EquippableTier, int> DefaultEquipmentQualityChance;
     [TabGroup("4", "Equipment")] 

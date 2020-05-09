@@ -17,8 +17,8 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 9100000, guid: cb6a1edcb78d7e548af2ca0cf433f105, type: 2}
-    - {fileID: 9100000, guid: a3729eaec1c2837209e7b85e51beb338, type: 2}
     - {fileID: 9100000, guid: 81832681c1aa46fb799dd8209c353048, type: 2}
+    - {fileID: 9100000, guid: a3729eaec1c2837209e7b85e51beb338, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -56,8 +56,8 @@ MonoBehaviour:
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 6
-      Data: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -74,8 +74,8 @@ MonoBehaviour:
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 3
-      Data: 0
+      Entry: 6
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -91,7 +91,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 2
   databaseIgnore: 0
   CharacterName: Mage
   CharacterPrefab: {fileID: 8521580809372860284, guid: c227d6ea46ca1b142b7a5c5c62e5bb73,
@@ -105,7 +104,7 @@ MonoBehaviour:
     PhysDef: 21
     MagDef: 35
     Speed: 25
-    Accuracy: 0.95
+    Accuracy: 0.9
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
@@ -139,10 +138,10 @@ MonoBehaviour:
       WaterResistance: 0
       WindResistance: 0
   WeaponTypes: 0500000000000000
-  ArmorTypes: 
-  Weapon: {fileID: 11400000, guid: 2d6a5a8a42a6dab4ba23021fe38a7e54, type: 2}
+  ArmorTypes: 00000000
+  Weapon: {fileID: 11400000, guid: e750cf8bcf7918b4c973ba2caa72ec27, type: 2}
   Head: {fileID: 0}
-  Body: {fileID: 0}
+  Body: {fileID: 11400000, guid: 1c5afd80b8612f843a0ea31eae050a88, type: 2}
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}

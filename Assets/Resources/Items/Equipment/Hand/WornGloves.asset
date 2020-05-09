@@ -92,13 +92,13 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 1
+      Data: 3
     - Name: MagDef
       Entry: 3
-      Data: 0
+      Data: 2
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: 6
     - Name: Accuracy
       Entry: 4
       Data: 0
@@ -201,16 +201,16 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 1
+      Data: 4
     - Name: MagDef
       Entry: 3
-      Data: 1
+      Data: 3
     - Name: Speed
       Entry: 3
-      Data: 1
+      Data: 7
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: 0.05000000074505806
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -310,16 +310,16 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 2
+      Data: 6
     - Name: MagDef
       Entry: 3
-      Data: 2
+      Data: 4
     - Name: Speed
       Entry: 3
-      Data: 1
+      Data: 9
     - Name: Accuracy
       Entry: 4
-      Data: 0
+      Data: 0.079999998211860657
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -419,16 +419,16 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 3
+      Data: 7
     - Name: MagDef
       Entry: 3
-      Data: 2
+      Data: 5
     - Name: Speed
       Entry: 3
-      Data: 2
+      Data: 12
     - Name: Accuracy
       Entry: 4
-      Data: 0.05
+      Data: 0.10000000149011612
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -528,16 +528,16 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 5
+      Data: 10
     - Name: MagDef
       Entry: 3
-      Data: 3
+      Data: 6
     - Name: Speed
       Entry: 3
-      Data: 3
+      Data: 16
     - Name: Accuracy
       Entry: 4
-      Data: 0.1
+      Data: 0.15000000596046448
     - Name: Evasion
       Entry: 4
       Data: 0
@@ -608,9 +608,9 @@ MonoBehaviour:
     PhysAtk: 0
     MagAtk: 0
     PhysDef: 1
-    MagDef: 0
+    MagDef: 1
     Speed: 0
-    Accuracy: 0
+    Accuracy: 0.009999999776482582
     Evasion: 0
     CritChance: 0
     CritAvoid: 0

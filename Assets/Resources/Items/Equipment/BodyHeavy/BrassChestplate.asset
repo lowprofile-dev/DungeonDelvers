@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 391cfa8c267a4b4c9534fdc67063811c, type: 3}
-  m_Name: Head3
+  m_Script: {fileID: 11500000, guid: 3d1a4181f6184ababaad21b5dd9af4e7, type: 3}
+  m_Name: BrassChestplate
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -92,19 +92,19 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 0
+      Data: 14
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: -4
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: 0
+      Data: -0.15
     - Name: CritChance
       Entry: 4
       Data: 0
@@ -201,19 +201,19 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 0
+      Data: 18
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: -3
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: 0
+      Data: -0.1
     - Name: CritChance
       Entry: 4
       Data: 0
@@ -310,19 +310,19 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 0
+      Data: 22
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: -2
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: 0
+      Data: -0.1
     - Name: CritChance
       Entry: 4
       Data: 0
@@ -419,25 +419,25 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 0
+      Data: 26
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: -2
     - Name: Accuracy
       Entry: 4
       Data: 0
     - Name: Evasion
       Entry: 4
-      Data: 0
+      Data: -0.05
     - Name: CritChance
       Entry: 4
       Data: 0
     - Name: CritAvoid
       Entry: 4
-      Data: 0
+      Data: 0.05
     - Name: ElementalResistance
       Entry: 7
       Data: ElementalResistance, Assembly-CSharp
@@ -528,13 +528,13 @@ MonoBehaviour:
       Data: 0
     - Name: PhysDef
       Entry: 3
-      Data: 0
+      Data: 31
     - Name: MagDef
       Entry: 3
       Data: 0
     - Name: Speed
       Entry: 3
-      Data: 0
+      Data: -1
     - Name: Accuracy
       Entry: 4
       Data: 0
@@ -546,7 +546,7 @@ MonoBehaviour:
       Data: 0
     - Name: CritAvoid
       Entry: 4
-      Data: 0
+      Data: 0.1
     - Name: ElementalResistance
       Entry: 7
       Data: ElementalResistance, Assembly-CSharp
@@ -596,22 +596,22 @@ MonoBehaviour:
       Entry: 6
       Data: 
   databaseIgnore: 0
-  itemIcon: {fileID: -1733852175146431149, guid: cc992c58d47d97548895862c5e45375c,
+  itemIcon: {fileID: -6662134196140849334, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
-  itemName: Leather Cap
-  goldValue: 200
+  itemName: Brass Chestplate
+  goldValue: 80
   droppable: 1
-  itemText: 
+  itemText: A copper breastplate.
   EnhancementSlots: 2
   EnhancementStats:
     MaxHp: 0
     PhysAtk: 0
     MagAtk: 0
-    PhysDef: 0
+    PhysDef: 2
     MagDef: 0
-    Speed: 0
+    Speed: -1
     Accuracy: 0
-    Evasion: 0
+    Evasion: -0.009999999776482582
     CritChance: 0
     CritAvoid: 0
     ElementalResistance:
@@ -623,6 +623,7 @@ MonoBehaviour:
       LightningResistance: 0
       WaterResistance: 0
       WindResistance: 0
-  EnhancementBaseCost: 90
+  EnhancementBaseCost: 40
   Skills: []
   Passives: []
+  ArmorType: 1

@@ -2,4 +2,4 @@
     Working:
     1906944415
     Bugged:
-    869505149
+    1223778781 -- Entrada mal posicionada. Ver se tem como garantir que o primeiro mapa sempre é vertical.

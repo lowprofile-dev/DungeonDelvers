@@ -271,7 +271,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4061016433317025543}
   m_HandleRect: {fileID: 5627573152196413389}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -539,7 +539,6 @@ GameObject:
   - component: {fileID: 8712126630643122306}
   - component: {fileID: 9059096404293411826}
   - component: {fileID: 9135466242702069039}
-  - component: {fileID: 2595184337443603489}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -605,23 +604,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 0.2
---- !u!114 &2595184337443603489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5509592064526663668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7204a18b79ffc534f8150f4d66921978, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Inspector: {fileID: 8508919674091138201}
-  GoldText: {fileID: 2947485329201186502}
-  ItemLayout: {fileID: 4718958187984262738}
-  ItemPrefab: {fileID: 8763410988080895838, guid: 770f280b7b1ab3691800f270422ac7fe,
-    type: 3}
 --- !u!1 &6121551938661387667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,6 +1559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7204a18b79ffc534f8150f4d66921978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Shop: {fileID: 0}
   Inspector: {fileID: 8508919674091138201}
   GoldText: {fileID: 2947485329201186502}
   ItemLayout: {fileID: 5410051322156610736}
@@ -1673,12 +1656,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee96c4aa63c4cb38d3acf2eb7ca3ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopMenu: {fileID: 2595184337443603489}
+  ShopMenu: {fileID: 6401495310014528970}
   Item:
     Item: {fileID: 0}
     IsFixedPrice: 0
     FixedPrice: 0
-    PriceMultiplier: 0
   ItemName: {fileID: 2488875059194675814}
   ItemImage: {fileID: 1264506520883504408}
   ItemPrice: {fileID: 1676063131312178371}

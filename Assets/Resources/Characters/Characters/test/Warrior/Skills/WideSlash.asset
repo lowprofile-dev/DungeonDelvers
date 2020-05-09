@@ -139,16 +139,15 @@ MonoBehaviour:
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 3
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 12
   databaseIgnore: 0
   SkillName: Wide Slash
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 55
+  ApCost: 55
   Element: 0
   SkillDescription: Attack all enemies with one strike.
   Target: 3

@@ -515,6 +515,7 @@
               <e p="BranchInteraction.cs" t="Include" />
               <e p="DestroyObjectInteraction.cs" t="Include" />
               <e p="FadeInteraction.cs" t="Include" />
+              <e p="ForgeInteraction.cs" t="Include" />
               <e p="GetKeyInteraction.cs" t="Include" />
               <e p="LogInteraction.cs" t="Include" />
               <e p="MessageBoxInteraction.cs" t="Include" />
@@ -653,6 +654,7 @@
               <e p="SkillInfoPanel.cs" t="Include" />
               <e p="SkillTargeter.cs" t="Include" />
             </e>
+            <e p="ForgeMenu.cs" t="Include" />
             <e p="Main Menu" t="Include">
               <e p="CharacterInspector.cs" t="Include" />
               <e p="CharacterPanel.cs" t="Include" />

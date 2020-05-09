@@ -29,7 +29,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
@@ -45,6 +45,24 @@ MonoBehaviour:
     - Name: AnimatorController
       Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
+    - Name: WeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 3
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimatorController
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -85,7 +103,7 @@ MonoBehaviour:
     PhysDef: 36
     MagDef: 29
     Speed: 31
-    Accuracy: 0.95
+    Accuracy: 0.9
     Evasion: 0
     CritChance: 0
     CritAvoid: 0
@@ -119,10 +137,10 @@ MonoBehaviour:
       WaterResistance: 0
       WindResistance: 0
   WeaponTypes: 0100000006000000
-  ArmorTypes: 
-  Weapon: {fileID: 11400000, guid: 28e5896a8cfe7904d844e0b4d945085a, type: 2}
+  ArmorTypes: 01000000
+  Weapon: {fileID: 11400000, guid: 352d3c11248f93b409d420d76126dc03, type: 2}
   Head: {fileID: 0}
-  Body: {fileID: 0}
+  Body: {fileID: 11400000, guid: 545a34254f36fb6418bef854d8979fb9, type: 2}
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}

@@ -19,6 +19,7 @@ public class MapSettings : SerializedMonoBehaviour
     public IntroloopAudio MapBgm;
     public IntroloopAudio BattleBgm;
     private MapBGMPlayer Player;
+    public List<ChestReward> MapChestRewards;
     [FormerlySerializedAs("Encounters"), FoldoutGroup("Encounter")] public MapEncounterSet DefaultMapEncounterSet = null;
     [FoldoutGroup("Encounter"), ShowInInspector, ReadOnly] private MapEncounterSet _mapEncounterSet;
     public MapEncounterSet MapEncounterSet

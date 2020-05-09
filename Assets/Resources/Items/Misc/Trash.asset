@@ -21,11 +21,11 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  uniqueIdentifier: 
-  databaseIgnore: 0
+  databaseIgnore: 1
   itemIcon: {fileID: -403241372321467972, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
   itemName: Trash
   goldValue: 0
+  droppable: 1
   itemText: Actual Trash
   maxStack: 1
