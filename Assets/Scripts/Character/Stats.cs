@@ -13,10 +13,11 @@ using Random = UnityEngine.Random;
     public int PhysDef;
     public int MagDef;
     public int Speed;
-    [PropertyRange(-1, 1)] public double Accuracy;
-    [PropertyRange(-1, 1)] public double Evasion;
-    [PropertyRange(-1, 1)] public double CritChance;
-    [PropertyRange(-1, 1)] public double CritAvoid;
+    [Space]
+    public double Accuracy;
+    public double Evasion;
+    public double CritChance;
+    public double CritAvoid;
     public ElementalResistance ElementalResistance;
 
     public static Stats operator +(Stats a, Stats b)
@@ -55,16 +56,16 @@ using Random = UnityEngine.Random;
         };
     }
 
-    public static Stats operator *(Stats a, Stats b)
+    public static Stats operator *(Stats a, StatsMultiplier b)
     {
         return new Stats()
         {
-            MaxHp = a.MaxHp * b.MaxHp,
-            PhysAtk = a.PhysAtk * b.PhysAtk,
-            MagAtk = a.MagAtk * b.MagAtk,
-            PhysDef = a.PhysDef * b.PhysDef,
-            MagDef = a.MagDef * b.MagDef,
-            Speed = a.Speed * b.Speed,
+            MaxHp = (int) (a.MaxHp * b.MaxHp),
+            PhysAtk = (int) (a.PhysAtk * b.PhysAtk),
+            MagAtk = (int) (a.MagAtk * b.MagAtk),
+            PhysDef = (int) (a.PhysDef * b.PhysDef),
+            MagDef = (int) (a.MagDef * b.MagDef),
+            Speed = (int) (a.Speed * b.Speed),
             Accuracy = a.Accuracy * b.Accuracy,
             Evasion = a.Evasion * b.Evasion,
             CritChance = a.CritChance * b.CritChance,
@@ -73,22 +74,69 @@ using Random = UnityEngine.Random;
         };
     }
 
-    public static Stats operator *(Stats a, int b)
+    public static Stats operator *(Stats a, float b)
     {
         return new Stats()
         {
-            MaxHp = a.MaxHp * b,
-            PhysAtk = a.PhysAtk * b,
-            MagAtk = a.MagAtk * b,
-            PhysDef = a.PhysDef * b,
-            MagDef = a.MagDef * b,
-            Speed = a.Speed * b,
+            MaxHp = (int) (a.MaxHp * b),
+            PhysAtk = (int) (a.PhysAtk * b),
+            MagAtk = (int) (a.MagAtk * b),
+            PhysDef = (int) (a.PhysDef * b),
+            MagDef = (int) (a.MagDef * b),
+            Speed = (int) (a.Speed * b),
             Accuracy = a.Accuracy * b,
             Evasion = a.Evasion * b,
             CritChance = a.CritChance * b,
             CritAvoid = a.CritAvoid * b,
             ElementalResistance = a.ElementalResistance * b
         };
+    }
+}
+
+[Serializable] public struct StatsMultiplier
+{
+    public double MaxHp;
+    public double PhysAtk;
+    public double MagAtk;
+    public double PhysDef;
+    public double MagDef;
+    public double Speed;
+    [Space]
+    public double Accuracy;
+    public double Evasion;
+    public double CritChance;
+    public double CritAvoid;
+    public ElementalResistance ElementalResistance;
+
+    public StatsMultiplier Offset
+    {
+        get
+        {
+            return new StatsMultiplier
+            {
+                MaxHp = MaxHp - 1,
+                PhysAtk = PhysAtk - 1,
+                MagAtk = MagAtk - 1,
+                PhysDef = PhysDef - 1,
+                MagDef = MagDef - 1,
+                Speed = Speed - 1,
+                Accuracy = Accuracy - 1,
+                Evasion = Evasion - 1,
+                CritChance = CritChance - 1,
+                CritAvoid = CritAvoid - 1,
+                ElementalResistance = new ElementalResistance
+                {
+                    EarthResistance = ElementalResistance.EarthResistance - 1,
+                    DarkResistance = ElementalResistance.DarkResistance - 1,
+                    FireResistance = ElementalResistance.FireResistance - 1,
+                    HolyResistance = ElementalResistance.HolyResistance - 1,
+                    IceResistance = ElementalResistance.IceResistance - 1,
+                    LightningResistance = ElementalResistance.LightningResistance - 1,
+                    WaterResistance = ElementalResistance.WaterResistance - 1,
+                    WindResistance = ElementalResistance.WindResistance - 1,
+                }
+            };
+        }
     }
 }
 

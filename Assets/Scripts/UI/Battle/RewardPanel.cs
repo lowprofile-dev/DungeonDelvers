@@ -39,7 +39,7 @@ public class RewardPanel : MonoBehaviour
         FanfareAudioSource.PlayOneShot(GameSettings.Instance.DefaultFanfare);
         var text = $"The party gained <color=#00FFFF>{expGained} EXP</color> and <color=#FFFF00>{goldGained}g</color>.";
         if (itemsGained.Any())
-            text += $"\nThey also found {string.Join(", ", itemsGained.Select(item => item.InspectorName))}";
+            text += $"\nItem(s) obtained: {string.Join(", ", itemsGained.Select(i => i is Equippable e ? e.TierQualifiedName : i.InspectorName))}.";
         if (expGained >= PlayerController.Instance.ExpToNextLevel - PlayerController.Instance.CurrentExp)
             text += $"\nThe party is now <color=#008000>Lv. {PlayerController.Instance.PartyLevel+1}</color>!";
         RewardText.text = "";

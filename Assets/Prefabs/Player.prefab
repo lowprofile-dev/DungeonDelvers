@@ -84,10 +84,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 42485ac7352004c6a8bc01c3505ca003, type: 2}
   - {fileID: 11400000, guid: fb1fbb4bb0c7667e6833f3be9cba04f4, type: 2}
   InventoryBase:
-  - {fileID: 11400000, guid: dfd4ddf00c951e9499429d4b0e9d7732, type: 2}
-  - {fileID: 11400000, guid: 352d3c11248f93b409d420d76126dc03, type: 2}
-  - {fileID: 11400000, guid: 46eb8fe375710a6429b6aa1223754eb7, type: 2}
-  - {fileID: 11400000, guid: 55cef5d1ecc97df4891cd74385fdb84d, type: 2}
+  - {fileID: 11400000, guid: 094b5d9b7b2c21647aca654a0c96f9d6, type: 2}
   MovementSpeed: 5
   MainMenuPrefab: {fileID: 9044932552085264921, guid: bc9cf6ed27b58c5a2856ff9100a8fdde,
     type: 3}
@@ -95,7 +92,7 @@ MonoBehaviour:
   InteractionRange: 1.5
   PartyLevel: 1
   CurrentExp: 0
-  CurrentGold: 500
+  CurrentGold: 999999
   OverworldCharacter: {fileID: 0}
   State: 0
   CanWalk: 1

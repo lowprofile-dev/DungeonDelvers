@@ -162,11 +162,11 @@ public class Character
         //Fazer validações em tudo, eg. ver se tudo que tá equipado é valido, masteries tem nivel valido (>= 0, <= max)
         var stopwatch = Stopwatch.StartNew();
 
-        RecalculateBases();
-        RecalculateBonus();
         LoadSkills();
         LoadPassives();
-        LoadMasteries();
+        InitializeBases();
+        ApplyMasteries();
+        InitializeBonus();
 
         Stats = BaseStats + BonusStats;
 
@@ -174,20 +174,28 @@ public class Character
         Debug.Log($"{Base.CharacterName} regenerado em {stopwatch.ElapsedMilliseconds}ms");
     }
 
-    private void RecalculateBases()
+    private void InitializeBases()
     {
         BaseStats = Base.Bases + (Base.Growths * CurrentLevel);
     }
 
-    private void RecalculateBonus()
+    private void InitializeBonus()
     {
         BonusStats = new Stats();
 
         foreach (var equipInstance in Equipment)
         {
-            // var equip = equipInstance.EquippableBase;
-            // BonusStats += equip.BaseStats;
             BonusStats += equipInstance.GetStats;
+        }
+
+        var bonusStatPassives = Passives
+            .SelectMany(p => p.Effects)
+            .Where(pE => pE is ICharacterCalculateBonusStatsListener)
+            .Cast<ICharacterCalculateBonusStatsListener>();
+
+        foreach (var bonusStats in bonusStatPassives)
+        {
+            bonusStats.Apply(this,ref BonusStats);
         }
     }
 
@@ -213,7 +221,7 @@ public class Character
         }
     }
 
-    private void LoadMasteries()
+    private void ApplyMasteries()
     {
         foreach (var masteryInstance in MasteryInstances)
         {
@@ -401,4 +409,9 @@ public class Character
 
 [Serializable] public class CharacterEvent : UnityEvent<Character>
 {
+}
+
+public interface ICharacterCalculateBonusStatsListener
+{
+    void Apply(Character character, ref Stats bonusStats);
 }

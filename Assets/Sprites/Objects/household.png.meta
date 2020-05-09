@@ -1,7 +1,295 @@
 fileFormatVersion: 2
 guid: 6a6b185893b78cd49944f32a62653bfd
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6585490640520282864
+    second: household_0
+  - first:
+      213: -7944297531771779868
+    second: household_1
+  - first:
+      213: 8503021456202565035
+    second: household_2
+  - first:
+      213: 1360175504421153272
+    second: household_3
+  - first:
+      213: 8003994815063907180
+    second: household_4
+  - first:
+      213: -2262009171023137546
+    second: household_5
+  - first:
+      213: 8080656761761640596
+    second: household_6
+  - first:
+      213: -8744534018752088967
+    second: household_7
+  - first:
+      213: -8125777254705736588
+    second: household_8
+  - first:
+      213: 8128950105476829330
+    second: household_9
+  - first:
+      213: -5673673703379009379
+    second: household_10
+  - first:
+      213: 5507314386238354152
+    second: household_11
+  - first:
+      213: -4777021981949322869
+    second: household_12
+  - first:
+      213: 5457771209293573214
+    second: household_13
+  - first:
+      213: -3151573736530505762
+    second: household_14
+  - first:
+      213: 2940518500114785386
+    second: household_15
+  - first:
+      213: 3217324915051794555
+    second: household_16
+  - first:
+      213: 7862861938773880132
+    second: household_17
+  - first:
+      213: 6479848386832762192
+    second: household_18
+  - first:
+      213: -1134010424740232326
+    second: household_19
+  - first:
+      213: -6952523446480906721
+    second: household_20
+  - first:
+      213: -4476002732718135567
+    second: household_21
+  - first:
+      213: -8890912678025154137
+    second: household_22
+  - first:
+      213: 8104002926868293167
+    second: household_23
+  - first:
+      213: 1310377416979421269
+    second: household_24
+  - first:
+      213: 3625902504028550603
+    second: household_25
+  - first:
+      213: -8726288325819523502
+    second: household_26
+  - first:
+      213: 4159848136207605641
+    second: household_27
+  - first:
+      213: 5928570298663201025
+    second: household_28
+  - first:
+      213: -6709995400968079599
+    second: household_29
+  - first:
+      213: -7734973033355873630
+    second: household_30
+  - first:
+      213: 4566812074306113937
+    second: household_31
+  - first:
+      213: -1453227692207420018
+    second: household_32
+  - first:
+      213: 1238455355664070055
+    second: household_33
+  - first:
+      213: 3596696867646450083
+    second: household_34
+  - first:
+      213: 7092767117879015943
+    second: household_35
+  - first:
+      213: 8592625778705113845
+    second: household_36
+  - first:
+      213: -7574811783142991786
+    second: household_37
+  - first:
+      213: -6474074838644119339
+    second: household_38
+  - first:
+      213: -7822176919329829223
+    second: household_39
+  - first:
+      213: -6552747636464627175
+    second: household_40
+  - first:
+      213: 4452771203493267149
+    second: household_41
+  - first:
+      213: 7511596928712045032
+    second: household_42
+  - first:
+      213: -2065764181486313350
+    second: household_43
+  - first:
+      213: 300362358605534693
+    second: household_44
+  - first:
+      213: 739544463381596400
+    second: household_45
+  - first:
+      213: -6808424331367430908
+    second: household_46
+  - first:
+      213: 2770062251680325425
+    second: household_47
+  - first:
+      213: -8350893952460638908
+    second: household_48
+  - first:
+      213: 3508260365901897110
+    second: household_49
+  - first:
+      213: -5403590220015586000
+    second: household_50
+  - first:
+      213: -323010970585438638
+    second: household_51
+  - first:
+      213: 8796376046330834325
+    second: household_52
+  - first:
+      213: -1334622463582932289
+    second: household_53
+  - first:
+      213: -7094869449661692392
+    second: household_54
+  - first:
+      213: 8888062598498730256
+    second: household_55
+  - first:
+      213: -5835981664537066787
+    second: household_56
+  - first:
+      213: 1822651221088998288
+    second: household_57
+  - first:
+      213: 5219218625776937204
+    second: household_58
+  - first:
+      213: -6122681582863633645
+    second: household_59
+  - first:
+      213: 2794707598328507567
+    second: household_60
+  - first:
+      213: -4704585492345567256
+    second: household_61
+  - first:
+      213: -8273391479437913705
+    second: household_62
+  - first:
+      213: -6558574069152893494
+    second: household_63
+  - first:
+      213: 6297681274626978776
+    second: household_64
+  - first:
+      213: 3968233010136263056
+    second: household_65
+  - first:
+      213: -8292089068927231204
+    second: household_66
+  - first:
+      213: -9144628353260777092
+    second: household_67
+  - first:
+      213: -8885285002864801975
+    second: household_68
+  - first:
+      213: -6124384533136072252
+    second: household_69
+  - first:
+      213: -1589111315576361711
+    second: household_70
+  - first:
+      213: -1446004417802418563
+    second: household_71
+  - first:
+      213: 8749537978163069508
+    second: household_72
+  - first:
+      213: -6485713900550594438
+    second: household_73
+  - first:
+      213: 4926620870428837048
+    second: household_74
+  - first:
+      213: 8104630067641952221
+    second: household_75
+  - first:
+      213: 244675728570770531
+    second: household_76
+  - first:
+      213: -2697175298528069532
+    second: household_77
+  - first:
+      213: -1887770091125183766
+    second: household_78
+  - first:
+      213: -1917961147559243549
+    second: household_79
+  - first:
+      213: 2714547857893499772
+    second: household_80
+  - first:
+      213: -5530634201473874821
+    second: household_81
+  - first:
+      213: -7164368618730135402
+    second: household_82
+  - first:
+      213: -7951380325976672829
+    second: household_83
+  - first:
+      213: 6360364126085222845
+    second: household_84
+  - first:
+      213: -6439069091316827641
+    second: household_85
+  - first:
+      213: 4427813086616053184
+    second: household_86
+  - first:
+      213: -2664112004336913404
+    second: household_87
+  - first:
+      213: -7819921232942809352
+    second: household_88
+  - first:
+      213: 4416371387269130057
+    second: household_89
+  - first:
+      213: -1966286942167094839
+    second: household_90
+  - first:
+      213: -4454157111773768957
+    second: household_91
+  - first:
+      213: 7313513303351430901
+    second: household_92
+  - first:
+      213: -8815636272960304441
+    second: household_93
+  - first:
+      213: 1504263541810405069
+    second: household_94
+  - first:
+      213: -1307487573253373625
+    second: household_95
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -45,7 +333,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 18
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +372,2023 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: household_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e62ef325fcdb58e4897b693cca94af46
+      internalID: -6585490640520282864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 252
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dbeef40a880fa54f9dc9cf77abb8a27
+      internalID: -7944297531771779868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_2
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 252
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2b87434c5698647ad6dfb7066b5af2
+      internalID: 8503021456202565035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 252
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb5cf22f9fa29c4c9ab2575aebcad32
+      internalID: 1360175504421153272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_4
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 252
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe9db0feda988843880a300e2733b72
+      internalID: 8003994815063907180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_5
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 252
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb201a80f160aa041a615b61cca56583
+      internalID: -2262009171023137546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_6
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 252
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad16c29d04c427a4f8450b0def03c204
+      internalID: 8080656761761640596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_7
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 252
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08aa55bea03fa604aa007457ecf732cb
+      internalID: -8744534018752088967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_8
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 252
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a86b3d05fd80e445bdae8966b1e3415
+      internalID: -8125777254705736588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_9
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 252
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e3b9defe5adceb43a6dfeac80b32855
+      internalID: 8128950105476829330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_10
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 252
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df7154ac76ef35499398e77e9a78020
+      internalID: -5673673703379009379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_11
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 252
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f02fe9ec5a4184faef001b4a6a4b09
+      internalID: 5507314386238354152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b637aa58d76c849a2d90b5437e9150
+      internalID: -4777021981949322869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_13
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 216
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6386d63b68f6cfd498ed9dd3c0c65340
+      internalID: 5457771209293573214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_14
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 216
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e264c9abeaf2b11419511417503da1ff
+      internalID: -3151573736530505762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_15
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 216
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b6dc4b7c8595644a9da2d839b3708e
+      internalID: 2940518500114785386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_16
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 216
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3f3cfa372de8b49a19b71ba0419e5c
+      internalID: 3217324915051794555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_17
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 216
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4f465fe71c4c3459d54c8039f7b64d
+      internalID: 7862861938773880132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_18
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 216
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6585c87a3377a9441be0b535466f0e58
+      internalID: 6479848386832762192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_19
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 216
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f23c167a5e75d4490c6b3eaa43fa83
+      internalID: -1134010424740232326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_20
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 216
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4aed49753aa45840bc45ffeacf46cdd
+      internalID: -6952523446480906721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_21
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 216
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84e920413af5bc46b96f2b85547a71d
+      internalID: -4476002732718135567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_22
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 216
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c710f0e53a188e94bb2502154029a866
+      internalID: -8890912678025154137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_23
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 216
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad42c984ed0090d43a3fd07b08ab77d0
+      internalID: 8104002926868293167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 180
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f5dc4aeb0fe794bbc662502a39a59e
+      internalID: 1310377416979421269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_25
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 180
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845b3dc21d0b9ef40a7b00a66eb15068
+      internalID: 3625902504028550603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_26
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 180
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac24513b3d4d7ad41982f210a7cc0d97
+      internalID: -8726288325819523502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_27
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 180
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b6f92eadddca9468dfa95a7b958f0c
+      internalID: 4159848136207605641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_28
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 180
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93740744fe45de4ea7de7698832ccf5
+      internalID: 5928570298663201025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_29
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 180
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e69eeeaab6ae7549a180cde6c3983e6
+      internalID: -6709995400968079599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_30
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 180
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8ceff7f72e3b34183bb36f8b6b42b6
+      internalID: -7734973033355873630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_31
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 180
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9fc7ad74f4f8349aa48526a4c02061
+      internalID: 4566812074306113937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_32
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 180
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6c04717baeb2349ac54b7b0e5d7267
+      internalID: -1453227692207420018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_33
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 180
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c03db90e294e1c41a1bae5c6036b171
+      internalID: 1238455355664070055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_34
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 180
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6685feb2a5526d94e97599f8e402cc69
+      internalID: 3596696867646450083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_35
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 180
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25ba4466e16ed54d8259d67e17bb6cd
+      internalID: 7092767117879015943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fec97d85e359df4da8cb299b99d8a42
+      internalID: 8592625778705113845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_37
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 144
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74eb3bf3272dead42b74e7fb53d9a5cc
+      internalID: -7574811783142991786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_38
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 144
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816f9e3e2a7d8524890f9c844b055441
+      internalID: -6474074838644119339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_39
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 144
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3253ef02697aa124e9e5ed9820feaf2b
+      internalID: -7822176919329829223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_40
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 144
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5b43d7430d1564b8628c9780fb440f
+      internalID: -6552747636464627175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_41
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 144
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e22d0dc49e59db439de63bf4d4098eb
+      internalID: 4452771203493267149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_42
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 144
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2200d75b82f5d44408ec2a9a1a3dcb60
+      internalID: 7511596928712045032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_43
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 144
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f7bf7474e7931409193a3acd5016b1
+      internalID: -2065764181486313350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_44
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 144
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7d6cb23a24cf8478b77963d86cd995
+      internalID: 300362358605534693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_45
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 144
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b30b29b70e786c4697750b5d73388be
+      internalID: 739544463381596400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_46
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 144
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ef3f1dbd64ee24ab6b653e5c80fb3a
+      internalID: -6808424331367430908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_47
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 144
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d02d8dd12bbb9a41be74b21ca09be90
+      internalID: 2770062251680325425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 108
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7cae4be5ef8c1c40a542494b388a2f9
+      internalID: -8350893952460638908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_49
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 108
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4dbdc50401beb43903c0706aea240a
+      internalID: 3508260365901897110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_50
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 108
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7ec53799d4c6454ca9a2fe6c9f59748
+      internalID: -5403590220015586000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_51
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 108
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420f771e26b25ca4ea417f05be080f58
+      internalID: -323010970585438638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_52
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 108
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c465978a702d84285be5b2949a5530
+      internalID: 8796376046330834325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_53
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 108
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad8ba4ac56171341ab13fd5da9eee0c
+      internalID: -1334622463582932289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_54
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 108
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c21286711ca2943b02a984031de794
+      internalID: -7094869449661692392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_55
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 108
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6340c648dd1794fb83c5bc9aed63b1
+      internalID: 8888062598498730256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_56
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 108
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 962a3c15e685c2c43975beceb303acb4
+      internalID: -5835981664537066787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_57
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 108
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc61fcb4d1068b4c9c2bb6fcf1c392f
+      internalID: 1822651221088998288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_58
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 108
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14408ef0a90cd747a1e47cf231548e3
+      internalID: 5219218625776937204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_59
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 108
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4897860ac4f88ed40a2e509a46141f66
+      internalID: -6122681582863633645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07e02ddfd337d5143836c390194e9f19
+      internalID: 2794707598328507567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_61
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 72
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d030ec15924b5f94f9a33df785f082f9
+      internalID: -4704585492345567256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_62
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 72
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df59bbd2c68c8304e9b2c16cb55ecbd3
+      internalID: -8273391479437913705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_63
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 72
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeefba467f64d9348b8926c23d617c7e
+      internalID: -6558574069152893494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_64
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 72
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f993c862a359e43a0b4e3b5d26421f
+      internalID: 6297681274626978776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_65
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 72
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2fd913d14aaca40ba137b5685966be
+      internalID: 3968233010136263056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_66
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 72
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0580e9dfb03417c4da73474e75259f39
+      internalID: -8292089068927231204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_67
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 72
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7a2c981e8e3b14f9d2b7601fb5d1c7
+      internalID: -9144628353260777092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_68
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 72
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd66886357c9ee4492c693643c22e56
+      internalID: -8885285002864801975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_69
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 72
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad963d1ae67efb94a81c6014a195d8e0
+      internalID: -6124384533136072252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_70
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 72
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795a4b610e98ed64e8aeeafc98f4f472
+      internalID: -1589111315576361711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_71
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 72
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b9c313730b30546bfcaac75deed2e1
+      internalID: -1446004417802418563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 391d5a7964901b644a83c99cd6b49d9f
+      internalID: 8749537978163069508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_73
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 36
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0509e3161b76db04897c0ce0482135a1
+      internalID: -6485713900550594438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_74
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 36
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54673d15ce9002f4d8b6c804c6bbe76f
+      internalID: 4926620870428837048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_75
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 36
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e30d247c69a9645b55bf73015b89ce
+      internalID: 8104630067641952221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_76
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 36
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46080ebb3b1debc4284d3b346dce5d2c
+      internalID: 244675728570770531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_77
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 36
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470199d6dba1f9a49adc1915ed925ade
+      internalID: -2697175298528069532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_78
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 36
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175a66fb7c4768d40a137e0556dc1d76
+      internalID: -1887770091125183766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_79
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 36
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab58d1da3d6e211479c73eaecd8ee366
+      internalID: -1917961147559243549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_80
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 36
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c6fc49a7ceb784b89f5aa630d37260
+      internalID: 2714547857893499772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_81
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 36
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65435b6238f93644d943d10010ec3581
+      internalID: -5530634201473874821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_82
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 36
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ab17422a462a44a9c8b044563c328c
+      internalID: -7164368618730135402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_83
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 36
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7459c37a36d8ad41803eb3582f711d9
+      internalID: -7951380325976672829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d1436ee0e757848960a49fa4ed3aa2
+      internalID: 6360364126085222845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_85
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 0
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc8f3d3d8654a74cb44993cad2f5860
+      internalID: -6439069091316827641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_86
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 0
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1fe0c7bfeb3e59438e7b4dbfc25136b
+      internalID: 4427813086616053184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_87
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429e9d3ddd6222f41b68ea2c8cd90318
+      internalID: -2664112004336913404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_88
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5277a9dc62aef1445a199c8e8e202da7
+      internalID: -7819921232942809352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_89
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 0
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3b567744176aa4bbd52d5c57d08afb
+      internalID: 4416371387269130057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_90
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 0
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc178eac2c32cee48a8cac14ed5b7dcd
+      internalID: -1966286942167094839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_91
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae89b69e909cc24886f682e68355712
+      internalID: -4454157111773768957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_92
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 0
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66eb630ece22cca4eb4dba0c91aea865
+      internalID: 7313513303351430901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_93
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 0
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ca42252421051c49bcdd80dfc5ed2ed
+      internalID: -8815636272960304441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_94
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 0
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb97945597234d749bce3de5f7aa1971
+      internalID: 1504263541810405069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: household_95
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 0
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f94ecd12a5d5504fb991a7d023712f7
+      internalID: -1307487573253373625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

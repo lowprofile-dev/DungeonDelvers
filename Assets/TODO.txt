@@ -1,5 +1,5 @@
-Buffar todos os itens
-Rebalancear um pouco os stats (ForestElemental deve dar mais dano do que tá dando, testar como ficaria em teoria contra party lv 4)
+Terminar de fazer os 8 personagens com skills + masteries especificas de cada
+Rebalancear um pouco os stats dos inimigos (Slime, Familiar)
 Fazer mais inimigos simples pra floresta
 Remover CurrentEp e EpGain dos stats. Se for mudar a quantidade de Ep vai ser com passiva no inicio da luta/turno
 Refazer IA com xNode (maybe)

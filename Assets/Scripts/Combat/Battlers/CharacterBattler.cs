@@ -39,12 +39,13 @@ public class CharacterBattler : Battler
         Character = character;
         BattlerName = Character.Base.CharacterName;
         Level = PlayerController.Instance.PartyLevel;
-        BaseStats = character.BaseStats;
-        BonusStats = character.BonusStats;
+        // BaseStats = character.BaseStats;
+        // BonusStats = character.BonusStats;
+        // Skills = character.Skills;
+        // Passives = character.Passives;
+        RecalculateStats();
         CurrentHp = character.CurrentHp;
         CurrentAp = GameSettings.Instance.InitialAp;
-        Skills = character.Skills;
-        Passives = character.Passives;
         StatusEffectInstances = new List<StatusEffectInstance>();
         HitSound = character.Base.HitSound;
     }
@@ -79,15 +80,15 @@ public class CharacterBattler : Battler
     #region Stats
 
     [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly]
-    private int currentEp;
+    private int currentAp;
 
     public override int CurrentAp
     {
-        get => currentEp;
+        get => currentAp;
         set
         {
-            currentEp = value;
-            currentEp = Mathf.Clamp(currentEp, 0, 200);
+            currentAp = value;
+            currentAp = Mathf.Clamp(currentAp, 0, 200);
         }
     }
 
@@ -109,7 +110,24 @@ public class CharacterBattler : Battler
     [FoldoutGroup("Skills")] public List<PlayerSkill> Skills { get; private set; }
 
     [FoldoutGroup("Status Effects"), ShowInInspector, Sirenix.OdinInspector.ReadOnly]
-    public override List<StatusEffectInstance> StatusEffectInstances { get; set; }
+    public override List<StatusEffectInstance> StatusEffectInstances { get; set; } = new List<StatusEffectInstance>();
+
+    public override void RecalculateStats()
+    {
+        Passives = Character.Passives;
+        Skills = Character.Skills;
+        var baseStats = Character.BaseStats;
+        var bonusStats = Character.BonusStats;
+
+        foreach (ICharacterBattlerCalculateBonusStatsListener listener in PassiveEffects.Where(pE =>
+            pE is ICharacterBattlerCalculateBonusStatsListener))
+        {
+            listener.Apply(this, ref bonusStats);
+        }
+
+        Stats = baseStats + bonusStats;
+        Debug.Log($"{BattlerName} stats recalculated");
+    }
 
     #endregion
 
@@ -254,5 +272,15 @@ public class CharacterBattler : Battler
     public PlayerSkill[] AvailableSkills => Skills.Where(skill => skill.HasRequiredWeapon(Character)).ToArray();
 
     #endregion
+}
+
+// public interface ICharacterCalculateBaseStatsListener
+// {
+//     void Apply(CharacterBattler character, ref Stats baseStats);
+// }
+
+public interface ICharacterBattlerCalculateBonusStatsListener
+{
+    void Apply(CharacterBattler characterBattler, ref Stats bonusStats);
 }
 

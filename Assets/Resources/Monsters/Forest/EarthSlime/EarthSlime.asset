@@ -49,7 +49,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
   databaseIgnore: 0
   _assetIcon: {fileID: 21300000, guid: d60781d232764b600b0768ea82c2126a, type: 3}
   MonsterName: Earth Slime
@@ -57,13 +56,11 @@ MonoBehaviour:
     type: 3}
   BaseLevel: 3
   Stats:
-    MaxHp: 70
-    InitialEp: 15
-    EpGain: 25
-    PhysAtk: 19
-    MagAtk: 20
+    MaxHp: 105
+    PhysAtk: 27
+    MagAtk: 0
     PhysDef: 35
-    MagDef: 5
+    MagDef: 15
     Speed: 12
     Accuracy: 0.95
     Evasion: -0.05
@@ -79,14 +76,12 @@ MonoBehaviour:
       WaterResistance: 0
       WindResistance: 0
   StatLevelVariance:
-    MaxHp: 12
-    InitialEp: 0
-    EpGain: 0
-    PhysAtk: 5
-    MagAtk: 4
-    PhysDef: 4
-    MagDef: 1
-    Speed: 1
+    MaxHp: 15
+    PhysAtk: 6
+    MagAtk: 0
+    PhysDef: 5
+    MagDef: 3
+    Speed: 2
     Accuracy: 0
     Evasion: 0
     CritChance: 0

@@ -65,6 +65,7 @@ public class ForgeMenu : MonoBehaviour
         Buttons.Clear();
 
         var equips = PlayerController.Instance.Inventory
+            .Where(i => i is Equippable)
             .Cast<Equippable>().ToList();
 
         BuildEquips(equips);

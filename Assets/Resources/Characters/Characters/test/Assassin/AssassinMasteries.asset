@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Attack Training III
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -376, y: 280}
@@ -74,12 +74,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -151,6 +145,86 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+--- !u!114 &-8613790585264939729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
+  m_Name: Snipe
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -760, y: -888}
+  ports:
+    keys:
+    - Prerequisites
+    - RequirementOf
+    values:
+    - _fieldName: Prerequisites
+      _node: {fileID: -8613790585264939729}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: RequirementOf
+        node: {fileID: 6817474204229741761}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RequirementOf
+      _node: {fileID: -8613790585264939729}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Id: 33
+  MasteryName: Snipe
+  MasterySprite: {fileID: 0}
+  MasteryDescription: 
+  MasteryMaxLevel: 1
+  MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: a63721c8c0fb53a4783ae5cc66b4a163, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MasteryEffects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|LearnSkillMasteryEffect, Assembly-CSharp
+    - Name: Skill
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!114 &-7784497594866412979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +235,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Attack Training III
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -376, y: -8}
@@ -225,12 +299,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -312,7 +380,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Speed Training IV
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 40, y: 1144}
@@ -346,7 +414,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 28
-  MasteryName: Mag. Attack Training IV
+  MasteryName: Speed Training IV
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -376,12 +444,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -463,7 +525,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Speed Training III
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -376, y: 1144}
@@ -497,7 +559,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 27
-  MasteryName: Mag. Attack Training III
+  MasteryName: Speed Training III
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -527,12 +589,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -614,7 +670,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Attack Training V
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 456, y: -8}
@@ -675,12 +731,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -762,7 +812,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Attack Training II
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -792, y: -8}
@@ -826,12 +876,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -913,7 +957,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Hit Point Training I
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1208, y: -296}
@@ -976,12 +1020,6 @@ MonoBehaviour:
     - Name: MaxHp
       Entry: 3
       Data: 4
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
-      Entry: 3
-      Data: 0
     - Name: PhysAtk
       Entry: 3
       Data: 0
@@ -1061,7 +1099,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Attack Training IV
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 40, y: 280}
@@ -1125,12 +1163,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -1212,7 +1244,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Speed Training V
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 456, y: 1144}
@@ -1243,7 +1275,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 29
-  MasteryName: Mag. Attack Training V
+  MasteryName: Speed Training V
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -1273,12 +1305,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -1360,7 +1386,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Defense Training V
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 456, y: 856}
@@ -1391,7 +1417,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 24
-  MasteryName: Mag. Defebse Training V
+  MasteryName: Mag. Defense Training V
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -1421,12 +1447,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -1508,7 +1528,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Defense Training IV
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 40, y: 856}
@@ -1572,12 +1592,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -1659,7 +1673,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Speed Training I
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1208, y: 1144}
@@ -1690,7 +1704,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 25
-  MasteryName: Speed Attack Training I
+  MasteryName: Speed Training I
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -1720,12 +1734,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -1797,6 +1805,41 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+--- !u!114 &-1515920376733113693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dfdc6327294efe961b72f564c360b9, type: 3}
+  m_Name: Party Level Prerequisite
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1624, y: -712}
+  ports:
+    keys:
+    - LockedNode
+    values:
+    - _fieldName: LockedNode
+      _node: {fileID: -1515920376733113693}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Prerequisites
+        node: {fileID: 6817474204229741761}
+        reroutePoints: []
+      - fieldName: Prerequisites
+        node: {fileID: 2217577507179243617}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  MinPartyLevel: 5
+  LockedNode: {fileID: 0}
 --- !u!114 &-151076689545379348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,7 +1850,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Defense Training IV
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 40, y: 568}
@@ -1871,12 +1914,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -1991,6 +2028,11 @@ MonoBehaviour:
   - {fileID: -5732226484563946261}
   - {fileID: -6088784237877168701}
   - {fileID: -3808807377410467546}
+  - {fileID: 2217577507179243617}
+  - {fileID: 6817474204229741761}
+  - {fileID: -1515920376733113693}
+  - {fileID: -8613790585264939729}
+  - {fileID: 6006269977202390486}
 --- !u!114 &170239045212227392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2001,7 +2043,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Defense Training II
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -792, y: 568}
@@ -2065,12 +2107,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -2152,7 +2188,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Defense Training III
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -376, y: 568}
@@ -2216,12 +2252,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -2303,7 +2333,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Hit Point Training II
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -792, y: -296}
@@ -2369,12 +2399,6 @@ MonoBehaviour:
     - Name: MaxHp
       Entry: 3
       Data: 6
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
-      Entry: 3
-      Data: 0
     - Name: PhysAtk
       Entry: 3
       Data: 0
@@ -2454,7 +2478,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Attack Training I
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1208, y: -8}
@@ -2515,12 +2539,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -2592,6 +2610,89 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+--- !u!114 &2217577507179243617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
+  m_Name: Dagger Mastery I
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1208, y: -600}
+  ports:
+    keys:
+    - Prerequisites
+    - RequirementOf
+    values:
+    - _fieldName: Prerequisites
+      _node: {fileID: 2217577507179243617}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: LockedNode
+        node: {fileID: -1515920376733113693}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RequirementOf
+      _node: {fileID: 2217577507179243617}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Prerequisites
+        node: {fileID: 6006269977202390486}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Id: 30
+  MasteryName: Dagger Mastery I
+  MasterySprite: {fileID: 0}
+  MasteryDescription: 
+  MasteryMaxLevel: 1
+  MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 468d1dac22d9e644d8dacdf660129137, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MasteryEffects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|GetPassiveMasteryEffect, Assembly-CSharp
+    - Name: Passive
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!114 &2336372629829383174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2602,7 +2703,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Defense Training V
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 456, y: 568}
@@ -2633,7 +2734,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 19
-  MasteryName: Mag. Defense Training V
+  MasteryName: Phys. Defense Training V
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -2663,12 +2764,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -2750,7 +2845,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Attack Training II
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -792, y: 280}
@@ -2814,12 +2909,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -2901,7 +2990,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Defense Training I
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1208, y: 856}
@@ -2962,12 +3051,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -3049,7 +3132,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Attack Training IV
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 40, y: -8}
@@ -3113,12 +3196,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -3200,7 +3277,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Attack Training I
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1208, y: 280}
@@ -3261,12 +3338,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -3348,7 +3419,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Hit Point Training IV
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 40, y: -296}
@@ -3414,12 +3485,6 @@ MonoBehaviour:
     - Name: MaxHp
       Entry: 3
       Data: 10
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
-      Entry: 3
-      Data: 0
     - Name: PhysAtk
       Entry: 3
       Data: 0
@@ -3499,7 +3564,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Attack Training V
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 456, y: 280}
@@ -3560,12 +3625,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -3647,7 +3706,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Defense Training III
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -376, y: 856}
@@ -3711,12 +3770,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -3798,7 +3851,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Speed Training II
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -792, y: 1144}
@@ -3832,7 +3885,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   Id: 26
-  MasteryName: Mag. Attack Training II
+  MasteryName: Speed Training II
   MasterySprite: {fileID: 0}
   MasteryDescription: 
   MasteryMaxLevel: 10
@@ -3862,12 +3915,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -3949,7 +3996,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Mag. Defense Training II
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -792, y: 856}
@@ -4013,12 +4060,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -4100,7 +4141,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Hit Point Training V
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 456, y: -296}
@@ -4163,12 +4204,6 @@ MonoBehaviour:
     - Name: MaxHp
       Entry: 3
       Data: 12
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
-      Entry: 3
-      Data: 0
     - Name: PhysAtk
       Entry: 3
       Data: 0
@@ -4238,6 +4273,169 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+--- !u!114 &6006269977202390486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
+  m_Name: Quad Slash
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -760, y: -600}
+  ports:
+    keys:
+    - Prerequisites
+    - RequirementOf
+    values:
+    - _fieldName: Prerequisites
+      _node: {fileID: 6006269977202390486}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: RequirementOf
+        node: {fileID: 2217577507179243617}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RequirementOf
+      _node: {fileID: 6006269977202390486}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Id: 34
+  MasteryName: Quad Slash
+  MasterySprite: {fileID: 0}
+  MasteryDescription: 
+  MasteryMaxLevel: 1
+  MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: a45e4190a32d8d7498c7aeb084610be3, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MasteryEffects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|LearnSkillMasteryEffect, Assembly-CSharp
+    - Name: Skill
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+--- !u!114 &6817474204229741761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
+  m_Name: Bow Mastery I
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1208, y: -888}
+  ports:
+    keys:
+    - Prerequisites
+    - RequirementOf
+    values:
+    - _fieldName: Prerequisites
+      _node: {fileID: 6817474204229741761}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: LockedNode
+        node: {fileID: -1515920376733113693}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RequirementOf
+      _node: {fileID: 6817474204229741761}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Prerequisites
+        node: {fileID: -8613790585264939729}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Id: 31
+  MasteryName: Bow Mastery I
+  MasterySprite: {fileID: 0}
+  MasteryDescription: 
+  MasteryMaxLevel: 1
+  MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: b037018bd024f2c4fbe650592aa519b2, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MasteryEffects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|GetPassiveMasteryEffect, Assembly-CSharp
+    - Name: Passive
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!114 &7774469916211002673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4248,7 +4446,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
-  m_Name: Mastery
+  m_Name: Phys. Defense Training I
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: -1208, y: 568}
@@ -4309,12 +4507,6 @@ MonoBehaviour:
       Entry: 7
       Data: Stats, Assembly-CSharp
     - Name: MaxHp
-      Entry: 3
-      Data: 0
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
       Entry: 3
       Data: 0
     - Name: PhysAtk
@@ -4462,12 +4654,6 @@ MonoBehaviour:
     - Name: MaxHp
       Entry: 3
       Data: 8
-    - Name: InitialEp
-      Entry: 3
-      Data: 0
-    - Name: EpGain
-      Entry: 3
-      Data: 0
     - Name: PhysAtk
       Entry: 3
       Data: 0

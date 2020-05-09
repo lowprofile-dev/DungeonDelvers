@@ -218,7 +218,7 @@ public class BattleController : AsyncMonoBehaviour
         var partyLevel = PlayerController.Instance.PartyLevel;
 
         var expReward = Enemies
-            .Select(enemy => Mathf.Max(0,enemy.Level-partyLevel))
+            .Select(enemy => Mathf.Max(0,enemy.Level-partyLevel+1))
             .Sum();
 
         Debug.Log($"Calculated Exp Reward -- {expReward}");
@@ -479,9 +479,9 @@ public class BattleController : AsyncMonoBehaviour
                 case Skill.TargetType.OneAlly:
                     return Party.Cast<Battler>().Where(p => !p.Fainted).Select(p => new []{p}).ToArray();
                 case Skill.TargetType.AllEnemies:
-                    return new[] {Enemies.Cast<Battler>().ToArray()};
+                    return new[] {Enemies.Cast<Battler>().Where(e => !e.Fainted).ToArray()};
                 case Skill.TargetType.AllAllies:
-                    return new[] {Party.Cast<Battler>().ToArray()};
+                    return new[] {Party.Cast<Battler>().Where(p => !p.Fainted).ToArray()};
                 case Skill.TargetType.All:
                     return new[] {new List<Battler>(Party).Concat(Enemies).Where(b => !b.Fainted).ToArray()};
                 case Skill.TargetType.Self:
@@ -501,9 +501,9 @@ public class BattleController : AsyncMonoBehaviour
                 case Skill.TargetType.OneAlly:
                     return Enemies.Cast<Battler>().Where(p => !p.Fainted).Select(e => new []{e}).ToArray();
                 case Skill.TargetType.AllEnemies:
-                    return new[] {Party.Cast<Battler>().ToArray()};
+                    return new[] {Party.Cast<Battler>().Where(p => !p.Fainted).ToArray()};
                 case Skill.TargetType.AllAllies:
-                    return new[] {Enemies.Cast<Battler>().ToArray()};
+                    return new[] {Enemies.Cast<Battler>().Where(e => !e.Fainted).ToArray()};
                 case Skill.TargetType.All:
                     return new[] {new List<Battler>(Party).Concat(Enemies).Where(b => !b.Fainted).ToArray()};
                 case Skill.TargetType.Self:

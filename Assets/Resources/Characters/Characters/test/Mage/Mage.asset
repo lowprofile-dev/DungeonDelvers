@@ -99,14 +99,14 @@ MonoBehaviour:
     type: 3}
   Bases:
     MaxHp: 82
-    PhysAtk: 22
+    PhysAtk: 26
     MagAtk: 40
     PhysDef: 21
     MagDef: 35
     Speed: 25
     Accuracy: 0.9
-    Evasion: 0
-    CritChance: 0
+    Evasion: 0.05000000074505806
+    CritChance: 0.05000000074505806
     CritAvoid: 0
     ElementalResistance:
       EarthResistance: 0
@@ -118,15 +118,15 @@ MonoBehaviour:
       WaterResistance: 0
       WindResistance: 0
   Growths:
-    MaxHp: 6
+    MaxHp: 9
     PhysAtk: 4
     MagAtk: 7
     PhysDef: 4
     MagDef: 8
-    Speed: 5
+    Speed: 4
     Accuracy: 0
     Evasion: 0
-    CritChance: 0.05
+    CritChance: 0
     CritAvoid: 0
     ElementalResistance:
       EarthResistance: 0

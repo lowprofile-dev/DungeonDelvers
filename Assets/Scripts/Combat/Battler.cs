@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
 using Sirenix.OdinInspector;
@@ -35,52 +36,59 @@ public abstract class Battler : AsyncMonoBehaviour
 
     #region Stats
 
-    private bool _statsDirty = true;
-    [FoldoutGroup("Stats"), ShowInInspector] private Stats baseStats;
-    [FoldoutGroup("Stats"), ShowInInspector] private Stats bonusStats;
-    [FoldoutGroup("Stats"), ShowInInspector] private Stats totalStats;
+    //private bool _statsDirty = true;
+    // [FoldoutGroup("Stats"), ShowInInspector] private Stats baseStats;
+    // [FoldoutGroup("Stats"), ShowInInspector] private Stats bonusStats;
+    // [FoldoutGroup("Stats"), ShowInInspector] private Stats totalStats;
 
-    public Stats BaseStats
-    {
-        get => baseStats;
-        set
-        {
-            _statsDirty = true;
-            baseStats = value;
-        }
-    }
-    public Stats BonusStats
-    {
-        get => bonusStats;
-        set
-        {
-            _statsDirty = true;
-            bonusStats = value;
-        }
-    }
-    public Stats Stats
+    // public Stats BaseStats
+    // {
+    //     get => baseStats;
+    //     set
+    //     {
+    //         _statsDirty = true;
+    //         baseStats = value;
+    //     }
+    // }
+    // public Stats BonusStats
+    // {
+    //     get => bonusStats;
+    //     set
+    //     {
+    //         _statsDirty = true;
+    //         bonusStats = value;
+    //     }
+    // }
+    // public Stats Stats
+    // {
+    //     get
+    //     {
+    //         if (_statsDirty)
+    //         {
+    //             totalStats = baseStats + bonusStats;
+    //         }
+    //         return totalStats;
+    //     }
+    // }
+
+    [ShowInInspector, Sirenix.OdinInspector.ReadOnly] public Stats Stats { get; set; }
+    
+    [TabGroup("Passives"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public virtual List<Passive> Passives { get; protected set; }
+    [TabGroup("Status Effects"), ShowInInspector] public virtual List<StatusEffectInstance> StatusEffectInstances { get; set; }
+
+    public virtual PassiveEffect[] PassiveEffects
     {
         get
         {
-            if (_statsDirty)
-            {
-                totalStats = baseStats + bonusStats;
-            }
-            return totalStats;
+            var passiveEffectsFromPassives = Passives.SelectMany(pE => pE.Effects);
+            var passiveEffectsFromStatusEffects = StatusEffectInstances
+                .SelectMany(sI => sI.StatusEffect.Effects);
+            return passiveEffectsFromPassives.Concat(passiveEffectsFromStatusEffects).ToArray();
         }
     }
-    
-    [TabGroup("Passives"), ShowInInspector, ReadOnly] public virtual List<Passive> Passives { get; protected set; }
-    [TabGroup("Status Effects")] public virtual List<StatusEffectInstance> StatusEffectInstances { get; set; }
-    
-    public virtual List<PassiveEffect> PassiveEffects =>
-        Passives
-            .SelectMany(passive => passive.Effects)
-            .Concat(
-                StatusEffectInstances
-                    .SelectMany(statusEffectInstance => statusEffectInstance.StatusEffect.Effects))
-            .OrderByDescending(passiveEffect => passiveEffect.Priority)
-            .ToList();
+
+    public PassiveEffect[] OrderedPassiveEffects => 
+        PassiveEffects.OrderByDescending(pE => pE.Priority).ToArray();
 
     public virtual RectTransform RectTransform => transform as RectTransform;
 
@@ -284,12 +292,9 @@ public abstract class Battler : AsyncMonoBehaviour
     protected virtual Task PlayHitSound() => HitSound != null
         ? QueueActionAndAwait(() => AudioSource.PlayOneShot(HitSound))
         : Task.CompletedTask;
-    
-    public void RecalculateStats()
-    {
-        
-    }
-    
+
+    public abstract void RecalculateStats();
+
     public async Task ApplyStatusEffectAsync(StatusEffectInstance statusEffectInstance)
     {
         await QueueActionAndAwait(() => ApplyStatusEffect(statusEffectInstance));
@@ -302,6 +307,15 @@ public abstract class Battler : AsyncMonoBehaviour
 
     public void ApplyStatusEffect(StatusEffectInstance statusEffectInstance)
     {
+        var statusEffect = statusEffectInstance.StatusEffect;
+        var appliedStatusEffect = StatusEffectInstances.FirstOrDefault(sI => sI.StatusEffect == statusEffect);
+        if (appliedStatusEffect != null)
+        {
+            if (statusEffectInstance.TurnDuration > appliedStatusEffect.TurnDuration)
+                appliedStatusEffect.TurnDuration = statusEffectInstance.TurnDuration;
+            return;
+        }
+        
         StatusEffectInstances.Add(statusEffectInstance);
         var effects = statusEffectInstance.StatusEffect.Effects
             .Where(effect => effect is IOnApplyPassiveEffect)
@@ -311,6 +325,8 @@ public abstract class Battler : AsyncMonoBehaviour
         {
             effect.OnApply(this);
         }
+        
+        RecalculateStats();
     }
 
     public void RemoveStatusEffect(StatusEffectInstance statusEffectInstance)
@@ -328,6 +344,8 @@ public abstract class Battler : AsyncMonoBehaviour
         {
             effect.OnUnapply(this);
         }
+        
+        RecalculateStats();
     }
 
     #endregion

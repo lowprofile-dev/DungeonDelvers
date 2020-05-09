@@ -160,7 +160,7 @@ namespace SkredUtils
                 dict[obj] = weight;
             }
 
-            var index = UnityEngine.Random.Range(0, totalWeight);
+            var index = GameController.Instance.Random.Next(0, totalWeight);
             foreach (var obj in collection)
             {
                 index -= dict[obj];

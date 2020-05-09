@@ -75,6 +75,8 @@ public class GameSaveController
         PlayerController.Instance.CurrentExp = save.CurrentExp;
         PlayerController.Instance.PartyLevel = save.CurrentLevel;
         PlayerController.Instance.transform.position = save.ScenePosition;
+        
+        PlayerController.Instance.Party.ForEach(p => p.Regenerate());
 
         SceneManager.LoadScene(save.CurrentSceneIndex);
     }

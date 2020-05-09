@@ -87,7 +87,7 @@ Animator:
   m_GameObject: {fileID: 7439843032942050208}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9c7c6cbaeb339ea4299a275fb82e4cdd, type: 2}
+  m_Controller: {fileID: 9100000, guid: 197901a801818374493a0e607788bfa7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -120,6 +120,9 @@ MonoBehaviour:
     - Name: Character
       Entry: 6
       Data: 
+  HitSound:
+    AudioClip: {fileID: 0}
+    Volume: 1
   Animator: {fileID: -9196586669562914119}
 --- !u!114 &-9196586669562914119
 MonoBehaviour:
@@ -133,3 +136,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec6d779f01d4c54abf0243cefbdb0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []

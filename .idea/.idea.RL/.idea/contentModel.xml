@@ -407,6 +407,8 @@
               <e p="MasteryEffect.cs" t="Include" />
               <e p="MasteryEffects" t="Include">
                 <e p="BaseStatMasteryEffect.cs" t="Include" />
+                <e p="GetPassiveMasteryEffect.cs" t="Include" />
+                <e p="LearnSkillMasteryEffect.cs" t="Include" />
               </e>
               <e p="MasteryGraph.cs" t="Include" />
               <e p="MasteryInstance.cs" t="Include" />
@@ -517,6 +519,7 @@
               <e p="FadeInteraction.cs" t="Include" />
               <e p="ForgeInteraction.cs" t="Include" />
               <e p="GetKeyInteraction.cs" t="Include" />
+              <e p="InnInteraction.cs" t="Include" />
               <e p="LogInteraction.cs" t="Include" />
               <e p="MessageBoxInteraction.cs" t="Include" />
               <e p="OpenChestInteraction.cs" t="Include" />
@@ -610,11 +613,12 @@
               <e p="Passive.cs" t="Include" />
               <e p="PassiveEffects" t="Include">
                 <e p="BlockPassiveEffect.cs" t="Include" />
-                <e p="BonusStatPassiveEffect.cs" t="Include" />
+                <e p="BonusStatsPassiveEffect.cs" t="Include" />
                 <e p="DamageReductionPassiveEffect.cs" t="Include" />
                 <e p="DefendPassiveEffect.cs" t="Include" />
                 <e p="DoTPassiveEffect.cs" t="Include" />
                 <e p="EnchantAttackPassiveEffect.cs" t="Include" />
+                <e p="EquipBonusStatsPassiveEffect.cs" t="Include" />
                 <e p="MedidatePassiveEffect.cs" t="Include" />
                 <e p="PassiveEffect.cs" t="Include" />
                 <e p="RegenPassiveEffect.cs" t="Include" />
@@ -655,6 +659,7 @@
               <e p="SkillTargeter.cs" t="Include" />
             </e>
             <e p="ForgeMenu.cs" t="Include" />
+            <e p="InnMenu.cs" t="Include" />
             <e p="Main Menu" t="Include">
               <e p="CharacterInspector.cs" t="Include" />
               <e p="CharacterPanel.cs" t="Include" />

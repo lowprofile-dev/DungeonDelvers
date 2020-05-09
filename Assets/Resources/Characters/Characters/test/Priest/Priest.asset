@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63668046cc5843debea45eaed0277ee1, type: 3}
+  m_Name: Priest
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 9100000, guid: 8c43777f4ee5f7745be2ad4ca56ba717, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: BattlerAnimationControllers
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[CharacterBase+BattlerAnimationController,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
+    - Name: WeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 3
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimatorController
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
+    - Name: WeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimatorController
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
+    - Name: WeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimatorController
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  databaseIgnore: 0
+  CharacterName: Priest
+  CharacterPrefab: {fileID: 0}
+  BattlerPrefab: {fileID: 7439843032942050208, guid: ae4ccc3773dc0ab4fbbab72c51557473,
+    type: 3}
+  Bases:
+    MaxHp: 85
+    PhysAtk: 22
+    MagAtk: 37
+    PhysDef: 31
+    MagDef: 39
+    Speed: 24
+    Accuracy: 0.8999999761581421
+    Evasion: 0.05000000074505806
+    CritChance: 0.05000000074505806
+    CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
+  Growths:
+    MaxHp: 10
+    PhysAtk: 3
+    MagAtk: 6
+    PhysDef: 4
+    MagDef: 7
+    Speed: 3
+    Accuracy: 0
+    Evasion: 0
+    CritChance: 0
+    CritAvoid: 0
+    ElementalResistance:
+      EarthResistance: 0
+      FireResistance: 0
+      HolyResistance: 0
+      DarkResistance: 0
+      IceResistance: 0
+      LightningResistance: 0
+      WaterResistance: 0
+      WindResistance: 0
+  WeaponTypes: 0500000004000000
+  ArmorTypes: 01000000
+  Weapon: {fileID: 0}
+  Head: {fileID: 0}
+  Body: {fileID: 0}
+  Hand: {fileID: 0}
+  Feet: {fileID: 0}
+  Accessory: {fileID: 0}
+  Masteries: {fileID: 11400000, guid: 39762fc7e1ec847449ba66850fbbbae8, type: 2}
+  BaseSkills: []
+  BasePassives: []
+  DefaultDefendSkill: {fileID: 11400000, guid: 3fda503906d7d314d8cdd9e2b6e3a30d, type: 2}
+  HitSound:
+    AudioClip: {fileID: 8300000, guid: a9e0e39240fe4d548ae0fe809819b709, type: 3}
+    Volume: 0.1
+  Level: 1

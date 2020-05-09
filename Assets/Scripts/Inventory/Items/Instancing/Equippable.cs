@@ -94,16 +94,16 @@ public class Equippable : Item
         {
             var str = "";
             var stats = GetStats;
-            if (stats.MaxHp > 0) str += $"Max HP: +{stats.MaxHp}\n";
-            if (stats.PhysAtk > 0) str += $"Phys. Attack: +{stats.PhysAtk}\n";
-            if (stats.MagAtk > 0) str += $"Mag. Attack: +{stats.MagAtk}\n";
-            if (stats.PhysDef > 0) str += $"Phys. Defense: +{stats.PhysDef}\n";
-            if (stats.MagDef > 0) str += $"Mag. Defense: +{stats.MagDef}\n";
-            if (stats.Speed > 0) str += $"Speed: +{stats.Speed}\n";
-            if (stats.Accuracy > 0) str += $"Accuracy: +{stats.Accuracy:F3}\n";
-            if (stats.Evasion > 0) str += $"Evasion: +{stats.Evasion:F3}\n";
-            if (stats.CritChance > 0) str += $"Crit. Chance: +{stats.CritChance:F3}\n";
-            if (stats.CritAvoid > 0) str += $"Crit. Avoid: +{stats.CritAvoid:F3}\n";
+            if (stats.MaxHp != 0) str += $"Max HP: {stats.MaxHp:+#;-#}\n";
+            if (stats.PhysAtk != 0) str += $"Phys. Attack: {stats.PhysAtk:+#;-#}\n";
+            if (stats.MagAtk != 0) str += $"Mag. Attack: {stats.MagAtk:+#;-#}\n";
+            if (stats.PhysDef != 0) str += $"Phys. Defense: {stats.PhysDef:+#;-#}\n";
+            if (stats.MagDef != 0) str += $"Mag. Defense: {stats.MagDef:+#;-#}\n";
+            if (stats.Speed != 0) str += $"Speed: {stats.Speed:+#;-#}\n";
+            if (stats.Accuracy != 0) str += $"Accuracy: {stats.Accuracy:+0.###;-0.###}\n";
+            if (stats.Evasion != 0) str += $"Evasion: {stats.Evasion:+0.###;-0.###}\n";
+            if (stats.CritChance != 0) str += $"Crit. Chance: {stats.CritChance:+0.###;-0.###}\n";
+            if (stats.CritAvoid != 0) str += $"Crit. Avoid: {stats.CritAvoid:+0.###;-0.###}\n";
             return str;
         }
     }

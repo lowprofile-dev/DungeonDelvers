@@ -104,8 +104,8 @@ MonoBehaviour:
     MagDef: 29
     Speed: 31
     Accuracy: 0.9
-    Evasion: 0
-    CritChance: 0
+    Evasion: 0.05000000074505806
+    CritChance: 0.05000000074505806
     CritAvoid: 0
     ElementalResistance:
       EarthResistance: 0
@@ -117,15 +117,15 @@ MonoBehaviour:
       WaterResistance: 0
       WindResistance: 0
   Growths:
-    MaxHp: 8
+    MaxHp: 16
     PhysAtk: 7
-    MagAtk: 4
+    MagAtk: 2
     PhysDef: 6
     MagDef: 5
-    Speed: 7
+    Speed: 5
     Accuracy: 0
     Evasion: 0
-    CritChance: 0.05
+    CritChance: 0
     CritAvoid: 0
     ElementalResistance:
       EarthResistance: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}
-  Masteries: {fileID: 11400000, guid: 071816fe07061344b80682334ee910ea, type: 2}
+  Masteries: {fileID: 11400000, guid: ad3d2fe80f8df7946818b738aba93473, type: 2}
   BaseSkills:
   - {fileID: 11400000, guid: cc639c2ad8b86454d841e36f8b744fd7, type: 2}
   - {fileID: 11400000, guid: f97081891fca67a4d8571fbd3e5f801d, type: 2}

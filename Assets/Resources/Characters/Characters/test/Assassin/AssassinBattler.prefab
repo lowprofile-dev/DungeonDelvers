@@ -88,7 +88,7 @@ Animator:
   m_GameObject: {fileID: 7439843032942050208}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 71e63fe59bf51714ab1c32944338da70, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7e34792bfee7e6e43aa02306e636b583, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -121,6 +121,9 @@ MonoBehaviour:
     - Name: Character
       Entry: 6
       Data: 
+  HitSound:
+    AudioClip: {fileID: 0}
+    Volume: 1
   Animator: {fileID: -5339953952409292070}
 --- !u!114 &-5339953952409292070
 MonoBehaviour:
@@ -142,27 +145,7 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: AnimatorValues
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Int32,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
-        mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
 --- !u!82 &6015350395029673294
 AudioSource:
   m_ObjectHideFlags: 0

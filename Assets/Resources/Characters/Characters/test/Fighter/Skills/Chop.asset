@@ -139,16 +139,15 @@ MonoBehaviour:
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 2
   databaseIgnore: 0
   SkillName: Chop
   SkillIcon: {fileID: -8726097045332059612, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 20
+  ApCost: 20
   Element: 0
   SkillDescription: Attack one target with an axe.
   Target: 1

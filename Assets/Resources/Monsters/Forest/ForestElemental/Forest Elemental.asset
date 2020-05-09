@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: a92b3d1f5f293f94592e2996f9634c4a, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -42,31 +43,40 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 3|Monster+MonsterDrop, Assembly-CSharp
+    - Name: ItemBase
+      Entry: 10
       Data: 0
+    - Name: chance
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
   databaseIgnore: 0
   _assetIcon: {fileID: 21300000, guid: 33e50606d55ff014385069f585c55c4a, type: 3}
   MonsterName: Forest Elemental
   MonsterBattler: {fileID: 1941738787345818818, guid: e5f618e146690b9448ae2f95cbf18683,
     type: 3}
-  BaseLevel: 4
+  BaseLevel: 5
   Stats:
-    MaxHp: 85
-    InitialEp: 15
-    EpGain: 25
-    PhysAtk: 34
-    MagAtk: 28
+    MaxHp: 180
+    PhysAtk: 35
+    MagAtk: 30
     PhysDef: 35
-    MagDef: 22
-    Speed: 26
+    MagDef: 28
+    Speed: 58
     Accuracy: 1
-    Evasion: 0
+    Evasion: 0.10000000149011612
     CritChance: 0
     CritAvoid: 0
     ElementalResistance:
@@ -79,14 +89,12 @@ MonoBehaviour:
       WaterResistance: 0
       WindResistance: 0
   StatLevelVariance:
-    MaxHp: 17
-    InitialEp: 0
-    EpGain: 0
-    PhysAtk: 6
-    MagAtk: 5
-    PhysDef: 5
-    MagDef: 3
-    Speed: 3
+    MaxHp: 30
+    PhysAtk: 5
+    MagAtk: 4
+    PhysDef: 6
+    MagDef: 6
+    Speed: 6
     Accuracy: 0
     Evasion: 0
     CritChance: 0

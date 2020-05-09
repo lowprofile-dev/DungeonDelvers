@@ -49,7 +49,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
   databaseIgnore: 0
   _assetIcon: {fileID: 21300000, guid: f982678fe89fa69b593565e0a07a706e, type: 3}
   MonsterName: Forest Sprite
@@ -58,8 +57,6 @@ MonoBehaviour:
   BaseLevel: 2
   Stats:
     MaxHp: 65
-    InitialEp: 15
-    EpGain: 25
     PhysAtk: 22
     MagAtk: 19
     PhysDef: 24
@@ -80,8 +77,6 @@ MonoBehaviour:
       WindResistance: 0
   StatLevelVariance:
     MaxHp: 10
-    InitialEp: 0
-    EpGain: 0
     PhysAtk: 4
     MagAtk: 3
     PhysDef: 4
@@ -106,4 +101,4 @@ MonoBehaviour:
   Skills:
   - {fileID: 11400000, guid: e07bc40db4e43524f97da1022fda3f16, type: 2}
   Passives: []
-  goldReward: {x: 4, y: 6}
+  goldReward: {x: 2, y: 3}

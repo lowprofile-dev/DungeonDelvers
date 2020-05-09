@@ -60,10 +60,24 @@ public class CharacterInspector : SerializedMonoBehaviour
         SetEquip(FeetName, character.Feet);
         SetEquip(AccessoryName, character.Accessory);
 
-        var stats = character.Stats;
-
+        //var stats = character.Stats;
+        var bases = Character.BaseStats;
+        var bonuses = Character.BonusStats;
+        var color = "#C0C0C0";
+        //<color={color}></color>
+        
+        //<color=#C0C0C0></color>
         var newText =
-            $"HP: {character.CurrentHp}/{stats.MaxHp}\nPhysical Attack: {stats.PhysAtk}\nMagical Attack: {stats.MagAtk}\nPhysical Defense: {stats.PhysDef}\nMagical Defense: {stats.MagDef}\nSpeed: {stats.Speed}\nAccuracy: {stats.Accuracy:F}\nEvasion: {stats.Evasion:F}\nCritical Accuracy: {stats.CritChance:F}\nCritical Evasion: {stats.CritAvoid:F}";
+            $"HP: {character.CurrentHp}/{bases.MaxHp}+<color={color}>{bonuses.MaxHp}</color>\n" +
+            $"Phys. Attack: {bases.PhysAtk}+<color={color}>{bonuses.PhysAtk}</color>\n" +
+            $"Mag. Attack: {bases.MagAtk}+<color={color}>{bonuses.MagAtk}</color>\n" +
+            $"Phys. Defense: {bases.PhysDef}+<color={color}>{bonuses.PhysDef}</color>\n" +
+            $"Mag. Defense: {bases.MagDef}+<color={color}>{bonuses.MagDef}</color>\n" +
+            $"Speed: {bases.Speed}+<color={color}>{bonuses.Speed}</color>\n" +
+            $"Accuracy: {bases.Accuracy:F}+<color={color}>{bonuses.Accuracy}</color>\n" +
+            $"Evasion: {bases.Evasion:F}+<color={color}>{bonuses.Evasion}</color>\n" +
+            $"Critical Accuracy: {bases.CritChance:F}+<color={color}>{bonuses.CritChance}</color>\n" +
+            $"Critical Evasion: {bases.CritAvoid:F}+<color={color}>{bonuses.CritAvoid}</color>";
 
         StatsText.text = newText;
 

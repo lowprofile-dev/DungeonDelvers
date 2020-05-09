@@ -42,11 +42,15 @@ public class MonsterBattler : Battler
         MonsterBase = monsterBase;
         Level = level;
 
-        BaseStats = MonsterBase.Stats;
-        BonusStats = MonsterBase.StatLevelVariance * (Level - MonsterBase.BaseLevel);
+        // BaseStats = MonsterBase.Stats;
+        // BonusStats = MonsterBase.StatLevelVariance * (Level - MonsterBase.BaseLevel);
 
-        Skills = MonsterBase.Skills;
-        SkillAi = MonsterBase.SkillAi;
+        // Skills = MonsterBase.Skills;
+        // SkillAi = MonsterBase.SkillAi;
+        
+        StatusEffectInstances = new List<StatusEffectInstance>();
+        RecalculateStats();
+        
         TargeterAi = MonsterBase.TargeterAi;
 
         monsterBattler = Instantiate(MonsterBase.MonsterBattler, RectTransform);
@@ -56,8 +60,8 @@ public class MonsterBattler : Battler
         CurrentAp = GameSettings.Instance.InitialAp;
         
         BattleDictionary = new Dictionary<object, object>();
-        Passives = MonsterBase.Passives;
-        StatusEffectInstances = new List<StatusEffectInstance>();
+        // Passives = MonsterBase.Passives;
+        // StatusEffectInstances = new List<StatusEffectInstance>();
         BattlerName = MonsterBase.MonsterName;
         HitSound = MonsterBase.HitSound;
         
@@ -104,6 +108,24 @@ public class MonsterBattler : Battler
     }
     
     public List<MonsterSkill> Skills;
+
+    public override void RecalculateStats()
+    {
+        Passives = MonsterBase.Passives;
+        Skills = MonsterBase.Skills;
+        var baseStats = MonsterBase.Stats;
+        
+        
+        var bonusStats = MonsterBase.StatLevelVariance * (Level - MonsterBase.BaseLevel);
+        foreach (IMonsterCalculateBonusStatsListener listener in PassiveEffects.Where(pE =>
+            pE is IMonsterCalculateBonusStatsListener))
+        {
+            listener.Apply(this, ref bonusStats);
+        }
+
+        Stats = baseStats + bonusStats;
+        Debug.Log($"{BattlerName} stats recalculated");
+    }
 
     #endregion
     
@@ -288,8 +310,9 @@ public class MonsterBattler : Battler
 
     protected virtual IEnumerator DamageBlinkCoroutine()
     {
-        var normalColor = image.color;
-        var blinkingColor = new Color(image.color.r, image.color.g, image.color.b, 0.3f);
+        var color = image.color;
+        var normalColor = new Color(color.r,color.g,color.b,1f);
+        var blinkingColor = new Color(color.r, color.g, color.b, 0.3f);
 
         for (int i = 0; i < 5; i++)
         {
@@ -343,4 +366,9 @@ public class MonsterBattler : Battler
         await Task.WhenAll(leftoverTasks);
     }
     #endregion
+}
+
+public interface IMonsterCalculateBonusStatsListener
+{
+    void Apply(MonsterBattler monster, ref Stats stats);
 }

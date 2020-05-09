@@ -17,6 +17,8 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 9100000, guid: 71e63fe59bf51714ab1c32944338da70, type: 2}
+    - {fileID: 9100000, guid: 7e34792bfee7e6e43aa02306e636b583, type: 2}
+    - {fileID: 9100000, guid: 6ea950141a1d3fc4e9e7a69a04ad9cb2, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -61,7 +63,7 @@ MonoBehaviour:
       Data: 
     - Name: AnimatorController
       Entry: 10
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -79,7 +81,7 @@ MonoBehaviour:
       Data: 
     - Name: AnimatorController
       Entry: 10
-      Data: 0
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -103,8 +105,8 @@ MonoBehaviour:
     MagDef: 29
     Speed: 39
     Accuracy: 0.9
-    Evasion: 0
-    CritChance: 0
+    Evasion: 0.05000000074505806
+    CritChance: 0.05000000074505806
     CritAvoid: 0
     ElementalResistance:
       EarthResistance: 0
@@ -116,15 +118,15 @@ MonoBehaviour:
       WaterResistance: 0
       WindResistance: 0
   Growths:
-    MaxHp: 6
+    MaxHp: 11
     PhysAtk: 7
     MagAtk: 4
     PhysDef: 4
     MagDef: 5
-    Speed: 6
+    Speed: 7
     Accuracy: 0
     Evasion: 0
-    CritChance: 0.05
+    CritChance: 0
     CritAvoid: 0
     ElementalResistance:
       EarthResistance: 0
@@ -143,10 +145,15 @@ MonoBehaviour:
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}
-  Masteries: {fileID: 11400000, guid: 43e9c9e6605f49e4b99f1a814e507543, type: 2}
+  Masteries: {fileID: 11400000, guid: ff298d554c869af49bcff937b78febfe, type: 2}
   BaseSkills:
   - {fileID: 11400000, guid: 71a3cb8b20046b7239bbe7d7915e89b0, type: 2}
   - {fileID: 11400000, guid: cc2b46c3c44f81b4e8ffb76366cdcd33, type: 2}
+  - {fileID: 11400000, guid: 889af5ef5ac234242ad8b7f59c2f73cb, type: 2}
+  - {fileID: 11400000, guid: a45e4190a32d8d7498c7aeb084610be3, type: 2}
+  - {fileID: 11400000, guid: f1693d74218fc644aa170b69ea13e85d, type: 2}
+  - {fileID: 11400000, guid: a63721c8c0fb53a4783ae5cc66b4a163, type: 2}
+  - {fileID: 11400000, guid: bed149c90e298b54d9b37d9952e0a103, type: 2}
   BasePassives: []
   DefaultDefendSkill: {fileID: 11400000, guid: 3fda503906d7d314d8cdd9e2b6e3a30d, type: 2}
   HitSound:

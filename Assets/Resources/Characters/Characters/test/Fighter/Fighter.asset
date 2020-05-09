@@ -17,6 +17,8 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 9100000, guid: 9c7c6cbaeb339ea4299a275fb82e4cdd, type: 2}
+    - {fileID: 9100000, guid: 197901a801818374493a0e607788bfa7, type: 2}
+    - {fileID: 9100000, guid: d4d09c144849a9a43a643907c5414a3e, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -61,7 +63,7 @@ MonoBehaviour:
       Data: 
     - Name: AnimatorController
       Entry: 10
-      Data: 0
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -79,7 +81,7 @@ MonoBehaviour:
       Data: 
     - Name: AnimatorController
       Entry: 10
-      Data: 0
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -103,8 +105,8 @@ MonoBehaviour:
     MagDef: 19
     Speed: 27
     Accuracy: 0.9
-    Evasion: 0
-    CritChance: 0
+    Evasion: 0.05000000074505806
+    CritChance: 0.05000000074505806
     CritAvoid: 0
     ElementalResistance:
       EarthResistance: 0
@@ -116,15 +118,15 @@ MonoBehaviour:
       WaterResistance: 0
       WindResistance: 0
   Growths:
-    MaxHp: 9
+    MaxHp: 15
     PhysAtk: 8
     MagAtk: 2
     PhysDef: 5
     MagDef: 2
-    Speed: 4
+    Speed: 3
     Accuracy: 0
     Evasion: 0
-    CritChance: 0.05
+    CritChance: 0
     CritAvoid: 0
     ElementalResistance:
       EarthResistance: 0
@@ -143,7 +145,7 @@ MonoBehaviour:
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}
-  Masteries: {fileID: 11400000, guid: 7de4e7b346c5d7442b763027a6b36c58, type: 2}
+  Masteries: {fileID: 11400000, guid: c0b81701ddadd9e4398df3abf0a781f1, type: 2}
   BaseSkills:
   - {fileID: 11400000, guid: 36a0c57efbc8e2048b8e6ce422f4cb20, type: 2}
   - {fileID: 11400000, guid: 773cc8c9b4915e742b982047f8e72a05, type: 2}
@@ -152,4 +154,4 @@ MonoBehaviour:
   HitSound:
     AudioClip: {fileID: 8300000, guid: a9e0e39240fe4d548ae0fe809819b709, type: 3}
     Volume: 0.1
-  Level: 1
+  Level: 50
