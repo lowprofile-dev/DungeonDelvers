@@ -68,16 +68,16 @@ public class CharacterInspector : SerializedMonoBehaviour
         
         //<color=#C0C0C0></color>
         var newText =
-            $"HP: {character.CurrentHp}/{bases.MaxHp}+<color={color}>{bonuses.MaxHp}</color>\n" +
-            $"Phys. Attack: {bases.PhysAtk}+<color={color}>{bonuses.PhysAtk}</color>\n" +
-            $"Mag. Attack: {bases.MagAtk}+<color={color}>{bonuses.MagAtk}</color>\n" +
-            $"Phys. Defense: {bases.PhysDef}+<color={color}>{bonuses.PhysDef}</color>\n" +
-            $"Mag. Defense: {bases.MagDef}+<color={color}>{bonuses.MagDef}</color>\n" +
-            $"Speed: {bases.Speed}+<color={color}>{bonuses.Speed}</color>\n" +
-            $"Accuracy: {bases.Accuracy:F}+<color={color}>{bonuses.Accuracy}</color>\n" +
-            $"Evasion: {bases.Evasion:F}+<color={color}>{bonuses.Evasion}</color>\n" +
-            $"Critical Accuracy: {bases.CritChance:F}+<color={color}>{bonuses.CritChance}</color>\n" +
-            $"Critical Evasion: {bases.CritAvoid:F}+<color={color}>{bonuses.CritAvoid}</color>";
+            $"HP: {character.CurrentHp}/{bases.MaxHp}<color={color}>{bonuses.MaxHp:+#;-#; ;}</color>\n" +
+            $"Phys. Attack: {bases.PhysAtk}<color={color}>{bonuses.PhysAtk:+#;-#; ;}</color>\n" +
+            $"Mag. Attack: {bases.MagAtk}<color={color}>{bonuses.MagAtk:+#;-#; ;}</color>\n" +
+            $"Phys. Defense: {bases.PhysDef}<color={color}>{bonuses.PhysDef:+#;-#; ;}</color>\n" +
+            $"Mag. Defense: {bases.MagDef}<color={color}>{bonuses.MagDef:+#;-#; ;}</color>\n" +
+            $"Speed: {bases.Speed}<color={color}>{bonuses.Speed:+#;-#; ;}</color>\n" +
+            $"Accuracy: {bases.Accuracy:F3}<color={color}>{bonuses.Accuracy:+0.###;-0.###; ;}</color>\n" +
+            $"Evasion: {bases.Evasion:F3}<color={color}>{bonuses.Evasion:+0.###;-0.###; ;}</color>\n" +
+            $"Critical Accuracy: {bases.CritChance:F3}<color={color}>{bonuses.CritChance:+0.###;-0.###; ;}</color>\n" +
+            $"Critical Evasion: {bases.CritAvoid:F3}<color={color}>{bonuses.CritAvoid:+0.###;-0.###; ;}</color>";
 
         StatsText.text = newText;
 

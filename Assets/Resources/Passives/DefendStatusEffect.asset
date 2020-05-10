@@ -46,10 +46,11 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
   databaseIgnore: 0
   StatusEffectName: Defend
   StatusEffectIcon: {fileID: 7590032724680096136, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  Type: 0
+  Cancels: []
+  Type: 5
+  CustomIcon: {fileID: 0}
   Hidden: 1

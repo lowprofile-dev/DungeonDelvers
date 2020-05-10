@@ -40,7 +40,6 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
   databaseIgnore: 1
   _assetIcon: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   MonsterName: Dummy
@@ -49,8 +48,6 @@ MonoBehaviour:
   BaseLevel: 0
   Stats:
     MaxHp: 2147483647
-    InitialEp: 0
-    EpGain: 0
     PhysAtk: 0
     MagAtk: 0
     PhysDef: 0
@@ -71,8 +68,6 @@ MonoBehaviour:
       WindResistance: 0
   StatLevelVariance:
     MaxHp: 0
-    InitialEp: 0
-    EpGain: 0
     PhysAtk: 0
     MagAtk: 0
     PhysDef: 0

@@ -464,6 +464,13 @@ public class BattleController : AsyncMonoBehaviour
 
     public bool IsAlly(Battler battler) => Party.Contains(battler);
     public bool IsEnemy(Battler battler) => Enemies.Contains(battler);
+
+    public bool IsSameTeam(Battler battler1, Battler battler2)
+    {
+        if (IsAlly(battler1)) return IsAlly(battler2);
+        if (IsEnemy(battler1)) return IsEnemy(battler2);
+        return false;
+    }
     
     //Futuramente dar uma olhada na complexidade
     public Battler[][] BuildPossibleTargets(Battler source, Skill.TargetType targetType)

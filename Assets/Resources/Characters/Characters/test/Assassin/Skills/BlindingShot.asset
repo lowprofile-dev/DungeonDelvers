@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
-  m_Name: Chop
+  m_Name: BlindingShot
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 8300000, guid: a2db5796456263c4ba57f3bfc9ee584a, type: 3}
+    - {fileID: 11400000, guid: 463aafa52b9aef24cb67634f2bcbcc40, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -27,7 +27,7 @@ MonoBehaviour:
       Data: 0|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 1|DamageEffect, Assembly-CSharp
@@ -42,8 +42,29 @@ MonoBehaviour:
       Data: 
     - Name: DamageFactor
       Entry: 4
-      Data: 1.15
+      Data: 0.8
     - Name: DamageType
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|ApplyStatusEffectEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: StatusEffect
+      Entry: 10
+      Data: 0
+    - Name: turnDuration
       Entry: 3
       Data: 0
     - Name: 
@@ -57,13 +78,13 @@ MonoBehaviour:
       Data: 
     - Name: CriticalEffects
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+      Data: 3|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 3|DamageEffect, Assembly-CSharp
+      Data: 4|DamageEffect, Assembly-CSharp
     - Name: ElementOverride
       Entry: 7
       Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
@@ -75,8 +96,29 @@ MonoBehaviour:
       Data: 
     - Name: DamageFactor
       Entry: 4
-      Data: 1.725
+      Data: 1.2
     - Name: DamageType
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|ApplyStatusEffectEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: StatusEffect
+      Entry: 10
+      Data: 0
+    - Name: turnDuration
       Entry: 3
       Data: 0
     - Name: 
@@ -93,34 +135,25 @@ MonoBehaviour:
       Data: 
     - Name: Animations
       Entry: 7
-      Data: 4|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
+      Data: 6|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 5|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
+      Data: 7|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
     - Name: Animation
       Entry: 7
-      Data: 6|BattlerAnimationInfo, Assembly-CSharp
+      Data: 8|BattlerAnimationInfo, Assembly-CSharp
     - Name: stateName
       Entry: 1
       Data: Attack
     - Name: speed
       Entry: 4
-      Data: 1
+      Data: 0.8
     - Name: soundInfo
-      Entry: 7
-      Data: 7|SoundInfo, Assembly-CSharp
-    - Name: AudioClip
-      Entry: 10
-      Data: 0
-    - Name: Volume
-      Entry: 4
-      Data: 0.1
-    - Name: 
-      Entry: 8
+      Entry: 6
       Data: 
     - Name: 
       Entry: 8
@@ -139,20 +172,20 @@ MonoBehaviour:
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 7
     - Name: 
       Entry: 8
       Data: 
   databaseIgnore: 0
-  SkillName: Chop
-  SkillIcon: {fileID: -8726097045332059612, guid: cc992c58d47d97548895862c5e45375c,
+  SkillName: Blinding Shot
+  SkillIcon: {fileID: -5691362872366029440, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  ApCost: 20
+  ApCost: 50
   Element: 0
-  SkillDescription: Attack one target with an axe.
-  Target: 1
+  SkillDescription: Fire an arrow that causes the target to lose substantial accuracy.
+  Target: 0
   TrueHit: 0
   CanBeSilenced: 0
   CanCritical: 1
   AccuracyModifier: 0
-  CriticalModifier: 0.15
+  CriticalModifier: 0.3

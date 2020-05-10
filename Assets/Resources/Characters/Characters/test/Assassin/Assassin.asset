@@ -149,10 +149,7 @@ MonoBehaviour:
   BaseSkills:
   - {fileID: 11400000, guid: 71a3cb8b20046b7239bbe7d7915e89b0, type: 2}
   - {fileID: 11400000, guid: cc2b46c3c44f81b4e8ffb76366cdcd33, type: 2}
-  - {fileID: 11400000, guid: 889af5ef5ac234242ad8b7f59c2f73cb, type: 2}
-  - {fileID: 11400000, guid: a45e4190a32d8d7498c7aeb084610be3, type: 2}
   - {fileID: 11400000, guid: f1693d74218fc644aa170b69ea13e85d, type: 2}
-  - {fileID: 11400000, guid: a63721c8c0fb53a4783ae5cc66b4a163, type: 2}
   - {fileID: 11400000, guid: bed149c90e298b54d9b37d9952e0a103, type: 2}
   BasePassives: []
   DefaultDefendSkill: {fileID: 11400000, guid: 3fda503906d7d314d8cdd9e2b6e3a30d, type: 2}

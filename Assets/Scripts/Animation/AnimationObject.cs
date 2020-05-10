@@ -20,27 +20,6 @@ namespace DD.Skill.Animation
 
         public async Task PlayAndAwait(string animation, SoundInfo soundInfo = null, float speedMultiplier = 1f)
         {
-            // await GameController.Instance.QueueActionAndAwait(() =>
-            // {
-            //     animator.SetFloat("SpeedMultiplier",speedMultiplier);
-            //     animator.Play(animation);
-            // });
-            //
-            // await Task.Delay(5);
-            //
-            // bool? condition = null;
-            //
-            // Action evaluateCondition = () =>
-            // {
-            //     condition = animator.GetCurrentAnimatorStateInfo(0).IsName(animation);
-            // };
-            //
-            // await GameController.Instance.QueueActionAndAwait(evaluateCondition);
-            //
-            // while (condition.HasValue && condition.Value == true)
-            // {
-            //     await GameController.Instance.QueueActionAndAwait(evaluateCondition);
-            // }
             await PlayCoroutine(AnimationCoroutine(animation, soundInfo, speedMultiplier));
         }
 

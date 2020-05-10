@@ -24,6 +24,8 @@ public class DamageEffect : Effect
         if (ElementOverride.HasValue)
             damageCalculationInfo.DamageElement = ElementOverride.Value;
 
+        
+        //Refazer depois pra pegar em duas listas diferentes as da source e as do target.
         var passiveEffects = skillInfo.Target.PassiveEffects.ToArray();
 
         var overrideDamageEffects = passiveEffects

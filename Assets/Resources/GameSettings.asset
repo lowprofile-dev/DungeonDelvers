@@ -15,19 +15,110 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: -5793374768008220496, guid: cc992c58d47d97548895862c5e45375c, type: 3}
+    - {fileID: 7590032724680096136, guid: cc992c58d47d97548895862c5e45375c, type: 3}
+    - {fileID: 5640548222382231099, guid: cc992c58d47d97548895862c5e45375c, type: 3}
+    - {fileID: 5098905307525849565, guid: cc992c58d47d97548895862c5e45375c, type: 3}
+    - {fileID: -5691362872366029440, guid: cc992c58d47d97548895862c5e45375c, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
+    - Name: StatusEffectTypeSprites
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[StatusEffect+StatusEffectType,
+        Assembly-CSharp],[UnityEngine.Sprite, UnityEngine.CoreModule]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[StatusEffect+StatusEffectType,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 5
+    - Name: $v
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: DefaultEquipmentQualityChance
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[EquippableBase+EquippableTier,
+      Data: 2|System.Collections.Generic.Dictionary`2[[EquippableBase+EquippableTier,
         Assembly-CSharp],[System.Int32, mscorlib]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[EquippableBase+EquippableTier,
+      Data: 3|System.Collections.Generic.EnumEqualityComparer`1[[EquippableBase+EquippableTier,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -109,11 +200,11 @@ MonoBehaviour:
       Data: 
     - Name: DefaultEquipmentQualityColor
       Entry: 7
-      Data: 2|System.Collections.Generic.Dictionary`2[[EquippableBase+EquippableTier,
+      Data: 4|System.Collections.Generic.Dictionary`2[[EquippableBase+EquippableTier,
         Assembly-CSharp],[UnityEngine.Color, UnityEngine.CoreModule]], mscorlib
     - Name: comparer
       Entry: 9
-      Data: 1
+      Data: 3
     - Name: 
       Entry: 12
       Data: 5

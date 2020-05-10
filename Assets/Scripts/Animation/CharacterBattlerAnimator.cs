@@ -41,6 +41,7 @@ namespace DD.Animation
 
         public IEnumerator PlayAndWait(BattlerAnimationInfo info)
         {
+            if (info == null) yield break;
             var hashName = Animator.StringToHash(info.stateName);
             if (!Animator.HasState(0, hashName))
                 yield break;

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
-  m_Name: Defend
+  m_Name: Slash
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: 77547bfc71822f544b1f3eb7011e2b5c, type: 2}
+    - {fileID: 8300000, guid: 7572d41d5c83b7141b5dec1a72090f43, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -30,7 +30,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|ApplyStatusEffectEffect, Assembly-CSharp
+      Data: 1|DamageEffect, Assembly-CSharp
     - Name: ElementOverride
       Entry: 7
       Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
@@ -40,10 +40,10 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-    - Name: StatusEffect
-      Entry: 10
-      Data: 0
-    - Name: turnDuration
+    - Name: DamageFactor
+      Entry: 4
+      Data: 1
+    - Name: DamageType
       Entry: 3
       Data: 0
     - Name: 
@@ -60,7 +60,28 @@ MonoBehaviour:
       Data: 2|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 3|DamageEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: DamageFactor
+      Entry: 4
+      Data: 1.5
+    - Name: DamageType
+      Entry: 3
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -72,11 +93,41 @@ MonoBehaviour:
       Data: 
     - Name: Animations
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
+      Data: 4|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
+    - Name: Animation
+      Entry: 7
+      Data: 6|BattlerAnimationInfo, Assembly-CSharp
+    - Name: stateName
+      Entry: 1
+      Data: Attack
+    - Name: speed
+      Entry: 4
+      Data: 1
+    - Name: soundInfo
+      Entry: 7
+      Data: 7|SoundInfo, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
       Data: 0
+    - Name: Volume
+      Entry: 4
+      Data: 0.1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -87,21 +138,21 @@ MonoBehaviour:
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 6
-      Data: 
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
   databaseIgnore: 0
-  SkillName: Defend
-  SkillIcon: {fileID: 7590032724680096136, guid: cc992c58d47d97548895862c5e45375c,
+  SkillName: Slash
+  SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  ApCost: 0
+  ApCost: 20
   Element: 0
-  SkillDescription: 
-  Target: 6
-  TrueHit: 1
+  SkillDescription: Attack one target with a sword.
+  Target: 0
+  TrueHit: 0
   CanBeSilenced: 0
-  CanCritical: 0
+  CanCritical: 1
   AccuracyModifier: 0
   CriticalModifier: 0

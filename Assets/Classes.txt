@@ -35,5 +35,5 @@ Assassin
 Knife:
     DoT, Multiple Hits, Custo baixo de AP nas skills
 Bow:
-    Menos hits com mais mano, maior DPS, menos utilidade
+    Menos hits com mais dano, maior DPS, menos utilidade
 

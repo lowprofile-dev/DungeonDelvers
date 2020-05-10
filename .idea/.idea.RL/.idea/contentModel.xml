@@ -614,6 +614,7 @@
               <e p="PassiveEffects" t="Include">
                 <e p="BlockPassiveEffect.cs" t="Include" />
                 <e p="BonusStatsPassiveEffect.cs" t="Include" />
+                <e p="CounterPassiveEffect.cs" t="Include" />
                 <e p="DamageReductionPassiveEffect.cs" t="Include" />
                 <e p="DefendPassiveEffect.cs" t="Include" />
                 <e p="DoTPassiveEffect.cs" t="Include" />

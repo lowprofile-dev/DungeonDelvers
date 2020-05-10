@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Sirenix.Utilities;
+using SkredUtils;
 using UnityEngine;
 
 namespace DD.Skill.Animation
 {
     public class FromSourceToTargetSkillAnimation : Animation
     {
+        public SoundInfo SoundInfo;
+        
         public override async Task PlaySkillAnimation(Battler source, IEnumerable<Battler> targets)
         {
             List<Task> Animations = new List<Task>();
@@ -26,6 +29,8 @@ namespace DD.Skill.Animation
 
                     ScaleAnimation(animation.transform as RectTransform);
                 
+                    animation.AudioSource.PlayOneShot(SoundInfo);
+                    
                     Animations.Add(
                         GameController.Instance.PlayCoroutine(MoveAnimationCoroutine(source.RectTransform.position,
                             target.RectTransform.position, animationObject.transform, animation.animator, AnimationName), animation));

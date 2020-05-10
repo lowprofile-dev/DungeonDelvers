@@ -12,9 +12,9 @@ public class MultiHitDamageEffect : Effect
     {
         if (HitInfo == null || !HitInfo.Any())
             throw new ArgumentException();
-
+        
         var hitResults = new List<HitResult>();
-
+        
         HitInfo.ForEach((info, i) =>
         {
             var damage = (int)(Mathf.Max(0,BattleController.Instance.DamageCalculation(
@@ -25,7 +25,7 @@ public class MultiHitDamageEffect : Effect
                                                    DamageElement = skillInfo.Skill.Element, 
                                                    DamageType = info.DamageType
                                                }) * info.DamageFactor));
-
+        
             Debug.Log($"Calculado hit {i+1}: {damage}");
         
             var targetPassives = skillInfo.Target.Passives
@@ -33,26 +33,26 @@ public class MultiHitDamageEffect : Effect
                 .OrderByDescending(effect => effect.Priority)
                 .Cast<DamageEffect.IReceiveDamagePassiveEffect>()
                 .ToArray();
-
+        
             targetPassives.ForEach(targetPassive => targetPassive.BeforeReceive(skillInfo, ref damage));
         
             Debug.Log($"{skillInfo.Source} causou {damage} de dano em {skillInfo.Target}.");
-
+        
             hitResults.Add(new HitResult
             {
                 DamageDealt = damage,
                 DamageType = info.DamageType
             });
         });
-
+        
         var result = new MultiHitDamageEffectResult
         {
             HitResults = hitResults,
             skillInfo = skillInfo
         };
-
+        
         skillInfo.Target.CurrentHp -= result.TotalDamageDealt;
-
+        
         return result;
     }
 

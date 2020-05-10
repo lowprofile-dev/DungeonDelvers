@@ -46,12 +46,13 @@ public class MonsterBattler : Battler
         // BonusStats = MonsterBase.StatLevelVariance * (Level - MonsterBase.BaseLevel);
 
         // Skills = MonsterBase.Skills;
-        // SkillAi = MonsterBase.SkillAi;
+        
         
         StatusEffectInstances = new List<StatusEffectInstance>();
         RecalculateStats();
         
         TargeterAi = MonsterBase.TargeterAi;
+        SkillAi = MonsterBase.SkillAi;
 
         monsterBattler = Instantiate(MonsterBase.MonsterBattler, RectTransform);
         image = monsterBattler.gameObject.Ensure<Image>();
@@ -66,6 +67,7 @@ public class MonsterBattler : Battler
         HitSound = MonsterBase.HitSound;
         
         Debug.Log($"Inicializado Lv.{level} {BattlerName}");
+        BuildStatusEffectRect();
     }
 
     [Obsolete]
@@ -200,6 +202,22 @@ public class MonsterBattler : Battler
     {
         switch (effectResult)
         {
+            case CounterPassiveEffect.CounterEffectResult counterEffectResult:
+            {
+                await BattleController.Instance.battleCanvas.ShowSkillResultAsync(this, "Counter!", Color.white, 0.8f);
+                await counterEffectResult.skillInfo.Source.ReceiveEffect(new EffectInfo
+                {
+                    Effect = counterEffectResult.CounterDamageEffect,
+                    SkillInfo = new SkillInfo
+                    {
+                        Target = counterEffectResult.skillInfo.Source,
+                        Source = counterEffectResult.skillInfo.Target,
+                        HasCrit = false,
+                        Skill = null
+                    }
+                });
+                break;
+            }
             case BlockPassiveEffect.BlockedResult _:
             {
                 await BattleController.Instance.battleCanvas.ShowSkillResultAsync(this, "Blocked!", Color.white, 0.8f);

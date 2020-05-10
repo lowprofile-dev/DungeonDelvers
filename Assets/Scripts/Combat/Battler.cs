@@ -7,6 +7,7 @@ using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using SkredUtils;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Battler : AsyncMonoBehaviour
 {
@@ -36,41 +37,6 @@ public abstract class Battler : AsyncMonoBehaviour
 
     #region Stats
 
-    //private bool _statsDirty = true;
-    // [FoldoutGroup("Stats"), ShowInInspector] private Stats baseStats;
-    // [FoldoutGroup("Stats"), ShowInInspector] private Stats bonusStats;
-    // [FoldoutGroup("Stats"), ShowInInspector] private Stats totalStats;
-
-    // public Stats BaseStats
-    // {
-    //     get => baseStats;
-    //     set
-    //     {
-    //         _statsDirty = true;
-    //         baseStats = value;
-    //     }
-    // }
-    // public Stats BonusStats
-    // {
-    //     get => bonusStats;
-    //     set
-    //     {
-    //         _statsDirty = true;
-    //         bonusStats = value;
-    //     }
-    // }
-    // public Stats Stats
-    // {
-    //     get
-    //     {
-    //         if (_statsDirty)
-    //         {
-    //             totalStats = baseStats + bonusStats;
-    //         }
-    //         return totalStats;
-    //     }
-    // }
-
     [ShowInInspector, Sirenix.OdinInspector.ReadOnly] public Stats Stats { get; set; }
     
     [TabGroup("Passives"), ShowInInspector, Sirenix.OdinInspector.ReadOnly] public virtual List<Passive> Passives { get; protected set; }
@@ -91,7 +57,8 @@ public abstract class Battler : AsyncMonoBehaviour
         PassiveEffects.OrderByDescending(pE => pE.Priority).ToArray();
 
     public virtual RectTransform RectTransform => transform as RectTransform;
-
+    public RectTransform StatusEffectRect;
+    
     protected AudioSource AudioSource;
 
     #endregion
@@ -103,8 +70,10 @@ public abstract class Battler : AsyncMonoBehaviour
         CurrentAp += GameSettings.Instance.ApGain;
         Debug.Log($"Começou o turno de {BattlerName}");
 
+        StatusEffectInstances.ForEach(instance => { instance.TurnDuration--; });
+        
         var expiredStatusEffects = StatusEffectInstances
-            .Where(statusEffect => statusEffect.TurnDuration <= 0)
+            .Where(statusEffect => statusEffect.TurnDuration < 0)
             .ToArray();
 
         await Task.WhenAll(expiredStatusEffects
@@ -155,7 +124,6 @@ public abstract class Battler : AsyncMonoBehaviour
 
     public async Task TurnEnd()
     {
-        StatusEffectInstances.ForEach(instance => { instance.TurnDuration--; });
         Debug.Log($"Acabou o turno de {BattlerName}.");
     }
 
@@ -284,6 +252,60 @@ public abstract class Battler : AsyncMonoBehaviour
 
     #region Functions
 
+    public virtual void BuildStatusEffectRect()
+    {
+        if (StatusEffectRect != null)
+            Destroy(StatusEffectRect.gameObject);
+        var statusEffectRect = new GameObject($"{BattlerName} StatusEffects");
+        var rect = statusEffectRect.AddComponent<RectTransform>();
+        rect.SetParent(transform, false);
+        rect.localPosition = new Vector3(0,50,0);
+        rect.sizeDelta = new Vector2(0,40);
+        var hlg = statusEffectRect.AddComponent<HorizontalLayoutGroup>();
+        hlg.childControlHeight = false;
+        hlg.childControlWidth = false;
+        hlg.childAlignment = TextAnchor.MiddleCenter;
+        hlg.childForceExpandWidth = false;
+        hlg.spacing = 5;
+        var csf = statusEffectRect.AddComponent<ContentSizeFitter>();
+        csf.horizontalFit = ContentSizeFitter.FitMode.MinSize;
+        StatusEffectRect = rect;
+    }
+
+    public virtual void RebuildStatusEffectIcons()
+    {
+        foreach (Transform child in StatusEffectRect)
+        {
+            Destroy(child.gameObject);
+        }
+
+        var spritesToAdd = new List<Sprite>();
+
+        foreach (var statusEffectInstance in StatusEffectInstances)
+        {
+            if (statusEffectInstance.StatusEffect.CustomIcon != null)
+            {
+                spritesToAdd.Add(statusEffectInstance.StatusEffect.CustomIcon);
+            }
+            else if (GameSettings.Instance.StatusEffectTypeSprites.TryGetValue(
+                statusEffectInstance.StatusEffect.Type,
+                out var sprite))
+            {
+                spritesToAdd.Add(sprite);
+            }
+        }
+
+        foreach (var sprite in spritesToAdd)
+        {
+            var gameObject = new GameObject("StatusSprite");
+            var rect = gameObject.AddComponent<RectTransform>();
+            rect.SetParent(StatusEffectRect, false);
+            rect.sizeDelta = new Vector2(40, 40);
+            var image = gameObject.AddComponent<Image>();
+            image.sprite = sprite;
+        }
+    }
+    
     public void PlaySound(AudioClip clip, float volume)
     {
         AudioSource.PlayOneShot(clip,volume);
@@ -315,18 +337,31 @@ public abstract class Battler : AsyncMonoBehaviour
                 appliedStatusEffect.TurnDuration = statusEffectInstance.TurnDuration;
             return;
         }
-        
+
+        var cancellable = statusEffect.Cancels;
+        var cancelledStatusEffects = StatusEffectInstances
+            .Where(sI => cancellable.Contains(sI.StatusEffect)).ToArray();
+
+        foreach (var cancelledStatusEffect in cancelledStatusEffects)
+        {
+            RemoveStatusEffect(cancelledStatusEffect);
+        }
+
         StatusEffectInstances.Add(statusEffectInstance);
         var effects = statusEffectInstance.StatusEffect.Effects
             .Where(effect => effect is IOnApplyPassiveEffect)
             .Cast<IOnApplyPassiveEffect>();
-        
+
         foreach (var effect in effects)
         {
             effect.OnApply(this);
         }
-        
+
         RecalculateStats();
+
+        if (statusEffect.Type != StatusEffect.StatusEffectType.None ||
+            statusEffectInstance.StatusEffect.CustomIcon != null)
+            RebuildStatusEffectIcons();
     }
 
     public void RemoveStatusEffect(StatusEffectInstance statusEffectInstance)
@@ -346,6 +381,9 @@ public abstract class Battler : AsyncMonoBehaviour
         }
         
         RecalculateStats();
+        
+        if (statusEffectInstance.StatusEffect.Type != StatusEffect.StatusEffectType.None || statusEffectInstance.StatusEffect.CustomIcon != null)
+            RebuildStatusEffectIcons();
     }
 
     #endregion

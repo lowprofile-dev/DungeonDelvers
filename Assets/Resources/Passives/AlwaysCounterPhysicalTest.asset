@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ee78b05749540aaa28b74d407ae0502, type: 3}
-  m_Name: EnchantWater
+  m_Script: {fileID: 11500000, guid: d094aa0b39564153b139b8890360f490, type: 3}
+  m_Name: AlwaysCounterPhysicalTest
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -27,31 +27,46 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
-    - Name: 
-      Entry: 7
-      Data: 1|EnchantAttackPassiveEffect, Assembly-CSharp
-    - Name: Priority
-      Entry: 3
-      Data: 1
-    - Name: Element
-      Entry: 3
-      Data: 7
-    - Name: DamageType
-      Entry: 3
       Data: 1
     - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
       Entry: 7
-      Data: 2|SetMageSwordElementPassiveEffect, Assembly-CSharp
+      Data: 1|CounterPassiveEffect, Assembly-CSharp
     - Name: Priority
       Entry: 3
       Data: 0
-    - Name: Element
+    - Name: DamageEffect
+      Entry: 7
+      Data: 2|DamageEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: DamageFactor
+      Entry: 4
+      Data: 1
+    - Name: DamageType
       Entry: 3
-      Data: 7
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: CounterType
+      Entry: 7
+      Data: System.Nullable`1[[DamageType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: Chance
+      Entry: 4
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -62,13 +77,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   databaseIgnore: 0
-  StatusEffectName: Enchant (Water)
-  StatusEffectIcon: {fileID: -2396315254400908331, guid: cc992c58d47d97548895862c5e45375c,
-    type: 3}
-  Cancels:
-  - {fileID: 11400000, guid: a28af7e5448c3f62c890c7a4c38e9cd6, type: 2}
-  - {fileID: 11400000, guid: 98197ac690c531b408925bc03913d007, type: 2}
-  Type: 0
-  CustomIcon: {fileID: 6291730074264660636, guid: cc992c58d47d97548895862c5e45375c,
-    type: 3}
+  AssetIcon: {fileID: 0}
+  PassiveName: 
   Hidden: 0
+  PassiveDescription: 

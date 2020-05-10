@@ -17,6 +17,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 11400000, guid: 1405fb12be53aacc088898a46ed97408, type: 2}
+    - {fileID: 8300000, guid: 6f654a6601157da49a8ce7e32068f15c, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -132,22 +133,46 @@ MonoBehaviour:
       Data: 
     - Name: SkillAnimation
       Entry: 7
-      Data: 6|FromSourceToTargetSkillAnimation, Assembly-CSharp
+      Data: 6|DD.Skill.Animation.FromSourceToTargetSkillAnimation, Assembly-CSharp
     - Name: AnimationName
       Entry: 1
       Data: Fireball1
     - Name: SpeedMultiplier
       Entry: 4
-      Data: 2
+      Data: 1.6
     - Name: AnimationSize
       Entry: 7
       Data: UnityEngine.Vector2, UnityEngine.CoreModule
     - Name: 
       Entry: 4
-      Data: 200
+      Data: 250
     - Name: 
       Entry: 4
-      Data: 200
+      Data: 250
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimationOffset
+      Entry: 7
+      Data: UnityEngine.Vector2, UnityEngine.CoreModule
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 4
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: SoundInfo
+      Entry: 7
+      Data: 7|SoundInfo, Assembly-CSharp
+    - Name: AudioClip
+      Entry: 10
+      Data: 1
+    - Name: Volume
+      Entry: 4
+      Data: 0.1
     - Name: 
       Entry: 8
       Data: 
@@ -156,20 +181,29 @@ MonoBehaviour:
       Data: 
     - Name: Animations
       Entry: 7
-      Data: 7|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
+      Data: 8|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 8|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
+      Data: 9|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
     - Name: Animation
-      Entry: 3
-      Data: 3
+      Entry: 7
+      Data: 10|BattlerAnimationInfo, Assembly-CSharp
+    - Name: stateName
+      Entry: 1
+      Data: Cast
     - Name: speed
       Entry: 4
       Data: 1
+    - Name: soundInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -188,12 +222,11 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 7
   databaseIgnore: 0
   SkillName: Fireball
   SkillIcon: {fileID: 7790395862663275768, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 70
+  ApCost: 0
   Element: 2
   SkillDescription: Throw a weak fireball at an enemy.
   Target: 1

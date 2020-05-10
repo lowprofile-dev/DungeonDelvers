@@ -81,11 +81,20 @@ MonoBehaviour:
       Entry: 7
       Data: 4|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
     - Name: Animation
-      Entry: 3
-      Data: 3
+      Entry: 7
+      Data: 5|BattlerAnimationInfo, Assembly-CSharp
+    - Name: stateName
+      Entry: 1
+      Data: Cast
     - Name: speed
       Entry: 4
       Data: 1
+    - Name: soundInfo
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -104,12 +113,11 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
   databaseIgnore: 0
   SkillName: Enchant (Earth)
   SkillIcon: {fileID: -2396315254400908331, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 20
+  ApCost: 20
   Element: 6
   SkillDescription: Enchant your sword with the power of earth.
   Target: 6

@@ -47,6 +47,7 @@ public class GameSettings : SerializedScriptableObject
     [TabGroup("1", "Battle Settings")] public int InitialAp;
     [TabGroup("1", "Battle Settings")] public int ApGain;
     [TabGroup("1", "Battle Settings")] public float ExpModifier = 1f;
+    [TabGroup("1", "Battle Settings")] public Dictionary<StatusEffect.StatusEffectType, Sprite> StatusEffectTypeSprites = new Dictionary<StatusEffect.StatusEffectType, Sprite>();
     
     [TabGroup("2","Message Box")] public GameObject DefaultMessageBox;
     [TabGroup("2","Message Box")] public SoundInfo DefaultTypingSound;

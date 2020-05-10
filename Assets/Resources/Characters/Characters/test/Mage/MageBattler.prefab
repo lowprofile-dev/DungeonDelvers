@@ -120,6 +120,9 @@ MonoBehaviour:
     - Name: Character
       Entry: 6
       Data: 
+  HitSound:
+    AudioClip: {fileID: 0}
+    Volume: 1
   Animator: {fileID: 0}
 --- !u!114 &7302955471746130627
 MonoBehaviour:
@@ -138,44 +141,24 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 9100000, guid: 81832681c1aa46fb799dd8209c353048, type: 2}
-    - {fileID: 9100000, guid: 79de27cc1a49dca40bf0799599eefe11, type: 2}
     - {fileID: 9100000, guid: a347814d89a7f1b0481610e9adaa0506, type: 2}
+    - {fileID: 9100000, guid: 79de27cc1a49dca40bf0799599eefe11, type: 2}
     - {fileID: 9100000, guid: db78aff6820b0807cb4e7c0ce8c049e2, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
-    - Name: AnimatorValues
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[System.Int32,
-        mscorlib]], mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
-        mscorlib]], mscorlib
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: ElementControllers
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[MageCharacterBattlerAnimator+ElementController,
+      Data: 0|System.Collections.Generic.List`1[[DD.Animation.MageCharacterBattlerAnimator+ElementController,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 4
     - Name: 
       Entry: 7
-      Data: MageCharacterBattlerAnimator+ElementController, Assembly-CSharp
+      Data: DD.Animation.MageCharacterBattlerAnimator+ElementController, Assembly-CSharp
     - Name: Element
       Entry: 3
       Data: 0
@@ -187,10 +170,10 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: MageCharacterBattlerAnimator+ElementController, Assembly-CSharp
+      Data: DD.Animation.MageCharacterBattlerAnimator+ElementController, Assembly-CSharp
     - Name: Element
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: RuntimeAnimatorController
       Entry: 10
       Data: 1
@@ -199,10 +182,10 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: MageCharacterBattlerAnimator+ElementController, Assembly-CSharp
+      Data: DD.Animation.MageCharacterBattlerAnimator+ElementController, Assembly-CSharp
     - Name: Element
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: RuntimeAnimatorController
       Entry: 10
       Data: 2
@@ -211,7 +194,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: MageCharacterBattlerAnimator+ElementController, Assembly-CSharp
+      Data: DD.Animation.MageCharacterBattlerAnimator+ElementController, Assembly-CSharp
     - Name: Element
       Entry: 3
       Data: 7

@@ -8,6 +8,8 @@ public class EquipBonusStatsPassiveEffect : PassiveEffect, ICharacterCalculateBo
 
     public void Apply(Character character, ref Stats bonusStats)
     {
-        BonusStatsPassiveEffect.Apply(character,ref bonusStats);
+        var weaponType = (character.Weapon?.Base as WeaponBase)?.weaponType;
+        if (weaponType.HasValue && Types.Contains(weaponType.Value))
+            BonusStatsPassiveEffect.Apply(character,ref bonusStats);
     }
 }

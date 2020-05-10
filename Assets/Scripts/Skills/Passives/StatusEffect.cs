@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,8 +9,10 @@ using UnityEngine;
 public class StatusEffect : SerializableAsset
 {
     public string StatusEffectName = "";
-    [AssetIcon] public Sprite StatusEffectIcon;
+    [AssetIcon, Obsolete] public Sprite StatusEffectIcon;
+    public List<StatusEffect> Cancels = new List<StatusEffect>();
     public StatusEffectType Type = StatusEffectType.None;
+    public Sprite CustomIcon;
     public bool Hidden = false;
     public List<PassiveEffect> Effects = new List<PassiveEffect>();
 
@@ -42,10 +45,10 @@ public class StatusEffect : SerializableAsset
     public enum StatusEffectType
     {
         None,
-        Enchantment,
-        Medidate
-        //Poison
-        //Sleep
-        //etc
+        Poison,
+        Blind,
+        PositiveStat,
+        NegativeStat,
+        Defend,
     }
 }

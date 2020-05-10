@@ -48,6 +48,7 @@ public class CharacterBattler : Battler
         CurrentAp = GameSettings.Instance.InitialAp;
         StatusEffectInstances = new List<StatusEffectInstance>();
         HitSound = character.Base.HitSound;
+        BuildStatusEffectRect();
     }
 
     public void CommitChanges()
@@ -197,6 +198,22 @@ public class CharacterBattler : Battler
     {
         switch (effectResult)
         {
+            case CounterPassiveEffect.CounterEffectResult counterEffectResult:
+            {
+                await BattleController.Instance.battleCanvas.ShowSkillResultAsync(this, "Counter!", Color.white, 0.8f);
+                await counterEffectResult.skillInfo.Source.ReceiveEffect(new EffectInfo
+                {
+                    Effect = counterEffectResult.CounterDamageEffect,
+                    SkillInfo = new SkillInfo
+                    {
+                        Target = counterEffectResult.skillInfo.Source,
+                        Source = counterEffectResult.skillInfo.Target,
+                        HasCrit = false,
+                        Skill = null
+                    }
+                });
+                break;
+            }
             case BlockPassiveEffect.BlockedResult _:
             {
                 await BattleController.Instance.battleCanvas.ShowSkillResultAsync(this, "Blocked!", Color.white, 0.8f);

@@ -42,7 +42,7 @@ MonoBehaviour:
       Data: 
     - Name: DamageFactor
       Entry: 4
-      Data: 0.9
+      Data: 0.8
     - Name: DamageType
       Entry: 3
       Data: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
       Data: 
     - Name: DamageFactor
       Entry: 4
-      Data: 1.45
+      Data: 1.2
     - Name: DamageType
       Entry: 3
       Data: 0
@@ -143,12 +143,11 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 0
   databaseIgnore: 0
   SkillName: Slash
   SkillIcon: {fileID: -1952337077092525567, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  EpCost: 15
+  ApCost: 15
   Element: 0
   SkillDescription: Attack one target with a knife.
   Target: 0

@@ -61,10 +61,14 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  uniqueIdentifier: 
   databaseIgnore: 0
   StatusEffectName: Enchant (Earth)
   StatusEffectIcon: {fileID: -2396315254400908331, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
+  Cancels:
+  - {fileID: 11400000, guid: 98197ac690c531b408925bc03913d007, type: 2}
+  - {fileID: 11400000, guid: a137550b80e2e2213b060858c7ac38bc, type: 2}
   Type: 0
+  CustomIcon: {fileID: -520836982602084259, guid: cc992c58d47d97548895862c5e45375c,
+    type: 3}
   Hidden: 0

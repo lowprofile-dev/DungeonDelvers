@@ -1,1 +1,2 @@
 Stripping Level Medium>= quebra as Masteries. Testar como arrumar.
+MultiHitDamageEffect é imune a counter e block(trocar pra ser varios DamageEffects)

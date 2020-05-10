@@ -68,5 +68,6 @@ MonoBehaviour:
   StatusEffectName: Poison
   StatusEffectIcon: {fileID: -5793374768008220496, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  Type: 0
+  Cancels: []
+  Type: 1
   Hidden: 0
