@@ -18,7 +18,7 @@ public class Skill : SerializableAsset
     public List<Effect> Effects = new List<Effect>();
     [ShowIf("CanCritical")] public List<Effect> CriticalEffects = new List<Effect>();
     
-    public DD.Skill.Animation.Animation SkillAnimation = null;
+    [TabGroup("Effect Animations")]public DD.Skill.Animation.Animation SkillAnimation = null;
     
     public bool TrueHit = false;
     public bool CanBeSilenced;

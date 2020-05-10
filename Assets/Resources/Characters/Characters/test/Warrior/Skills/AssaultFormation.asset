@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
-  m_Name: Enrage
+  m_Name: AssaultFormation
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: ccc07b409b9bb7a4f8bc8cfcd9ab171e, type: 2}
+    - {fileID: 11400000, guid: 45ccfce8e493ec840a7d120114d3fa7f, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -90,7 +90,16 @@ MonoBehaviour:
       Entry: 4
       Data: 1
     - Name: soundInfo
+      Entry: 7
+      Data: 6|SoundInfo, Assembly-CSharp
+    - Name: AudioClip
       Entry: 6
+      Data: 
+    - Name: Volume
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
       Data: 
     - Name: 
       Entry: 8
@@ -114,14 +123,14 @@ MonoBehaviour:
       Entry: 8
       Data: 
   databaseIgnore: 0
-  SkillName: Enrage
-  SkillIcon: {fileID: 4938862207006683254, guid: cc992c58d47d97548895862c5e45375c,
+  SkillName: Assault Formation
+  SkillIcon: {fileID: -2396315254400908331, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  ApCost: 30
+  ApCost: 40
   Element: 0
-  SkillDescription: Go into a rage, sacrificing defense for offense.
-  Target: 6
-  TrueHit: 0
+  SkillDescription: Increase team physical damage.
+  Target: 4
+  TrueHit: 1
   CanBeSilenced: 0
   CanCritical: 0
   AccuracyModifier: 0

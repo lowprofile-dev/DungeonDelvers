@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using DD.Skill.Animation;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Skill/PlayerSkill")]
 public class PlayerSkill : Skill
 {
-    public List<IPlayerSkillAnimation> Animations = new List<IPlayerSkillAnimation>(); 
+    [TabGroup("Use Animations")] public List<IPlayerSkillAnimation> Animations = new List<IPlayerSkillAnimation>(); 
     public WeaponBase.WeaponType? RequiredWeaponType;
 
     public bool HasRequiredWeapon(Character character)

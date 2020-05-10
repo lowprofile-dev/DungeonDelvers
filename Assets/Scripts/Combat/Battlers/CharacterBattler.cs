@@ -39,16 +39,13 @@ public class CharacterBattler : Battler
         Character = character;
         BattlerName = Character.Base.CharacterName;
         Level = PlayerController.Instance.PartyLevel;
-        // BaseStats = character.BaseStats;
-        // BonusStats = character.BonusStats;
-        // Skills = character.Skills;
-        // Passives = character.Passives;
         RecalculateStats();
         CurrentHp = character.CurrentHp;
         CurrentAp = GameSettings.Instance.InitialAp;
         StatusEffectInstances = new List<StatusEffectInstance>();
         HitSound = character.Base.HitSound;
         BuildStatusEffectRect();
+        Aggro = 100;
     }
 
     public void CommitChanges()
@@ -80,6 +77,8 @@ public class CharacterBattler : Battler
 
     #region Stats
 
+    public int Aggro;
+    
     [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly]
     private int currentAp;
 

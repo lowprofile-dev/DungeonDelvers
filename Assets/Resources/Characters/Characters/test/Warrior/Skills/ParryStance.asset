@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 050eea6a6b1742f889319807c4e56871, type: 3}
-  m_Name: Enrage
+  m_Name: ParryStance
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 11400000, guid: ccc07b409b9bb7a4f8bc8cfcd9ab171e, type: 2}
+    - {fileID: 11400000, guid: a082b5d4aca42c0488da8da4b1d28b04, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -45,7 +45,7 @@ MonoBehaviour:
       Data: 0
     - Name: turnDuration
       Entry: 3
-      Data: 4
+      Data: 3
     - Name: 
       Entry: 8
       Data: 
@@ -76,28 +76,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
-    - Name: 
-      Entry: 7
-      Data: 4|DD.Skill.Animation.SingleAnimation, Assembly-CSharp
-    - Name: Animation
-      Entry: 7
-      Data: 5|BattlerAnimationInfo, Assembly-CSharp
-    - Name: stateName
-      Entry: 1
-      Data: Cast
-    - Name: speed
-      Entry: 4
-      Data: 1
-    - Name: soundInfo
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+      Data: 0
     - Name: 
       Entry: 13
       Data: 
@@ -108,20 +87,20 @@ MonoBehaviour:
       Entry: 7
       Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
     - Name: 
-      Entry: 6
-      Data: 
+      Entry: 3
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
   databaseIgnore: 0
-  SkillName: Enrage
-  SkillIcon: {fileID: 4938862207006683254, guid: cc992c58d47d97548895862c5e45375c,
+  SkillName: Parry Stance
+  SkillIcon: {fileID: -4218221761155085457, guid: cc992c58d47d97548895862c5e45375c,
     type: 3}
-  ApCost: 30
+  ApCost: 35
   Element: 0
-  SkillDescription: Go into a rage, sacrificing defense for offense.
+  SkillDescription: Chance of nullifying and countering physical attacks.
   Target: 6
-  TrueHit: 0
+  TrueHit: 1
   CanBeSilenced: 0
   CanCritical: 0
   AccuracyModifier: 0

@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ee78b05749540aaa28b74d407ae0502, type: 3}
-  m_Name: Enrage
+  m_Script: {fileID: 11500000, guid: d094aa0b39564153b139b8890360f490, type: 3}
+  m_Name: LongswordMasteryI
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -30,7 +30,29 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|BonusStatsPassiveEffect, Assembly-CSharp
+      Data: 1|EquipBonusStatsPassiveEffect, Assembly-CSharp
+    - Name: Priority
+      Entry: 3
+      Data: 0
+    - Name: Types
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[WeaponBase+WeaponType, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: BonusStatsPassiveEffect
+      Entry: 7
+      Data: 3|BonusStatsPassiveEffect, Assembly-CSharp
     - Name: Priority
       Entry: 3
       Data: 0
@@ -111,16 +133,16 @@ MonoBehaviour:
       Data: 1
     - Name: PhysAtk
       Entry: 4
-      Data: 1.4
+      Data: 1.2
     - Name: MagAtk
       Entry: 4
       Data: 1
     - Name: PhysDef
       Entry: 4
-      Data: 0.6
+      Data: 1
     - Name: MagDef
       Entry: 4
-      Data: 0.6
+      Data: 1
     - Name: Speed
       Entry: 4
       Data: 1
@@ -173,16 +195,17 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
       Entry: 8
       Data: 
   databaseIgnore: 0
-  StatusEffectName: Enrage
-  StatusEffectIcon: {fileID: 4938862207006683254, guid: cc992c58d47d97548895862c5e45375c,
+  AssetIcon: {fileID: -7296022968554305996, guid: 1be03e14cc2880e1eb2ae6aa5f3cb1f8,
     type: 3}
-  Cancels: []
-  Type: 3
-  CustomIcon: {fileID: 0}
+  PassiveName: Longsword Mastery I
   Hidden: 0
+  PassiveDescription: 

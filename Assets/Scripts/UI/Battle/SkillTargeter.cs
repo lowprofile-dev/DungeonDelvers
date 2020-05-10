@@ -117,7 +117,7 @@ public class SkillTargeter : SerializedMonoBehaviour
             }
             
             var targetName = string.Join(", ", names);
-            BattleCanvas.battleInfoPanel.ShowInfo(targetName);
+            BattleCanvas.battleInfoPanel.ShowInfo(TargetGroups[currentIndex].Length > 1 ? "Multiple Targets" : TargetGroups[currentIndex][0].BattlerName);
             // if (TargetGroups[currentIndex].Length == 1)
             // {
             //     var battler = TargetGroups[currentIndex][0];

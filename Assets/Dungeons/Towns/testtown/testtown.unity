@@ -20731,6 +20731,9 @@ MonoBehaviour:
   - Item: {fileID: 11400000, guid: aaae7e25e0a8f154eb8d806117fac95c, type: 2}
     IsFixedPrice: 0
     FixedPrice: 0
+  - Item: {fileID: 11400000, guid: 094b5d9b7b2c21647aca654a0c96f9d6, type: 2}
+    IsFixedPrice: 1
+    FixedPrice: 0
 --- !u!114 &430233337
 MonoBehaviour:
   m_ObjectHideFlags: 0

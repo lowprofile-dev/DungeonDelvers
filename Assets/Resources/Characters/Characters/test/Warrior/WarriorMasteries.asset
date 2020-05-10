@@ -722,6 +722,86 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+--- !u!114 &-5275015589010426052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
+  m_Name: Assault Formation
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -792, y: -856}
+  ports:
+    keys:
+    - Prerequisites
+    - RequirementOf
+    values:
+    - _fieldName: Prerequisites
+      _node: {fileID: -5275015589010426052}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: RequirementOf
+        node: {fileID: -2177546536360426978}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RequirementOf
+      _node: {fileID: -5275015589010426052}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Id: 33
+  MasteryName: Assault Formation
+  MasterySprite: {fileID: 0}
+  MasteryDescription: 
+  MasteryMaxLevel: 1
+  MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 8a0e61556c0828e489be9bd69f9d9b89, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MasteryEffects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|LearnSkillMasteryEffect, Assembly-CSharp
+    - Name: Skill
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!114 &-5097286513029241927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1000,6 +1080,86 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+--- !u!114 &-4332278899511934860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
+  m_Name: Parry Stance
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -792, y: -584}
+  ports:
+    keys:
+    - Prerequisites
+    - RequirementOf
+    values:
+    - _fieldName: Prerequisites
+      _node: {fileID: -4332278899511934860}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: RequirementOf
+        node: {fileID: 7119527661947335944}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RequirementOf
+      _node: {fileID: -4332278899511934860}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Id: 34
+  MasteryName: Parry Stance
+  MasterySprite: {fileID: 0}
+  MasteryDescription: 
+  MasteryMaxLevel: 1
+  MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 81c87d5a46741694bbe8a10f7bdab582, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MasteryEffects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|LearnSkillMasteryEffect, Assembly-CSharp
+    - Name: Skill
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -1296,6 +1456,86 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+--- !u!114 &-3560899882816765395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
+  m_Name: Provoke
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1208, y: -1128}
+  ports:
+    keys:
+    - Prerequisites
+    - RequirementOf
+    values:
+    - _fieldName: Prerequisites
+      _node: {fileID: -3560899882816765395}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: LockedNode
+        node: {fileID: 4385128096230083193}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RequirementOf
+      _node: {fileID: -3560899882816765395}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Id: 32
+  MasteryName: Provoke
+  MasterySprite: {fileID: 0}
+  MasteryDescription: 
+  MasteryMaxLevel: 1
+  MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 92b4efdb16281dc408147e3376b2ccd5, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MasteryEffects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|LearnSkillMasteryEffect, Assembly-CSharp
+    - Name: Skill
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
 --- !u!114 &-3549695140963260957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,6 +1814,89 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+--- !u!114 &-2177546536360426978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
+  m_Name: Spear Mastery I
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1208, y: -856}
+  ports:
+    keys:
+    - Prerequisites
+    - RequirementOf
+    values:
+    - _fieldName: Prerequisites
+      _node: {fileID: -2177546536360426978}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: LockedNode
+        node: {fileID: 4385128096230083193}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RequirementOf
+      _node: {fileID: -2177546536360426978}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Prerequisites
+        node: {fileID: -5275015589010426052}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Id: 31
+  MasteryName: Spear Mastery I
+  MasterySprite: {fileID: 0}
+  MasteryDescription: 
+  MasteryMaxLevel: 1
+  MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: c23b10e5e017b9f4ca171ab90ff93d5d, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MasteryEffects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|GetPassiveMasteryEffect, Assembly-CSharp
+    - Name: Passive
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -1913,6 +2236,12 @@ MonoBehaviour:
   - {fileID: -5732226484563946261}
   - {fileID: -6088784237877168701}
   - {fileID: -3808807377410467546}
+  - {fileID: 7119527661947335944}
+  - {fileID: -2177546536360426978}
+  - {fileID: -3560899882816765395}
+  - {fileID: -5275015589010426052}
+  - {fileID: -4332278899511934860}
+  - {fileID: 4385128096230083193}
 --- !u!114 &170239045212227392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3783,6 +4112,44 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+--- !u!114 &4385128096230083193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dfdc6327294efe961b72f564c360b9, type: 3}
+  m_Name: Party Level Prerequisite
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1592, y: -680}
+  ports:
+    keys:
+    - LockedNode
+    values:
+    - _fieldName: LockedNode
+      _node: {fileID: 4385128096230083193}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Prerequisites
+        node: {fileID: -3560899882816765395}
+        reroutePoints: []
+      - fieldName: Prerequisites
+        node: {fileID: -2177546536360426978}
+        reroutePoints: []
+      - fieldName: Prerequisites
+        node: {fileID: 7119527661947335944}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  MinPartyLevel: 5
+  LockedNode: {fileID: 0}
 --- !u!114 &5589634337188821860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4061,6 +4428,89 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+--- !u!114 &7119527661947335944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
+  m_Name: Longsword Mastery
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -1208, y: -584}
+  ports:
+    keys:
+    - Prerequisites
+    - RequirementOf
+    values:
+    - _fieldName: Prerequisites
+      _node: {fileID: 7119527661947335944}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: LockedNode
+        node: {fileID: 4385128096230083193}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RequirementOf
+      _node: {fileID: 7119527661947335944}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Prerequisites
+        node: {fileID: -4332278899511934860}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Id: 30
+  MasteryName: Longsword Mastery
+  MasterySprite: {fileID: 0}
+  MasteryDescription: 
+  MasteryMaxLevel: 1
+  MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: d7fdacf0b92a6bc4cba8007033f2162f, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MasteryEffects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|GetPassiveMasteryEffect, Assembly-CSharp
+    - Name: Passive
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 

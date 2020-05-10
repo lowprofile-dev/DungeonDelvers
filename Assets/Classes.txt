@@ -13,9 +13,9 @@ Jack of All Trades
 
 (Ver uma feature mais distintiva)
 2h-Sword:
-    AoE
+    Defensive
 Spear:
-    DPS
+    Offensive
     
 Fighter:
 Glass Cannon
