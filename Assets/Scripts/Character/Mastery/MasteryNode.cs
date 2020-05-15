@@ -16,6 +16,7 @@ public class MasteryNode : Node, IMasteryPrerequisite, ISerializationCallbackRec
     public Sprite MasterySprite;
     [TextArea] public string MasteryDescription;
     [OdinSerialize] public List<MasteryEffect> MasteryEffects = new List<MasteryEffect>();
+    public bool AutoLearned = false;
     public int MasteryMaxLevel = 1;
     public int MasteryPointCost = 1;
     [Input(ShowBackingValue.Never)] public MasteryNode Prerequisites;
@@ -25,8 +26,14 @@ public class MasteryNode : Node, IMasteryPrerequisite, ISerializationCallbackRec
     
     public bool PrerequisiteAchieved(Character context)
     {
-        var instance = context.MasteryInstances[Id];
-        return instance.Maxed;
+        // var nodeInstance = context.MasteryInstances.FirstOrDefault(nI => nI.Node == this);
+        // if (nodeInstance != null) return nodeInstance.Maxed;
+        // return false;
+        // var instance = context.MasteryInstances[Id];
+        // return instance.Maxed;
+        var instance = context.GetMasteryInstance(this);
+        if (instance != null) return instance.Maxed;
+        return false;
     }
 
     public override object GetValue(NodePort port)

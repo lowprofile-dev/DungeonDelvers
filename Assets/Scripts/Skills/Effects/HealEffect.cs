@@ -13,6 +13,15 @@
         };
     }
 
+    public override object Clone()
+    {
+        return new HealEffect
+        {
+            ElementOverride = ElementOverride,
+            HealAmount = HealAmount
+        };
+    }
+
     public class HealEffectResult : EffectResult
     {
         public int AmountHealed;

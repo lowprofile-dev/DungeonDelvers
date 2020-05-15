@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4389810722139561193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
+  m_Name: Assault Formation
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 184, y: -120}
+  ports:
+    keys:
+    - Prerequisites
+    - RequirementOf
+    values:
+    - _fieldName: Prerequisites
+      _node: {fileID: -4389810722139561193}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: RequirementOf
+        node: {fileID: 4068220201366272826}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RequirementOf
+      _node: {fileID: -4389810722139561193}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Id: 2
+  MasteryName: Assault Formation
+  MasterySprite: {fileID: 0}
+  MasteryDescription: 
+  AutoLearned: 0
+  MasteryMaxLevel: 1
+  MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 8a0e61556c0828e489be9bd69f9d9b89, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MasteryEffects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|LearnSkillMasteryEffect, Assembly-CSharp
+    - Name: Skill
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4188597c31a48f5ac0b315a9ce12582, type: 3}
+  m_Name: SpearMasteries
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 4068220201366272826}
+  - {fileID: 4818455138730034336}
+  - {fileID: -4389810722139561193}
+--- !u!114 &4068220201366272826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14e7d648678448b826a4d25f4a135f3, type: 3}
+  m_Name: Spear Mastery
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -312, y: -136}
+  ports:
+    keys:
+    - Prerequisites
+    - RequirementOf
+    values:
+    - _fieldName: Prerequisites
+      _node: {fileID: 4068220201366272826}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: LockedNode
+        node: {fileID: 4818455138730034336}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: RequirementOf
+      _node: {fileID: 4068220201366272826}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Prerequisites
+        node: {fileID: -4389810722139561193}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  Id: 0
+  MasteryName: Spear Mastery
+  MasterySprite: {fileID: 0}
+  MasteryDescription: 
+  AutoLearned: 0
+  MasteryMaxLevel: 1
+  MasteryPointCost: 1
+  Prerequisites: {fileID: 0}
+  RequirementOf: {fileID: 0}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: c23b10e5e017b9f4ca171ab90ff93d5d, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: MasteryEffects
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[MasteryEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|GetPassiveMasteryEffect, Assembly-CSharp
+    - Name: Passive
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+--- !u!114 &4818455138730034336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0dfdc6327294efe961b72f564c360b9, type: 3}
+  m_Name: Party Level Prerequisite
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -584, y: 56}
+  ports:
+    keys:
+    - LockedNode
+    values:
+    - _fieldName: LockedNode
+      _node: {fileID: 4818455138730034336}
+      _typeQualifiedName: MasteryNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Prerequisites
+        node: {fileID: 4068220201366272826}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  MinPartyLevel: 5
+  LockedNode: {fileID: 0}

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/test/testmasteries.unity
+    guid: eafbee2d5e1a3294bb4ac03117a5763d
+  - enabled: 1
     path: Assets/Dungeons/Towns/testtown/testtown.unity
     guid: 62a28ee0083090b4f9340e8e1ed5bb22
   - enabled: 1

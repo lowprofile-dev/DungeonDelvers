@@ -8,23 +8,22 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Mastery Graph")]
 public class MasteryGraph : NodeGraph
 {
-    public List<MasteryInstance> Initialize(Character owner)
+    public List<MasteryInstance> Initialize(Character owner, int graphIndex)
     {
         var instances = new List<MasteryInstance>();
         foreach (var node in nodes) 
-            if (node is MasteryNode masteryNode) instances.Add(new MasteryInstance(owner, masteryNode));
+             if (node is MasteryNode masteryNode) 
+                 instances.Add(new MasteryInstance(owner, graphIndex, masteryNode));
         return instances;
     }
 
-    public List<MasteryInstance> Initialize(Character owner, SerializedMasteryInstance[] save)
+    public static List<MasteryInstance> Initialize(Character owner, SerializedMasteryInstance[] save)
     {
         var instances = new List<MasteryInstance>();
-        // if (save.Length != nodes.Count)
-        //     throw new DeserializationFailureException(typeof(MasteryInstance));
 
         foreach (var serializedMasteryInstance in save)
         {
-            instances.Add(new MasteryInstance(owner, this, serializedMasteryInstance));
+            instances.Add(new MasteryInstance(owner, serializedMasteryInstance));
         }
         return instances;
     }

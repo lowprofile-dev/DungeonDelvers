@@ -150,7 +150,7 @@ MonoBehaviour:
   ApCost: 20
   Element: 0
   SkillDescription: Attack one target with an axe.
-  Target: 1
+  Target: 0
   TrueHit: 0
   CanBeSilenced: 0
   CanCritical: 1

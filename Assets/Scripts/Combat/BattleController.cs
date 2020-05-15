@@ -242,7 +242,7 @@ public class BattleController : AsyncMonoBehaviour
 
             await QueueActionAndAwait(() => battleCanvas.UnbindActionArrow());
 
-            if (turn != null)
+            if (turn != null && turn.Skill != null)
             {
                 var usedSkill = turn.Skill;
                 var targets = turn.Targets;
@@ -526,7 +526,7 @@ public class BattleController : AsyncMonoBehaviour
     }
 }
 
-public abstract class EffectResult
+public class EffectResult
 {
     public SkillInfo skillInfo;
 }

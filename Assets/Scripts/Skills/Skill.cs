@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using JetBrains.Annotations;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -22,7 +23,7 @@ public class Skill : SerializableAsset
     
     public bool TrueHit = false;
     public bool CanBeSilenced;
-    public bool CanCritical;
+    [OnValueChanged("_initializeCriticalEffects")] public bool CanCritical;
 
     [Range(-1,1), HideIf("TrueHit")] public float AccuracyModifier = 0f;
     [Range(-1, 1), ShowIf("CanCritical")] public float CriticalModifier = 0f;
@@ -38,6 +39,16 @@ public class Skill : SerializableAsset
         All,
         Self
     }
+    
+#if UNITY_EDITOR
+    private void _initializeCriticalEffects()
+    {
+        if (CanCritical && (CriticalEffects == null || !CriticalEffects.Any()))
+        {
+            CriticalEffects = new List<Effect>(Effects.Select(e => (Effect)e.Clone()));
+        }
+    }
+#endif
 }
 
 public struct SkillInfo

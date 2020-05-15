@@ -13,7 +13,17 @@ public class ApplyStatusEffectEffect : Effect
             skillInfo = skillInfo
         };
     }
-    
+
+    public override object Clone()
+    {
+        return new ApplyStatusEffectEffect
+        {
+            ElementOverride = ElementOverride,
+            StatusEffect = StatusEffect,
+            turnDuration = turnDuration
+        };
+    }
+
     public class ApplyStatusEffectResult : EffectResult
     {
         public StatusEffect Applied;

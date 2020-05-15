@@ -31,7 +31,16 @@ public class DispelStatusEffectTypeEffect : Effect
             StatusEffectInstancesDispelled = targetStatusEffectsOfType
         };
     }
-    
+
+    public override object Clone()
+    {
+        return new DispelStatusEffectTypeEffect
+        {
+            ElementOverride = ElementOverride,
+            DispelType = DispelType
+        };
+    }
+
     public class DispelStatusEffectTypeEffectResult : EffectResult
     {
         public StatusEffectInstance[] StatusEffectInstancesDispelled;

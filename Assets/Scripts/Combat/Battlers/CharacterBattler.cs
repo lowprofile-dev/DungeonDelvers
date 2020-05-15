@@ -167,6 +167,17 @@ public class CharacterBattler : Battler
     
     public override async Task<Turn> GetTurn()
     {
+        var buildTurnOverrides = PassiveEffects
+            .Where(pE => pE is IBuildTurnOverridePassiveEffect)
+            .Cast<IBuildTurnOverridePassiveEffect>().ToArray();
+
+        foreach (var buildTurnOverride in buildTurnOverrides)
+        {
+            var t = await buildTurnOverride.BuildTurnOverride(this);
+            if (t != null)
+                return t;
+        }
+        
         Debug.Log($"Fazendo o turno de {Character.Base.CharacterName}");
 
         if (Fainted)

@@ -128,6 +128,7 @@ public abstract class Battler : AsyncMonoBehaviour
     }
 
     public abstract Task<Turn> GetTurn();
+    
     public async Task ExecuteTurn(Turn turn)
     {
         Debug.Log($"Executando o turno de {BattlerName}.");
@@ -405,6 +406,11 @@ public interface IOnApplyPassiveEffect
 {
     void OnApply(Battler battler);
     void OnUnapply(Battler battler);
+}
+
+public interface IBuildTurnOverridePassiveEffect
+{
+    Task<Turn> BuildTurnOverride(Battler battler);
 }
 
 #endregion

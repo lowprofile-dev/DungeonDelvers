@@ -70,6 +70,16 @@ public class DamageEffect : Effect
         };
     }
 
+    public override object Clone()
+    {
+        return new DamageEffect
+        {
+            ElementOverride = ElementOverride,
+            DamageType = DamageType,
+            DamageFactor = DamageFactor
+        };
+    }
+
     public class DamageEffectResult : EffectResult
     {
         public int DamageDealt;

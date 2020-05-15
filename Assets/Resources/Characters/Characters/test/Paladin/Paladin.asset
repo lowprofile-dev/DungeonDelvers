@@ -88,7 +88,8 @@ MonoBehaviour:
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}
-  Masteries: {fileID: 11400000, guid: f4d37f3858fd7564abed30616b78414c, type: 2}
+  Masteries:
+  - {fileID: 11400000, guid: 396821360b13f724b98e5af750d63184, type: 2}
   BaseSkills: []
   BasePassives: []
   DefaultDefendSkill: {fileID: 11400000, guid: 3fda503906d7d314d8cdd9e2b6e3a30d, type: 2}

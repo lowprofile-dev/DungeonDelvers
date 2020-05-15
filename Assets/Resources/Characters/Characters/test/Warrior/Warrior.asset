@@ -144,12 +144,12 @@ MonoBehaviour:
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}
-  Masteries: {fileID: 11400000, guid: ad3d2fe80f8df7946818b738aba93473, type: 2}
-  BaseSkills:
-  - {fileID: 11400000, guid: cc639c2ad8b86454d841e36f8b744fd7, type: 2}
-  - {fileID: 11400000, guid: 05b29b538fb734d4785a466a50c6f486, type: 2}
-  - {fileID: 11400000, guid: f2768ca334f598042b962d67514fd7ca, type: 2}
-  - {fileID: 11400000, guid: 7dead21e2434fd44f9a145962cf541f1, type: 2}
+  Masteries:
+  - {fileID: 11400000, guid: 396821360b13f724b98e5af750d63184, type: 2}
+  - {fileID: 11400000, guid: d65bc97af937b354f9b1a610c8b9c556, type: 2}
+  - {fileID: 11400000, guid: 6b66a1dc1a848864f8db4385e7c76c6f, type: 2}
+  - {fileID: 11400000, guid: 1b856589f543de04ebe0de6a449659c0, type: 2}
+  BaseSkills: []
   BasePassives: []
   DefaultDefendSkill: {fileID: 11400000, guid: 3fda503906d7d314d8cdd9e2b6e3a30d, type: 2}
   HitSound:

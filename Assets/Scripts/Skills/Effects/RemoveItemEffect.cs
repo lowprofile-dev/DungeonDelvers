@@ -15,6 +15,15 @@ public class RemoveItemEffect : Effect
         };
     }
 
+    public override object Clone()
+    {
+        return new RemoveItemEffect
+        {
+            Item = Item,
+            ElementOverride = ElementOverride
+        };
+    }
+
     public class ItemRemovedEffectResult : EffectResult
     {
         public ItemBase Item;

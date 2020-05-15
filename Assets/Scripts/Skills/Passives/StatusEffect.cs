@@ -50,5 +50,6 @@ public class StatusEffect : SerializableAsset
         PositiveStat,
         NegativeStat,
         Defend,
+        Stun,
     }
 }

@@ -39,8 +39,20 @@ public class Character
         Hand = ItemInstanceBuilder.BuildInstance(Base.Hand, true) as Equippable;
         Feet = ItemInstanceBuilder.BuildInstance(Base.Feet, true) as Equippable;
         Accessory = ItemInstanceBuilder.BuildInstance(Base.Accessory, true) as Equippable;
-        MasteryInstances = Base.Masteries.Initialize(this);
 
+        MasteryInstances = new List<MasteryInstance>();
+
+        for (int i = 0; i < Base.Masteries.Count; i++)
+        {
+            MasteryInstances.AddRange(Base.Masteries[i].Initialize(this, i));
+        }
+        
+        _instanceIndex = new Dictionary<MasteryNode, MasteryInstance>();
+        foreach (var masteryInstance in MasteryInstances)
+        {
+            _instanceIndex[masteryInstance.Node] = masteryInstance;
+        }
+        
         Regenerate();
 
         CurrentHp = Stats.MaxHp;
@@ -59,8 +71,17 @@ public class Character
             }
 
             Base = characterBase;
-            MasteryInstances = Base.Masteries.Initialize(this, save.serializedMasteryInstances);
+            // MasteryInstances = Base.Masteries
+            //     .SelectMany(mG => mG.Initialize(this, save.serializedMasteryInstances)).ToList();
 
+            MasteryInstances = MasteryGraph.Initialize(this, save.serializedMasteryInstances);
+            
+            _instanceIndex = new Dictionary<MasteryNode, MasteryInstance>();
+            foreach (var masteryInstance in MasteryInstances)
+            {
+                _instanceIndex[masteryInstance.Node] = masteryInstance;
+            }
+            
             Weapon = ItemInstanceBuilder.BuildInstance(save.Equipment[0]) as Equippable;
             Head = ItemInstanceBuilder.BuildInstance(save.Equipment[1]) as Equippable;
             Body = ItemInstanceBuilder.BuildInstance(save.Equipment[2]) as Equippable;
@@ -123,6 +144,13 @@ public class Character
     [ShowInInspector] public List<Passive> Passives { get; private set; }
 
     [ShowInInspector] public List<MasteryInstance> MasteryInstances { get; private set; }
+    private Dictionary<MasteryNode, MasteryInstance> _instanceIndex { get; set; }
+
+    public MasteryInstance GetMasteryInstance(MasteryNode masteryNode)
+    {
+        if (_instanceIndex.TryGetValue(masteryNode, out var instance)) return instance;
+        return null;
+    }
     
     public IEnumerable<Equippable> Equipment
     {

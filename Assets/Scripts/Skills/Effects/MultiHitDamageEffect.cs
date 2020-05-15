@@ -56,6 +56,15 @@ public class MultiHitDamageEffect : Effect
         return result;
     }
 
+    public override object Clone()
+    {
+        return new MultiHitDamageEffect
+        {
+            HitInfo = HitInfo.Select(hI => hI).ToList(),
+            ElementOverride = ElementOverride
+        };
+    }
+
     public class MultiHitDamageEffectResult : EffectResult
     {
         public List<HitResult> HitResults;

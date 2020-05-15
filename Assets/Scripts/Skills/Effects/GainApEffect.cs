@@ -12,6 +12,15 @@
         };
     }
 
+    public override object Clone()
+    {
+        return new GainApEffect
+        {
+            ElementOverride = ElementOverride,
+            ApAmount = ApAmount
+        };
+    }
+
     public class GainApEffectResult : EffectResult
     {
         public int ApGained;

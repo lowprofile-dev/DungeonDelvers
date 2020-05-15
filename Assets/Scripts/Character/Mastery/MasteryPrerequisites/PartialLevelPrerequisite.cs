@@ -19,7 +19,8 @@ public class PartialLevelPrerequisite : Node, IMasteryPrerequisite
         if (preReq == null)
             return true;
 
-        var preReqInstance = context.MasteryInstances.FirstOrDefault(mI => mI.Node == preReq);
+        //var preReqInstance = context.MasteryInstances.FirstOrDefault(mI => mI.Node == preReq);
+        var preReqInstance = context.GetMasteryInstance(preReq);
         if (preReqInstance == null)
             return false;
 

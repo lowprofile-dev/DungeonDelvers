@@ -135,6 +135,17 @@ public class MonsterBattler : Battler
 
     public override async Task<Turn> GetTurn()
     {
+        var buildTurnOverrides = PassiveEffects
+            .Where(pE => pE is IBuildTurnOverridePassiveEffect)
+            .Cast<IBuildTurnOverridePassiveEffect>().ToArray();
+
+        foreach (var buildTurnOverride in buildTurnOverrides)
+        {
+            var t = await buildTurnOverride.BuildTurnOverride(this);
+            if (t != null)
+                return t;
+        }
+        
         if (Fainted || SkillAi == null || TargeterAi == null)
             return null;
         
