@@ -26,14 +26,16 @@ public class MasteryNode : Node, IMasteryPrerequisite, ISerializationCallbackRec
     
     public bool PrerequisiteAchieved(Character context)
     {
+        throw new NotImplementedException();
         // var nodeInstance = context.MasteryInstances.FirstOrDefault(nI => nI.Node == this);
         // if (nodeInstance != null) return nodeInstance.Maxed;
         // return false;
         // var instance = context.MasteryInstances[Id];
         // return instance.Maxed;
-        var instance = context.GetMasteryInstance(this);
-        if (instance != null) return instance.Maxed;
-        return false;
+        
+        // var instance = context.GetMasteryInstance(this);
+        // if (instance != null) return instance.Maxed;
+        // return false;
     }
 
     public override object GetValue(NodePort port)

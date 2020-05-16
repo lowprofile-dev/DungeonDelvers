@@ -2,12 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using MasteriesV3;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using Debug = UnityEngine.Debug;
+using Object = UnityEngine.Object;
 
 
 public class Character
@@ -22,7 +24,8 @@ public class Character
         {
             baseUid = GameSettings.Instance.CharacterDatabase.GetId(Base).Value,
             currentHp = currentHp,
-            serializedMasteryInstances = MasteryInstances.Select(mI => mI.Serialize()).ToArray(),
+            //serializedMasteryInstances = MasteryInstances.Select(mI => mI.Serialize()).ToArray(),
+            MasteryInstances = MasteryInstances.ToArray(),
             Equipment = EquippableSaves(),
             masteryPoints = CurrentMp,
         };
@@ -40,18 +43,20 @@ public class Character
         Feet = ItemInstanceBuilder.BuildInstance(Base.Feet, true) as Equippable;
         Accessory = ItemInstanceBuilder.BuildInstance(Base.Accessory, true) as Equippable;
 
-        MasteryInstances = new List<MasteryInstance>();
-
-        for (int i = 0; i < Base.Masteries.Count; i++)
-        {
-            MasteryInstances.AddRange(Base.Masteries[i].Initialize(this, i));
-        }
+        // MasteryInstances = new List<MasteryInstance>();
+        //
+        // for (int i = 0; i < Base.Masteries.Count; i++)
+        // {
+        //     MasteryInstances.AddRange(Base.Masteries[i].Initialize(this, i));
+        // }
+        //
+        // _instanceIndex = new Dictionary<MasteryNode, MasteryInstance>();
+        // foreach (var masteryInstance in MasteryInstances)
+        // {
+        //     _instanceIndex[masteryInstance.Node] = masteryInstance;
+        // }
         
-        _instanceIndex = new Dictionary<MasteryNode, MasteryInstance>();
-        foreach (var masteryInstance in MasteryInstances)
-        {
-            _instanceIndex[masteryInstance.Node] = masteryInstance;
-        }
+        InitializeMasteries();
         
         Regenerate();
 
@@ -74,13 +79,15 @@ public class Character
             // MasteryInstances = Base.Masteries
             //     .SelectMany(mG => mG.Initialize(this, save.serializedMasteryInstances)).ToList();
 
-            MasteryInstances = MasteryGraph.Initialize(this, save.serializedMasteryInstances);
-            
-            _instanceIndex = new Dictionary<MasteryNode, MasteryInstance>();
-            foreach (var masteryInstance in MasteryInstances)
-            {
-                _instanceIndex[masteryInstance.Node] = masteryInstance;
-            }
+            //MasteryInstances = MasteryGraph.Initialize(this, save.serializedMasteryInstances);
+            InitializeMasteries();
+            MasteryInstances = save.MasteryInstances.ToList();
+
+            // _instanceIndex = new Dictionary<MasteryNode, MasteryInstance>();
+            // foreach (var masteryInstance in MasteryInstances)
+            // {
+            //     _instanceIndex[masteryInstance.Node] = masteryInstance;
+            // }
             
             Weapon = ItemInstanceBuilder.BuildInstance(save.Equipment[0]) as Equippable;
             Head = ItemInstanceBuilder.BuildInstance(save.Equipment[1]) as Equippable;
@@ -98,6 +105,15 @@ public class Character
         {
             throw new DeserializationFailureException(typeof(Character));
         }
+    }
+
+    private void InitializeMasteries()
+    {
+        var instantiatedGrid = Object.Instantiate(Base.MasteryGrid);
+        var grid = instantiatedGrid.GetComponent<MasteryGrid>();
+        MasteryInstances = grid.Initialize();
+        MasteryEffects = grid.Masteries.Select(m => m.MasteryEffects).ToList();
+        Object.DestroyImmediate(instantiatedGrid);
     }
 
     #endregion
@@ -142,15 +158,15 @@ public class Character
     [ShowInInspector] public List<PlayerSkill> Skills { get; private set; }
 
     [ShowInInspector] public List<Passive> Passives { get; private set; }
+    
+    public List<MasteriesV3.MasteryInstance> MasteryInstances = new List<MasteriesV3.MasteryInstance>();
+    public List<List<MasteriesV3.MasteryEffect>> MasteryEffects = new List<List<MasteriesV3.MasteryEffect>>();
 
-    [ShowInInspector] public List<MasteryInstance> MasteryInstances { get; private set; }
-    private Dictionary<MasteryNode, MasteryInstance> _instanceIndex { get; set; }
-
-    public MasteryInstance GetMasteryInstance(MasteryNode masteryNode)
-    {
-        if (_instanceIndex.TryGetValue(masteryNode, out var instance)) return instance;
-        return null;
-    }
+    // public MasteryInstance GetMasteryInstance(MasteryNode masteryNode)
+    // {
+    //     if (_instanceIndex.TryGetValue(masteryNode, out var instance)) return instance;
+    //     return null;
+    // }
     
     public IEnumerable<Equippable> Equipment
     {
@@ -251,9 +267,20 @@ public class Character
 
     private void ApplyMasteries()
     {
+        // foreach (var masteryInstance in MasteryInstances)
+        // {
+        //     masteryInstance.ApplyEffects();
+        // }
         foreach (var masteryInstance in MasteryInstances)
         {
-            masteryInstance.ApplyEffects();
+            if (masteryInstance.Status == Mastery.MasteryStatus.Learned)
+            {
+                var effects = MasteryEffects[masteryInstance.Id];
+                foreach (var effect in effects)
+                {
+                    effect.ApplyEffect(this);
+                }
+            }
         }
     }
 
@@ -367,6 +394,8 @@ public class Character
         return old;
     }
 
+    public WeaponBase.WeaponType? EquippedWeaponType => (Weapon?.EquippableBase as WeaponBase)?.weaponType;
+    
     public bool CanEquip(EquippableBase equippable)
     {
         if (equippable is WeaponBase weaponBase)

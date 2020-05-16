@@ -24,11 +24,12 @@ public class MasteryInstance
 
     public MasteryInstance(Character owner, SerializedMasteryInstance serializedMasteryInstance)
     {
-        this.owner = owner;
-        Graph = owner.Base.Masteries[serializedMasteryInstance.Id.GraphId];
-        Node = (MasteryNode) Graph.nodes[serializedMasteryInstance.Id.NodeId];
-        Id = serializedMasteryInstance.Id;
-        Level = serializedMasteryInstance.Level;
+        throw new NotImplementedException();
+        // this.owner = owner;
+        // Graph = owner.Base.Masteries[serializedMasteryInstance.Id.GraphId];
+        // Node = (MasteryNode) Graph.nodes[serializedMasteryInstance.Id.NodeId];
+        // Id = serializedMasteryInstance.Id;
+        // Level = serializedMasteryInstance.Level;
     }
 
     public SerializedMasteryInstance Serialize() => new SerializedMasteryInstance {Id = Id, Level = Level};

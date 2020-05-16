@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using XNode;
 
 public class PartialLevelPrerequisite : Node, IMasteryPrerequisite
@@ -15,15 +16,16 @@ public class PartialLevelPrerequisite : Node, IMasteryPrerequisite
     
     public bool PrerequisiteAchieved(Character context)
     {
-        var preReq = GetInputValue<MasteryNode>("PrerequisiteNode");
-        if (preReq == null)
-            return true;
-
-        //var preReqInstance = context.MasteryInstances.FirstOrDefault(mI => mI.Node == preReq);
-        var preReqInstance = context.GetMasteryInstance(preReq);
-        if (preReqInstance == null)
-            return false;
-
-        return preReqInstance.Level >= MinLevel;
+        throw new NotImplementedException();
+        // var preReq = GetInputValue<MasteryNode>("PrerequisiteNode");
+        // if (preReq == null)
+        //     return true;
+        //
+        // //var preReqInstance = context.MasteryInstances.FirstOrDefault(mI => mI.Node == preReq);
+        // var preReqInstance = context.GetMasteryInstance(preReq);
+        // if (preReqInstance == null)
+        //     return false;
+        //
+        // return preReqInstance.Level >= MinLevel;
     }
 }

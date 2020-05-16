@@ -5,17 +5,18 @@ using Sirenix.OdinInspector;
 using Sirenix.Utilities;
 using SkredUtils;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace MasteriesV3
 {
-    public class Mastery : MonoBehaviour
+    public class Mastery : SerializedMonoBehaviour, ISelectHandler
     {
         [SerializeField] public MasteryGrid Owner;
 
         #region Button Info
 
-        public MasteryStatus Status { get; private set; } = MasteryStatus.Locked;
+        [ShowInInspector] public MasteryStatus Status { get; private set; } = MasteryStatus.Locked;
 
         public void SetStatus(MasteryStatus status, bool echoValidate = true)
         {
@@ -72,6 +73,7 @@ namespace MasteriesV3
         
         public Image ButtonFilter;
         public Image ButtonImage;
+        public Button Button;
 
         public void SetSprite(Sprite sprite) => ButtonImage.sprite = sprite;
         public void SetFilter(Color color) => ButtonFilter.color = color;
@@ -139,6 +141,9 @@ namespace MasteriesV3
         }
 
 #endif
+        public void Clicked() => Owner.MasteryButtonClicked(this);
+        
+        public void OnSelect(BaseEventData eventData) => Clicked();
     }
 
     public class MasteryInstance
@@ -147,7 +152,7 @@ namespace MasteriesV3
         public Mastery.MasteryStatus Status;
 
         public MasteryInstance() { }
-        
+
         public MasteryInstance(Mastery mastery)
         {
             Id = mastery.Id;
@@ -159,6 +164,7 @@ namespace MasteriesV3
         }
     }
 
+    [Serializable]
     public abstract class MasteryEffect
     {
         public abstract void ApplyEffect(Character owner);
@@ -166,14 +172,27 @@ namespace MasteriesV3
 
     public class GainStatsMasteryEffect : MasteryEffect
     {
-        public Stats stats;
+        public Stats Stats;
         
         public override void ApplyEffect(Character owner)
         {
-            owner.BaseStats += stats;
+            owner.BaseStats += Stats;
         }
     }
 
+    public class WeaponStatsMasteryEffect : MasteryEffect
+    {
+        public WeaponBase.WeaponType WeaponType;
+        public Stats Stats;
+
+        public override void ApplyEffect(Character owner)
+        {
+            var weaponType = owner.EquippedWeaponType;
+            if (weaponType.HasValue && weaponType.Value == WeaponType)
+                owner.BaseStats += Stats;
+        }
+    }
+    
     public class LearnPassiveMasteryEffect : MasteryEffect
     {
         public Passive Passive;

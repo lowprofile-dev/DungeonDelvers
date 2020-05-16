@@ -26,20 +26,6 @@ public class MasteryGrid : MonoBehaviour
     public void Subscribe(IMasteryGridSubscriber subscriber) => Subscribers.Add(subscriber);
     public void Unsubscribe(IMasteryGridSubscriber subscriber) => Subscribers.Remove(subscriber);
     public void ClearSubscriptions() => Subscribers.Clear();
-    
-    
-    private void Update()
-    {
-        var wheelMovement = Input.mouseScrollDelta;
-        if (wheelMovement != Vector2.zero)
-        {
-            var oldScale = transform.localScale.x;
-            var newScale = oldScale + (wheelMovement.y * scaleSpeed);
-            var clampedNewScale = Mathf.Clamp(newScale, minScale, maxScale);
-            
-            transform.localScale = new Vector3(clampedNewScale,clampedNewScale);
-        }
-    }
 
     public void MasteryButtonClicked(Mastery mastery)
     {
@@ -56,15 +42,22 @@ public class MasteryGrid : MonoBehaviour
         return connectionComponent;
     }
 
-    public MasteriesV3.MasteryInstance[] Initialize() => Masteries.Select(m
-        => new MasteriesV3.MasteryInstance(m)).ToArray();
+    public List<MasteriesV3.MasteryInstance> Initialize() => Masteries.Select(m
+        => new MasteriesV3.MasteryInstance(m)).ToList();
 
     public void Load(IEnumerable<MasteriesV3.MasteryInstance> instances)
     {
+        Masteries.ForEach(m => m.SetStatus(Mastery.MasteryStatus.Locked,false));
+        
         foreach (var instance in instances)
         {
             var mastery = Masteries[instance.Id];
             mastery.SetStatus(instance.Status, false);
+        }
+
+        foreach (var mastery in Masteries)
+        {
+            mastery.ValidateStatus();
         }
     }
 

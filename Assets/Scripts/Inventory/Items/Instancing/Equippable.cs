@@ -100,10 +100,10 @@ public class Equippable : Item
             if (stats.PhysDef != 0) str += $"Phys. Defense: {stats.PhysDef:+#;-#}\n";
             if (stats.MagDef != 0) str += $"Mag. Defense: {stats.MagDef:+#;-#}\n";
             if (stats.Speed != 0) str += $"Speed: {stats.Speed:+#;-#}\n";
-            if (stats.Accuracy != 0) str += $"Accuracy: {stats.Accuracy:+0.###;-0.###}\n";
-            if (stats.Evasion != 0) str += $"Evasion: {stats.Evasion:+0.###;-0.###}\n";
-            if (stats.CritChance != 0) str += $"Crit. Chance: {stats.CritChance:+0.###;-0.###}\n";
-            if (stats.CritAvoid != 0) str += $"Crit. Avoid: {stats.CritAvoid:+0.###;-0.###}\n";
+            if (stats.Accuracy != 0) str += $"Accuracy: {stats.Accuracy:+##.#%;-##.#%;}\n";
+            if (stats.Evasion != 0) str += $"Evasion: {stats.Evasion:+##.#%;-##.#%;}\n";
+            if (stats.CritChance != 0) str += $"Crit. Chance: {stats.CritChance:+##.#%;-##.#%;}\n";
+            if (stats.CritAvoid != 0) str += $"Crit. Avoid: {stats.CritAvoid:+##.#%;-##.#%;}\n";
             return str;
         }
     }

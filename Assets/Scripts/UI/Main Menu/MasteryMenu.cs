@@ -27,6 +27,7 @@ public class MasteryMenu : MonoBehaviour
 
     public void RebuildMasteries()
     {
+        throw new NotImplementedException();
         CurrentMpText.text = $"{Character.CurrentMp} MP";
 
         MasteryButtons.ForEach(Destroy);
@@ -36,25 +37,25 @@ public class MasteryMenu : MonoBehaviour
         // var availableMasteries = Character.MasteryGroup.Masteries.Values
         //     .Where(mI => mI.CanLevelUp()).ToArray();
 
-        var availableMasteries = Character.MasteryInstances
-            .Where(instance => instance.Available).ToArray();
-
-        var message = "Available Masteries: ";
-        availableMasteries.ForEach(aM => { message += $" {aM.Node.MasteryName}({aM.Level})"; });
-        Debug.Log(message);
-
-        availableMasteries.ForEach(availableMastery =>
-        {
-            var masteryButtonObject = Instantiate(MasteryButtonPrefab, MasteryLayout);
-            var masteryButton = masteryButtonObject.GetComponent<MasteryButton>();
-
-            masteryButton.BuildMasteryButton(availableMastery, this);
-
-            if (Character.CurrentMp < availableMastery.Node.MasteryPointCost)
-                masteryButton.Button.interactable = false;
-
-            MasteryButtons.Add(masteryButtonObject);
-        });
+        // var availableMasteries = Character.MasteryInstances
+        //     .Where(instance => instance.Available).ToArray();
+        //
+        // var message = "Available Masteries: ";
+        // availableMasteries.ForEach(aM => { message += $" {aM.Node.MasteryName}({aM.Level})"; });
+        // Debug.Log(message);
+        //
+        // availableMasteries.ForEach(availableMastery =>
+        // {
+        //     var masteryButtonObject = Instantiate(MasteryButtonPrefab, MasteryLayout);
+        //     var masteryButton = masteryButtonObject.GetComponent<MasteryButton>();
+        //
+        //     masteryButton.BuildMasteryButton(availableMastery, this);
+        //
+        //     if (Character.CurrentMp < availableMastery.Node.MasteryPointCost)
+        //         masteryButton.Button.interactable = false;
+        //
+        //     MasteryButtons.Add(masteryButtonObject);
+        // });
     }
 
     private void Update()

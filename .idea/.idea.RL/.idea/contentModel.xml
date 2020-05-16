@@ -1504,6 +1504,7 @@
               <e p="Mastery.cs" t="Include" />
               <e p="MasteryConnector.cs" t="Include" />
               <e p="MasteryGrid.cs" t="Include" />
+              <e p="MasteryGridMenu.cs" t="Include" />
             </e>
             <e p="MessageBox.cs" t="Include" />
             <e p="Shop" t="Include">

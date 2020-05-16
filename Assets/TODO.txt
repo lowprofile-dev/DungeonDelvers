@@ -1,12 +1,11 @@
+Fazer masteries bases de todos os personagens
 Terminar de fazer os 8 personagens com skills + masteries especificas de cada
 Rebalancear um pouco os stats dos inimigos (Slime, Familiar)
 Fazer mais inimigos simples pra floresta
 Remover CurrentEp e EpGain dos stats. Se for mudar a quantidade de Ep vai ser com passiva no inicio da luta/turno
-Refazer IA com xNode (maybe)
 Fazer boss da floresta com IA especial e DragonBones
 Fazer cidade
 Terminar os mapas da dungeon (4 mapas até o boss, ai acaba o jogo por enquanto)
-Fazer sistema de equipamento com raridade e upgrade
 Rebalancear a primeira dungeon
 Polir o que tem até esse ponto
 Criar uma demo e criar o grupo de teste no discord.

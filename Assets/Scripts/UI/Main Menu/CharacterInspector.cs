@@ -12,6 +12,7 @@ public class CharacterInspector : SerializedMonoBehaviour
     public MainMenu MainMenu;
     public EquipMenu EquipMenu;
     public MasteryMenu MasteryMenu;
+    public MasteryGridMenu MasteryGridMenu;
 
     public Character Character;
     public RectTransform CharacterRectTransform;
@@ -74,10 +75,10 @@ public class CharacterInspector : SerializedMonoBehaviour
             $"Phys. Defense: {bases.PhysDef}<color={color}>{bonuses.PhysDef:+#;-#; ;}</color>\n" +
             $"Mag. Defense: {bases.MagDef}<color={color}>{bonuses.MagDef:+#;-#; ;}</color>\n" +
             $"Speed: {bases.Speed}<color={color}>{bonuses.Speed:+#;-#; ;}</color>\n" +
-            $"Accuracy: {bases.Accuracy:F3}<color={color}>{bonuses.Accuracy:+0.###;-0.###; ;}</color>\n" +
-            $"Evasion: {bases.Evasion:F3}<color={color}>{bonuses.Evasion:+0.###;-0.###; ;}</color>\n" +
-            $"Critical Accuracy: {bases.CritChance:F3}<color={color}>{bonuses.CritChance:+0.###;-0.###; ;}</color>\n" +
-            $"Critical Evasion: {bases.CritAvoid:F3}<color={color}>{bonuses.CritAvoid:+0.###;-0.###; ;}</color>";
+            $"Accuracy: {bases.Accuracy:0.#%}<color={color}>{bonuses.Accuracy:+##.#%;-##.#%; ;}</color>\n" +
+            $"Evasion: {bases.Evasion:0.#%}<color={color}>{bonuses.Evasion:+##.#%;-##.#%; ;}</color>\n" +
+            $"Critical Accuracy: {bases.CritChance:0.#%}<color={color}>{bonuses.CritChance:+##.#%;-##.#%; ;}</color>\n" +
+            $"Critical Evasion: {bases.CritAvoid:0.#%}<color={color}>{bonuses.CritAvoid:+##.#%;-##.#%; ;}</color>";
 
         StatsText.text = newText;
 
@@ -112,7 +113,8 @@ public class CharacterInspector : SerializedMonoBehaviour
     public void OpenMasteryMenu()
     {
         gameObject.SetActive(false);
-        MasteryMenu.BuildMasteries(Character);
+        // MasteryMenu.BuildMasteries(Character);
+        MasteryGridMenu.Open(Character, () => OpenCharacterInspector(Character));
     }
 
     public void OpenPassiveMenu()

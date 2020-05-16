@@ -149,6 +149,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d65bc97af937b354f9b1a610c8b9c556, type: 2}
   - {fileID: 11400000, guid: 6b66a1dc1a848864f8db4385e7c76c6f, type: 2}
   - {fileID: 11400000, guid: 1b856589f543de04ebe0de6a449659c0, type: 2}
+  MasteryGrid: {fileID: 4989603837333470614, guid: 286c2f0077151c74fa86f7192abb43d0,
+    type: 3}
   BaseSkills: []
   BasePassives: []
   DefaultDefendSkill: {fileID: 11400000, guid: 3fda503906d7d314d8cdd9e2b6e3a30d, type: 2}

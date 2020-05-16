@@ -3,6 +3,7 @@ using System.Collections;
 using DG.Tweening;
 using MasteriesV3;
 using Sirenix.OdinInspector;
+using SkredUtils;
 using UnityEngine;
 
 public class MasteryConnector : MonoBehaviour
@@ -10,11 +11,6 @@ public class MasteryConnector : MonoBehaviour
     public Mastery From;
     public Mastery To;
     public Animator Animator;
-
-    private void Awake()
-    {
-        if (Animator == null) Animator = GetComponent<Animator>();
-    }
 
     public void Setup(Mastery from, Mastery to)
     {
@@ -30,12 +26,12 @@ public class MasteryConnector : MonoBehaviour
 
     public void SetUnlocked()
     {
-        Animator.Play("Unlocked");
+        //Animator.Play("Unlocked");
+        Animator.Play("Unlock");
     }
 
-    public IEnumerator Unlock(float speed = 1f)
+    public IEnumerator Unlock()
     {
-        Animator.speed = speed;
         Animator.Play("Unlock");
         yield return new WaitForEndOfFrame();
         yield return new WaitWhile(() => Animator.GetCurrentAnimatorStateInfo(0).IsName("Unlock"));
@@ -55,8 +51,10 @@ public class MasteryConnector : MonoBehaviour
 
         var dirVec = (toPos - fromPos);
         //var dirSign = (toPos.y < fromPos.y) ? -1.0f : 1.0f;
-        var angle = Vector3.Angle(Vector2.up, dirVec) * -1;// * dirSign;
+        var angle = Vector3.SignedAngle(Vector2.up, dirVec, Vector3.zero);// * dirSign;
 
+        if (toPos.x > fromPos.x) angle *= -1;
+        
         var totalLength = dirVec.magnitude;
         var scale = totalLength / 180f;
         rect.localScale = new Vector3(1, scale, 1);
