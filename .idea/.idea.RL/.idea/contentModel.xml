@@ -1129,6 +1129,9 @@
         <e p="JsonDotNet" t="Include">
           <e p="link.xml" t="Include" />
         </e>
+        <e p="Pixel Fonts Megapack" t="Include">
+          <e p="_README.txt" t="Include" />
+        </e>
         <e p="Plugins" t="Include">
           <e p="Sirenix" t="Include">
             <e p="Assemblies" t="Include">
@@ -1224,37 +1227,25 @@
             <e p="CharacterBase.cs" t="Include" />
             <e p="CharacterDatabase.cs" t="Include" />
             <e p="CharacterSave.cs" t="Include" />
-            <e p="Mastery" t="Include">
-              <e p="IMasteryPrerequisite.cs" t="Include" />
-              <e p="MasteryEffect.cs" t="Include" />
+            <e p="Masteries" t="Include">
+              <e p="Mastery.cs" t="Include" />
               <e p="MasteryEffects" t="Include">
-                <e p="BaseStatMasteryEffect.cs" t="Include" />
-                <e p="GetPassiveMasteryEffect.cs" t="Include" />
+                <e p="GainStatsMasteryEffect.cs" t="Include" />
+                <e p="LearnPassiveMasteryEffect.cs" t="Include" />
                 <e p="LearnSkillMasteryEffect.cs" t="Include" />
+                <e p="MasteryEffect.cs" t="Include" />
+                <e p="StatsPerLevelMasteryEffect.cs" t="Include" />
+                <e p="WeaponStatsMasteryEffect.cs" t="Include" />
               </e>
-              <e p="MasteryGraph.cs" t="Include" />
+              <e p="MasteryGrid.cs" t="Include" />
+              <e p="MasteryGridPage.cs" t="Include" />
               <e p="MasteryInstance.cs" t="Include" />
-              <e p="MasteryNode.cs" t="Include" />
-              <e p="MasteryPrerequisites" t="Include">
-                <e p="PartialLevelPrerequisite.cs" t="Include" />
-                <e p="PartyLevelPrerequisite.cs" t="Include" />
-              </e>
-              <e p="Old" t="Include">
-                <e p="_Mastery.cs" t="Include" />
-                <e p="_MasteryInstance.cs" t="Include" />
-                <e p="MasteryCondition" t="Include">
-                  <e p="HasMasteryMasteryCondition.cs" t="Include" />
-                  <e p="MasteryCondition.cs" t="Include" />
-                </e>
-                <e p="MasteryEffect" t="Include">
-                  <e p="_BaseStatMasteryEffect.cs" t="Include" />
-                  <e p="_LearnSkillMasteryEffect.cs" t="Include" />
-                  <e p="_MasteryEffect.cs" t="Include" />
-                </e>
-                <e p="MasteryGroup.cs" t="Include" />
-              </e>
             </e>
             <e p="Stats.cs" t="Include" />
+            <e p="Tech" t="Include">
+              <e p="Tech.cs" t="Include" />
+              <e p="TechGroup.cs" t="Include" />
+            </e>
           </e>
           <e p="Combat" t="Include">
             <e p="ActionInfo.cs" t="Include" />
@@ -1310,7 +1301,6 @@
           <e p="Editor" t="Include">
             <e p="GameSettingsEditorWindow.cs" t="Include" />
             <e p="InteractionGraphEditor.cs" t="Include" />
-            <e p="MasteryGraphEditor.cs" t="Include" />
           </e>
           <e p="Extensions" t="Include">
             <e p="DDExtensions.cs" t="Include" />
@@ -1484,6 +1474,9 @@
               <e p="SkillInfoPanel.cs" t="Include" />
               <e p="SkillTargeter.cs" t="Include" />
             </e>
+            <e p="DoozyMenus" t="Include">
+              <e p="CharacterMenu.cs" t="Include" />
+            </e>
             <e p="ForgeMenu.cs" t="Include" />
             <e p="InnMenu.cs" t="Include" />
             <e p="Main Menu" t="Include">
@@ -1496,14 +1489,10 @@
               <e p="InventoryItemInspector.cs" t="Include" />
               <e p="InventoryMenu.cs" t="Include" />
               <e p="MainMenu.cs" t="Include" />
-              <e p="MasteryButton.cs" t="Include" />
-              <e p="MasteryMenu.cs" t="Include" />
             </e>
             <e p="MainCanvas.cs" t="Include" />
             <e p="Masteries" t="Include">
-              <e p="Mastery.cs" t="Include" />
               <e p="MasteryConnector.cs" t="Include" />
-              <e p="MasteryGrid.cs" t="Include" />
               <e p="MasteryGridMenu.cs" t="Include" />
             </e>
             <e p="MessageBox.cs" t="Include" />
@@ -1616,6 +1605,7 @@
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
           </e>
+          <e p="Glyph Report.txt" t="Include" />
           <e p="Resources" t="Include">
             <e p="LineBreaking Following Characters.txt" t="Include" />
             <e p="LineBreaking Leading Characters.txt" t="Include" />

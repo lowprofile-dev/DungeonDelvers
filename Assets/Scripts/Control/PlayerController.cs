@@ -307,9 +307,11 @@ public class PlayerController : AsyncMonoBehaviour
 
     #region InventoryFunctions
 
+    public int InventoryMaxSlots = 24;
+    
     public void ValidateInventory()
     {
-        var invalidStackables = Inventory.Where(item =>
+        var emptyStackables = Inventory.Where(item =>
         {
             if (item is IStackable stackable)
             {
@@ -319,10 +321,13 @@ public class PlayerController : AsyncMonoBehaviour
             return false;
         });
 
-        foreach (var invalidStackable in invalidStackables)
+        foreach (var invalidStackable in emptyStackables)
         {
             Inventory.Remove(invalidStackable);
         }
+
+        // if (Inventory.Count > InventoryMaxSlots)
+        //     Inventory = Inventory.GetRange(0, InventoryMaxSlots);
     }
     
     public void AddItemToInventory(Item item)
@@ -582,3 +587,9 @@ public class PlayerController : AsyncMonoBehaviour
     }
     #endif
 }
+
+// public abstract class GameEffect
+// {
+//     public abstract void Apply();
+//     public abstract void Unapply();
+// }

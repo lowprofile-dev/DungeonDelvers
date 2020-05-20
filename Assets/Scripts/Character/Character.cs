@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using MasteriesV3;
 using Sirenix.OdinInspector;
 using Sirenix.Utilities;
+using SkredUtils;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -24,10 +24,9 @@ public class Character
         {
             baseUid = GameSettings.Instance.CharacterDatabase.GetId(Base).Value,
             currentHp = currentHp,
-            //serializedMasteryInstances = MasteryInstances.Select(mI => mI.Serialize()).ToArray(),
-            MasteryInstances = MasteryInstances.ToArray(),
+            serializedTechInstances = Base.TechGroup.Serialize(TechInstances),
             Equipment = EquippableSaves(),
-            masteryPoints = CurrentMp,
+            masteryPoints = MasteryPoints,
         };
 
         return save;
@@ -43,20 +42,7 @@ public class Character
         Feet = ItemInstanceBuilder.BuildInstance(Base.Feet, true) as Equippable;
         Accessory = ItemInstanceBuilder.BuildInstance(Base.Accessory, true) as Equippable;
 
-        // MasteryInstances = new List<MasteryInstance>();
-        //
-        // for (int i = 0; i < Base.Masteries.Count; i++)
-        // {
-        //     MasteryInstances.AddRange(Base.Masteries[i].Initialize(this, i));
-        // }
-        //
-        // _instanceIndex = new Dictionary<MasteryNode, MasteryInstance>();
-        // foreach (var masteryInstance in MasteryInstances)
-        // {
-        //     _instanceIndex[masteryInstance.Node] = masteryInstance;
-        // }
-        
-        InitializeMasteries();
+        TechInstances = Base.TechGroup.Initialize();
         
         Regenerate();
 
@@ -67,7 +53,6 @@ public class Character
     {
         try
         {
-            //Base = GameDatabase.Database.CharacterBases.Find(x => x.uniqueIdentifier == save.baseUid);
             var baseExists = GameSettings.Instance.CharacterDatabase.Content.TryGetValue(save.baseUid, out var characterBase);
             if (!baseExists)
             {
@@ -76,19 +61,8 @@ public class Character
             }
 
             Base = characterBase;
-            // MasteryInstances = Base.Masteries
-            //     .SelectMany(mG => mG.Initialize(this, save.serializedMasteryInstances)).ToList();
+            TechInstances = Base.TechGroup.Deserialize(save.serializedTechInstances);
 
-            //MasteryInstances = MasteryGraph.Initialize(this, save.serializedMasteryInstances);
-            InitializeMasteries();
-            MasteryInstances = save.MasteryInstances.ToList();
-
-            // _instanceIndex = new Dictionary<MasteryNode, MasteryInstance>();
-            // foreach (var masteryInstance in MasteryInstances)
-            // {
-            //     _instanceIndex[masteryInstance.Node] = masteryInstance;
-            // }
-            
             Weapon = ItemInstanceBuilder.BuildInstance(save.Equipment[0]) as Equippable;
             Head = ItemInstanceBuilder.BuildInstance(save.Equipment[1]) as Equippable;
             Body = ItemInstanceBuilder.BuildInstance(save.Equipment[2]) as Equippable;
@@ -99,7 +73,7 @@ public class Character
             Regenerate();
 
             currentHp = save.currentHp;
-            CurrentMp = save.masteryPoints;
+            MasteryPoints = save.masteryPoints;
         }
         catch (Exception e)
         {
@@ -107,22 +81,12 @@ public class Character
         }
     }
 
-    private void InitializeMasteries()
-    {
-        var instantiatedGrid = Object.Instantiate(Base.MasteryGrid);
-        var grid = instantiatedGrid.GetComponent<MasteryGrid>();
-        MasteryInstances = grid.Initialize();
-        MasteryEffects = grid.Masteries.Select(m => m.MasteryEffects).ToList();
-        Object.DestroyImmediate(instantiatedGrid);
-    }
-
     #endregion
 
     #region Stats
 
-    private int CurrentLevel => PlayerController.Instance.PartyLevel;
-
-    public int CurrentMp;
+    public int CurrentLevel => PlayerController.Instance.PartyLevel;
+    public int MasteryPoints;
 
     [FoldoutGroup("Stats"), ShowInInspector, Sirenix.OdinInspector.ReadOnly]
     private int currentHp;
@@ -156,17 +120,30 @@ public class Character
     [FoldoutGroup("Equips")] public Equippable Accessory;
 
     [ShowInInspector] public List<PlayerSkill> Skills { get; private set; }
+    [ShowInInspector] public List<PlayerSkill> EquippedSkills { get; private set; }
 
     [ShowInInspector] public List<Passive> Passives { get; private set; }
-    
-    public List<MasteriesV3.MasteryInstance> MasteryInstances = new List<MasteriesV3.MasteryInstance>();
-    public List<List<MasteriesV3.MasteryEffect>> MasteryEffects = new List<List<MasteriesV3.MasteryEffect>>();
+    [ShowInInspector] public List<Passive> EquippedPassives { get; set; }
 
-    // public MasteryInstance GetMasteryInstance(MasteryNode masteryNode)
-    // {
-    //     if (_instanceIndex.TryGetValue(masteryNode, out var instance)) return instance;
-    //     return null;
-    // }
+    public void ValidateEquippedSkillsAndPassives()
+    {
+        var invalidSkills = EquippedSkills.Except(Skills);
+        var invalidPassives = EquippedPassives.Except(Passives);
+        invalidSkills.EachDo(EquippedSkills.Remove);
+        invalidPassives.EachDo(EquippedPassives.Remove);
+
+        if (EquippedSkills.Count > 5)
+            EquippedSkills = EquippedSkills.GetRange(0, 5);
+        if (EquippedPassives.Count > 5)
+            EquippedPassives = EquippedPassives.GetRange(0, 5);
+    }
+    
+    public TechInstance[] TechInstances;
+    
+    [ShowInInspector] public Tech[] LearnedTechs => TechInstances
+        .Where(tI => tI.Acquired)
+        .Select(tI => tI.Tech)
+        .ToArray();
     
     public IEnumerable<Equippable> Equipment
     {
@@ -197,7 +174,7 @@ public class Character
 
     public void LevelUp()
     {
-        CurrentMp += (CurrentLevel / 5) + 1;
+        MasteryPoints += (CurrentLevel / 5) + 1;
         Regenerate();
     }
 
@@ -209,7 +186,7 @@ public class Character
         LoadSkills();
         LoadPassives();
         InitializeBases();
-        ApplyMasteries();
+        ApplyTechs();
         InitializeBonus();
 
         Stats = BaseStats + BonusStats;
@@ -265,22 +242,11 @@ public class Character
         }
     }
 
-    private void ApplyMasteries()
+    private void ApplyTechs()
     {
-        // foreach (var masteryInstance in MasteryInstances)
-        // {
-        //     masteryInstance.ApplyEffects();
-        // }
-        foreach (var masteryInstance in MasteryInstances)
+        foreach (var tech in LearnedTechs)
         {
-            if (masteryInstance.Status == Mastery.MasteryStatus.Learned)
-            {
-                var effects = MasteryEffects[masteryInstance.Id];
-                foreach (var effect in effects)
-                {
-                    effect.ApplyEffect(this);
-                }
-            }
+            tech.Apply(this);
         }
     }
 

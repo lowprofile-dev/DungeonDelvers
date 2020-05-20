@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using DG.Tweening;
-using MasteriesV3;
+﻿using System.Collections;
 using Sirenix.OdinInspector;
-using SkredUtils;
 using UnityEngine;
 
 public class MasteryConnector : MonoBehaviour

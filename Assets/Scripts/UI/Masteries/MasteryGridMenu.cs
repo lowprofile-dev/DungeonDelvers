@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using MasteriesV3;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
@@ -36,23 +35,24 @@ public class MasteryGridMenu : MonoBehaviour, IMasteryGridSubscriber
     }
     public Character Character;
     private Mastery inspectedMastery;
-    [ShowInInspector] private List<MasteriesV3.MasteryInstance> initialState;
+    [ShowInInspector] private List<MasteryInstance> initialState;
 
     public void Open(Character character, Action OpenPrevious = null)
     {
-        gameObject.SetActive(true);
-        Character = character;
-        initialState = character.MasteryInstances;
-        openPrevious = OpenPrevious;
-        var characterGrid = character.Base.MasteryGrid;
-        var gridObject = Instantiate(characterGrid, GridRect);
-        ScrollRect.content = gridObject.transform as RectTransform;
-        grid = gridObject.GetComponent<MasteryGrid>();
-        grid.Subscribe(this);
-        grid.Load(initialState);
-        CurrentMasteryPoints = character.CurrentMp;
-        SetDirty(false);
-        CloseMasteryInspector();
+        throw new NotImplementedException();
+        // gameObject.SetActive(true);
+        // Character = character;
+        // initialState = character.MasteryInstances;
+        // openPrevious = OpenPrevious;
+        // var characterGrid = character.Base.MasteryGrid;
+        // var gridObject = Instantiate(characterGrid, GridRect);
+        // ScrollRect.content = gridObject.transform as RectTransform;
+        // grid = gridObject.GetComponent<MasteryGrid>();
+        // grid.Subscribe(this);
+        // grid.Load(initialState);
+        // CurrentMasteryPoints = character.MasteryPoints;
+        // SetDirty(false);
+        // CloseMasteryInspector();
     }
 
     private void Update()
@@ -69,10 +69,10 @@ public class MasteryGridMenu : MonoBehaviour, IMasteryGridSubscriber
 
     public void Revert()
     {
-        CurrentMasteryPoints = Character.CurrentMp;
+        CurrentMasteryPoints = Character.MasteryPoints;
         grid.Load(initialState);
         SetDirty(false);
-        CurrentMasteryPoints = Character.CurrentMp;
+        CurrentMasteryPoints = Character.MasteryPoints;
         OpenMasteryInspector(inspectedMastery);
     }
 
@@ -84,11 +84,12 @@ public class MasteryGridMenu : MonoBehaviour, IMasteryGridSubscriber
     
     public void Save()
     {
-        var state = grid.Save();
-        Character.MasteryInstances = state;
-        initialState = state;
-        SetDirty(false);
-        Character.Regenerate();
+        throw new NotImplementedException();
+        // var state = grid.Save();
+        // Character.MasteryInstances = state;
+        // initialState = state;
+        // SetDirty(false);
+        // Character.Regenerate();
     }
 
     public void OnClick(Mastery mastery) => OpenMasteryInspector(mastery);

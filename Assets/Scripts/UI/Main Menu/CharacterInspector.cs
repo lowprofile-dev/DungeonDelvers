@@ -11,7 +11,6 @@ public class CharacterInspector : SerializedMonoBehaviour
 {
     public MainMenu MainMenu;
     public EquipMenu EquipMenu;
-    public MasteryMenu MasteryMenu;
     public MasteryGridMenu MasteryGridMenu;
 
     public Character Character;
@@ -82,7 +81,7 @@ public class CharacterInspector : SerializedMonoBehaviour
 
         StatsText.text = newText;
 
-        MpText.text = $"Mastery Points: {character.CurrentMp} unspent";
+        MpText.text = $"Mastery Points: {character.MasteryPoints} unspent";
         //MpText.text = MpText.text.Replace("%mp%", character.CurrentMp.ToString());
     }
 

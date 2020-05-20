@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 9100000, guid: 8dfa9a502eaf0604bbc68747f937bea6, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -27,7 +28,61 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
+    - Name: WeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 3
+      Data: 6
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimatorController
+      Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
+    - Name: WeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimatorController
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: CharacterBase+BattlerAnimationController, Assembly-CSharp
+    - Name: WeaponType
+      Entry: 7
+      Data: System.Nullable`1[[WeaponBase+WeaponType, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: AnimatorController
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -88,8 +143,7 @@ MonoBehaviour:
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}
-  MasteryGrid: {fileID: 4989603837333470614, guid: 286c2f0077151c74fa86f7192abb43d0,
-    type: 3}
+  TechGroup: {fileID: 0}
   BaseSkills: []
   BasePassives: []
   DefaultDefendSkill: {fileID: 11400000, guid: 3fda503906d7d314d8cdd9e2b6e3a30d, type: 2}

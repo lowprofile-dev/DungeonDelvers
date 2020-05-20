@@ -142,8 +142,7 @@ MonoBehaviour:
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}
-  MasteryGrid: {fileID: 4989603837333470614, guid: 286c2f0077151c74fa86f7192abb43d0,
-    type: 3}
+  TechGroup: {fileID: 11400000, guid: c9f2a7323d0613946a0ee8b06a82e3f9, type: 2}
   BaseSkills: []
   BasePassives: []
   DefaultDefendSkill: {fileID: 11400000, guid: 3fda503906d7d314d8cdd9e2b6e3a30d, type: 2}

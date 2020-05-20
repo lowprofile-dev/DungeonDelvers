@@ -17,8 +17,12 @@ MonoBehaviour:
   - Custom
   - Example
   - General
+  - Main Menu
+  - Tech Menu
   - test
   Categories:
   - {fileID: 11400000, guid: b01e98f4801f7124ba39e1dac4debf90, type: 2}
   - {fileID: 11400000, guid: 8c86753f6ee9e0b4eabfe6d02b418976, type: 2}
+  - {fileID: 11400000, guid: 7dd681e4023919e41a7abe35796cdb64, type: 2}
+  - {fileID: 11400000, guid: c3796cee3e6c7594c94a20e3caa5442c, type: 2}
   - {fileID: 11400000, guid: 42ab9757b491f0a42a45058ea00d3f1e, type: 2}
