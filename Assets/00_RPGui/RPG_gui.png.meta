@@ -1151,8 +1151,17 @@ TextureImporter:
   - first:
       213: -7315326285221151656
     second: RPG_gui_29
+  - first:
+      213: 5954527104925777989
+    second: RPG_gui_30
+  - first:
+      213: 1610053989338409510
+    second: RPG_gui_31
+  - first:
+      213: -5837813981031198462
+    second: RPG_gui_32
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -1206,6 +1215,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1517,7 +1527,7 @@ TextureImporter:
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 16, y: 16, z: 16, w: 16}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1685,7 +1695,7 @@ TextureImporter:
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 16, y: 16, z: 16, w: 16}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1860,6 +1870,69 @@ TextureImporter:
       bones: []
       spriteID: d7f12283d0338a448822c5d991db57aa
       internalID: 2247199748495209589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG_gui_30
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 9
+        width: 80
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 16, y: 23, z: 16, w: 16}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540498e7adab2a250800000000000000
+      internalID: 5954527104925777989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG_gui_31
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 10
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 16, y: 23, z: 16, w: 16}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a67b7a29f085610800000000000000
+      internalID: 1610053989338409510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RPG_gui_32
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 10
+        width: 80
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 16, y: 23, z: 16, w: 16}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20193d34d1bebfea0800000000000000
+      internalID: -5837813981031198462
       vertices: []
       indices: 
       edges: []

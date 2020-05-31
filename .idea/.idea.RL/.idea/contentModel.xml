@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Unity\Projects\RL" t="IncludeRecursive">
+    <e p="C:\Users\samue\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\samue\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_RL.-518769436.00" t="ExcludeRecursive" />
+    <e p="F:\UnityProj\RL" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -1108,6 +1110,9 @@
           <e p="Dungeons.txt" t="Include" />
         </e>
         <e p="FBBCommission.txt" t="Include" />
+        <e p="Fonts" t="Include">
+          <e p="TMPText_Pixel_Outlined.shader" t="Include" />
+        </e>
         <e p="Introloop" t="Include">
           <e p="Editor" t="Include">
             <e p="IntroloopAudioEditor.cs" t="Include" />
@@ -1605,7 +1610,6 @@
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
           </e>
-          <e p="Glyph Report.txt" t="Include" />
           <e p="Resources" t="Include">
             <e p="LineBreaking Following Characters.txt" t="Include" />
             <e p="LineBreaking Leading Characters.txt" t="Include" />
@@ -1641,7 +1645,5 @@
       <e p="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" t="IncludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\samue\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\samue\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_RL.1635879514.00" t="ExcludeRecursive" />
   </component>
 </project>

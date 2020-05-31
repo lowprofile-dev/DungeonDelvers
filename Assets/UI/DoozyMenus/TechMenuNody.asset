@@ -229,8 +229,8 @@ MonoBehaviour:
   m_useUpdate: 0
   m_height: 80
   m_width: 120
-  m_x: -60
-  m_y: -16
+  m_x: -156
+  m_y: -24
   m_minimumInputSocketsCount: 1
   m_minimumOutputSocketsCount: 1
   m_graphId: d7edb30e-de1b-4f2d-a2a4-8bb5f0e5363c
