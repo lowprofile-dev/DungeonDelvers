@@ -13,29 +13,19 @@ public class DamageEffect : Effect
 
     public override EffectResult ExecuteEffect(SkillInfo skillInfo)
     {
-        var damageCalculationInfo = new DamageCalculationInfo
-        {
-            DamageElement = skillInfo.Skill != null? skillInfo.Skill.Element : Element.None,
-            DamageType = DamageType,
-            Source = skillInfo.Source,
-            Target = skillInfo.Target
-        };
+        var damageCalculationInfo = BuildDamageCalculationInfo(skillInfo);
 
-        if (ElementOverride.HasValue)
-            damageCalculationInfo.DamageElement = ElementOverride.Value;
-
-        
-        //Refazer depois pra pegar em duas listas diferentes as da source e as do target.
+        var overrideEffects = new List<PassiveEffect>();
         var passiveEffects = skillInfo.Target.PassiveEffects.ToArray();
 
         var overrideDamageEffects = passiveEffects
-            .Where(pE => pE is IOverrideDamagePassiveEffect)
-            .Cast<IOverrideDamagePassiveEffect>()
+            .Where(pE => pE is IReceiveDamageOverride)
+            .Cast<IReceiveDamageOverride>()
             .ToArray();
 
         foreach (var overrideDamageEffect in overrideDamageEffects)
         {
-            var overrideResult = overrideDamageEffect.Override(skillInfo, this);
+            var overrideResult = overrideDamageEffect.OverrideReceiveDamage(skillInfo, this);
             if (overrideResult != null)
                 return overrideResult;
         }
@@ -70,14 +60,25 @@ public class DamageEffect : Effect
         };
     }
 
-    public override object Clone()
+    public DamageCalculationInfo BuildDamageCalculationInfo(SkillInfo skillInfo)
     {
-        return new DamageEffect
+        return  new DamageCalculationInfo
         {
-            ElementOverride = ElementOverride,
+            DamageElement = ElementOverride ?? 
+                            (skillInfo.Skill != null? skillInfo.Skill.Element : Element.None),
             DamageType = DamageType,
-            DamageFactor = DamageFactor
+            Source = skillInfo.Source,
+            Target = skillInfo.Target
         };
+    }
+
+    public List<Func<EffectResult>> BuildOverrides(Battler source, Battler target)
+    {
+        var list = new List<Func<EffectResult>>();
+        var sourcePassiveEffects = source.PassiveEffects.Where(pe => pe is IDealDamageOverride);
+        var targetPassiveEffects = target.PassiveEffects.Where(pe => pe is IReceiveDamageOverride);
+        
+        
     }
 
     public class DamageEffectResult : EffectResult
@@ -95,14 +96,30 @@ public class DamageEffect : Effect
         //mais info que tiver;
     }
     
+    public override object Clone()
+    {
+        return new DamageEffect
+        {
+            ElementOverride = ElementOverride,
+            DamageType = DamageType,
+            DamageFactor = DamageFactor
+        };
+    }
+    
+    #region Interfaces
     public interface IDealDamagePassiveEffect
     {
         void BeforeDeal(SkillInfo skillInfo, ref int finalDamage);
     }
     
-    public interface IOverrideDamagePassiveEffect
+    public interface IDealDamageOverride
     {
-        [CanBeNull] EffectResult Override(SkillInfo skillInfo, DamageEffect damageEffect);
+        [CanBeNull] EffectResult OverrideDealDamage(SkillInfo skillInfo, DamageEffect damageEffect);
+    }
+    
+    public interface IReceiveDamageOverride
+    {
+        [CanBeNull] EffectResult OverrideReceiveDamage(SkillInfo skillInfo, DamageEffect damageEffect);
     }
 
     public interface IDamageCalculationInfoOverride
@@ -114,6 +131,8 @@ public class DamageEffect : Effect
     {
         void BeforeReceive(SkillInfo skillInfo, ref int finalDamage);
     }
+    #endregion
+    
 }
 
 

@@ -104,8 +104,8 @@ MonoBehaviour:
     MagDef: 29
     Speed: 31
     Accuracy: 0.9
-    Evasion: 0.05000000074505806
-    CritChance: 0.05000000074505806
+    Evasion: 0.05
+    CritChance: 0.05
     CritAvoid: 0
     ElementalResistance:
       EarthResistance: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   Hand: {fileID: 0}
   Feet: {fileID: 0}
   Accessory: {fileID: 0}
-  TechGroup: {fileID: 11400000, guid: c76ef9cac6e1ca94582e93c644aaa3ce, type: 2}
+  masteryGroup: {fileID: 0}
   BaseSkills:
   - {fileID: 11400000, guid: 4085b5e8fb3c2a442b2824ffa4399c07, type: 2}
   BasePassives: []

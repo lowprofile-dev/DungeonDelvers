@@ -2,15 +2,15 @@
 using SkredUtils;
 
 [System.Serializable]
-public abstract class Tech
+public abstract class Mastery
 {
-    [ShowInInspector] public virtual string TechName { get; set; }
+    [ShowInInspector] public virtual string MasteryName { get; set; }
     [ShowInInspector] public virtual int RequiredLevel { get; set; }
     [ShowInInspector] public virtual int TechCost { get; set; }
     public abstract void Apply(Character context);
 }
 
-public class SkillTech : Tech
+public class SkillMastery : Mastery
 {
     public PlayerSkill Skill;
 
@@ -20,7 +20,7 @@ public class SkillTech : Tech
     }
 }
 
-public class PassiveTech : Tech
+public class PassiveMastery : Mastery
 {
     public Passive Passive;
 

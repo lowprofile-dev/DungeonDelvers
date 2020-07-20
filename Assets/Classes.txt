@@ -36,4 +36,15 @@ Knife:
     DoT, Multiple Hits, Custo baixo de AP nas skills
 Bow:
     Menos hits com mais dano, maior DPS, menos utilidade
+    
+---
+Design
 
+Knight:
+Fighter:
+Rogue:
+Assassin:
+Priest:
+Magician: ---
+Paladin:
+Hunter:

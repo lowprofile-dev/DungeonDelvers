@@ -112,8 +112,9 @@ public class CharacterInspector : SerializedMonoBehaviour
     public void OpenMasteryMenu()
     {
         gameObject.SetActive(false);
+        throw new NotImplementedException();
         // MasteryMenu.BuildMasteries(Character);
-        MasteryGridMenu.Open(Character, () => OpenCharacterInspector(Character));
+        //MasteryGridMenu.Open(Character, () => OpenCharacterInspector(Character));
     }
 
     public void OpenPassiveMenu()

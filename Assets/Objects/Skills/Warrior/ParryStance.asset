@@ -26,7 +26,28 @@ MonoBehaviour:
       Data: 0|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|ApplyStatusEffectEffect, Assembly-CSharp
+    - Name: ElementOverride
+      Entry: 7
+      Data: System.Nullable`1[[Element, Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: StatusEffect
+      Entry: 6
+      Data: 
+    - Name: turnDuration
+      Entry: 3
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 13
       Data: 
@@ -35,7 +56,7 @@ MonoBehaviour:
       Data: 
     - Name: CriticalEffects
       Entry: 7
-      Data: 1|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
+      Data: 2|System.Collections.Generic.List`1[[Effect, Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -50,7 +71,7 @@ MonoBehaviour:
       Data: 
     - Name: Animations
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
+      Data: 3|System.Collections.Generic.List`1[[DD.Skill.Animation.IPlayerSkillAnimation,
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
@@ -76,7 +97,7 @@ MonoBehaviour:
   ApCost: 0
   Element: 0
   SkillDescription: 
-  Target: 0
+  Target: 6
   TrueHit: 0
   CanBeSilenced: 0
   CanCritical: 0

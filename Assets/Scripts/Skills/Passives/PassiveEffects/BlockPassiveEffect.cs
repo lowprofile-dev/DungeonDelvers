@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
-public class BlockPassiveEffect : PassiveEffect, DamageEffect.IOverrideDamagePassiveEffect
+public class BlockPassiveEffect : PassiveEffect, DamageEffect.IReceiveDamageOverride
 {
     public DamageType? OverrideType;
     [Range(0f,1f)] public float OverrideChance;
     
-    public EffectResult Override(SkillInfo skillInfo, DamageEffect damageEffect)
+    public EffectResult OverrideReceiveDamage(SkillInfo skillInfo, DamageEffect damageEffect)
     {
         if (OverrideType.HasValue && OverrideType.Value != damageEffect.DamageType)
             return null;

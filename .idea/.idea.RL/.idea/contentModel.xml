@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\samue\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\samue\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_RL.-518769436.00" t="ExcludeRecursive" />
-    <e p="F:\UnityProj\RL" t="IncludeRecursive">
+    <e p="C:\Users\samue\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\samue\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_RL.-737624154.00" t="ExcludeRecursive" />
+    <e p="D:\UnityProj\RL" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -1232,24 +1232,12 @@
             <e p="CharacterBase.cs" t="Include" />
             <e p="CharacterDatabase.cs" t="Include" />
             <e p="CharacterSave.cs" t="Include" />
-            <e p="Masteries" t="Include">
-              <e p="Mastery.cs" t="Include" />
-              <e p="MasteryEffects" t="Include">
-                <e p="GainStatsMasteryEffect.cs" t="Include" />
-                <e p="LearnPassiveMasteryEffect.cs" t="Include" />
-                <e p="LearnSkillMasteryEffect.cs" t="Include" />
-                <e p="MasteryEffect.cs" t="Include" />
-                <e p="StatsPerLevelMasteryEffect.cs" t="Include" />
-                <e p="WeaponStatsMasteryEffect.cs" t="Include" />
-              </e>
-              <e p="MasteryGrid.cs" t="Include" />
-              <e p="MasteryGridPage.cs" t="Include" />
-              <e p="MasteryInstance.cs" t="Include" />
-            </e>
             <e p="Stats.cs" t="Include" />
             <e p="Tech" t="Include">
-              <e p="Tech.cs" t="Include" />
-              <e p="TechGroup.cs" t="Include" />
+              <e p="Mastery.cs" t="Include" />
+              <e p="MasteryGroup.cs" t="Include" />
+              <e p="MasteryInstance.cs" t="Include" />
+              <e p="SerializedMasteryInstance.cs" t="Include" />
             </e>
           </e>
           <e p="Combat" t="Include">
@@ -1329,6 +1317,7 @@
             <e p="InteractionEntryPoint.cs" t="Include" />
             <e p="InteractionGraph.cs" t="Include" />
             <e p="Interactions" t="Include">
+              <e p="AbilityShopInteraction.cs" t="Include" />
               <e p="AddItemInteraction.cs" t="Include" />
               <e p="AddStackableInteraction.cs" t="Include" />
               <e p="BranchInteraction.cs" t="Include" />
@@ -1467,6 +1456,7 @@
             </e>
           </e>
           <e p="UI" t="Include">
+            <e p="AbilityShopMenu.cs" t="Include" />
             <e p="Battle" t="Include">
               <e p="BattleCanvas.cs" t="Include" />
               <e p="BattleInfoPanel.cs" t="Include" />
@@ -1507,6 +1497,7 @@
               <e p="ShopMenu.cs" t="Include" />
             </e>
             <e p="StartMenu.cs" t="Include" />
+            <e p="UIPanel.cs" t="Include" />
           </e>
         </e>
         <e p="seeds.txt" t="Include" />

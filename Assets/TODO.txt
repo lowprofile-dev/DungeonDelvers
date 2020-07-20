@@ -1,7 +1,6 @@
->>Mudar nome do projeto de RL pra DungeonDelvers
->>Rework no sistema de combate pra ficar mais intuitivo, botar logo basicamente todas as interfaces que precisam
->>Fazer os PassiveEffects terem um InsertionSort (via SortedSet<T>?)
-
+Limpar o comportamento dos efeitos e pipeline de funcionamento dos battlers
+Dar uma olhada nas techs, ver como fazer e quão pratico é fazer upgrade de skill, mover as TechInstances do Character pro TechGroup(?)
+Anotar como vai ficar cada equipamento em teoria (o que prioriza em stats e tal) pra ficar mais facil mudar depois
 Fazer masteries bases de todos os personagens
 Terminar de fazer os 8 personagens com skills + masteries especificas de cada
 Rebalancear um pouco os stats dos inimigos (Slime, Familiar)

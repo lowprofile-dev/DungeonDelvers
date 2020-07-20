@@ -402,6 +402,7 @@ MonoBehaviour:
     type: 3}
   DefaultInnMenu: {fileID: 7640681385663065397, guid: 3565f94cfbfb4c14fa92023dced271b3,
     type: 3}
+  DefaultAbilityShopMenu: {fileID: 0}
   GoldTextColor: {r: 1, g: 1, b: 0, a: 1}
   DefaultItemTextColor: {r: 1, g: 1, b: 1, a: 1}
   ItemDatabase: {fileID: 11400000, guid: f7ef9f9a82d541c498a2544685fd9cdc, type: 2}

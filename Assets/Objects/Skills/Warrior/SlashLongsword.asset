@@ -149,7 +149,7 @@ MonoBehaviour:
   ApCost: 20
   Element: 0
   SkillDescription: 
-  Target: 0
+  Target: 1
   TrueHit: 0
   CanBeSilenced: 0
   CanCritical: 1

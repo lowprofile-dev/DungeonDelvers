@@ -34,8 +34,7 @@ public class CharacterBase : SerializableAsset
     // [ListDrawerSettings(ListElementLabelName = "_masteryElementName")]
     // public List<_Mastery> Masteries = new List<_Mastery>();
     
-    //public GameObject MasteryGrid;
-    public TechGroup TechGroup;
+    public MasteryGroup masteryGroup;
 
     public List<PlayerSkill> BaseSkills = new List<PlayerSkill>();
     public List<Passive> BasePassives = new List<Passive>();
