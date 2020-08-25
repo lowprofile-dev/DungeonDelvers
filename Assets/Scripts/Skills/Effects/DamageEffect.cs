@@ -14,31 +14,10 @@ public class DamageEffect : Effect
     public override EffectResult ExecuteEffect(SkillInfo skillInfo)
     {
         var damageCalculationInfo = BuildDamageCalculationInfo(skillInfo);
-
-        var overrideEffects = new List<PassiveEffect>();
-        var passiveEffects = skillInfo.Target.PassiveEffects.ToArray();
-
-        var overrideDamageEffects = passiveEffects
-            .Where(pE => pE is IReceiveDamageOverride)
-            .Cast<IReceiveDamageOverride>()
-            .ToArray();
-
-        foreach (var overrideDamageEffect in overrideDamageEffects)
-        {
-            var overrideResult = overrideDamageEffect.OverrideReceiveDamage(skillInfo, this);
-            if (overrideResult != null)
-                return overrideResult;
-        }
-
-        var damageCalculationPassives = passiveEffects
-            .Where(passiveEffect => passiveEffect is IDamageCalculationInfoOverride)
-            .Cast<IDamageCalculationInfoOverride>()
-            .ToArray();
-
-        damageCalculationPassives
-            .ForEach(damageCalculationPassive =>
-                damageCalculationPassive.OverrideDamageCalculationInfo(ref damageCalculationInfo));
         
+        var overrideEffect = OverrideResult(skillInfo);
+        if (overrideEffect != null) return overrideEffect;
+
         var damage = (int)(Mathf.Max(0,BattleController.Instance.DamageCalculation(damageCalculationInfo)) * DamageFactor);
 
         var targetPassives = skillInfo.Target.PassiveEffects
@@ -72,13 +51,30 @@ public class DamageEffect : Effect
         };
     }
 
-    public List<Func<EffectResult>> BuildOverrides(Battler source, Battler target)
+    public EffectResult OverrideResult(SkillInfo skillInfo)
     {
-        var list = new List<Func<EffectResult>>();
-        var sourcePassiveEffects = source.PassiveEffects.Where(pe => pe is IDealDamageOverride);
-        var targetPassiveEffects = target.PassiveEffects.Where(pe => pe is IReceiveDamageOverride);
+        var sourceOverrides = skillInfo.Source.OrderedPassiveEffects
+            .Where(pe => pe is IDealDamageOverride)
+            .Select<PassiveEffect,(int, Func<EffectResult>)>(pe => 
+                (pe.Priority, () => (pe as IDealDamageOverride)?.OverrideDealDamage(skillInfo,this)));
         
-        
+        var targetOverrides = skillInfo.Target.OrderedPassiveEffects
+            .Where(pe => pe is IDealDamageOverride)
+            .Select<PassiveEffect,(int, Func<EffectResult>)>(pe => 
+                (pe.Priority, () => (pe as IDealDamageOverride)?.OverrideDealDamage(skillInfo,this)));
+
+        var overrides = new List<(int priority, Func<EffectResult> overrideFunction)>(sourceOverrides);
+        overrides.AddRange(targetOverrides);
+        overrides.Sort((ov1,ov2) => ov2.priority-ov1.priority);
+
+        foreach (var @override in overrides)
+        {
+            var overrideEffect = @override.overrideFunction();
+            if (overrideEffect != null)
+                return overrideEffect;
+        }
+
+        return null;
     }
 
     public class DamageEffectResult : EffectResult

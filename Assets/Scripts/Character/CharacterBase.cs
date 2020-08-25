@@ -31,9 +31,6 @@ public class CharacterBase : SerializableAsset
     [FoldoutGroup("Equips")] public FeetBase Feet;
     [FoldoutGroup("Equips")] public AccessoryBase Accessory;
 
-    // [ListDrawerSettings(ListElementLabelName = "_masteryElementName")]
-    // public List<_Mastery> Masteries = new List<_Mastery>();
-    
     public MasteryGroup masteryGroup;
 
     public List<PlayerSkill> BaseSkills = new List<PlayerSkill>();

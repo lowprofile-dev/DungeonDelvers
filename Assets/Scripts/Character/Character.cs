@@ -24,7 +24,7 @@ public class Character
         {
             baseUid = GameSettings.Instance.CharacterDatabase.GetId(Base).Value,
             currentHp = currentHp,
-            serializedTechInstances = Base.masteryGroup.Serialize(TechInstances),
+            //serializedTechInstances = Base.masteryGroup.Serialize(MasteryInstances),
             Equipment = EquippableSaves(),
             masteryPoints = MasteryPoints,
         };
@@ -42,7 +42,10 @@ public class Character
         Feet = ItemInstanceBuilder.BuildInstance(Base.Feet, true) as Equippable;
         Accessory = ItemInstanceBuilder.BuildInstance(Base.Accessory, true) as Equippable;
 
-        TechInstances = Base.masteryGroup.Initialize();
+        if (Base.masteryGroup)
+            MasteryInstances = Base.masteryGroup.Initialize();
+        else
+            MasteryInstances = new MasteryInstance[0];
         
         Regenerate();
 
@@ -61,7 +64,7 @@ public class Character
             }
 
             Base = characterBase;
-            TechInstances = Base.masteryGroup.Deserialize(save.serializedTechInstances);
+            MasteryInstances = Base.masteryGroup.Deserialize(save.serializedTechInstances);
 
             Weapon = ItemInstanceBuilder.BuildInstance(save.Equipment[0]) as Equippable;
             Head = ItemInstanceBuilder.BuildInstance(save.Equipment[1]) as Equippable;
@@ -138,9 +141,9 @@ public class Character
             EquippedPassives = EquippedPassives.GetRange(0, 5);
     }
     
-    public MasteryInstance[] TechInstances;
+    public MasteryInstance[] MasteryInstances;
     
-    [ShowInInspector] public Mastery[] LearnedTechs => TechInstances
+    [ShowInInspector] public Mastery[] LearnedTechs => MasteryInstances
         .Where(tI => tI.Acquired)
         .Select(tI => tI.Mastery)
         .ToArray();
