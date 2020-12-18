@@ -40,6 +40,7 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 0
       enableTightPacking: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 4d286b7f59ff698b7b5f1a5b2ab750f8, type: 3}
@@ -18698,5 +18699,6 @@ SpriteAtlas:
   - Mage_Attack_Sword_Fire_0
   - Mage_Attack_Sword_Fire_1
   - Mage_Attack_Sword_Fire_2
+  m_RenderDataMap: {}
   m_Tag: Atlas
   m_IsVariant: 0

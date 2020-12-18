@@ -40,6 +40,7 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 0
       enableTightPacking: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 051ec4cc1d1cbe436afaf83a6a918f1f, type: 3}
@@ -112,5 +113,6 @@ SpriteAtlas:
   - DAidarabotchi_tex
   - Forest Sprout
   - Forest Noxluff
+  m_RenderDataMap: {}
   m_Tag: MonsterAtlas
   m_IsVariant: 0
